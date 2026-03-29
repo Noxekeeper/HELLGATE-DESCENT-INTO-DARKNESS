@@ -1,0 +1,195 @@
+
+DOREI_spine.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Bow
+  rotate: false
+  xy: 225, 193
+  size: 176, 61
+  orig: 176, 61
+  offset: 0, 0
+  index: -1
+Bow_hand
+  rotate: false
+  xy: 403, 193
+  size: 176, 61
+  orig: 176, 61
+  offset: 0, 0
+  index: -1
+L_arm
+  rotate: false
+  xy: 522, 24
+  size: 41, 103
+  orig: 41, 103
+  offset: 0, 0
+  index: -1
+L_arm2
+  rotate: true
+  xy: 250, 37
+  size: 41, 103
+  orig: 41, 103
+  offset: 0, 0
+  index: -1
+L_foot
+  rotate: true
+  xy: 175, 14
+  size: 34, 54
+  orig: 34, 54
+  offset: 0, 0
+  index: -1
+L_foot2
+  rotate: false
+  xy: 752, 127
+  size: 62, 48
+  orig: 62, 48
+  offset: 0, 0
+  index: -1
+L_foot_nuno
+  rotate: false
+  xy: 646, 35
+  size: 59, 84
+  orig: 59, 84
+  offset: 0, 0
+  index: -1
+L_kata
+  rotate: true
+  xy: 355, 40
+  size: 53, 85
+  orig: 53, 85
+  offset: 0, 0
+  index: -1
+L_momo
+  rotate: false
+  xy: 2, 4
+  size: 86, 185
+  orig: 86, 185
+  offset: 0, 0
+  index: -1
+L_nuno
+  rotate: false
+  xy: 250, 80
+  size: 98, 111
+  orig: 98, 111
+  offset: 0, 0
+  index: -1
+R_arm
+  rotate: false
+  xy: 709, 88
+  size: 41, 93
+  orig: 41, 93
+  offset: 0, 0
+  index: -1
+R_foot
+  rotate: true
+  xy: 754, 185
+  size: 69, 142
+  orig: 69, 142
+  offset: 0, 0
+  index: -1
+R_foot_nuno
+  rotate: false
+  xy: 565, 39
+  size: 79, 80
+  orig: 79, 80
+  offset: 0, 0
+  index: -1
+R_hand
+  rotate: true
+  xy: 565, 2
+  size: 35, 39
+  orig: 35, 39
+  offset: 0, 0
+  index: -1
+R_kata
+  rotate: false
+  xy: 990, 185
+  size: 29, 69
+  orig: 29, 69
+  offset: 0, 0
+  index: -1
+R_momo
+  rotate: false
+  xy: 451, 2
+  size: 69, 125
+  orig: 69, 125
+  offset: 0, 0
+  index: -1
+R_nuno
+  rotate: false
+  xy: 350, 95
+  size: 99, 96
+  orig: 99, 96
+  offset: 0, 0
+  index: -1
+back_nuno
+  rotate: true
+  xy: 581, 183
+  size: 71, 171
+  orig: 71, 171
+  offset: 0, 0
+  index: -1
+body
+  rotate: false
+  xy: 90, 11
+  size: 83, 178
+  orig: 83, 178
+  offset: 0, 0
+  index: -1
+bullet
+  rotate: false
+  xy: 754, 177
+  size: 133, 6
+  orig: 133, 6
+  offset: 0, 0
+  index: -1
+face
+  rotate: true
+  xy: 898, 167
+  size: 87, 90
+  orig: 87, 90
+  offset: 0, 0
+  index: -1
+fire
+  rotate: true
+  xy: 451, 129
+  size: 62, 128
+  orig: 62, 128
+  offset: 0, 0
+  index: -1
+fire2
+  rotate: true
+  xy: 581, 121
+  size: 60, 126
+  orig: 60, 126
+  offset: 0, 0
+  index: -1
+kusari
+  rotate: true
+  xy: 752, 102
+  size: 23, 50
+  orig: 23, 50
+  offset: 0, 0
+  index: -1
+nuno
+  rotate: false
+  xy: 175, 50
+  size: 73, 139
+  orig: 73, 139
+  offset: 0, 0
+  index: -1
+sdw
+  rotate: false
+  xy: 2, 191
+  size: 221, 63
+  orig: 221, 63
+  offset: 0, 0
+  index: -1
+tinko
+  rotate: false
+  xy: 816, 134
+  size: 60, 41
+  orig: 60, 41
+  offset: 0, 0
+  index: -1

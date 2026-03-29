@@ -1,0 +1,175 @@
+# HELLGATE Spawn Configuration for Hidden Forest Area (ForestOfRequiem)
+# Format: X,Y,EnemyType,Count or RANDOM,chance,X,Y,EnemyType,Count or POOL[Type1,Type2,...]
+# Converted from Newspawnhidden Forest area.txt
+#
+# Groups 1-5: POOL with mixed human types
+# Group 6: 6× RANDOM 50% CrowInquisition between groups
+# Points 124-161: 4 POOL groups + 3 RANDOM 50% between
+
+# ========== Undead — Points 1-12 ==========
+1034.46,-291.49,Undead,1
+1037.24,-291.49,Undead,1
+1042.30,-291.49,Undead,1
+1045.51,-291.32,Undead,1
+1049.12,-291.07,MummyMan,1
+1058.43,-290.45,MummyDog,1
+1063.89,-290.08,Undead,1
+1070.94,-289.61,MummyDog,1
+1077.15,-289.47,Undead,1
+1083.59,-289.47,Undead,1
+1088.46,-289.47,MummyDog,1
+1093.29,-289.47,Undead,1
+
+# ========== Undead — Points 13-26 ==========
+1096.03,-282.50,Undead,1
+1098.59,-282.50,Undead,1
+1098.97,-282.50,MummyDog,1
+1117.06,-289.34,Undead,1
+1113.02,-289.47,Undead,1
+1125.27,-288.78,Undead,1
+1129.83,-288.46,MummyDog,1
+1135.40,-288.07,Undead,1
+1137.47,-287.93,MummyDog,1
+1143.87,-287.49,Undead,1
+1149.18,-287.15,Undead,1
+1155.72,-286.78,Undead,1
+1160.83,-286.35,Undead,1
+1168.57,-285.69,MummyDog,1
+
+# ========== Pilgrim — Points 27-28 ==========
+1178.99,-277.72,Pilgrim,1
+1186.70,-279.23,Wolf,1
+
+# ========== Undead — Points 29-34 ==========
+1193.28,-279.23,Undead,1
+1197.70,-285.69,Undead,1
+1172.50,-285.69,MummyDog,1
+1177.55,-285.69,Undead,1
+1182.33,-285.69,MummyDog,1
+1187.15,-285.69,Undead,1
+
+# ========== Pilgrim — Points 35-36 ==========
+1191.74,-285.69,Pilgrim,1
+1197.40,-285.69,Pilgrim,1
+
+# ========== Undead — Points 37-41 ==========
+1200.50,-285.69,Undead,1
+1179.25,-270.71,MummyDog,1
+1190.48,-270.10,MummyDog,1
+1181.40,-270.71,Undead,1
+1180.89,-285.69,Undead,1
+
+# ========== Group 1: Librarian/Pilgrim — Points 42-43 ==========
+1220.70,-287.76,Librarian,1
+1323.65,-296.71,Pilgrim,1
+
+# ========== RANDOM 50% CrowInquisition (1 of 6) ==========
+RANDOM,0.5,1312.19,-296.71,CrowInquisition,1
+
+# ========== Group 2: Librarian/Pilgrim — Points 53-54 ==========
+1304.08,-295.33,Librarian,1
+1293.93,-295.33,Pilgrim,1
+
+# ========== RANDOM 50% CrowInquisition (2 of 6) ==========
+RANDOM,0.5,1260.20,-292.58,CrowInquisition,1
+
+# ========== Group 3: Librarian/Pilgrim — Points 63-64 ==========
+1254.85,-292.58,Librarian,1
+1318.72,-296.71,Wolf,1
+
+# ========== RANDOM 50% CrowInquisition (3 of 6) ==========
+RANDOM,0.5,1312.35,-288.14,CrowInquisition,1
+
+# ========== Group 4: Librarian/Pilgrim — Points 73-74 ==========
+1310.38,-288.14,Librarian,1
+1303.73,-263.53,Pilgrim,1
+
+# ========== RANDOM 50% CrowInquisition (4 of 6) ==========
+RANDOM,0.5,1301.02,-263.53,CrowInquisition,1
+
+# ========== Group 5: Librarian/Pilgrim — Points 83-84 ==========
+1298.70,-263.53,Librarian,1
+1364.80,-253.28,Pilgrim,1
+
+# ========== RANDOM 50% CrowInquisition (5 of 6) ==========
+RANDOM,0.5,1345.06,-256.27,CrowInquisition,1
+
+# ========== Group 5 continued — Points 93-94 ==========
+1340.73,-256.27,Librarian,1
+1222.81,-299.46,Pilgrim,1
+
+# ========== RANDOM 50% CrowInquisition (6 of 6) ==========
+RANDOM,0.5,1233.86,-303.56,CrowInquisition,1
+
+# ========== Undead — Points 102-123 ==========
+1269.19,-284.38,Undead,1
+1274.77,-283.43,Undead,1
+1280.63,-283.34,Undead,1
+1392.95,-279.16,MummyDog,1
+1388.14,-279.16,MummyMan,1
+1386.65,-279.16,Undead,1
+1384.44,-279.16,Undead,1
+1378.77,-279.16,Undead,1
+1376.20,-279.16,MummyDog,1
+1370.30,-279.16,Undead,1
+1366.85,-279.16,Undead,1
+1360.33,-279.16,MummyDog,1
+1341.82,-276.54,Undead,1
+1338.31,-276.54,MummyDog,1
+1332.45,-276.54,Undead,1
+1327.66,-276.54,Undead,1
+1326.67,-276.54,MummyMan,1
+1316.37,-279.08,Undead,1
+1306.68,-278.76,Undead,1
+1302.57,-278.76,MummyDog,1
+1296.00,-278.76,MummyDog,1
+1290.53,-278.76,Undead,1
+
+# ========== Group A: Librarian/Pilgrim — Points 124-125 ==========
+1307.78,-271.37,Librarian,1
+1290.51,-270.94,Pilgrim,1
+
+# ========== RANDOM 50% InquisitionWhite ==========
+RANDOM,0.5,1301.64,-249.83,InquisitionWhite,1
+
+# ========== Group B: Librarian/Pilgrim — Points 134-135 ==========
+1400.13,-256.27,Librarian,1
+1363.64,-269.77,Pilgrim,1
+
+# ========== RANDOM 50% CrowInquisition ==========
+RANDOM,0.5,1375.38,-244.19,CrowInquisition,1
+
+# ========== Group C: Librarian/Pilgrim — Points 144-145 ==========
+1370.81,-244.19,Librarian,1
+1411.81,-260.89,Pilgrim,1
+
+# ========== RANDOM 50% InquisitionRED ==========
+RANDOM,0.5,1480.99,-264.06,InquisitionRED,1
+
+# ========== Group D: Librarian/Pilgrim — Points 154-155 ==========
+1478.19,-264.06,Librarian,1
+1466.47,-256.34,Pilgrim,1
+
+# ========== Undead — Points 163-184 ==========
+1559.63,-272.63,Undead,1
+1532.80,-272.63,Undead,1
+1529.16,-272.63,MummyDog,1
+1526.82,-272.63,Undead,1
+1518.70,-272.63,MummyDog,1
+1516.14,-272.63,Undead,1
+1507.50,-272.63,Undead,1
+1503.11,-272.63,MummyDog,1
+1500.02,-272.63,Undead,1
+1483.40,-272.63,MummyMan,1
+1479.97,-272.63,MummyDog,1
+1473.69,-272.63,Undead,1
+1441.71,-271.19,Undead,1
+1436.87,-271.19,MummyDog,1
+1431.83,-271.19,Undead,1
+1421.11,-271.19,MummyDog,1
+1407.65,-270.88,MummyMan,1
+1400.57,-269.45,Undead,1
+1386.39,-268.56,MummyDog,1
+1378.13,-268.56,Undead,1
+1389.42,-279.16,Undead,1
+1368.26,-279.16,Undead,1

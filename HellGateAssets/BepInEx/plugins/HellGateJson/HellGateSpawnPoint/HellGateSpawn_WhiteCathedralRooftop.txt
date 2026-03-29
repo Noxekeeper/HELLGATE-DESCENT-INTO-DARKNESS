@@ -1,0 +1,61 @@
+# White Cathedral Rooftop spawn (optimized: ~50% reduction)
+# POOL: Librarian, InquisitionWhite, CrowInquisition, Mutude, TouzokuNormal, TouzokuAxe
+
+# North area
+987.96,-605.06,POOL[Librarian,InquisitionWhite,CrowInquisition,Mutude,TouzokuNormal,TouzokuAxe],1
+939.62,-608.41,POOL[Librarian,InquisitionWhite,CrowInquisition,Wolf,TouzokuNormal,TouzokuAxe],1
+899.38,-606.00,POOL[Librarian,InquisitionWhite,CrowInquisition,Mutude,TouzokuNormal,TouzokuAxe],1
+861.41,-608.41,POOL[Librarian,InquisitionWhite,CrowInquisition,Wolf,TouzokuAxe],1
+845.32,-608.41,POOL[Librarian,InquisitionWhite,CrowInquisition,Mutude,TouzokuNormal,TouzokuAxe],1
+
+# Center area
+866.56,-596.55,POOL[Librarian,InquisitionWhite,CrowInquisition,Mutude,TouzokuNormal,TouzokuAxe],1
+875.16,-587.38,POOL[Librarian,InquisitionWhite,CrowInquisition,Wolf,TouzokuNormal,TouzokuAxe],1
+866.16,-569.13,POOL[Librarian,InquisitionWhite,CrowInquisition,Mutude,TouzokuNormal,TouzokuAxe],1
+871.46,-553.56,POOL[Librarian,InquisitionWhite,CrowInquisition,Mutude,TouzokuNormal,TouzokuAxe],1
+
+# West area
+820.06,-578.06,POOL[Librarian,InquisitionWhite,CrowInquisition,Wolf,TouzokuNormal,TouzokuAxe],1
+838.04,-578.06,POOL[Librarian,InquisitionWhite,CrowInquisition,Mutude,TouzokuNormal,TouzokuAxe],1
+815.38,-578.06,POOL[Librarian,InquisitionWhite,CrowInquisition,Mutude,TouzokuNormal,TouzokuAxe],1
+898.35,-554.33,POOL[Librarian,InquisitionWhite,CrowInquisition,Mutude,TouzokuNormal,TouzokuAxe],1
+
+# East area
+1013.24,-596.98,POOL[Librarian,InquisitionWhite,CrowInquisition,Mutude,TouzokuNormal,TouzokuAxe],1
+963.47,-596.98,POOL[Librarian,InquisitionWhite,CrowInquisition,Wolf,TouzokuNormal,TouzokuAxe],1
+931.14,-596.98,POOL[Librarian,InquisitionWhite,CrowInquisition,Wolf,TouzokuNormal,TouzokuAxe],1
+907.10,-596.70,POOL[Librarian,InquisitionWhite,CrowInquisition,Mutude,TouzokuNormal,TouzokuAxe],1
+
+# South center
+925.10,-579.45,POOL[Librarian,InquisitionWhite,CrowInquisition,Mutude,TouzokuNormal,TouzokuAxe],1
+950.32,-577.50,POOL[Librarian,InquisitionWhite,CrowInquisition,Wolf,TouzokuNormal,TouzokuAxe],1
+981.89,-575.15,POOL[Librarian,InquisitionWhite,CrowInquisition,Wolf,TouzokuNormal,TouzokuAxe],1
+1014.87,-577.51,POOL[Librarian,InquisitionWhite,CrowInquisition,Mutude,TouzokuNormal,TouzokuAxe],1
+1049.11,-579.45,POOL[Librarian,InquisitionWhite,CrowInquisition,Mutude,TouzokuNormal,TouzokuAxe],1
+
+# South area
+1061.85,-596.98,POOL[Librarian,InquisitionWhite,CrowInquisition,Mutude,TouzokuNormal,TouzokuAxe],1
+1087.65,-596.55,POOL[Librarian,InquisitionWhite,CrowInquisition,Wolf,TouzokuNormal,TouzokuAxe],1
+1094.43,-589.17,POOL[Librarian,InquisitionWhite,CrowInquisition,Wolf,TouzokuNormal,TouzokuAxe],1
+1085.57,-565.15,POOL[Librarian,InquisitionWhite,CrowInquisition,Mutude,TouzokuNormal,TouzokuAxe],1
+
+# Southwest area
+1102.81,-554.32,POOL[Librarian,InquisitionWhite,CrowInquisition,Mutude,TouzokuNormal,TouzokuAxe],1
+1116.06,-554.32,POOL[Librarian,InquisitionWhite,CrowInquisition,Wolf,TouzokuNormal,TouzokuAxe],1
+1117.96,-566.35,POOL[Librarian,InquisitionWhite,CrowInquisition,Wolf,TouzokuNormal,TouzokuAxe],1
+1109.92,-579.08,POOL[Librarian,InquisitionWhite,CrowInquisition,Mutude,TouzokuNormal,TouzokuAxe],1
+
+# Southeast area
+1065.12,-565.15,POOL[Librarian,InquisitionWhite,CrowInquisition,Mutude,TouzokuNormal,TouzokuAxe],1
+1046.95,-565.16,POOL[Librarian,InquisitionWhite,CrowInquisition,Wolf,TouzokuNormal,TouzokuAxe],1
+1012.99,-565.16,POOL[Librarian,InquisitionWhite,CrowInquisition,Wolf,TouzokuNormal,TouzokuAxe],1
+972.89,-565.16,POOL[Librarian,InquisitionWhite,CrowInquisition,Mutude,TouzokuNormal,TouzokuAxe],1
+938.78,-565.16,POOL[Librarian,InquisitionWhite,CrowInquisition,Mutude,TouzokuNormal,TouzokuAxe],1
+
+# Southwest corner
+865.91,-548.91,POOL[Librarian,InquisitionWhite,CrowInquisition,Mutude,TouzokuNormal,TouzokuAxe],1
+890.88,-544.07,POOL[Librarian,InquisitionWhite,CrowInquisition,Wolf,TouzokuNormal,TouzokuAxe],1
+
+# Southeast corner
+994.26,-556.71,POOL[Librarian,InquisitionWhite,CrowInquisition,Mutude,TouzokuNormal,TouzokuAxe],1
+965.74,-556.71,POOL[Librarian,InquisitionWhite,CrowInquisition,Mutude,TouzokuNormal,TouzokuAxe],1

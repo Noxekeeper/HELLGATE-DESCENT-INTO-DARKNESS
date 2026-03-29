@@ -1,0 +1,48 @@
+{
+  "settings": {
+    "minActivationPercent": {
+      "value": 50.0,
+      "comment": "Minimum Rage percentage required for activation (default: 50%)"
+    },
+    "rageCostDuringQTE": {
+      "value": 50.0,
+      "comment": "Rage cost for activation during QTE/H-scene (default: 50%)"
+    },
+    "damageMultiplier": {
+      "value": 2.0,
+      "comment": "Damage multiplier for physical and magic damage during Rage (default: 2.0x)"
+    },
+    "spGainPercent": {
+      "value": 0.5,
+      "comment": "SP gain per attack click during Rage as percentage of max SP (default: 0.5 = 50%)"
+    },
+    "enemyPushbackForceMultiplier": {
+      "value": 100.0,
+      "comment": "Force multiplier for enemy pushback on Rage activation (default: 100.0, range: 200-300px)"
+    },
+    "grabDrainMin": {
+      "value": 1.0,
+      "comment": "Rage drain per second when grabbed at 0% MindBroken (default: 1.0%/sec)"
+    },
+    "grabDrainMax": {
+      "value": 10.0,
+      "comment": "Rage drain per second when grabbed at 100% MindBroken (default: 10.0%/sec, linear interpolation)"
+    },
+    "slowMoDrainMultiplier": {
+      "value": 2.0,
+      "comment": "Multiplier for SlowMo rage drain (default: 2.0x, base drain * 2.0)"
+    },
+    "slowMoMBGainMultiplier": {
+      "value": 2.0,
+      "comment": "Multiplier for SlowMo MindBroken gain (default: 2.0x, base gain * 2.0)"
+    },
+    "uiPositionX": {
+      "value": 360.0,
+      "comment": "Rage UI X position from left edge (default: 360px)"
+    },
+    "uiPositionY": {
+      "value": -25.0,
+      "comment": "Rage UI Y position from top edge (default: -25px, negative = down from top)"
+    }
+  }
+}

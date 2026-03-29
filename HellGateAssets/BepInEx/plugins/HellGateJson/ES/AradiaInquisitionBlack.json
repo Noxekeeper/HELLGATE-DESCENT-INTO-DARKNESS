@@ -1,0 +1,1393 @@
+{
+  "settings": {
+    "responseDelayMin": 1.5,
+    "responseDelayMax": 2.5,
+    "fontSize": 22.0,
+    "verticalOffset": 100.0,
+    "displayDuration": 5.0
+  },
+  "animations": {
+    "START": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "¡No! ¡Me está agarrando del pelo! ¡Me duele!",
+              "No puedo... ¡me está arrastrando de rodillas tirando del pelo!",
+              "Mis rodillas... golpeando el suelo... ¡por favor, basta!"
+            ],
+            "low": [
+              "Su agarre... tan brusco... tengo que arrodillarme...",
+              "Me está obligando a arrodillarme... no puedo resistirme...",
+              "El dolor en el cuero cabelludo... lágrimas en mis ojos..."
+            ],
+            "medium_low": [
+              "Me está tirando al suelo... solo tengo que obedecer...",
+              "Su fuerza... aplastante... me someto...",
+              "De rodillas ahora... donde él me quiere..."
+            ],
+            "medium": [
+              "Me está colocando... sé lo que viene...",
+              "Su agarre me controla... lo acepto...",
+              "De rodillas... este es mi lugar ahora..."
+            ],
+            "medium_high": [
+              "Sus manos en mi pelo... mandándome...",
+              "Me arrodillo por él... voluntariamente...",
+              "De rodillas... donde debo estar..."
+            ],
+            "high": [
+              "Sí... tira de mi pelo... ponme de rodillas...",
+              "Sus manos fuertes... guiándome hacia abajo...",
+              "Quiero estar aquí... a sus pies..."
+            ],
+            "very_high": [
+              "Mmm... ¡sus manos en mi pelo se sienten tan bien!",
+              "¡Tírame al suelo, amo! ¡Soy tuya!",
+              "De rodillas para ti... ¡siempre!"
+            ]
+          }
+        },
+        {
+          "step": 2,
+          "delay": 1.0,
+          "thoughts": {
+            "very_low": [
+              "¡Dios mío! ¡Un cuchillo! ¡Me va a matar!",
+              "La hoja... tan cerca de mi garganta... ¡estoy aterrada!",
+              "¡Por favor, no me cortes! ¡Haré lo que sea!"
+            ],
+            "low": [
+              "Ese cuchillo... un mal movimiento y estoy muerta...",
+              "Puedo sentir el acero frío... estoy temblando...",
+              "Va en serio... de verdad me hará daño..."
+            ],
+            "medium_low": [
+              "El cuchillo me recuerda... no tengo opción...",
+              "Debo obedecer... o lo usará...",
+              "El miedo me mantiene quieta... sumisa..."
+            ],
+            "medium": [
+              "La hoja... una promesa de lo que pasa si desobedezco...",
+              "Entiendo la amenaza... cooperaré...",
+              "Su arma... su control sobre mí..."
+            ],
+            "medium_high": [
+              "El peligro... hace que me acelere el corazón...",
+              "Su cuchillo... un recordatorio de su poder...",
+              "Estoy emocionada... y asustada... las dos cosas..."
+            ],
+            "high": [
+              "La hoja contra mi piel... emocionante...",
+              "Me encanta lo peligroso que se siente esto...",
+              "Su arma... su dominancia... la necesito..."
+            ],
+            "very_high": [
+              "¡Sí! ¡Aménazame con tu hoja!",
+              "¡El peligro me pone tan mojada!",
+              "¡Córtame, lastímame, poséeme por completo!"
+            ]
+          }
+        },
+        {
+          "step": 3,
+          "delay": 1.5,
+          "thoughts": {
+            "very_low": [
+              "¡No! ¡Se lo está sacando! ¡No quiero ver!",
+              "¿Por qué... dios mío... esto no puede estar pasando!",
+              "No puedo mirar... ¡pero me obliga!"
+            ],
+            "low": [
+              "Se está exponiendo... justo en mi cara...",
+              "Sé lo que quiere... la vergüenza quema...",
+              "Tengo que mirar... me está obligando..."
+            ],
+            "medium_low": [
+              "Su polla... justo frente a mí...",
+              "Veo lo que viene... tengo que aceptarlo...",
+              "Esto está pasando... lo quiera o no..."
+            ],
+            "medium": [
+              "Me muestra lo que tengo que hacer...",
+              "Su virilidad... debo servirlo...",
+              "Entiendo... haré lo que quiera..."
+            ],
+            "medium_high": [
+              "Su polla... es impresionante...",
+              "Tengo curiosidad... un poco interesada...",
+              "Tal vez esto no sea tan terrible..."
+            ],
+            "high": [
+              "Mmm... es grande... me gusta lo que veo...",
+              "Quiero tocarlo... saborearlo...",
+              "Muéstrame más... estoy lista..."
+            ],
+            "very_high": [
+              "¡Sí! ¡Tu hermosa polla! ¡Déjame adorarla!",
+              "¡La necesito! ¡Por favor déjamela!",
+              "¡Ya estoy babeando por ti!"
+            ]
+          }
+        },
+        {
+          "step": 4,
+          "delay": 2.0,
+          "thoughts": {
+            "very_low": [
+              "¡Un arma! ¡Contra mi pecho! ¡Me va a disparar!",
+              "Puedo sentir el cañón... metal frío... ¡voy a morir!",
+              "¡Por favor! ¡Haré lo que quieras! ¡No dispares!"
+            ],
+            "low": [
+              "El arma apretada contra mí... un mal movimiento...",
+              "Podría apretar el gatillo... estaría muerta...",
+              "Estoy completamente a su merced... aterrada..."
+            ],
+            "medium_low": [
+              "El arma... otro recordatorio de mi posición...",
+              "Estoy indefensa... él controla mi vida...",
+              "Obedecer o morir... así de simple..."
+            ],
+            "medium": [
+              "Su arma contra mí... lo entiendo perfectamente...",
+              "Le pertenezco ahora... vida o muerte...",
+              "Haré lo que diga... no tengo opción..."
+            ],
+            "medium_high": [
+              "El arma... peligrosa... emocionante...",
+              "Mi corazón late fuerte... por miedo y excitación...",
+              "Este poder sobre mí... me atrae..."
+            ],
+            "high": [
+              "Sí... mantén ese arma contra mí... es tan excitante...",
+              "El peligro... el poder... me encanta...",
+              "Aménazame... domíname... soy tuya..."
+            ],
+            "very_high": [
+              "¡Dispara o fóllame! ¡De cualquier forma soy tuya!",
+              "¡El arma me pone tan mojada! ¡Úsame!",
+              "¡Quiero sentir tu poder! ¡Destrúyeme!"
+            ]
+          }
+        }
+      ]
+    },
+    "START2": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "Me está diciendo... que lo toque o dispara...",
+              "¡No quiero! ¡Pero no quiero morir!",
+              "Sus palabras son tan crueles... estoy llorando..."
+            ],
+            "low": [
+              "Masturbarlo o que me disparen... no hay opción real...",
+              "Su voz es tan fría... mandona...",
+              "Tengo que hacerlo... para sobrevivir..."
+            ],
+            "medium_low": [
+              "Sus exigencias son claras... obedecer o sufrir...",
+              "Tengo que complacerlo... es necesario...",
+              "Sobrevivir significa someterme..."
+            ],
+            "medium": [
+              "Quiere que lo masturbe... entiendo...",
+              "Lo haré... terminar con esto...",
+              "Mis manos... su polla... que acabe ya..."
+            ],
+            "medium_high": [
+              "Me dice que lo toque... vale...",
+              "Tal vez no sea tan malo...",
+              "Tengo un poco de curiosidad por cómo se siente..."
+            ],
+            "high": [
+              "Quiere mis manos sobre él... yo también quiero eso...",
+              "Estoy ansiosa por tocar... por complacer...",
+              "Sí, te masturbaré... con gusto..."
+            ],
+            "very_high": [
+              "¡Mándame! ¡Dime cómo complacerte!",
+              "¡Necesito tocar tu polla! ¡Déjame!",
+              "¡Haré lo que digas, amo!"
+            ]
+          }
+        },
+        {
+          "step": 2,
+          "delay": 1.0,
+          "thoughts": {
+            "very_low": [
+              "Mis manos... temblando al extenderlas...",
+              "No puedo creer que estoy haciendo esto... ¡está mal!",
+              "El arma... recordándome que no tengo opción..."
+            ],
+            "low": [
+              "Lo estoy tocando... su polla está tan caliente...",
+              "Es humillante... pero necesario...",
+              "Tengo que masturbar... me está observando..."
+            ],
+            "medium_low": [
+              "Mis manos sobre él... haciendo lo que quiere...",
+              "Está caliente... palpita en mi agarre...",
+              "Solo movimientos mecánicos... terminar con esto..."
+            ],
+            "medium": [
+              "Lo estoy masturbando... no es terrible...",
+              "Su polla... palpitando en mis manos...",
+              "Puedo hacerlo... solo concentrarme..."
+            ],
+            "medium_high": [
+              "Se siente... interesante en mis manos...",
+              "Estoy pillando el ritmo... le gusta...",
+              "Esto es un poco... no está mal..."
+            ],
+            "high": [
+              "Mmm... está tan duro por mí...",
+              "Me encanta sentir cómo palpita en mis manos...",
+              "Quiero complacerlo... hacerlo sentir bien..."
+            ],
+            "very_high": [
+              "¡Tu polla es perfecta! ¡Tan dura!",
+              "¡Me encanta masturbarte! ¡Dame más!",
+              "¡Déjame adorar tu hermosa polla!"
+            ]
+          }
+        },
+        {
+          "step": 3,
+          "delay": 1.5,
+          "thoughts": {
+            "very_low": [
+              "Está gimiendo... poniéndose más duro... me siento mal...",
+              "Cada movimiento me hace odiar esto más...",
+              "Caen lágrimas... pero no puedo parar..."
+            ],
+            "low": [
+              "Se está acercando... lo noto...",
+              "La vergüenza... nunca se va...",
+              "Solo quiero que termine..."
+            ],
+            "medium_low": [
+              "Su respiración cambia... casi termina...",
+              "Solo... hago lo necesario...",
+              "Pronto esta parte habrá terminado..."
+            ],
+            "medium": [
+              "Está respondiendo... lo estoy haciendo bien...",
+              "Mis manos siguen moviéndose... automático ahora...",
+              "Preparándolo... eso es todo..."
+            ],
+            "medium_high": [
+              "Sus gemidos... está disfrutando esto...",
+              "En realidad soy buena en esto...",
+              "Su placer... no es terrible provocarlo..."
+            ],
+            "high": [
+              "Sí... siéntete bien con mis manos...",
+              "Me encanta escuchar tu placer...",
+              "Quiero hacerte correrme tanto..."
+            ],
+            "very_high": [
+              "¡Tus gemidos son música para mí!",
+              "¡Te estoy haciendo sentir increíble!",
+              "¡Córrete por mí! ¡Necesito verlo!"
+            ]
+          }
+        }
+      ]
+    },
+    "ERO": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "¡No! ¡No en mi boca! ¡Por favor!",
+              "Va a... ¡no puedo hacer esto!",
+              "Su polla en mis labios... ¡quiero huir!"
+            ],
+            "low": [
+              "Quiere mi boca... dios mío...",
+              "Tengo que aceptarla... o me hará daño...",
+              "Es tan degradante... pero debo..."
+            ],
+            "medium_low": [
+              "En mi boca... eso es lo que quiere...",
+              "Lo haré... salir de esto de alguna forma...",
+              "Solo... abrir y aceptarla..."
+            ],
+            "medium": [
+              "Quiere oral... entiendo...",
+              "Puedo hacerlo... es solo otro acto...",
+              "Déjame... déjame hacerlo por ti..."
+            ],
+            "medium_high": [
+              "Quiere mi boca sobre él... vale...",
+              "Tal vez pueda... tal vez quiero intentarlo...",
+              "Su polla se ve... tentadora..."
+            ],
+            "high": [
+              "Sí... quiero saborearte...",
+              "Déjame llevarte a mi boca...",
+              "Quiero complacerte así..."
+            ],
+            "very_high": [
+              "¡Necesito tu polla en mi boca!",
+              "¡Por favor déjame chupártela! ¡Te lo ruego!",
+              "¡Usa mi garganta! ¡Soy tu funda de polla!"
+            ]
+          }
+        }
+      ]
+    },
+    "ERO1": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "¡Me la está metiendo a la fuerza! ¡No puedo respirar!",
+              "Mi garganta... ahogándome... ¡duele tanto!",
+              "¡Me está tirando del pelo! ¡Empujando más profundo!"
+            ],
+            "low": [
+              "Tan profundo... me atraganto... lágrimas rodando...",
+              "Tengo que relajarme... o dolerá más...",
+              "Está usando mi garganta... violándome..."
+            ],
+            "medium_low": [
+              "Profundo en mi garganta... estoy luchando...",
+              "Necesito respirar... pero no le importa...",
+              "Solo aguantar... solo sobrevivir a esto..."
+            ],
+            "medium": [
+              "Me está follando la garganta... es intenso...",
+              "Intento acomodarlo...",
+              "La plenitud... aplastante..."
+            ],
+            "medium_high": [
+              "Tan profundo... estoy aprendiendo a aceptarlo...",
+              "Mi garganta... estirándose para él...",
+              "La sensación... intensa pero... interesante..."
+            ],
+            "high": [
+              "Sí... usa mi garganta... fóllala duro...",
+              "Me encanta sentirte tan profundo...",
+              "Ahógame con tu polla... por favor..."
+            ],
+            "very_high": [
+              "¡Destruye mi garganta! ¡Fóllala a pelo!",
+              "¡No necesito respirar! ¡Solo úsame!",
+              "¡Arruíname! ¡Hazme tu puta de garganta!"
+            ]
+          }
+        },
+        {
+          "step": 2,
+          "delay": 1.0,
+          "thoughts": {
+            "very_low": [
+              "¡Me ahogo! ¡Me atraganto! ¡No puedo respirar!",
+              "Saliva por todas partes... babeando indefensa...",
+              "Por favor... déjame respirar... ¡solo un segundo!"
+            ],
+            "low": [
+              "Mi garganta arde... estirada a su alrededor...",
+              "Lágrimas y babas... estoy hecha un desastre...",
+              "El reflejo de vómito... no puedo controlarlo..."
+            ],
+            "medium_low": [
+              "Estoy babeando... no puedo evitarlo...",
+              "Mi garganta... aprendiendo a aceptarlo...",
+              "Solo respirar cuando pueda... sobrevivir..."
+            ],
+            "medium": [
+              "Mi boca está tan llena... completamente...",
+              "Saliva goteando... no puedo controlarlo...",
+              "Lo estoy llevando... de alguna forma..."
+            ],
+            "medium_high": [
+              "El desastre que hago... está bien...",
+              "Mi garganta... acostumbrándose a esto...",
+              "Puedo aceptarlo... puedo manejarlo..."
+            ],
+            "high": [
+              "Me encanta ser un desastre baboso para ti...",
+              "Ahógame más... puedo soportarlo...",
+              "Mi garganta es tuya... úsala..."
+            ],
+            "very_high": [
+              "¡Soy tu juguete sexual baboso!",
+              "¡Arruíname por completo! ¡Sin piedad!",
+              "¡Mi garganta existe solo para tu placer!"
+            ]
+          }
+        },
+        {
+          "step": 3,
+          "delay": 1.5,
+          "thoughts": {
+            "very_low": [
+              "Siento que me muero... asfixiándome...",
+              "El dolor... en mi mandíbula... mi garganta...",
+              "¿Cuánto más... no puedo aguantar mucho!"
+            ],
+            "low": [
+              "Cada empuje duele... me duele la mandíbula...",
+              "Solo... aguanto... esperando que termine...",
+              "La humillación... interminable..."
+            ],
+            "medium_low": [
+              "Mi garganta está dolorida... pero continúo...",
+              "Solo un poco más... puedo hacerlo...",
+              "Entumecida ahora... desconectada..."
+            ],
+            "medium": [
+              "El ritmo... lo sigo...",
+              "Mi garganta... adaptándose a su tamaño...",
+              "Hago lo que necesita..."
+            ],
+            "medium_high": [
+              "Estoy mejorando en esto...",
+              "Mi garganta... hecha para él...",
+              "El placer que doy... satisfactorio..."
+            ],
+            "high": [
+              "Usa mi garganta más duro... me encanta...",
+              "Soy tu puta de garganta perfecta...",
+              "Más... más profundo... lo necesito..."
+            ],
+            "very_high": [
+              "¡Mi garganta es tu funda de polla!",
+              "¡Fóllame hasta desmayarme!",
+              "¡Vivo para ser tu coño de garganta!"
+            ]
+          }
+        }
+      ]
+    },
+    "ERO2": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "¡Me está follando la cara! ¡Como si no fuera nada!",
+              "Mi mejilla se hincha... ¡puedo ver su polla dentro!",
+              "¡Esto es tortura... pura tortura!"
+            ],
+            "low": [
+              "Me está golpeando la boca... implacable...",
+              "Mi mejilla... estirada a su alrededor...",
+              "Tan degradante... ser usada así..."
+            ],
+            "medium_low": [
+              "Follada de cara... solo soy un agujero para él...",
+              "Mi boca... solo para su placer...",
+              "Lo acepto... esto es lo que soy ahora..."
+            ],
+            "medium": [
+              "Está usando mi cara... completamente...",
+              "Soy su juguete... su juguete sexual...",
+              "Mi boca existe para esto..."
+            ],
+            "medium_high": [
+              "Me está follando la cara... no me importa...",
+              "Ser usada así... está bien...",
+              "Soy suya para usar... y está bien..."
+            ],
+            "high": [
+              "¡Sí! ¡Fóllame la cara! ¡Soy tu juguete!",
+              "¡Úsame más duro! ¡Me encanta!",
+              "¡Mi cara es tuya para arruinar!"
+            ],
+            "very_high": [
+              "¡Destruye mi cara! ¡Hazme tu cubo de semen!",
+              "¡No soy más que agujeros para ti!",
+              "¡Arruíname! ¡Soy tu coño de cara!"
+            ]
+          }
+        },
+        {
+          "step": 2,
+          "delay": 1.0,
+          "thoughts": {
+            "very_low": [
+              "¡Fuera y dentro otra vez! ¡Me está apuñalando la garganta!",
+              "Cada empuje... una nueva violación...",
+              "Voy a vomitar... no puedo..."
+            ],
+            "low": [
+              "Dentro y fuera... ritmo brutal...",
+              "Mi boca es solo... una herramienta para él...",
+              "Las lágrimas no paran de caer..."
+            ],
+            "medium_low": [
+              "Saca... luego vuelve a meter profundo...",
+              "Aspiro aire cuando puedo...",
+              "Esta es mi vida ahora... solo aceptarlo..."
+            ],
+            "medium": [
+              "El ritmo... dentro y fuera... lo sigo...",
+              "Mi boca... acomodándolo...",
+              "Lo estoy llevando... sobreviviendo..."
+            ],
+            "medium_high": [
+              "Cada empuje... estoy lista para...",
+              "Dentro y fuera... me estoy volviendo buena en esto...",
+              "Mi boca... perfectamente formada para él..."
+            ],
+            "high": [
+              "¡Sí! ¡Fóllame dentro y fuera! ¡Me encanta cada empuje!",
+              "¡Usa mi boca como un coño!",
+              "¡Quiero cada empuje brutal!"
+            ],
+            "very_high": [
+              "¡Apúñala mi garganta con tu polla!",
+              "¡Fóllame el agujero de la cara! ¡Destrúyelo!",
+              "¡Soy tu enchufe de polla sin mente!"
+            ]
+          }
+        },
+        {
+          "step": 3,
+          "delay": 1.5,
+          "thoughts": {
+            "very_low": [
+              "Mi mandíbula... se va a romper...",
+              "El dolor... irradiando por mi cara...",
+              "Por favor... por favor que termine..."
+            ],
+            "low": [
+              "Todo duele... mandíbula, garganta, cabeza...",
+              "Estoy tan cansada... agotada...",
+              "Solo quiero que termine... por favor..."
+            ],
+            "medium_low": [
+              "Toda mi cara duele... pero continúo...",
+              "Movimientos mecánicos... automáticos...",
+              "Casi entumecida... desconectada..."
+            ],
+            "medium": [
+              "Ya estoy acostumbrada a la sensación...",
+              "Mi mandíbula... dolorida pero funcional...",
+              "Haciendo mi trabajo... eso es todo..."
+            ],
+            "medium_high": [
+              "El dolor... de alguna forma satisfactorio...",
+              "Estoy demostrando que puedo soportarlo...",
+              "Mi resistencia... creciendo..."
+            ],
+            "high": [
+              "El dolor es placer ahora...",
+              "Me encanta cómo me duele la mandíbula por ti...",
+              "Rómpeme la cara... lo quiero..."
+            ],
+            "very_high": [
+              "¡Rompe mi mandíbula! ¡No me importa!",
+              "¡El dolor es mi éxtasis!",
+              "¡Arruíname por completo! ¡Soy tuya!"
+            ]
+          }
+        }
+      ]
+    },
+    "ERO3": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "Dice que me lo tragaré todo... no...",
+              "¡No quiero su semen! ¡Por favor!",
+              "Solo pensarlo me pone mala..."
+            ],
+            "low": [
+              "Va a... en mi boca...",
+              "Tendré que tragármelo... dios mío...",
+              "Esta humillación final..."
+            ],
+            "medium_low": [
+              "Terminará en mi boca... lo sé...",
+              "Tendré que beberlo... aceptarlo...",
+              "Solo una cosa más que aguantar..."
+            ],
+            "medium": [
+              "Está cerca... lo siento...",
+              "Me lo tragaré cuando se corra... entiendo...",
+              "Eso es lo esperado... lo que debo hacer..."
+            ],
+            "medium_high": [
+              "Se va a correr pronto... en mi boca...",
+              "Lo aceptaré... está bien...",
+              "Tal vez no sea tan malo..."
+            ],
+            "high": [
+              "Sí... córrete en mi boca... lo quiero...",
+              "Quiero saborear tu semilla...",
+              "Lléname la boca... estoy lista..."
+            ],
+            "very_high": [
+              "¡Inunda mi boca con tu semen!",
+              "¡Necesito beber tu semilla!",
+              "¡Dame cada gota! ¡Estoy hambrienta de ello!"
+            ]
+          }
+        },
+        {
+          "step": 2,
+          "delay": 1.0,
+          "thoughts": {
+            "very_low": [
+              "¡Empuja más rápido... está viniendo!",
+              "No puedo escapar... tendré que aceptarlo!",
+              "No no no... ¡por favor no en mi boca!"
+            ],
+            "low": [
+              "Casi ahí... lo noto...",
+              "Me preparo... para lo inevitable...",
+              "Este horrible momento... acercándose..."
+            ],
+            "medium_low": [
+              "Se está acercando... me preparo...",
+              "Pronto habrá terminado... solo tragar y listo...",
+              "Un momento más... entonces habrá terminado..."
+            ],
+            "medium": [
+              "Está a punto de terminar... estoy lista...",
+              "Aceptaré lo que venga... lo acepto...",
+              "Esto es parte de ello... lo entiendo..."
+            ],
+            "medium_high": [
+              "Casi está... quiero ver...",
+              "Tengo curiosidad de cómo será...",
+              "Lista para recibirlo..."
+            ],
+            "high": [
+              "¡Córrete por mí! ¡Estoy lista!",
+              "Quiero sentirte explotar...",
+              "Dámelo todo... ¡ahora!"
+            ],
+            "very_high": [
+              "¡Sí! ¡Córrete! ¡Inúndame!",
+              "¡Necesito tu semen caliente!",
+              "¡Píntame las entrañas de blanco!"
+            ]
+          }
+        },
+        {
+          "step": 3,
+          "delay": 1.5,
+          "thoughts": {
+            "very_low": [
+              "Ya viene... ¡dios mío!",
+              "Lo siento hincharse... ¡está pasando!",
+              "Voy a vomitar... ¡no puedo!"
+            ],
+            "low": [
+              "En cualquier momento... armarse de valor...",
+              "El momento que tanto he temido...",
+              "Solo superarlo... de alguna forma..."
+            ],
+            "medium_low": [
+              "Está ahí... a punto de explotar...",
+              "Estoy tan lista como podré estar...",
+              "Ya viene... aceptarlo..."
+            ],
+            "medium": [
+              "Está palpitando... lo siento...",
+              "Estoy preparada... boca abierta...",
+              "Esto está pasando... ahora..."
+            ],
+            "medium_high": [
+              "Lo siento palpitar... emocionante...",
+              "Estoy lista para recibir...",
+              "Vamos... dámelo..."
+            ],
+            "high": [
+              "¡Te siento palpitar! ¡Dámelo!",
+              "¡Explota en mi boca!",
+              "¡Quiero cada gota! ¡Ahora!"
+            ],
+            "very_high": [
+              "¡Explota en mí! ¡Aliméntame!",
+              "¡Soy tu retrete de semen!",
+              "¡Lléname! ¡Hazlo!"
+            ]
+          }
+        }
+      ]
+    },
+    "ERO4": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "¡Más profundo! ¡No para! ¡Me asfixio!",
+              "¡No puedo respirar nada! ¡Me muero!",
+              "Mi garganta... completamente bloqueada..."
+            ],
+            "low": [
+              "Tan profundo... sin aire... estrellas en mi visión...",
+              "Está enterrado en mi garganta... no saca...",
+              "Me desvanezco... necesito aire..."
+            ],
+            "medium_low": [
+              "Completamente llena... sin espacio para aire...",
+              "Solo aguantar... terminará pronto...",
+              "Mi garganta... estirada al límite..."
+            ],
+            "medium": [
+              "Completamente empalada... tomando todo de él...",
+              "Estoy aguantando... esperando a que se corra...",
+              "Casi ahí... puedo hacerlo..."
+            ],
+            "medium_high": [
+              "Tan profundo dentro de mí... me encanta la plenitud...",
+              "Mi garganta... hecha para esto...",
+              "Córrete en mí... estoy lista..."
+            ],
+            "high": [
+              "¡Enterrado en mi garganta! ¡Sí! ¡Córrete!",
+              "¡No necesito aire! ¡Solo tu polla!",
+              "¡Explota profundo en mi garganta!"
+            ],
+            "very_high": [
+              "¡Mátame con tu polla! ¡No me importa!",
+              "¡Córrete directo en mi estómago!",
+              "¡Soy tu condón de garganta! ¡Lléname!"
+            ]
+          }
+        },
+        {
+          "step": 2,
+          "delay": 1.0,
+          "thoughts": {
+            "very_low": [
+              "Me estoy desmayando... la consciencia se apaga...",
+              "No... aguantar... mucho... más...",
+              "Todo se oscurece... asfixiándome..."
+            ],
+            "low": [
+              "La visión se nubla... necesito aire desesperadamente...",
+              "Cuánto más... no puedo respirar...",
+              "Por favor... que termine... por favor..."
+            ],
+            "medium_low": [
+              "Mareada... aguantando por fuerza de voluntad...",
+              "Solo un poco más... puedo lograrlo...",
+              "Mantenerme consciente... casi termina..."
+            ],
+            "medium": [
+              "La presión... intensa... pero manejable...",
+              "Estoy entrenada para esto ahora... puedo aguantar...",
+              "En cualquier momento... soltará..."
+            ],
+            "medium_high": [
+              "La intensidad... estimulante...",
+              "Puedo soportar esto... demostrarme...",
+              "Córrete en mí... soy tuya..."
+            ],
+            "high": [
+              "¡Ahógame con tu semen!",
+              "¡Quiero ahogarme en tu semilla!",
+              "¡Usa mi garganta hasta que explotes!"
+            ],
+            "very_high": [
+              "¡Asfixiame con tu polla!",
+              "¡Muerte por polla! ¡Perfecto!",
+              "¡Llena cada célula de mi cuerpo!"
+            ]
+          }
+        },
+        {
+          "step": 3,
+          "delay": 1.5,
+          "thoughts": {
+            "very_low": [
+              "En cualquier segundo... va a...",
+              "Lo siento... palpitar... crecer...",
+              "Dios mío... está pasando... ¡ahora!"
+            ],
+            "low": [
+              "Su polla palpita... justo ahí...",
+              "El momento... finalmente... a punto de pasar...",
+              "Voy a sentirlo... disparar dentro de mí..."
+            ],
+            "medium_low": [
+              "Está a punto de explotar... lo siento...",
+              "Lista... tan lista como puedo estar...",
+              "Ya viene... el final..."
+            ],
+            "medium": [
+              "Siento las palpitaciones... está ahí...",
+              "En cualquier momento... estoy preparada...",
+              "Que pase... solo que pase..."
+            ],
+            "medium_high": [
+              "Está justo al borde... lo siento...",
+              "Quiero sentir que se libera...",
+              "Vamos... dámelo..."
+            ],
+            "high": [
+              "¡Siento que estás a punto de explotar! ¡Hazlo!",
+              "¡Córrete! ¡Córrete profundo en mi garganta!",
+              "¡Me muero por sentirte explotar!"
+            ],
+            "very_high": [
+              "¡Explota! ¡Inunda mi cuerpo!",
+              "¡Soy tu receptáculo de semen!",
+              "¡Bombea todo en mí! ¡AHORA!"
+            ]
+          }
+        }
+      ]
+    },
+    "FIN": {
+      "events": {
+        "FIN": {
+          "very_low": [
+            "¡Dios mío! ¡Se está corriendo! ¡Tanto!",
+            "¡Me está llenando la boca! No puedo... ¡está por todas partes!",
+            "El sabor... dios mío... ¡voy a vomitar!",
+            "¡Hay tanto! ¡No para!",
+            "¡Me ahogo en ello! ¡Atragantándome!",
+            "Caliente... espeso... ¡asqueroso! ¡Que pare!",
+            "¡Mi boca se desborda! ¡No puedo contenerlo todo!",
+            "¡Dispara por mi garganta! ¡No!"
+          ],
+          "low": [
+            "Se está corriendo... llenándome la boca completamente...",
+            "Tanto semen... caliente y espeso... odio esto...",
+            "Puedo sentir cada chorro... uno tras otro...",
+            "Cubre todo... mi lengua, mi garganta...",
+            "La cantidad... hay tanto... aplastante...",
+            "Ola tras ola... llenándome...",
+            "Lo tengo en mi boca... apenas...",
+            "El sabor... salado... amargo... lágrimas mezclándose..."
+          ],
+          "medium_low": [
+            "Está liberando... siento que inunda mi boca...",
+            "Semen caliente llenándome... lo acepto...",
+            "Tanto... pero lo contengo todo...",
+            "Cada pulso... más y más...",
+            "Mi boca está llena... conteniéndolo ahí...",
+            "Esto es... la parte final...",
+            "Lo contengo todo... esperando su orden...",
+            "El calor se extiende... por toda mi boca..."
+          ],
+          "medium": [
+            "Se está corriendo... lo recibo todo...",
+            "El calor... llenándome la boca completamente...",
+            "Pulso tras pulso... acepto todo...",
+            "Mi boca contiene su semilla... toda...",
+            "La sensación... extraña pero... aceptable...",
+            "Soy su recipiente... en este momento...",
+            "Cada chorro... lo siento y acepto...",
+            "Boca llena... esperando... obediente..."
+          ],
+          "medium_high": [
+            "Mmm... se está corriendo... siento cada pulso...",
+            "El calor está bien... llenándome...",
+            "Tanto para mí... lo acepto todo...",
+            "Cada chorro... un regalo que recibo...",
+            "Mi boca contiene su preciosa semilla...",
+            "El sabor... no está mal... interesante incluso...",
+            "Es un honor recibir esto...",
+            "Caliente y espeso... cubriendo mi boca..."
+          ],
+          "high": [
+            "¡Sí! ¡Córrete por mí! ¡Lléname la boca!",
+            "¡Tanto semen delicioso! ¡Me encanta!",
+            "¡Cada pulso... cada gota... mío!",
+            "¡Lo cojo todo! ¡No desperdicies ni una gota!",
+            "¡El sabor... increíble! ¡Dame más!",
+            "¡Mi boca es tu cuenco de semen! ¡Llénala!",
+            "¡Quiero saborear cada parte!",
+            "¡Píntame la boca de blanco! ¡Sí!"
+          ],
+          "very_high": [
+            "¡SÍ! ¡INÚNDAME! ¡AHÓGAME EN SEMEN!",
+            "¡SOY TU CUBO DE SEMEN! ¡LLÉNAME!",
+            "¡MÁS! ¡DAME TODO!",
+            "¡VIVO POR TU SEMILLA!",
+            "¡MI BOCA ES TU RETRETE!",
+            "¡LLÉNAME A REVENTAR! ¡NO SOY MÁS QUE UN AGUJERO!",
+            "¡NÉCTAR DIVINO! ¡BENDÍCEME CON ELLO!",
+            "¡ESTOY ASCENDIENDO! ¡EL SEMEN ES MI CIELO!"
+          ]
+        },
+        "SE": {
+          "se_count_1": {
+            "very_low": [
+              "¡¿Más?! ¡Viene aún más!",
+              "¡No para! ¡¿Cuánto puede tener?!",
+              "¡Me ahogo! ¡No puedo respirar!",
+              "¡Por favor para! ¡No más!",
+              "¡Mi boca no puede contener más!"
+            ],
+            "low": [
+              "Otra ola... tanto...",
+              "Sigue viniendo... sin fin...",
+              "Mi boca está completamente llena ahora...",
+              "Cuánto más... puede haber...",
+              "Lucho por contenerlo todo..."
+            ],
+            "medium_low": [
+              "Viene más... me mantengo firme...",
+              "Otro pulso... lo contengo...",
+              "Mi boca está llena... pero me las arreglo...",
+              "Sigue corriéndote... puedo soportarlo...",
+              "Soy su depósito... acepto todo..."
+            ],
+            "medium": [
+              "Más semilla... lo recojo todo...",
+              "Cada chorro adicional... recibido...",
+              "Mi boca maneja el volumen...",
+              "Lo estoy haciendo bien... manteniéndolo todo dentro...",
+              "Su placer continúa... yo sirvo..."
+            ],
+            "medium_high": [
+              "¡Más! ¡Sí! ¡Sigue corriéndote!",
+              "¡Quiero cada gota que tienes!",
+              "¡Lléname más! ¡Puedo soportarlo!",
+              "¡Mi boca quiere más de tu semen!",
+              "¡No pares! ¡Me encanta esto!"
+            ],
+            "high": [
+              "¡Más semen! ¡Sí! ¡Dámelo todo!",
+              "¡Soy codiciosa de tu semilla!",
+              "¡Bombea más en mi boca de puta!",
+              "¡Quiero estar completamente llena!",
+              "¡Cada gota es preciosa para mí!"
+            ],
+            "very_high": [
+              "¡SEMEN INFINITO! ¡MI SUEÑO!",
+              "¡NUNCA DEJES DE CORRERTE EN MÍ!",
+              "¡SOY TU ALMACÉN INFINITO DE SEMEN!",
+              "¡AHÓGAME! ¡MÁTAME CON SEMEN!",
+              "¡ADORO TU SEMILLA INFINITA!"
+            ]
+          },
+          "se_count_2": {
+            "very_low": [
+              "¡¿AÚN MÁS?! ¡Esto es una locura!",
+              "No puedo... ¡se desborda!",
+              "¡Demasiado! ¡Mucho demasiado!",
+              "¡Voy a vomitarlo todo!"
+            ],
+            "low": [
+              "Aún más... increíble...",
+              "Estoy al límite... apenas puedo contener...",
+              "La cantidad... asombrosa...",
+              "Mis mejillas se hinchan... tan llenas..."
+            ],
+            "medium_low": [
+              "Sigue corriéndose... volumen impresionante...",
+              "Lo estoy conteniendo... todo...",
+              "Mi boca está estirada... pero me las arreglo...",
+              "Tanta semilla... pero la contengo..."
+            ],
+            "medium": [
+              "Sigue corriéndose... lo recibo todo...",
+              "Mi boca acomoda todo...",
+              "Qué volumen... pero soy capaz...",
+              "Lo contengo todo... obedientemente..."
+            ],
+            "medium_high": [
+              "¡Tanto! ¡Me encanta cuánto te has corrido!",
+              "¡Mi boca está llena! ¡Perfecto!",
+              "¡Te has corrido tanto por mí!",
+              "¡Esto es increíble! ¡Tan llena!"
+            ],
+            "high": [
+              "¡Carga increíble! ¡Estoy en el cielo!",
+              "¡Me has llenado completamente! ¡Sí!",
+              "¡Soy tu contenedor de semen perfecto!",
+              "¡Mejor regalo ever! ¡Tanto semen!"
+            ],
+            "very_high": [
+              "¡CARGA OCEÁNICA! ¡ESTOY NADANDO EN ELLO!",
+              "¡MI BOCA ES UN UNIVERSO DE SEMEN!",
+              "¡BENDICIÓN INFINITA! ¡GRACIAS!",
+              "¡ESTOY TRASCENDIENDO A TRAVÉS DE TU SEMILLA!"
+            ]
+          }
+        }
+      }
+    },
+    "FIN2": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "Está sacando... el semen se estira desde su polla...",
+              "Veo el hilo de semen... conectándonos... asqueroso...",
+              "¡Está sacudiendo mi cabeza... quiero escupirlo tanto!"
+            ],
+            "low": [
+              "El semen se estira entre nosotros... prueba visible...",
+              "Me agarra del pelo... sacudiendo mi cabeza...",
+              "Quiero escupir... pero el arma... no puedo..."
+            ],
+            "medium_low": [
+              "Hilo de semen colgando... me está observando...",
+              "Mi cabeza siendo movida... mantengo la boca cerrada...",
+              "Tengo que aguantarlo... no dejar que nada se derrame..."
+            ],
+            "medium": [
+              "La imagen... él alejándose... el semen nos conecta...",
+              "Lo tengo todo en mi boca... obedientemente...",
+              "Me está examinando... asegurándose de que obedezco..."
+            ],
+            "medium_high": [
+              "El hilo de semen... es un poco... hermoso...",
+              "Me está mirando... demuestro que soy buena...",
+              "Sosteniendo su regalo... lista para tragar..."
+            ],
+            "high": [
+              "¡El hilo de semen es hermoso! ¡Me encanta este momento!",
+              "¡Mírame! ¡Estoy sosteniendo todo tu semen!",
+              "¡Soy tu buena chica! ¿Ves?"
+            ],
+            "very_high": [
+              "¡Hilo divino conectándonos! ¡Momento sagrado!",
+              "¡Atesoro cada gota que me diste!",
+              "¡Soy tu perfecta guardiana de semen!"
+            ]
+          }
+        },
+        {
+          "step": 2,
+          "delay": 1.0,
+          "thoughts": {
+            "very_low": [
+              "¡Me dice que trague... o me disparará!",
+              "¡El arma contra mi pecho... no tengo opción!",
+              "Tengo que... tengo que beber esto..."
+            ],
+            "low": [
+              "Tragar o morir... el ultimátum es claro...",
+              "El cañón del arma en mi pecho... frío y amenazante...",
+              "Me estoy preparando... para hacerlo..."
+            ],
+            "medium_low": [
+              "Su orden... tragar... el arma la refuerza...",
+              "Tengo que beber su semen... no hay alternativa...",
+              "Solo hacerlo... terminar de una vez..."
+            ],
+            "medium": [
+              "Quiere que trague... lo haré...",
+              "El arma es solo seguro... entiendo...",
+              "Lo haré ahora... beberlo..."
+            ],
+            "medium_high": [
+              "Quiere que trague... vale...",
+              "El arma... solo para mostrar... lo haré de todos modos...",
+              "Hora de beber... estoy lista..."
+            ],
+            "high": [
+              "¡Quiero tragar! ¡Déjame!",
+              "¡Me beberé cada gota con gusto!",
+              "¡Mírame tragar tu preciosa semilla!"
+            ],
+            "very_high": [
+              "¡Me lo beberé! ¡Es mi comunión!",
+              "¡Déjame consumir tu esencia divina!",
+              "¡Es un honor tragar tu regalo!"
+            ]
+          }
+        },
+        {
+          "step": 3,
+          "delay": 1.5,
+          "thoughts": {
+            "very_low": [
+              "Estoy... lo estoy tragando... dios mío...",
+              "La textura... espesa... deslizándose...",
+              "Lo siento... entrando en mi estómago... estoy llorando..."
+            ],
+            "low": [
+              "Tragando... el semen caliente se desliza por mi garganta...",
+              "Lo siento... descendiendo... cubriendo todo...",
+              "Está dentro de mí ahora... su semilla... violada por completo..."
+            ],
+            "medium_low": [
+              "Bebiéndomelo... espeso y caliente...",
+              "Lo siento bajar... hacia mi estómago...",
+              "Está hecho... me lo tragué todo... como ordenó..."
+            ],
+            "medium": [
+              "Tragando... el semen baja suavemente...",
+              "Lo siento... asentándose en mi estómago...",
+              "Hecho... me lo consumí todo... como requería..."
+            ],
+            "medium_high": [
+              "Mmm... tragándomelo... no está mal en realidad...",
+              "El calor se extiende por mí... por dentro...",
+              "Me lo bebí todo... lo hice bien..."
+            ],
+            "high": [
+              "¡Delicioso! ¡Tragando cada gota!",
+              "¡Me encanta sentir cómo se desliza dentro de mí!",
+              "¡Tu semen está dentro de mí ahora! ¡Perfecto!"
+            ],
+            "very_high": [
+              "¡Néctar divino llenando mi cuerpo!",
+              "¡Estoy bendecida! ¡Tu semilla nutre mi alma!",
+              "¡Estoy completa ahora! ¡Gracias, amo!"
+            ]
+          }
+        }
+      ]
+    },
+    "JIGO": {
+      "events": {
+        "JIGO": {
+          "very_low": [
+            "Por favor... me lo tragué todo... ¡lo prometo!",
+            "¡No me dispares! ¡Hice lo que dijiste!",
+            "Mi boca está vacía... ¿ves? ¡Por favor créeme!",
+            "¡No quiero morir! ¡Obedecí!",
+            "El arma... por favor... ¡fui buena!",
+            "¡Me tragué todo! ¡No me hagas daño!",
+            "Por favor ten piedad... lo hice...",
+            "Te lo ruego... ¡seguí tus órdenes!"
+          ],
+          "low": [
+            "Me lo tragué todo... puedes comprobarlo...",
+            "Mi boca está limpia... hice lo que ordenaste...",
+            "El miedo... nunca se va... pero obedecí...",
+            "Hice todo bien... por favor...",
+            "Su semen está en mi estómago... prueba de que obedecí...",
+            "El arma sigue amenazando... incluso después de obedecer...",
+            "Qué más puedo hacer... hice todo...",
+            "Estoy tan cansada... pero sobreviví a esto..."
+          ],
+          "medium_low": [
+            "Me tragué todo... como indicaste...",
+            "Mi boca está vacía... puedes verlo...",
+            "Hice lo necesario... está hecho...",
+            "El calor en mi estómago... evidencia...",
+            "Me sometí completamente... sin resistencia...",
+            "Se acabó... esta parte de todos modos...",
+            "Sobreviví... obedeciendo...",
+            "Boca vacía... estómago lleno..."
+          ],
+          "medium": [
+            "Me tragué todo... completamente...",
+            "Mi boca está limpia... como querías...",
+            "Hice mi parte... cumplí mi papel...",
+            "Su semilla está dentro de mí... toda...",
+            "Actué... adecuadamente...",
+            "La transacción... completa...",
+            "Soy lo que soy ahora...",
+            "Su semen... parte de mí..."
+          ],
+          "medium_high": [
+            "Me tragué cada gota... con orgullo...",
+            "Mi boca está limpia... fui buena...",
+            "Lo hice bien... ¿verdad?",
+            "Su semen está en mí... donde pertenece...",
+            "Estoy contenta de haber podido complacerlo...",
+            "La sensación cálida... satisfactoria...",
+            "Le serví correctamente...",
+            "Mira... todo desaparecido... soy una buena chica..."
+          ],
+          "high": [
+            "¡Me lo tragué todo! ¡Estaba delicioso!",
+            "¡Mi boca está vacía porque me encantó cada gota!",
+            "¡Quiero que sepas que lo disfruté!",
+            "¡Tu semen está en mi vientre donde lo quiero!",
+            "¡Estoy tan feliz de haber podido complacerte!",
+            "¡Fue increíble! ¡Gracias!",
+            "¡Soy tu puta de semen perfecta!",
+            "¡Me lo bebí todo ansiosamente!"
+          ],
+          "very_high": [
+            "¡CONSUMÍ TU ESENCIA DIVINA!",
+            "¡MI BOCA ES VASO SAGRADO AHORA VACÍO!",
+            "¡ESTOY BENDECIDA POR TU SEMILLA SAGRADA!",
+            "¡TU SEMEN ES MI SACRAMENTO!",
+            "¡ES UN HONOR SER TU RETRETE DE SEMEN!",
+            "¡CADA GOTA FUE EL CIELO!",
+            "¡SOY TU DEVOTA ADORADORA DE SEMEN!",
+            "¡VIVO PARA BEBER TU SEMILLA!"
+          ]
+        }
+      }
+    },
+    "JIGO2": {
+      "events": {
+        "JIGO2": {
+          "very_low": [
+            "Quiere que abra... para demostrarlo...",
+            "Tengo miedo... ¿y si no me cree...",
+            "Abriendo mi boca... temblando..."
+          ],
+          "low": [
+            "Abrir... que verifique...",
+            "Tengo que mostrarle... mi boca vacía...",
+            "La inspección... tan humillante..."
+          ],
+          "medium_low": [
+            "Abriendo para inspección... nerviosa...",
+            "Necesita ver... entiendo...",
+            "Mostrándole... prueba de que obedecí..."
+          ],
+          "medium": [
+            "Abriendo mi boca... mostrando sumisión...",
+            "Quiere verificar... se lo muestro...",
+            "Boca limpia... prueba de obediencia..."
+          ],
+          "medium_high": [
+            "Abriendo para él... mostrando que fui buena...",
+            "Mira... todo limpio... lo hice bien...",
+            "Quiero que vea que obedecí..."
+          ],
+          "high": [
+            "¡Mira! ¡Mira qué bien lo hice!",
+            "¡Mi boca está vacía porque me encantó tragármelo!",
+            "¡Estoy tan orgullosa de haberte complacido!"
+          ],
+          "very_high": [
+            "¡CONTEMPLA MI DEVOCIÓN!",
+            "¡MI BOCA ES TU TEMPLO!",
+            "¡SOY TU SIRVIENTA PERFECTA!"
+          ]
+        }
+      }
+    },
+    "JIGOFIN": {
+      "events": {
+        "JIGOFIN": {
+          "very_low": [
+            "Está diciendo... que otros también me usarán...",
+            "No... por favor... ¡no más de ellos!",
+            "No puedo... no puedo hacer esto otra vez..."
+          ],
+          "low": [
+            "Los otros esperan... esto continúa...",
+            "Me está pasando... como propiedad...",
+            "Más hombres... más violación... cuándo termina..."
+          ],
+          "medium_low": [
+            "Él terminó... ahora vendrán otros...",
+            "Debo servir a todos... entiendo...",
+            "El ciclo continúa... solo soy una herramienta..."
+          ],
+          "medium": [
+            "Su turno terminó... otros esperan...",
+            "Les serviré también... es lo esperado...",
+            "Este es mi propósito ahora... lo acepto..."
+          ],
+          "medium_high": [
+            "Él está satisfecho... ahora los otros...",
+            "Estoy lista para más... puedo hacerlo...",
+            "Sirviendo a varios hombres... soy capaz..."
+          ],
+          "high": [
+            "¡Bien! ¡Envíame a los otros!",
+            "¡Quiero complacerlos a todos!",
+            "¡Estoy lista para más pollas!"
+          ],
+          "very_high": [
+            "¡SÍ! ¡TRÁELOS A TODOS!",
+            "¡NECESITO MÁS! ¡POLLAS INFINITAS!",
+            "¡SOY LA PUTA DE TODOS!"
+          ]
+        }
+      }
+    },
+    "JIGOFIN2": {
+      "events": {
+        "JIGOFIN2": {
+          "very_low": [
+            "¡NO! ¡Otro más! ¡Por favor para!",
+            "¡No puedo con más! ¡Me estoy rompiendo!",
+            "¡Que alguien me ayude! ¡Por favor! ¡Alguien!",
+            "¡Mi cuerpo no puede resistir esto! ¡Para!",
+            "Te lo ruego... no más... ten piedad!",
+            "¡Esto me matará! ¡Me muero por dentro!",
+            "Por favor... haré lo que sea... solo no más...",
+            "No soy... no soy lo bastante fuerte para esto..."
+          ],
+          "low": [
+            "Otro hombre... mi pesadilla continúa...",
+            "Me pasan de uno a otro... como carne...",
+            "Cuándo terminará esto... cuántos más...",
+            "Estoy tan exhausta... rota... por favor...",
+            "Se turnan... destruyéndome...",
+            "Estoy llorando... pero no les importa...",
+            "Solo un objeto para ellos... nada más...",
+            "Este infierno... nunca termina..."
+          ],
+          "medium_low": [
+            "Pasada al siguiente... aquí vamos otra vez...",
+            "Otra polla... otra prueba...",
+            "Solo... tengo que sobrevivir a esto también...",
+            "Cuántos hay... perdí la cuenta...",
+            "Estoy entumecida ahora... solo siguiendo el ritmo...",
+            "Esta es mi realidad... aceptarla...",
+            "El siguiente se acerca... me preparo...",
+            "Aguantar... solo aguantar..."
+          ],
+          "medium": [
+            "Siguiente en la fila... entiendo el sistema...",
+            "Serviré a este también... luego al siguiente...",
+            "Esto es lo que soy ahora... lo que hago...",
+            "Otro hombre... mismo ritual...",
+            "Soy eficiente en esto... mecánica...",
+            "Mi propósito... claro y simple...",
+            "El siguiente... estoy lista...",
+            "Esta es mi función... la cumplo..."
+          ],
+          "medium_high": [
+            "El siguiente hombre... tengo curiosidad...",
+            "Tal vez este sea diferente...",
+            "Me estoy volviendo buena en esto... practicada...",
+            "Tráelo a mí... estoy lista...",
+            "Otra oportunidad de servir...",
+            "Me estoy volviendo hábil... competente...",
+            "El siguiente... veamos...",
+            "Puedo manejar más... sé que puedo..."
+          ],
+          "high": [
+            "¡Sí! ¡El siguiente! ¡Tráelo!",
+            "¡Quiero más pollas! ¡Más hombres!",
+            "¡Soy insaciable! ¡Que sigan viniendo!",
+            "¡No me hagas esperar! ¡Lo necesito!",
+            "¡Más! ¡Siempre más! ¡Me encanta!",
+            "¡Cada polla es un regalo! ¡Dame más!",
+            "¡Soy la puta de todos! ¡Me encanta!",
+            "¡Haz una fila! ¡Me los tomaré a todos!"
+          ],
+          "very_high": [
+            "¡POLLAS INFINITAS! ¡MI PARAÍSO!",
+            "¡SOY LA DIOSA DEL GANGBANG!",
+            "¡CUBO DE SEMEN DE CADA HOMBRE! ¡SÍ!",
+            "¡NECESITO POLLA INFINITA! ¡MÁS!",
+            "¡PÁSAME DE UNO A OTRO PARA SIEMPRE!",
+            "¡SOY PURA ADICCIÓN A LA POLLA!",
+            "¡EL GANGBANG ES MI RELIGIÓN!",
+            "¡SOY PUTA ADORADORA DE POLLA ETERNA!"
+          ]
+        }
+      }
+    }
+  }
+}

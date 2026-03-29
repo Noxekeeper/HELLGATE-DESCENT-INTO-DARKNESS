@@ -1,0 +1,826 @@
+{
+  "settings": {
+    "responseDelayMin": 1.5,
+    "responseDelayMax": 2.5,
+    "fontSize": 22.0,
+    "verticalOffset": 150.0,
+    "displayDuration": 5.0
+  },
+  "mindBrokenThresholds": [0.0, 0.15, 0.3, 0.5, 0.7, 0.85, 1.0],
+  "animations": {
+    "START": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "Non ! Ce bandit m'a attrapée ! Sa poigne est trop forte !",
+              "Je ne peux pas me libérer de ses mains ! Que veut-il ?",
+              "Sa force est écrasante... Je suis piégée dans la forêt !",
+              "Je dois crier... quelqu'un aide-moi... n'importe qui !",
+              "Ses mains m'attrapent... Je ne peux pas m'échapper !"
+            ],
+            "low": [
+              "Ce bandit est trop fort... ses mains me tiennent fermement...",
+              "J'aurais dû être plus prudente en traversant ces bois...",
+              "Sa poigne ne lâche pas... Je suis complètement sans défense...",
+              "Je dois rester calme... trouver un moyen de m'échapper...",
+              "Sa force est terrifiante... que va-t-il me faire ?"
+            ],
+            "medium_low": [
+              "Ses mains sont partout... me touchent... Je ne peux pas bouger...",
+              "La forêt est si silencieuse... personne n'entendra mes cris...",
+              "Ce bandit ne me laissera pas partir facilement... Je suis perdue...",
+              "Son corps presse contre le mien... si près...",
+              "Je sens son souffle sur ma nuque... ça fait peur..."
+            ],
+            "medium": [
+              "Sa force me submerge complètement...",
+              "Je dois économiser mon énergie pour quand je pourrai m'échapper...",
+              "Peut-être que si je ne résiste pas trop... il sera plus doux...",
+              "Son souffle est chaud sur ma nuque... Je me sens si vulnérable...",
+              "Je sens son cœur battre... si près de moi..."
+            ],
+            "medium_high": [
+              "Son toucher... ça me fait frissonner d'une étrange façon...",
+              "Le danger... ça m'excite d'une certaine manière...",
+              "Je me demande ce que ce bandit prévoit de faire avec moi...",
+              "Ses mains sont rudes mais... pas désagréables...",
+              "Le frisson d'être attrapée... Je ne peux pas le nier..."
+            ],
+            "high": [
+              "Ses mains se sentent si fortes... si autoritaires...",
+              "Je ne peux pas nier le frisson qui me parcourt...",
+              "Que va me faire ce bandit... Je veux le savoir...",
+              "Son toucher éveille quelque chose en moi...",
+              "L'air de la forêt semble frais contre ma peau chauffée..."
+            ],
+            "very_high": [
+              "Son toucher... Je le crave plus que tout...",
+              "Prends-moi ici... bandit...",
+              "Je veux sentir ta force complètement...",
+              "Ne t'arrête pas... J'ai besoin de toi...",
+              "Tes mains... elles sont parfaites..."
+            ]
+          }
+        },
+        {
+          "step": 2,
+          "delay": 1.0,
+          "thoughts": {
+            "very_low": [
+              "Il me tire vers le bas... Je ne peux pas rester debout !",
+              "Mes genoux frappent le sol... ça fait mal...",
+              "Il me force à m'agenouiller... Je ne veux pas ça !",
+              "Le sol est froid et dur... des larmes dans mes yeux...",
+              "Ses mains ne me laissent pas me lever... Je suis piégée..."
+            ],
+            "low": [
+              "Il me met à genoux... Je ne peux pas résister...",
+              "La douleur dans mes genoux... mais je dois endurer...",
+              "Sa force est trop grande... Je suis à genoux devant lui...",
+              "Je dois réfléchir... il doit y avoir un moyen de sortir...",
+              "Sa poigne dans mes cheveux... me contrôle..."
+            ],
+            "medium_low": [
+              "Je suis tirée vers le bas... Je dois juste obéir...",
+              "Son contrôle sur moi est absolu... à genoux...",
+              "Le sol de la forêt est rugueux... mais je l'accepte...",
+              "Ses mains me guident... Je suis...",
+              "Cette position... si humiliante..."
+            ],
+            "medium": [
+              "Il me positionne... Je sais ce qui vient...",
+              "Ses mains me contrôlent... Je l'accepte...",
+              "À genoux... là où il me veut...",
+              "C'est ma place maintenant... à genoux devant lui...",
+              "Sa domination... Je la sens complètement..."
+            ],
+            "medium_high": [
+              "Ses mains dans mes cheveux... me commandant...",
+              "Je descends pour lui... volontiers...",
+              "À genoux... là où je devrais être...",
+              "Son toucher... me guide parfaitement...",
+              "Je veux être ici... à ses pieds..."
+            ],
+            "high": [
+              "Oui... tire mes cheveux... mets-moi à genoux...",
+              "Ses mains fortes... me guidant vers le bas...",
+              "Je veux être ici... à sa merci...",
+              "À genoux... le servant...",
+              "Sa domination... Je la crave..."
+            ],
+            "very_high": [
+              "Oui ! Force-moi vers le bas... J'ai besoin de ça !",
+              "À genoux pour toi... maître...",
+              "Tire mes cheveux plus fort... Je suis tienne !",
+              "Cette position... parfaite pour moi...",
+              "J'appartiens à genoux... te servant..."
+            ]
+          }
+        },
+        {
+          "step": 3,
+          "delay": 1.5,
+          "thoughts": {
+            "very_low": [
+              "Oh mon Dieu ! Il s'expose ! Juste devant mon visage !",
+              "Je ne peux pas regarder... mais il force ma tête !",
+              "Sa... masculinité... si près... Je veux fuir !",
+              "C'est trop... Je ne peux pas gérer ça !",
+              "Ses mains me tiennent... Je ne peux pas m'échapper !"
+            ],
+            "low": [
+              "Il me montre... juste devant mon visage...",
+              "Je sais ce qu'il veut... la honte brûle...",
+              "Je dois regarder... il m'y force...",
+              "Sa taille... intimidante... effrayante...",
+              "Ça arrive... que je le veuille ou non..."
+            ],
+            "medium_low": [
+              "Sa bite... juste devant moi...",
+              "Je vois ce qui vient... Je dois l'accepter...",
+              "Ça arrive... Je ne peux pas l'arrêter...",
+              "Ses mains contrôlent ma tête... mon regard...",
+              "Je dois regarder... il n'y a pas de choix..."
+            ],
+            "medium": [
+              "Il me montre ce que je dois faire...",
+              "Sa masculinité... Je suis censée la servir...",
+              "Je comprends... Je ferai ce qu'il veut...",
+              "Sa taille... impressionnante... imposante...",
+              "C'est ma tâche maintenant... Je l'accepte..."
+            ],
+            "medium_high": [
+              "Sa bite... elle est impressionnante...",
+              "Je suis curieuse... un peu intéressée...",
+              "Peut-être que ce ne sera pas si terrible...",
+              "Sa taille... me fait me demander...",
+              "Je pourrais... la toucher... peut-être..."
+            ],
+            "high": [
+              "Mmm... il est si grand... J'aime ce que je vois...",
+              "Je veux le toucher... le goûter...",
+              "Montre-moi plus... Je suis prête...",
+              "Ta bite... belle... puissante...",
+              "J'ai besoin de la sentir... la goûter..."
+            ],
+            "very_high": [
+              "Oui ! Ta belle bite ! Laisse-moi l'adorer !",
+              "J'en ai besoin ! S'il te plaît, laisse-moi l'avoir !",
+              "Je bave déjà pour toi !",
+              "Ta bite... parfaite... mienne !",
+              "Laisse-moi la servir... s'il te plaît !"
+            ]
+          }
+        }
+      ]
+    },
+    "START2": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "Il dit... touche-le ou il me fera du mal !",
+              "Je ne veux pas ! Mais je ne veux pas mourir !",
+              "Ses mots sont si cruels... Je suis terrifiée...",
+              "Ses mains... son arme... Je n'ai pas le choix...",
+              "Je dois obéir... pour survivre..."
+            ],
+            "low": [
+              "Le toucher ou être blessée... pas de vrai choix...",
+              "Sa voix est si froide... commande...",
+              "Je dois le faire... pour survivre...",
+              "Ses demandes... absolues...",
+              "Je dois me conformer... rester en vie..."
+            ],
+            "medium_low": [
+              "Ses commandes sont claires... obéis ou souffre...",
+              "Je dois lui faire plaisir... c'est nécessaire...",
+              "Son contrôle sur moi est absolu...",
+              "Ses mots sont loi dans cette forêt...",
+              "Je dois me soumettre à sa volonté..."
+            ],
+            "medium": [
+              "Il veut que je le caresse... Je comprends...",
+              "Je le ferai... passer à travers...",
+              "Mes mains... sa bite... juste mécanique...",
+              "C'est juste de la survie... rien de plus...",
+              "Je peux le faire... Je dois..."
+            ],
+            "medium_high": [
+              "Il veut mes mains sur lui... d'accord...",
+              "Peut-être que ce ne sera pas si mal...",
+              "Je suis un peu curieuse de savoir comment ça se sent...",
+              "Sa bite... chaude... pulsatile...",
+              "Je pourrais m'habituer à ça..."
+            ],
+            "high": [
+              "Il veut mes mains... Je veux ça aussi...",
+              "J'ai hâte de toucher... de faire plaisir...",
+              "Oui, je te caresserai... volontiers...",
+              "Sa bite... répond à mon toucher...",
+              "Je veux lui faire du bien..."
+            ],
+            "very_high": [
+              "Commande-moi ! Dis-moi comment te faire plaisir !",
+              "J'ai besoin de toucher ta bite ! Laisse-moi !",
+              "Je ferai tout ce que tu dis, maître !",
+              "Mes mains... pour ton plaisir !",
+              "Utilise-moi... Je suis tienne !"
+            ]
+          }
+        },
+        {
+          "step": 2,
+          "delay": 1.0,
+          "thoughts": {
+            "very_low": [
+              "Mes mains... tremblent alors que je les tends...",
+              "Je ne peux pas croire que je fais ça... c'est mal !",
+              "Son arme... me rappelant que je n'ai pas le choix...",
+              "Des larmes tombent... mais je dois toucher...",
+              "Sa bite... chaude... pulsatile... Je déteste ça..."
+            ],
+            "low": [
+              "Je le touche... sa bite est si chaude...",
+              "C'est humiliant... mais nécessaire...",
+              "Je dois caresser... il me regarde...",
+              "Mes mains... bougent... mécaniquement...",
+              "La honte... brûle... mais je continue..."
+            ],
+            "medium_low": [
+              "Mes mains sur lui... font ce qu'il veut...",
+              "C'est chaud... pulse dans ma poigne...",
+              "Juste des mouvements mécaniques... passer à travers...",
+              "Sa respiration change... Je dois faire quelque chose de bien...",
+              "Je le sens... répond..."
+            ],
+            "medium": [
+              "Je le caresse... c'est pas terrible...",
+              "Sa bite... pulse dans mes mains...",
+              "Je fais ce dont il a besoin... c'est tout...",
+              "Mon rythme... régulier... constant...",
+              "C'est juste... une tâche... rien de plus..."
+            ],
+            "medium_high": [
+              "Il devient plus dur... Je le sens...",
+              "Je suis vraiment bonne à ça... il aime...",
+              "Ses réactions... encourageantes...",
+              "Peut-être que je lui fais plaisir... c'est bien...",
+              "Sa bite... grandit... dans mes mains..."
+            ],
+            "high": [
+              "Mmm... il est si dur pour moi...",
+              "J'adore le sentir pulser dans mes mains...",
+              "Je veux lui faire plaisir... le faire se sentir bien...",
+              "Son plaisir... à moi de le donner...",
+              "Je veux qu'il apprécie ça..."
+            ],
+            "very_high": [
+              "Ta bite est parfaite ! Si dure !",
+              "J'adore te caresser ! Donne-moi plus !",
+              "Laisse-moi adorer ta belle bite !",
+              "Mes mains... ton plaisir !",
+              "J'ai besoin de te faire jouir !"
+            ]
+          }
+        }
+      ]
+    },
+    "ERO": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "Il pousse en moi ! Ça fait si mal !",
+              "Sa bite... trop grosse... me déchire !",
+              "Je ne peux pas le supporter ! Arrête s'il te plaît !",
+              "La douleur... écrasante... Je ne peux pas !",
+              "Il se force... Je ne peux pas respirer !"
+            ],
+            "low": [
+              "Il entre en moi... l'étirement est terrible...",
+              "Je dois me détendre... sinon ça fera plus mal...",
+              "Sa taille... trop... mais je dois endurer...",
+              "Des larmes coulent... mais je reste immobile...",
+              "Cette douleur... quand finira-t-elle ?"
+            ],
+            "medium_low": [
+              "Il est en moi... me remplit complètement...",
+              "La plénitude... étrange... inconfortable...",
+              "Je dois m'ajuster... m'y habituer...",
+              "Ses coups de butoir... lents... mais profonds...",
+              "Je peux le faire... Je dois..."
+            ],
+            "medium": [
+              "Sa bite... bouge en moi...",
+              "La sensation... plus juste de la douleur...",
+              "Je m'ajuste... trouve un rythme...",
+              "Ses mains... me tiennent stable...",
+              "Ça arrive... Je l'accepte..."
+            ],
+            "medium_high": [
+              "Ses coups de butoir... construisent un rythme...",
+              "La douleur... s'estompe... remplacée par autre chose...",
+              "Sa bite... se sent... intéressante...",
+              "Mon corps... répond... malgré moi...",
+              "Ce n'est peut-être pas si mal..."
+            ],
+            "high": [
+              "Oui... sa bite se sent si bien en moi...",
+              "Je le veux plus profond... plus dur...",
+              "Ne t'arrête pas... s'il te plaît...",
+              "Ses coups de butoir... parfaits... incroyables...",
+              "J'ai besoin de ça... J'ai besoin de lui..."
+            ],
+            "very_high": [
+              "Baise-moi plus fort ! J'ai besoin de ta bite !",
+              "Plus profond ! Remplis-moi complètement !",
+              "Ta bite est parfaite ! Ne t'arrête pas !",
+              "J'adore te sentir en moi !",
+              "Plus ! Donne-moi tout !"
+            ]
+          }
+        }
+      ]
+    },
+    "ERO1": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "Le collier... serré autour de mon cou !",
+              "Il tire la chaîne ! Je ne peux pas respirer !",
+              "Mon cou... se tend... ça fait mal !",
+              "Je ne peux pas bouger... il me contrôle !",
+              "La pression... trop... Je panique !"
+            ],
+            "low": [
+              "La chaîne se serre... me restreint...",
+              "Je dois suivre... ou étouffer...",
+              "Son contrôle... absolu... terrifiant...",
+              "Le collier... me marque comme sienne...",
+              "Je ne peux pas résister... Je dois obéir..."
+            ],
+            "medium_low": [
+              "La chaîne me guide... Je suis...",
+              "Son contrôle... Je l'accepte...",
+              "Le collier... sa marque sur moi...",
+              "Je bouge comme il veut... obéissante...",
+              "C'est ma vie maintenant... enchaînée..."
+            ],
+            "medium": [
+              "La chaîne... nous connecte...",
+              "Ses tirées... guident mes mouvements...",
+              "Je suis son guide... parfaitement...",
+              "Le collier... symbolise ma soumission...",
+              "Je lui appartiens... complètement..."
+            ],
+            "medium_high": [
+              "La chaîne se sent... excitante...",
+              "Son contrôle... m'excite...",
+              "Je veux qu'il tire plus fort...",
+              "Le collier... sa réclamation sur moi...",
+              "J'adore être sienne... contrôlée..."
+            ],
+            "high": [
+              "Tire la chaîne ! Contrôle-moi !",
+              "J'adore sentir ta domination !",
+              "Le collier me rend tienne !",
+              "Plus fort ! Tire-moi plus près !",
+              "J'ai besoin de ton contrôle !"
+            ],
+            "very_high": [
+              "Étouffe-moi avec la chaîne ! J'en ai besoin !",
+              "Ton contrôle me rend folle !",
+              "Je suis ta salope enchaînée !",
+              "Tire plus fort ! Possède-moi !",
+              "Le collier est mon plaisir !"
+            ]
+          }
+        }
+      ]
+    },
+    "ERO2": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "Ses coups de butoir... plus durs maintenant... Je ne peux pas le supporter !",
+              "Chaque poussée... plus profonde... plus douloureuse...",
+              "Mon corps... tremble... de la force...",
+              "Je veux crier... mais je me retiens...",
+              "L'intensité... me submerge..."
+            ],
+            "low": [
+              "Son rythme... plus rapide... plus intense...",
+              "Je dois correspondre... rester avec lui...",
+              "La force... monte... J'endure...",
+              "Ses grognements... animalistes... effrayants...",
+              "Je tiens... Je survis à ça..."
+            ],
+            "medium_low": [
+              "Ses coups de butoir... plus profonds... plus exigeants...",
+              "Je m'ajuste... prends ce qu'il donne...",
+              "L'intensité... Je peux la gérer...",
+              "Son corps... claque contre le mien...",
+              "Je trouve mon rythme... avec lui..."
+            ],
+            "medium": [
+              "Son allure... parfaite... intense...",
+              "Je bouge avec lui... en synchro...",
+              "La force... excitante... puissante...",
+              "Sa bite... frappe tous les bons endroits...",
+              "Je me sens... vivante... désirée..."
+            ],
+            "medium_high": [
+              "Plus dur ! Oui... juste comme ça !",
+              "Ses coups de butoir... incroyables... intenses...",
+              "Je veux plus... plus profond...",
+              "Sa puissance... m'excite...",
+              "Ne t'arrête pas... s'il te plaît..."
+            ],
+            "high": [
+              "Baise-moi plus fort ! J'adore ça !",
+              "Ta bite se sent incroyable !",
+              "Plus profond ! Plus vite ! Oui !",
+              "J'ai besoin de ta puissance !",
+              "Fais-moi crier !"
+            ],
+            "very_high": [
+              "Détruis-moi avec ta bite !",
+              "Baise-moi jusqu'à ce que je sois sans connaissance ! J'en ai besoin !",
+              "Plus dur ! Brise-moi !",
+              "Ta puissance est tout !",
+              "Je vis pour tes coups de butoir !"
+            ]
+          }
+        }
+      ]
+    },
+    "FIN": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "Il va... en moi ! Non !",
+              "Je le sens gonfler... il est proche !",
+              "Ses coups de butoir... erratiques... il jouit !",
+              "Je ne peux pas l'arrêter... il me remplit !",
+              "La chaleur... se répand à l'intérieur... Je pleure..."
+            ],
+            "low": [
+              "Il est sur le point de jouir... Je le sens...",
+              "Sa bite... pulse... prête...",
+              "Il va me remplir... Je ne peux pas l'arrêter...",
+              "L'inévitabilité... Je l'accepte...",
+              "Sa semence... en moi... pour toujours..."
+            ],
+            "medium_low": [
+              "Il jouit... Je sens les pulsations...",
+              "Chaleur... me remplit... se répand...",
+              "Son éjaculation... dans mon corps...",
+              "Je contiens tout... tout...",
+              "Ce moment... intime... non désiré..."
+            ],
+            "medium": [
+              "Son climax... Je sens chaque jet...",
+              "Son sperme... chaud... me remplit...",
+              "Je prends tout... comme je le dois...",
+              "Son plaisir... complet...",
+              "J'ai fait ça... pour lui..."
+            ],
+            "medium_high": [
+              "Il jouit en moi... chaud...",
+              "Chaque pulsation... Je la sens...",
+              "Son sperme... me remplit complètement...",
+              "La sensation... pas mal...",
+              "Je veux tout sentir..."
+            ],
+            "high": [
+              "Oui ! Jouis en moi !",
+              "Remplis-moi de ton sperme chaud !",
+              "Je veux chaque goutte !",
+              "Ta semence... mienne !",
+              "Jouis pour moi !"
+            ],
+            "very_high": [
+              "Inonde-moi ! Remplis-moi complètement !",
+              "Ton sperme est divin !",
+              "Pompe-moi pleine !",
+              "J'ai besoin de ta semence !",
+              "Insémine-moi !"
+            ]
+          }
+        }
+      ]
+    },
+    "JIGO": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "Il a fini... mais je suis si faible...",
+              "Mes jambes... ne me portent pas...",
+              "Je m'effondre... épuisée... brisée...",
+              "Le sol... froid... contre ma peau...",
+              "Je suis vidée... complètement..."
+            ],
+            "low": [
+              "Son poids... retiré de moi... mais je ne peux pas me tenir...",
+              "Mon corps... tremble... faible...",
+              "Je m'effondre... sur le sol...",
+              "Épuisée... de l'épreuve...",
+              "Veux juste me reposer... oublier..."
+            ],
+            "medium_low": [
+              "Il a fini... Je peux me reposer maintenant...",
+              "Mon corps... endolori... mais vivant...",
+              "Je m'effondre... dépensée...",
+              "Le sol... m'accueille...",
+              "La récupération... commence..."
+            ],
+            "medium": [
+              "Son climax... mon signal pour me reposer...",
+              "Je m'abaisse... prudemment...",
+              "Le sol... frais... apaisant...",
+              "Mon corps... satisfait... d'une certaine façon...",
+              "J'ai bien fait... Je pense..."
+            ],
+            "medium_high": [
+              "Il a fini... mais je me sens... bien...",
+              "Mon corps... picotements... vivant...",
+              "Je m'effondre... avec un sourire...",
+              "La lueur après... surprenante...",
+              "Peut-être... que ce n'était pas si mal..."
+            ],
+            "high": [
+              "Incroyable... Je m'effondre dans le bonheur...",
+              "Mon corps... bourdonne... satisfait...",
+              "C'était incroyable...",
+              "Je veux plus... bientôt...",
+              "Parfait..."
+            ],
+            "very_high": [
+              "Bonheur ! Pur extase !",
+              "Je m'effondre dans un plaisir céleste !",
+              "Ton sperme en moi... divin !",
+              "J'ai besoin de plus de ça !",
+              "Perfection !"
+            ]
+          }
+        }
+      ]
+    },
+    "FIN2": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "Il se retire... je sens le froid...",
+              "Son sperme... coule de moi... dégoûtant...",
+              "Je suis souillée... remplie de son essence...",
+              "Je veux nettoyer... enlever ça...",
+              "La sensation... humide... collante..."
+            ],
+            "low": [
+              "Il sort... la perte est soudaine...",
+              "Je sens son sperme... s'écouler...",
+              "Le vide... là où il était...",
+              "Je suis marquée... à l'intérieur...",
+              "Cette sensation... étrange..."
+            ],
+            "medium_low": [
+              "Son retrait... me laisse vide...",
+              "Je sens l'écoulement... le long de mes cuisses...",
+              "La marque intérieure... sa graine...",
+              "Je porte sa trace... en moi...",
+              "Cette plénitude... disparaît lentement..."
+            ],
+            "medium": [
+              "Il s'est retiré... laissant son don...",
+              "Je contiens son essence... complètement...",
+              "La sensation... intime... profonde...",
+              "Je garde tout... comme demandé...",
+              "C'est fait... c'est fini..."
+            ],
+            "medium_high": [
+              "Son retrait... me manque déjà...",
+              "Mais je sens encore... sa chaleur...",
+              "Son sperme... reste en moi...",
+              "Je le garde précieusement...",
+              "Cette connexion... persiste..."
+            ],
+            "high": [
+              "Mmm... je sens encore ta présence...",
+              "Ton sperme... me remplit toujours...",
+              "Je ne veux pas que ça parte...",
+              "Garde-moi... encore...",
+              "Je t'appartiens..."
+            ],
+            "very_high": [
+              "Oui ! Laisse ton sperme en moi !",
+              "Je suis ton réceptacle !",
+              "Garde-moi remplie de ta semence !",
+              "Je porte ta marque fièrement !",
+              "Fais-moi encore !"
+            ]
+          }
+        }
+      ]
+    },
+    "JIGO2": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "Il me regarde... inspectant son travail...",
+              "Ses yeux... jugent mon corps...",
+              "Je me sens exposée... vulnérable...",
+              "Son inspection... humiliante...",
+              "Je veux me cacher... disparaître..."
+            ],
+            "low": [
+              "Il examine... comment j'ai performé...",
+              "Son regard... évalue...",
+              "Je suis nue... devant lui...",
+              "Son jugement... imminent...",
+              "J'attends... son verdict..."
+            ],
+            "medium_low": [
+              "Son inspection... minutieuse...",
+              "Il vérifie... chaque partie...",
+              "Je reste immobile... obéissante...",
+              "Son examen... complet...",
+              "J'accepte... son évaluation..."
+            ],
+            "medium": [
+              "Il inspecte... son œuvre...",
+              "Son regard... possessif...",
+              "Je suis sienne... marquée...",
+              "Il constate... le résultat...",
+              "C'est ainsi..."
+            ],
+            "medium_high": [
+              "Son inspection... m'excite encore...",
+              "Il me voit... toute sienne...",
+              "Je suis fière... de mon service...",
+              "Son approbation... importante...",
+              "Je veux lui plaire..."
+            ],
+            "high": [
+              "Regarde-moi ! Je suis tienne !",
+              "Inspecte ton œuvre...",
+              "Je suis ta salope parfaite !",
+              "Approuve-moi !",
+              "Je vis pour toi !"
+            ],
+            "very_high": [
+              "Oui ! Inspecte chaque pouce !",
+              "Je suis ta création !",
+              "Vois comme je te sers bien !",
+              "Je suis parfaite pour toi !",
+              "Possède-moi !"
+            ]
+          }
+        }
+      ]
+    },
+    "JIGOFIN": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "Il me passe... à un autre homme ?",
+              "Non... pas encore un autre...",
+              "Je suis traitée comme un objet...",
+              "Le prochain bandit... s'approche...",
+              "Je ne peux pas échapper à ça..."
+            ],
+            "low": [
+              "Il me donne... au suivant...",
+              "Un autre bandit... prend place...",
+              "Je suis transférée... comme propriété...",
+              "Le cycle... continue...",
+              "Je n'ai pas le choix..."
+            ],
+            "medium_low": [
+              "Son transfert... me livre à lui...",
+              "Le nouveau bandit... me saisit...",
+              "Je passe... de mains en mains...",
+              "La chaîne... se poursuit...",
+              "J'obéis... au suivant..."
+            ],
+            "medium": [
+              "Il me remet... au prochain...",
+              "Un autre homme... me désire...",
+              "Je suis partagée... entre eux...",
+              "Le relais... se fait...",
+              "Je sers... leur plaisir..."
+            ],
+            "medium_high": [
+              "Son handoff... m'excite...",
+              "Un nouvel homme... à servir...",
+              "Je suis leur... à tous...",
+              "Le plaisir... continue...",
+              "Je veux tout..."
+            ],
+            "high": [
+              "Oui ! Passe-moi au suivant !",
+              "Je veux tous vous servir !",
+              "Chaque homme... un nouveau plaisir !",
+              "Je suis votre pute !",
+              "Utilisez-moi !"
+            ],
+            "very_high": [
+              "Encore ! Donnez-moi au suivant !",
+              "Je suis la salope de tous !",
+              "Chaque bite... un cadeau !",
+              "Je veux tout prendre !",
+              "Détruisez-moi !"
+            ]
+          }
+        }
+      ]
+    },
+    "JIGOFIN2": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "Ils sont plusieurs... à m'attendre...",
+              "Une ligne... d'hommes...",
+              "Je vais tous les servir...",
+              "Le gangbang... commence vraiment...",
+              "Je suis perdue... complètement..."
+            ],
+            "low": [
+              "Tous ces bandits... veulent leur tour...",
+              "La file... s'allonge...",
+              "Je dois continuer... sans arrêt...",
+              "L'endurance... nécessaire...",
+              "Je tiendrai... bon..."
+            ],
+            "medium_low": [
+              "Leur nombre... impressionnant...",
+              "Je suis leur... commune...",
+              "Le marathon... commence...",
+              "Je dois tenir... pour tous...",
+              "Ma force... sera testée..."
+            ],
+            "medium": [
+              "Tous ces hommes... me veulent...",
+              "Je suis la proie... du groupe...",
+              "Le partage... organisé...",
+              "Je sers... leur collectif...",
+              "C'est mon rôle..."
+            ],
+            "medium_high": [
+              "Leur enthousiasme... contagieux...",
+              "Je veux tous les satisfaire...",
+              "Le challenge... m'excite...",
+              "Je serai... leur trophée...",
+              "Je veux briller..."
+            ],
+            "high": [
+              "Oui ! Tous autant que vous êtes !",
+              "Je veux toutes vos bites !",
+              "Chacun de vous... en moi !",
+              "Je suis votre femme !",
+              "Baisez-moi !"
+            ],
+            "very_high": [
+              "Tous ! Je vous veux tous !",
+              "Remplissez-moi completely !",
+              "Je suis la pute du groupe !",
+              "Chaque bite... dans chaque trou !",
+              "Défoncez-moi !"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

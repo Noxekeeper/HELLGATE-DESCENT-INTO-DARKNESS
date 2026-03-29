@@ -1,0 +1,131 @@
+# HELLGATE Spawn Configuration for ScapegoatEntrance
+# Format: X,Y,EnemyType,Count or RANDOM,chance,X,Y,EnemyType,Count or POOL[Type1,Type2,...]
+# Reduced density — Goblin+Mutude+Kakasi zones kept intact
+#
+# --- POOL: Dorei, TouzokuAxe, TouzokuNormal, Vagrant (thinned 8→4) ---
+244.69,58.99,POOL[Dorei,TouzokuAxe,TouzokuNormal,Vagrant,VagrantGuard,VagrantThrow],1
+256.90,58.99,POOL[Dorei,TouzokuAxe,TouzokuNormal,Vagrant,VagrantGuard,VagrantThrow],1
+268.40,63.74,POOL[Dorei,TouzokuAxe,TouzokuNormal,Vagrant,VagrantGuard,VagrantThrow],1
+272.22,68.33,POOL[Dorei,TouzokuAxe,TouzokuNormal,Vagrant,VagrantGuard,VagrantThrow],1
+
+# --- POOL: Dorei, TouzokuAxe, TouzokuNormal, Vagrant (thinned 11→6) ---
+248.99,44.40,POOL[Dorei,TouzokuAxe,TouzokuNormal,Vagrant,VagrantGuard,VagrantThrow],1
+266.38,47.02,POOL[Dorei,TouzokuAxe,TouzokuNormal,Vagrant,VagrantGuard,VagrantThrow],1
+281.87,48.50,POOL[Dorei,TouzokuAxe,TouzokuNormal,Vagrant,VagrantGuard,VagrantThrow],1
+298.63,48.49,POOL[Dorei,TouzokuAxe,TouzokuNormal,Vagrant,VagrantGuard,VagrantThrow],1
+306.19,48.49,POOL[Dorei,TouzokuAxe,TouzokuNormal,Vagrant,VagrantGuard,VagrantThrow],1
+324.42,48.56,POOL[Dorei,TouzokuAxe,TouzokuNormal,Vagrant,VagrantGuard,VagrantThrow],1
+
+# --- 50% Wolf, 50% InquisitionWhite ---
+RANDOM,0.5,297.74,48.49,Wolf,1
+RANDOM,0.5,278.96,48.50,InquisitionWhite,1
+
+# --- Goblin, Kakasi, Mutude (KEPT — user zone) ---
+345.72,48.55,Goblin,1
+342.36,48.55,Goblin,1
+351.45,48.55,Goblin,1
+346.78,54.23,Goblin,1
+363.20,46.05,Goblin,1
+372.38,44.02,Goblin,1
+381.70,44.02,Goblin,1
+386.49,44.02,Goblin,1
+394.45,44.02,Kakasi,1
+399.75,44.02,Kakasi,1
+392.37,44.02,Kakasi,1
+374.17,44.02,Mutude,1
+370.33,44.02,Mutude,1
+
+# --- POOL: TouzokuNormal, TouzokuAxe, Dorei (3→2) ---
+358.63,58.74,POOL[TouzokuNormal,TouzokuAxe,Dorei],1
+365.64,58.74,POOL[TouzokuNormal,TouzokuAxe,Dorei],1
+
+# --- POOL: Dorei, TouzokuAxe, TouzokuNormal, Vagrant (11→5) ---
+392.48,57.50,POOL[Dorei,TouzokuAxe,TouzokuNormal,Vagrant,VagrantGuard,VagrantThrow],1
+401.46,57.50,POOL[Dorei,TouzokuAxe,TouzokuNormal,Vagrant,VagrantGuard,VagrantThrow],1
+407.17,57.50,POOL[Dorei,TouzokuAxe,TouzokuNormal,Vagrant,VagrantGuard,VagrantThrow],1
+415.80,57.50,POOL[Dorei,TouzokuAxe,TouzokuNormal,Vagrant,VagrantGuard,VagrantThrow],1
+421.78,57.50,POOL[Dorei,TouzokuAxe,TouzokuNormal,Vagrant,VagrantGuard,VagrantThrow],1
+
+# --- Mutude, Kakasi (KEPT — user zone) ---
+416.85,44.02,Mutude,1
+423.70,44.02,Mutude,1
+420.69,44.02,Kakasi,1
+
+# --- POOL: Dorei, TouzokuAxe, TouzokuNormal, Vagrant (9→5) ---
+357.08,68.24,POOL[Dorei,TouzokuAxe,TouzokuNormal,Vagrant,VagrantGuard,VagrantThrow],1
+376.21,68.19,POOL[Dorei,TouzokuAxe,TouzokuNormal,Vagrant,VagrantGuard,VagrantThrow],1
+394.01,68.19,POOL[Dorei,TouzokuAxe,TouzokuNormal,Vagrant,VagrantGuard,VagrantThrow],1
+401.40,68.19,POOL[Dorei,TouzokuAxe,TouzokuNormal,Vagrant,VagrantGuard,VagrantThrow],1
+
+# --- POOL: TouzokuNormal, TouzokuAxe, Dorei (8→4) ---
+421.85,72.65,POOL[TouzokuNormal,TouzokuAxe,Dorei],1
+432.48,72.65,POOL[TouzokuNormal,TouzokuAxe,Dorei],1
+444.44,72.65,POOL[TouzokuNormal,TouzokuAxe,Dorei],1
+456.00,72.65,POOL[TouzokuNormal,TouzokuAxe,Dorei],1
+
+# --- POOL: Inquisition, InquisitionRED, InquisitionWhite (3→2) ---
+445.26,72.65,POOL[Inquisition,InquisitionRED,InquisitionWhite],1
+434.39,72.65,POOL[Inquisition,InquisitionRED,InquisitionWhite],1
+
+# --- Goblin, Mutude (KEPT — user zone) ---
+331.56,68.12,Goblin,1
+336.25,71.43,Goblin,1
+341.15,78.05,Goblin,1
+341.02,78.05,Goblin,1
+342.42,78.05,Mutude,1
+342.51,78.05,Mutude,1
+
+# --- InquisitionWhite, Inquisition, InquisitionRED ---
+347.40,78.05,InquisitionWhite,1
+237.37,85.28,InquisitionWhite,1
+241.89,85.28,Inquisition,1
+247.38,85.28,InquisitionRED,1
+254.11,85.28,InquisitionRED,1
+
+# --- Dorei (9→5) ---
+263.50,79.15,Dorei,1
+271.69,76.71,Dorei,1
+279.75,76.71,Dorei,1
+288.76,76.71,Dorei,1
+300.30,76.71,Dorei,1
+
+# --- TouzokuAxe, TouzokuNormal ---
+302.88,76.71,TouzokuAxe,1
+308.74,76.71,TouzokuAxe,1
+298.71,76.71,TouzokuNormal,1
+279.47,76.71,TouzokuNormal,1
+273.72,76.71,TouzokuNormal,1
+
+# --- POOL: Dorei, TouzokuAxe, TouzokuNormal (9→5) ---
+478.82,72.74,POOL[Dorei,TouzokuAxe,TouzokuNormal],1
+565.52,73.81,POOL[Dorei,TouzokuAxe,TouzokuNormal],1
+568.22,73.81,POOL[Dorei,TouzokuAxe,TouzokuNormal],1
+573.58,73.81,POOL[Dorei,TouzokuAxe,TouzokuNormal],1
+580.49,73.81,POOL[Dorei,TouzokuAxe,TouzokuNormal],1
+
+# --- POOL: InquisitionWhite, InquisitionRED, Inquisition (4→2) ---
+583.20,73.81,POOL[InquisitionWhite,InquisitionRED,Inquisition],1
+588.47,72.43,POOL[InquisitionWhite,InquisitionRED,Inquisition],1
+
+# --- POOL: Dorei, TouzokuAxe, TouzokuNormal (6→3) ---
+596.74,68.07,POOL[Dorei,TouzokuAxe,TouzokuNormal],1
+568.89,73.81,POOL[Dorei,TouzokuAxe,TouzokuNormal],1
+555.42,73.81,POOL[Dorei,TouzokuAxe,TouzokuNormal],1
+
+# --- Kakasi, Mutude (KEPT — user zone) ---
+477.25,63.58,Kakasi,1
+482.75,63.58,Kakasi,1
+488.94,63.58,Kakasi,1
+493.35,63.58,Mutude,1
+484.64,63.58,Mutude,1
+
+# --- TouzokuNormal, TouzokuAxe (thinned) ---
+448.95,44.02,TouzokuNormal,1
+454.66,44.02,TouzokuNormal,1
+461.77,45.41,TouzokuNormal,1
+453.32,44.02,TouzokuAxe,1
+490.73,50.66,TouzokuNormal,1
+485.83,50.66,TouzokuNormal,1
+485.30,50.67,TouzokuAxe,1
+494.37,50.66,TouzokuAxe,1
+492.50,50.66,InquisitionWhite,1

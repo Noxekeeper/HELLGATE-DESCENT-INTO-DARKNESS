@@ -1,0 +1,590 @@
+{
+  "settings": {
+    "responseDelayMin": 1.5,
+    "responseDelayMax": 2.5,
+    "fontSize": 22.0,
+    "verticalOffset": 150.0,
+    "displayDuration": 5.0
+  },
+  "mindBrokenThresholds": [0.0, 0.15, 0.3, 0.5, 0.7, 0.85, 1.0],
+  "animations": {
+    "START": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "Nein! Dieser Bandit hat mich erwischt! Sein Griff ist zu stark!",
+              "Ich kann mich nicht aus seinen Händen befreien! Was will er?",
+              "Seine Stärke ist überwältigend... Ich bin im Wald gefangen!",
+              "Ich muss schreien... Jemand hilf mir... irgendjemand!",
+              "Seine Hände greifen mich... Ich kann nicht entkommen!"
+            ],
+            "low": [
+              "Dieser Bandit ist zu stark... seine Hände halten mich fest...",
+              "Ich hätte vorsichtiger durch diese Wälder gehen sollen...",
+              "Sein Griff lässt nicht los... Ich bin völlig hilflos...",
+              "Ich muss ruhig bleiben... einen Weg zur Flucht finden...",
+              "Seine Stärke ist furchterregend... Was wird er mir antun?"
+            ],
+            "medium_low": [
+              "Seine Hände sind überall... berühren mich... Ich kann mich nicht bewegen...",
+              "Der Wald ist so still... Niemand wird meine Schreie hören...",
+              "Dieser Bandit wird mich nicht einfach gehen lassen... Ich bin verloren...",
+              "Sein Körper presst sich an meinen... so nah...",
+              "Ich spüre seinen Atem an meinem Hals... es ist furchterregend..."
+            ],
+            "medium": [
+              "Seine Stärke überwältigt mich völlig...",
+              "Ich muss meine Energie für den Moment aufsparen, wenn ich entkommen kann...",
+              "Vielleicht wenn ich nicht zu sehr widerstehe... wird er sanfter sein...",
+              "Sein Atem ist heiß an meinem Hals... Ich fühle mich so verletzlich...",
+              "Ich spüre seinen Herzschlag... so nah an mir..."
+            ],
+            "medium_high": [
+              "Seine Berührung... sie lässt mich auf seltsame Weise zittern...",
+              "Die Gefahr... sie erregt mich irgendwie...",
+              "Ich frage mich, was dieser Bandit mit mir vorhat...",
+              "Seine Hände sind rau aber... nicht unangenehm...",
+              "Der Nervenkitzel des Gefangenseins... Ich kann ihn nicht leugnen..."
+            ],
+            "high": [
+              "Seine Hände fühlen sich so stark an... so befehlend...",
+              "Ich kann den Nervenkitzel nicht leugnen, der durch mich läuft...",
+              "Was wird dieser Bandit mit mir machen... Ich möchte es wissen...",
+              "Seine Berührung weckt etwas in mir...",
+              "Die Waldluft fühlt sich kühl an meiner erhitzten Haut an..."
+            ],
+            "very_high": [
+              "Seine Berührung... Ich sehne sie mehr als alles andere...",
+              "Nimm mich genau hier... Bandit...",
+              "Ich will deine Stärke vollständig spüren...",
+              "Hör nicht auf... Ich brauche dich...",
+              "Deine Hände... sie sind perfekt..."
+            ]
+          }
+        },
+        {
+          "step": 2,
+          "delay": 1.0,
+          "thoughts": {
+            "very_low": [
+              "Er zieht mich runter... Ich kann nicht stehen bleiben!",
+              "Meine Knie treffen den Boden... es tut weh...",
+              "Er zwingt mich zu knien... Ich will das nicht!",
+              "Der Boden ist kalt und hart... Tränen in den Augen...",
+              "Seine Hände lassen mich nicht aufstehen... Ich bin gefangen..."
+            ],
+            "low": [
+              "Er zieht mich auf meine Knie... Ich kann nicht widerstehen...",
+              "Der Schmerz in meinen Knien... aber ich muss durchhalten...",
+              "Seine Stärke ist zu viel... Ich knie vor ihm...",
+              "Ich muss denken... es muss einen Weg raus geben...",
+              "Sein Griff in meinen Haaren... kontrolliert mich..."
+            ],
+            "medium_low": [
+              "Ich werde runtergezogen... muss nur gehorchen...",
+              "Seine Kontrolle über mich ist absolut... kniend...",
+              "Der Waldboden ist rau... aber ich akzeptiere es...",
+              "Seine Hände führen mich... Ich folge...",
+              "Diese Position... so erniedrigend..."
+            ],
+            "medium": [
+              "Er positioniert mich... Ich weiß, was kommt...",
+              "Seine Hände kontrollieren mich... Ich akzeptiere es...",
+              "Auf meinen Knien... wo er mich haben will...",
+              "Dies ist mein Platz jetzt... vor ihm kniend...",
+              "Seine Dominanz... Ich spüre sie vollständig..."
+            ],
+            "medium_high": [
+              "Seine Hände in meinen Haaren... befehlen mir...",
+              "Ich gehe für ihn runter... freiwillig...",
+              "Auf meinen Knien... wo ich sein sollte...",
+              "Seine Berührung... führt mich perfekt...",
+              "Ich will hier sein... zu seinen Füßen..."
+            ],
+            "high": [
+              "Ja... zieh an meinen Haaren... stell mich auf die Knie...",
+              "Seine starken Hände... führen mich runter...",
+              "Ich will hier sein... in seiner Gnade...",
+              "Auf meinen Knien... ihm dienend...",
+              "Seine Dominanz... Ich sehne sie..."
+            ],
+            "very_high": [
+              "Ja! Zwing mich runter... Ich brauche das!",
+              "Auf meinen Knien für dich... Meister...",
+              "Zieh an meinen Haaren fester... Ich gehöre dir!",
+              "Diese Position... perfekt für mich...",
+              "Ich gehöre auf die Knie... dir dienend..."
+            ]
+          }
+        },
+        {
+          "step": 3,
+          "delay": 1.5,
+          "thoughts": {
+            "very_low": [
+              "Mein Gott! Er entblößt sich! Genau in meinem Gesicht!",
+              "Ich kann nicht hinsehen... aber er zwingt meinen Kopf!",
+              "Sein... Mannesteil... so nah... Ich will weglaufen!",
+              "Das ist zu viel... Ich kann das nicht handhaben!",
+              "Seine Hände halten mich... Ich kann nicht entkommen!"
+            ],
+            "low": [
+              "Er zeigt mir... genau vor meinem Gesicht...",
+              "Ich weiß, was er will... Die Scham brennt...",
+              "Ich muss hinsehen... er lässt mich...",
+              "Seine Größe... einschüchternd... furchterregend...",
+              "Das passiert... ob ich will oder nicht..."
+            ],
+            "medium_low": [
+              "Sein Schwanz... genau vor mir...",
+              "Ich sehe, was kommt... Ich muss es akzeptieren...",
+              "Das passiert... Ich kann es nicht stoppen...",
+              "Seine Hände kontrollieren meinen Kopf... meinen Blick...",
+              "Ich muss hinsehen... keine Wahl..."
+            ],
+            "medium": [
+              "Er zeigt mir, was ich tun muss...",
+              "Sein Mannesteil... Ich soll es bedienen...",
+              "Ich verstehe... Ich werde tun, was er will...",
+              "Seine Größe... beeindruckend... befehlend...",
+              "Das ist meine Aufgabe jetzt... Ich akzeptiere es..."
+            ],
+            "medium_high": [
+              "Sein Schwanz... er ist beeindruckend...",
+              "Ich bin neugierig... ein bisschen interessiert...",
+              "Vielleicht wird es nicht so schrecklich...",
+              "Seine Größe... lässt mich denken...",
+              "Ich könnte... es berühren... vielleicht..."
+            ],
+            "high": [
+              "Mmm... er ist so groß... Ich mag, was ich sehe...",
+              "Ich will es berühren... schmecken...",
+              "Zeig mir mehr... Ich bin bereit...",
+              "Sein Schwanz... schön... mächtig...",
+              "Ich muss es fühlen... schmecken..."
+            ],
+            "very_high": [
+              "Ja! Dein schöner Schwanz! Lass mich ihn anbeten!",
+              "Ich brauche ihn! Bitte lass mich ihn haben!",
+              "Ich sabbele schon für dich!",
+              "Dein Schwanz... perfekt... meiner!",
+              "Lass mich ihn bedienen... bitte!"
+            ]
+          }
+        }
+      ]
+    },
+    "START2": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "Er sagt... berühre ihn oder er verletzt mich!",
+              "Ich will nicht! Aber ich will nicht sterben!",
+              "Seine Worte sind so grausam... Ich bin verängstigt...",
+              "Seine Hände... seine Waffe... Ich habe keine Wahl...",
+              "Ich muss gehorchen... um zu überleben..."
+            ],
+            "low": [
+              "Berühre ihn oder werde verletzt... keine echte Wahl...",
+              "Seine Stimme ist so kalt... befehlend...",
+              "Ich muss es tun... um zu überleben...",
+              "Seine Forderungen... absolut...",
+              "Ich muss gehorchen... am Leben bleiben..."
+            ],
+            "medium_low": [
+              "Seine Befehle sind klar... gehorche oder leide...",
+              "Ich muss ihn zufriedenstellen... es ist notwendig...",
+              "Seine Kontrolle über mich ist absolut...",
+              "Seine Worte sind Gesetz in diesem Wald...",
+              "Ich muss mich seinem Willen unterwerfen..."
+            ],
+            "medium": [
+              "Er will, dass ich ihn streichele... Ich verstehe...",
+              "Ich werde es tun... das durchstehen...",
+              "Meine Hände... sein Schwanz... nur mechanisch...",
+              "Das ist nur Überleben... nichts weiter...",
+              "Ich kann das... Ich muss..."
+            ],
+            "medium_high": [
+              "Er will meine Hände auf ihm... okay...",
+              "Vielleicht wird es nicht so schlimm...",
+              "Ich bin ein bisschen neugierig, wie es sich anfühlt...",
+              "Sein Schwanz... warm... pochend...",
+              "Ich könnte mich daran gewöhnen..."
+            ],
+            "high": [
+              "Er will meine Hände... Ich will das auch...",
+              "Ich bin begierig zu berühren... zu gefallen...",
+              "Ja, ich werde dich wichsen... gerne...",
+              "Sein Schwanz... reagiert auf meine Berührung...",
+              "Ich will ihn fühlen lassen..."
+            ],
+            "very_high": [
+              "Befiehl mir! Sag mir, wie ich dich zufriedenstellen soll!",
+              "Ich muss deinen Schwanz berühren! Lass mich!",
+              "Ich werde alles tun, was du sagst, Meister!",
+              "Meine Hände... für dein Vergnügen!",
+              "Benutze mich... Ich gehöre dir!"
+            ]
+          }
+        },
+        {
+          "step": 2,
+          "delay": 1.0,
+          "thoughts": {
+            "very_low": [
+              "Meine Hände... zittern, während ich ausstrecke...",
+              "Ich kann nicht glauben, dass ich das tue... es ist falsch!",
+              "Seine Waffe... erinnert mich, dass ich keine Wahl habe...",
+              "Tränen fallen... aber ich muss berühren...",
+              "Sein Schwanz... heiß... pochend... Ich hasse das..."
+            ],
+            "low": [
+              "Ich berühre ihn... sein Schwanz ist so heiß...",
+              "Das ist erniedrigend... aber notwendig...",
+              "Ich muss wichsen... er beobachtet mich...",
+              "Meine Hände... bewegen... mechanisch...",
+              "Die Scham... brennt... aber ich mache weiter..."
+            ],
+            "medium_low": [
+              "Meine Hände auf ihm... tun, was er will...",
+              "Es ist warm... pocht in meinem Griff...",
+              "Nur mechanische Bewegungen... das durchstehen...",
+              "Seine Atmung ändert sich... Ich muss etwas richtig machen...",
+              "Ich spüre ihn... reagierend..."
+            ],
+            "medium": [
+              "Ich wichse ihn... es ist nicht schrecklich...",
+              "Sein Schwanz... pocht in meinen Händen...",
+              "Ich tue, was er braucht... das ist alles...",
+              "Mein Rhythmus... stabil... konsistent...",
+              "Das ist nur... eine Aufgabe... nichts weiter..."
+            ],
+            "medium_high": [
+              "Er wird härter... Ich spüre es...",
+              "Ich bin tatsächlich gut darin... er mag es...",
+              "Seine Reaktionen... ermutigend...",
+              "Vielleicht gefalle ich ihm... das ist gut...",
+              "Sein Schwanz... wächst... in meinen Händen..."
+            ],
+            "high": [
+              "Mmm... er ist so hart für mich...",
+              "Ich liebe es, ihn in meinen Händen pochen zu spüren...",
+              "Ich will ihn zufriedenstellen... ihn fühlen lassen...",
+              "Sein Vergnügen... meins zu geben...",
+              "Ich will, dass er das genießt..."
+            ],
+            "very_high": [
+              "Dein Schwanz ist perfekt! So hart!",
+              "Ich liebe es, dich zu wichsen! Gib mir mehr!",
+              "Lass mich deinen schönen Schwanz anbeten!",
+              "Meine Hände... dein Vergnügen!",
+              "Ich muss dich zum Abspritzen bringen!"
+            ]
+          }
+        }
+      ]
+    },
+    "ERO": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "Er stößt in mich! Es tut so weh!",
+              "Sein Schwanz... zu groß... reißt mich!",
+              "Ich kann das nicht ertragen! Bitte hör auf!",
+              "Der Schmerz... überwältigend... Ich kann nicht!",
+              "Er zwingt sich... Ich kann nicht atmen!"
+            ],
+            "low": [
+              "Er dringt in mich ein... die Dehnung ist schrecklich...",
+              "Ich muss mich entspannen... oder es tut mehr weh...",
+              "Seine Größe... zu viel... aber ich muss durchhalten...",
+              "Tränen strömen... aber ich bleibe still...",
+              "Dieser Schmerz... wann endet er?"
+            ],
+            "medium_low": [
+              "Er ist in mir... füllt mich vollständig...",
+              "Die Fülle... seltsam... unbequem...",
+              "Ich muss mich anpassen... mich daran gewöhnen...",
+              "Seine Stöße... langsam... aber tief...",
+              "Ich kann das... Ich muss..."
+            ],
+            "medium": [
+              "Sein Schwanz... bewegt sich in mir...",
+              "Das Gefühl... nicht nur Schmerz...",
+              "Ich passe mich an... finde einen Rhythmus...",
+              "Seine Hände... halten mich fest...",
+              "Das passiert... Ich akzeptiere es..."
+            ],
+            "medium_high": [
+              "Seine Stöße... bauen einen Rhythmus auf...",
+              "Der Schmerz... verblasst... ersetzt durch etwas anderes...",
+              "Sein Schwanz... fühlt sich... interessant...",
+              "Mein Körper... antwortet... gegen mich...",
+              "Das könnte nicht so schlimm sein..."
+            ],
+            "high": [
+              "Ja... sein Schwanz fühlt sich so gut in mir...",
+              "Ich will ihn tiefer... härter...",
+              "Hör nicht auf... bitte...",
+              "Seine Stöße... perfekt... unglaublich...",
+              "Ich brauche das... Ich brauche ihn..."
+            ],
+            "very_high": [
+              "Fick mich härter! Ich brauche deinen Schwanz!",
+              "Tiefer! Fülle mich vollständig!",
+              "Dein Schwanz ist perfekt! Hör nicht auf!",
+              "Ich liebe es, dich in mir zu spüren!",
+              "Mehr! Gib mir alles!"
+            ]
+          }
+        }
+      ]
+    },
+    "ERO1": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "Das Halsband... eng um meinen Hals!",
+              "Er zieht an der Kette! Ich kann nicht atmen!",
+              "Mein Hals... spannt... es tut weh!",
+              "Ich kann mich nicht bewegen... er kontrolliert mich!",
+              "Der Druck... zu viel... ich gerate in Panik!"
+            ],
+            "low": [
+              "Die Kette zieht eng... beschränkt mich...",
+              "Ich muss folgen... oder ersticken...",
+              "Seine Kontrolle... absolut... furchterregend...",
+              "Das Halsband... markiert mich als seine...",
+              "Ich kann nicht widerstehen... ich muss gehorchen..."
+            ],
+            "medium_low": [
+              "Die Kette führt mich... ich folge...",
+              "Seine Kontrolle... ich akzeptiere sie...",
+              "Das Halsband... seine Markierung auf mir...",
+              "Ich bewege mich, wie er will... gehorsam...",
+              "Das ist mein Leben jetzt... angekettet..."
+            ],
+            "medium": [
+              "Die Kette... verbindet uns...",
+              "Seine Züge... führen meine Bewegungen...",
+              "Ich folge seiner Führung... perfekt...",
+              "Das Halsband... symbolisiert meine Unterwerfung...",
+              "Ich gehöre ihm... vollständig..."
+            ],
+            "medium_high": [
+              "Die Kette fühlt sich... erregend...",
+              "Seine Kontrolle... erregt mich...",
+              "Ich will, dass er fester zieht...",
+              "Das Halsband... sein Anspruch auf mich...",
+              "Ich liebe es, seine zu sein... kontrolliert..."
+            ],
+            "high": [
+              "Zieh an der Kette! Kontrolliere mich!",
+              "Ich liebe es, deine Dominanz zu spüren!",
+              "Das Halsband macht mich zu deiner!",
+              "Fester! Zieh mich näher!",
+              "Ich brauche deine Kontrolle!"
+            ],
+            "very_high": [
+              "Würge mich mit der Kette! Ich brauche es!",
+              "Deine Kontrolle macht mich wild!",
+              "Ich bin deine angekettete Schlampe!",
+              "Zieh fester! Besitze mich!",
+              "Das Halsband ist mein Vergnügen!"
+            ]
+          }
+        }
+      ]
+    },
+    "ERO2": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "Seine Stöße... härter jetzt... Ich kann das nicht ertragen!",
+              "Jeder Stoß... tiefer... schmerzhafter...",
+              "Mein Körper... zittert... von der Kraft...",
+              "Ich will schreien... aber ich halte mich zurück...",
+              "Die Intensität... überwältigt mich..."
+            ],
+            "low": [
+              "Sein Rhythmus... schneller... intensiver...",
+              "Ich muss mit ihm mithalten... bei ihm bleiben...",
+              "Die Kraft... baut sich auf... ich halte durch...",
+              "Sein Grunzen... tierisch... furchterregend...",
+              "Ich halte durch... überlebe das..."
+            ],
+            "medium_low": [
+              "Seine Stöße... tiefer... fordernder...",
+              "Ich passe mich an... nehme, was er gibt...",
+              "Die Intensität... ich kann sie handhaben...",
+              "Sein Körper... schlägt gegen meinen...",
+              "Ich finde meinen Rhythmus... mit ihm..."
+            ],
+            "medium": [
+              "Sein Tempo... perfekt... intensiv...",
+              "Ich bewege mich mit ihm... synchron...",
+              "Die Kraft... erregend... mächtig...",
+              "Sein Schwanz... trifft alle richtigen Stellen...",
+              "Ich fühle mich... lebendig... begehrt..."
+            ],
+            "medium_high": [
+              "Härter! Ja... genau so!",
+              "Seine Stöße... unglaublich... intensiv...",
+              "Ich will mehr... tiefer...",
+              "Seine Kraft... macht mich an...",
+              "Hör nicht auf... bitte..."
+            ],
+            "high": [
+              "Fick mich härter! Ich liebe es!",
+              "Dein Schwanz fühlt sich unglaublich an!",
+              "Tiefer! Schneller! Ja!",
+              "Ich brauche deine Kraft!",
+              "Lass mich schreien!"
+            ],
+            "very_high": [
+              "Zerstöre mich mit deinem Schwanz!",
+              "Fick mich bewusstlos! Ich brauche es!",
+              "Härter! Brich mich!",
+              "Deine Kraft ist alles!",
+              "Ich lebe für deine Stöße!"
+            ]
+          }
+        }
+      ]
+    },
+    "FIN": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "Er wird... in mir! Nein!",
+              "Ich spüre ihn anschwellen... er ist nah!",
+              "Seine Stöße... unregelmäßig... er kommt!",
+              "Ich kann ihn nicht stoppen... er füllt mich!",
+              "Die Wärme... breitet sich in mir aus... ich weine..."
+            ],
+            "low": [
+              "Er ist kurz vorm Kommen... ich spüre es...",
+              "Sein Schwanz... pulsiert... bereit...",
+              "Er wird mich füllen... ich kann es nicht stoppen...",
+              "Die Unvermeidlichkeit... ich akzeptiere sie...",
+              "Sein Samen... in mir... für immer..."
+            ],
+            "medium_low": [
+              "Er kommt... ich spüre die Pulse...",
+              "Wärme... füllt mich... breitet sich aus...",
+              "Seine Freisetzung... in meinem Körper...",
+              "Ich enthalte es... alles...",
+              "Dieser Moment... intim... unerwünscht..."
+            ],
+            "medium": [
+              "Sein Höhepunkt... ich spüre jeden Spritzer...",
+              "Sein Sperma... warm... füllt mich...",
+              "Ich nehme es alles... wie ich soll...",
+              "Sein Vergnügen... vollständig...",
+              "Ich habe das getan... für ihn..."
+            ],
+            "medium_high": [
+              "Er kommt in mir... heiß...",
+              "Jeder Puls... ich spüre ihn...",
+              "Sein Sperma... füllt mich vollständig...",
+              "Das Gefühl... nicht schlecht...",
+              "Ich will es alles spüren..."
+            ],
+            "high": [
+              "Ja! Komm in mir!",
+              "Fülle mich mit deinem heißen Sperma!",
+              "Ich will jeden Tropfen!",
+              "Dein Samen... meiner!",
+              "Komm für mich!"
+            ],
+            "very_high": [
+              "Flute mich! Fülle mich vollständig!",
+              "Dein Sperma ist göttlich!",
+              "Pumpe mich voll!",
+              "Ich brauche deinen Samen!",
+              "Züchte mich!"
+            ]
+          }
+        }
+      ]
+    },
+    "JIGO": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "Er ist fertig... aber ich bin so schwach...",
+              "Meine Beine... halten mich nicht...",
+              "Ich breche zusammen... erschöpft... gebrochen...",
+              "Der Boden... kalt... an meiner Haut...",
+              "Ich bin verausgabt... vollständig..."
+            ],
+            "low": [
+              "Sein Gewicht... weg von mir... aber ich kann nicht stehen...",
+              "Mein Körper... zittert... schwach...",
+              "Ich breche zusammen... auf den Boden...",
+              "Erschöpft... von der Prüfung...",
+              "Will nur ruhen... vergessen..."
+            ],
+            "medium_low": [
+              "Er ist fertig... ich kann jetzt ruhen...",
+              "Mein Körper... wund... aber lebendig...",
+              "Ich breche zusammen... verausgabt...",
+              "Der Boden... begrüßt mich...",
+              "Erholung... beginnt..."
+            ],
+            "medium": [
+              "Sein Höhepunkt... mein Signal zu ruhen...",
+              "Ich lasse mich runter... vorsichtig...",
+              "Der Boden... kühl... beruhigend...",
+              "Mein Körper... zufrieden... auf eine Weise...",
+              "Ich habe es gut gemacht... denke ich..."
+            ],
+            "medium_high": [
+              "Er ist fertig... aber ich fühle... gut...",
+              "Mein Körper... kribbelt... lebendig...",
+              "Ich breche zusammen... mit einem Lächeln...",
+              "Das Nachglühen... überraschend...",
+              "Vielleicht... war es doch nicht so schlimm..."
+            ],
+            "high": [
+              "Unglaublich... ich breche in Glückseligkeit zusammen...",
+              "Mein Körper... summt... zufrieden...",
+              "Das war unglaublich...",
+              "Ich will mehr... bald...",
+              "Perfekt..."
+            ],
+            "very_high": [
+              "Glückseligkeit! Reine Ekstase!",
+              "Ich breche in himmlischem Vergnügen zusammen!",
+              "Dein Sperma in mir... göttlich!",
+              "Ich brauche mehr davon!",
+              "Perfektion!"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,463 @@
+{
+  "settings": {
+    "commentCooldownSeconds": 2.0,
+    "maxSimultaneousComments": 1,
+    "commentDisplayDuration": 4.0,
+    "fontSize": 30.0,
+    "verticalOffset": 15.0,
+    "streamingSpeed": 0.03,
+    "goblinColor": {
+      "r": 1.0,
+      "g": 1.0,
+      "b": 1.0,
+      "a": 1.0
+    },
+    "goblinOutlineColor": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 1.0
+    }
+  },
+  "animations": {
+    "start": {
+      "description": "Greift GG und wirft ihren Körper auf das Kreuz, bindet Hände ans Kreuz, Arme ans Kreuz gekreuzigt",
+      "events": {
+        "start": [
+          "So-so, was haben wir hier? Was für ein Treffen, Hexe!",
+          "Jetzt werde ich dich zu einer Sklavin für Männer machen, dich zur Hure machen!",
+          "Ich werde dich wie die letzte Schlampe kreuzigen und tun, was ich will!",
+          "Deine Macht ist vorbei, jetzt bist du mein Eigentum!",
+          "Ich werde dich zu einem gehorsamen Loch zum Ficken machen!",
+          "Dein Körper gehört jetzt mir, Schlampe!",
+          "Jetzt werde ich dich zu einem Ding für männliche Lust machen!",
+          "Wie schön du bist, wenn gekreuzigt, Hure!"
+        ],
+        "SE1": [
+          "Wehr dich, so viel du willst, du wirst trotzdem nicht entkommen!",
+          "Dein Kampf erregt mich nur!",
+          "Wehr dich weiter, ich mag es!"
+        ]
+      }
+    },
+    "start2": {
+      "description": "Mit einer Hand bedeckt er GG's Mund, und an der zweiten Strohhand erscheint ein Gummihandschuh, getränkt mit Aphrodisiakum",
+      "events": {
+        "start2": [
+          "Diese Imprägnierung wird in jede deiner Ritzen eindringen, Schlampe!",
+          "Bald wird diese Flüssigkeit in deiner Fotze sein!",
+          "Ich werde deine Fotze mit diesem Trank reiben, und du wirst um mehr betteln!",
+          "Du wirst spüren, wie dein Körper vor Verlangen brennt, Hure!",
+          "Jede Zelle deines Körpers wird schreien, gefickt zu werden!",
+          "Jetzt werde ich deine Fotze zu einem brennenden Herd der Lust machen!",
+          "Dieses Gleitmittel wird dich deinen Willen vergessen lassen, verdammt!",
+          "Deine Fotze wird mit diesem Trank bis zum Grund getränkt sein!"
+        ],
+        "SE1": [
+          "Wehr dich, wehr dich, ich mag es!",
+          "Dein Kampf ist nutzlos!",
+          "Mach weiter, Schlampe, ich mag es!"
+        ]
+      }
+    },
+    "ero1": {
+      "description": "Beginnt mit getränktem Handschuh GG's Fotze zu reiben, zieht Höschen beiseite, dringt leicht ein",
+      "events": {
+        "ero1": [
+          "Spürst du, wie ich dein Loch vorbereite, Hure?",
+          "Jetzt werde ich deine Fotze nass und bereit machen!",
+          "Ich werde dich dehnen, bis du zu tropfen beginnst!",
+          "Deine Fotze ist schon nass? Warte, das ist nur der Anfang!",
+          "Ich werde meine Finger so tief schieben, dass du heulst!",
+          "Dein Körper reagiert bereits, auch wenn du es nicht willst!",
+          "Ich werde dich so bearbeiten, dass du um Schwanz bettelst!",
+          "Jede Bewegung wird dich verrückt machen, Schlampe!"
+        ],
+        "SE1": [
+          "Dein Kampf erregt mich nur noch mehr!",
+          "Kämpf weiter, bis ich dich vollständig breche!",
+          "Wehr dich, so viel du willst, du kannst nicht mehr entkommen!"
+        ]
+      }
+    },
+    "ero2": {
+      "description": "Dringt tiefer ein ohne aufzuhören, fickt bereits mit der Hand, seine Finger drücken tiefer und tragen Aphrodisiakum an ihre Wände auf",
+      "events": {
+        "ero2": [
+          "Meine Finger sind schon drin, Hure, und sie werden nicht aufhören!",
+          "Ich ficke dich mit meiner Hand, reibe die Wände deiner Fotze!",
+          "Tiefer, tiefer... ich will bis zum Grund kommen!",
+          "Spürst du, wie ich dich von innen besitze, Schlampe?",
+          "Deine Fotze gehört jetzt mir, ich mache damit, was ich will!",
+          "Jeder Handstoß injiziert Verlangen in dich!",
+          "Ich reiße dich von innen auseinander, und du magst es!",
+          "Deine Fotze schluckt meine Finger, gierige Schlampe!"
+        ],
+        "SE1": [
+          "Dein Stöhnen ist so erregend, mach weiter!",
+          "Schrei, schrei lauter, Schlampe, ich mag es!",
+          "Bald wirst du nicht mehr schreien können, Hure!"
+        ]
+      }
+    },
+    "ero3": {
+      "description": "Fährt rhythmisch fort zu ficken und Aphrodisiakum in GG zu reiben",
+      "events": {
+        "ero3": [
+          "Kein Ort wird unverarbeitet bleiben!",
+          "Jedes Loch wird getränkt sein!",
+          "Dein Arsch ist als Nächstes dran, Schlampe!",
+          "Jetzt werde ich auch deinen Mund reiben!",
+          "Alles wird bereit zum Ficken sein!",
+          "Du wirst bis auf die Knochen getränkt sein!",
+          "Jedes Loch wird brennen!",
+          "Nichts wird unberührt bleiben!"
+        ],
+        "SE1": [
+          "Dein Kampf gefällt mir, Schlampe!",
+          "Stirb nur nicht, Hure, bevor ich fertig bin!",
+          "Wehr dich, so viel du willst, ich werde nicht aufhören!"
+        ]
+      }
+    },
+    "finish1": {
+      "description": "Drückt mehrmals tief mehrere Finger in GG, bei GG ist sichtbar, dass es sehr tief ist, GG erkennt voller Entsetzen, dass sie kommt",
+      "events": {
+        "finish1": [
+          "Ahahaha! Dich zum Kommen gebracht, Hure!",
+          "So, komm! Komm von meiner Hand!",
+          "Was für eine Schlampe du bist, gegen deinen Willen kommend!",
+          "Erzwungener Orgasmus! Dein Körper hat dich verraten!",
+          "Sieh, wie du kommst, gekreuzigt am Kreuz!",
+          "Deine Fotze zog sich vor Lust zusammen, und du bist voller Entsetzen!",
+          "Ich habe dich das erleben lassen, was du nicht wolltest!",
+          "Jetzt gehörst du mir, kommende Schlampe!"
+        ],
+        "SE1": [
+          "Nimm mein Sperma, Schlampe, du hast es verdient!",
+          "Aaa.. Verdammt, ich komme, nimm alles!",
+          "Ich werde deine Gebärmutter füllen, und du wirst dich immer daran erinnern!"
+        ]
+      }
+    },
+    "finish2": {
+      "description": "Entfernt Hände von GG, lässt Handschuh fallen, lacht und sagt etwas zu GG",
+      "events": {
+        "finish2": [
+          "Ruhe dich ein wenig aus, Hexe. Bald wird es echtes Ficken geben!",
+          "Du dachtest, das war alles? Das war nur Aufwärmen!",
+          "Dein Körper ist bereits bereit für meinen Schwanz!",
+          "Sieh dich an, gekreuzigt und kommende Schlampe!",
+          "Jetzt bist du bereit, meinen schwarzen Schwanz zu nehmen!",
+          "Atme tief durch, solange du Kraft hast. Du wirst sie brauchen!",
+          "Du bist keine Hexe mehr, du bist nur ein Loch für Sex!",
+          "Ich habe dich gebrochen. Jetzt werde ich dich zu meinem Spielzeug machen!"
+        ],
+        "SE1": [
+          "Deine Fotze saugt meinen Schwanz, wie eine Hure!",
+          "Aaa, wie stark ich komme, nimm alles!",
+          "Nimm es, Schlampe, du hast es verdient!"
+        ]
+      }
+    },
+    "finish_end": {
+      "description": "GG öffnet Augen und sieht ihn an, versteht klar, dass dies weit vom Ende entfernt ist",
+      "events": {
+        "finish_end": [
+          "Ahahah! Du verstehst alles richtig, Hexe!",
+          "Und jetzt werde ich dich mit meinem schwarzen Schwanz ficken!",
+          "Du dachtest, das war demütigend? Warte!",
+          "Jetzt werde ich in dich eindringen, wie du es noch nie gefühlt hast!",
+          "Bereite dich auf echte Dominanz vor, Schlampe!",
+          "Deine Augen sagen die Wahrheit: du hast Angst und willst es!",
+          "Mein Schwanz wird dich zerreißen!",
+          "Es wird wehtun, schmutzig sein und du wirst um mehr betteln!"
+        ],
+        "SE1": [
+          "Saug mein Sperma aus, Hure, das ist dein Job!",
+          "Hier, nimm alles, Schlampe, du hast es verdient!",
+          "Ja, ja, ja, ich komme, nimm alles!"
+        ]
+      }
+    },
+    "finish_end2": {
+      "description": "Greift am Gesicht und wirft zu Boden",
+      "events": {
+        "finish_end2": [
+          "So, zu Boden, Hure!",
+          "Jetzt wirst du liegen, wie du sollst!",
+          "Vom Kreuz zum Boden - das ist dein Schicksal, verdammt!",
+          "Ich habe dich wie Müll geworfen, Schlampe!",
+          "Jetzt bist du unten, wo du sein sollst!",
+          "Vom Kreuz zum Dreck - perfekter Fall, Hexe!",
+          "Du bist gefallen wie ein fallender Stern, Hure!",
+          "Jetzt bist du am Boden, bereit für die nächste Phase!"
+        ],
+        "SE1": [
+          "Fall, fall, Schlampe!",
+          "Dein Kampf ist vorbei!",
+          "Jetzt gehörst du mir vollständig!"
+        ]
+      }
+    },
+    "START": {
+      "description": "Nimmt Holzstöcke für Hände und Füße heraus, Hände in Fesseln zwischen gefesselten Beinen gesperrt, GG liegt auf Brust und Gesicht",
+      "events": {
+        "START": [
+          "Lieg still, Hure. Jetzt bist du mein Sexspielzeug!",
+          "Deine Position ist perfekt, damit ich dich breche!",
+          "Sieh, wie hilflos du bist, immobilisierte Schlampe!",
+          "Jetzt werde ich dich zu einem braven Mädchen zum Ficken machen!",
+          "Deine Fotze ist erhoben und wartet auf meinen schwarzen Schwanz!",
+          "Du wirst mir wie ein gehorsames Ding dienen!",
+          "Diese Stöcke sind deine neue Realität, verdammt!",
+          "Bereite dich vor, ich werde so tief wie möglich eindringen!"
+        ],
+        "SE1": [
+          "Wehr dich, so viel du willst, du wirst trotzdem nicht entkommen!",
+          "Dein Kampf erregt mich nur!",
+          "Wehr dich weiter, ich mag es!"
+        ],
+        "SE2": [
+          "Du wirst nicht entkommen, Hure!",
+          "Dein Kampf ist nutzlos!",
+          "Mach weiter, Schlampe, ich mag es!"
+        ]
+      }
+    },
+    "ERO2": {
+      "description": "Akzentuiertes tiefes Ficken",
+      "events": {
+        "ERO2": [
+          "Spürst du, wie ich dein Loch dehne, Schlampe?",
+          "Ich ficke dich, wie du es verdienst!",
+          "Deine Fotze wurde für meinen schwarzen Schwanz gemacht!",
+          "Jeder Stoß macht dich zu meiner!",
+          "Reite mich tiefer, verdammt!",
+          "Deine Fesseln klappern im Rhythmus meiner Schläge!",
+          "Dein Körper zittert vor Lust und Schmerz!",
+          "Ich besitze dich vollständig, Hure!"
+        ],
+        "ERO3": [
+          "Tiefer, noch tiefer, Hure!",
+          "Ich will, dass du jeden Zentimeter spürst!",
+          "Deine Fotze schluckt mich tiefer und tiefer, verdammt!",
+          "Ich spieße dich bis zum Grund auf, Schlampe!",
+          "Spürst du, wie ich dich von innen dehne!",
+          "Deine Wände umschließen mich so perfekt!",
+          "Ich ramme dich bis zum Limit, gierige Schlampe!",
+          "Tiefer, tiefer, bis du ans Ende kommst!"
+        ],
+        "SE1": [
+          "Dein Kampf erregt mich nur noch mehr!",
+          "Kämpf weiter, bis ich dich vollständig breche!",
+          "Wehr dich, so viel du willst, du kannst nicht mehr entkommen!"
+        ]
+      }
+    },
+    "ERO3": {
+      "description": "Fickt tiefer, damit GG es spürt",
+      "events": {
+        "ERO3": [
+          "Ich will, dass du jeden Zentimeter meines Schwanzes spürst!",
+          "Spürst du, wie mein schwarzer Schwanz dich füllt!",
+          "Ich spieße dich bis zum Limit auf mich auf, Schlampe!",
+          "Deine Fotze schluckt mich, gierige Schlampe!",
+          "Tiefer, noch tiefer, Hure!",
+          "Deine Wände umschließen mich so perfekt!",
+          "Dein Körper wurde für solches Ficken gemacht!",
+          "Ich ramme dich bis zum Grund, verdammt!"
+        ],
+        "SE1": [
+          "Dein Stöhnen ist so erregend, mach weiter!",
+          "Schrei, schrei lauter, Schlampe, ich mag es!",
+          "Bald wirst du nicht mehr schreien können, Hure!"
+        ]
+      }
+    },
+    "ERO4": {
+      "description": "Fickt tiefer und härter",
+      "events": {
+        "ERO4": [
+          "Ich werde dich härter und rauer ficken, Schlampe!",
+          "Dein Arsch ist rot von meinen Schlägen!",
+          "Bald wirst du mich um Gnade anflehen!",
+          "Jeder Schlag ist meine Herrschaft über dich!",
+          "Deine Fotze gehört bereits mir, zerrissen und nass!",
+          "Ich werde dich zu Ruinen machen, verdammt!",
+          "Leide und genieße, Hure!",
+          "Ich werde dich mit meinem Schwanz brechen!"
+        ],
+        "SE1": [
+          "Dein Kampf gefällt mir, Schlampe!",
+          "Stirb nur nicht, Hure, bevor ich fertig bin!",
+          "Wehr dich, so viel du willst, ich werde nicht aufhören!"
+        ]
+      }
+    },
+    "ERO5": {
+      "description": "Fickt tief und saftig, bereitet sich vor, in ihr zu kommen",
+      "events": {
+        "ERO5": [
+          "Ich werde dich jetzt bis zum Rand füllen, Schlampe!",
+          "Du wirst mein Sperma lieben, Hure!",
+          "Bereite dich vor, all meinen Saft zu nehmen!",
+          "Ich werde tief in dir kommen, verdammt!",
+          "Deine Fotze wird von mir überlaufen!",
+          "Jeder Tropfen meines Spermas wird deiner sein!",
+          "Du wirst meine persönliche Gummipuppe!",
+          "Jetzt werde ich dich für immer zu meiner machen, Schlampe!"
+        ],
+        "FIN": [
+          "A-a-ah! Ich komme! Nimm alles, Schlampe!",
+          "Jaaa! Fülle dich, verdammt!",
+          "Hier ist es! Mein Sperma in dir!",
+          "Ich fülle dich bis zum Rand, Hure!",
+          "Spürst du, wie ich in dir explodiere!",
+          "Alles meins! All mein Sperma für dich!",
+          "Ja! Ja! Ja! Ich komme, Schlampe!",
+          "Deine Fotze ist jetzt mein Eigentum!"
+        ],
+        "SE1": [
+          "Deine Fotze saugt meinen Schwanz, wie eine Hure!",
+          "Aaa, wie stark ich komme, nimm alles!",
+          "Nimm es, Schlampe, du hast es verdient!"
+        ]
+      }
+    },
+    "FIN": {
+      "description": "Kommt mit riesiger Menge Sperma",
+      "events": {
+        "FIN": [
+          "A-a-ah! Ich komme! Nimm alles, Schlampe!",
+          "Jaaa! Fülle dich, verdammt!",
+          "Hier ist es! Mein Sperma in dir!",
+          "Ich fülle dich bis zum Rand, Hure!",
+          "Spürst du, wie ich in dir explodiere!",
+          "Alles meins! All mein Sperma für dich!",
+          "Ja! Ja! Ja! Ich komme, Schlampe!",
+          "Deine Fotze ist jetzt mein Eigentum!"
+        ],
+        "JIGO1": [
+          "Sieh, wie mein Samen aus dir fließt, Schlampe!",
+          "Du zitterst vor Lust, und ich schaue zu!",
+          "Du bist jetzt von mir getränkt, Hexe!",
+          "Mein Sperma fließt aus dir, und du kannst nichts tun!",
+          "Du siehst aus wie eine benutzte Hure!",
+          "Perfekter Look für so eine Schlampe!",
+          "Dein Körper zittert noch von meinem Fick!",
+          "Jetzt gehörst du mir wirklich, Schlampe!"
+        ],
+        "SE": {
+          "se_count_1": [
+            "Ich komme, komme! Nimm alles, Schlampe!",
+            "Deine Fotze füllt sich bis zum Rand, spürst du es?",
+            "Ich fülle deine Gebärmutter, spürst du, wie sie sich füllt?",
+            "Spürst du, wie ich dich befruchte, Hure?",
+            "Deine Gebärmutter gehört jetzt mir, und ich habe sie mit Sperma gefüllt!"
+          ],
+          "se_count_2": [
+            "Wie schön es ist, in dir zu kommen, Schlampe!",
+            "Verdammt, melke mein Sperma, Hure!",
+            "Deine Fotze läuft über, spürst du es?",
+            "Noch mehr Sperma für dich, Schlampe!"
+          ]
+        },
+        "SE1": [
+          "Nimm mein Sperma, Schlampe, du hast es verdient!",
+          "Aaa.. Verdammt, ich komme, nimm alles!",
+          "Ich werde deine Gebärmutter füllen, und du wirst dich immer daran erinnern!"
+        ]
+      }
+    },
+    "JIGO1": {
+      "description": "Zieht Schwanz raus und steht, schaut GG an, wie sein Sperma aus ihr fließt",
+      "events": {
+        "JIGO1": [
+          "Sieh, wie mein Samen aus dir fließt, Schlampe!",
+          "Du zitterst vor Lust, und ich schaue zu!",
+          "Du bist jetzt von mir getränkt, Hexe!",
+          "Mein Sperma fließt aus dir, und du kannst nichts tun!",
+          "Du siehst aus wie eine benutzte Hure!",
+          "Perfekter Look für so eine Schlampe!",
+          "Dein Körper zittert noch von meinem Fick!",
+          "Jetzt gehörst du mir wirklich, Schlampe!"
+        ],
+        "SE1": [
+          "Saug mein Sperma aus, Hure, das ist dein Job!",
+          "Hier, nimm alles, Schlampe, du hast es verdient!",
+          "Ja, ja, ja, ich komme, nimm alles!"
+        ]
+      }
+    },
+    "JIGO2": {
+      "description": "GG schließt Augen, atmet und versucht zu sich zu kommen, er schaut GG an",
+      "events": {
+        "JIGO2": [
+          "Jetzt wirst du im Kreis gehen, jetzt bist du eine echte Hure!",
+          "Du wirst immer meinem Schwanz dienen, Schlampe!",
+          "Ich werde dich zur Benutzung an andere geben, verdammt!",
+          "Großartiges Sexspielzeug, nicht wahr?",
+          "Dein Zweck ist es, ein Loch für alle zu sein!",
+          "Du bist keine Hexe mehr, du bist nur ein Ding!",
+          "Jetzt wirst du allen dienen, die ich befehle!",
+          "Dein neues Leben ist ständiges Ficken, Hure!"
+        ],
+        "START2": [
+          "Ohne lange zu denken, werde ich wieder nehmen, was mir gehört, Schlampe!",
+          "Du dachtest, das war alles? Wir haben gerade erst angefangen!",
+          "Ruhe ist vorbei, Hure. Mein Schwanz dürstet wieder nach dir!",
+          "Deine Fotze ist noch nicht gesättigt, ich kann es spüren!",
+          "Ich werde wieder in dich eindringen, und diesmal noch rauer!",
+          "Der Kreis schließt sich. Du wirst wieder meine sein, verdammt!",
+          "Dein Körper ist wieder bereit zur Benutzung!",
+          "Ich werde dich bis zur völligen Erschöpfung ficken, Schlampe!"
+        ],
+        "SE": {
+          "se_count_1": [
+            "Sieh dich an, du siehst aus wie eine Hure, und das ist richtig!",
+            "Du bist mit meinem Sperma bedeckt, und du wirst dich immer daran erinnern!",
+            "Deine Fotze tropft noch, wie schön!",
+            "Du weißt, wie man Lust gibt, Schlampe, mach weiter!"
+          ],
+          "se_count_2": [
+            "Noch eine Portion Sperma für dich, Schlampe!",
+            "Deine Fotze läuft über, spürst du es?",
+            "Deine Gebärmutter ist voll meinem Sperma, und du wirst dich immer daran erinnern!"
+          ]
+        },
+        "SE1": [
+          "Sieh, was du mir antust, oooouu eeee!",
+          "Ich werde dich schwängern, Schlampe, und du wirst dich immer daran erinnern!",
+          "Du produzierst mein Sperma, wie eine Hure!"
+        ]
+      }
+    },
+    "START2": {
+      "description": "Ohne lange zu denken nimmt er seinen Schwanz heraus und dringt wieder ein, wiederholt Zyklen",
+      "events": {
+        "START2": [
+          "Ohne lange zu denken, werde ich wieder nehmen, was mir gehört, Schlampe!",
+          "Du dachtest, das war alles? Wir haben gerade erst angefangen!",
+          "Ruhe ist vorbei, Hure. Mein Schwanz dürstet wieder nach dir!",
+          "Deine Fotze ist noch nicht gesättigt, ich kann es spüren!",
+          "Ich werde wieder in dich eindringen, und diesmal noch rauer!",
+          "Der Kreis schließt sich. Du wirst wieder meine sein, verdammt!",
+          "Dein Körper ist wieder bereit zur Benutzung!",
+          "Ich werde dich bis zur völligen Erschöpfung ficken, Schlampe!"
+        ],
+        "SE1": [
+          "Wehr dich, wehr dich, ich mag es!",
+          "Dein Kampf ist nutzlos!",
+          "Mach weiter, Schlampe, ich mag es!"
+        ],
+        "SE2": [
+          "Du wirst nicht entkommen, Hure!",
+          "Dein Kampf ist nutzlos!",
+          "Mach weiter, Schlampe, ich mag es!"
+        ]
+      }
+    }
+  }
+}
+

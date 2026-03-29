@@ -1,0 +1,349 @@
+{
+  "settings": {
+    "commentCooldownSeconds": 2.0,
+    "maxSimultaneousComments": 1,
+    "commentDisplayDuration": 4.0,
+    "fontSize": 24.0,
+    "verticalOffset": 15.0,
+    "streamingSpeed": 0.03,
+    "goblinColor": {
+      "r": 1.0,
+      "g": 1.0,
+      "b": 1.0,
+      "a": 1.0
+    },
+    "goblinOutlineColor": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 1.0
+    }
+  },
+  "animations": {
+    "START": {
+      "description": "Início da cena H com goblin, captura",
+      "events": {
+        "START": [
+          "Ke-ke-ke! Pegamos você, puta!",
+          "Fêmea humana! Nossa agora!",
+          "Ke-ke-ke, você será nosso brinquedo!",
+          "Pegamos, peitos grandes! Nossos!"
+        ],
+        "SE1": [
+          "Lute, lute! Nós gostamos!",
+          "Você não vai escapar de nós!",
+          "Resista, puta humana!"
+        ]
+      }
+    },
+    "ERO1": {
+      "description": "Primeira fase da foda",
+      "events": {
+        "ERO1": [
+          "Ke-ke-ke! Pênis já dentro!",
+          "Seu buraco está apertado, humana!",
+          "Gostamos de peitos grandes!",
+          "Pegue o pênis, fêmea!"
+        ],
+        "SE1": [
+          "Grite mais alto, fêmea!",
+          "Goblins gostam dos seus gemidos!",
+          "Sua buceta nos pertence!"
+        ]
+      }
+    },
+    "ERO2": {
+      "description": "Continuação da foda, mais intensa",
+      "events": {
+        "ERO2": [
+          "Ke-ke-ke! Como você gosta?",
+          "Sua buceta aperta o pênis tão forte!",
+          "Fêmeas humanas são as melhores!",
+          "Pegue ainda mais fundo!"
+        ],
+        "SE1": [
+          "Sua luta é inútil!",
+          "Fêmeas humanas são fracas!",
+          "Grite enquanto te fodemos!"
+        ]
+      }
+    },
+    "ERO3": {
+      "description": "Aumento de ritmo",
+      "events": {
+        "ERO3": [
+          "Ke-ke-ke! Logo vamos gozar em você!",
+          "Nossa porra vai te encher!",
+          "Vamos te engravidar, você vai dar à luz!",
+          "Seu útero vai ficar cheio!"
+        ],
+        "SE1": [
+          "Pegue a semente, fêmea!",
+          "Sua buceta foi feita para nós!",
+          "Você vai dar à luz nossos filhos!"
+        ]
+      }
+    },
+    "ERO4": {
+      "description": "Preparação para o final",
+      "events": {
+        "ERO4": [
+          "Ke-ke-ke! Quase gozando!",
+          "Prepare-se para a porra, fêmea!",
+          "Seu buraco vai transbordar logo!",
+          "Últimas enfiadas, fêmea!"
+        ],
+        "SE1": [
+          "Grite dos nossos pênis!",
+          "Sua buceta está tremendo!",
+          "Logo você vai estar cheia de porra!"
+        ]
+      }
+    },
+    "ERO5": {
+      "description": "Fase final antes de gozar",
+      "events": {
+        "ERO5": [
+          "Ke-ke-ke! Gozando agora!",
+          "Prepare-se para pegar a semente!",
+          "A porra está quente!",
+          "Seu útero vai ser preenchido!"
+        ],
+        "SE1": [
+          "Pegue tudo até a última gota!",
+          "A semente do goblin é forte!",
+          "Você vai lembrar do nosso pênis!"
+        ]
+      }
+    },
+    "ERO_iki": {
+      "description": "Momento do goblin gozando - primeira ejaculação",
+      "events": {
+        "ERO_iki": [
+          "Ke-ke-ke! Gozando! Pegue!",
+          "Aaa! Estou gozando!",
+          "Gozando na fêmea humana!",
+          "Pegue nossa semente!"
+        ],
+        "SE1": [
+          "Seu útero está enchendo!",
+          "Sente a porra quente?",
+          "Semente em você!",
+          "Pegue tudo, fêmea!"
+        ]
+      }
+    },
+    "ERO_iki2": {
+      "description": "Continuação da gozada, pulsos adicionais",
+      "events": {
+        "ERO_iki2": [
+          "Ainda mais porra!",
+          "Ke-ke-ke! Fluindo e fluindo!",
+          "Seu buraco está transbordando!",
+          "Tanta porra!"
+        ],
+        "SE1": [
+          "Mamem nossos pênis até o fim!",
+          "Chupem toda a porra!",
+          "Sua buceta está gananciosa!",
+          "Pegue mais!"
+        ]
+      }
+    },
+    "ERO_jigo": {
+      "description": "Depois de gozar, goblin ainda dentro",
+      "events": {
+        "ERO_jigo": [
+          "Ke-ke-ke! Como você gosta da porra do goblin?",
+          "Agora você pertence à tribo!",
+          "Sua buceta está cheia da nossa semente!",
+          "Você vai dar à luz nossa prole!"
+        ],
+        "SE1": [
+          "Porra flui de você!",
+          "Você está marcada por nós!",
+          "Seu útero é nosso!"
+        ]
+      }
+    },
+    "2ERO_START": {
+      "description": "Início da segunda rodada",
+      "events": {
+        "2ERO_START": [
+          "Ke-ke-ke! Segunda rodada começa!",
+          "Nem todos gozaram ainda, venha!",
+          "Vamos te passar em círculo!",
+          "Prepare-se para um novo pênis!"
+        ],
+        "SE1": [
+          "Você não vai descansar!",
+          "Precisamos de mais!",
+          "Sua buceta ainda não está cansada!"
+        ]
+      }
+    },
+    "2ERO_START2": {
+      "description": "Preparação para segunda rodada",
+      "events": {
+        "2ERO_START2": [
+          "Ke-ke-ke! Olha como é grande!",
+          "Segundo pênis é ainda maior!",
+          "Seu buraco vai esticar ainda mais!",
+          "Prepare-se para prazer duplo!"
+        ],
+        "SE1": [
+          "Vai ser ainda mais duro!",
+          "Somos mais fortes que você!",
+          "Sua buceta vai pegar todos os nossos pênis!"
+        ]
+      }
+    },
+    "2ERO_1": {
+      "description": "Segunda rodada, primeira fase",
+      "events": {
+        "2ERO_1": [
+          "Ke-ke-ke! Segundo pênis em você!",
+          "Sente a diferença, fêmea?",
+          "Este pênis é ainda mais grosso!",
+          "Sua buceta está esticando!"
+        ],
+        "SE1": [
+          "Grite do segundo pênis!",
+          "Seu buraco já está acostumado!",
+          "Vamos te usar por vez!"
+        ]
+      }
+    },
+    "2ERO_2": {
+      "description": "Segunda rodada, aumento de ritmo",
+      "events": {
+        "2ERO_2": [
+          "Ke-ke-ke! Como você gosta de outra rodada?",
+          "Sua buceta ainda está com fome!",
+          "Segundo goblin fode mais duro!",
+          "Pegue porção dupla!"
+        ],
+        "SE1": [
+          "Sua buceta está gananciosa por pênis!",
+          "Grite mais alto, fêmea!",
+          "Segundo pênis melhor que o primeiro?"
+        ]
+      }
+    },
+    "2ERO_3": {
+      "description": "Segunda rodada, fase intensa",
+      "events": {
+        "2ERO_3": [
+          "Ke-ke-ke! Fodendo sem parar!",
+          "Seu útero vai ficar cheio de novo!",
+          "Segundo goblin vai gozar também!",
+          "Prepare-se para nova porção!"
+        ],
+        "SE1": [
+          "Sua buceta pega todo mundo!",
+          "Vai ter ainda mais porra!",
+          "Nunca vamos nos cansar de te foder!"
+        ]
+      }
+    },
+    "2ERO_4": {
+      "description": "Segunda rodada, preparação para gozada",
+      "events": {
+        "2ERO_4": [
+          "Ke-ke-ke! Segundo também está gozando!",
+          "Outra porção de semente!",
+          "Seu buraco vai transbordar!",
+          "Prepare-se para segunda onda!"
+        ],
+        "SE1": [
+          "Pegue a segunda porção!",
+          "Seu útero vai segurar tudo!",
+          "Segundo pênis também está quente!"
+        ]
+      }
+    },
+    "2ERO_iki": {
+      "description": "Segundo goblin gozando - EVENTO CHAVE para fundo preto e raio-x",
+      "events": {
+        "2ERO_iki": [
+          "Ke-ke-ke! Segundo está gozando! Aaaa!",
+          "Ainda mais porra!",
+          "Seu útero está transbordando!",
+          "Pegue a segunda porção de semente!"
+        ],
+        "SE1": [
+          "Sente como a porra flui?",
+          "Sua buceta derrete da semente!",
+          "Segunda carga no seu útero!",
+          "Nossa semente se mistura!"
+        ]
+      }
+    },
+    "2ERO_iki2": {
+      "description": "Continuação da gozada do segundo goblin",
+      "events": {
+        "2ERO_iki2": [
+          "Ke-ke-ke! Fluindo sem parar!",
+          "Tanta porra de nós!",
+          "Seu buraco não consegue segurar tudo!",
+          "Semente flui para fora!"
+        ],
+        "SE1": [
+          "Chupe o segundo pênis também!",
+          "Sua buceta está gananciosa por porra!",
+          "Pegue tudo até a última gota!",
+          "Nos sirva, fêmea!"
+        ]
+      }
+    },
+    "2ERO_JIGO": {
+      "description": "Depois da segunda gozada",
+      "events": {
+        "2ERO_JIGO": [
+          "Ke-ke-ke! Duas cargas em você!",
+          "Agora você vai engravidar com certeza!",
+          "Tanta semente!",
+          "Seu útero está cheio-cheio!"
+        ],
+        "SE1": [
+          "Porra flui como um rio!",
+          "Você está marcada duas vezes!",
+          "Gozamos em você, gostou!?",
+          "Você vai dar à luz gêmeos ha-ha!"
+        ]
+      }
+    },
+    "2ERO_JIGO2": {
+      "description": "Fase final depois da segunda rodada",
+      "events": {
+        "2ERO_JIGO2": [
+          "Ke-ke-ke! Ótima fêmea humana!",
+          "Agora você é uma puta tribal!",
+          "Você vai voltar para nós de novo!",
+          "Sua buceta lembrou dos nossos pênis!"
+        ],
+        "SE": {
+          "se_count_1": [
+            "Você é agora mãe da futura prole!",
+            "A semente do goblin é forte!",
+            "Logo você vai dar à luz nossos filhos!",
+            "Seu útero pertence à tribo!"
+          ],
+          "se_count_2": [
+            "Ainda mais porra flui para fora!",
+            "Tanta semente não cabe!",
+            "Você está transbordando da nossa semente!",
+            "He-he, trabalhamos bem!"
+          ]
+        },
+        "SE1": [
+          "Volte de novo, fêmea!",
+          "Gostamos da sua buceta!",
+          "Vamos esperar você de novo!",
+          "Seu buraco é o melhor!"
+        ]
+      }
+    }
+  }
+}
+

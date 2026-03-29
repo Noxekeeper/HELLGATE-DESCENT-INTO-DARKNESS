@@ -1,0 +1,884 @@
+{
+  "settings": {
+    "commentCooldownSeconds": 3.0,
+    "maxSimultaneousComments": 1,
+    "commentDisplayDuration": 5.0,
+    "fontSize": 22.0,
+    "verticalOffset": 35.0,
+    "streamingSpeed": 0.03,
+    "goblinColor": {
+      "r": 1.0,
+      "g": 1.0,
+      "b": 1.0,
+      "a": 1.0
+    },
+    "goblinOutlineColor": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 1.0
+    }
+  },
+  "animations": {
+    "START": {
+      "description": "Inicio de escena H, primera captura",
+      "events": {
+        "START": [
+          "¡Por fin te atrapé, puta!",
+          "¡Ahora eres mía, zorra!",
+          "¡Prepárate, esto va a doler!",
+          "¡Estás en mis manos y no hay escapatoria!"
+        ],
+        "SE": {
+          "se_count_1": [
+            "¡Forcejea todo lo que quieras, no vas a liberarte!",
+            "¡Tu forcejeo solo me excita más!",
+            "¡Sigue resistiendo, me gusta!",
+            "¡No te liberarás, puta!",
+            "¡Lucha más fuerte, eso me pone más duro!",
+            "¡Tu resistencia es inútil, zorra!",
+            "¡Sigue retorciéndote, me encanta!"
+          ],
+          "se_count_2": [
+            "¡Cuanto más forcejees, más fuerte te sujeto!",
+            "¡Tu lucha solo me excita más!",
+            "¡Resiste todo lo que quieras, ya eres mía!",
+            "¡Sigue intentando escapar, puta!",
+            "¡Tus forcejeos son inútiles contra mí!",
+            "¡Lucha contra mí, zorra, se siente bien!",
+            "¡Cuanto más fuerte luches, mejor!"
+          ],
+          "se_count_3": [
+            "¡Ríndete ya, no vas a ningún lado!",
+            "¡Tu resistencia me está aburriendo!",
+            "¡Deja de luchar, acepta tu destino!",
+            "¡Solo estás retrasando lo inevitable!",
+            "¡Deja de forcejear, zorra, se acabó!",
+            "¡Solo sométete ya, puta!",
+            "¡Tu lucha no tiene sentido ahora!"
+          ]
+        },
+        "SE1": [
+          "¡Forcejea todo lo que quieras, no vas a liberarte!",
+          "¡Tu forcejeo solo me excita!",
+          "¡Sigue resistiendo, me gusta!",
+          "¡No te liberarás, puta!"
+        ]
+      }
+    },
+    "START2": {
+      "description": "Segunda variante del inicio de escena H",
+      "events": {
+        "START2": [
+          "¡Ahí estás, zorra!",
+          "¡Ahora estás bajo mi poder!",
+          "¡Prepárate para lo que te espera!",
+          "¡No escaparás de mí!"
+        ],
+        "SE": {
+          "se_count_1": [
+            "¡Forcejea, forcejea, me gusta!",
+            "¡Tu forcejeo es inútil!",
+            "¡Sigue así, zorra, me gusta!",
+            "¡Lucha más fuerte contra mí, puta!",
+            "¡Tu resistencia me divierte!",
+            "¡Sigue resistiendo, no te servirá!",
+            "¡Cuanto más luches, mejor!"
+          ],
+          "se_count_2": [
+            "¡No vas a escaparte de mí!",
+            "¡Sigue forcejeando, zorra, entreténme!",
+            "¡Tu lucha es patética!",
+            "¡Resiste más, lo disfruto!",
+            "¡Solo me haces más fuerte!",
+            "¡Lucha más fuerte, puta, es divertido!",
+            "¡Tus forcejeos no significan nada!"
+          ]
+        },
+        "SE1": [
+          "¡Forcejea, forcejea, me gusta!",
+          "¡Tu forcejeo es inútil!",
+          "¡Sigue así, zorra, me gusta!"
+        ]
+      }
+    },
+    "START3": {
+      "description": "Tercera variante del inicio de escena H",
+      "events": {
+        "START3": [
+          "¡Atrapada en mi red, puta!",
+          "¡Ahora eres mi juguete!",
+          "¡Prepárate para el dolor, zorra!",
+          "¡No escaparás de mis manos!"
+        ],
+        "SE1": [
+          "¡Resiste, me gusta!",
+          "¡Tu forcejeo solo fortalece mi deseo!",
+          "¡Sigue así, puta!"
+        ]
+      }
+    },
+    "ERO": {
+      "description": "Follando a ritmo normal y tirando un poco. Una mano del GG sostiene el collar, la otra se extiende hacia adelante. En bucle",
+      "events": {
+        "ERO": [
+          "¡Tu coño está tan apretado que quiero desgarrarlo!",
+          "¡Te voy a follar hasta el final, puta!",
+          "¡Eres mi propiedad y haré contigo lo que quiera!",
+          "¡Tómalo, zorra, grita más fuerte, no voy a parar!"
+        ],
+        "SE": {
+          "se_count_1": [
+            "¡Tu forcejeo solo me excita más!",
+            "¡Sigue forcejeando hasta que te rompa por completo!",
+            "¡Forcejea todo lo que quieras, ya no puedes escapar!",
+            "¡Tu coño servirá a todos hoy, zorra!",
+            "¡Te pasaré a otros, no te mueras antes de tiempo!",
+            "¡Lucha más fuerte contra mí, puta, se siente increíble!",
+            "¡Tu resistencia solo me hace desearte más!",
+            "¡Sigue resistiendo, zorra, me encanta romperte!",
+            "¡Cuanto más luches, más fuerte te follo!"
+          ],
+          "se_count_2": [
+            "¡Tus gemidos son tan excitantes, sigue así!",
+            "¡Grita, grita más fuerte, zorra, me gusta!",
+            "¡Pronto no podrás gritar, puta!",
+            "¡Tus gritos son música para mis oídos!",
+            "¡Sigue gritando, me excita!",
+            "¡Más fuerte, zorra! ¡Que todos te oigan!",
+            "¡Tu voz se está quebrando, qué dulce!",
+            "¡Grita por mí, puta, lo ordeno!"
+          ],
+          "se_count_3": [
+            "¡Tómalo más profundo, zorra!",
+            "¡Tu coño me agarra tan fuerte!",
+            "¡Siente cada centímetro, puta!",
+            "¡Voy a arruinarte por completo!",
+            "¡Tu cuerpo me pertenece ahora!",
+            "¡Lucha todo lo que quieras, eres mía!",
+            "¡Te follaré hasta que te rompas!",
+            "¡Tu coño es mío para destruir!"
+          ]
+        },
+        "SE1": [
+          "¡Tu forcejeo solo me excita más!",
+          "¡Sigue forcejeando hasta que te rompa por completo!",
+          "¡Forcejea todo lo que quieras, ya no puedes escapar!",
+          "¡Tu coño servirá a todos hoy, zorra!",
+          "¡Te pasaré a otros, no te mueras antes de tiempo!"
+        ],
+        "SE2": [
+          "¡Tus gemidos son tan excitantes, sigue así!",
+          "¡Grita, grita más fuerte, zorra, me gusta!",
+          "¡Pronto no podrás gritar, puta!"
+        ]
+      }
+    },
+    "ERO1": {
+      "description": "Tira de la cadena con fuerza, GG agarra el collar con ambas manos. Transición",
+      "events": {
+        "ERO1": [
+          "La cadena está tensa, zorra, ¿qué te parece?",
+          "Estás agarrando el collar, ¡pero no te ayudará!",
+          "¡Forcejea más fuerte, me gusta tu lucha!",
+          "¡Tu forcejeo solo fortalece mi deseo!"
+        ],
+        "SE": {
+          "se_count_1": [
+            "¡Sigue aguantando, te espera un largo maratón!",
+            "¡Aún no escaparás, ríndete!",
+            "¡Tu forcejeo me complace, zorra!",
+            "¡Solo no te mueras, puta, antes de que termine!",
+            "¡La cadena te controla por completo!",
+            "¡Lucha contra el collar, no te ayudará!",
+            "¡Estás encadenada como el animal que eres!",
+            "¡Tira más fuerte, zorra, solo te duele a ti!"
+          ],
+          "se_count_2": [
+            "¡Tu cuello es mío, puta!",
+            "¡El collar te marca como mi propiedad!",
+            "¡Forcejea contra la cadena, entreténme!",
+            "¡Estás atada como un perro, zorra!",
+            "¡Tira todo lo que quieras, no eres libre!",
+            "¡La cadena es tu nueva realidad!",
+            "¡Lucha contra ella, puta, me encanta verte intentar!"
+          ]
+        },
+        "SE1": [
+          "¡Sigue aguantando, te espera un largo maratón!",
+          "¡Aún no escaparás, ríndete!",
+          "¡Tu forcejeo me complace, zorra!",
+          "¡Solo no te mueras, puta, antes de que termine!"
+        ]
+      }
+    },
+    "ERO2": {
+        "description": "Follando, pero GG ahora agarra con ambas manos. En bucle",
+        "events": {
+          "ERO2": [
+            "¡Tómalo, zorra, grita más fuerte, no voy a parar!",
+            "¡Te voy a follar hasta el final, puta!",
+            "¡Tu coño está tan apretado que quiero desgarrarlo!",
+            "¡Eres mi propiedad y haré contigo lo que quiera!"
+          ],
+          "SE": {
+            "se_count_1": [
+              "¡Tu forcejeo solo me excita más!",
+              "¡Sigue forcejeando hasta que te rompa por completo!",
+              "¡Forcejea todo lo que quieras, ya no puedes escapar!",
+              "¡Tu coño servirá a todos hoy, zorra!",
+              "¡Te pasaré a otros, no te mueras antes de tiempo!",
+              "¡Qué buen coño tienes, simplemente perfecto!",
+              "¡Eres mi puta y te follaré hasta la muerte!",
+              "¡Lucha más fuerte, se siente increíble!",
+              "¡Tu resistencia me hace desearte más!",
+              "¡Sigue resistiendo, zorra, me encanta!"
+            ],
+            "se_count_2": [
+              "¡Tus gemidos son tan excitantes, sigue así!",
+              "¡Grita, grita más fuerte, zorra, me gusta!",
+              "¡Pronto no podrás gritar, puta!",
+              "¡Forcejea todo lo que puedas, de todos modos perderás!",
+              "¡Tus gritos son música para mis oídos!",
+              "¡Más fuerte, zorra! ¡Déjame oírte!",
+              "¡Grita pidiendo piedad, puta!",
+              "¡Que se te quiebre la voz es tan excitante!",
+              "¡Sigue gimiendo, me vuelve loco!"
+            ],
+            "se_count_3": [
+              "¡Tómalo más profundo, zorra!",
+              "¡Tu coño me agarra tan fuerte!",
+              "¡Siente cada embestida, puta!",
+              "¡Te estoy destruyendo por completo!",
+              "¡Tu cuerpo es mío para arruinar!",
+              "¡Resiste, solo me pone más duro!",
+              "¡Te romperé con mi polla!",
+              "¡Tu coño fue hecho para mí!"
+            ],
+            "se_count_4": [
+              "¡Eres mía para siempre, zorra!",
+              "¡No hay escapatoria de esta follada!",
+              "¡Tu coño me pertenece!",
+              "¡Te usaré hasta que te rompas!",
+              "¡Grita más fuerte, puta!",
+              "¡Tu forcejeo es inútil!",
+              "¡Siente mi poder dentro de ti!",
+              "¡Ahora eres mi juguete sexual!"
+            ],
+            "se_count_5": [
+              "¡Más fuerte! ¡Más rápido! ¡Tómalo todo!",
+              "¡Tu coño es perfecto!",
+              "¡Voy a arruinarte!",
+              "¡No hay piedad para ti, zorra!",
+              "¡Siente mi dominio!",
+              "¡No eres más que agujeros!",
+              "¡Toma mi polla como la puta que eres!",
+              "¡Te follaré hasta dejarte sin sentido!"
+            ]
+          },
+          "SE1": [
+            "¡Tu forcejeo solo me excita más!",
+            "¡Sigue forcejeando hasta que te rompa por completo!",
+            "¡Forcejea todo lo que quieras, ya no puedes escapar!",
+            "¡Tu coño servirá a todos hoy, zorra!",
+            "¡Te pasaré a otros, no te mueras antes de tiempo!",
+            "¡Qué buen coño tienes, simplemente perfecto!",
+            "¡Eres mi puta y te follaré hasta la muerte!"
+          ],
+          "SE2": [
+            "¡Tus gemidos son tan excitantes, sigue así!",
+            "¡Grita, grita más fuerte, zorra, me gusta!",
+            "¡Pronto no podrás gritar, puta!",
+            "¡Forcejea todo lo que puedas, de todos modos perderás!"
+          ]
+        }
+      },
+      "ERO3": {
+        "description": "Los brazos de GG pierden fuerza y cuelgan flácidos, ahora no resiste. Transición",
+        "events": {
+          "ERO3": [
+            "¿Cuesta respirar, zorra? ¡Será aún más difícil!",
+            "¡Serás mi puta hasta el final de tus días!",
+            "Jajaja, más fuerte, te gusta, ¿verdad?"
+          ],
+          "SE1": [
+            "¡Tu forcejeo me complace, zorra!",
+            "¡Solo no te mueras, puta, antes de que termine!",
+            "¡Resiste todo lo que quieras, no voy a parar!",
+            "¡Tu forcejeo solo fortalece mi deseo!",
+            "¡Aún no escaparás, ríndete!",
+            "¡Sigue aguantando, te espera un largo maratón!",
+            "¡Eres mi propiedad, puta, y es para siempre!"
+          ]
+        }
+      },
+      "ERO4": {
+        "description": "Follando a GG cuando sus brazos están flácidos. En bucle",
+        "events": {
+          "ERO4": [
+            "¡Ahora eres completamente mía, bruja!",
+            "¡Estás bajo mi poder, puta, y no hay escapatoria!",
+            "¡Tu coño me pertenece y lo follaré siempre!"
+          ],
+          "SE1": [
+            "¡Te estrangularé y me correré al mismo tiempo, zorra!",
+            "¿Cuesta respirar? ¡Será aún más difícil cuando me corra!",
+            "¡No hagas ninguna tontería o te mataré ahora mismo!",
+            "¡Monta más profundo, puta, quiero sentir cada pliegue!",
+            "¡Tu coño toma cada centímetro de mi polla!",
+            "¡No esperes piedad, estás condenada al tormento eterno!",
+            "¡Tu coño tomará la forma de mi polla para siempre!",
+            "¡Vamos, sofócate, zorra, me gusta ver tu agonía!",
+            "¡Tu coño se contrae cuando te sofocas, es tan excitante!",
+            "¡Te estrangularé y te follaré hasta que mueras!",
+            "¡Morirás en mi polla, zorra, y ese será tu último pensamiento!"
+          ],
+          "SE2": [
+            "¡Tus gemidos se apagan por la asfixia, qué dulce!",
+            "Te estás sofocando, ¡pero no me importa tu vida!",
+            "¡Follaré tu cuerpo sin vida si mueres!",
+            "¡No respires hasta que me corra o te mataré!"
+          ]
+        }
+      },
+      "ERO5": {
+        "description": "Touzoku se agacha un poco y levanta a GG sobre la polla en la siguiente embestida. Transición",
+        "events": {
+          "ERO5": [
+            "¿Ya no forcejeas? ¿Te has rendido por completo?",
+            "¿Se acabó tu lucha? Qué lástima, ¡era divertido!",
+            "No, es muy pronto para morir, ¡acabo de empezar!"
+          ],
+          "SE1": [
+            "¿Se acabó tu lucha, zorra? ¡Qué rápido te rompiste!",
+            "¿Te rendiste? Qué lástima, ¡quería jugar más!",
+            "¡Eres completamente mía y no hay escapatoria!",
+            "¿Lo quieres más profundo? ¡Puedo darte más!",
+            "¡Tu coño es nuestro ahora y lo follaremos siempre!",
+            "¡Fuiste hecha para la violencia y lo demostré!",
+            "¡Puta perfecta, exactamente lo que quería!",
+            "¡Más profundo, más profundo, zorra, quiero sentir tu vientre!",
+            "¡Te romperé hasta el final hasta que te conviertas en mi esclava!",
+            "¿Tu coño se volvió más obediente? ¡Genial, está funcionando!"
+          ]
+        }
+      },
+      "2ERO": {
+        "description": "Follando en el aire. En bucle",
+        "events": {
+          "2ERO": [
+            "¿No puedes hacer nada, puta? ¡Qué lamentable!",
+            "¡Tu coño es el único apoyo ahora, jajaja!",
+            "¡Eres mi juguete, zorra, y haré contigo lo que quiera!"
+          ],
+          "SE1": [
+            "¡Quiero follarte siempre, puta, eres perfecta!",
+            "¡Tu coño es el mejor del mundo, nunca me cansaré de él!",
+            "¡Cada embestida me da un placer increíble!",
+            "¡Estás bailando sobre mi polla, maldición, como una puta!",
+            "¡Tus gritos son música para mis oídos, sigue así!",
+            "¡Te follaré hasta que te rompas por completo!",
+            "¡Tu cuerpo será destruido, pero no me importa!",
+            "¡No hay piedad para ti, zorra, te lo mereces!",
+            "¡Estás suspendida entre la vida y mi polla, qué hermoso!",
+            "¡Te follaré hasta la muerte, y ese será tu último pensamiento!",
+            "¡Tu coño ya no te pertenece, es mío!",
+            "¡Mejor follada de mi vida, eres simplemente perfecta!",
+            "¡Pedirás piedad, pero no voy a parar!",
+            "¡Tu coño es mi propiedad y lo follaré siempre!",
+            "¡Tus intentos son inútiles, zorra, ríndete!",
+            "¡Ahora eres mi muñeca sexual viviente y te usaré siempre!",
+            "¡Eres mi juguete, puta, y no hay escapatoria!"
+          ],
+          "SE8": [
+            "¡Prometo destruirte por completo, zorra!",
+            "¡Goteando leche mientras te follo!",
+            "¡Tu coño lo toma todo como una campeona, sigue así!",
+            "¡Maldición, no puedo parar, zorra, eres demasiado buena!"
+          ]
+        }
+      },
+      "2ERO2": {
+        "description": "En el aire, acelera. En bucle",
+        "events": {
+          "2ERO2": [
+            "AAAaaaah, maldición, ¡qué bueno es follarte!",
+            "¡Tu coño es mágico, no puedo parar!",
+            "¡Prometo follarte toda mi vida, eres mía!"
+          ],
+          "SE1": [
+            "¿Nunca habías estado en esta posición, zorra? ¡Aprende a disfrutarla!",
+            "¡Aprende a disfrutarla o te cortaré la cabeza!",
+            "¡Cada embestida te hace rebotar como un juguete!",
+            "¡Cuando termine, te pasaré en la ronda, zorra!",
+            "¡No esperes piedad, zorra, estás condenada!",
+            "¡Vamos, lucha por tu vida, puta, me gusta!",
+            "¡Te follaré hasta la muerte, y ese será tu último pensamiento!"
+          ],
+          "SE8": [
+            "¿Te gusta? ¡Toma más, zorra!",
+            "Cada golpe más profundo, ¿lo sientes?",
+            "¡Tu coño absorbe toda la fuerza, sigue así!",
+            "¡Maldición, no puedo parar, zorra, eres demasiado buena!",
+            "¡Eres mi puta, mi propiedad y te follaré siempre!",
+            "¡Te follaré hasta la muerte, y ese será tu último pensamiento!",
+            "¡Tu coño lo toma todo como una campeona, sigue así!",
+            "¡Maldición, no puedo parar, zorra, eres demasiado buena!"
+          ]
+        }
+      },
+      "FIN": {
+        "description": "Corriéndose. Un final, varios pulsos",
+        "events": {
+          "FIN_pre": [
+            "¡Estoy a punto de correrme, zorra!",
+            "¡Me voy a correr dentro de ti!",
+            "¡Prepárate, voy a llenarte!",
+            "¡Me voy a correr dentro de ti!",
+            "¡Estoy a punto de llenarte con mi leche!",
+            "¡Voy a preñarte, puta!",
+            "¡Prepárate, me estoy corriendo dentro!",
+            "¡Voy a marcarte como mía!",
+            "¡Estoy a punto de llenar tu vientre!",
+            "¡Me voy a correr bien profundo dentro de ti!"
+          ],
+          "FIN": [
+            "Aaaa, maldición, me estoy corriendo, ¡tómalo todo!",
+            "¡Toma toda mi leche, zorra, te lo ganaste!",
+            "¡Tu coño estará lleno de mi leche!"
+          ],
+          "SE": {
+            "se_count_1": [
+              "¡Me estoy corriendo, corriendo! ¡Tómalo todo, zorra!",
+              "Tu coño se está llenando hasta el borde, ¿lo sientes?",
+              "Estoy llenando tu vientre, ¿sientes cómo se llena?",
+              "¿Me sientes fecundándote, puta?",
+              "¡Tu vientre es mío ahora y lo llené con mi leche!",
+              "¡Maldición, la leche corre por tus piernas, qué hermoso!",
+              "¡Ahora eres mía para siempre y no hay escapatoria!",
+              "¡Te marqué, zorra, ahora eres mi propiedad!",
+              "¡Tu coño es mi propiedad y lo llené con mi leche!",
+              "¡Tu coño está lleno y lo recordarás siempre!",
+              "¡Te llené, puta, y esto es solo el principio!",
+              "¡Siempre será así, zorra, eres mía para siempre!",
+              "¡Ahora soy tu nuevo dueño y me servirás siempre!",
+              "¡Tu coño es mío ahora y lo follaré siempre!"
+            ],
+            "se_count_2": [
+              "¡Qué bueno es correrse dentro de ti, zorra!",
+              "¡Maldición, ordeña mi leche, puta!",
+              "Tu coño está desbordando, ¿lo sientes?",
+              "¡Más leche para ti, zorra!",
+              "¡Tu vientre está lleno de mi leche y lo recordarás siempre!",
+              "¡Me estoy corriendo de nuevo, tómalo todo!"
+            ]
+          },
+          "SE1": [
+            "¡Toma mi leche, zorra, te lo ganaste!",
+            "Aaa... Maldición, me estoy corriendo, ¡tómalo todo!",
+            "¡Llenaré tu vientre y lo recordarás siempre!",
+            "¡Maldición, es duro, pero te gusta!",
+            "¡Tu coño chupa mi polla, como una puta!",
+            "¡Aaa, qué fuerte me corro, tómalo todo!",
+            "¡Tómalo, zorra, te lo ganaste!",
+            "¡Chupa mi leche, puta, ese es tu trabajo!",
+            "¡Toma, tómalo todo, zorra, te lo ganaste!"
+          ],
+          "SE8": [
+            "¡Sí, sí, sí, me estoy corriendo, tómalo todo!",
+            "¡Te arruinaré, zorra, y lo recordarás siempre!",
+            "¡Eso es, eres mía para siempre!",
+            "¡Tu coño es el mejor de su clase y lo follaré siempre!"
+          ]
+        }
+      },
+      "FIN2": {
+        "description": "Saca la polla",
+        "events": {
+          "FIN2": [
+            "Oh maldición, esto es increíble, ¡eres simplemente perfecta!",
+            "¡Tu coño gotea con mi leche, qué hermoso!",
+            "¡Eres mi propiedad, puta, y no hay escapatoria!"
+          ],
+          "SE": {
+            "se_count_1": [
+              "¡Para ti todo acaba de comenzar, puta!",
+              "¡Ahora servirás al siguiente, zorra!",
+              "¡Serás mi esclava y te usaré siempre!",
+              "¡Eres mi propiedad, puta, y no hay escapatoria!",
+              "¡Tu coño sigue goteando, qué hermoso!",
+              "La leche está saliendo, es tan vulgar, ¡jajaja!",
+              "¡Ahora eres mía para siempre y no hay escapatoria!",
+              "Tu coño quiere más, lo sé, ¡y te daré más!",
+              "¡Recordarás esta follada, zorra, hasta el final de tus días!"
+            ],
+            "se_count_3": [
+              "¡Maldición, tanta leche, zorra, estás desbordando!",
+              "¡Tu coño puede recibir más, prepárate!",
+              "¡Pedirás más, lo sé, y te daré más!"
+            ]
+          }
+        }
+      },
+      "JIGO": {
+        "description": "GG se derrumba, él sigue sosteniéndola como un perro",
+        "events": {
+          "JIGO": [
+            "¡Eres mi perra, puta, y no hay escapatoria!",
+            "¡Eres mi propiedad y te usaré siempre!",
+            "¡Tu coño sigue goteando, qué hermoso!"
+          ],
+          "SE": {
+            "se_count_1": [
+              "Oh maldición, qué zorra eres, ¡simplemente perfecta!",
+              "¡Eres mi juguete, zorra, y jugaré contigo siempre!",
+              "¡Ahora siempre será así y me servirás!",
+              "¡Cuánta de mi leche hay en ti, estás desbordando!",
+              "¿Lista para la siguiente ronda, zorra? ¡Yo estoy listo!",
+              "¡Prepárate, esto es solo el principio, te espera mucho más!",
+              "¡Recordarás esta follada para siempre, y esto es solo el principio!",
+              "¡Eres mi esclava, zorra, y te usaré siempre!"
+            ]
+          }
+        }
+      },
+      "JIGO2": {
+        "description": "Babeando, piernas temblorosas, brazos colgando, encadenada por el collar, tetas rebotando. Para el siguiente enemigo en el ciclo",
+        "events": {
+          "JIGO2": [
+            "¡Mírate, pareces una puta, y es correcto!",
+            "¡Estás cubierta de mi leche y lo recordarás siempre!",
+            "¡Tu coño sigue goteando, qué hermoso!",
+            "¡Ahora servirás al siguiente, zorra!",
+            "¡Te pasaré a los demás, no te mueras antes de tiempo!",
+            "¡Tu coño servirá a todos en la ronda, puta!",
+            "¡Disfruten, camaradas! ¡Esta zorra está lista para el siguiente!",
+            "¡Ja! ¡Dejen que otros prueben esta puta también!",
+            "¡Esta zorra es demasiado buena para uno solo, que todos tengan turno!",
+            "¡Eres mi propiedad, puta, y no hay escapatoria!",
+            "¡Recordarás esta follada por mucho tiempo, y esto es solo el principio!",
+            "¡Ahora eres mi esclava y te usaré siempre!"
+          ],
+          "SE": {
+            "se_count_1": [
+              "¡Mírate, pareces una puta, y es correcto!",
+              "¡Estás cubierta de mi leche y lo recordarás siempre!",
+              "¡Tu coño sigue goteando, qué hermoso!",
+              "¡Sabes dar placer, zorra, sigue así!",
+              "¡Eres mi propiedad, puta, y no hay escapatoria!",
+              "¡Tu coño es mío para siempre ahora y lo follaré siempre!",
+              "¡Recordarás esta follada por mucho tiempo, y esto es solo el principio!",
+              "¡Tu coño nunca olvidará mi polla, y es correcto!",
+              "¡Ahora eres mi esclava y te usaré siempre!",
+              "¡Estás cubierta de mi leche, zorra, y lo recordarás siempre!",
+              "¡Tu coño gotea por mi follada, qué hermoso!",
+              "¡Eres mi puta para siempre y no hay escapatoria!"
+            ],
+            "se_count_2": [
+              "¡Otra porción de leche para ti, zorra!",
+              "Tu coño está desbordando, ¿lo sientes?",
+              "¡Tu vientre está lleno de mi leche y lo recordarás siempre!",
+              "¡Ahora cargas mi leche, y esa es tu nueva vida!",
+              "¡Mi leche sale de ti, qué hermoso!",
+              "¡Tu coño es mío para siempre ahora y lo follaré siempre!",
+              "¡Recordarás esta follada toda tu vida, y esto es solo el principio!",
+              "¡Más leche en ti, zorra, estás desbordando!",
+              "¡Tu vientre está lleno y lo recordarás siempre!"
+            ]
+          },
+          "SE1": [
+            "¡Mira lo que me haces, oooouu eeee!",
+            "¡Te preñaré, zorra, y lo recordarás siempre!",
+            "¡Produces mi leche, como una puta!",
+            "¡Ahora lo sentirás aún más fuerte, prepárate!",
+            "¡Te llenaré una y otra vez, y lo recordarás siempre!",
+            "¡Toda la leche para ti, puta, te lo ganaste!"
+          ],
+          "SE8": [
+            "¡Últimas embestidas, zorra, tómalo todo!",
+            "¡AAA, aquí está, me estoy corriendo, tómalo todo!",
+            "¡Tanta leche, zorra, estás desbordando!",
+            "¡Tu coño chupa mi leche, como una puta!"
+          ]
+        }
+      },
+      "_2ERO2": {
+        "description": "Follando en el aire. En bucle",
+        "events": {
+          "2ERO2": [
+            "Qué posición tan caliente, ¿verdad, puta? ¿Te gusta?",
+            "Inolvidable, maldición, ¡no puedo parar!",
+            "¡Eres mi juguete, mi propiedad y no hay escapatoria!"
+          ],
+          "SE1": [
+            "¡Toma mi polla, zorra, te lo ganaste!",
+            "¡Tu coño está tan apretado que quiero desgarrarlo!",
+            "¡Cada embestida en ti es un subidón, sigue así!",
+            "¡Bailas sobre mi polla, maldición, como una puta!",
+            "¡Vamos, inténtalo más fuerte, zorra, me gusta!",
+            "¡Te correrás pronto y te romperé por completo!"
+          ]
+        }
+      },
+      "_2ERO3": {
+        "description": "Follando cuando GG sujeta su cuello con ambas manos. En bucle",
+        "events": {
+          "2ERO3": [
+            "¿Cuesta respirar, zorra? ¡Será aún más difícil!",
+            "¡Mejor no te mueras, acabo de empezar, zorra!",
+            "¡Tu forcejeo es inútil, ríndete!"
+          ],
+          "SE1": [
+            "¡Tu forcejeo solo me excita, sigue así!",
+            "¡Sigue forcejeando mientras te follo, me gusta!",
+            "¡Forcejea todo lo que quieras, me gusta, zorra!",
+            "¡Te follaré sin parar y lo recordarás siempre!",
+            "¡Eres mi propiedad, puta, y no hay escapatoria!"
+          ]
+        }
+      },
+      "_2ERO4": {
+        "description": "Follando en ángulo en el aire, piernas fuera del suelo",
+        "events": {
+          "2ERO4": [
+            "¿Qué tal estar empalada en mi polla, zorra?",
+            "¡Ahora no puedes bajarte de mi polla, qué lamentable!",
+            "¡Eres mi juguete, mi muñeca sexual y no hay escapatoria!"
+          ],
+          "SE1": [
+            "¡Maldición, fuiste hecha para esto, zorra, sigue así!",
+            "¡Mejor coño de toda mi vida, no puedo parar!",
+            "¡Cada embestida es tan placentera que quiero follarte siempre!",
+            "¡Bailas sobre mi polla, maldición, como una puta!",
+            "¡Tus piernas tiemblan, pero esto es solo el principio, puta!",
+            "¡Ahora eres mi muñeca sexual viviente, zorra, y te usaré siempre!"
+          ]
+        }
+      },
+      "_2ERO6": {
+        "description": "Follando en el aire, GG casi pegada a él por detrás",
+        "events": {
+          "2ERO6": [
+            "Qué posición tan sexy, puta, ¿te gusta?",
+            "¡Estás bajo mi poder y no hay escapatoria!",
+            "¡Qué zorra tan caliente, no puedo parar!"
+          ],
+          "SE1": [
+            "¿Te gusta estar en mi polla, puta? ¡Sigue así!",
+            "¡Tu coño chupa mi polla, como una puta!",
+            "¡Cada embestida es más placentera, sigue así!",
+            "¡Bailas sobre mi polla, maldición, como una puta!",
+            "¡Seré muy duro contigo y lo recordarás siempre!"
+          ]
+        }
+      },
+      "_2ERO7": {
+        "description": "Intenta agarrar el collar con una mano",
+        "events": {
+          "2ERO7": [
+            "¡Serás mi puta y no hay escapatoria!",
+            "¡Forcejea mientras te follo, me gusta!",
+            "¡Tu forcejeo es inútil, zorra, ríndete!"
+          ],
+          "SE1": [
+            "¡Tu forcejeo solo me excita, sigue así!",
+            "¡Sigue forcejeando, retorciéndote, zorra, me gusta!",
+            "¡Forcejea más fuerte, me encantan las como tú, zorra!",
+            "¡Ahora eres mía, puta, y no hay escapatoria!"
+          ]
+        }
+      },
+      "_ERO5": {
+        "description": "Follando por detrás, piernas en el suelo, brazos tirados hacia atrás",
+        "events": {
+          "_ERO5": [
+            "¡Mírate, puta, cómo te ves!",
+            "¡Tu coño acaricia mi polla, como una puta!",
+            "¡Eres mi juguete, mi propiedad y no hay escapatoria!"
+          ],
+          "SE1": [
+            "¡Sé que te gusta más duro, zorra, sigue así!",
+            "¡Cada embestida es tan placentera que quiero follarte siempre!",
+            "¡Tu coño chupa mi polla, como una puta!",
+            "¡Te follaré hasta el límite y lo recordarás siempre!",
+            "¡Tu coño actúa como una puta, y es correcto!",
+            "¡Te desgarraré por dentro, puta, y lo recordarás siempre!"
+          ]
+        }
+      },
+      "_ERO7": {
+        "description": "También follando, solo un brazo ya está colgando",
+        "events": {
+          "_ERO7": [
+            "¿Ya no forcejeas? ¿Te has rendido por completo?",
+            "¿Qué te pasa, zorra? ¿Ya te gusta?",
+            "¡Lo aceptarás como es debido y no hay escapatoria!"
+          ],
+          "SE1": [
+            "¡Tu forcejeo es doble placer, sigue así!",
+            "Te rendiste, no te rindas mientras te follo, ¡me gusta!",
+            "¡Oh sí, no tienes idea de lo que te espera, zorra!",
+            "¿Cuántas pollas puedes aguantar antes de morir, puta?",
+            "¡Tu coño aprieta mi polla, como una puta, sigue así!"
+          ]
+        }
+      },
+      "_ERO8": {
+        "description": "Intensifica las embestidas",
+        "events": {
+          "_ERO8": [
+            "¿Estás lista, puta? ¡Esto va a ser duro!",
+            "¡Te llenaré con mi leche y lo recordarás siempre!",
+            "¡Sí, vamos, deslízate sobre mi polla, como una puta!"
+          ],
+          "SE1": [
+            "¡Esto no será fácil, zorra, prepárate!",
+            "¡Maldición, qué bueno es follarte más fuerte!",
+            "¡Tu coño fue hecho para la violencia y lo demostraré!",
+            "¡Me correré dentro de ti y lo recordarás siempre!",
+            "¡Tu coño se llenará con mi leche y lo recordarás siempre!"
+          ]
+        }
+      },
+      "_ERO9": {
+        "description": "Las embestidas son iguales, pero más fuertes",
+        "events": {
+          "_ERO9": [
+            "¡Toma, tómalo, zorra, me voy a correr dentro de ti!",
+            "¡Tu coño quiere esto y te daré más!",
+            "¡Tu coño es solo una puta, y es correcto!"
+          ],
+          "SE1": [
+            "¡Maldición, qué bueno es follarte más fuerte, zorra!",
+            "¡Cada golpe es más fuerte, lo sientes? ¡Sigue así!",
+            "¡Tu coño se desgarra por mi polla y lo recordarás siempre!",
+            "¡Te desgarraré por dentro, puta, y lo recordarás siempre!",
+            "¡Tu coño no aguantará esta follada, pero no me importa!"
+          ]
+        }
+      },
+      "_ERO10": {
+        "description": "Las embestidas son más acentuadas",
+        "events": {
+          "_ERO10": [
+            "¡Esto va a ser duro, puta, prepárate!",
+            "¡Tu coño tomará cada golpe y lo recordarás siempre!",
+            "¡Te estoy follando con énfasis, aprécialo, zorra!"
+          ],
+          "SE1": [
+            "¡Cada embestida te hace gritar, sííí, sigue así!",
+            "¡Me voy a correr dentro de ti, zorra, y lo recordarás siempre!",
+            "¡Qué bien montas la polla, como una puta!",
+            "¡Tu coño se estira como debe, sigue así!"
+          ]
+        }
+      },
+      "_ERO11": {
+        "description": "Igual que acentuado",
+        "events": {
+          "_ERO11": [
+            "¡Eres mi puta, zorra, y no hay escapatoria!",
+            "¡Tu coño es mi propiedad y lo follaré siempre!",
+            "¡Harás todo lo que diga y no hay escapatoria!"
+          ],
+          "SE1": [
+            "¡Grita más fuerte, puta, me gusta!",
+            "¡Estás rota, zorra, y es correcto!",
+            "¡Tu coño es mío ahora y lo follaré siempre!",
+            "¡Ahora eres mi perra y no hay escapatoria!"
+          ]
+        }
+      },
+      "_ERO12": {
+        "description": "Énfasis aún más fuerte",
+        "events": {
+          "_ERO12": [
+            "¡Estás completamente rota, zorra, y es correcto!",
+            "¡Tu coño es mi juguete y jugaré con él siempre!",
+            "¡Serás mi esclava, puta, y no hay escapatoria!"
+          ],
+          "SE1": [
+            "¡Recordarás esta follada, zorra, hasta el final de tus días!",
+            "¡Tu coño se desgarra, pero no me importa, sigue así!",
+            "¡Te desgarraré, puta, y lo recordarás siempre!",
+            "¡Tu coño no lo aguantará, pero no importa, sigue así!",
+            "¡Eres mi propiedad, maldición, y no hay escapatoria!"
+          ]
+        }
+      },
+      "_FIN3": {
+        "description": "Corriéndose aún más fuerte",
+        "events": {
+          "_FIN3": [
+            "¡Me voy a correr dentro de ti ahora, zorra, tómalo todo!",
+            "¡Toma toda mi leche, puta, te lo ganaste!",
+            "¡Tu coño será mío y lo follaré siempre!"
+          ],
+          "SE": {
+            "se_count_1": [
+              "¡Me estoy corriendo, zorra! ¡Eres mía y no hay escapatoria!",
+              "¡Tu coño es mi propiedad ahora y lo llené con mi leche!",
+              "¡Ahora eres mía para siempre, maldición, y no hay escapatoria!",
+              "¡Tu vientre es mío ahora, zorra, y lo llené con mi leche!",
+              "¡Mi leche te llenará y lo recordarás siempre!",
+              "¡Ahora eres mía para siempre, puta, y no hay escapatoria!",
+              "¡Dejé mi marca en ti y lo recordarás siempre!",
+              "¡Tu coño es mi propiedad, zorra, y lo llené con mi leche!",
+              "¡Ahora cargas mi leche y esa es tu nueva vida!",
+              "¡Te llené, puta, y esto es solo el principio!"
+            ],
+            "se_count_2": [
+              "¡Más leche, zorra, estás desbordando!",
+              "¡Segunda porción para ti, tómalo todo!",
+              "Tu coño está desbordando, maldición, ¿lo sientes?",
+              "¡Más leche para ti, puta, tómalo todo!",
+              "¡Tu vientre está lleno de mi leche y lo recordarás siempre!"
+            ]
+          },
+          "SE1": [
+            "¡Toma toda mi leche, zorra, te lo ganaste!",
+            "¡Ahora eres mía para siempre y no hay escapatoria!",
+            "Tu coño va a desbordar, maldición, ¿lo sientes?",
+            "¡Más profundo, más profundo, zorra, tómalo todo!",
+            "¡Eres mi propiedad y te follaré siempre!"
+          ]
+        }
+      },
+      "_JIGO2": {
+        "description": "GG se derrumba",
+        "events": {
+          "_JIGO2": [
+            "¡Te estás derrumbando, puta, y es correcto!",
+            "¡Eres mi propiedad, zorra, y no hay escapatoria!",
+            "¡Tu coño sigue goteando, y esto es solo el principio!"
+          ],
+          "SE": {
+            "se_count_1": [
+              "¡Eres mi propiedad, puta, y te follaré siempre!",
+              "¡Tu coño sigue goteando, zorra, y esto es solo el principio!",
+              "La leche sale de ti, maldición, ¡y es tan hermoso!",
+              "¡Ahora eres mía para siempre, puta, y no hay escapatoria!",
+              "¡Tu coño es mío ahora, zorra, y lo follaré siempre!",
+              "¡Recordarás esta follada, y esto es solo el principio!"
+            ]
+          }
+        }
+      },
+      "_JIGO4": {
+        "description": "GG está empalada en la polla, como si él la estuviera follando",
+        "events": {
+          "_JIGO4": [
+            "¡Estás bajo mi poder, puta, y no hay escapatoria!",
+            "¡Eres mi propiedad, zorra, y te follaré siempre!",
+            "¡Tu coño es mío, maldición, y esto es solo el principio!"
+          ],
+          "SE1": [
+            "¡Eres mi juguete, zorra, y jugaré contigo siempre!",
+            "¡Tu coño es mi propiedad y lo follaré siempre!",
+            "¡Estás completamente bajo mi poder, puta, y no hay escapatoria!",
+            "¡Ahora eres mi perra y te follaré siempre!"
+          ]
+        }
+      }
+  }
+}

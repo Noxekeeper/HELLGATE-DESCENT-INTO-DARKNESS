@@ -1,0 +1,267 @@
+{
+  "settings": {
+    "commentCooldownSeconds": 2.0,
+    "maxSimultaneousComments": 1,
+    "commentDisplayDuration": 4.0,
+    "fontSize": 22.0,
+    "verticalOffset": 100.0,
+    "streamingSpeed": 0.03,
+    "goblinColor": {
+      "r": 1.0,
+      "g": 1.0,
+      "b": 1.0,
+      "a": 1.0
+    },
+    "goblinOutlineColor": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 1.0
+    }
+  },
+  "animations": {
+    "START": {
+      "description": "Gefangennahme, greift am Haar und senkt GG's Kopf auf halbgebeugten Beinen auf Höhe seiner Taille, droht zu schneiden. Dann zieht er seinen Schwanz vor GG's Gesicht heraus, und nach kurzer Waffe richtet er ihn direkt auf GG's Brust",
+      "events": {
+        "START": [
+          "Auf die Knie, Hexe! Dieses Messer wartet auf deine Haut!",
+          "Sieh mich an, Schlampe! Ein Fehler und du stirbst!",
+          "Halte sie fester! Jetzt wirst du meinen Zorn kennen!",
+          "Wage es nicht, dich zu bewegen! Ich schneide dich wie Vieh!",
+          "Du bist nur ein Loch für meinen Lauf, Kreatur!",
+          "Die Inquisition vergibt nicht! Ich noch weniger!",
+          "Dein Leben ist in meinen Händen! Jetzt sieh hierher!",
+          "Deine Götter sind tot! Verbeuge dich vor mir, Schlampe!",
+          "Dieser Dolch dürstet nach deinem Blut! Jetzt hör zu!",
+          "Unterwirf dich oder stirb! Entscheide jetzt!"
+        ]
+      }
+    },
+    "START2": {
+      "description": "Hier sagt er GG klar etwas, darüber, wie er sie durchschießen wird, wenn sie seinen Schwanz nicht nimmt und beginnt, ihn zu wichsen",
+      "events": {
+        "START2": [
+          "Wichse meinen Schwanz, Schlampe! Oder ich schieße durch deine Brust!",
+          "Nimm ihn in den Mund! Sonst füge ich mehr Löcher hinzu!",
+          "Wähle: meinen Schwanz oder mein Stahl in deinem Körper!",
+          "Beginne zu arbeiten, Schlampe! Solange du noch lebst!",
+          "Jede Sekunde ist eine neue Narbe auf deinem Fleisch!",
+          "Mach ihn hart! Oder ich mache dich tot!",
+          "Ich kann dich von vorne durchbohren! Wichse, bevor ich meine Meinung ändere!",
+          "Willst du sterben? Nein? Dann gib Lust!",
+          "Inquisitoren verbrennen Hexen! Ich schneide sie langsam!",
+          "Lutsche oder stirb! Dein Mund oder dein Leben, Hure!",
+          "Sei sanfter, sonst mache ich noch ein Loch in dich!",
+          "Sei ein braves Mädchen und du wirst leben!"
+        ]
+      }
+    },
+    "ERO": {
+      "description": "Wichst ihn demütig",
+      "events": {
+        "ERO": [
+          "Gut, mein Schwanz ist bereit, jetzt werde ich deinen Mund ficken.",
+          "Jetzt wirst du ihn in den Mund nehmen, Hexe.",
+          "Gut, Hexe. Jetzt werde ich deinen Mund ficken.",
+          "Perfekt für eine Hure. Jetzt nimm ihn in den Mund.",
+          "Mein Schwanz wartet auf deine Kehle. Lass ihn nicht warten.",
+          "So, jetzt wirst du lutschen. Keine unnötigen Fragen.",
+          "Sieh mich an. Jetzt dienst du deinem Herrn.",
+          "Öffne deinen Mund weiter. Lass uns deine Bestrafung beginnen.",
+          "Mein Schwanz ist bereit. Zeig, was du in der Hölle gelernt hast.",
+          "Du solltest dankbar sein. Dass ich ficke, nicht schneide.",
+          "Nicht schlecht. Jetzt zeig deine Klasse, Hexe.",
+          "Zeit für echten Dienst. Beginne, Schlampe."
+        ]
+      }
+    },
+    "ERO1": {
+      "description": "Hält weiter am Haar, zieht GG's Kopf leicht zurück, sie wehrt sich, aber er zieht GG's Kopf mit Gewalt, spießt ihren Kopf auf Schwanz auf",
+      "events": {
+        "ERO1": [
+          "Die Zeit ist gekommen, Hexe! Komm schon, lutsche, Hexe!",
+          "Zeit, deinen Mund zu ficken, Hexe!",
+          "Lass uns deine Kehle testen!",
+          "Ich werde dein Gesicht ficken, Hexe!",
+          "Wehr dich nicht, Kreatur! Ich bewege deinen Kopf selbst!",
+          "Ich sagte, reite tiefer! Spürst du es?",
+          "Hör auf zu zucken! Ich reiße dir die Kehle auf!",
+          "Tiefer, Hure! Noch tiefer! Ich will es spüren!",
+          "Dein Kopf gehört mir! Jetzt lutsche, tote Schlampe!",
+          "Was, schwer? Ich helfe dir mit einem Dolch in deinem Rücken!",
+          "Nur noch ein bisschen mehr! Ich erreiche deinen Magen!",
+          "Komm schon, arbeite mit deiner Zunge! Bevor ich dir den Kopf abreiße!"
+        ]
+      }
+    },
+    "ERO2": {
+      "description": "Fickt GG hart in den Mund, könnte man sagen in die Wange. Zieht Schwanz raus und stößt wieder in den Mund",
+      "events": {
+        "ERO2": [
+          "So-so-so, so mag ich es! Ich werde deinen Mund bis zu Tränen ficken!",
+          "Halte deinen Mund weiter offen, Schlampe! Ich ficke dich in die Wange!",
+          "Du dachtest, das war alles? Ich wärme mich nur auf, Hexe!",
+          "Jeder Stoß ist ein Hammerschlag! Dein Mund ist der Amboss!",
+          "Schluck es! Schluck es ganz! Sieh, wie sich deine Wangen dehnen!",
+          "So! So mag ich es! Du solltest dankbar sein!",
+          "Dein Gesicht wurde dafür gemacht! Lutsche, schmutzige Hure!",
+          "Ich werde rein und raus gehen! Bis du zu keuchen beginnst!",
+          "Wieder! Und wieder! Dein Mund wird eine Woche lang schmerzen!",
+          "Spürst du, wie ich dich in die Wange ficke? Merk dir das!"
+        ]
+      }
+    },
+    "ERO3": {
+      "description": "Fickt in die Wange intensiver",
+      "events": {
+        "ERO3": [
+          "Lutsche härter, Hexe! Du wirst alles bis zum letzten Tropfen schlucken!",
+          "Ich komme bald! Du wirst alles trinken! Wirst keinen Tropfen verschütten!",
+          "Bereite dich auf dein letztes Abendmahl vor, Schlampe! Alles rein!",
+          "Du solltest für dieses Geschenk dankbar sein! Trink meinen Samen!",
+          "Ich will sehen, wie du trinkst! Wage es nicht zu spucken!",
+          "Nur noch ein bisschen mehr und du bekommst alles! Öffne deine Kehle weiter!",
+          "Du wolltest trinken? Ich werde deinen Durst stillen! Und du wirst um mehr betteln!",
+          "Bald werde ich dich füllen! Öffne deinen Mund und empfange den Segen!",
+          "Jeder Tropfen ist Leben! Das ich dir schenke!",
+          "Schluck alles! Sonst lasse ich dich es vom Boden lecken!"
+        ]
+      }
+    },
+    "ERO4": {
+      "description": "Vertieft Stöße, zieht jetzt nicht vollständig raus, fickt im Mund. Dies ist die letzte Phase, bevor er kommt",
+      "events": {
+        "ERO4": [
+          "So, ich bin fast da! Nur noch ein bisschen mehr, Hexe!",
+          "Halte durch, Schlampe! Ich komme jetzt in deinen Mund!",
+          "Ich bin fast bereit! Bereite dich vor, all mein Sperma zu schlucken!",
+          "Noch ein paar Stöße! Ich explodiere in deiner Kehle!",
+          "Ich spüre, wie es sich aufbaut! Lutsche härter, Hure!",
+          "Fast da! Ich komme in deinen Mund! Und bleib ruhig, Kreatur!",
+          "Fast... fast... Lutsche, lutsche! Ich werde dich füllen!",
+          "Letzter Stoß! Ich komme, Hexe! Trink mein Sperma!",
+          "Mach dich bereit! Es wird jetzt heiß sein! Sehr heiß!",
+          "Mehr! Mehr! Ich werde dich jetzt mit meinem Saft füllen!"
+        ]
+      }
+    },
+    "FIN": {
+      "description": "Zieht raus und beginnt zu kommen und stößt Schwanz in GG's Mund. Sehr viel Sperma",
+      "events": {
+        "FIN": [
+          "AAAA!!! Nimm es, Schlampe! Nimm alles!",
+          "Iss! Iss meinen Samen! Jetzt sofort!",
+          "Ich komme! Lutsche, schluck, Schlampe!",
+          "Hier ist es! Nimm mein Sperma ganz!",
+          "AAAA!!! Alles in deinen Mund! Alles bis zum letzten Tropfen!",
+          "Halte! Halte alles drin, Hexe!",
+          "Fülle dich! Fülle dich bis zum Rand, Schlampe!",
+          "Fang! Fang jeden Klumpen! Verpasse nichts!",
+          "Ahhh! So! So komme ich!",
+          "Nimm meinen Samen! Das ist dein Geschenk!"
+        ],
+        "SE": {
+          "se_count_1": [
+            "AAAA!!! Ich komme! Komme in deinen Mund!",
+            "Nimm all mein Sperma, Schlampe!",
+            "Hier ist es! Alles in deinen Mund!",
+            "Ich fülle dich, Hexe!",
+            "Nimm alles bis zum letzten Tropfen!"
+          ],
+          "se_count_2": [
+            "Noch mehr! Noch mehr Sperma!",
+            "Schluck! Schluck alles, Hure!",
+            "Ich fülle dich bis zum Rand!",
+            "All mein Samen für dich!"
+          ]
+        }
+      }
+    },
+    "FIN2": {
+      "description": "Zieht seinen Schwanz raus, Sperma spannt sich von Mund zu Schwanz, er schüttelt ihren Kopf, hält sie die ganze Zeit weiter am Haar, zwingt sie zu schlucken, droht durch ihre Titte und sie zu schießen",
+      "events": {
+        "FIN2": [
+          "Rausziehen. Sieh, wie sich das Sperma spannt.",
+          "Schluck! Schluck, bevor ich durch deine Titte schieße!",
+          "Öffne deinen Mund und zeig! Was hast du dort versteckt?",
+          "Ich halte dich am Haar. So wirst du lernen zu schlucken.",
+          "Trink alles! Oder diese Kugel geht in deine Brust.",
+          "Schüttle deinen Kopf. Damit du verstehst, wer hier das Sagen hat.",
+          "Öffne deinen Mund! Ich will sehen, dass du alles geschluckt hast.",
+          "Noch ein Tropfen auf dem Boden und du stirbst, Hure.",
+          "Sauber? Gut. Jetzt diene den anderen.",
+          "Sperma spannt sich. Schön. Jetzt schluck, Schlampe."
+        ]
+      }
+    },
+    "JIGO": {
+      "description": "Lässt sie nicht ausspucken, zwingt sie zu schlucken, droht durch ihre Titte und sie zu schießen",
+      "events": {
+        "JIGO": [
+          "Wage es nicht zu spucken! Ich sagte schluck!",
+          "Schluck! Oder ich schieße durch deine Titten!",
+          "Jeder Tropfen muss in dir sein! Verstanden?",
+          "Trink alles! Sonst wirst du bereuen, geboren zu sein.",
+          "Ich sehe, du versuchst es! Schluck härter, Kreatur!",
+          "Wenn du auch nur einen Tropfen verschüttest, schneide ich dir die Zunge ab.",
+          "Das ist deine letzte Chance! Trink meinen Samen!",
+          "Schluck! Schluck! Bevor ich meine Meinung ändere und schieße!",
+          "Dein Mund ist ein Mülleimer! Und Müll wird nicht ausgespuckt!",
+          "Tu es! Schluck! Oder stirb jetzt sofort!"
+        ]
+      }
+    },
+    "JIGO2": {
+      "description": "Hier beendet GG das Schlucken und um sicherzugehen, verlangt er, den Mund zu öffnen, GG öffnet Mund",
+      "events": {
+        "JIGO2": [
+          "Nun, fertig? Öffne deinen Mund, zeig!",
+          "Weiter! Ich muss sicherstellen, dass alles sauber ist!",
+          "Zeig mir deine leere Kehle, Hexe!",
+          "Geöffnet? Gut. Jetzt kennst du deinen Platz.",
+          "Sauber. Gut gemacht. Du hast dir das Recht zu leben verdient.",
+          "Jetzt öffne deinen Mund und sage 'danke'.",
+          "Ich kann sehen, du hast geschluckt. Du lernst schnell, Schlampe.",
+          "Gute Hure. Jetzt gehen wir zu den anderen.",
+          "Du hast es geschafft. Jetzt wirst du allen dienen.",
+          "Mund geöffnet? Atme. Jetzt bereite dich auf den nächsten vor."
+        ]
+      }
+    },
+    "JIGOFIN": {
+      "description": "Hält Mund offen, versucht zu atmen",
+      "events": {
+        "JIGOFIN": [
+          "Halte deinen Mund offen. Atme, schmutzige Hure.",
+          "Gut. Jetzt wirst du dem Rest meiner Brüder dienen.",
+          "Du hast es geschafft. Jetzt bist du unsere gemeinsame Schlampe.",
+          "Ruhe. Der Nächste wird bald kommen. Und er wird rauer sein.",
+          "Du bist ein braves Mädchen. Jetzt gehört dein Mund uns.",
+          "So, damit sind wir fertig. Weiterreichen im Kreis.",
+          "Du hast gelernt. Jetzt wirst du der ganzen Inquisition dienen.",
+          "Dein Mund ist frei. Aber nicht lange. Bereite dich wieder vor.",
+          "Großartige Arbeit. Jetzt wirst du für alle arbeiten.",
+          "Du hast bewiesen, dass du zu etwas gut bist. Jetzt - der Nächste!"
+        ]
+      }
+    },
+    "JIGOFIN2": {
+      "description": "VON HIER SOLLTE GG ÜBERGABE ZU GANGBANG-ZYKLUS SEIN, Wenn der Nächste auch ein Inquisitor ist",
+      "events": {
+        "JIGOFIN2": [
+          "Sie wird im Kreis weitergegeben. An andere Perverse.",
+          "Deine Bestrafung beginnt gerade erst, Hexe.",
+          "Jetzt wird die ganze Wache sie ficken. Einer nach dem anderen.",
+          "Sie wird jedem dienen. Bis sie vor Erschöpfung stirbt.",
+          "Hier, nehmt sie, Jungs! Sie ist aufgewärmt!",
+          "Ihr Mund gehört allen. Sie ist unser gemeinsames Eigentum.",
+          "Nächster! Nicht in der Schlange halten, sie wartet!",
+          "Sie wird die ganze Nacht Sperma schlucken. Keine Ruhe.",
+          "Gebt sie weiter! Lasst andere auch genießen.",
+          "Ihr Körper für alle. Ihr Mund für alle. Sie ist ein Ding."
+        ]
+      }
+    }
+  }
+}
+

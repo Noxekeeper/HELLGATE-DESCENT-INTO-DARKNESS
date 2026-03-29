@@ -1,0 +1,266 @@
+{
+  "settings": {
+    "commentCooldownSeconds": 2.0,
+    "maxSimultaneousComments": 1,
+    "commentDisplayDuration": 4.0,
+    "fontSize": 22.0,
+    "verticalOffset": 100.0,
+    "streamingSpeed": 0.03,
+    "goblinColor": {
+      "r": 1.0,
+      "g": 1.0,
+      "b": 1.0,
+      "a": 1.0
+    },
+    "goblinOutlineColor": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 1.0
+    }
+  },
+  "animations": {
+    "START": {
+      "description": "La captura, la agarra por el pelo y baja la cabeza de GG con las piernas medio flexionadas hasta la altura de su cintura, amenazando con cortar. Luego saca su verga frente a la cara de GG, y tras un breve gesto la apunta directamente al pecho de GG",
+      "events": {
+        "START": [
+          "¡De rodillas, bruja! ¡Esta navaja espera tu piel!",
+          "¡Mírame, puta! ¡Un error y morirás!",
+          "¡Sujétala más fuerte! ¡Ahora conocerás mi ira!",
+          "¡No te atrevas a moverte! ¡Te cortaré como ganado!",
+          "¡No eres más que un agujero para mi cañón, criatura!",
+          "¡La Inquisición no perdona! ¡Yo menos!",
+          "¡Tu vida está en mis manos! ¡Ahora mira aquí!",
+          "¡Tus dioses están muertos! ¡Inclínate ante mí, puta!",
+          "¡Esta daga tiene sed de tu sangre! ¡Ahora escucha!",
+          "¡Somete o muere! ¡Elige ahora mismo!"
+        ]
+      }
+    },
+    "START2": {
+      "description": "Aquí le dice claramente a GG algo, sobre cómo la atravesará a tiros si no toma su verga y empieza a masturbarlo",
+      "events": {
+        "START2": [
+          "¡Mastúrbame la verga, puta! ¡O te atravesaré el pecho a tiros!",
+          "¡Métetela en la boca! ¡O te haré más agujeros!",
+          "Elige: mi verga o mi acero en tu cuerpo.",
+          "¡Empieza a trabajar, zorra! ¡Mientras sigas viva!",
+          "¡Cada segundo es una nueva cicatriz en tu carne!",
+          "¡Haz que se ponga dura! ¡O te haré morir!",
+          "¡Puedo atravesarte por delante! ¡Mastúrbame antes de que cambie de opinión!",
+          "¿Quieres morir? ¿No? Entonces dame placer.",
+          "¡Los inquisidores queman brujas! ¡Las cortaré lentamente!",
+          "¡Chupa o muere! Tu boca o tu vida, puta.",
+          "¡Sé más suave, o te haré otro agujero!",
+          "¡Sé una buena chica y vivirás!"
+        ]
+      }
+    },
+    "ERO": {
+      "description": "Le masturba sumisamente",
+      "events": {
+        "ERO": [
+          "Bien, mi verga está lista, ahora te follaré la boca.",
+          "Ahora te la meterás en la boca, bruja.",
+          "Bien, bruja. Ahora te follaré la boca.",
+          "Perfecto para una puta. Ahora métetela en la boca.",
+          "Mi verga espera tu garganta. No la hagas esperar.",
+          "Entonces, ahora chuparás. Sin preguntas innecesarias.",
+          "Mírame. Ahora sirves a tu amo.",
+          "Abre la boca más. Comencemos tu castigo.",
+          "Mi verga está lista. Muestra lo que aprendiste en el infierno.",
+          "Deberías estar agradecida. Porque te follo, no te corto.",
+          "No está mal. Ahora muestra tu clase, bruja.",
+          "Es hora del servicio de verdad. Empieza, puta."
+        ]
+      }
+    },
+    "ERO1": {
+      "description": "Sigue sujetándola por el pelo, tira de la cabeza de GG ligeramente hacia atrás, ella resiste, pero él tira de la cabeza con fuerza, empalándola con la verga",
+      "events": {
+        "ERO1": [
+          "¡Ha llegado la hora, bruja! ¡Vamos, chupa, bruja!",
+          "¡Es hora de follarte la boca, bruja!",
+          "¡Probemos tu garganta!",
+          "¡Te follaré la cara, bruja!",
+          "¡No resistas, criatura! ¡Muevo tu cabeza yo mismo!",
+          "¡Dije que bajes más! ¿Lo sientes?",
+          "¡Deja de retorcerte! ¡Te romperé la garganta!",
+          "¡Más hondo, puta! ¡Aún más! ¡Quiero sentirlo!",
+          "¡Tu cabeza es mía! ¡Ahora chupa, puta muerta!",
+          "¿Qué, te cuesta? ¡Te ayudo con una daga en la espalda!",
+          "¡Solo un poco más! ¡Llegaré a tu estómago!",
+          "¡Vamos, trabaja con la lengua! ¡Antes de que te arranque la cabeza!"
+        ]
+      }
+    },
+    "ERO2": {
+      "description": "Folla con fuerza a GG en la boca, podría decirse en la mejilla. Saca la verga y la vuelve a meter en la boca",
+      "events": {
+        "ERO2": [
+          "Así-así-así, ¡así me gusta! ¡Te follaré la boca hasta las lágrimas!",
+          "¡Mantén la boca más abierta, puta! ¡Te follo en la mejilla!",
+          "¿Pensabas que eso era todo? ¡Solo estoy calentando, bruja!",
+          "¡Cada embestida es un martillazo! ¡Tu boca es el yunque!",
+          "¡Trágala! ¡Trágala entera! Mira cómo se te estiran las mejillas.",
+          "¡Así! ¡Así me gusta! ¡Deberías estar agradecida!",
+          "¡Tu cara fue hecha para esto! ¡Chupa, puta sucia!",
+          "¡Entraré y saldré! ¡Hasta que empieces a resollar!",
+          "¡Otra vez! ¡Y otra! ¡Te dolerá la boca una semana!",
+          "¿Sientes cómo te follo en la mejilla? ¡Recuerda esto!"
+        ]
+      }
+    },
+    "ERO3": {
+      "description": "Follando en la mejilla con más intensidad",
+      "events": {
+        "ERO3": [
+          "¡Chupa más fuerte, bruja! ¡Te lo tragarás todo hasta la última gota!",
+          "¡Pronto me corro! ¡Te lo beberás todo! ¡No derramarás ni una gota!",
+          "¡Prepárate para tu última cena, puta! ¡Todo dentro!",
+          "¡Deberías estar agradecida por este regalo! ¡Bebe mi semilla!",
+          "¡Quiero ver cómo bebes! ¡No te atrevas a escupir!",
+          "¡Solo un poco más y recibirás todo! ¡Abre la garganta más!",
+          "¿Querías beber? ¡Saciaré tu sed! ¡Y pedirás más!",
+          "¡Pronto te llenaré! ¡Abre la boca y recibe la bendición!",
+          "¡Cada gota es vida! ¡Que te estoy perdonando!",
+          "¡Trágatelo todo! ¡Si no, te haré lamerlo del suelo!"
+        ]
+      }
+    },
+    "ERO4": {
+      "description": "Profundiza las embestidas, ya no saca por completo, follando en la boca. Es la última fase antes de correrse",
+      "events": {
+        "ERO4": [
+          "¡Ya casi llego! ¡Solo un poco más, bruja!",
+          "¡Aguanta, puta! ¡Me corro en tu boca ahora!",
+          "¡Casi estoy listo! ¡Prepárate para tragarte todo mi semen!",
+          "¡Unas embestidas más! ¡Explotaré en tu garganta!",
+          "¡Lo siento venir! ¡Chupa más fuerte, puta!",
+          "¡Casi...! ¡Me corro en tu boca! ¡Y quédate callada, criatura!",
+          "Casi... casi... ¡Chupa, chupa! ¡Te llenaré!",
+          "¡Último empujón! ¡Me corro, bruja! ¡Bebe mi semen!",
+          "¡Prepárate! ¡Ahora vendrá caliente! ¡Muy caliente!",
+          "¡Más! ¡Más! ¡Te llenaré con mi jugo ahora!"
+        ]
+      }
+    },
+    "FIN": {
+      "description": "Saca y empieza a correrse, empujando la verga en la boca de GG. Mucha corrida",
+      "events": {
+        "FIN": [
+          "¡AAAA! ¡Toma, puta! ¡Tómalo todo!",
+          "¡Come! ¡Come mi semilla! ¡Ahora mismo!",
+          "¡Me corro! ¡Chupa, traga, zorra!",
+          "¡Aquí está! ¡Toma mi semen entero!",
+          "¡AAAA! ¡Todo en tu boca! ¡Todo hasta la última gota!",
+          "¡Aguanta! ¡Aguántalo todo, bruja!",
+          "¡Te lleno! ¡Te lleno hasta el borde, puta!",
+          "¡Atrapa! ¡Atrapa cada coágulo! ¡No pierdas ninguno!",
+          "¡Ahhh! ¡Así! ¡Así me corro!",
+          "¡Toma mi semilla! ¡Este es tu regalo!"
+        ],
+        "SE": {
+          "se_count_1": [
+            "¡AAAA! ¡Me corro! ¡Corriéndome en tu boca!",
+            "¡Toma todo mi semen, puta!",
+            "¡Aquí está! ¡Todo en tu boca!",
+            "¡Te estoy llenando, bruja!",
+            "¡Tómalo todo hasta la última gota!"
+          ],
+          "se_count_2": [
+            "¡Aún más! ¡Aún más semen!",
+            "¡Traga! ¡Trágatelo todo, puta!",
+            "¡Te lleno hasta el borde!",
+            "¡Toda mi semilla para ti!"
+          ]
+        }
+      }
+    },
+    "FIN2": {
+      "description": "Saca su verga, el semen se estira de la boca a la verga, le sacude la cabeza, siguiendo sujetándola por el pelo todo el tiempo, la obliga a tragar, amenazando con atravesarle el pecho a tiros",
+      "events": {
+        "FIN2": [
+          "Saliendo. Mira cómo se estira el semen.",
+          "¡Traga! ¡Traga antes de que te atraviese el pecho a tiros!",
+          "¡Abre la boca y muestra! ¿Qué escondiste ahí?",
+          "Te sujeto por el pelo. Así aprenderás a tragar.",
+          "¡Bébete todo! O esta bala irá a tu pecho.",
+          "Sacudiéndote la cabeza. Para que entiendas quién manda aquí.",
+          "¡Abre la boca! Quiero ver que te tragaste todo.",
+          "Una gota más en el suelo y morirás, puta.",
+          "¿Limpio? Bien. Ahora sirve a los demás.",
+          "El semen se estira. Hermoso. Ahora traga, puta."
+        ]
+      }
+    },
+    "JIGO": {
+      "description": "No la deja escupir el semen, la obliga a tragar, amenazando con atravesarle el pecho a tiros",
+      "events": {
+        "JIGO": [
+          "¡No te atrevas a escupir! ¡Dije que tragues!",
+          "¡Traga! ¡O te atravesaré los pechos a tiros!",
+          "¡Cada gota debe estar dentro de ti! ¿Entendido?",
+          "¡Bébete todo! Si no, lamentarás haber nacido.",
+          "¡Veo que lo intentas! ¡Traga más fuerte, criatura!",
+          "Si derramas aunque sea una gota, te cortaré la lengua.",
+          "¡Esta es tu última oportunidad! ¡Bebe mi semilla!",
+          "¡Traga! ¡Traga! ¡Antes de que cambie de opinión y dispare!",
+          "¡Tu boca es un cubo de basura! ¡Y la basura no se escupe!",
+          "¡Hazlo! ¡Traga! ¡O muere ahora mismo!"
+        ]
+      }
+    },
+    "JIGO2": {
+      "description": "Aquí GG termina de tragar y para asegurarse exige que abra la boca, GG abre la boca",
+      "events": {
+        "JIGO2": [
+          "Bien, ¿terminaste? Abre la boca, ¡muestra!",
+          "¡Más abierta! ¡Debo asegurarme de que todo está limpio!",
+          "¡Muéstrame tu garganta vacía, bruja!",
+          "¿Abierta? Bien. Ahora conoces tu lugar.",
+          "Limpio. Bien hecho. Te ganaste el derecho a vivir.",
+          "Ahora abre la boca y di 'gracias'.",
+          "Veo que te tragaste todo. Aprendes rápido, puta.",
+          "Buena puta. Ahora vamos con los demás.",
+          "Lo lograste. Ahora servirás a todos.",
+          "¿Abriste la boca? Respira. Ahora prepárate para el siguiente."
+        ]
+      }
+    },
+    "JIGOFIN": {
+      "description": "Mantiene la boca abierta, intenta respirar",
+      "events": {
+        "JIGOFIN": [
+          "Mantén la boca abierta. Respira, puta sucia.",
+          "Bien. Ahora servirás al resto de mis hermanos.",
+          "Lo lograste. Ahora eres nuestra puta común.",
+          "Descansa. El siguiente llegará pronto. Y será más brutal.",
+          "Eres una buena chica. Ahora tu boca nos pertenece.",
+          "Bien, terminamos con esto. Pasándola en círculo.",
+          "Aprendiste. Ahora servirás a toda la Inquisición.",
+          "Tu boca está libre. Pero no por mucho. Prepárate de nuevo.",
+          "Buen trabajo. Ahora trabajarás para todos.",
+          "Demostraste que sirves para algo. Ahora, ¡el siguiente!"
+        ]
+      }
+    },
+    "JIGOFIN2": {
+      "description": "A PARTIR DE AQUÍ DEBERÍA HABER ENTREGA DE GG AL CICLO DE GANGBANG, si el siguiente también es un inquisidor",
+      "events": {
+        "JIGOFIN2": [
+          "Se la pasan en círculo. A otros pervertidos.",
+          "Tu castigo apenas comienza, bruja.",
+          "Ahora toda la guardia se la follará. Uno por uno.",
+          "Servirá a cada uno. Hasta que muera de agotamiento.",
+          "¡Tómala, chicos! ¡Ya está caliente!",
+          "Su boca pertenece a todos. Es nuestra propiedad común.",
+          "¡Siguiente! No se queden en fila, ¡ella espera!",
+          "Se tragará semen toda la noche. Sin descanso.",
+          "¡Pásenla! Que los demás también disfruten.",
+          "Su cuerpo para todos. Su boca para todos. Es un objeto."
+        ]
+      }
+    }
+  }
+}

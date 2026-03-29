@@ -1,0 +1,181 @@
+
+WolfE.png
+size: 1024,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+E_L_back_1
+  rotate: true
+  xy: 378, 194
+  size: 58, 85
+  orig: 58, 85
+  offset: 0, 0
+  index: -1
+E_L_back_2
+  rotate: true
+  xy: 452, 100
+  size: 17, 42
+  orig: 17, 42
+  offset: 0, 0
+  index: -1
+E_L_back_3
+  rotate: false
+  xy: 462, 18
+  size: 46, 24
+  orig: 46, 24
+  offset: 0, 0
+  index: -1
+E_L_front_1
+  rotate: true
+  xy: 141, 4
+  size: 34, 81
+  orig: 34, 81
+  offset: 0, 0
+  index: -1
+E_L_front_2
+  rotate: true
+  xy: 301, 10
+  size: 29, 60
+  orig: 29, 60
+  offset: 0, 0
+  index: -1
+E_L_front_3
+  rotate: false
+  xy: 433, 44
+  size: 45, 25
+  orig: 45, 25
+  offset: 0, 0
+  index: -1
+E_R_back_1
+  rotate: true
+  xy: 286, 183
+  size: 69, 90
+  orig: 69, 90
+  offset: 0, 0
+  index: -1
+E_R_back_2
+  rotate: true
+  xy: 376, 75
+  size: 22, 53
+  orig: 22, 53
+  offset: 0, 0
+  index: -1
+E_R_back_3
+  rotate: false
+  xy: 363, 14
+  size: 48, 28
+  orig: 48, 28
+  offset: 0, 0
+  index: -1
+E_R_back_ke
+  rotate: false
+  xy: 510, 2
+  size: 52, 73
+  orig: 52, 73
+  offset: 0, 0
+  index: -1
+E_R_center_ke
+  rotate: true
+  xy: 452, 119
+  size: 73, 57
+  orig: 73, 57
+  offset: 0, 0
+  index: -1
+E_R_front_1
+  rotate: true
+  xy: 465, 203
+  size: 49, 82
+  orig: 49, 82
+  offset: 0, 0
+  index: -1
+E_R_front_2
+  rotate: false
+  xy: 511, 131
+  size: 47, 70
+  orig: 47, 70
+  offset: 0, 0
+  index: -1
+E_R_front_3
+  rotate: false
+  xy: 413, 17
+  size: 47, 25
+  orig: 47, 25
+  offset: 0, 0
+  index: -1
+E_R_front_ke
+  rotate: true
+  xy: 224, 12
+  size: 26, 75
+  orig: 26, 75
+  offset: 0, 0
+  index: -1
+E_bero
+  rotate: true
+  xy: 348, 44
+  size: 17, 83
+  orig: 17, 83
+  offset: 0, 0
+  index: -1
+E_face
+  rotate: false
+  xy: 270, 63
+  size: 104, 109
+  orig: 104, 109
+  offset: 0, 0
+  index: -1
+E_face2
+  rotate: false
+  xy: 431, 71
+  size: 45, 26
+  orig: 45, 26
+  offset: 0, 0
+  index: -1
+E_face3
+  rotate: false
+  xy: 480, 48
+  size: 20, 27
+  orig: 20, 27
+  offset: 0, 0
+  index: -1
+E_face4
+  rotate: true
+  xy: 478, 77
+  size: 21, 40
+  orig: 21, 40
+  offset: 0, 0
+  index: -1
+E_over_body
+  rotate: false
+  xy: 141, 40
+  size: 127, 132
+  orig: 127, 132
+  offset: 0, 0
+  index: -1
+E_sdw
+  rotate: false
+  xy: 2, 174
+  size: 282, 78
+  orig: 282, 78
+  offset: 0, 0
+  index: -1
+E_tail2
+  rotate: true
+  xy: 376, 99
+  size: 82, 74
+  orig: 82, 74
+  offset: 0, 0
+  index: -1
+E_under_body
+  rotate: true
+  xy: 2, 12
+  size: 160, 137
+  orig: 160, 137
+  offset: 0, 0
+  index: -1
+Ehear
+  rotate: true
+  xy: 270, 41
+  size: 20, 76
+  orig: 20, 76
+  offset: 0, 0
+  index: -1

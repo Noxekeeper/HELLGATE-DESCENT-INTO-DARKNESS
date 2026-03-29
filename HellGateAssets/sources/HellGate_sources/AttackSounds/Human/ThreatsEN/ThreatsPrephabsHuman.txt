@@ -1,0 +1,11 @@
+# SlaveBigAxe / OtherSlavebigAxe: registered in code only (BigSlaveAxe phrase pack) — do not list here.
+Dorei 
+Mafiamuscle 
+MafiaBossCustom 
+TouzokuAxe 
+TouzokuNormal
+Vagrant 
+VagrantGuard 
+VagrantThrow
+Mafia
+BlackMafia 

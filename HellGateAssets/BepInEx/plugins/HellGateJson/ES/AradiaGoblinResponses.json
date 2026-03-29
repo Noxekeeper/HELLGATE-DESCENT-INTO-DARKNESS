@@ -1,0 +1,733 @@
+{
+  "settings": {
+    "commentCooldownSeconds": 5.0,
+    "maxSimultaneousComments": 1,
+    "commentDisplayDuration": 5.0,
+    "fontSize": 22.0,
+    "verticalOffset": 20.0,
+    "streamingSpeed": 0.025,
+    "responseColor": {
+      "r": 1.0,
+      "g": 1.0,
+      "b": 1.0,
+      "a": 1.0
+    },
+    "responseOutlineColor": {
+      "r": 0.6,
+      "g": 0.0,
+      "b": 0.7,
+      "a": 1.0
+    },
+    "thoughtColor": {
+      "r": 1.0,
+      "g": 1.0,
+      "b": 1.0,
+      "a": 1.0
+    },
+    "thoughtOutlineColor": {
+      "r": 0.9,
+      "g": 0.2,
+      "b": 0.5,
+      "a": 1.0
+    }
+  },
+  "mindBrokenThresholds": [0.3, 0.7],
+  "animations": {
+    "ERO1": {
+      "description": "Respuestas de Aradia cuando los goblins empiezan a lamerla",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "¿Qué estás haciendo? ¡Aléjate de mí!",
+            "¡No! ¡Por favor, para! ¡Esto está mal!",
+            "¡Yo... no quiero esto! ¡Suéltame!",
+            "¡Que alguien ayude! Estos monstruos...",
+            "¿Por qué yo? ¡Por favor, te lo ruego!",
+            "Esto no puede estar pasando... ¡No!",
+            "Sus lenguas son tan ásperas... ¡Para!",
+            "Me siento tan violada... ¡Por favor!",
+            "Estas criaturas verdes... ¿Qué quieren?",
+            "Mi cuerpo está temblando... ¡Tengo miedo!",
+            "¡No me toques ahí! ¡Por favor!",
+            "Esto es una pesadilla... ¡Despierta!",
+            "Sus ojos están tan hambrientos... ¡Ayuda!",
+            "No puedo moverme... ¡Son demasiado fuertes!",
+            "¿Qué me están haciendo estos monstruos?"
+          ],
+          "medium": [
+            "Yo... no sé qué sentir...",
+            "Sus lenguas... Están por todas partes...",
+            "Esto está tan mal... Pero...",
+            "No puedo dejar de temblar... ¿Y ahora qué?",
+            "Su tacto es tan insistente...",
+            "Mi cuerpo está respondiendo... Contra mi voluntad...",
+            "Estos goblins... Son tan persistentes...",
+            "Me siento tan expuesta... Tan vulnerable...",
+            "Sus lenguas ásperas... No puedo pensar...",
+            "Este calor... Se está acumulando dentro de mí...",
+            "Quiero resistir... Pero mi cuerpo...",
+            "Estas criaturas... Me están destrozando...",
+            "Su hambre... Es contagiosa...",
+            "Me siento tan sucia... Pero se siente...",
+            "Sus lenguas... Tan implacables..."
+          ],
+          "high": [
+            "Dios... Sus lenguas se sienten tan bien...",
+            "Necesito más... ¡No pares ahora!",
+            "¡Estos goblins saben cómo complacer!",
+            "Mi cuerpo está en llamas... ¡Dame más!",
+            "¡Me encanta cómo me lamen por todas partes!",
+            "Sus lenguas ásperas... ¡Perfectas!",
+            "¡Estoy tan mojada... Me vuelven loca!",
+            "¡Fóllame con vuestras lenguas, monstruos!",
+            "¡Quiero sus pollas... Ahora!",
+            "¡Estos goblins son amantes increíbles!",
+            "Mi coño los desea...",
+            "Su saliva... Tan caliente y húmeda...",
+            "¡Anhelo su tacto... Por todas partes!",
+            "¡Corre dentro de mí... Por favor!",
+            "¡Sus lenguas me vuelven loca!"
+          ]
+        }
+      }
+    },
+    "ERO2": {
+      "description": "Respuestas de Aradia cuando los goblins intensifican el lamido",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "¡No! ¡Es demasiado! ¡Dejad de lamer!",
+            "Sus lenguas están por todas partes... ¡Ayuda!",
+            "No puedo soportar esto... ¡Por favor, para!",
+            "Mi cuerpo me traiciona... ¡No!",
+            "Estos monstruos... ¡Tan implacables!",
+            "Me siento tan indefensa... ¡Alguien!",
+            "Sus lenguas ásperas duelen... ¡Para!",
+            "No puedo respirar... ¡Demasiado intenso!",
+            "Por favor... ¡No puedo con esto!",
+            "Mi mente se está rompiendo... ¡Para!",
+            "Estos goblins no paran... ¡Ayuda!",
+            "Me siento tan violada... ¡Por todas partes!",
+            "Sus lenguas... ¡Demasiado profundas!",
+            "Estoy temblando incontrolablemente...",
+            "Esto es tortura... ¡Por favor, para!"
+          ],
+          "medium": [
+            "Yo... no sé... Se siente...",
+            "Sus lenguas... Tan insistentes...",
+            "Mi cuerpo... Respondiendo de nuevo...",
+            "Este placer... Mezclado con miedo...",
+            "Quiero odiarlo... Pero...",
+            "Su lamido... Tan intenso...",
+            "Mi resistencia... Desvaneciéndose...",
+            "Estos goblins... Tan hábiles...",
+            "Me siento tan dividida... Ayúdame...",
+            "Su tacto... Por todas partes...",
+            "No puedo controlar mis reacciones...",
+            "Este calor... Acumulándose dentro...",
+            "Sus lenguas... Tan exigentes...",
+            "Me siento tan expuesta... Tan deseada...",
+            "Mi cuerpo... Traicionando mi mente..."
+          ],
+          "high": [
+            "¡Sí! ¡Lamedme más fuerte, bestias!",
+            "Sus lenguas... ¡Tan jodidamente buenas!",
+            "¡Las necesito más profundas... Más rápido!",
+            "¡Mi coño está goteando... Por ellos!",
+            "¡Estos goblins... Dioses del sexo!",
+            "¡Fóllame con vuestras lenguas!",
+            "¡Quiero sus pollas... Mucho!",
+            "¡Su saliva... Me moja más!",
+            "Lamedme el clítoris... ¡Oh dios sí!",
+            "Soy su puta... ¡Usadme!",
+            "Sus lenguas ásperas... ¡Perfectas!",
+            "Corred sobre mí... Marcadme!",
+            "¡Me encanta cómo me devoran!",
+            "¡Más! ¡Necesito más monstruos!",
+            "¡Sus lenguas... Me vuelven loca!"
+          ]
+        }
+      }
+    },
+    "ERO3": {
+      "description": "Respuestas de Aradia cuando el goblin empuja la lengua más profundo",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "¡No! ¡Demasiado profundo! ¡Sácala!",
+            "Su lengua... Dentro de mí... ¡Para!",
+            "Esto es demasiado... ¡No puedo!",
+            "Por favor... ¡Quita tu lengua!",
+            "Me siento tan llena... ¡Pero mal!",
+            "Estos monstruos... ¡Violándome!",
+            "Su lengua... Tan profunda... ¡Ayuda!",
+            "¡No puedo soportar esta invasión!",
+            "Sácala... Por favor sácala!",
+            "Mi cuerpo... Estirado... Duele!",
+            "¡Estos goblins... Tan crueles!",
+            "Su lengua... Explorando...",
+            "Me siento tan indefensa... ¡No!",
+            "Esta penetración... ¡Mal!",
+            "Para... Te lo ruego... ¡Para!"
+          ],
+          "medium": [
+            "Su lengua... Tan profunda dentro...",
+            "Siento... Estirada... Llena...",
+            "Esta sensación... Confusa...",
+            "Su lengua... Moviéndose... Oh...",
+            "Quiero resistir... Pero...",
+            "Esta profundidad... Demasiado...",
+            "Su lengua... Tan insistente...",
+            "Me siento tan vulnerable... Expuesta...",
+            "Esta invasión... Placentera...",
+            "Mi cuerpo... Aceptándolos...",
+            "Su lengua... Profunda... Profunda...",
+            "No puedo pensar... Solo sentir...",
+            "Esta plenitud... Abrumadora...",
+            "Su lengua... Explorándome...",
+            "Me siento... Tan dividida..."
+          ],
+          "high": [
+            "¡Más profundo! ¡Empuja tu lengua más profundo!",
+            "¡Fóllame con tu lengua!",
+            "Su lengua... Tan profunda... ¡Sí!",
+            "Lléname completamente... ¡Monstruo!",
+            "¡Me encanta cómo me estiras!",
+            "Su lengua... ¡Tamaño perfecto!",
+            "Fóllame el agujero apretado... ¡Más fuerte!",
+            "¡Necesito tu polla... Ahora!",
+            "Su lengua... ¡Me hace correr!",
+            "Penetración más profunda... ¡Sí!",
+            "Soy tu juguete sexual... ¡Usadme!",
+            "Su lengua... ¡Tan hábil!",
+            "Corre dentro... ¡Lléname!",
+            "¡Anhelo esta plenitud... Más!",
+            "¡Su lengua... Me vuelve loca!"
+          ]
+        }
+      }
+    },
+    "ERO4": {
+      "description": "Respuestas de Aradia cuando los goblins lamen más fuerte y profundo",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "¡Para! ¡Es demasiado brusco! ¡Piedad!",
+            "Sus lenguas... ¡Me están haciendo daño!",
+            "¡No puedo soportar esta intensidad!",
+            "Por favor... Más suave... ¡Por favor!",
+            "Estos monstruos... ¡Sin piedad!",
+            "Mi cuerpo... En llamas... ¡Para!",
+            "Su lamido... ¡Demasiado fuerte!",
+            "Me siento tan abusada... ¡Ayuda!",
+            "Este dolor... Mezclado con...",
+            "Para de hacerme daño... ¡Por favor!",
+            "Sus lenguas... ¡Brutales!",
+            "No puedo con esto... ¡No!",
+            "Piedad... ¡Pido piedad!",
+            "Demasiado intenso... ¡No puedo!",
+            "¡Su asalto... Interminable!"
+          ],
+          "medium": [
+            "Sus lenguas... Tan intensas...",
+            "Me siento... Abrumada...",
+            "Este placer... Demasiado...",
+            "Su lamido... Implacable...",
+            "No puedo... Controlarme...",
+            "Sus lenguas... Por todas partes...",
+            "Me siento... Tan sensible...",
+            "Esta intensidad... Destrozándome...",
+            "Su tacto... Exigente...",
+            "Quiero... Escapar... Pero...",
+            "Sus lenguas... Hábiles...",
+            "Este calor... Ardiendo...",
+            "Me siento... Consumida...",
+            "Su lamido... Perfecto...",
+            "Mi resistencia... Desaparecida..."
+          ],
+          "high": [
+            "¡Más fuerte! ¡Lamedme más fuerte!",
+            "Sus lenguas... Tan ásperas... ¡Me encanta!",
+            "Fóllame hasta perder el sentido... ¡Sí!",
+            "¡Necesito esta intensidad... Más!",
+            "Sus lenguas... ¡Aspereza perfecta!",
+            "Hacedme correr... ¡Monstruos!",
+            "¡Me encanta cómo me abusan!",
+            "Su lamido... ¡Divino!",
+            "¡Follad mis agujeros... Todos!",
+            "¡Anhelo esta brutalidad!",
+            "Sus lenguas... ¡Tan exigentes!",
+            "Corred sobre mí... ¡Sí!",
+            "¡Soy su cubo de semen!",
+            "Más intensidad... ¡Por favor!",
+            "¡Sus lenguas... Me poseen!"
+          ]
+        }
+      }
+    },
+    "ERO5": {
+      "description": "Respuestas de Aradia al lamido extremo acercándose al clímax",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "¡No! Voy a... ¡Para!",
+            "Sus lenguas... Empujándome... ¡No!",
+            "No puedo contenerme... ¡Ayuda!",
+            "Este clímax... Forzado... Mal!",
+            "Su asalto... ¡Demasiado!",
+            "Me estoy rompiendo... ¡Por favor para!",
+            "Sus lenguas... ¡Victoria cerca!",
+            "No quiero correrme... ¡No!",
+            "Este placer... ¡Contra mi voluntad!",
+            "Su lamido... ¡Triunfante!",
+            "Para... Me estoy corriendo... ¡Para!",
+            "Estos monstruos... ¡Ganando!",
+            "¡Mi cuerpo... Me traiciona!",
+            "Orgasmo forzado... ¡Horror!",
+            "Sus lenguas... ¡Me conquistan!"
+          ],
+          "medium": [
+            "Yo... No puedo contenerme...",
+            "Sus lenguas... Demasiado hábiles...",
+            "Este clímax... Inevitable...",
+            "Siento... El borde...",
+            "Su lamido... Perfecto...",
+            "Mi resistencia... Desmoronándose...",
+            "Quiero... Luchar... Pero...",
+            "Sus lenguas... Victoria...",
+            "Este placer... Abrumador...",
+            "Siento... Rindiéndome...",
+            "Su asalto... Exitoso...",
+            "Mi cuerpo... Cediendo...",
+            "Este orgasmo... Sentimientos mezclados...",
+            "Sus lenguas... Triunfantes...",
+            "No puedo... Pararlo..."
+          ],
+          "high": [
+            "¡Me estoy corriendo! ¡No pares!",
+            "Sus lenguas... ¡Haciéndome explotar!",
+            "Corre conmigo... ¡Monstruos!",
+            "¡Este clímax... Perfecto!",
+            "Su lamido... ¡Orgásmico!",
+            "¡Fóllame a través del orgasmo!",
+            "¡Me encanta cómo me hacen correr!",
+            "Sus lenguas... ¡Victoria!",
+            "Corre más fuerte... ¡Sí!",
+            "¡Soy su esclava del orgasmo!",
+            "Su lamido... ¡Éxtasis!",
+            "Lléname de semen... ¡Ahora!",
+            "¡Este placer... Divino!",
+            "Sus lenguas... ¡Dioses!",
+            "Corre por todas partes... ¡Sí!"
+          ]
+        }
+      }
+    },
+    "ERO_iki": {
+      "description": "Respuestas de Aradia al clímax forzado por lamido",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "¡No! ¡Me estoy corriendo! ¡Para!",
+            "Sus lenguas... Me forzaron...",
+            "Este orgasmo... ¡Humillante!",
+            "No quería esto... ¡No!",
+            "¡Su victoria... Completa!",
+            "¡Mi cuerpo... Me traicionó!",
+            "¡Estos monstruos... Ganaron!",
+            "Clímax forzado... ¡Vergüenza!",
+            "Sus lenguas... ¡Triunfantes!",
+            "Odio este placer... ¡No!",
+            "Correr... ¡Contra mi voluntad!",
+            "Su lamido... ¡Exitoso!",
+            "Me siento tan sucia... ¡Usada!",
+            "Este éxtasis... ¡Mal!",
+            "¡Su conquista... Completa!"
+          ],
+          "medium": [
+            "Estoy... Corriéndome... Oh dios...",
+            "Sus lenguas... Demasiado buenas...",
+            "Este clímax... Intenso...",
+            "No puedo... Pararlo...",
+            "Su victoria... Dulce...",
+            "Mi cuerpo... Se rindió...",
+            "Este placer... Abrumador...",
+            "Sus lenguas... Perfectas...",
+            "Me siento... Derrotada... Pero...",
+            "Este orgasmo... Increíble...",
+            "Su lamido... Arte...",
+            "Quería... Resistir...",
+            "Su conquista... Placentera...",
+            "Correr... Tan intenso...",
+            "Sus lenguas... Maestros..."
+          ],
+          "high": [
+            "¡Corre! ¡Me estoy corriendo tan fuerte!",
+            "Sus lenguas... ¡Clímax perfecto!",
+            "¡Joder sí! ¡Este orgasmo!",
+            "Su lamido... ¡Éxtasis!",
+            "Corre conmigo... ¡Amantes!",
+            "¡Este placer... Divino!",
+            "Sus lenguas... ¡Dioses del sexo!",
+            "Lléname... ¡Corre dentro!",
+            "¡Soy su puta del semen!",
+            "¡Este clímax... Intenso!",
+            "¡Su victoria... Compartida!",
+            "Corre más fuerte... ¡Sí!",
+            "¡Sus lenguas poseen mis orgasmos!",
+            "Fóllame más... ¡Ahora!",
+            "¡Este éxtasis... Eterno!"
+          ]
+        }
+      }
+    },
+    "2ERO_START": {
+      "description": "Pensamientos de Aradia cuando los goblins inician la penetración",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...¡No! Están empujando dentro de mí...",
+            "...Esto no puede estar pasando... Sus pollas...",
+            "...Me siento tan estirada... Duele...",
+            "...Sus pollas verdes... Tan mal...",
+            "...Por favor para... No puedo soportar esto...",
+            "...Mi cuerpo... Siendo violado...",
+            "...Estos monstruos... Usándome...",
+            "...Me siento tan indefensa... Llena...",
+            "...Sus pollas... Tan profundas dentro...",
+            "...Este dolor... Demasiado...",
+            "...No puedo gritar... Boca llena...",
+            "...Sus embestidas... Despiadadas...",
+            "...Solo soy un agujero para ellos...",
+            "...Esta pesadilla... No termina...",
+            "...Sus pollas... Palpitando dentro..."
+          ],
+          "medium": [
+            "...Sus pollas... Tan grandes... Llenándome...",
+            "...Siento... Estirada... Llena...",
+            "...Esta sensación... Intensa...",
+            "...Sus embestidas... Ritmo...",
+            "...No puedo... Pensar con claridad...",
+            "...Mi cuerpo... Respondiendo...",
+            "...Estos goblins... Hábiles...",
+            "...Sus pollas... Calientes... Duras...",
+            "...Me siento... Tan vulnerable...",
+            "...Esta plenitud... Abrumadora...",
+            "...Sus movimientos... Sincronizados...",
+            "...No puedo... Controlarme...",
+            "...Este placer... Acumulándose...",
+            "...Sus pollas... Por todas partes...",
+            "...Mi resistencia... Desvaneciéndose..."
+          ],
+          "high": [
+            "...Oh dios... Sus pollas se sienten increíbles...",
+            "...Tan llena... Ambos agujeros repletos...",
+            "...Sus pollas... Tamaño perfecto...",
+            "...Fóllame más fuerte... Sí...",
+            "...Necesito esto... Sus pollas...",
+            "...Corre dentro de mí... Por favor...",
+            "...Sus embestidas... Éxtasis...",
+            "...Soy su juguete sexual... Me encanta...",
+            "...Más pollas... Quiero más...",
+            "...Su semen... Lléname...",
+            "...Este placer... Divino...",
+            "...Fóllame hasta perder el sentido... Sí...",
+            "...Sus pollas... Me poseen...",
+            "...Corre por todas partes... Dentro...",
+            "...Estoy enganchada... A sus pollas..."
+          ]
+        }
+      }
+    },
+    "2ERO_1": {
+      "description": "Pensamientos de Aradia durante la follada inicial",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Se están moviendo... Dentro de mí...",
+            "...Sus pollas... Embistiendo profundo...",
+            "...No puedo respirar... Boca llena...",
+            "...Esta violación... Interminable...",
+            "...Mi cuerpo... Rebotando...",
+            "...Su piel verde... Asquerosa...",
+            "...Pero sus pollas... Tan insistentes...",
+            "...Me siento... Usada... Sucia...",
+            "...Sus gruñidos... Animalísticos...",
+            "...Solo soy... Un juguete...",
+            "...Este dolor... Mezclado con...",
+            "...Sus pollas... Palpitando...",
+            "...No puedo... Escapar...",
+            "...Esta pesadilla... Continúa...",
+            "...Sus embestidas... Implacables..."
+          ],
+          "medium": [
+            "...Sus pollas... Moviéndose al ritmo...",
+            "...Siento... Cada centímetro...",
+            "...Esta plenitud... Intensa...",
+            "...Sus embestidas... Hábil...",
+            "...Mi cuerpo... Adaptándose...",
+            "...No puedo... Evitar sentir...",
+            "...Sus pollas... Tan duras...",
+            "...Este placer... Acumulándose...",
+            "...Me siento... Tan llena...",
+            "...Sus movimientos... Perfectos...",
+            "...No puedo... Dejar de gemir...",
+            "...Esta sensación... Adictiva...",
+            "...Sus pollas... Llenándome...",
+            "...Me siento... Deseada...",
+            "...Este calor... Ardiendo..."
+          ],
+          "high": [
+            "...¡Sí! Fóllame con esas pollas...",
+            "...Sus pollas... Tan profundas... Perfectas...",
+            "...Me encanta esta plenitud... Ambos agujeros...",
+            "...Embiste más fuerte... Monstruos...",
+            "...Corre dentro de mí... Ahora...",
+            "...Sus pollas... Me mojan...",
+            "...Fóllame como tu puta...",
+            "...Necesito su semen... Mucho...",
+            "...Sus embestidas... Éxtasis...",
+            "...¡Más! ¡Más profundo! ¡Más fuerte!",
+            "...Sus pollas... Poseen mis agujeros...",
+            "...Corre sobre mí... Sí...",
+            "...Soy su receptáculo de semen...",
+            "...Fóllame hasta perder el sentido... Por favor...",
+            "...Sus pollas... Se sienten tan bien..."
+          ]
+        }
+      }
+    },
+    "2ERO_2": {
+      "description": "Pensamientos de Aradia cuando el goblin folla más profundo y fuerte",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Va más profundo... Duele...",
+            "...Sus pollas... Tan ásperas...",
+            "...Me siento... Hecha pedazos...",
+            "...Esta profundidad... Demasiado...",
+            "...Sus embestidas... Violentas...",
+            "...Mi cuerpo... Temblando...",
+            "...No puedo... Soportar esto...",
+            "...Sus pollas... Despiadadas...",
+            "...Este dolor... Intenso...",
+            "...Estoy gritando... En silencio...",
+            "...Sus gruñidos... Aterradores...",
+            "...Me siento... Rota...",
+            "...Este asalto... No termina...",
+            "...Sus pollas... Destrozándome...",
+            "...Ayuda... Alguien..."
+          ],
+          "medium": [
+            "...Más profundo... Sus pollas... Intensas...",
+            "...Siento... Cada embestida...",
+            "...Esta profundidad... Abrumadora...",
+            "...Sus pollas... Hábil...",
+            "...Mi cuerpo... Respondiendo...",
+            "...No puedo... Evitar gemir...",
+            "...Este placer... Doloroso...",
+            "...Sus embestidas... Poderosas...",
+            "...Me siento... Tan estirada...",
+            "...Sus pollas... Llenándome...",
+            "...Este calor... Ardiendo...",
+            "...Me siento... Consumida...",
+            "...Sus movimientos... Perfectos...",
+            "...Esta plenitud... Adictiva...",
+            "...Sus pollas... Me poseen..."
+          ],
+          "high": [
+            "...¡Más profundo! ¡Fóllame más profundo!",
+            "...Sus pollas... Profundidad perfecta...",
+            "...¡Sí! Empujad mis agujeros más fuerte!",
+            "...Me encanta esta intensidad...",
+            "...Corre profundo dentro... Por favor...",
+            "...Sus pollas... Golpean todos los puntos...",
+            "...Fóllame como una puta...",
+            "...Necesito su semen... Profundo...",
+            "...Este placer... Intenso...",
+            "...¡Más fuerte! ¡No pares!",
+            "...Sus pollas... Me hacen correr...",
+            "...Lléname completamente...",
+            "...Soy su agujero de follar...",
+            "...Corre por todas partes... Sí...",
+            "...Sus embestidas... Divinas..."
+          ]
+        }
+      }
+    },
+    "2ERO_3": {
+      "description": "Pensamientos de Aradia durante la follada rítmica",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Su ritmo... Interminable...",
+            "...Siento... Cada movimiento...",
+            "...Esta sincronización... Aterradora...",
+            "...Sus pollas... Trabajando juntas...",
+            "...Mi cuerpo... Rebotando indefenso...",
+            "...No puedo... Parar esto...",
+            "...Sus gruñidos... Al unísono...",
+            "...Este asalto... Coordinado...",
+            "...Estoy atrapada... Entre ellos...",
+            "...Sus pollas... Llenándome...",
+            "...Esta pesadilla... Sincronizada...",
+            "...Me siento... Tan pequeña...",
+            "...Su ritmo... Hipnótico...",
+            "...No puedo... Escapar...",
+            "...Esta interminable... Follada..."
+          ],
+          "medium": [
+            "...Su ritmo... Perfecto...",
+            "...Siento... Sincronizada...",
+            "...Sus pollas... Trabajando juntas...",
+            "...Este placer... Acumulándose...",
+            "...Mi cuerpo... Moviéndose con ellos...",
+            "...No puedo... Evitar sentir...",
+            "...Sus embestidas... Harmoniosas...",
+            "...Esta plenitud... Completa...",
+            "...Sus movimientos... Hermosos...",
+            "...Me siento... Parte de esto...",
+            "...Su ritmo... Adictivo...",
+            "...Este calor... Compartido...",
+            "...Sus pollas... Complementándose...",
+            "...Me siento... Deseada...",
+            "...Este éxtasis... Compartido..."
+          ],
+          "high": [
+            "...Ritmo perfecto... Me encanta...",
+            "...Sus pollas... En perfecta sincronía...",
+            "...Fóllame juntos... Sí...",
+            "...Esta coordinación... Increíble...",
+            "...Corred al mismo tiempo...",
+            "...Sus embestidas... Éxtasis...",
+            "...Llenad ambos agujeros... Perfectamente...",
+            "...Soy su juguete sincronizado...",
+            "...Más fuerte en ritmo... Sí...",
+            "...Sus pollas... Funcionan perfectamente...",
+            "...Corre dentro de mí... Ambos...",
+            "...Este placer... Sincronizado...",
+            "...Fóllame al unísono...",
+            "...Su ritmo... Me vuelve loca...",
+            "...Follada perfecta... Sí..."
+          ]
+        }
+      }
+    },
+    "2ERO_4": {
+      "description": "Pensamientos de Aradia cuando los goblins están a punto de correrse",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Están hinchándose... Dentro de mí...",
+            "...Sus pollas... Endureciéndose más...",
+            "...Siento... La tensión...",
+            "...Van a... Correrse...",
+            "...Este es... El final...",
+            "...Sus pollas... Palpitando...",
+            "...No puedo... Pararlos...",
+            "...Este último... Asalto...",
+            "...Sus gruñidos... Más fuertes...",
+            "...Siento... Su clímax...",
+            "...Su semen... Viniendo...",
+            "...No puedo... Escapar de ello...",
+            "...Esta inundación... Inevitable...",
+            "...Sus pollas... Listas...",
+            "...Corre... Dentro de mí..."
+          ],
+          "medium": [
+            "...Los siento... Acumulando...",
+            "...Sus pollas... Hinchándose...",
+            "...Este clímax... Cerca...",
+            "...Sus embestidas... Urgentes...",
+            "...Siento... La presión...",
+            "...Su semen... Listo...",
+            "...Este momento... Intenso...",
+            "...Sus pollas... Palpitando...",
+            "...No puedo... Esperar...",
+            "...Esta liberación... Llegando...",
+            "...Su clímax... Compartido...",
+            "...Corre... Pronto...",
+            "...Sus pollas... Listas...",
+            "...Este placer... Pico...",
+            "...Lléname... Completamente..."
+          ],
+          "high": [
+            "...Corre dentro de mí... Por favor...",
+            "...Sus pollas... Tan hinchadas...",
+            "...Necesito su semen... Ahora...",
+            "...Llenadme... Monstruos...",
+            "...Corre en mi boca... También...",
+            "...Su clímax... Perfecto...",
+            "...Inúndame... Sí...",
+            "...Su semen... Caliente...",
+            "...Corre por todas partes... Dentro...",
+            "...Lo quiero todo... Sí...",
+            "...Sus pollas... A punto de explotar...",
+            "...Corre por mí... Por favor...",
+            "...Llenadme completamente...",
+            "...Su semen... Mío...",
+            "...Corre ahora... Fuerte..."
+          ]
+        }
+      }
+    },
+    "2ERO_iki": {
+      "description": "Pensamientos de Aradia durante el clímax de los goblins",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Se están corriendo... Dentro de mí...",
+            "...Semen caliente... Llenándome...",
+            "...Sus pollas... Palpitando...",
+            "...Corre... Por todas partes...",
+            "...Me siento... Inundada...",
+            "...Este calor... Ardiendo...",
+            "...Su semen... Desbordando...",
+            "...Estoy llena... De semen...",
+            "...Su clímax... Intenso...",
+            "...Corre... Goteando fuera...",
+            "...Este desastre... Pegajoso...",
+            "...Su semen... Me marca...",
+            "...Estoy cubierta... De semen...",
+            "...Esta vergüenza... Completa...",
+            "...Corre... Tanto semen..."
+          ],
+          "medium": [
+            "...Su semen... Tan caliente...",
+            "...Llenándome... Completamente...",
+            "...Sus pollas... Vacándose...",
+            "...Corre... Desbordando...",
+            "...Este calor... Intenso...",
+            "...Su clímax... Poderoso...",
+            "...Corre... Por todas partes...",
+            "...Me siento... Marcada...",
+            "...Su semilla... Dentro de mí...",
+            "...Esta plenitud... Definitiva...",
+            "...Corre... Goteando...",
+            "...Su semen... Caliente...",
+            "...Este placer... Mezclado...",
+            "...Corre... Llenándome...",
+            "...Su clímax... Satisfactorio..."
+          ],
+          "high": [
+            "...¡Corre! ¡Llenadme de semen!",
+            "...Su semen caliente... ¡Perfecto!",
+            "...Corre en mi boca... Tragar...",
+            "...Corre por todas partes... ¡Sí!",
+            "...Su semen... Delicioso...",
+            "...Llenadme... Completamente...",
+            "...Corre más fuerte... ¡Monstruos!",
+            "...Su clímax... Increíble...",
+            "...Corred sobre mí... ¡Sí!",
+            "...Su semen... Tan caliente...",
+            "...¡Me encanta esta inundación... Sí!",
+            "...Corre dentro... ¡Profundo!",
+            "...Su semen... Mío...",
+            "...Más semen... Por favor...",
+            "...Corre para siempre... ¡Sí!"
+          ]
+        }
+      }
+    }
+  }
+}

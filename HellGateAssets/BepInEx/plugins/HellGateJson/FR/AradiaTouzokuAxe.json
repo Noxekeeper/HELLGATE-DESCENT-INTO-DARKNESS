@@ -1,0 +1,514 @@
+{
+  "settings": {
+    "responseDelayMin": 1.5,
+    "responseDelayMax": 2.5,
+    "commentCooldownSeconds": 4.0,
+    "maxSimultaneousComments": 1,
+    "commentDisplayDuration": 5.0,
+    "fontSize": 22.0,
+    "verticalOffset": 20.0,
+    "boneName": "face",
+    "responseColor": {
+      "r": 1.0,
+      "g": 1.0,
+      "b": 1.0,
+      "a": 1.0
+    },
+    "responseOutlineColor": {
+      "r": 0.6,
+      "g": 0.0,
+      "b": 0.7,
+      "a": 1.0
+    },
+    "thoughtColor": {
+      "r": 1.0,
+      "g": 1.0,
+      "b": 1.0,
+      "a": 1.0
+    },
+    "thoughtOutlineColor": {
+      "r": 0.9,
+      "g": 0.2,
+      "b": 0.5,
+      "a": 1.0
+    }
+  },
+  "mindBrokenThresholds": [0.3, 0.7],
+  "animations": {
+    "START": {
+      "description": "Debout derrière, capture et lie les mains de GG derrière sa tête, montrant ses seins",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Non ! Laisse-moi partir ! Ne me touche pas !",
+            "Quelqu'un aidez ! Ce monstre m'attrape !",
+            "Enlève tes mains ! Je ne te laisserai pas faire !",
+            "Arrête ! Tu me fais mal ! Lâche prise !",
+            "Non ! Je ne veux pas ça ! Aide !",
+            "Tes mains sont si rudes... Arrête de me toucher !",
+            "Laisse-moi partir ! Je t'en supplie ! Ne fais pas ça !",
+            "Ça ne peut pas arriver... Non !",
+            "Quelqu'un sauvez-moi de cette bête !",
+            "Je ne me soumettrai pas ! Lâche mes mains !",
+            "Ta poigne est trop forte... Je ne peux pas m'échapper !",
+            "Non ! Ne montre pas mon corps comme ça !",
+            "Je me sens si exposée... S'il te plaît arrête !",
+            "Cette humiliation... Je ne peux pas la supporter !",
+            "Tes mains sur ma peau... Si mal !"
+          ],
+          "medium": [
+            "Je... Je ne sais pas quoi faire...",
+            "Ses mains sont partout... Je me sens si impuissante...",
+            "Cette poigne... Elle est si ferme... Je ne peux pas bouger...",
+            "Mon corps est exposé... Tout le monde peut voir...",
+            "J'essaie de lutter... Mais c'est inutile...",
+            "Sa force... Elle est écrasante...",
+            "Je sens son souffle sur ma nuque... Si proche...",
+            "Mes mains sont liées... Je ne peux pas me défendre...",
+            "Cette position... Si vulnérable...",
+            "Son toucher... Il me fait sentir étrange...",
+            "Je ne peux pas cacher mon corps... Il est tout exposé...",
+            "Cette humiliation... Elle me brise...",
+            "Ses mains sur ma poitrine... Je me sens conflictuelle...",
+            "Je veux résister... Mais mon corps...",
+            "Cette capture... Elle est si complète..."
+          ],
+          "high": [
+            "Ses mains se sentent si fortes... J'aime ça...",
+            "Être capturée comme ça... Excitant...",
+            "Mon corps est sien... Il peut tout faire...",
+            "Je veux qu'il me touche plus... Partout...",
+            "Cette impuissance... C'est excitant...",
+            "Sa poigne sur mes mains... Contrôle parfait...",
+            "Mes seins sont exposées... Pour lui...",
+            "J'adore comment il m'exhibe...",
+            "Sa force... Me rend mouillée...",
+            "Je veux être sa prisonnière... Pour toujours...",
+            "Touche-moi... S'il te plaît touche-moi...",
+            "Mon corps lui appartient... Complètement...",
+            "Cette exposition... C'est libérateur...",
+            "Je crave ses mains rudes...",
+            "Je suis sienne... Prends-moi..."
+          ]
+        }
+      }
+    },
+    "START2": {
+      "description": "Sort son épée en acier du fourreau et plante la garde vers le haut devant GG",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Une épée ?! Qu'est-ce que tu vas en faire ?!",
+            "Non ! N'approche pas ce truc de moi !",
+            "Tu vas me couper ? S'il te plaît non !",
+            "Cette épée a l'air si dangereuse... Reste loin !",
+            "Je ne lécherai pas ! C'est dégoûtant !",
+            "Ton épée... Elle est couverte de je ne sais quoi !",
+            "S'il te plaît range-la... Je t'en supplie !",
+            "C'est trop... Même pour toi...",
+            "Je ne peux pas faire ça... C'est humiliant !",
+            "Ton épée dans ma bouche ? Jamais !",
+            "C'est barbare... Même pour des monstres...",
+            "Je refuse ! Je ne m'abaisserai pas !",
+            "Cette garde... Elle est sale !",
+            "Non ! Garde ton arme loin de moi !",
+            "C'est de la torture... Torture psychologique..."
+          ],
+          "medium": [
+            "Son épée... Si près de mon visage...",
+            "L'acier... Froid et inflexible...",
+            "Il veut que je... Avec la garde de l'épée...",
+            "C'est si dégradant... Mais je me sens curieuse...",
+            "Le métal... Dur et impitoyable...",
+            "Je devrais résister... Mais et si...",
+            "Son arme... Symbole de son pouvoir...",
+            "La garde... Quel goût aurait-elle...",
+            "Cette humiliation... Elle me fait sentir...",
+            "Je veux dire non... Mais mes yeux...",
+            "L'épée... Si intimidante...",
+            "Son ordre... Servir sa lame...",
+            "C'est faux... Si faux...",
+            "Mais l'acier... Il est hypnotisant...",
+            "Je me sens conflictuelle... À propos de tout..."
+          ],
+          "high": [
+            "Son épée... Si belle... Si puissante...",
+            "Je veux la goûter... S'il te plaît laisse-moi...",
+            "La garde en acier... J'en ai besoin dans ma bouche...",
+            "Fais-moi servir ton arme... Maître...",
+            "Je la lécherai propre... Pour toi...",
+            "Ton épée... Ma nouvelle obsession...",
+            "Le métal froid... M'excite...",
+            "Laisse-moi adorer ta lame...",
+            "Je la sucerai... Comme si c'était ta bite...",
+            "C'est si chaud... Ton épée...",
+            "J'adore le goût de l'acier... Ton acier...",
+            "Fais de moi ta servante d'épée...",
+            "La garde... Si parfaite pour ma bouche...",
+            "Je crave le métal froid...",
+            "Ton arme... Mon amant..."
+          ]
+        }
+      }
+    },
+    "START3": {
+      "description": "Sans relâcher, soulève GG par derrière par les bras et empale sa chatte sur la garde de l'épée, profondément, jambes touchent le sol",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Non ! Ne me soulève pas ! Qu'est-ce que tu fais ?!",
+            "La garde de l'épée... Contre mon... Non !",
+            "S'il te plaît ! Pas comme ça ! C'est trop !",
+            "Je sens ça presser... Contre mon endroit le plus privé !",
+            "Cette position... Si exposée... Si fausse !",
+            "L'acier froid... Me touchant là...",
+            "Non ! Ne me descends pas dessus !",
+            "Ça fait mal... Le métal est si dur !",
+            "Mon corps... Me trahit... Ça rentre !",
+            "Cette violation... Avec une arme...",
+            "Je ne peux pas croire que ça arrive...",
+            "L'acier... Dedans moi... Si froid...",
+            "Mes jambes... Touchant le sol... Mais...",
+            "C'est de la torture... Pure torture...",
+            "Arrête ! Retire-le ! Ça fait trop mal !"
+          ],
+          "medium": [
+            "Être soulevée comme ça... Si impuissante...",
+            "La garde de l'épée... Pressant contre moi...",
+            "Je sens ça... Commence à entrer...",
+            "Ce métal froid... Dedans ma chaleur...",
+            "Mon poids corporel... Le pousse plus profond...",
+            "Ça fait mal... Mais il y a autre chose...",
+            "Cette invasion... Si complète...",
+            "L'acier... Me remplit... M'étire...",
+            "Je ne peux pas l'arrêter... C'est trop tard...",
+            "Cette sensation... Confuse...",
+            "Mes jambes... Touchent à peine... Mais profond...",
+            "La douleur... Mélangée avec... Quelque chose...",
+            "Je me sens si pleine... De métal froid...",
+            "C'est faux... Mais mon corps...",
+            "La profondeur... Écrasante..."
+          ],
+          "high": [
+            "Oui... Soulève-moi... Empale-moi...",
+            "La garde de l'épée... Parfaite pour ma chatte...",
+            "Plus profond... Je veux tout dedans...",
+            "Acier froid... Remplissant mon trou chaud...",
+            "Chevauche l'épée... Fais de moi ta gaine...",
+            "Ça fait si bon mal... N'arrête pas...",
+            "Ma chatte... Avide de métal...",
+            "Baise-moi avec ton épée... S'il te plaît...",
+            "La profondeur... Parfaite... Si profond...",
+            "Je suis ta poupée empalée...",
+            "L'épée me baise... Oui...",
+            "Plus profond... Encore...",
+            "La douleur est plaisir maintenant...",
+            "Empalée sur ton acier... J'adore...",
+            "Je vis pour être empalée..."
+          ]
+        }
+      }
+    },
+    "START4": {
+      "description": "Tient GG levée par les bras, baisant sa chatte avec la garde de l'épée, la faisant rebondir de haut en bas",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Je rebondis... Sur ton épée... Aïe !",
+            "Chaque mouvement... Étire davantage...",
+            "Je suis suspendue... Sans contrôle...",
+            "La garde frotte... Dedans moi...",
+            "Ça déchire... S'il te plaît arrête...",
+            "Mes bras font mal... D'être tenus...",
+            "Je suis juste un objet... Pour toi...",
+            "Cette douleur... Insupportable...",
+            "Relâche-moi... Je t'en supplie...",
+            "Je ne peux plus supporter...",
+            "Ton épée me détruit...",
+            "Chaque rebond... Agonise...",
+            "Je vais tomber... Je suis faible...",
+            "Cette position... Trop extrême...",
+            "Pitié... Montre de la pitié..."
+          ],
+          "medium": [
+            "Rebondir comme ça... Étrange sensation...",
+            "L'épée dedans... Mouvement constant...",
+            "Je suis pantin... Il me contrôle...",
+            "La garde frotte... Points sensibles...",
+            "Douleur et plaisir... Mélangés...",
+            "Mes bras tiennent... Juste...",
+            "Je suis exposée... Complètement...",
+            "Cette utilisation... Dégradante...",
+            "Mais je sens... Quelque chose...",
+            "Mon corps répond... Malgré moi...",
+            "Le rythme... S'établit...",
+            "Je m'adapte... Lentement...",
+            "Cette profondeur... Constante...",
+            "L'acier me remplit... Toujours...",
+            "Je commence... À aimer..."
+          ],
+          "high": [
+            "Oui ! Fais-moi rebondir !",
+            "L'épée me baise parfaitement...",
+            "Plus fort ! Rebonds plus forts !",
+            "J'adore la friction...",
+            "Utilise-moi comme jouet...",
+            "Mes bras tiendront...",
+            "Je suis ta marionnette...",
+            "La douleur est partie...",
+            "Juste le plaisir reste...",
+            "Baise-moi avec l'acier...",
+            "Je rebondis pour toi...",
+            "Chaque mouvement... Ciel...",
+            "Encore ! Continue !",
+            "Je vis pour ça...",
+            "L'épée est mon amant..."
+          ]
+        }
+      }
+    },
+    "START5": {
+      "description": "Abaisse GG au sol, toujours attachée, écarte ses jambes et commence à la baiser avec l'épée",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Au sol... Non ! Pas encore plus !",
+            "Mes jambes écartées... Exposées...",
+            "L'épée entre... Maintenant horizontale...",
+            "Je suis clouée au sol... Impuissante...",
+            "Tu me baisses comme animal...",
+            "Cette position... Encore pire...",
+            "Je ne peux pas fermer les jambes...",
+            "L'acier va plus profond...",
+            "Au sol comme salope...",
+            "Humiliation totale...",
+            "S'il te plaît retire...",
+            "Je suis vaincue...",
+            "Cette position... Douloureuse...",
+            "Écartée pour toi...",
+            "Finis-en vite..."
+          ],
+          "medium": [
+            "Allongée au sol... Vulnérable...",
+            "Jambes ouvertes... Large...",
+            "L'épée me remplit... Maintenant...",
+            "Je ne peux pas bouger... Attachée...",
+            "Cette invasion... Horizontale...",
+            "Il me baise au sol...",
+            "Comme objet sexuel...",
+            "Mais je sens... Plaisir...",
+            "Mon corps réagit...",
+            "L'acier frotte bien...",
+            "Je commence lubrifier...",
+            "Cette profondeur... Bonne...",
+            "Je m'habitue...",
+            "Peut-être que j'aime...",
+            "Continuer..."
+          ],
+          "high": [
+            "Oui ! Baise-moi au sol !",
+            "Jambes écartées pour toi...",
+            "L'épée est parfaite...",
+            "Plus profond ! Enfonce !",
+            "Je suis ta salope au sol...",
+            "Utilise mes trous...",
+            "L'acier me remplit...",
+            "J'adore cette position...",
+            "Baise-moi fort...",
+            "Je suis clouée pour toi...",
+            "Chaque thrust... Paradis...",
+            "Ne t'arrête jamais...",
+            "L'épée me possède...",
+            "Je vis pour ça...",
+            "Encore ! Plus fort !"
+          ]
+        }
+      }
+    },
+    "ERO": {
+      "description": "Commence à baiser rythmiquement GG, sort la langue",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Son rythme... Si régulier... Sans fin...",
+            "...Je sens chaque coup de butoir... Profond dedans...",
+            "...Sa langue... Pendante... Animalistique...",
+            "...C'est juste du sexe... Rien de plus...",
+            "...Son rythme... Si constant...",
+            "...Chaque coup... Profond...",
+            "...Sa langue... Animale...",
+            "...Juste du sexe..."
+          ],
+          "medium": [
+            "...Ses coups de butoir... Si puissants...",
+            "...Il est profond dedans moi...",
+            "...Sa langue... Comme un animal...",
+            "...J'essaie de ne pas y penser...",
+            "...Puissants...",
+            "...Profond...",
+            "...Animal...",
+            "...Ne pas penser..."
+          ],
+          "high": [
+            "...Son rythme est parfait...",
+            "...Chaque coup apporte plaisir...",
+            "...J'adore quand il sort la langue...",
+            "...C'est si excitant...",
+            "...Parfait...",
+            "...Plaisir...",
+            "...Langue...",
+            "...Excitant..."
+          ]
+        }
+      }
+    },
+    "ERO2": {
+      "description": "Baise maintenant plus fort, tenant les seins de GG, utilisant sa chatte activement",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Il tient mes seins... Maintenant...",
+            "...Les coups deviennent plus durs...",
+            "...Il utilise mon corps... Activement...",
+            "...Je sens chaque mouvement...",
+            "...Ses mains sur ma poitrine...",
+            "...Plus fort maintenant...",
+            "...Utilisation active...",
+            "...Chaque mouvement..."
+          ],
+          "medium": [
+            "...Serrer mes seins... Intensifie...",
+            "...Son rythme s'accélère...",
+            "...Il me baise activement...",
+            "...Mon corps répond...",
+            "...Intensifie...",
+            "...Accélère...",
+            "...Activement...",
+            "...Répond..."
+          ],
+          "high": [
+            "...Oui ! Serre mes seins !",
+            "...Baise plus fort !",
+            "...Utilise mon corps !",
+            "...Je suis ton jouet...",
+            "...Plus fort...",
+            "...Actif...",
+            "...Jouet...",
+            "...Encore..."
+          ]
+        }
+      }
+    },
+    "FIN": {
+      "description": "Conchit dedans GG, avant de conchir tire un peu la bite et pousse jusqu'au fond",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Il conchit... Dedans moi...",
+            "...Sa semence chaude... Me remplit...",
+            "...Je sens ça... Coule... Dehors...",
+            "...Sa bite... Toujours dedans... Ramollit...",
+            "...Dedans moi...",
+            "...Remplit...",
+            "...Coule...",
+            "...Ramollit..."
+          ],
+          "medium": [
+            "...Il me remplit...",
+            "...Sperme chaude dedans...",
+            "...Ça sort...",
+            "...Il est toujours dedans...",
+            "...Remplit...",
+            "...Chaude...",
+            "...Sort...",
+            "...Dedans..."
+          ],
+          "high": [
+            "...Sa semence... Si chaude...",
+            "...Il m'a remplie complètement...",
+            "...Je sens comment ça coule...",
+            "...Veux plus...",
+            "...Chaude...",
+            "...Complètement...",
+            "...Coule...",
+            "...Plus..."
+          ]
+        }
+      }
+    },
+    "FIN2": {
+      "description": "Retire l'épée, la sperme coule de la chatte de GG, inspection de son travail",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Il retire l'épée...",
+            "...La sperme coule de moi...",
+            "...Je me sens vide...",
+            "...Marques rouges sur mes poignets...",
+            "...Retire...",
+            "...Coule...",
+            "...Vide...",
+            "...Marques..."
+          ],
+          "medium": [
+            "...L'épée sort lentement...",
+            "...Ma chatte est ouverte...",
+            "...Sperme dégouline...",
+            "...Il inspecte...",
+            "...Sort...",
+            "...Ouverte...",
+            "...Dégouline...",
+            "...Inspecte..."
+          ],
+          "high": [
+            "...Regarde ton œuvre...",
+            "...Je suis marquée pour toi...",
+            "...La sperme est ta signature...",
+            "...Je suis tienne...",
+            "...Marquée...",
+            "...Signature...",
+            "...Sienne...",
+            "...Regarde..."
+          ]
+        }
+      }
+    },
+    "JIGO": {
+      "description": "Après avoir fini, regarde GG avec satisfaction, puis part la laissant attachée",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Il me regarde... Satisfaction...",
+            "...Puis il part...",
+            "...Me laissant attachée...",
+            "...Seule avec sperme...",
+            "...Regarde...",
+            "...Part...",
+            "...Attachée...",
+            "...Seule..."
+          ],
+          "medium": [
+            "...Son regard satisfait...",
+            "...Il tourne le dos...",
+            "...Je reste au sol...",
+            "...Toujours attachée...",
+            "...Satisfait...",
+            "...Dos...",
+            "...Sol...",
+            "...Attachée..."
+          ],
+          "high": [
+            "...Regarde-moi une dernière fois...",
+            "...Je suis ta création...",
+            "...Laisse-moi ici...",
+            "...Je porterai ta marque...",
+            "...Création...",
+            "...Marque...",
+            "...Porterai...",
+            "...Regarde..."
+          ]
+        }
+      }
+    }
+  }
+}

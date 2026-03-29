@@ -1,0 +1,267 @@
+{
+  "settings": {
+    "commentCooldownSeconds": 2.0,
+    "maxSimultaneousComments": 1,
+    "commentDisplayDuration": 4.0,
+    "fontSize": 22.0,
+    "verticalOffset": 100.0,
+    "streamingSpeed": 0.03,
+    "goblinColor": {
+      "r": 1.0,
+      "g": 1.0,
+      "b": 1.0,
+      "a": 1.0
+    },
+    "goblinOutlineColor": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 1.0
+    }
+  },
+  "animations": {
+    "START": {
+      "description": "Captura, pega pelo cabelo e abaixa a cabeça de GG em pernas meio dobradas até a altura da cintura, ameaçando cortar. Depois tira seu pênis na frente do rosto de GG, e depois de uma arma curta aponta direto no peito de GG",
+      "events": {
+        "START": [
+          "De joelhos, bruxa! Esta faca espera sua pele!",
+          "Olhe para mim, vadia! Um erro e você morre!",
+          "Segurem ela mais forte! Agora você vai conhecer minha ira!",
+          "Não ouse se mover! Vou te cortar como gado!",
+          "Você é só um buraco para meu cano, criatura!",
+          "A Inquisição não perdoa! Eu menos ainda!",
+          "Sua vida está em minhas mãos! Agora olhe aqui!",
+          "Seus deuses estão mortos! Curve-se para mim, vadia!",
+          "Esta adaga tem sede do seu sangue! Agora escute!",
+          "Submeta-se ou morra! Escolha agora mesmo!"
+        ]
+      }
+    },
+    "START2": {
+      "description": "Aqui ele claramente diz algo para GG, sobre como vai atirar nela se ela não pegar seu pênis e começar a masturbá-lo",
+      "events": {
+        "START2": [
+          "Masturbe meu pênis, vadia! Ou vou atirar no seu peito!",
+          "Pegue na boca! Senão vou adicionar mais buracos!",
+          "Escolha: meu pênis ou meu aço no seu corpo!",
+          "Comece a trabalhar, puta! Enquanto ainda está viva!",
+          "Cada segundo é uma nova cicatriz na sua carne!",
+          "Deixe duro! Ou vou te matar!",
+          "Posso te perfurar pela frente! Masturbe antes que eu mude de ideia!",
+          "Quer morrer? Não? Então dê prazer!",
+          "Inquisidores queimam bruxas! Eu corto devagar!",
+          "Chupe ou morra! Sua boca ou sua vida, puta!",
+          "Seja mais gentil, ou vou fazer outro buraco em você!",
+          "Seja uma boa garota e você vai viver!"
+        ]
+      }
+    },
+    "ERO": {
+      "description": "Masturba-o obedientemente",
+      "events": {
+        "ERO": [
+          "Bom, meu pênis está pronto, agora vou foder sua boca.",
+          "Agora você vai pegar na boca, bruxa.",
+          "Bom, bruxa. Agora vou foder sua boca.",
+          "Perfeito para uma puta. Agora pegue na boca.",
+          "Meu pênis espera sua garganta. Não o faça esperar.",
+          "Então, agora você vai chupar. Sem perguntas desnecessárias.",
+          "Olhe para mim. Agora você serve seu mestre.",
+          "Abra sua boca mais. Vamos começar seu castigo.",
+          "Meu pênis está pronto. Mostre o que aprendeu no inferno.",
+          "Você deveria ser grata. Que estou fodendo, não cortando.",
+          "Nada mal. Agora mostre sua classe, bruxa.",
+          "Hora de serviço de verdade. Comece, vadia."
+        ]
+      }
+    },
+    "ERO1": {
+      "description": "Continuando a segurar pelo cabelo, puxa a cabeça de GG levemente para trás, ela resiste, mas ele puxa a cabeça de GG com força, empalando sua cabeça no pênis",
+      "events": {
+        "ERO1": [
+          "Chegou a hora, bruxa! Vamos, chupe, bruxa!",
+          "Hora de foder sua boca, bruxa!",
+          "Vamos testar sua garganta!",
+          "Vou foder seu rosto, bruxa!",
+          "Não resista, criatura! Estou movendo sua cabeça eu mesmo!",
+          "Eu disse, cavalgue mais fundo! Sente?",
+          "Pare de se contorcer! Vou rasgar sua garganta!",
+          "Mais fundo, puta! Ainda mais fundo! Quero sentir!",
+          "Sua cabeça é minha! Agora chupe, vadia morta!",
+          "O quê, difícil? Vou te ajudar com uma adaga nas costas!",
+          "Só mais um pouco! Vou chegar no seu estômago!",
+          "Vamos, trabalhe com sua língua! Antes que eu arranque sua cabeça!"
+        ]
+      }
+    },
+    "ERO2": {
+      "description": "Fode GG duro na boca, pode-se dizer na bochecha. Puxa o pênis para fora e enfia de volta na boca",
+      "events": {
+        "ERO2": [
+          "Assim-assim-assim, é assim que eu gosto! Vou foder sua boca até lágrimas!",
+          "Mantenha sua boca mais aberta, vadia! Estou te fodendo na bochecha!",
+          "Achou que era só isso? Estou só esquentando, bruxa!",
+          "Cada enfiada é um golpe de martelo! Sua boca é a bigorna!",
+          "Engula! Engula inteiro! Veja como suas bochechas esticam!",
+          "Assim! É assim que eu gosto! Você deveria ser grata!",
+          "Seu rosto foi feito para isso! Chupe, puta suja!",
+          "Vou entrar e sair! Até você começar a chiar!",
+          "De novo! E de novo! Sua boca vai doer por uma semana!",
+          "Sente como estou te fodendo na bochecha? Lembre disso!"
+        ]
+      }
+    },
+    "ERO3": {
+      "description": "Fodendo na bochecha mais intensamente",
+      "events": {
+        "ERO3": [
+          "Chupe mais forte, bruxa! Você vai engolir tudo até a última gota!",
+          "Vou gozar logo! Você vai beber tudo! Não vai derramar uma gota!",
+          "Prepare-se para sua última ceia, vadia! Tudo dentro!",
+          "Você deveria ser grata por este presente! Beba minha semente!",
+          "Quero ver como você bebe! Não ouse cuspir!",
+          "Só mais um pouco e você vai pegar tudo! Abra sua garganta mais!",
+          "Você queria beber? Vou matar sua sede! E você vai implorar por mais!",
+          "Logo vou te encher! Abra sua boca e receba a bênção!",
+          "Cada gota é vida! Que estou poupando você!",
+          "Engula tudo! Senão vou te fazer lamber do chão!"
+        ]
+      }
+    },
+    "ERO4": {
+      "description": "Aprofunda as enfiadas, agora não puxa completamente para fora, fodendo na boca. Esta é a última fase antes de gozar",
+      "events": {
+        "ERO4": [
+          "Então, estou quase lá! Só mais um pouco, bruxa!",
+          "Aguente, vadia! Vou gozar na sua boca agora!",
+          "Estou quase pronto! Prepare-se para engolir toda minha porra!",
+          "Mais algumas enfiadas! Vou explodir na sua garganta!",
+          "Sinto que está chegando! Chupe mais forte, puta!",
+          "Quase lá! Vou gozar na sua boca! E fique quieta, criatura!",
+          "Quase... quase... Chupe, chupe! Vou te encher!",
+          "Último empurrão! Estou gozando, bruxa! Beba minha porra!",
+          "Prepare-se! Vai ficar quente agora! Muito quente!",
+          "Mais! Mais! Vou te encher com meu suco agora!"
+        ]
+      }
+    },
+    "FIN": {
+      "description": "Puxa para fora e começa a gozar e enfia o pênis na boca de GG. Muita porra",
+      "events": {
+        "FIN": [
+          "AAAA!!! Pegue, vadia! Pegue tudo!",
+          "Coma! Coma minha semente! Agora mesmo!",
+          "Estou gozando! Chupe, engula, puta!",
+          "Aqui está! Pegue minha porra inteira!",
+          "AAAA!!! Tudo na sua boca! Tudo até a última gota!",
+          "Segure! Segure tudo dentro, bruxa!",
+          "Te enchendo! Te enchendo até a borda, vadia!",
+          "Pegue! Pegue cada coágulo! Não perca!",
+          "Ahhh! Assim! É assim que eu gozo!",
+          "Pegue minha semente! Este é seu presente!"
+        ],
+        "SE": {
+          "se_count_1": [
+            "AAAA!!! Estou gozando! Gozando na sua boca!",
+            "Pegue toda minha porra, vadia!",
+            "Aqui está! Tudo na sua boca!",
+            "Estou te enchendo, bruxa!",
+            "Pegue tudo até a última gota!"
+          ],
+          "se_count_2": [
+            "Ainda mais! Ainda mais porra!",
+            "Engula! Engula tudo, puta!",
+            "Estou te enchendo até a borda!",
+            "Toda minha semente para você!"
+          ]
+        }
+      }
+    },
+    "FIN2": {
+      "description": "Puxa seu pênis, porra estica da boca ao pênis, ele balança a cabeça dela, continuando a segurá-la pelo cabelo todo esse tempo, força ela a engolir, ameaçando atirar no peito dela e nela",
+      "events": {
+        "FIN2": [
+          "Puxando. Veja como a porra estica.",
+          "Engula! Engula antes que eu atire no seu peito!",
+          "Abra sua boca e mostre! O que você escondeu aí?",
+          "Estou te segurando pelo cabelo. Assim você vai aprender a engolir.",
+          "Beba tudo! Ou esta bala vai para seu peito.",
+          "Balançando sua cabeça. Para você entender quem manda aqui.",
+          "Abra sua boca! Quero ver que você engoliu tudo.",
+          "Mais uma gota no chão e você morre, puta.",
+          "Limpo? Bom. Agora sirva os outros.",
+          "Porra estica. Lindo. Agora engula, vadia."
+        ]
+      }
+    },
+    "JIGO": {
+      "description": "Não deixa ela cuspir a porra, força ela a engolir, ameaçando atirar no peito dela e nela",
+      "events": {
+        "JIGO": [
+          "Não ouse cuspir! Eu disse engula!",
+          "Engula! Ou vou atirar nos seus peitos!",
+          "Cada gota deve estar dentro de você! Entendeu?",
+          "Beba tudo! Senão você vai se arrepender de ter nascido.",
+          "Vejo que está tentando! Engula mais forte, criatura!",
+          "Se derramar até uma gota, vou cortar sua língua.",
+          "Esta é sua última chance! Beba minha semente!",
+          "Engula! Engula! Antes que eu mude de ideia e atire!",
+          "Sua boca é uma lata de lixo! E lixo não se cospe!",
+          "Faça! Engula! Ou morra agora mesmo!"
+        ]
+      }
+    },
+    "JIGO2": {
+      "description": "Aqui GG termina de engolir e para ter certeza ele exige abrir a boca, GG abre a boca",
+      "events": {
+        "JIGO2": [
+          "Bom, terminou? Abra sua boca, mostre!",
+          "Mais! Devo ter certeza que está limpo!",
+          "Mostre sua garganta vazia, bruxa!",
+          "Abriu? Bom. Agora você sabe seu lugar.",
+          "Limpo. Muito bem. Você ganhou o direito de viver.",
+          "Agora abra sua boca e diga 'obrigada'.",
+          "Posso ver que engoliu. Você aprende rápido, vadia.",
+          "Boa puta. Agora vamos para os outros.",
+          "Você conseguiu. Agora vai servir todos.",
+          "Abriu sua boca? Respire. Agora prepare-se para o próximo."
+        ]
+      }
+    },
+    "JIGOFIN": {
+      "description": "Segura a boca aberta, tenta respirar",
+      "events": {
+        "JIGOFIN": [
+          "Mantenha sua boca aberta. Respire, puta suja.",
+          "Bom. Agora você vai servir o resto dos meus irmãos.",
+          "Você conseguiu. Agora você é nossa puta comum.",
+          "Descanse. O próximo vai chegar logo. E vai ser mais grosso.",
+          "Você é uma boa garota. Agora sua boca pertence a nós.",
+          "Então, terminamos com isso. Passando ela em círculo.",
+          "Você aprendeu. Agora vai servir toda a Inquisição.",
+          "Sua boca está livre. Mas não por muito tempo. Prepare-se de novo.",
+          "Ótimo trabalho. Agora vai trabalhar para todos.",
+          "Você provou que serve para algo. Agora - o próximo!"
+        ]
+      }
+    },
+    "JIGOFIN2": {
+      "description": "DAQUI DEVE SER ENTREGA DE GG PARA CICLO DE GANGBANG, Se o próximo também for um inquisidor",
+      "events": {
+        "JIGOFIN2": [
+          "Ela está sendo passada em círculo. Para outros pervertidos.",
+          "Seu castigo está só começando, bruxa.",
+          "Agora toda a guarda vai foder ela. Um por um.",
+          "Ela vai servir cada um. Até morrer de exaustão.",
+          "Aqui, peguem ela, caras! Ela está aquecida!",
+          "Sua boca pertence a todos. Ela é nossa propriedade comum.",
+          "Próximo! Não fiquem na fila, ela está esperando!",
+          "Ela vai engolir porra a noite toda. Sem descanso.",
+          "Passem ela! Deixem outros aproveitarem também.",
+          "Seu corpo para todos. Sua boca para todos. Ela é uma coisa."
+        ]
+      }
+    }
+  }
+}
+

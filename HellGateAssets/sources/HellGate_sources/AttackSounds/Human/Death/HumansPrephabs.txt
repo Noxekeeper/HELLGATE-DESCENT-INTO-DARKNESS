@@ -1,0 +1,17 @@
+# Human prefabs that play death sounds. One name per line. WAV files go in this folder.
+# Same aliases as attack sounds (Dorei->SinnerslaveCrossbow, TouzokuNormal->Touzoku, etc.)
+Dorei
+Inquisition
+InquisitionRED
+InquisitionWhite
+BlackMafia
+Mafia
+Mafiamuscle
+MafiaBossCustom
+OtherSlavebigAxe
+SlaveBigAxe
+TouzokuAxe
+TouzokuNormal
+Vagrant
+VagrantGuard
+VagrantThrow

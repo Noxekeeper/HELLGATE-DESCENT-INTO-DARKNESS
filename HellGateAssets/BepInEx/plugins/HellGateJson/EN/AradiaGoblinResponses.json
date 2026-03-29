@@ -1,0 +1,733 @@
+{
+  "settings": {
+    "commentCooldownSeconds": 5.0,
+    "maxSimultaneousComments": 1,
+    "commentDisplayDuration": 5.0,
+    "fontSize": 22.0,
+    "verticalOffset": 20.0,
+    "streamingSpeed": 0.025,
+    "responseColor": {
+      "r": 1.0,
+      "g": 1.0,
+      "b": 1.0,
+      "a": 1.0
+    },
+    "responseOutlineColor": {
+      "r": 0.6,
+      "g": 0.0,
+      "b": 0.7,
+      "a": 1.0
+    },
+    "thoughtColor": {
+      "r": 1.0,
+      "g": 1.0,
+      "b": 1.0,
+      "a": 1.0
+    },
+    "thoughtOutlineColor": {
+      "r": 0.9,
+      "g": 0.2,
+      "b": 0.5,
+      "a": 1.0
+    }
+  },
+  "mindBrokenThresholds": [0.3, 0.7],
+  "animations": {
+    "ERO1": {
+      "description": "Aradia responses to goblins starting to lick her",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "W-what are you doing?! Get away from me!",
+            "No! Please stop! This is wrong!",
+            "I... I don't want this! Let me go!",
+            "Somebody help! These monsters...",
+            "Why me? Please, I beg you!",
+            "This can't be happening... No!",
+            "Your tongues are so rough... Stop!",
+            "I feel so violated... Please!",
+            "These green creatures... What do they want?",
+            "My body is shaking... I'm scared!",
+            "Don't touch me there! Please!",
+            "This is a nightmare... Wake up!",
+            "Their eyes are so hungry... Help!",
+            "I can't move... They're too strong!",
+            "What are these monsters doing to me?"
+          ],
+          "medium": [
+            "I... I don't know what to feel...",
+            "Their tongues... They're everywhere...",
+            "This is so wrong... But...",
+            "I can't stop shaking... What now?",
+            "Their touch is so insistent...",
+            "My body is responding... Against my will...",
+            "These goblins... They're so persistent...",
+            "I feel so exposed... So vulnerable...",
+            "Their rough tongues... I can't think...",
+            "This heat... It's building inside me...",
+            "I want to resist... But my body...",
+            "These creatures... They're breaking me...",
+            "Their hunger... It's contagious...",
+            "I feel so dirty... But it feels...",
+            "Their tongues... So relentless..."
+          ],
+          "high": [
+            "Oh god... Their tongues feel so good...",
+            "I need more... Don't stop now!",
+            "These goblins know how to please...",
+            "My body is on fire... Give me more!",
+            "I love how they lick me everywhere...",
+            "Their rough tongues... Perfect!",
+            "I'm so wet... They make me crazy!",
+            "Fuck me with your tongues, monsters!",
+            "I want their cocks... Now!",
+            "These goblins are amazing lovers!",
+            "My pussy aches for them...",
+            "Their saliva... So hot and wet...",
+            "I crave their touch... Everywhere!",
+            "Cum inside me... Please!",
+            "Their tongues drive me wild!"
+          ]
+        }
+      }
+    },
+    "ERO2": {
+      "description": "Aradia responses to goblins intensifying licking",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "No! It's too much! Stop licking!",
+            "Their tongues are everywhere... Help!",
+            "I can't take this... Please stop!",
+            "My body is betraying me... No!",
+            "These monsters... So relentless!",
+            "I feel so helpless... Somebody!",
+            "Their rough tongues hurt... Stop!",
+            "I can't breathe... Too intense!",
+            "Please... I can't handle this!",
+            "My mind is breaking... Stop!",
+            "These goblins won't stop... Help!",
+            "I feel so violated... Everywhere!",
+            "Their tongues... Too deep!",
+            "I'm shaking uncontrollably...",
+            "This is torture... Please stop!"
+          ],
+          "medium": [
+            "I... I don't know... It feels...",
+            "Their tongues... So insistent...",
+            "My body... Responding again...",
+            "This pleasure... Mixed with fear...",
+            "I want to hate it... But...",
+            "Their licking... So intense...",
+            "My resistance... Fading...",
+            "These goblins... So skilled...",
+            "I feel so conflicted... Help me...",
+            "Their touch... Everywhere...",
+            "I can't control my reactions...",
+            "This heat... Building inside...",
+            "Their tongues... So demanding...",
+            "I feel so exposed... So wanted...",
+            "My body... Betraying my mind..."
+          ],
+          "high": [
+            "Yes! Lick me harder, you beasts!",
+            "Their tongues... So fucking good!",
+            "I need them deeper... Faster!",
+            "My pussy is dripping... For them!",
+            "These goblins... Sex gods!",
+            "Fuck me with your tongues!",
+            "I want their cocks... Badly!",
+            "Their saliva... Makes me wetter!",
+            "Lick my clit... Oh god yes!",
+            "I'm their slut... Use me!",
+            "Their rough tongues... Perfect!",
+            "Cum on me... Mark me!",
+            "I love how they devour me!",
+            "More! I need more monsters!",
+            "Their tongues... Drive me insane!"
+          ]
+        }
+      }
+    },
+    "ERO3": {
+      "description": "Aradia responses to goblin pushing tongue deeper",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "No! Too deep! Take it out!",
+            "Their tongue... Inside me... Stop!",
+            "This is too much... I can't!",
+            "Please... Remove your tongue!",
+            "I feel so full... But wrong!",
+            "These monsters... Violating me!",
+            "Their tongue... So deep... Help!",
+            "I can't take this invasion!",
+            "Pull out... Please pull out!",
+            "My body... Stretched... Hurts!",
+            "These goblins... So cruel!",
+            "Their tongue... Exploring...",
+            "I feel so helpless... No!",
+            "This penetration... Wrong!",
+            "Stop... I beg you... Stop!"
+          ],
+          "medium": [
+            "Their tongue... So deep inside...",
+            "I feel... Stretched... Full...",
+            "This sensation... Confusing...",
+            "Their tongue... Moving... Oh...",
+            "I want to resist... But...",
+            "This depth... Too much...",
+            "Their tongue... So insistent...",
+            "I feel so vulnerable... Exposed...",
+            "This invasion... Pleasurable...",
+            "My body... Accepting them...",
+            "Their tongue... Deep... Deep...",
+            "I can't think... Only feel...",
+            "This fullness... Overwhelming...",
+            "Their tongue... Exploring me...",
+            "I feel... So conflicted..."
+          ],
+          "high": [
+            "Deeper! Push your tongue deeper!",
+            "Fuck me with your tongue!",
+            "Their tongue... So deep... Yes!",
+            "Fill me completely... Monster!",
+            "I love how you stretch me!",
+            "Their tongue... Perfect size!",
+            "Fuck my tight hole... Harder!",
+            "I need your cock... Now!",
+            "Their tongue... Makes me cum!",
+            "Deeper penetration... Yes!",
+            "I'm your fuck toy... Use me!",
+            "Their tongue... So skilled!",
+            "Cum inside... Fill me up!",
+            "I crave this fullness... More!",
+            "Their tongue... Drives me wild!"
+          ]
+        }
+      }
+    },
+    "ERO4": {
+      "description": "Aradia responses to goblins licking harder and deeper",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Stop! It's too rough! Mercy!",
+            "Their tongues... Hurting me!",
+            "I can't take this intensity!",
+            "Please... Softer... Please!",
+            "These monsters... No mercy!",
+            "My body... On fire... Stop!",
+            "Their licking... Too hard!",
+            "I feel so abused... Help!",
+            "This pain... Mixed with...",
+            "Stop hurting me... Please!",
+            "Their tongues... Brutal!",
+            "I can't handle this... No!",
+            "Mercy... I beg for mercy!",
+            "Too intense... I can't!",
+            "Their assault... Endless!"
+          ],
+          "medium": [
+            "Their tongues... So intense...",
+            "I feel... Overwhelmed...",
+            "This pleasure... Too much...",
+            "Their licking... Relentless...",
+            "I can't... Control myself...",
+            "Their tongues... Everywhere...",
+            "I feel... So sensitive...",
+            "This intensity... Breaking me...",
+            "Their touch... Demanding...",
+            "I want... To escape... But...",
+            "Their tongues... Skilled...",
+            "This heat... Burning...",
+            "I feel... Consumed...",
+            "Their licking... Perfect...",
+            "My resistance... Gone..."
+          ],
+          "high": [
+            "Harder! Lick me harder!",
+            "Their tongues... So rough... Love it!",
+            "Fuck me senseless... Yes!",
+            "I need this intensity... More!",
+            "Their tongues... Perfect roughness!",
+            "Make me cum... Monsters!",
+            "I love how they abuse me!",
+            "Their licking... Divine!",
+            "Fuck my holes... All of them!",
+            "I crave this brutality!",
+            "Their tongues... So demanding!",
+            "Cum all over me... Yes!",
+            "I'm their cum dumpster!",
+            "More intensity... Please!",
+            "Their tongues... Own me!"
+          ]
+        }
+      }
+    },
+    "ERO5": {
+      "description": "Aradia responses to extreme licking approaching climax",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "No! I'm going to... Stop!",
+            "Their tongues... Pushing me... No!",
+            "I can't hold back... Help!",
+            "This climax... Forced... Wrong!",
+            "Their assault... Too much!",
+            "I'm breaking... Please stop!",
+            "Their tongues... Victory near!",
+            "I don't want to cum... No!",
+            "This pleasure... Against will!",
+            "Their licking... Triumphant!",
+            "Stop... I'm cumming... Stop!",
+            "These monsters... Winning!",
+            "My body... Betraying me!",
+            "Forced orgasm... Horror!",
+            "Their tongues... Conquer me!"
+          ],
+          "medium": [
+            "I... I can't hold back...",
+            "Their tongues... Too skilled...",
+            "This climax... Inevitable...",
+            "I feel... The edge...",
+            "Their licking... Perfect...",
+            "My resistance... Crumbling...",
+            "I want... To fight... But...",
+            "Their tongues... Victory...",
+            "This pleasure... Overpowering...",
+            "I feel... Surrendering...",
+            "Their assault... Successful...",
+            "My body... Giving in...",
+            "This orgasm... Mixed feelings...",
+            "Their tongues... Triumphant...",
+            "I can't... Stop it..."
+          ],
+          "high": [
+            "I'm cumming! Don't stop!",
+            "Their tongues... Making me explode!",
+            "Cum with me... Monsters!",
+            "This climax... Perfect!",
+            "Their licking... Orgasmic!",
+            "Fuck me through orgasm!",
+            "I love how they make me cum!",
+            "Their tongues... Victory!",
+            "Cum harder... Yes!",
+            "I'm their orgasm slave!",
+            "Their licking... Ecstasy!",
+            "Fill me with cum... Now!",
+            "This pleasure... Divine!",
+            "Their tongues... Gods!",
+            "Cum everywhere... Yes!"
+          ]
+        }
+      }
+    },
+    "ERO_iki": {
+      "description": "Aradia responses to forced climax from licking",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "No! I'm cumming! Stop!",
+            "Their tongues... Forced me...",
+            "This orgasm... Humiliating!",
+            "I didn't want this... No!",
+            "Their victory... Complete!",
+            "My body... Betrayed me!",
+            "These monsters... Won!",
+            "Forced climax... Shame!",
+            "Their tongues... Triumphant!",
+            "I hate this pleasure... No!",
+            "Cum... Against my will!",
+            "Their licking... Successful!",
+            "I feel so dirty... Used!",
+            "This ecstasy... Wrong!",
+            "Their conquest... Complete!"
+          ],
+          "medium": [
+            "I'm... Cumming... Oh god...",
+            "Their tongues... Too good...",
+            "This climax... Intense...",
+            "I can't... Stop it...",
+            "Their victory... Sweet...",
+            "My body... Surrendered...",
+            "This pleasure... Overwhelming...",
+            "Their tongues... Perfect...",
+            "I feel... Defeated... But...",
+            "This orgasm... Amazing...",
+            "Their licking... Art...",
+            "I wanted... To resist...",
+            "Their conquest... Pleasurable...",
+            "Cum... So intense...",
+            "Their tongues... Masters..."
+          ],
+          "high": [
+            "Cum! I'm cumming so hard!",
+            "Their tongues... Perfect climax!",
+            "Fuck yes! This orgasm!",
+            "Their licking... Ecstasy!",
+            "Cum with me... Lovers!",
+            "This pleasure... Divine!",
+            "Their tongues... Gods of sex!",
+            "Fill me... Cum inside!",
+            "I'm their cum slut!",
+            "This climax... Intense!",
+            "Their victory... Shared!",
+            "Cum harder... Yes!",
+            "Their tongues... Own my orgasms!",
+            "Fuck me more... Now!",
+            "This ecstasy... Eternal!"
+          ]
+        }
+      }
+    },
+    "2ERO_START": {
+      "description": "Aradia thoughts when goblins start penetration",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...No! They're pushing inside me...",
+            "...This can't be happening... Their cocks...",
+            "...I feel so stretched... It hurts...",
+            "...Their green cocks... So wrong...",
+            "...Please stop... I can't take this...",
+            "...My body... Being violated...",
+            "...These monsters... Using me...",
+            "...I feel so helpless... Filled...",
+            "...Their cocks... So deep inside...",
+            "...This pain... Too much...",
+            "...I can't scream... Mouth full...",
+            "...Their thrusting... Merciless...",
+            "...I'm just a hole for them...",
+            "...This nightmare... Never ends...",
+            "...Their cocks... Pulsing inside..."
+          ],
+          "medium": [
+            "...Their cocks... So big... Filling me...",
+            "...I feel... Stretched... Full...",
+            "...This sensation... Intense...",
+            "...Their thrusting... Rhythm...",
+            "...I can't... Think straight...",
+            "...My body... Responding...",
+            "...These goblins... Skilled...",
+            "...Their cocks... Hot... Hard...",
+            "...I feel... So vulnerable...",
+            "...This fullness... Overwhelming...",
+            "...Their movements... Synchronized...",
+            "...I can't... Control myself...",
+            "...This pleasure... Building...",
+            "...Their cocks... Everywhere...",
+            "...My resistance... Fading..."
+          ],
+          "high": [
+            "...Oh god... Their cocks feel amazing...",
+            "...So full... Both holes stuffed...",
+            "...Their cocks... Perfect size...",
+            "...Fuck me harder... Yes...",
+            "...I need this... Their cocks...",
+            "...Cum inside me... Please...",
+            "...Their thrusting... Ecstasy...",
+            "...I'm their fuck toy... Love it...",
+            "...More cocks... I want more...",
+            "...Their cum... Fill me up...",
+            "...This pleasure... Divine...",
+            "...Fuck me senseless... Yes...",
+            "...Their cocks... Own me...",
+            "...Cum everywhere... Inside...",
+            "...I'm addicted... To their cocks..."
+          ]
+        }
+      }
+    },
+    "2ERO_1": {
+      "description": "Aradia thoughts during initial fucking",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...They're moving... Inside me...",
+            "...Their cocks... Thrusting deep...",
+            "...I can't breathe... Mouth full...",
+            "...This violation... Endless...",
+            "...My body... Bouncing...",
+            "...Their green skin... Disgusting...",
+            "...But their cocks... So insistent...",
+            "...I feel... Used... Dirty...",
+            "...Their grunting... Animalistic...",
+            "...I'm just... A toy...",
+            "...This pain... Mixed with...",
+            "...Their cocks... Pulsing...",
+            "...I can't... Escape...",
+            "...This nightmare... Continues...",
+            "...Their thrusting... Relentless..."
+          ],
+          "medium": [
+            "...Their cocks... Moving in rhythm...",
+            "...I feel... Every inch...",
+            "...This fullness... Intense...",
+            "...Their thrusting... Skilled...",
+            "...My body... Adapting...",
+            "...I can't... Help but feel...",
+            "...Their cocks... So hard...",
+            "...This pleasure... Building...",
+            "...I feel... So full...",
+            "...Their movements... Perfect...",
+            "...I can't... Stop moaning...",
+            "...This sensation... Addictive...",
+            "...Their cocks... Filling me...",
+            "...I feel... Desired...",
+            "...This heat... Burning..."
+          ],
+          "high": [
+            "...Yes! Fuck me with those cocks...",
+            "...Their cocks... So deep... Perfect...",
+            "...I love this fullness... Both holes...",
+            "...Thrust harder... Monsters...",
+            "...Cum inside me... Now...",
+            "...Their cocks... Make me wet...",
+            "...Fuck me like your slut...",
+            "...I need their cum... Badly...",
+            "...Their thrusting... Ecstasy...",
+            "...More! Deeper! Harder!",
+            "...Their cocks... Own my holes...",
+            "...Cum all over me... Yes...",
+            "...I'm their cum receptacle...",
+            "...Fuck me senseless... Please...",
+            "...Their cocks... Feel so good..."
+          ]
+        }
+      }
+    },
+    "2ERO_2": {
+      "description": "Aradia thoughts when goblin fucks deeper and harder",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...He's going deeper... Hurts...",
+            "...Their cocks... So rough...",
+            "...I feel... Torn apart...",
+            "...This depth... Too much...",
+            "...Their thrusting... Violent...",
+            "...My body... Shaking...",
+            "...I can't... Take this...",
+            "...Their cocks... Merciless...",
+            "...This pain... Intense...",
+            "...I'm screaming... Silently...",
+            "...Their grunts... Scary...",
+            "...I feel... Broken...",
+            "...This assault... Never ends...",
+            "...Their cocks... Destroying me...",
+            "...Help... Somebody..."
+          ],
+          "medium": [
+            "...Deeper... Their cocks... Intense...",
+            "...I feel... Every thrust...",
+            "...This depth... Overwhelming...",
+            "...Their cocks... Skilled...",
+            "...My body... Responding...",
+            "...I can't... Help but moan...",
+            "...This pleasure... Painful...",
+            "...Their thrusting... Powerful...",
+            "...I feel... So stretched...",
+            "...Their cocks... Filling me...",
+            "...This heat... Burning...",
+            "...I feel... Consumed...",
+            "...Their movements... Perfect...",
+            "...This fullness... Addictive...",
+            "...Their cocks... Own me..."
+          ],
+          "high": [
+            "...Deeper! Fuck me deeper!",
+            "...Their cocks... Perfect depth...",
+            "...Yes! Pound my holes harder!",
+            "...I love this intensity...",
+            "...Cum deep inside... Please...",
+            "...Their cocks... Hit all spots...",
+            "...Fuck me like a whore...",
+            "...I need their cum... Deep...",
+            "...This pleasure... Intense...",
+            "...Harder! Don't stop!",
+            "...Their cocks... Make me cum...",
+            "...Fill me completely...",
+            "...I'm their fuck hole...",
+            "...Cum everywhere... Yes...",
+            "...Their thrusting... Divine..."
+          ]
+        }
+      }
+    },
+    "2ERO_3": {
+      "description": "Aradia thoughts during rhythmic fucking",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Their rhythm... Unending...",
+            "...I feel... Every movement...",
+            "...This synchronization... Terrifying...",
+            "...Their cocks... Working together...",
+            "...My body... Bouncing helplessly...",
+            "...I can't... Stop this...",
+            "...Their grunts... In unison...",
+            "...This assault... Coordinated...",
+            "...I'm trapped... Between them...",
+            "...Their cocks... Filling me...",
+            "...This nightmare... Synchronized...",
+            "...I feel... So small...",
+            "...Their rhythm... Hypnotic...",
+            "...I can't... Escape...",
+            "...This endless... Fucking..."
+          ],
+          "medium": [
+            "...Their rhythm... Perfect...",
+            "...I feel... Synchronized...",
+            "...Their cocks... Working together...",
+            "...This pleasure... Building...",
+            "...My body... Moving with them...",
+            "...I can't... Help but feel...",
+            "...Their thrusting... Harmonious...",
+            "...This fullness... Complete...",
+            "...Their movements... Beautiful...",
+            "...I feel... Part of this...",
+            "...Their rhythm... Addictive...",
+            "...This heat... Shared...",
+            "...Their cocks... Complementing...",
+            "...I feel... Desired...",
+            "...This ecstasy... Shared..."
+          ],
+          "high": [
+            "...Perfect rhythm... Love it...",
+            "...Their cocks... In perfect sync...",
+            "...Fuck me together... Yes...",
+            "...This coordination... Amazing...",
+            "...Cum at the same time...",
+            "...Their thrusting... Ecstasy...",
+            "...Fill both holes... Perfectly...",
+            "...I'm their synchronized toy...",
+            "...Harder in rhythm... Yes...",
+            "...Their cocks... Work perfectly...",
+            "...Cum inside me... Both...",
+            "...This pleasure... Synchronized...",
+            "...Fuck me in unison...",
+            "...Their rhythm... Drives me wild...",
+            "...Perfect fucking... Yes..."
+          ]
+        }
+      }
+    },
+    "2ERO_4": {
+      "description": "Aradia thoughts when goblins are about to cum",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...They're swelling... Inside me...",
+            "...Their cocks... Getting harder...",
+            "...I feel... The tension...",
+            "...They're going to... Cum...",
+            "...This is it... The end...",
+            "...Their cocks... Pulsing...",
+            "...I can't... Stop them...",
+            "...This final... Assault...",
+            "...Their grunts... Louder...",
+            "...I feel... Their climax...",
+            "...Their cum... Coming...",
+            "...I can't... Escape it...",
+            "...This flood... Inevitable...",
+            "...Their cocks... Ready...",
+            "...Cum... Inside me..."
+          ],
+          "medium": [
+            "...I feel them... Building...",
+            "...Their cocks... Swelling...",
+            "...This climax... Near...",
+            "...Their thrusting... Urgent...",
+            "...I feel... The pressure...",
+            "...Their cum... Ready...",
+            "...This moment... Intense...",
+            "...Their cocks... Throbbing...",
+            "...I can't... Wait...",
+            "...This release... Coming...",
+            "...Their climax... Shared...",
+            "...Cum... Soon...",
+            "...Their cocks... Ready...",
+            "...This pleasure... Peak...",
+            "...Fill me... Completely..."
+          ],
+          "high": [
+            "...Cum inside me... Please...",
+            "...Their cocks... So swollen...",
+            "...I need their cum... Now...",
+            "...Fill me up... Monsters...",
+            "...Cum in my mouth... Too...",
+            "...Their climax... Perfect...",
+            "...Flood me... Yes...",
+            "...Their cum... Hot...",
+            "...Cum everywhere... Inside...",
+            "...I want it all... Yes...",
+            "...Their cocks... Ready to burst...",
+            "...Cum for me... Please...",
+            "...Fill me completely...",
+            "...Their cum... Mine...",
+            "...Cum now... Hard..."
+          ]
+        }
+      }
+    },
+    "2ERO_iki": {
+      "description": "Aradia thoughts during goblin climax",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...They're cumming... Inside me...",
+            "...Hot cum... Filling me...",
+            "...Their cocks... Pulsing...",
+            "...Cum... Everywhere...",
+            "...I feel... Flooded...",
+            "...This heat... Burning...",
+            "...Their cum... Overflowing...",
+            "...I'm filled... With cum...",
+            "...Their climax... Intense...",
+            "...Cum... Dripping out...",
+            "...This mess... Sticky...",
+            "...Their cum... Marks me...",
+            "...I'm covered... In cum...",
+            "...This shame... Complete...",
+            "...Cum... So much cum..."
+          ],
+          "medium": [
+            "...Their cum... So hot...",
+            "...Filling me... Completely...",
+            "...Their cocks... Emptying...",
+            "...Cum... Overflowing...",
+            "...This warmth... Intense...",
+            "...Their climax... Powerful...",
+            "...Cum... Everywhere...",
+            "...I feel... Marked...",
+            "...Their seed... Inside me...",
+            "...This fullness... Ultimate...",
+            "...Cum... Dripping...",
+            "...Their cum... Warm...",
+            "...This pleasure... Mixed...",
+            "...Cum... Filling me...",
+            "...Their climax... Satisfying..."
+          ],
+          "high": [
+            "...Cum! Fill me with cum!",
+            "...Their hot cum... Perfect!",
+            "...Cum in my mouth... Swallow...",
+            "...Cum everywhere... Yes!",
+            "...Their cum... Delicious...",
+            "...Fill me up... Completely...",
+            "...Cum harder... Monsters!",
+            "...Their climax... Amazing...",
+            "...Cum all over me... Yes!",
+            "...Their cum... So hot...",
+            "...I love this flood... Yes!",
+            "...Cum inside... Deep!",
+            "...Their cum... Mine...",
+            "...More cum... Please...",
+            "...Cum forever... Yes!"
+          ]
+        }
+      }
+    }
+  }
+}

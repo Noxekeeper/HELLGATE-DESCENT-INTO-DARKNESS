@@ -1,0 +1,63 @@
+# HELLGATE Spawn Configuration for Nightless City C (Optimized)
+# Total: 50 spawn points (37% reduction from 79)
+# MafiaBossCustom: 10 points (kept for H-scene diversity)
+# Vagrant spawn chance: reduced by 50%
+# Format: X,Y,EnemyType,Count or POOL[Type1,Type2,...]
+
+# ========== ENTRANCE ZONE (Touzoku + occasional Vagrant) ==========
+742.88,-286.79,POOL[TouzokuNormal,TouzokuAxe,Vagrant],1
+763.81,-281.64,POOL[TouzokuNormal,TouzokuAxe],1
+745.63,-279.14,POOL[TouzokuNormal,TouzokuAxe,VagrantGuard],1
+763.37,-268.77,POOL[TouzokuNormal,TouzokuAxe],1
+757.55,-268.77,POOL[TouzokuNormal,TouzokuAxe],1
+758.39,-286.79,POOL[TouzokuNormal,TouzokuAxe],1
+
+# ========== CENTRAL ZONE (Mixed: Touzoku + Vagrant + Dorei) ==========
+825.73,-267.64,POOL[TouzokuNormal,TouzokuAxe,Vagrant,VagrantGuard],1
+820.79,-267.64,POOL[TouzokuNormal,TouzokuAxe,Dorei],1
+814.62,-267.64,POOL[TouzokuNormal,TouzokuAxe,VagrantThrow],1
+810.80,-267.64,POOL[TouzokuNormal,TouzokuAxe],1
+801.96,-267.65,POOL[TouzokuNormal,TouzokuAxe,VagrantGuard,Dorei],1
+789.86,-281.13,POOL[TouzokuNormal,TouzokuAxe,Vagrant],1
+785.00,-276.47,POOL[TouzokuNormal,TouzokuAxe],1
+794.39,-272.27,POOL[TouzokuNormal,TouzokuAxe,VagrantThrow,Dorei],1
+804.72,-273.98,POOL[TouzokuNormal,TouzokuAxe,VagrantGuard],1
+800.54,-267.65,POOL[TouzokuNormal,TouzokuAxe],1
+790.20,-267.65,POOL[TouzokuNormal,TouzokuAxe,Dorei],1
+787.59,-281.13,POOL[TouzokuNormal,TouzokuAxe,VagrantThrow],1
+
+# ========== MAFIA BOSS ZONE (10 points - kept for H-scene diversity) ==========
+792.17,-256.63,MafiaBossCustom,1
+810.79,-287.37,MafiaBossCustom,1
+800.31,-287.37,MafiaBossCustom,1
+800.81,-283.15,Wolf,1
+790.16,-281.13,MafiaBossCustom,1
+866.27,-262.83,MafiaBossCustom,1
+865.42,-262.35,MafiaBossCustom,1
+860.03,-260.97,Wolf,1
+853.56,-257.68,MafiaBossCustom,1
+
+# ========== EXIT ZONE (Touzoku + Dorei + rare Vagrant) ==========
+849.74,-286.79,POOL[TouzokuNormal,TouzokuAxe,Dorei],1
+843.17,-286.79,POOL[TouzokuNormal,TouzokuAxe],1
+832.42,-286.79,POOL[TouzokuNormal,TouzokuAxe,VagrantGuard],1
+825.76,-285.49,POOL[TouzokuNormal,TouzokuAxe,Dorei],1
+852.55,-291.86,POOL[TouzokuNormal,TouzokuAxe,Vagrant,Dorei],1
+847.58,-291.86,POOL[TouzokuNormal,TouzokuAxe],1
+842.88,-291.86,POOL[TouzokuNormal,TouzokuAxe,Dorei],1
+832.09,-298.21,POOL[TouzokuNormal,TouzokuAxe,VagrantThrow],1
+836.52,-301.56,POOL[TouzokuNormal,TouzokuAxe,Dorei],1
+824.12,-309.32,POOL[TouzokuNormal,TouzokuAxe],1
+813.08,-302.97,POOL[TouzokuNormal,TouzokuAxe,VagrantGuard,Dorei],1
+765.85,-312.35,POOL[TouzokuNormal,TouzokuAxe],1
+755.89,-312.35,POOL[TouzokuNormal,TouzokuAxe,Dorei],1
+759.87,-307.57,POOL[TouzokuNormal,TouzokuAxe,Vagrant],1
+750.92,-304.09,POOL[TouzokuNormal,TouzokuAxe],1
+741.95,-304.16,POOL[TouzokuNormal,TouzokuAxe,Dorei],1
+755.53,-291.96,POOL[TouzokuNormal,TouzokuAxe],1
+774.47,-292.47,POOL[TouzokuNormal,TouzokuAxe,VagrantThrow],1
+783.73,-292.47,POOL[TouzokuNormal,TouzokuAxe,Dorei],1
+741.48,-304.16,POOL[TouzokuNormal,TouzokuAxe],1
+739.97,-312.35,POOL[TouzokuNormal,TouzokuAxe,VagrantGuard],1
+742.86,-312.35,POOL[TouzokuNormal,TouzokuAxe,Dorei],1
+746.10,-304.16,POOL[TouzokuNormal,TouzokuAxe],1

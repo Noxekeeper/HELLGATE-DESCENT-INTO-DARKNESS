@@ -1,0 +1,14 @@
+Dorei 
+Inquisition 
+InquisitionRED 
+InquisitionWhite 
+Mafiamuscle 
+MafiaBossCustom 
+OtherSlavebigAxe 
+SlaveBigAxe 
+TouzokuAxe 
+TouzokuNormal
+Vagrant 
+VagrantGuard 
+VagrantThrow 
+

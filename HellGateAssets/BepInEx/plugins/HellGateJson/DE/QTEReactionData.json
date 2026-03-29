@@ -1,0 +1,293 @@
+{
+  "settings": {
+    "correctPressChance": 0.5,
+    "wrongPressChance": 0.5,
+    "comboMilestoneChance": 1.0,
+    "cooldownSeconds": 2.0,
+    "minComboForReaction": 1
+  },
+  "correctPress": {
+    "dominant": [
+      "Du wirst mein Spielzeug sein...",
+      "Ich werde dich sowieso brechen...",
+      "Du wirst brechen...",
+      "Widerstand ist zwecklos, du wirst unser Spielzeug sein...",
+      "Sei ein braves Mädchen, dann lasse ich dich leben...",
+      "Ich liebe es, wenn sie sich wehren, ich liebe es, sie zu brechen...",
+      "Dein Widerstand erregt mich nur...",
+      "Du kannst nicht mehr lange durchhalten...",
+      "Bald wirst du vollständig brechen...",
+      "Dein Wille schmilzt mit jeder Bewegung...",
+      "Du bist bereits am Limit... nur noch ein bisschen mehr...",
+      "Dein Körper verrät dich...",
+      "Du willst das... gib es zu...",
+      "Gib auf... es ist unvermeidlich...",
+      "Du kannst mir nicht entkommen...",
+      "Dein Kampf ist nutzlos...",
+      "Ich werde dich bis zum Ende brechen...",
+      "Du gehörst mir...",
+      "Akzeptiere dein Schicksal...",
+      "Du gehörst bereits mir..."
+    ],
+    "taunting": [
+      "Haha, die Hure versucht sich zu befreien...",
+      "Beruhige dich, Schlampe, du bist fertig...",
+      "Wehr dich nicht, sonst wird es schmerzhaft...",
+      "Du denkst, du kannst entkommen? Lustig...",
+      "Kämpf weiter... es erregt mich nur...",
+      "Dein Kampf ist amüsant... aber nutzlos...",
+      "Du bist schwach... gib schon auf...",
+      "Dein Widerstand stärkt nur mein Verlangen...",
+      "Mach weiter... ich liebe es, hartnäckige zu brechen...",
+      "Du gibst nicht auf? Gut... das wird interessanter...",
+      "Dein Wille ist beeindruckend... aber er ist nicht ewig...",
+      "Ich werde warten... bis du brichst...",
+      "Du bist hartnäckig... aber ich bin geduldig...",
+      "Kämpf weiter... es ist amüsant...",
+      "Du bist unglaublich... aber selbst du wirst brechen..."
+    ],
+    "sexual": [
+      "Du bist so nass... dein Körper verrät dich...",
+      "Dein Widerstand erregt mich nur...",
+      "Du willst das... ich sehe es...",
+      "Dein Körper sagt die Wahrheit...",
+      "Du bist bereits am Rande der Lust...",
+      "Gib dich der Lust hin... es ist einfacher...",
+      "Dein Kampf verstärkt nur die Empfindungen...",
+      "Du kannst dein Verlangen nicht verbergen...",
+      "Dein Körper gehört mir...",
+      "Akzeptiere die Lust... hör auf dich zu wehren...",
+      "Du hast fast schon aufgegeben...",
+      "Dein Wille wird schwächer... dein Körper ist stärker...",
+      "Du kannst der Lust nicht widerstehen...",
+      "Dein Körper verrät dich mit jeder Bewegung...",
+      "Gib auf... und du bekommst mehr..."
+    ]
+  },
+  "wrongPress": {
+    "punishment": [
+      "Aah...!",
+      "Nghh...!",
+      "Nein... es tut weh...!",
+      "Aahh... ich kann nicht...!",
+      "Ughh... so müde...!",
+      "Aah... falsch...!",
+      "Nghh... halte es nicht aus...!",
+      "Aahh... nein...!",
+      "Ughh... keine Kraft...!",
+      "Aah... nicht so...!",
+      "Nghh... kann das nicht mehr...!",
+      "Aahh... müde...!",
+      "Ughh... falsch...!",
+      "Aah... nicht stark genug...!",
+      "Nghh... nein...!"
+    ],
+    "dominant": [
+      "Aah... ich kann nicht...!",
+      "Nghh... halte es nicht aus...!",
+      "Nein... ich habe verloren...!",
+      "Ughh... kann es nicht ertragen...!",
+      "Aahh... ich gebe auf...!",
+      "Nghh... keine Kraft...!",
+      "Aah... kann nicht widerstehen...!",
+      "Ughh... ich habe verloren...!",
+      "Aahh... gebrochen...!",
+      "Nghh... kann nicht mehr...!",
+      "Aah... nein... nicht so...!",
+      "Ughh... ich kann nicht...!",
+      "Aahh... müde... keine Kraft...!",
+      "Nghh... kann es nicht ertragen...!",
+      "Aah... ich habe verloren...!"
+    ],
+    "sexual": [
+      "Mmmh... nein...!",
+      "Aah... ich kann nicht...!",
+      "Nghh... müde...!",
+      "Ughh... nicht so...!",
+      "Aahh... halte es nicht aus...!",
+      "Mmmh... falsch...!",
+      "Aah... keine Kraft...!",
+      "Nghh... kann das nicht mehr...!",
+      "Ughh... ich gebe auf...!",
+      "Aahh... nein... ich kann nicht...!",
+      "Mmmh... müde...!",
+      "Aah... nicht so... falsch...!",
+      "Nghh... keine Kraft zum Widerstand...!",
+      "Ughh... ich kann nicht...!",
+      "Aahh... ich habe verloren...!"
+    ],
+    "threatening": [
+      "Aah... habe Angst...!",
+      "Nghh... nein...!",
+      "Ughh... ich kann nicht...!",
+      "Aahh... fürchte mich...!",
+      "Nghh... halte es nicht aus...!",
+      "Aah... falsch...!",
+      "Ughh... müde...!",
+      "Aahh... nein... nicht so...!",
+      "Nghh... keine Kraft...!",
+      "Aah... kann das nicht mehr...!",
+      "Ughh... ich habe verloren...!",
+      "Aahh... ich gebe auf...!",
+      "Nghh... kann es nicht ertragen...!",
+      "Aah... nein... falsch...!",
+      "Ughh... halte es nicht aus...!"
+    ]
+  },
+  "comboMilestone": {
+    "x10": [
+      "Du hältst durch... aber nicht mehr lange...",
+      "Dein Wille ist stark... aber nicht ewig...",
+      "Mach weiter... es erregt mich nur...",
+      "Du bist hartnäckig... aber ich bin geduldig...",
+      "Dein Widerstand ist beeindruckend... aber nutzlos...",
+      "Kämpf weiter... ich liebe es, hartnäckige zu brechen...",
+      "Du gibst nicht auf? Gut... das wird interessanter...",
+      "Dein Wille ist beeindruckend... aber er ist nicht ewig...",
+      "Ich werde warten... bis du brichst...",
+      "Du bist unglaublich... aber selbst du wirst brechen..."
+    ],
+    "x20": [
+      "Du bist hartnäckig... aber ich bin geduldig...",
+      "Dein Widerstand stärkt nur mein Verlangen...",
+      "Kämpf weiter... es ist amüsant...",
+      "Du gibst nicht auf? Perfekt... das wird länger dauern...",
+      "Dein Wille ist stark... aber ich bin stärker...",
+      "Mach weiter... ich liebe es, solche wie dich zu brechen...",
+      "Du denkst, du kannst gewinnen? Lustig...",
+      "Dein Kampf erregt mich nur...",
+      "Ich werde dich bis zum Ende brechen...",
+      "Du gibst nicht auf? Gut... das wird schmerzhafter..."
+    ],
+    "x30": [
+      "Du bist unglaublich... aber selbst du wirst brechen...",
+      "Dein Wille ist beeindruckend... aber er ist nicht ewig...",
+      "Ich werde warten... bis du aufgibst...",
+      "Du bist hartnäckig... aber ich bin geduldig... und grausam...",
+      "Kämpf weiter... es stärkt nur mein Verlangen...",
+      "Du gibst nicht auf? Perfekt... das wird interessanter...",
+      "Dein Kampf ist amüsant... aber nutzlos...",
+      "Ich werde dich bis zur vollständigen Unterwerfung brechen...",
+      "Du wirst nicht gewinnen... gib schon auf...",
+      "Dein Wille ist stark... aber ich bin stärker... und geduldiger..."
+    ],
+    "x40": [
+      "Du bist unglaublich hartnäckig... aber selbst du wirst brechen...",
+      "Dein Wille ist beeindruckend... aber ich werde ihn brechen...",
+      "Ich werde warten... bis du vollständig aufgibst...",
+      "Du gibst nicht auf? Gut... das wird schmerzhafter und länger dauern...",
+      "Dein Kampf stärkt nur mein Verlangen, dich zu brechen...",
+      "Mach weiter... ich liebe es, solche hartnäckige zu brechen...",
+      "Du denkst, du kannst gewinnen? Lustig... ich werde dich brechen...",
+      "Dein Wille ist stark... aber ich bin stärker... und geduldiger...",
+      "Ich werde dich bis zur vollständigen Unterwerfung brechen...",
+      "Du wirst nicht gewinnen... gib schon auf... es ist unvermeidlich..."
+    ],
+    "x50": [
+      "Du bist unglaublich hartnäckig... aber selbst du wirst brechen...",
+      "Dein Wille ist beeindruckend... aber ich werde ihn vollständig brechen...",
+      "Ich werde warten... bis du vollständig aufgibst...",
+      "Du gibst nicht auf? Gut... das wird schmerzhafter, länger dauern und grausamer sein...",
+      "Dein Kampf stärkt nur mein Verlangen, dich zu brechen...",
+      "Mach weiter... ich liebe es, solche hartnäckige Huren zu brechen...",
+      "Du denkst, du kannst gewinnen? Lustig... ich werde dich bis zum Ende brechen...",
+      "Dein Wille ist stark... aber ich bin stärker... geduldiger... und grausamer...",
+      "Ich werde dich bis zur vollständigen Unterwerfung brechen... du wirst mein Spielzeug sein...",
+      "Du wirst nicht gewinnen... gib schon auf... es ist unvermeidlich... du gehörst bereits mir..."
+    ]
+  },
+  "enemySpecific": {
+    "Mutude": {
+      "correctPress": [
+        "Du wirst mein Spielzeug sein...",
+        "Dein Widerstand ist gegen mich nutzlos...",
+        "Ich werde dich brechen..."
+      ],
+      "wrongPress": [
+        "Aah... ich kann nicht...!",
+        "Nghh... falsch...!",
+        "Ughh... müde...!",
+        "Aahh... halte es nicht aus...!"
+      ]
+    },
+    "Touzoku": {
+      "correctPress": [
+        "Du wirst unser Spielzeug sein, Dieb...",
+        "Widerstand ist zwecklos, du gehörst uns...",
+        "Wir werden dich brechen..."
+      ],
+      "wrongPress": [
+        "Aah... nein...!",
+        "Nghh... ich kann nicht...!",
+        "Ughh... falsch...!",
+        "Aahh... müde...!"
+      ]
+    },
+    "TouzokuAxe": {
+      "correctPress": [
+        "Du wirst mein Spielzeug sein...",
+        "Die Axt wird dir nicht helfen zu entkommen...",
+        "Ich werde dich brechen..."
+      ],
+      "wrongPress": [
+        "Aah... nicht so...!",
+        "Nghh... ich kann nicht...!",
+        "Ughh... keine Kraft...!",
+        "Aahh... falsch...!"
+      ]
+    },
+    "SinnerslaveCrossbow": {
+      "correctPress": [
+        "Du wirst mein Sklave sein...",
+        "Widerstand ist zwecklos, Sklave...",
+        "Ich werde dich brechen, Sklave..."
+      ],
+      "wrongPress": [
+        "Aah... ich kann nicht...!",
+        "Nghh... nein...!",
+        "Ughh... müde...!",
+        "Aahh... halte es nicht aus...!"
+      ]
+    },
+    "Kakasi": {
+      "correctPress": [
+        "Du wirst mein Spielzeug sein, Kakasi...",
+        "Widerstand ist zwecklos...",
+        "Ich werde dich brechen..."
+      ],
+      "wrongPress": [
+        "Aah... falsch...!",
+        "Nghh... ich kann nicht...!",
+        "Ughh... keine Kraft...!",
+        "Aahh... müde...!"
+      ]
+    },
+    "Goblin": {
+      "correctPress": [
+        "Du wirst mein Spielzeug sein...",
+        "Widerstand ist zwecklos...",
+        "Ich werde dich brechen..."
+      ],
+      "wrongPress": [
+        "Aah... nicht so...!",
+        "Nghh... ich kann nicht...!",
+        "Ughh... falsch...!",
+        "Aahh... keine Kraft...!"
+      ]
+    },
+    "BlackInquisitor": {
+      "correctPress": [
+        "Du wirst mein Spielzeug sein, Ketzer...",
+        "Widerstand ist zwecklos, Ketzer...",
+        "Ich werde dich brechen, Ketzer..."
+      ],
+      "wrongPress": [
+        "Aah... ich kann nicht...!",
+        "Nghh... müde...!",
+        "Ughh... falsch...!",
+        "Aahh... halte es nicht aus...!"
+      ]
+    }
+  }
+}
+

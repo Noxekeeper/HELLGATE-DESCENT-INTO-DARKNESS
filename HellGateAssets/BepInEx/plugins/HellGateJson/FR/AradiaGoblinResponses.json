@@ -1,0 +1,733 @@
+{
+  "settings": {
+    "commentCooldownSeconds": 5.0,
+    "maxSimultaneousComments": 1,
+    "commentDisplayDuration": 5.0,
+    "fontSize": 22.0,
+    "verticalOffset": 20.0,
+    "streamingSpeed": 0.025,
+    "responseColor": {
+      "r": 1.0,
+      "g": 1.0,
+      "b": 1.0,
+      "a": 1.0
+    },
+    "responseOutlineColor": {
+      "r": 0.6,
+      "g": 0.0,
+      "b": 0.7,
+      "a": 1.0
+    },
+    "thoughtColor": {
+      "r": 1.0,
+      "g": 1.0,
+      "b": 1.0,
+      "a": 1.0
+    },
+    "thoughtOutlineColor": {
+      "r": 0.9,
+      "g": 0.2,
+      "b": 0.5,
+      "a": 1.0
+    }
+  },
+  "mindBrokenThresholds": [0.3, 0.7],
+  "animations": {
+    "ERO1": {
+      "description": "Réponses d'Aradia quand les gobelins commencent à la lécher",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Q-que faites-vous ?! Éloignez-vous de moi !",
+            "Non ! Arrêtez s'il vous plaît ! C'est mal !",
+            "Je... Je ne veux pas ça ! Laissez-moi partir !",
+            "Quelqu'un aidez ! Ces monstres...",
+            "Pourquoi moi ? S'il vous plaît, je supplie !",
+            "Ça ne peut pas arriver... Non !",
+            "Vos langues sont si rudes... Arrêtez !",
+            "Je me sens si violée... S'il vous plaît !",
+            "Ces créatures vertes... Que veulent-elles ?",
+            "Mon corps tremble... J'ai peur !",
+            "Ne me touchez pas là ! S'il vous plaît !",
+            "C'est un cauchemar... Réveillez-vous !",
+            "Leurs yeux sont si affamés... Aide !",
+            "Je ne peux pas bouger... Ils sont trop forts !",
+            "Que me font ces monstres ?"
+          ],
+          "medium": [
+            "Je... Je ne sais pas quoi ressentir...",
+            "Leurs langues... Elles sont partout...",
+            "C'est si mal... Mais...",
+            "Je ne peux pas arrêter de trembler... Et maintenant ?",
+            "Leur toucher est si insistant...",
+            "Mon corps réagit... Contre ma volonté...",
+            "Ces gobelins... Ils sont si persistants...",
+            "Je me sens si exposée... Si vulnérable...",
+            "Leurs langues rudes... Je ne peux pas penser...",
+            "Cette chaleur... Ça monte en moi...",
+            "Je veux résister... Mais mon corps...",
+            "Ces créatures... Elles me brisent...",
+            "Leur faim... Elle est contagieuse...",
+            "Je me sens si sale... Mais ça fait...",
+            "Leurs langues... Si implacables..."
+          ],
+          "high": [
+            "Oh mon dieu... Leurs langues se sentent si bien...",
+            "J'ai besoin de plus... N'arrêtez pas maintenant !",
+            "Ces gobelins savent comment plaire...",
+            "Mon corps est en feu... Donnez-moi plus !",
+            "J'adore comment ils me lèchent partout...",
+            "Leurs langues rudes... Parfaites !",
+            "Je suis si mouillée... Ils me rendent folle !",
+            "Baisez-moi avec vos langues, monstres !",
+            "Je veux leurs bites... Maintenant !",
+            "Ces gobelins sont des amants incroyables !",
+            "Ma chatte les réclame...",
+            "Leur salive... Si chaude et humide...",
+            "Je crave leur toucher... Partout !",
+            "Concis dedans moi... S'il vous plaît !",
+            "Leurs langues me rendent sauvage !"
+          ]
+        }
+      }
+    },
+    "ERO2": {
+      "description": "Réponses d'Aradia à l'intensification du léchage des gobelins",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Non ! C'est trop ! Arrêtez de lécher !",
+            "Leurs langues sont partout... Aide !",
+            "Je ne peux pas supporter ça... Arrêtez s'il vous plaît !",
+            "Mon corps me trahit... Non !",
+            "Ces monstres... Si impitoyables !",
+            "Je me sens si helpless... Quelqu'un !",
+            "Leurs langues rudes font mal... Arrêtez !",
+            "Je ne peux pas respirer... Trop intense !",
+            "S'il vous plaît... Je ne peux pas gérer ça !",
+            "Mon esprit se brise... Arrêtez !",
+            "Ces gobelins n'arrêtent pas... Aide !",
+            "Je me sens si violée... Partout !",
+            "Leurs langues... Trop profond !",
+            "Je tremble de façon incontrôlable...",
+            "C'est de la torture... Arrêtez s'il vous plaît !"
+          ],
+          "medium": [
+            "Je... Je ne sais pas... Ça fait...",
+            "Leurs langues... Si insistantes...",
+            "Mon corps... Réagit encore...",
+            "Ce plaisir... Mélangé avec la peur...",
+            "Je veux haïr ça... Mais...",
+            "Leur léchage... Si intense...",
+            "Ma résistance... Disparaît...",
+            "Ces gobelins... Si habiles...",
+            "Je me sens si conflictuelle... Aidez-moi...",
+            "Leurs touchers... Partout...",
+            "Je ne peux pas contrôler mes réactions...",
+            "Cette chaleur... Monte dedans...",
+            "Leurs langues... Si exigeantes...",
+            "Je me sens si exposée... Si désirée...",
+            "Mon corps... Trahit mon esprit..."
+          ],
+          "high": [
+            "Oui ! Lèche-moi plus fort, toi bête !",
+            "Leurs langues... Putain c'est bon !",
+            "J'ai besoin d'eux plus profond... Plus vite !",
+            "Ma chatte coule... Pour eux !",
+            "Ces gobelins... Des dieux du sexe !",
+            "Baisez-moi avec vos langues !",
+            "Je veux leurs bites... Vraiment !",
+            "Leur salive... Me rend encore plus mouillée !",
+            "Lèche mon clitoris... Oh mon dieu oui !",
+            "Je suis leur salope... Utilisez-moi !",
+            "Leurs langues rudes... Parfaites !",
+            "Concis sur moi... Marque-moi !",
+            "J'adore comment ils me dévorent !",
+            "Plus ! J'ai besoin de plus de monstres !",
+            "Leurs langues... Me rendent folle !"
+          ]
+        }
+      }
+    },
+    "ERO3": {
+      "description": "Réponses d'Aradia quand un gobelin pousse sa langue plus profondément",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Non ! Trop profond ! Enlève-le !",
+            "Leur langue... Dedans moi... Arrêtez !",
+            "C'est trop... Je ne peux pas !",
+            "S'il vous plaît... Enlève ta langue !",
+            "Je me sens si pleine... Mais mal !",
+            "Ces monstres... Me violent !",
+            "Leur langue... Si profond... Aide !",
+            "Je ne peux pas supporter cette invasion !",
+            "Enlève... S'il te plaît enlève !",
+            "Mon corps... Étiré... Fait mal !",
+            "Ces gobelins... Si cruels !",
+            "Leur langue... Explore...",
+            "Je me sens si helpless... Non !",
+            "Cette pénétration... Mal !",
+            "Arrêtez... Je vous supplie... Arrêtez !"
+          ],
+          "medium": [
+            "Leur langue... Si profond dedans...",
+            "Je sens... Étirée... Pleine...",
+            "Cette sensation... Confuse...",
+            "Leur langue... Bouge... Oh...",
+            "Je veux résister... Mais...",
+            "Cette profondeur... Trop...",
+            "Leur langue... Si insistante...",
+            "Je me sens si vulnérable... Exposée...",
+            "Cette invasion... Plaisir...",
+            "Mon corps... Les accepte...",
+            "Leur langue... Profond... Profond...",
+            "Je ne peux pas penser... Seulement sentir...",
+            "Cette plénitude... Accablante...",
+            "Leur langue... M'explore...",
+            "Je sens... Si conflictuelle..."
+          ],
+          "high": [
+            "Plus profond ! Pousse ta langue plus profond !",
+            "Baise-moi avec ta langue !",
+            "Leur langue... Si profond... Oui !",
+            "Remplis-moi complètement... Monstre !",
+            "J'adore comment tu m'étires !",
+            "Leur langue... Taille parfaite !",
+            "Baise mon trou serré... Plus fort !",
+            "J'ai besoin de ta bite... Maintenant !",
+            "Leur langue... Me fait conchir !",
+            "Pénétration plus profonde... Oui !",
+            "Je suis ton jouet sexuel... Utilise-moi !",
+            "Leur langue... Si habile !",
+            "Concis dedans... Remplis-moi complètement !",
+            "Je crave cette plénitude... Plus !",
+            "Leur langue... Me rend folle !"
+          ]
+        }
+      }
+    },
+    "ERO4": {
+      "description": "Réponses d'Aradia au léchage plus dur et profond des gobelins",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Arrêtez ! C'est trop brutal ! Pitié !",
+            "Leurs langues... Me font mal !",
+            "Je ne peux pas supporter cette intensité !",
+            "S'il vous plaît... Plus doux... S'il vous plaît !",
+            "Ces monstres... Pas de pitié !",
+            "Mon corps... En feu... Arrêtez !",
+            "Leur léchage... Trop dur !",
+            "Je me sens si abusée... Aide !",
+            "Cette douleur... Mélangée avec...",
+            "Arrêtez de me faire mal... S'il vous plaît !",
+            "Leurs langues... Brutes !",
+            "Je ne peux pas gérer ça... Non !",
+            "Pitié... Je supplie pour la pitié !",
+            "Trop intense... Je ne peux pas !",
+            "Leur assaut... Sans fin !"
+          ],
+          "medium": [
+            "Leurs langues... Si intenses...",
+            "Je sens... Submergée...",
+            "Ce plaisir... Trop...",
+            "Leur léchage... Impitoyable...",
+            "Je ne peux pas... Me contrôler...",
+            "Leurs langues... Partout...",
+            "Je sens... Si sensible...",
+            "Cette intensité... Me brise...",
+            "Leurs touchers... Exigeants...",
+            "Je veux... M'échapper... Mais...",
+            "Leurs langues... Habiles...",
+            "Cette chaleur... Brûle...",
+            "Je sens... Consumée...",
+            "Leur léchage... Parfait...",
+            "Ma résistance... Partie..."
+          ],
+          "high": [
+            "Plus dur ! Lèche-moi plus dur !",
+            "Leurs langues... Si rudes... J'adore !",
+            "Baise-moi sans retenue... Oui !",
+            "J'ai besoin de cette intensité... Plus !",
+            "Leurs langues... Rugosité parfaite !",
+            "Fais-moi conchir... Monstres !",
+            "J'adore comment ils m'abusent !",
+            "Leur léchage... Divin !",
+            "Baise mes trous... Tous !",
+            "Je crave cette brutalité !",
+            "Leurs langues... Si exigeantes !",
+            "Concis partout sur moi... Oui !",
+            "Je suis leur poubelle à sperme !",
+            "Plus d'intensité... S'il vous plaît !",
+            "Leurs langues... Possédez-moi !"
+          ]
+        }
+      }
+    },
+    "ERO5": {
+      "description": "Réponses d'Aradia au léchage extrême approchant le climax",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Non ! Je vais... Arrêtez !",
+            "Leurs langues... Me poussent... Non !",
+            "Je ne peux pas me retenir... Aide !",
+            "Ce climax... Forcé... Mal !",
+            "Leur assaut... Trop !",
+            "Je me brise... Arrêtez s'il vous plaît !",
+            "Leurs langues... Victoire proche !",
+            "Je ne veux pas conchir... Non !",
+            "Ce plaisir... Contre ma volonté !",
+            "Leur léchage... Triomphant !",
+            "Arrêtez... Je conchis... Arrêtez !",
+            "Ces monstres... Gagnent !",
+            "Mon corps... Me trahit !",
+            "Orgasme forcé... Horreur !",
+            "Leurs langues... Me conquièrent !"
+          ],
+          "medium": [
+            "Je... Je ne peux pas me retenir...",
+            "Leurs langues... Trop habiles...",
+            "Ce climax... Inévitable...",
+            "Je sens... Le bord...",
+            "Leur léchage... Parfait...",
+            "Ma résistance... S'effondre...",
+            "Je veux... Combattre... Mais...",
+            "Leurs langues... Victoire...",
+            "Ce plaisir... Écrasant...",
+            "Je sens... Je me rends...",
+            "Leur assaut... Succès...",
+            "Mon corps... Se donne...",
+            "Cet orgasme... Sentiments mélangés...",
+            "Leurs langues... Triomphantes...",
+            "Je ne peux pas... L'arrêter..."
+          ],
+          "high": [
+            "Je conchis ! N'arrête pas !",
+            "Leurs langues... Me font exploser !",
+            "Conchis avec moi... Monstres !",
+            "Ce climax... Parfait !",
+            "Leur léchage... Orgasmique !",
+            "Baise-moi pendant l'orgasme !",
+            "J'adore comment ils me font conchir !",
+            "Leurs langues... Victoire !",
+            "Conchis plus fort... Oui !",
+            "Je suis leur esclave d'orgasme !",
+            "Leur léchage... Extase !",
+            "Remplis-moi de sperme... Maintenant !",
+            "Ce plaisir... Divin !",
+            "Leurs langues... Dieux !",
+            "Conchis partout... Oui !"
+          ]
+        }
+      }
+    },
+    "ERO_iki": {
+      "description": "Réponses d'Aradia au climax forcé par le léchage",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Non ! Je conchis ! Arrêtez !",
+            "Leurs langues... M'ont forcée...",
+            "Cet orgasme... Humiliant !",
+            "Je ne voulais pas... Non !",
+            "Leur victoire... Complète !",
+            "Mon corps... M'a trahie !",
+            "Ces monstres... Ont gagné !",
+            "Climax forcé... Honte !",
+            "Leurs langues... Triomphantes !",
+            "Je hais ce plaisir... Non !",
+            "Conchis... Contre ma volonté !",
+            "Leur léchage... Succès !",
+            "Je me sens si sale... Utilisée !",
+            "Cette extase... Mal !",
+            "Leur conquête... Complète !"
+          ],
+          "medium": [
+            "Je... Conchis... Oh mon dieu...",
+            "Leurs langues... Trop bonnes...",
+            "Ce climax... Intense...",
+            "Je ne peux pas... L'arrêter...",
+            "Leur victoire... Douce...",
+            "Mon corps... S'est rendu...",
+            "Ce plaisir... Écrasant...",
+            "Leurs langues... Parfaites...",
+            "Je sens... Vaincue... Mais...",
+            "Cet orgasme... Incroyable...",
+            "Leur léchage... Art...",
+            "Je voulais... Résister...",
+            "Leur conquête... Plaisir...",
+            "Conchis... Si intense...",
+            "Leurs langues... Maîtres..."
+          ],
+          "high": [
+            "Conchis ! Je conchis si fort !",
+            "Leurs langues... Climax parfait !",
+            "Putain oui ! Cet orgasme !",
+            "Leur léchage... Extase !",
+            "Conchis avec moi... Amants !",
+            "Ce plaisir... Divin !",
+            "Leurs langues... Dieux du sexe !",
+            "Remplis-moi... Conchis dedans !",
+            "Je suis leur salope à sperme !",
+            "Ce climax... Intense !",
+            "Leur victoire... Partagée !",
+            "Conchis plus fort... Oui !",
+            "Leurs langues... Possèdent mes orgasmes !",
+            "Baise-moi plus... Maintenant !",
+            "Cette extase... Éternelle !"
+          ]
+        }
+      }
+    },
+    "2ERO_START": {
+      "description": "Pensées de Aradia quand les gobelins commencent la pénétration",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Non ! Ils poussent dedans moi...",
+            "...Ça ne peut pas arriver... Leurs bites...",
+            "...Je me sens si étirée... Ça fait mal...",
+            "...Leurs bites vertes... Si mal...",
+            "...Arrêtez s'il vous plaît... Je ne peux pas supporter...",
+            "...Mon corps... Violé...",
+            "...Ces monstres... M'utilisent...",
+            "...Je me sens si helpless... Remplie...",
+            "...Leurs bites... Si profond dedans...",
+            "...Cette douleur... Trop...",
+            "...Je ne peux pas crier... Bouche pleine...",
+            "...Leurs coups de butoir... Sans pitié...",
+            "...Je suis juste un trou pour eux...",
+            "...Ce cauchemar... Ne finit jamais...",
+            "...Leurs bites... Pulsent dedans..."
+          ],
+          "medium": [
+            "...Leurs bites... Si grandes... Me remplissent...",
+            "...Je sens... Étirée... Pleine...",
+            "...Cette sensation... Intense...",
+            "...Leurs coups de butoir... Rythme...",
+            "...Je ne peux pas... Penser clairement...",
+            "...Mon corps... Réagit...",
+            "...Ces gobelins... Habiles...",
+            "...Leurs bites... Chaudes... Dures...",
+            "...Je sens... Si vulnérable...",
+            "...Cette plénitude... Écrasante...",
+            "...Leurs mouvements... Synchronisés...",
+            "...Je ne peux pas... Me contrôler...",
+            "...Ce plaisir... Monte...",
+            "...Leurs bites... Partout...",
+            "...Ma résistance... Disparaît..."
+          ],
+          "high": [
+            "...Oh mon dieu... Leurs bites se sentent bien...",
+            "...Si pleine... Deux trous baisés...",
+            "...Leurs bites... Taille parfaite...",
+            "...Baise-moi plus fort... Oui...",
+            "...J'ai besoin de ça... Leurs bites...",
+            "...Conchis dedans moi... S'il vous plaît...",
+            "...Leurs coups de butoir... Extase...",
+            "...Je suis leur jouet sexuel... J'adore...",
+            "...Plus de bites... J'en veux plus...",
+            "...Leur sperme... Remplis-moi...",
+            "...Ce plaisir... Divin...",
+            "...Baise-moi sans retenue... Oui...",
+            "...Leurs bites... Me possèdent...",
+            "...Conchis partout... Dedans...",
+            "...Je suis accro... À leurs bites..."
+          ]
+        }
+      }
+    },
+    "2ERO_1": {
+      "description": "Pensées de Aradia pendant le début du baise",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Ils bougent... Dedans moi...",
+            "...Leurs bites... Poussent profond...",
+            "...Je ne peux pas respirer... Bouche pleine...",
+            "...Cette violence... Infinie...",
+            "...Mon corps... Rebondit...",
+            "...Leur peau verte... Dégoûtante...",
+            "...Mais leurs bites... Si insistantes...",
+            "...Je sens... Utilisée... Sale...",
+            "...Leurs grognements... Animaux...",
+            "...Je suis juste... Un jouet...",
+            "...Cette douleur... Mélangée avec...",
+            "...Leurs bites... Pulsent...",
+            "...Je ne peux pas... M'échapper...",
+            "...Ce cauchemar... Continue...",
+            "...Leurs coups de butoir... Sans pitié..."
+          ],
+          "medium": [
+            "...Leurs bites... Bougent en rythme...",
+            "...Je sens... Chaque centimètre...",
+            "...Cette plénitude... Intense...",
+            "...Leurs coups de butoir... Habiles...",
+            "...Mon corps... S'adapte...",
+            "...Je ne peux pas... Ne pas sentir...",
+            "...Leurs bites... Si dures...",
+            "...Ce plaisir... Monte...",
+            "...Je sens... Si pleine...",
+            "...Leurs mouvements... Parfaits...",
+            "...Je ne peux pas... Arrêter de gémir...",
+            "...Cette sensation... Rend addict...",
+            "...Leurs bites... Me remplissent...",
+            "...Je sens... Désirée...",
+            "...Cette chaleur... Brûle..."
+          ],
+          "high": [
+            "...Oui ! Baise-moi avec ces bites...",
+            "...Leurs bites... Si profond... Parfait...",
+            "...J'adore cette plénitude... Deux trous...",
+            "...Pousse plus fort... Monstres...",
+            "...Conchis dedans moi... Maintenant...",
+            "...Leurs bites... Me font couler...",
+            "...Baise-moi comme ta salope...",
+            "...J'ai besoin de leur sperme... Vraiment...",
+            "...Leurs coups de butoir... Extase...",
+            "...Plus ! Plus profond ! Plus dur !",
+            "...Leurs bites... Possèdent mes trous...",
+            "...Conchis partout sur moi... Oui...",
+            "...Je suis leur vase à sperme...",
+            "...Baise-moi sans retenue... S'il vous plaît...",
+            "...Leurs bites... Se sentent si bien..."
+          ]
+        }
+      }
+    },
+    "2ERO_2": {
+      "description": "Pensées de Aradia quand un gobelin baise plus profond et dur",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Il devient plus profond... Fait mal...",
+            "...Leurs bites... Si rudes...",
+            "...Je sens... Déchirée...",
+            "...Cette profondeur... Trop...",
+            "...Leurs coups de butoir... Cruels...",
+            "...Mon corps... Tremble...",
+            "...Je ne peux pas... Supporter...",
+            "...Leurs bites... Sans pitié...",
+            "...Cette douleur... Intense...",
+            "...Je crie... Silencieusement...",
+            "...Leurs grognements... Effrayants...",
+            "...Je sens... Brisée...",
+            "...Cette attaque... Ne finit jamais...",
+            "...Leurs bites... Me détruisent...",
+            "...Aidez... Quelqu'un..."
+          ],
+          "medium": [
+            "...Plus profond... Leurs bites... Intenses...",
+            "...Je sens... Chaque coup de butoir...",
+            "...Cette profondeur... Écrasante...",
+            "...Leurs bites... Habiles...",
+            "...Mon corps... Réagit...",
+            "...Je ne peux pas... Ne pas gémir...",
+            "...Ce plaisir... Douloureux...",
+            "...Leurs coups de butoir... Puissants...",
+            "...Je sens... Si étirée...",
+            "...Leurs bites... Me remplissent...",
+            "...Cette chaleur... Brûle...",
+            "...Je sens... Consumée...",
+            "...Leurs mouvements... Parfaits...",
+            "...Cette plénitude... Rend addict...",
+            "...Leurs bites... Me possèdent..."
+          ],
+          "high": [
+            "...Plus profond ! Baise-moi plus profond !",
+            "...Leurs bites... Profondeur parfaite...",
+            "...Oui ! Défonce mes trous plus fort !",
+            "...J'adore cette intensité...",
+            "...Conchis profond dedans... S'il vous plaît...",
+            "...Leurs bites... Touchent tous les points...",
+            "...Baise-moi comme une salope...",
+            "...J'ai besoin de leur sperme... Profond...",
+            "...Ce plaisir... Intense...",
+            "...Plus fort ! N'arrête pas !",
+            "...Leurs bites... Me font conchir...",
+            "...Remplis-moi complètement...",
+            "...Je suis leur trou à baise...",
+            "...Conchis partout... Oui...",
+            "...Leurs coups de butoir... Divins..."
+          ]
+        }
+      }
+    },
+    "2ERO_3": {
+      "description": "Pensées de Aradia pendant le baise rythmé",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Leur rythme... Infini...",
+            "...Je sens... Chaque mouvement...",
+            "...Cette synchronisation... Terrifiante...",
+            "...Leurs bites... Travaillent ensemble...",
+            "...Mon corps... Rebondit helplessly...",
+            "...Je ne peux pas... Arrêter...",
+            "...Leurs grognements... En unisson...",
+            "...Cette attaque... Coordonnée...",
+            "...Je suis piégée... Entre eux...",
+            "...Leurs bites... Me remplissent...",
+            "...Ce cauchemar... Synchronisé...",
+            "...Je sens... Si petite...",
+            "...Leur rythme... Hypnotique...",
+            "...Je ne peux pas... M'échapper...",
+            "...C'est infini... Baise..."
+          ],
+          "medium": [
+            "...Leur rythme... Parfait...",
+            "...Je sens... Synchronisée...",
+            "...Leurs bites... Travaillent ensemble...",
+            "...Ce plaisir... Monte...",
+            "...Mon corps... Bouge avec eux...",
+            "...Je ne peux pas... Ne pas sentir...",
+            "...Leurs coups de butoir... Harmonieux...",
+            "...Cette plénitude... Complète...",
+            "...Leurs mouvements... Magnifiques...",
+            "...Je sens... Partie de ça...",
+            "...Leur rythme... Rend addict...",
+            "...Cette chaleur... Partagée...",
+            "...Leurs bites... Se complètent...",
+            "...Je sens... Désirée...",
+            "...Cette extase... Partagée..."
+          ],
+          "high": [
+            "...Rythme parfait... J'adore...",
+            "...Leurs bites... En synchro parfaite...",
+            "...Baisez-moi ensemble... Oui...",
+            "...Cette coordination... Incroyable...",
+            "...Conchis simultanément...",
+            "...Leurs coups de butoir... Extase...",
+            "...Remplissez les deux trous... Parfait...",
+            "...Je suis leur jouet synchronisé...",
+            "...Plus fort en rythme... Oui...",
+            "...Leurs bites... Travaillent parfaitement...",
+            "...Conchis dedans moi... Les deux...",
+            "...Ce plaisir... Synchronisé...",
+            "...Baisez-moi en unisson...",
+            "...Leur rythme... Me rend folle...",
+            "...Baise parfait... Oui..."
+          ]
+        }
+      }
+    },
+    "2ERO_4": {
+      "description": "Pensées de Aradia quand les gobelins sont sur le point de conchir",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Ils gonflent... Dedans moi...",
+            "...Leurs bites... Deviennent plus dures...",
+            "...Je sens... Tension...",
+            "...Ils vont... Conchir...",
+            "...C'est la fin... Fin...",
+            "...Leurs bites... Pulsent...",
+            "...Je ne peux pas... Les arrêter...",
+            "...Cette attaque finale...",
+            "...Leurs grognements... Plus forts...",
+            "...Je sens... Leur climax...",
+            "...Leur sperme... Vient...",
+            "...Je ne peux pas... Échapper...",
+            "...Ce flux... Inévitable...",
+            "...Leurs bites... Prêtes...",
+            "...Conchis... Dedans moi..."
+          ],
+          "medium": [
+            "...Je les sens... Montent...",
+            "...Leurs bites... Gonflent...",
+            "...Ce climax... Proche...",
+            "...Leurs coups de butoir... Urgents...",
+            "...Je sens... Pression...",
+            "...Leur sperme... Prêt...",
+            "...Ce moment... Intense...",
+            "...Leurs bites... Pulsent...",
+            "...Je ne peux pas... Attendre...",
+            "...Cette libération... Vient...",
+            "...Leur climax... Partagé...",
+            "...Conchis... Bientôt...",
+            "...Leurs bites... Prêtes...",
+            "...Ce plaisir... Pic...",
+            "...Remplis-moi... Complètement..."
+          ],
+          "high": [
+            "...Conchis dedans moi... S'il vous plaît...",
+            "...Leurs bites... Si gonflées...",
+            "...J'ai besoin de leur sperme... Maintenant...",
+            "...Remplis-moi à ras bord... Monstres...",
+            "...Conchis dans ma bouche... Avale...",
+            "...Leur climax... Parfait...",
+            "...Inonde-moi... Oui...",
+            "...Leur sperme... Chaud...",
+            "...Conchis partout... Dedans...",
+            "...Je veux tout... Oui...",
+            "...Leurs bites... Prêtes à exploser...",
+            "...Conchis pour moi... S'il vous plaît...",
+            "...Remplis-moi complètement...",
+            "...Leur sperme... Mien...",
+            "...Conchis maintenant... Fort..."
+          ]
+        }
+      }
+    },
+    "2ERO_iki": {
+      "description": "Pensées de Aradia pendant le climax des gobelins",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Ils conchissent... Dedans moi...",
+            "...Sperme chaud... Me remplit...",
+            "...Leurs bites... Pulsent...",
+            "...Sperme... Partout...",
+            "...Je sens... Inondée...",
+            "...Cette chaleur... Brûle...",
+            "...Leur sperme... Déborde...",
+            "...Je suis remplie... De sperme...",
+            "...Leur climax... Intense...",
+            "...Sperme... Coule...",
+            "...Ce désordre... Collant...",
+            "...Leur sperme... Me recouvre...",
+            "...Je suis couverte... De sperme...",
+            "...Cette honte... Terminée...",
+            "...Sperme... Tant de sperme..."
+          ],
+          "medium": [
+            "...Leur sperme... Si chaud...",
+            "...Me remplit... Complètement...",
+            "...Leurs bites... Se vident...",
+            "...Sperme... Déborde...",
+            "...Cette chaleur... Intense...",
+            "...Leur climax... Puissant...",
+            "...Sperme... Partout...",
+            "...Je sens... Marquée...",
+            "...Leur semence... Dedans moi...",
+            "...Cette plénitude... Ultime...",
+            "...Sperme... Dégouline...",
+            "...Leur sperme... Tiède...",
+            "...Ce plaisir... Mélangé...",
+            "...Sperme... Me remplit...",
+            "...Leur climax... Satisfaisant..."
+          ],
+          "high": [
+            "...Conchis ! Remplis-moi de sperme !",
+            "...Leur sperme chaud... Parfait !",
+            "...Conchis dans ma bouche... J'avale...",
+            "...Conchis partout... Oui !",
+            "...Leur sperme... Délicieux...",
+            "...Remplis-moi à ras bord... Complètement...",
+            "...Conchis plus fort... Monstres !",
+            "...Leur climax... Incroyable...",
+            "...Conchis partout sur moi... Oui !",
+            "...Leur sperme... Si chaud...",
+            "...J'adore cette inondation... Oui !",
+            "...Conchis dedans... Profond !",
+            "...Leur sperme... Mien...",
+            "...Plus de sperme... S'il vous plaît...",
+            "...Conchis éternellement... Oui !"
+          ]
+        }
+      }
+    }
+  }
+}

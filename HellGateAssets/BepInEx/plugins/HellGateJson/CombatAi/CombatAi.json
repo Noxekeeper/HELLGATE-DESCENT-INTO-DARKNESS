@@ -1,0 +1,15 @@
+{
+  "Enable": true,
+  "DebugLogging": false,
+  "MeleeAttackRateMultiplier": 1.5,
+  "ReactToCombo": true,
+  "ReactToComboDodgeChance": 0.4,
+  "ReactToComboMaxAvoidcount": 2,
+  "ReactToComboOnlyFirstHit": false,
+  "ReactToComboMinAvoidcount": 1,
+  "DoreiEnable": true,
+  "DoreiDisableFlee": true,
+  "DoreiPreferMeleeOverFleeChance": 0.9,
+  "DoreiMeleeRangeThreshold": 2.0,
+  "DoreiMeleeAttackRateMultiplier": 1.5
+}

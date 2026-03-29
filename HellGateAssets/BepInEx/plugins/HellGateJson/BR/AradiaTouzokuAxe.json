@@ -1,0 +1,907 @@
+{
+  "settings": {
+    "responseDelayMin": 1.5,
+    "responseDelayMax": 2.5,
+    "commentCooldownSeconds": 4.0,
+    "maxSimultaneousComments": 1,
+    "commentDisplayDuration": 5.0,
+    "fontSize": 22.0,
+    "verticalOffset": 20.0,
+    "boneName": "face",
+    "responseColor": {
+      "r": 0.8,
+      "g": 0.4,
+      "b": 1.0,
+      "a": 1.0
+    },
+    "responseOutlineColor": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 0.0
+    },
+    "thoughtColor": {
+      "r": 1.0,
+      "g": 0.6,
+      "b": 0.8,
+      "a": 1.0
+    },
+    "thoughtOutlineColor": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 0.0
+    }
+  },
+  "mindBrokenThresholds": [0.3, 0.7],
+  "animations": {
+    "START": {
+      "description": "De pé atrás, captura e amarra as mãos de GG atrás da cabeça, mostrando seus peitos",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Não!Me solte!Não me toque!",
+            "Alguém me ajude!Este monstro está me pegando!",
+            "Tire suas mãos de mim!Não vou deixar!",
+            "Pare!Você está me machucando!Me solte!",
+            "Não!Não quero isso!Me ajude!",
+            "Suas mãos são tão ásperas... Pare de me tocar!",
+            "Me solte!Por favor!Não faça isso!",
+            "Isso não pode estar acontecendo... Não!",
+            "Alguém me salve deste selvagem!",
+            "Não vou ceder a você!Me solte as mãos!",
+            "Seu aperto é forte demais... Não consigo escapar!",
+            "Não!Não me exponha assim!",
+            "Me sinto tão exposta... Por favor,pare!",
+            "Esta humilhação... Não consigo suportar!",
+            "Suas mãos na minha pele... Tão errado!"
+          ],
+          "medium": [
+            "Eu... eu não sei o que fazer...",
+            "Suas mãos estão em todos os lugares... Me sinto tão indefesa...",
+            "Este aperto... Tão firme... Não consigo me mover...",
+            "Meu corpo está exposto... Todos podem ver...",
+            "Tento lutar... Mas é inútil...",
+            "Sua força... Tão avassaladora...",
+            "Sinto sua respiração no meu pescoço... Tão próxima...",
+            "Minhas mãos estão amarradas... Não consigo me defender...",
+            "Esta posição... Tão vulnerável...",
+            "Seu toque... Me faz sentir estranho...",
+            "Não consigo esconder meu corpo... Tudo exposto...",
+            "Esta humilhação... Me quebrando...",
+            "Suas mãos nos meus seios... Sinto conflito...",
+            "Quero resistir... Mas meu corpo...",
+            "Esta captura... Tão completa..."
+          ],
+          "high": [
+            "Suas mãos sentem tão fortes... Eu gosto...",
+            "Ser pega assim... Excitante...",
+            "Meu corpo é dele... Ele pode fazer qualquer coisa...",
+            "Quero que ele me toque mais... Em todos os lugares...",
+            "Esta indefensabilidade... Excitante...",
+            "Seu aperto nas minhas mãos... Controle perfeito...",
+            "Meus seios expostos... Por ele...",
+            "Eu gosto de como ele me mostra...",
+            "Ele pode fazer qualquer coisa...",
+            "Eu pertenço a ele... Completamente...",
+            "Seu domínio... Me excita...",
+            "Me sinto tão... Possuída...",
+            "Suas mãos... Em todos os lugares...",
+            "Quero que ele me toque... Mais...",
+            "Esta posição... Perfeita..."
+          ]
+        }
+      }
+    },
+    "START2": {
+      "description": "Tira sua espada de aço da bainha e enfia com o cabo para cima na frente de GG",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Espada?! O que você vai fazer com ela?!",
+            "Não!Não a aproxime de mim!",
+            "Você vai me cortar?Por favor,não!",
+            "Aquela espada parece tão perigosa... Fique longe!",
+            "Não vou lamber isso!É nojento!",
+            "Sua espada... Coberta de quem sabe o quê!",
+            "Por favor,guarde... Eu imploro!",
+            "Isso é demais... Mesmo para você...",
+            "Não posso fazer isso... Humilhante!",
+            "Minha boca na sua espada?Nunca!",
+            "Isso é bárbaro... Mesmo para um monstro...",
+            "Eu recuso!Não vou me rebaixar!",
+            "Aquele punho... Sujo!",
+            "Não!Tire sua arma de mim!",
+            "Isso é tortura... Tortura psicológica..."
+          ],
+          "medium": [
+            "Sua espada... Tão próxima do meu rosto...",
+            "Aço... Frio e impiedoso...",
+            "Ele quer que eu... Com o punho...",
+            "Isso é tão degradante... Mas sinto curiosidade...",
+            "Metal... Duro e impiedoso...",
+            "Devo resistir... Mas se...",
+            "Sua arma... Símbolo de seu poder...",
+            "Punho... Como vai provar...",
+            "Este aço... Frio mas quente...",
+            "Suas intenções... Claras...",
+            "Esta situação... Incontrolável...",
+            "Espada... Diante dos meus olhos...",
+            "Sinto... Mesmo não querendo...",
+            "Esta tentação... Forte demais...",
+            "Sua espada... Vai ser minha..."
+          ],
+          "high": [
+            "Espada... Tão excitante...",
+            "Aquele punho... Quero lamber...",
+            "Sua arma... Na minha boca...",
+            "Este aço... Sente quente...",
+            "Quero... Provar...",
+            "Punho da espada... Meu...",
+            "Este perigo... Eu gosto...",
+            "Sua espada... Me enchendo...",
+            "Mais... Aproxime...",
+            "Esta sensação... Perfeita...",
+            "Espada... Minha...",
+            "Quero lamber... Agora...",
+            "Sua arma... Meu prazer...",
+            "Sim... Mais...",
+            "Este aço... Quero..."
+          ]
+        }
+      }
+    },
+    "START3": {
+      "description": "Sem soltar, levanta GG por trás pelos braços e empala sua buceta no cabo da espada, profundamente, pernas tocam o chão",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Não!Ele está... Empurrando!Espada!",
+            "Dói!Tão doloroso!Tire!",
+            "Minha... Dentro da espada?! Não!",
+            "Isso é loucura!Pare!",
+            "Punho da espada... Na minha vagina!",
+            "Não consigo suportar!Tire!",
+            "Este aço... Frio... Quente...",
+            "Corpo... Sendo rasgado!",
+            "Me ajude!Alguém!",
+            "Esta dor... Não consigo suportar!",
+            "Espada... Fundo... Não!",
+            "Minha... Sendo destruída!",
+            "Pare!Por favor!",
+            "Esta invasão... Ruim!",
+            "Punho da espada... Me enchendo..."
+          ],
+          "medium": [
+            "Punho da espada... Entrando...",
+            "Esta sensação... Estranha...",
+            "Aço... Duro... Frio...",
+            "Corpo... Esticando...",
+            "Esta dor... Misturada...",
+            "Sinto... Mesmo não querendo...",
+            "Espada... Fundo...",
+            "Esta plenitude... Nova...",
+            "Sua força... Me levantando...",
+            "Corpo... Tremendo...",
+            "Esta invasão... Profunda...",
+            "Sensação... Em todos os lugares...",
+            "Punho da espada... Me enchendo...",
+            "Esta sensação... Avassaladora...",
+            "Corpo... Aceitando..."
+          ],
+          "high": [
+            "Punho da espada... Entrando... Bom...",
+            "Esta sensação... Incrível...",
+            "Corpo... Tremendo...",
+            "Espada... Me fodendo...",
+            "Ele... Me levantando...",
+            "Tire... Volte...",
+            "Esta ação... Eu gosto!",
+            "Corpo... Respondendo...",
+            "Quero... Mais...",
+            "Sua espada... Perfeita!",
+            "Esta plenitude... Sagrada!",
+            "Sim... Mais forte!",
+            "Punho da espada... Meu...",
+            "Corpo... Explodindo...",
+            "Este prazer... Quero..."
+          ]
+        }
+      }
+    },
+    "START4": {
+      "description": "Move GG levemente no cabo da espada imitando que está em um pênis, GG tem rosto ahegao",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Mover?! Pare!",
+            "Espada se movendo... Não!",
+            "Isso... Ruim!",
+            "Corpo... Balançando...",
+            "Punho da espada... Me fodendo...",
+            "Pare!Por favor!",
+            "Esta ação... Não consigo suportar!",
+            "Corpo... Respondendo...",
+            "Não!Mais forte!",
+            "Espada... Me fodendo...",
+            "Esta sensação... Chocante...",
+            "Corpo... Tremendo...",
+            "Pare... Pare...",
+            "Punho da espada... Movendo...",
+            "Isso... Tortura..."
+          ],
+          "medium": [
+            "Punho da espada... Se movendo...",
+            "Esta sensação... Estranha...",
+            "Corpo... Balançando...",
+            "Sensação... Mesmo não querendo...",
+            "Espada... Lentamente se movendo...",
+            "Esta ação... Rítmica...",
+            "Corpo... Se ajustando...",
+            "Esta invasão... Profunda...",
+            "Sensação... Em todos os lugares...",
+            "Punho da espada... Me fodendo...",
+            "Esta ação... Hipnótica...",
+            "Corpo... Respondendo...",
+            "Quero... Mais...",
+            "Esta sensação... Misturada...",
+            "Espada... Me enchendo..."
+          ],
+          "high": [
+            "Punho da espada... Se movendo... Bom...",
+            "Esta ação... Eu gosto...",
+            "Corpo... Balançando...",
+            "Espada... Me fodendo...",
+            "Mais... Mova mais forte...",
+            "Esta sensação... Incrível...",
+            "Punho da espada... Perfeito...",
+            "Corpo... Tremendo...",
+            "Quero... Mais...",
+            "Espada... Fundo...",
+            "Esta ação... Êxtase...",
+            "Sim... Mais...",
+            "Punho da espada... Meu...",
+            "Corpo... Respondendo...",
+            "Este prazer... Melhor..."
+          ]
+        }
+      }
+    },
+    "START5": {
+      "description": "GG goza na espada, então TouzokuAxe senta em posição de lótus e empala GG em seu pênis (reversecowgirl)",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Não!Estou gozando... Na espada!",
+            "Corpo... Traindo...",
+            "Este orgasmo... Não quero!",
+            "Punho da espada... Me fodendo...",
+            "Não consigo suportar... Estou gozando...",
+            "Esta sensação... Ruim...",
+            "Corpo... Tremendo...",
+            "Espada... Me enchendo...",
+            "Estou gozando... Não consigo parar...",
+            "Este orgasmo... Forçado...",
+            "Corpo... Respondendo...",
+            "Punho da espada... Molhado...",
+            "Isso... Vergonha...",
+            "Estou gozando... Me ajude...",
+            "Espada... Me destruindo..."
+          ],
+          "medium": [
+            "Estou... Gozando na espada...",
+            "Este orgasmo... Misturado...",
+            "Corpo... Tremendo...",
+            "Punho da espada... Me fodendo...",
+            "Esta sensação... Avassaladora...",
+            "Mesmo não querendo... Estou gozando...",
+            "Corpo... Traindo...",
+            "Espada... Me enchendo...",
+            "Este prazer... Não quero...",
+            "Estou gozando... Não consigo parar...",
+            "Corpo... Respondendo...",
+            "Punho da espada... Perfeito...",
+            "Este orgasmo... Forte...",
+            "Sensação... Em todos os lugares...",
+            "Espada... Me possuindo..."
+          ],
+          "high": [
+            "Estou gozando!Na espada!",
+            "Este orgasmo... Incrível!",
+            "Punho da espada... Perfeito!",
+            "Corpo... Tremendo...",
+            "Quero... Mais...",
+            "Espada... Me enchendo!",
+            "Este prazer... Sagrado!",
+            "Estou gozando... Não consigo parar!",
+            "Punho da espada... Meu...",
+            "Corpo... Explodindo...",
+            "Este orgasmo... Quero!",
+            "Espada... Fundo...",
+            "Sensação... Em todos os lugares!",
+            "Mais... Mais forte!",
+            "Este êxtase... Eterno!"
+          ]
+        }
+      }
+    },
+    "ERO": {
+      "description": "Empala bem e levanta quase até o fim, empala de novo",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Não!Seu... Entrando!",
+            "Dói!Tão doloroso!",
+            "Seu pau... Duro!",
+            "Corpo... Sendo rasgado!",
+            "Pare!Tire!",
+            "Esta invasão... Profunda!",
+            "Seu pau... Me fodendo...",
+            "Não consigo suportar!Dói!",
+            "Corpo... Tremendo...",
+            "Ele... Me levantando...",
+            "Pau... Tire...",
+            "Volte... Entrando!",
+            "Não!Mais forte!",
+            "Esta dor... Não consigo suportar!",
+            "Seu pau... Implacável!"
+          ],
+          "medium": [
+            "Seu pau... Entrando...",
+            "Esta sensação... Avassaladora...",
+            "Corpo... Esticando...",
+            "Sua força... Me levantando...",
+            "Pau... Tire...",
+            "Volte... Fundo...",
+            "Esta ação... Perfeita...",
+            "Corpo... Respondendo...",
+            "Sensação... Mesmo não querendo...",
+            "Seu pau... Duro...",
+            "Esta plenitude... Nova...",
+            "Corpo... Se ajustando...",
+            "Quero... Mais...",
+            "Esta invasão... Profunda...",
+            "Ele... Me controlando..."
+          ],
+          "high": [
+            "Seu pau... Entrando... Bom!",
+            "Esta sensação... Incrível!",
+            "Corpo... Tremendo...",
+            "Pau... Fundo...",
+            "Ele... Me levantando...",
+            "Tire... Volte...",
+            "Esta ação... Eu gosto!",
+            "Corpo... Respondendo...",
+            "Quero... Mais!",
+            "Seu pau... Perfeito!",
+            "Esta plenitude... Sagrada!",
+            "Sim... Mais forte!",
+            "Pau... Me possuindo!",
+            "Corpo... Explodindo...",
+            "Este prazer... Quero!"
+          ]
+        }
+      }
+    },
+    "ERO2": {
+      "description": "Começou a foder GG ritmicamente, põe a língua para fora",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Ele está... Rítmicamente...",
+            "...Pau... Entrando e saindo...",
+            "...Corpo... Balançando...",
+            "...Esta ação... Não consigo suportar...",
+            "...Sua língua... Estendendo...",
+            "...Sensação estranha... Horrível...",
+            "...Pau... Fundo...",
+            "...Corpo... Dói...",
+            "...Este ritmo... Hipnótico...",
+            "...Sensação... Não quero...",
+            "...Ele... Me fodendo...",
+            "...Língua... Por quê...",
+            "...Corpo... Tremendo...",
+            "...Esta invasão... Profunda...",
+            "...Me ajude..."
+          ],
+          "medium": [
+            "...Seu pau... Rítmico...",
+            "...Entrando e saindo... Perfeito...",
+            "...Corpo... Respondendo...",
+            "...Esta ação... Boa...",
+            "...Sua língua... Estendendo...",
+            "...Interessante... Um pouco...",
+            "...Pau... Me enchendo...",
+            "...Sensação... Misturada...",
+            "...Este ritmo... Eu gosto...",
+            "...Corpo... Aquecendo...",
+            "...Quero... Mais...",
+            "...Sua língua... Interessante...",
+            "...Esta ação... Profunda...",
+            "...Corpo... Se ajustando...",
+            "...Este prazer... Aumentando..."
+          ],
+          "high": [
+            "...Seu pau... Ritmo perfeito...",
+            "...Entrando e saindo... Incrível...",
+            "...Corpo... Tremendo...",
+            "...Esta ação... Eu gosto!",
+            "...Sua língua... Excitante...",
+            "...Quero... Sua língua...",
+            "...Pau... Me enlouquecendo...",
+            "...Este ritmo... Sagrado...",
+            "...Corpo... Respondendo...",
+            "...Quero... Mais!",
+            "...Sua língua... Quero...",
+            "...Esta ação... Profunda...",
+            "...Corpo... Queimando...",
+            "...Este prazer... Melhor!",
+            "...Sim... Mais..."
+          ]
+        }
+      }
+    },
+    "2ERO": {
+      "description": "Pega um dos peitos de GG com a mão",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Sua mão... No meu seio...",
+            "...Tocando... Não...",
+            "...Esta mão... Áspera...",
+            "...Seio... Dói...",
+            "...Sensação... Não quero...",
+            "...Seus dedos... Forte...",
+            "...Corpo... Tremendo...",
+            "...Este toque... Ruim...",
+            "...Seio... Dele...",
+            "...Pare... Por favor...",
+            "...Esta sensação... Não consigo suportar...",
+            "...Sua mão... Implacável...",
+            "...Sensação... Em todos os lugares...",
+            "...Seio... Quente...",
+            "...Me ajude..."
+          ],
+          "medium": [
+            "...Sua mão... No meu seio...",
+            "...Toque... Interessante...",
+            "...Esta mão... Forte...",
+            "...Seio... Respondendo...",
+            "...Sensação... Misturada...",
+            "...Seus dedos... Gentil...",
+            "...Corpo... Tremendo...",
+            "...Este toque... Bom...",
+            "...Seio... Sensível...",
+            "...Quero... Mais...",
+            "...Sua mão... Incrível...",
+            "...Esta sensação... Nova...",
+            "...Corpo... Aquecendo...",
+            "...Seio... Doendo...",
+            "...Este prazer... Aumentando..."
+          ],
+          "high": [
+            "...Sua mão... No meu seio... Eu gosto!",
+            "...Tocando... Mais!",
+            "...Esta mão... Incrível...",
+            "...Seio... Queimando...",
+            "...Sensação... Em todos os lugares!",
+            "...Seus dedos... Perfeitos!",
+            "...Corpo... Tremendo...",
+            "...Quero... Mais!",
+            "...Seio... Dele...",
+            "...Este toque... Melhor!",
+            "...Sim... Forte!",
+            "...Seio... Doendo...",
+            "...Este prazer... Eterno!",
+            "...Mais... Toque!",
+            "...Sua mão... Quero!"
+          ]
+        }
+      }
+    },
+    "2ERO2": {
+      "description": "Continua apertando o peito, acaricia o mamilo",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Sua mão... Apertando forte...",
+            "...Mamilo... Acariciando...",
+            "...Esta sensação... Intensa...",
+            "...Corpo... Tremendo...",
+            "...Sensação... Não quero...",
+            "...Seus dedos... No mamilo...",
+            "...Seio... Quente...",
+            "...Este toque... Não consigo suportar...",
+            "...Mamilo... Sensível...",
+            "...Pare... Por favor...",
+            "...Este prazer... Forte demais...",
+            "...Sua mão... Implacável...",
+            "...Corpo... Respondendo...",
+            "...Seio... Doendo...",
+            "...Me ajude..."
+          ],
+          "medium": [
+            "...Sua mão... No mamilo...",
+            "...Acariciando... Perfeito...",
+            "...Esta sensação... Boa...",
+            "...Corpo... Tremendo...",
+            "...Sensação... Misturada...",
+            "...Seus dedos... Gentil...",
+            "...Seio... Respondendo...",
+            "...Este toque... Eu gosto...",
+            "...Mamilo... Endurecendo...",
+            "...Quero... Mais...",
+            "...Sua mão... Incrível...",
+            "...Esta sensação... Nova...",
+            "...Corpo... Aquecendo...",
+            "...Seio... Doendo...",
+            "...Este prazer... Aumentando..."
+          ],
+          "high": [
+            "...Sua mão... Mamilo... Incrível!",
+            "...Apertando forte... Acariciando!",
+            "...Esta sensação... Sagrada!",
+            "...Corpo... Tremendo...",
+            "...Sensação... Em todos os lugares!",
+            "...Seus dedos... Perfeitos!",
+            "...Seio... Queimando...",
+            "...Quero... Mais!",
+            "...Mamilo... Dele...",
+            "...Este toque... Melhor!",
+            "...Sim... Forte!",
+            "...Seio... Doendo...",
+            "...Este prazer... Eterno!",
+            "...Mais... Acaricie!",
+            "...Sua mão... Quero!"
+          ]
+        }
+      }
+    },
+    "2ERO3": {
+      "description": "Remove a mão, começa a empalar GG acentuadamente, GG tem rosto ahegao",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Sua mão... Saiu...",
+            "...Pau... Empurrando fortemente...",
+            "...Corpo... Balançando...",
+            "...Esta ação... Intensa...",
+            "...Sensação... Não quero...",
+            "...Pau... Fundo...",
+            "...Corpo... Tremendo...",
+            "...Este empurrão... Implacável...",
+            "...Rosto... Ficando estranho...",
+            "...Não consigo suportar... Intenso...",
+            "...Seu pau... Duro...",
+            "...Corpo... Respondendo...",
+            "...Esta ação... Profunda...",
+            "...Me ajude...",
+            "...Rosto... Ficando estranho..."
+          ],
+          "medium": [
+            "...Sua mão... Saiu...",
+            "...Pau... Enfatizando...",
+            "...Corpo... Balançando...",
+            "...Esta ação... Boa...",
+            "...Sensação... Misturada...",
+            "...Pau... Fundo...",
+            "...Corpo... Tremendo...",
+            "...Este empurrão... Eu gosto...",
+            "...Rosto... Mudando...",
+            "...Quero... Mais...",
+            "...Seu pau... Perfeito...",
+            "...Esta ação... Profunda...",
+            "...Corpo... Respondendo...",
+            "...Este prazer... Aumentando...",
+            "...Rosto... Ahegao..."
+          ],
+          "high": [
+            "...Sua mão... Saiu...",
+            "...Pau... Empurrando fortemente!",
+            "...Corpo... Balançando...",
+            "...Esta ação... Incrível!",
+            "...Sensação... Em todos os lugares!",
+            "...Pau... Fundo!",
+            "...Corpo... Tremendo...",
+            "...Este empurrão... Eu gosto!",
+            "...Rosto... Ahegao!",
+            "...Quero... Mais!",
+            "...Seu pau... Deus!",
+            "...Esta ação... Êxtase!",
+            "...Corpo... Queimando...",
+            "...Este prazer... Melhor!",
+            "...Sim... Mais forte!"
+          ]
+        }
+      }
+    },
+    "2ERO4": {
+      "description": "Fodendo GG pressionando, saltando com os quadris e pressionando para trás com as mãos nos quadris, GG tem rosto ahegao, ritmo mais rápido",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Ele... Pressionando fortemente...",
+            "...Quadris... Saltando...",
+            "...Mãos... Na minha cintura...",
+            "...Ritmo... Mais rápido...",
+            "...Corpo... Balançando...",
+            "...Sensação... Não quero...",
+            "...Seu pau... Fundo...",
+            "...Esta ação... Intensa...",
+            "...Rosto... Ahegao...",
+            "...Não consigo suportar... Rápido demais...",
+            "...Corpo... Tremendo...",
+            "...Esta pressão... Forte...",
+            "...Suas mãos... Na cintura...",
+            "...Me ajude...",
+            "...Ritmo... Rápido demais..."
+          ],
+          "medium": [
+            "...Ele... Pressionando...",
+            "...Quadris... Saltando...",
+            "...Mãos... Na minha cintura...",
+            "...Ritmo... Rápido...",
+            "...Corpo... Balançando...",
+            "...Sensação... Misturada...",
+            "...Seu pau... Perfeito...",
+            "...Esta ação... Eu gosto...",
+            "...Rosto... Ahegao...",
+            "...Quero... Mais...",
+            "...Corpo... Respondendo...",
+            "...Esta pressão... Boa...",
+            "...Suas mãos... Na cintura...",
+            "...Este prazer... Aumentando...",
+            "...Ritmo... Perfeito..."
+          ],
+          "high": [
+            "...Ele... Pressionando fortemente!",
+            "...Quadris... Saltando!",
+            "...Mãos... Na minha cintura!",
+            "...Ritmo... Rápido!",
+            "...Corpo... Balançando!",
+            "...Sensação... Em todos os lugares!",
+            "...Seu pau... Deus!",
+            "...Esta ação... Êxtase!",
+            "...Rosto... Ahegao!",
+            "...Quero... Mais!",
+            "...Corpo... Queimando!",
+            "...Esta pressão... Melhor!",
+            "...Suas mãos... Na cintura!",
+            "...Este prazer... Eterno!",
+            "...Sim... Mais rápido!"
+          ]
+        }
+      }
+    },
+    "FIN": {
+      "description": "Goza dentro de GG, antes de gozar puxa levemente o pênis e enfia até o fim",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Ele... Vai gozar...",
+            "...Pau... Sai ligeiramente...",
+            "...Volta... Fundo...",
+            "...Quente... Dentro...",
+            "...Seu sêmen... Sinto...",
+            "...Corpo... Tremendo...",
+            "...Esta sensação... Não consigo suportar...",
+            "...Sêmen... Transbordando...",
+            "...Seu pau... Pulsando...",
+            "...Dentro... Quente...",
+            "...Esta inundação... Ruim...",
+            "...Corpo... Cheio...",
+            "...Sêmen... Caindo...",
+            "...Esta sensação... Sujo...",
+            "...Ele... Me enchendo..."
+          ],
+          "medium": [
+            "...Ele... Vai gozar...",
+            "...Pau... Sai ligeiramente...",
+            "...Volta... Fundo...",
+            "...Sêmen... Quente...",
+            "...Corpo... Tremendo...",
+            "...Esta sensação... Boa...",
+            "...Seu sêmen... Perfeito...",
+            "...Dentro... Cheio...",
+            "...Sêmen... Transbordando...",
+            "...Este calor... Incrível...",
+            "...Corpo... Respondendo...",
+            "...Seu pau... Pulsando...",
+            "...Este clímax... Compartilhado...",
+            "...Sêmen... Quero...",
+            "...Corpo... Queimando..."
+          ],
+          "high": [
+            "...Ele... Vai gozar!",
+            "...Pau... Sai ligeiramente...",
+            "...Volta... Fundo!",
+            "...Sêmen... Quente!",
+            "...Corpo... Tremendo!",
+            "...Esta sensação... Sagrada!",
+            "...Seu sêmen... Quero!",
+            "...Dentro... Cheio!",
+            "...Sêmen... Transbordando!",
+            "...Este calor... Incrível!",
+            "...Corpo... Queimando!",
+            "...Seu pau... Pulsando!",
+            "...Este clímax... Compartilhado!",
+            "...Sêmen... Mais!",
+            "...Sim... Me encha!"
+          ]
+        }
+      }
+    },
+    "FIN2": {
+      "description": "GG parece ter gozado junto com ele, pênis dentro, GG perdeu rosto ahegao",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Eu também... Parece que gozei...",
+            "...Com ele...",
+            "...Pau... Ainda dentro...",
+            "...Rosto... Voltou...",
+            "...Corpo... Tremendo...",
+            "...Este pós-orgasmo... Não consigo suportar...",
+            "...Sêmen... Dentro...",
+            "...Corpo... Fraco...",
+            "...Esta sensação... Complexa...",
+            "...Seu pau... Mole...",
+            "...Gozou... Não queria...",
+            "...Corpo... Respondendo...",
+            "...Este orgasmo... Forçado...",
+            "...Rosto... Normal...",
+            "...Me ajude..."
+          ],
+          "medium": [
+            "...Eu também... Gozei...",
+            "...Com ele...",
+            "...Pau... Dentro...",
+            "...Rosto... Voltou...",
+            "...Corpo... Tremendo...",
+            "...Este pós-orgasmo... Bom...",
+            "...Sêmen... Sinto...",
+            "...Corpo... Satisfeito...",
+            "...Esta sensação... Incrível...",
+            "...Seu pau... Mole...",
+            "...Gozou... Incrível...",
+            "...Corpo... Queimando...",
+            "...Este clímax... Compartilhado...",
+            "...Rosto... Normal...",
+            "...Este prazer... Restante..."
+          ],
+          "high": [
+            "...Eu também... Gozei!",
+            "...Com ele!",
+            "...Pau... Dentro!",
+            "...Rosto... Ahegao voltou...",
+            "...Corpo... Tremendo!",
+            "...Este pós-orgasmo... Sagrado!",
+            "...Sêmen... Perfeito!",
+            "...Corpo... Queimando!",
+            "...Esta sensação... Melhor!",
+            "...Seu pau... Mole!",
+            "...Gozou... Incrível!",
+            "...Corpo... Respondendo!",
+            "...Este clímax... Compartilhado!",
+            "...Rosto... Satisfeito!",
+            "...Este prazer... Eterno!"
+          ]
+        }
+      }
+    },
+    "JIGO": {
+      "description": "Pênis está mole, porra pinga de GG, rosto ahegao, corpo se contorce em êxtase",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Pau... Mole...",
+            "...Sêmen... Caindo...",
+            "...Rosto... Ahegao...",
+            "...Corpo... Convulsando...",
+            "...Este êxtase... Não consigo suportar...",
+            "...Sêmen... Escorrendo...",
+            "...Corpo... Fraco...",
+            "...Esta sensação... Ruim...",
+            "...Rosto... Estranho...",
+            "...Corpo... Tremendo...",
+            "...Sêmen... Esfriando...",
+            "...Este pós-orgasmo... Longo...",
+            "...Me ajude...",
+            "...Corpo... Não se move...",
+            "...Isso... Inferno..."
+          ],
+          "medium": [
+            "...Pau... Mole...",
+            "...Sêmen... Caindo...",
+            "...Rosto... Ahegao...",
+            "...Corpo... Convulsando...",
+            "...Este êxtase... Bom...",
+            "...Sêmen... Escorrendo...",
+            "...Corpo... Satisfeito...",
+            "...Esta sensação... Incrível...",
+            "...Rosto... Extasiado...",
+            "...Corpo... Tremendo...",
+            "...Sêmen... Quente...",
+            "...Este pós-orgasmo... Perfeito...",
+            "...Corpo... Respondendo...",
+            "...Este prazer... Restante...",
+            "...Rosto... Ahegao..."
+          ],
+          "high": [
+            "...Pau... Mole...",
+            "...Sêmen... Caindo!",
+            "...Rosto... Ahegao!",
+            "...Corpo... Convulsando!",
+            "...Este êxtase... Sagrado!",
+            "...Sêmen... Escorrendo!",
+            "...Corpo... Queimando!",
+            "...Esta sensação... Melhor!",
+            "...Rosto... Extasiado!",
+            "...Corpo... Tremendo!",
+            "...Sêmen... Quente!",
+            "...Este pós-orgasmo... Incrível!",
+            "...Corpo... Respondendo!",
+            "...Este prazer... Eterno!",
+            "...Rosto... Ahegao!"
+          ]
+        }
+      }
+    },
+    "JIGO2": {
+      "description": "Pênis fica duro de novo e ciclo fechado começa de ERO (MAS DEVEMOS TER ENTREGA DE GG PARA CICLO DE GANGBANG AQUI)",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Pau... Duro novamente...",
+            "...Ciclo... Começando...",
+            "...Corpo... Fraco...",
+            "...Não aguento... Mais...",
+            "...Seu pau... Novamente...",
+            "...Este ciclo... Interminável...",
+            "...Corpo... Tremendo...",
+            "...Novamente... Sendo fodida...",
+            "...Me ajude... Alguém...",
+            "...Este inferno... Continua...",
+            "...Pau... Duro...",
+            "...Corpo... Respondendo...",
+            "...Novamente... Não...",
+            "...Isso... Pesadelo...",
+            "...Pare..."
+          ],
+          "medium": [
+            "...Pau... Duro novamente...",
+            "...Ciclo... Começando...",
+            "...Corpo... Pronto...",
+            "...Esta sensação... Boa...",
+            "...Seu pau... Novamente...",
+            "...Quero... Mais...",
+            "...Corpo... Tremendo...",
+            "...Novamente... Começando...",
+            "...Este ciclo... Eu gosto...",
+            "...Corpo... Respondendo...",
+            "...Pau... Duro...",
+            "...Quero... Mais...",
+            "...Este prazer... Continua...",
+            "...Corpo... Aquecendo...",
+            "...Novamente... Fodendo..."
+          ],
+          "high": [
+            "...Pau... Duro novamente!",
+            "...Ciclo... Começando!",
+            "...Corpo... Queimando!",
+            "...Esta sensação... Incrível!",
+            "...Seu pau... Novamente!",
+            "...Quero... Mais!",
+            "...Corpo... Tremendo!",
+            "...Novamente... Fodendo!",
+            "...Este ciclo... Eu gosto!",
+            "...Corpo... Respondendo!",
+            "...Pau... Duro!",
+            "...Quero... Mais!",
+            "...Este prazer... Eterno!",
+            "...Corpo... Aquecendo!",
+            "...Sim... Mais!"
+          ]
+        }
+      }
+    }

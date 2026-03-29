@@ -1,0 +1,196 @@
+{
+  "phases": {
+    "0-49": [
+      "Du wehrst dich noch, aber dein Körper verrät dich",
+      "Dein Körper reagiert auf ihre Berührung",
+      "Du spürst, wie dein Wille schwächer wird",
+      "Dein Widerstand wird schwächer",
+      "Du versuchst zu kämpfen, aber dein Körper gehorcht nicht",
+      "Dein Wille bricht unter ihrem Angriff",
+      "Du kannst dich noch wehren, aber nicht so stark",
+      "Dein Körper beginnt dich zu verraten",
+      "Du spürst, wie du die Kontrolle verlierst",
+      "Dein Widerstand wird mit jeder Sekunde schwächer"
+    ],
+    "50-79": [
+      "Du beginnst es zu mögen, du kannst nicht mehr aufhören",
+      "Du spürst, wie Lust übernimmt",
+      "Dein Körper verlangt nach mehr",
+      "Du kannst dem Verlangen nicht mehr widerstehen",
+      "Dein Wille löst sich in Lust auf",
+      "Du beginnst dich zu verlieren",
+      "Dein Körper gehört dir nicht mehr",
+      "Du spürst, wie du ihr Spielzeug wirst",
+      "Dein Widerstand wird zu Verlangen",
+      "Du kannst nicht mehr aufhören, was passiert"
+    ],
+    "80-99": [
+      "Du bist gebrochen. Du bist eine Hure. Das ist unwiderruflich",
+      "Dein Geist gehört dir nicht mehr",
+      "Du bist ihr Eigentum geworden",
+      "Dein Wille ist vollständig gebrochen",
+      "Du kannst nicht mehr widerstehen",
+      "Du bist vollständig ihr Spielzeug",
+      "Dein Geist ist zerschmettert",
+      "Du hast dich für immer verloren",
+      "Du bist geworden, was sie wollten",
+      "Dein Fall ist vollständig"
+    ]
+  },
+  "buckets": {
+    "0": [
+      "Du wehrst dich noch, aber dein Körper verrät dich",
+      "Dein Körper reagiert auf ihre Berührung",
+      "Du spürst, wie dein Wille schwächer wird",
+      "Dein Widerstand wird schwächer",
+      "Du versuchst zu kämpfen, aber dein Körper gehorcht nicht"
+    ],
+    "5": [
+      "Dein Puls wird schneller, aber du klammerst dich noch an Kontrolle",
+      "Jede Berührung sendet einen Schauer, doch du wehrst dich",
+      "Du beißt die Zähne zusammen, weigerst dich zu ergeben",
+      "Schweißperlen auf deiner Haut, während du dich wehrst",
+      "Du beißt auf die Lippe, hältst an deinem Willen fest"
+    ],
+    "10": [
+      "Dein Atem wird schwer; der Nebel wird dichter",
+      "Ein schwaches Erröten wärmt deine Wangen trotz dir selbst",
+      "Du spürst Hitze, die sich unten sammelt, verrät dich",
+      "Deine Sicht verschwimmt an den Rändern, Puls pocht",
+      "Deine Finger zucken, verlangen und wehren sich"
+    ],
+    "15": [
+      "Jeder Keuch ist eine Bitte und ein Protest",
+      "Du zitterst, halb vor Angst, halb vor Bedürfnis",
+      "Deine Oberschenkel spannen sich, unsicher ob schließen oder öffnen",
+      "Ein widerwilliges Stöhnen entweicht fast, erstickt im letzten Moment",
+      "Dein Geist protestiert, dein Körper lehnt sich näher"
+    ],
+    "20": [
+      "Du schwankst, Balance gekippt zwischen Kampf und Ergebung",
+      "Dein Herzschlag trommelt in deinen Ohren, passt sich ihrem Rhythmus an",
+      "Eine Wärme breitet sich unter deiner Haut aus, unaufhaltsam",
+      "Dein Atem stockt, wenn sie dich dort berühren",
+      "Dein Entschluss flackert wie eine Kerze im Wind"
+    ],
+    "25": [
+      "Du keuchst, als Lust an deiner Wache vorbeisickert",
+      "Deine Hüften zucken von selbst, verraten Verlangen",
+      "Ein weiches Wimmern rutscht heraus, bevor du es zurückdrückst",
+      "Dein Wille fasert aus; Empfindungen bluten in Verlangen",
+      "Du hasst, wie gut es sich anfühlt… und willst mehr"
+    ],
+    "30": [
+      "Deine Gedanken werden neblig, getränkt in Hitze",
+      "Du spürst, wie Fäden des Willens einen nach dem anderen reißen",
+      "Jede Berührung malt Funken unter deine Haut",
+      "Du keuchst, halb geschockt von deinen eigenen Reaktionen",
+      "Verlangen windet sich in deinem Bauch, zieht sich zusammen"
+    ],
+    "35": [
+      "Du wölbst dich trotz dir selbst, jagst Kontakt",
+      "Ein Schauer kriecht deine Wirbelsäule hoch, köstlich und falsch",
+      "Du hörst deinen eigenen bedürftigen Atem und errötest",
+      "Dein Geist flüstert 'stopp', dein Körper flüstert 'mehr'",
+      "Widerstand schmeckt bitter, Lust schmeckt süß"
+    ],
+    "40": [
+      "Du kannst dich noch wehren, aber dein Körper verrät dich",
+      "Du spürst, wie du die Kontrolle verlierst",
+      "Dein Widerstand wird mit jeder Sekunde schwächer",
+      "Dein Wille bricht unter ihrem Angriff",
+      "Du kannst dich noch wehren, aber nicht so stark"
+    ],
+    "45": [
+      "Du zitterst am Rande, dies zu wollen",
+      "Deine Hüften rollen subtil, laden ohne Erlaubnis ein",
+      "Hitze pulsiert zwischen deinen Beinen, beharrlich",
+      "Du beißt ein Stöhnen zurück, das fast entweicht",
+      "Dein Stolz schmilzt, Tropfen für Tropfen"
+    ],
+    "50": [
+      "Du beginnst es zu mögen, du kannst nicht mehr aufhören",
+      "Dein Körper verlangt nach mehr",
+      "Du kannst dem Verlangen nicht mehr widerstehen",
+      "Dein Wille löst sich in Lust auf",
+      "Du spürst, wie Lust übernimmt"
+    ],
+    "55": [
+      "Jeder Nerv bettelt, wieder berührt zu werden",
+      "Du wimmerst jetzt offen, Scham verblasst",
+      "Deine Hüften treffen ihre in gierigem Rhythmus",
+      "Du hungers nach der nächsten Welle der Lust",
+      "Du kannst dich nicht erinnern, warum du dich wehren solltest"
+    ],
+    "60": [
+      "Dein Widerstand wird zu Verlangen",
+      "Du kannst nicht mehr aufhören, was passiert",
+      "Du spürst, wie du ihr Spielzeug wirst",
+      "Dein Körper gehört dir nicht mehr",
+      "Du beginnst dich zu verlieren"
+    ],
+    "65": [
+      "Du reibst dich an ihnen, bedürftig und eifrig",
+      "Stöhnen fließt frei; du bemühst dich nicht, es zu verbergen",
+      "Deine Gedanken verschwimmen zu einem einzigen Verlangen",
+      "Du wölbst dich und bietest dich an, ohne zu denken",
+      "Jeder Stoß, jede Berührung ist ein neuer Befehl, dem du gehorchst"
+    ],
+    "70": [
+      "Dein Wille löst sich vollständig in Lust auf",
+      "Du jagst den Höhepunkt, als wäre es die einzige Wahrheit",
+      "Du keuchst ihren Namen zwischen gebrochenen Stöhnen",
+      "Dein Stolz liegt zerschmettert unter deinem Hunger",
+      "Du bist ihre im Körper, bettelst um mehr"
+    ],
+    "75": [
+      "Du beginnst es zu mögen, du kannst nicht mehr aufhören",
+      "Du spürst, wie Lust übernimmt",
+      "Dein Körper verlangt nach mehr",
+      "Du kannst dem Verlangen nicht mehr widerstehen",
+      "Dein Wille löst sich in Lust auf"
+    ],
+    "80": [
+      "Du bist gebrochen. Du bist eine Hure. Das ist unwiderruflich",
+      "Dein Geist gehört dir nicht mehr",
+      "Du bist ihr Eigentum geworden",
+      "Dein Wille ist vollständig gebrochen",
+      "Du kannst nicht mehr widerstehen"
+    ],
+    "85": [
+      "Du bettelst, benutzt zu werden, Geist summt vor Bedürfnis",
+      "Scham ist weg; nur Verlangen bleibt",
+      "Du schnurrst und stöhnst für ihre Zustimmung",
+      "Du öffnest dich vollständig, lädst alles ein",
+      "Du bist ein Spielzeug, und du liebst es"
+    ],
+    "90": [
+      "Du bist vollständig ihr Spielzeug",
+      "Dein Geist ist zerschmettert",
+      "Du hast dich für immer verloren",
+      "Du bist geworden, was sie wollten",
+      "Dein Fall ist vollständig"
+    ],
+    "95": [
+      "Du bist ruiniert, geformt zu ihrem Verlangen",
+      "Jeder Gedanke ist eine Bitte um mehr",
+      "Du existierst, um sie zu spüren, nichts anderes",
+      "Du bist Gehorsam, in Fleisch gewickelt",
+      "Du bist lusttrunken, geistlos und ergeben"
+    ],
+    "100": [
+      "GEIST VOLLSTÄNDIG GEBROCHEN",
+      "Du bist ihre, völlig und für immer",
+      "Dein Geist kniet, dein Körper betet an",
+      "Du verlangst nur nach dem, was sie dir geben",
+      "Du bist ein perfektes Spielzeug, leer und eifrig"
+    ]
+  },
+  "milestones": {
+    "50": "Du hast die Linie überschritten. Es gibt kein Zurück mehr.",
+    "75": "Dein Geist bricht. Du bist fast ihre.",
+    "90": "Du bist fast gebrochen. Nur noch ein bisschen mehr und du wirst für immer ihre sein.",
+    "100": "GEIST VOLLSTÄNDIG GEBROCHEN"
+  }
+}
+

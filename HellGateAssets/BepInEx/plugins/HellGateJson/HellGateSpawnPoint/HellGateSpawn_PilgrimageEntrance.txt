@@ -1,0 +1,257 @@
+# Pilgrimage Entrance spawn | X,Y,EnemyType,Count
+# POOL[TouzokuNormal,TouzokuAxe,Dorei] = random from 3 types
+# InquisitionWhite, Librarian, CrowInquisition, Inquisition
+
+# POOL Touzoku/TouzokuAxe/Dorei
+1664.59,-227.28,POOL[TouzokuNormal,TouzokuAxe,Dorei],1
+1653.19,-223.80,POOL[TouzokuNormal,TouzokuAxe,Dorei],1
+1656.96,-224.27,POOL[TouzokuNormal,TouzokuAxe,Dorei],1
+1642.82,-227.28,POOL[TouzokuNormal,TouzokuAxe,Dorei],1
+
+# Mutude
+1637.82,-227.28,Mutude,1
+1631.33,-227.28,Mutude,1
+
+# TouzokuNormal
+1622.25,-227.28,TouzokuNormal,1
+1614.18,-227.28,TouzokuNormal,1
+
+# InquisitionWhite, Librarian, CrowInquisition, Inquisition (in order)
+1676.59,-216.80,InquisitionWhite,1
+1672.30,-216.80,Librarian,1
+1669.07,-216.80,CrowInquisition,1
+1665.20,-216.80,Wolf,1
+
+# Librarian
+1631.62,-216.80,Librarian,1
+
+# Undead
+1634.48,-216.80,Undead,1
+1640.76,-216.80,Undead,1
+1643.42,-212.34,Undead,1
+
+# TouzokuNormal
+1638.05,-206.34,TouzokuNormal,1
+1632.04,-206.34,TouzokuNormal,1
+1633.87,-206.34,Wolf,1
+1665.47,-206.34,TouzokuNormal,1
+
+# TouzokuAxe
+1667.96,-206.34,TouzokuAxe,1
+
+# CrowInquisition
+1605.26,-203.95,CrowInquisition,1
+1609.07,-203.95,CrowInquisition,1
+
+# TouzokuNormal
+1614.78,-203.95,TouzokuNormal,1
+1618.88,-203.95,TouzokuNormal,1
+
+# Dorei
+1605.06,-203.95,Dorei,1
+1610.46,-203.95,Wolf,1
+1616.89,-203.95,Dorei,1
+
+# TouzokuAxe
+1583.40,-216.80,TouzokuAxe,1
+
+# Dorei
+1570.98,-216.80,Dorei,1
+
+# TouzokuNormal
+1565.92,-216.80,TouzokuNormal,1
+1558.00,-216.80,Wolf,1
+1554.66,-216.80,TouzokuNormal,1
+
+# InquisitionWhite
+1548.62,-216.80,InquisitionWhite,1
+
+# Dorei
+1544.22,-216.80,Dorei,1
+1537.73,-216.80,Wolf,1
+1543.87,-216.80,Dorei,1
+
+# SlaveBigAxe
+1540.49,-216.80,SlaveBigAxe,1
+1532.46,-216.80,SlaveBigAxe,1
+
+# Mutude
+1530.95,-216.80,Mutude,1
+1521.53,-216.80,Mutude,1
+
+# Librarian
+1518.77,-216.80,Librarian,1
+
+# Undead
+1511.78,-216.80,Undead,1
+1508.53,-216.80,MummyDog,1
+1490.75,-216.80,Undead,1
+
+# CrowInquisition
+1487.94,-216.48,CrowInquisition,1
+1480.65,-216.10,CrowInquisition,1
+
+# POOL Touzoku/TouzokuAxe
+1473.41,-216.80,POOL[TouzokuNormal,TouzokuAxe],1
+1485.47,-215.42,POOL[TouzokuNormal,TouzokuAxe],1
+1471.19,-216.80,POOL[TouzokuNormal,Wolf],1
+1466.24,-216.80,POOL[TouzokuNormal,TouzokuAxe],1
+1459.42,-215.78,POOL[TouzokuNormal,TouzokuAxe],1
+1440.41,-216.80,POOL[TouzokuNormal,Wolf],1
+1436.15,-216.80,POOL[TouzokuNormal,TouzokuAxe],1
+
+# Librarian
+1430.40,-216.80,Librarian,1
+
+# Undead
+1396.98,-216.80,Undead,1
+1403.48,-216.80,Undead,1
+
+# Kakasi
+1384.44,-214.98,Kakasi,1
+1379.60,-215.53,Kakasi,1
+
+# Librarian
+1376.22,-215.25,Librarian,1
+
+# Undead
+1367.65,-216.80,Undead,1
+1363.39,-216.80,MummyDog,1
+1356.76,-216.80,MummyDog,1
+1351.08,-216.80,Undead,1
+1344.70,-215.22,Undead,1
+
+# Mutude
+1339.38,-216.73,Mutude,1
+
+# Undead
+1333.37,-216.80,Undead,1
+1318.77,-216.80,Undead,1
+
+# Librarian
+1314.46,-216.80,Librarian,1
+
+# InquisitionWhite
+1310.67,-216.80,InquisitionWhite,1
+1302.92,-215.16,InquisitionWhite,1
+
+# CrowInquisition
+1297.48,-212.97,CrowInquisition,1
+
+# InquisitionWhite
+1299.67,-200.99,InquisitionWhite,1
+
+# TouzokuNormal
+1304.04,-200.99,TouzokuNormal,1
+1310.86,-200.99,TouzokuNormal,1
+
+# CrowInquisition 50% chance
+RANDOM,0.5,1310.86,-200.99,CrowInquisition,1
+RANDOM,0.5,1313.85,-175.86,CrowInquisition,1
+RANDOM,0.5,1319.56,-183.00,CrowInquisition,1
+RANDOM,0.5,1326.44,-185.85,CrowInquisition,1
+RANDOM,0.5,1326.86,-190.24,CrowInquisition,1
+RANDOM,0.5,1331.88,-200.87,CrowInquisition,1
+
+# TouzokuNormal
+1343.79,-195.50,Wolf,1
+1345.07,-195.50,TouzokuNormal,1
+
+# TouzokuAxe
+1348.16,-195.50,TouzokuAxe,1
+1359.33,-200.85,TouzokuAxe,1
+
+# Mutude
+1362.16,-200.97,Mutude,1
+1364.83,-200.72,Mutude,1
+
+# Dorei
+1378.48,-195.50,Dorei,1
+1381.08,-195.50,Wolf,1
+
+# TouzokuNormal
+1370.68,-197.41,TouzokuNormal,1
+1367.51,-199.29,TouzokuNormal,1
+
+# InquisitionWhite
+1387.32,-198.67,InquisitionWhite,1
+
+# Inquisition
+1395.78,-197.35,Inquisition,1
+
+# TouzokuNormal
+1393.50,-197.52,TouzokuNormal,1
+1390.48,-191.42,Wolf,1
+
+# TouzokuAxe
+1375.68,-191.15,TouzokuAxe,1
+1378.00,-191.22,TouzokuAxe,1
+
+# TouzokuNormal
+1356.77,-191.19,TouzokuNormal,1
+1356.66,-195.09,Wolf,1
+
+# Dorei
+1360.64,-185.19,Dorei,1
+
+# Mutude
+1367.43,-183.51,Mutude,1
+
+# TouzokuNormal
+1378.45,-179.71,TouzokuNormal,1
+1381.96,-179.71,TouzokuNormal,1
+
+# POOL Touzoku/TouzokuAxe/Dorei
+1439.39,-200.66,POOL[TouzokuNormal,TouzokuAxe,Dorei],1
+1440.90,-206.38,POOL[TouzokuNormal,Wolf,Dorei],1
+1446.74,-206.38,POOL[TouzokuNormal,TouzokuAxe,Dorei],1
+1455.73,-206.38,POOL[TouzokuNormal,Wolf,Dorei],1
+1453.13,-206.38,POOL[TouzokuNormal,TouzokuAxe,Dorei],1
+
+# InquisitionWhite
+1461.60,-204.10,InquisitionWhite,1
+
+# Librarian
+1473.62,-200.98,Librarian,1
+1471.23,-200.98,Librarian,1
+
+# CrowInquisition
+1492.27,-206.38,CrowInquisition,1
+
+# POOL Touzoku/TouzokuAxe/Dorei
+1497.61,-206.38,POOL[TouzokuNormal,TouzokuAxe,Dorei],1
+1500.26,-206.38,POOL[TouzokuNormal,TouzokuAxe,Dorei],1
+1492.82,-206.38,POOL[TouzokuNormal,TouzokuAxe,Dorei],1
+
+# POOL Touzoku/TouzokuAxe/Dorei
+1534.71,-209.36,POOL[TouzokuNormal,TouzokuAxe,Dorei],1
+1521.37,-206.39,POOL[TouzokuNormal,TouzokuAxe,Dorei],1
+1516.65,-206.39,POOL[TouzokuNormal,TouzokuAxe,Dorei],1
+1499.79,-195.53,POOL[TouzokuNormal,TouzokuAxe,Dorei],1
+1504.77,-195.53,POOL[TouzokuNormal,TouzokuAxe,Dorei],1
+1512.18,-195.53,POOL[TouzokuNormal,TouzokuAxe,Dorei],1
+1523.34,-193.91,POOL[TouzokuNormal,TouzokuAxe,Dorei],1
+
+# CrowInquisition
+1528.45,-195.53,CrowInquisition,1
+
+# POOL Touzoku/TouzokuAxe/Dorei
+1537.44,-195.53,POOL[TouzokuNormal,TouzokuAxe,Dorei],1
+1544.98,-197.80,POOL[TouzokuNormal,Wolf,Dorei],1
+1548.13,-199.86,POOL[TouzokuNormal,TouzokuAxe,Dorei],1
+
+# Mutude
+1553.89,-200.97,Mutude,1
+
+# InquisitionWhite
+1556.70,-202.44,InquisitionWhite,1
+
+# POOL Touzoku/TouzokuAxe/Dorei
+1563.69,-206.29,POOL[TouzokuNormal,Wolf,Dorei],1
+1572.91,-206.38,POOL[TouzokuNormal,TouzokuAxe,Dorei],1
+
+# Mutude
+1578.40,-206.38,Mutude,1
+
+# CrowInquisition
+1585.27,-206.42,CrowInquisition,1

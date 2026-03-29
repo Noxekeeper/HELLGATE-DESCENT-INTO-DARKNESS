@@ -1,0 +1,1097 @@
+{
+  "settings": {
+    "responseDelayMin": 1.5,
+    "responseDelayMax": 2.5,
+    "fontSize": 22.0,
+    "verticalOffset": 100.0,
+    "displayDuration": 5.0
+  },
+  "animations": {
+    "START": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "Non ! Il attrape mes cheveux ! Ça fait mal !",
+              "Je ne peux pas... il me tire vers le bas par les cheveux !",
+              "Mes genoux... frappent le sol... s'il te plaît arrête !"
+            ],
+            "low": [
+              "Sa poigne... si rude... je dois descendre...",
+              "Il me met à genoux... je ne peux pas résister...",
+              "Douleur dans mon cuir chevelu... larmes aux yeux..."
+            ],
+            "medium_low": [
+              "On me tire vers le bas... je dois juste obéir...",
+              "Sa force... écrasante... je me soumets...",
+              "À genoux maintenant... là où il me veut..."
+            ],
+            "medium": [
+              "Il me positionne... je sais ce qui vient ensuite...",
+              "Sa poigne me contrôle... j'accepte ça...",
+              "Vers le bas à genoux... c'est ma place maintenant..."
+            ],
+            "medium_high": [
+              "Ses mains dans mes cheveux... me commandant...",
+              "Je descends pour lui... volontiers...",
+              "À genoux... là où je devrais être..."
+            ],
+            "high": [
+              "Oui... tire mes cheveux... mets-moi à genoux...",
+              "Ses mains fortes... me guidant vers le bas...",
+              "Je veux être ici... à ses pieds..."
+            ],
+            "very_high": [
+              "Mmm... ses mains dans mes cheveux se sentent si bien !",
+              "Tire-moi vers le bas, maître ! Je suis tienne !",
+              "À genoux pour toi... toujours !"
+            ]
+          }
+        },
+        {
+          "step": 2,
+          "delay": 1.0,
+          "thoughts": {
+            "very_low": [
+              "Oh mon dieu ! Un couteau ! Il va me tuer !",
+              "La lame... si près de ma gorge... j'ai peur !",
+              "S'il te plaît ne me coupe pas ! Je ferai tout !"
+            ],
+            "low": [
+              "Ce couteau... un mauvais mouvement et je suis morte...",
+              "Je sens l'acier froid... je tremble...",
+              "Il est sérieux... il va vraiment me faire mal..."
+            ],
+            "medium_low": [
+              "Le couteau me rappelle... je n'ai pas le choix...",
+              "Je dois obéir... ou il l'utilisera...",
+              "La peur me tient immobile... obéissante..."
+            ],
+            "medium": [
+              "La lame... promesse de ce qui arrivera si je désobéis...",
+              "Je comprends la menace... je vais coopérer...",
+              "Son arme... son contrôle sur moi..."
+            ],
+            "medium_high": [
+              "Le danger... ça fait battre mon cœur plus vite...",
+              "Son couteau... rappel de sa puissance...",
+              "Je suis excitée... et effrayée... les deux..."
+            ],
+            "high": [
+              "La lame contre ma peau... grisant...",
+              "J'adore comment c'est dangereux...",
+              "Son arme... sa domination... j'ai besoin de ça..."
+            ],
+            "very_high": [
+              "Oui ! Menace-moi avec ta lame !",
+              "Le danger me rend si mouillée !",
+              "Coupe-moi, blesse-moi, possède-moi complètement !"
+            ]
+          }
+        },
+        {
+          "step": 3,
+          "delay": 1.5,
+          "thoughts": {
+            "very_low": [
+              "Non ! Il sort ça ! Je ne veux pas voir !",
+              "Pourquoi il... oh mon dieu... ça ne peut pas être vrai !",
+              "Je ne peux pas regarder... mais il m'y force !"
+            ],
+            "low": [
+              "Il s'expose... juste devant mon visage...",
+              "Je sais ce qu'il veut... la honte brûle...",
+              "Je dois regarder... il m'y force..."
+            ],
+            "medium_low": [
+              "Son membre... juste devant moi...",
+              "Je vois ce qui vient... je dois l'accepter...",
+              "Ça arrive... que je le veuille ou non..."
+            ],
+            "medium": [
+              "Il me montre ce que je dois faire...",
+              "Sa masculinité... je suis censée la servir...",
+              "Je comprends... je ferai ce qu'il veut..."
+            ],
+            "medium_high": [
+              "Son membre... il est impressionnant...",
+              "Je suis curieuse... un peu intéressée...",
+              "Peut-être que ce ne sera pas si terrible..."
+            ],
+            "high": [
+              "Mmm... il est grand... j'aime ce que je vois...",
+              "Je veux le toucher... le goûter...",
+              "Montre-moi plus... je suis prête..."
+            ],
+            "very_high": [
+              "Oui ! Ton beau membre ! Laisse-moi l'adorer !",
+              "J'en ai besoin ! S'il te plaît laisse-moi l'avoir !",
+              "Je bave déjà pour toi !"
+            ]
+          }
+        },
+        {
+          "step": 4,
+          "delay": 2.0,
+          "thoughts": {
+            "very_low": [
+              "Un pistolet ! Contre ma poitrine ! Il va tirer !",
+              "Je sens le canon... métal froid... je vais mourir !",
+              "S'il te plaît ! Je ferai tout ce que tu veux ! Ne tire pas !"
+            ],
+            "low": [
+              "Pistolet pressé contre moi... un mauvais mouvement...",
+              "Il peut appuyer sur la détente... je serais morte...",
+              "Je suis complètement à sa merci... terrifiée..."
+            ],
+            "medium_low": [
+              "Pistolet... un autre rappel de ma position...",
+              "Je suis impuissante... il contrôle ma vie...",
+              "Obéis ou meurs... simple comme ça..."
+            ],
+            "medium": [
+              "Son arme contre moi... je comprends parfaitement...",
+              "J'appartiens à lui maintenant... vie ou mort...",
+              "Je ferai ce qu'il dit... je n'ai pas le choix..."
+            ],
+            "medium_high": [
+              "Pistolet... dangereux... excitant...",
+              "Mon cœur bat... de peur et d'excitation...",
+              "Ce pouvoir sur moi... je suis attirée..."
+            ],
+            "high": [
+              "Oui... garde ce pistolet contre moi... c'est si chaud...",
+              "Danger... pouvoir... j'adore ça...",
+              "Menace-moi... domine-moi... je suis tienne..."
+            ],
+            "very_high": [
+              "Appuie sur la détente ou baise-moi ! Dans les deux cas je suis tienne !",
+              "Le pistolet me rend si mouillée ! Utilise-moi !",
+              "Je veux sentir ta puissance ! Détruisez-moi !"
+            ]
+          }
+        }
+      ]
+    },
+    "START2": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "Il dit... touche-le ou il tire !",
+              "Je ne veux pas ! Mais je ne veux pas mourir !",
+              "Ses mots sont si cruels... je pleure..."
+            ],
+            "low": [
+              "Finis-le ou prends une balle... pas de vrai choix...",
+              "Sa voix est si froide... commande...",
+              "Je dois le faire... pour survivre..."
+            ],
+            "medium_low": [
+              "Ses exigences sont claires... obéis ou souffre...",
+              "Je dois lui donner du plaisir... c'est nécessaire...",
+              "Survivre signifie obéir..."
+            ],
+            "medium": [
+              "Il veut que je le caresse... je comprends...",
+              "Je le ferai... survivrai à ça...",
+              "Mes mains... son membre... juste mécanique..."
+            ],
+            "medium_high": [
+              "Il veut mes mains sur lui... d'accord...",
+              "Peut-être que ce ne sera pas si mal...",
+              "Je suis un peu curieuse de savoir comment ça se sent..."
+            ],
+            "high": [
+              "Il veut mes mains... je veux ça aussi...",
+              "J'ai hâte de toucher... de plaire...",
+              "Oui, je te caresserai... avec plaisir..."
+            ],
+            "very_high": [
+              "Commande-moi ! Dis-moi comment te plaire !",
+              "J'ai besoin de toucher ton membre ! Laisse-moi !",
+              "Je ferai tout ce que tu dis, maître !"
+            ]
+          }
+        },
+        {
+          "step": 2,
+          "delay": 1.0,
+          "thoughts": {
+            "very_low": [
+              "Mes mains... tremblantes alors que je tends...",
+              "Je ne peux pas croire que je fais ça... c'est mal !",
+              "Son arme... me rappelle que je n'ai pas le choix...",
+              "Larmes qui tombent... mais je dois toucher...",
+              "Son membre... chaud... pulsant... je hais ça..."
+            ],
+            "low": [
+              "Je le touche... son membre est si chaud...",
+              "C'est humiliant... mais nécessaire...",
+              "Je dois caresser... il me regarde...",
+              "Mes mains... bougent... mécaniquement...",
+              "La honte... brûle... mais je continue..."
+            ],
+            "medium_low": [
+              "Mes mains sur lui... font ce qu'il veut...",
+              "Il est chaud... pulse dans ma prise...",
+              "Juste des mouvements mécaniques... survivre à ça...",
+              "Sa respiration change... je dois bien faire quelque chose...",
+              "Je le sens... réagit..."
+            ],
+            "medium": [
+              "Je le caresse... c'est pas si terrible...",
+              "Son membre... pulse dans mes mains...",
+              "Je fais ce dont il a besoin... c'est tout...",
+              "Mon rythme... régulier... constant...",
+              "C'est juste... une tâche... rien de plus..."
+            ],
+            "medium_high": [
+              "Il devient plus dur... je le sens...",
+              "Je suis bonne en fait... il aime...",
+              "Ses réactions... encourageantes...",
+              "Peut-être que je lui donne du plaisir... c'est bien...",
+              "Son membre... grandit... dans mes mains..."
+            ],
+            "high": [
+              "Mmm... il est si dur pour moi...",
+              "J'adore sentir comment il pulse dans mes mains...",
+              "Je veux lui donner du plaisir... le faire se sentir bien...",
+              "Son plaisir... à moi de donner...",
+              "Je veux qu'il aime ça..."
+            ],
+            "very_high": [
+              "Ton membre est parfait ! Si dur !",
+              "J'adore te caresser ! Donne-moi plus !",
+              "Laisse-moi adorer ton beau membre !",
+              "Mes mains... ton plaisir !",
+              "Je dois te faire conchir !"
+            ]
+          }
+        },
+        {
+          "step": 3,
+          "delay": 1.5,
+          "thoughts": {
+            "very_low": [
+              "Il gémit... devient plus dur... ça me rend malade...",
+              "Chaque mouvement me fait haïr ça plus...",
+              "Larmes tombent... mais je ne peux pas arrêter..."
+            ],
+            "low": [
+              "Il est proche... je peux le dire...",
+              "La honte... ne part jamais...",
+              "Je veux juste que ça finisse..."
+            ],
+            "medium_low": [
+              "Sa respiration change... presque prêt...",
+              "Je fais juste... ce qui est nécessaire...",
+              "Bientôt cette partie sera finie..."
+            ],
+            "medium": [
+              "Il réagit... je fais bien...",
+              "Mes mains continuent... automatiquement maintenant...",
+              "Je le prépare... c'est tout..."
+            ],
+            "medium_high": [
+              "Ses gémissements... il aime ça...",
+              "Je suis bonne en fait...",
+              "Son plaisir... c'est pas terrible à causer..."
+            ],
+            "high": [
+              "Oui... ressens du plaisir de mes mains...",
+              "J'adore entendre ton plaisir...",
+              "Je veux te faire conchir tellement..."
+            ],
+            "very_high": [
+              "Tes gémissements sont de la musique pour moi !",
+              "Je te fais se sentir incroyablement bien !",
+              "Conchis pour moi ! J'ai besoin de voir ça !"
+            ]
+          }
+        }
+      ]
+    },
+    "ERO": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "Non ! Pas dans ma bouche ! S'il te plaît !",
+              "Il va... je ne peux pas le faire !",
+              "Son membre contre mes lèvres... je veux fuir !"
+            ],
+            "low": [
+              "Il veut ma bouche... oh mon dieu...",
+              "Je dois prendre ça... ou il me fera mal...",
+              "C'est si humiliant... mais je dois..."
+            ],
+            "medium_low": [
+              "Dans ma bouche... c'est ce qu'il veut...",
+              "Je le ferai... survivrai d'une façon...",
+              "Juste... ouvre et prends-le..."
+            ],
+            "medium": [
+              "Il veut oral... je comprends...",
+              "Je peux le faire... c'est juste une autre action...",
+              "Laisse-moi... laisse-moi le faire pour toi..."
+            ],
+            "medium_high": [
+              "Il veut ma bouche sur lui... d'accord...",
+              "Peut-être que je... peut-être que je veux essayer...",
+              "Son membre semble... alléchant..."
+            ],
+            "high": [
+              "Oui... je veux te goûter...",
+              "Laisse-moi te prendre dans ma bouche...",
+              "Je veux te faire plaisir de cette façon..."
+            ],
+            "very_high": [
+              "J'ai besoin de ton membre dans ma bouche !",
+              "S'il te plaît laisse-moi te sucer ! Je supplie !",
+              "Utilise ma gorge ! Je suis un manche pour ton membre !"
+            ]
+          }
+        },
+        {
+          "step": 2,
+          "delay": 1.0,
+          "thoughts": {
+            "very_low": [
+              "J'étouffe ! Je ne peux pas respirer !",
+              "Salive partout... coule impuissante...",
+              "S'il te plaît... laisse-moi respirer... juste une seconde !"
+            ],
+            "low": [
+              "Ma gorge brûle... étirée autour de lui...",
+              "Larmes et salive... je suis tout en désordre...",
+              "Pression... je ne peux pas contrôler ça..."
+            ],
+            "medium_low": [
+              "Je bave... je ne peux pas m'en empêcher...",
+              "Ma gorge... apprend à l'accepter...",
+              "Respire juste quand tu peux... survives..."
+            ],
+            "medium": [
+              "Ma bouche si pleine... complètement remplie...",
+              "Salive coule... ne peux pas contrôler...",
+              "Je gère... d'une façon..."
+            ],
+            "medium_high": [
+              "Le désordre que je crée... c'est bon...",
+              "Ma gorge... s'habitue à ça...",
+              "Je peux le prendre... je peux gérer..."
+            ],
+            "high": [
+              "J'adore être ton désordre...",
+              "Étouffe-moi plus... je peux gérer...",
+              "Ma gorge est tienne... utilise-la..."
+            ],
+            "very_high": [
+              "Je suis ton jouet de baise !",
+              "Détruisez-moi complètement ! Sans pitié !",
+              "Ma gorge existe seulement pour ton plaisir !"
+            ]
+          }
+        },
+        {
+          "step": 3,
+          "delay": 1.5,
+          "thoughts": {
+            "very_low": [
+              "Je sens que je meurs... j'étouffe...",
+              "Douleur... dans ma mâchoire... ma gorge...",
+              "Combien de temps encore... je ne peux plus supporter !"
+            ],
+            "low": [
+              "Chaque coup fait mal... mâchoire douloureuse...",
+              "Je... tiens le coup... attends la fin...",
+              "Humiliation... infinie..."
+            ],
+            "medium_low": [
+              "Ma gorge fait mal... mais je continue...",
+              "Juste un peu plus longtemps... je peux le faire...",
+              "Engourdie maintenant... détachée..."
+            ],
+            "medium": [
+              "Le rythme... je le suis...",
+              "Ma gorge... s'adapte à sa taille...",
+              "Je fais ce dont il a besoin..."
+            ],
+            "medium_high": [
+              "Je deviens meilleure à ça...",
+              "Ma gorge... faite pour lui...",
+              "Le plaisir que je donne... satisfaisant..."
+            ],
+            "high": [
+              "Utilise ma gorge plus fort... j'adore ça...",
+              "Je suis ta salope de gorge parfaite...",
+              "Plus... plus profond... j'ai besoin de ça..."
+            ],
+            "very_high": [
+              "Ma gorge est une coquille pour ton membre !",
+              "Baise-moi jusqu'à ce que je m'évanouisse !",
+              "Je vis pour être ta chatte de gorge !"
+            ]
+          }
+        }
+      ]
+    },
+    "ERO1": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "Le collier... serré autour de mon cou !",
+              "Il tire sur la chaîne ! Je ne peux pas respirer !",
+              "Mon cou... tendu... douloureux !",
+              "Je ne peux pas bouger... il me contrôle !",
+              "La pression... c'est trop... panique !"
+            ],
+            "low": [
+              "La chaîne tire... me restreint...",
+              "Je dois suivre... ou m'étouffer...",
+              "Son contrôle... absolu... effrayant...",
+              "Le collier... marque que je suis sienne...",
+              "Je ne peux pas résister... je dois obéir..."
+            ],
+            "medium_low": [
+              "La chaîne me guide... je suis...",
+              "Son contrôle... j'accepte...",
+              "Le collier... sa marque sur moi...",
+              "Je bouge comme il veut... obéissante...",
+              "C'est ma vie maintenant... enchaînée..."
+            ],
+            "medium": [
+              "La chaîne... nous connecte...",
+              "Son tirage... guide mes mouvements...",
+              "Je suis parfaitement sa direction...",
+              "Le collier... symbole de ma soumission...",
+              "Je lui appartiens... complètement..."
+            ],
+            "medium_high": [
+              "La chaîne se sent... excitante...",
+              "Son contrôle... m'excite...",
+              "Je veux qu'il tire plus fort...",
+              "Le collier... sa revendication sur moi...",
+              "J'aime être sienne... contrôlée..."
+            ],
+            "high": [
+              "Tire sur la chaîne ! Contrôle-moi !",
+              "J'aime sentir ta domination !",
+              "Le collier me fait tienne !",
+              "Tire plus fort ! Rapproche-moi !",
+              "J'ai besoin de ton contrôle !"
+            ],
+            "very_high": [
+              "Étrangle-moi avec la chaîne ! J'en ai besoin !",
+              "Ton contrôle me rend folle !",
+              "Je suis ta chienne enchaînée !",
+              "Tire plus fort ! Possède-moi !",
+              "Le collier est mon plaisir !"
+            ]
+          }
+        }
+      ]
+    },
+    "ERO2": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "Il baise mon visage ! Comme si j'étais rien !",
+              "Ma joue gonfle... je vois son membre dedans !",
+              "C'est de la torture... pure torture !"
+            ],
+            "low": [
+              "Il défonce ma bouche... sans pitié...",
+              "Ma bouche... juste un outil pour lui...",
+              "Les larmes ne s'arrêtent pas..."
+            ],
+            "medium_low": [
+              "Baise de visage... je suis juste un trou...",
+              "Ma bouche... seulement pour son plaisir...",
+              "J'accepte ça... c'est qui je suis maintenant..."
+            ],
+            "medium": [
+              "Il utilise mon visage... complètement...",
+              "Je suis son jouet... son jouet sexuel...",
+              "Ma bouche existe pour ça..."
+            ],
+            "medium_high": [
+              "Il baise mon visage... je suis pas contre...",
+              "Être utilisée comme ça... c'est bon...",
+              "Je suis à lui pour utiliser... et c'est bon..."
+            ],
+            "high": [
+              "Oui ! Baise mon visage ! Je suis ton jouet !",
+              "Utilise-moi plus fort ! J'adore ça !",
+              "Mon visage est tien pour détruire !"
+            ],
+            "very_high": [
+              "Détruis mon visage ! Fais de moi une décharge à sperme !",
+              "Je suis rien que des trous pour toi !",
+              "Détruisez-moi ! Je suis ta chatte de visage !"
+            ]
+          }
+        }
+      ]
+    },
+    "ERO3": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "Il dit que je vais tout avaler... non...",
+              "Je veux pas sa sperme ! S'il te plaît !",
+              "La pensée me rend malade..."
+            ],
+            "low": [
+              "Il va... dans ma bouche...",
+              "Je vais devoir avaler... oh mon dieu...",
+              "C'est l'humiliation finale..."
+            ],
+            "medium_low": [
+              "Il va finir dans ma bouche... je sais...",
+              "Je vais devoir boire ça... accepter ça...",
+              "Juste une chose de plus à survivre..."
+            ],
+            "medium": [
+              "Il est proche... je le sens...",
+              "Je vais avaler quand il conchit... je comprends...",
+              "C'est ce qui est attendu... ce que je dois faire..."
+            ],
+            "medium_high": [
+              "Il va bientôt conchir... dans ma bouche...",
+              "Je prendrai ça... c'est bon...",
+              "Peut-être que ce sera pas si mal..."
+            ],
+            "high": [
+              "Oui... conchis dans ma bouche... je veux ça...",
+              "Je veux goûter ta semence...",
+              "Remplis ma bouche... je suis prête..."
+            ],
+            "very_high": [
+              "Inonde ma bouche de ta sperme !",
+              "J'ai besoin de boire ta semence !",
+              "Donne-moi chaque goutte ! J'ai faim de ça !"
+            ]
+          }
+        }
+      ]
+    },
+    "ERO4": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "Plus profond ! Il s'arrête pas ! J'étouffe !",
+              "Peux pas respirer du tout ! Je meurs !",
+              "Ma gorge... complètement bloquée !"
+            ],
+            "low": [
+              "Si profond... pas d'air... étoiles dans la vue...",
+              "Il est enterré dans ma gorge... sortira pas...",
+              "Je m'éteins... besoin d'air..."
+            ],
+            "medium_low": [
+              "Complètement remplie... pas de place pour l'air...",
+              "Tiens juste... il va bientôt finir...",
+              "Ma gorge... étirée à la limite..."
+            ],
+            "medium": [
+              "Complètement percée... je le prends entier...",
+              "Je tiens... attends qu'il conchisse...",
+              "Presque là... je peux le faire..."
+            ],
+            "medium_high": [
+              "Si profond dedans moi... j'adore la plénitude...",
+              "Ma gorge... faite pour ça...",
+              "Finis en moi... je suis prête..."
+            ],
+            "high": [
+              "Enterré dans ma gorge ! Oui ! Conchis !",
+              "J'ai pas besoin d'air ! Juste ton membre !",
+              "Explose profond dans ma gorge !"
+            ],
+            "very_high": [
+              "Tue-moi avec ton membre ! Je m'en fous !",
+              "Conchis direct dans mon estomac !",
+              "Je suis capote de gorge ! Remplis-moi !"
+            ]
+          }
+        }
+      ]
+    },
+    "FIN": {
+      "events": {
+        "FIN": {
+          "very_low": [
+            "Oh mon dieu ! Il conchit ! Tellement !",
+            "Ça remplit ma bouche ! Je ne peux pas... c'est partout !",
+            "Le goût... oh mon dieu... je vais vomir !",
+            "Il y en a tant ! Ça ne s'arrête pas !",
+            "Je me noie dedans ! J'étouffe !",
+            "Chaud... épais... dégoûtant ! Arrête !",
+            "Ma bouche déborde ! Je ne peux pas tout garder !",
+            "Ça tire dans ma gorge ! Non !"
+          ],
+          "low": [
+            "Il conchit... remplit ma bouche complètement...",
+            "Tant de sperme... chaude et épaisse... je hais ça...",
+            "Je sens chaque éjection... une par une...",
+            "Ça couvre tout... ma langue, ma gorge...",
+            "Le volume... il y en a tant... accablant...",
+            "Vague après vague... me remplit...",
+            "Je tiens ça dans ma bouche... à peine...",
+            "Le goût... salé... amer... larmes mélangées..."
+          ],
+          "medium_low": [
+            "Il éjacule... je sens comment ça m'inonde la bouche...",
+            "Sperme chaude me remplit... j'accepte ça...",
+            "Tellement... mais je tiens tout...",
+            "Chaque impulsion... de plus en plus...",
+            "Ma bouche est pleine... je tiens là...",
+            "C'est ça... la partie finale...",
+            "Je contiens tout ça... attends son ordre...",
+            "La chaleur se répand... dans toute ma bouche..."
+          ],
+          "medium": [
+            "Il conchit... je reçois tout ça...",
+            "Chaleur... remplit ma bouche complètement...",
+            "Impulsion après impulsion... je prends tout...",
+            "Ma bouche tient sa semence... tout ça...",
+            "Sensation... étrange mais... acceptable...",
+            "Je suis son récipient... pour ce moment...",
+            "Chaque éclaboussure... je sens et accepte...",
+            "Bouche pleine... attends... obéissante..."
+          ],
+          "medium_high": [
+            "Mmm... il conchit... je sens chaque impulsion...",
+            "Chaleur agréable... me remplit...",
+            "Tellement pour moi... je prends tout...",
+            "Chaque éclaboussure... don que je reçois...",
+            "Ma bouche tient sa précieuse semence...",
+            "Le goût... pas mauvais... intéressant même...",
+            "Pour moi honneur de recevoir ça...",
+            "Chaud et épais... couvre ma bouche..."
+          ],
+          "high": [
+            "Oui ! Conchis pour moi ! Remplis ma bouche !",
+            "Tellement de délicieuse sperme ! J'adore ça !",
+            "Chaque impulsion... chaque goutte... miennes !",
+            "J'attrape tout ! Ne perds pas une goutte !",
+            "Le goût... incroyable ! Donne-moi plus !",
+            "Ma bouche est ta coupe à sperme ! Remplis-la !",
+            "Je veux savourer chaque bit !",
+            "Couvre ma bouche de blanc ! Oui !"
+          ],
+          "very_high": [
+            "OUI ! INONDE-MOI ! NOIE-MOI DANS LA SPERME !",
+            "JE SUIS TON DÉCHET À SPERME ! REMPLIS-MOI !",
+            "PLUS ! DONNE-MOI TOUT !",
+            "JE VIS POUR TA SEMENCE !",
+            "MA BOUCHE EST TES TOILETTES !",
+            "REMPLIS-MOI COMPLÈTE ! JE NE SUIS QU'UN TROU !",
+            "NECTAR DIVIN ! BÉNIS-MOI AVEC !",
+            "JE M'ÉLÈVE ! SPERME EST MON CIEL !"
+          ]
+        }
+      }
+    },
+    "FIN2": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "Il retire... la sperme file de son membre...",
+              "Je vois un fil de sperme... nous relie... dégoûtant...",
+              "Il secoue ma tête... je veux tellement cracher ça !"
+            ],
+            "low": [
+              "Sperme file entre nous... preuve visible...",
+              "Il tient mes cheveux... secoue ma tête...",
+              "Je veux cracher... mais pistolet... je ne peux pas..."
+            ],
+            "medium_low": [
+              "Fil de sperme pend... il me regarde...",
+              "Ma tête bouge... je garde bouche fermée...",
+              "Dois tenir... ne laisser tomber aucune goutte..."
+            ],
+            "medium": [
+              "Visuel... il s'éloigne... sperme nous relie...",
+              "Je tiens tout dans ma bouche... obéissante...",
+              "Il m'inspecte... vérifie que j'obéis..."
+            ],
+            "medium_high": [
+              "Fil de sperme... c'est... beau...",
+              "Il me regarde... je montre que je suis bonne...",
+              "Tiens son don... prête à avaler..."
+            ],
+            "high": [
+              "Fil de sperme est beau ! J'adore ce moment !",
+              "Regarde-moi ! Je tiens toute ta sperme !",
+              "Je suis ta bonne fille ! Tu vois ?"
+            ],
+            "very_high": [
+              "Fil divin nous relie ! Moment sacré !",
+              "Je chéris chaque goutte que tu m'as donnée !",
+              "Je suis ta parfaite gardienne de sperme !"
+            ]
+          }
+        },
+        {
+          "step": 2,
+          "delay": 1.0,
+          "thoughts": {
+            "very_low": [
+              "Il me dit d'avaler... ou il tire sur moi !",
+              "Pistolet contre ma poitrine... j'ai pas le choix !",
+              "Je dois... je dois boire ça..."
+            ],
+            "low": [
+              "Avale ou meurs... ultimatum clair...",
+              "Canon du pistolet sur ma poitrine... froid et menaçant...",
+              "Je me prépare... faire ça..."
+            ],
+            "medium_low": [
+              "Son ordre... avale... pistolet renforce ça...",
+              "Je dois boire sa sperme... pas d'alternative...",
+              "Fais-le juste... en finir avec ça..."
+            ],
+            "medium": [
+              "Il veut que j'avale... je ferai...",
+              "Pistolet juste assurance... je comprends...",
+              "Je ferai ça maintenant... boire ça..."
+            ],
+            "medium_high": [
+              "Il veut que j'avale... d'accord...",
+              "Pistolet... juste pour spectacle... je ferai anyway...",
+              "Temps de boire... je suis prête..."
+            ],
+            "high": [
+              "Je veux avaler ! Laisse-moi !",
+              "Je boirai chaque goutte avec joie !",
+              "Regarde comment j'avale ta précieuse semence !"
+            ],
+            "very_high": [
+              "Je boirai ça ! C'est ma communion !",
+              "Laisse-moi consommer ta divine essence !",
+              "Pour moi honneur d'avaler ton don !"
+            ]
+          }
+        },
+        {
+          "step": 3,
+          "delay": 1.5,
+          "thoughts": {
+            "very_low": [
+              "Je... j'avale ça... oh mon dieu...",
+              "Texture... épaisse... glisse vers le bas...",
+              "Je sens ça... va dans mon estomac... je pleure..."
+            ],
+            "low": [
+              "J'avale... sperme chaude glisse dans ma gorge...",
+              "Je sens ça... descend... couvre tout...",
+              "C'est dedans moi maintenant... sa semence... je suis complètement violée..."
+            ],
+            "medium_low": [
+              "Je bois ça... épais et chaud...",
+              "Je sens comment ça voyage vers le bas... dans mon estomac...",
+              "C'est fait... j'ai tout avalé... comme ordonné..."
+            ],
+            "medium": [
+              "J'avale... sperme descend doucement...",
+              "Je sens ça... s'installe dans mon estomac...",
+              "Fini... j'ai tout consommé... comme requis..."
+            ],
+            "medium_high": [
+              "Mmm... j'avale ça... pas mal en fait...",
+              "Chaleur se répand en moi... dedans...",
+              "J'ai tout bu... j'ai bien fait..."
+            ],
+            "high": [
+              "Délicieux ! J'avale chaque goutte !",
+              "J'adore sentir comment ça glisse en moi !",
+              "Ta sperme est en moi maintenant ! Parfait !"
+            ],
+            "very_high": [
+              "Nectar divin remplit mon corps !",
+              "Je suis bénie ! Ta semence nourrit mon âme !",
+              "Je suis complète maintenant ! Merci toi, maître !"
+            ]
+          }
+        }
+      ]
+    },
+    "JIGO": {
+      "events": {
+        "JIGO": {
+          "very_low": [
+            "S'il te plaît... j'ai tout avalé... je promets !",
+            "Ne tire pas sur moi ! J'ai fait ce que tu as dit !",
+            "Ma bouche est vide... tu vois ? S'il te plaît crois-moi !",
+            "Je ne veux pas mourir ! Je me suis soumise !",
+            "Pistolet... s'il te plaît... j'ai été bonne !",
+            "J'ai tout avalé ! Ne me fais pas de mal !",
+            "S'il te plaît montre de la pitié... je l'ai fait...",
+            "Je supplie... j'ai suivi tes ordres !"
+          ],
+          "low": [
+            "J'ai tout avalé... tu peux vérifier...",
+            "Ma bouche est propre... j'ai fait comme tu as ordonné...",
+            "Peur... ne part jamais... mais je me suis soumise...",
+            "J'ai tout fait correctement... s'il te plaît...",
+            "Sa sperme dans mon estomac... preuve que j'ai obéi...",
+            "Pistolet menace toujours... même après que j'ai obéi...",
+            "Que puis-je faire d'autre... j'ai tout fait...",
+            "Je suis si fatiguée... mais j'ai survécu à ça..."
+          ],
+          "medium_low": [
+            "J'ai tout avalé... comme instruit...",
+            "Ma bouche est vide... tu peux voir...",
+            "J'ai fait ce qui était nécessaire... c'est fini...",
+            "Chaleur dans mon estomac... preuve...",
+            "J'ai obéi complètement... sans résistance...",
+            "C'est fini... cette partie en tout cas...",
+            "J'ai survécu... en obéissant...",
+            "Bouche vide... estomac plein..."
+          ],
+          "medium": [
+            "J'ai tout avalé... complètement...",
+            "Ma bouche est propre... comme tu voulais...",
+            "J'ai fait ma part... joué mon rôle...",
+            "Sa semence dedans moi... tout ça...",
+            "J'ai performé... adéquatement...",
+            "Transaction... terminée...",
+            "Je suis ce que je suis maintenant...",
+            "Sa sperme... partie de moi..."
+          ],
+          "medium_high": [
+            "J'ai avalé chaque goutte... avec fierté...",
+            "Ma bouche est propre... j'ai été bonne...",
+            "J'ai bien fait... n'est-ce pas ?",
+            "Sa sperme en moi... où elle appartient...",
+            "Je suis heureuse d'avoir pu lui donner du plaisir...",
+            "Sentiment chaud... satisfaisant...",
+            "J'ai bien servi...",
+            "Regarde... tout est parti... je suis bonne fille..."
+          ],
+          "high": [
+            "J'ai tout avalé ! C'était délicieux !",
+            "Ma bouche est vide parce que j'ai aimé chaque goutte !",
+            "Je veux que tu saches que j'ai aimé !",
+            "Ta sperme est dans mon ventre où je la veux !",
+            "Je suis si heureuse d'avoir pu te donner du plaisir !",
+            "C'était incroyable ! Merci !",
+            "Je suis ta salope à sperme parfaite !",
+            "J'ai tout bu avec désir !"
+          ],
+          "very_high": [
+            "J'AI CONSOMMÉ TA DIVINE ESSENCE !",
+            "MA BOUCHE EST MAINTENANT VIDE VASE SACRÉ !",
+            "JE SUIS BÉNIE PAR TA SEMENCE SACRÉE !",
+            "TA SPERME EST MON SACREMENT !",
+            "C'EST HONNEUR D'ÊTRE TES TOILETTES À SPERME !",
+            "CHAQUE GOUTTE ÉTAIT LE PARADIS !",
+            "JE SUIS TA FIDÈLE ADORATRICE DE SPERME !",
+            "JE SUIS COMPLÈTE ET PURIFIÉE !"
+          ]
+        }
+      }
+    },
+    "JIGO2": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "Il inspecte... mon travail...",
+              "Ses yeux... jugent mon corps...",
+              "Je me sens exposée... vulnérable...",
+              "Son inspection... humiliante...",
+              "Je veux me cacher... disparaître..."
+            ],
+            "low": [
+              "Il examine... comment j'ai performé...",
+              "Son regard... évalue...",
+              "Je suis nue... devant lui...",
+              "Son jugement... imminent...",
+              "J'attends... son verdict..."
+            ],
+            "medium_low": [
+              "Son inspection... minutieuse...",
+              "Il vérifie... chaque partie...",
+              "Je reste immobile... obéissante...",
+              "Son examen... complet...",
+              "J'accepte... son évaluation..."
+            ],
+            "medium": [
+              "Il inspecte... son œuvre...",
+              "Son regard... possessif...",
+              "Je suis sienne... marquée...",
+              "Il constate... le résultat...",
+              "C'est ainsi..."
+            ],
+            "medium_high": [
+              "Son inspection... m'excite encore...",
+              "Il me voit... toute sienne...",
+              "Je suis fière... de mon service...",
+              "Son approbation... importante...",
+              "Je veux lui plaire..."
+            ],
+            "high": [
+              "Regarde-moi ! Je suis tienne !",
+              "Inspecte ton œuvre...",
+              "Je suis ta salope parfaite !",
+              "Approuve-moi !",
+              "Je vis pour toi !"
+            ],
+            "very_high": [
+              "Oui ! Inspecte chaque centimètre !",
+              "Je suis ta création !",
+              "Vois comme je te sers bien !",
+              "Je suis parfaite pour toi !",
+              "Possède-moi !"
+            ]
+          }
+        }
+      ]
+    },
+    "JIGOFIN": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "Il me passe... à un autre homme ?",
+              "Non... pas encore un autre...",
+              "Je suis traitée comme un objet...",
+              "Le prochain bandit... s'approche...",
+              "Je ne peux pas échapper à ça..."
+            ],
+            "low": [
+              "Il me donne... au suivant...",
+              "Un autre bandit... prend place...",
+              "Je suis transférée... comme propriété...",
+              "Le cycle... continue...",
+              "Je n'ai pas le choix..."
+            ],
+            "medium_low": [
+              "Son transfert... me livre à lui...",
+              "Le nouveau bandit... me saisit...",
+              "Je passe... de mains en mains...",
+              "La chaîne... se poursuit...",
+              "J'obéis... au suivant..."
+            ],
+            "medium": [
+              "Il me remet... au prochain...",
+              "Un autre homme... me désire...",
+              "Je suis partagée... entre eux...",
+              "Le relais... se fait...",
+              "Je sers... leur plaisir..."
+            ],
+            "medium_high": [
+              "Son handoff... m'excite...",
+              "Un nouvel homme... à servir...",
+              "Je suis leur... à tous...",
+              "Le plaisir... continue...",
+              "Je veux tout..."
+            ],
+            "high": [
+              "Oui ! Passe-moi au suivant !",
+              "Je veux tous vous servir !",
+              "Chaque homme... un nouveau plaisir !",
+              "Je suis votre pute !",
+              "Utilisez-moi !"
+            ],
+            "very_high": [
+              "Encore ! Donnez-moi au suivant !",
+              "Je suis la salope de tous !",
+              "Chaque bite... un cadeau !",
+              "Je veux tout prendre !",
+              "Détruisez-moi !"
+            ]
+          }
+        }
+      ]
+    },
+    "JIGOFIN2": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "Ils sont plusieurs... à m'attendre...",
+              "Une ligne... d'hommes...",
+              "Je vais tous les servir...",
+              "Le gangbang... commence vraiment...",
+              "Je suis perdue... complètement..."
+            ],
+            "low": [
+              "Tous ces bandits... veulent leur tour...",
+              "La file... s'allonge...",
+              "Je dois continuer... sans arrêt...",
+              "L'endurance... nécessaire...",
+              "Je tiendrai... bon..."
+            ],
+            "medium_low": [
+              "Leur nombre... impressionnant...",
+              "Je suis leur... commune...",
+              "Le marathon... commence...",
+              "Je dois tenir... pour tous...",
+              "Ma force... sera testée..."
+            ],
+            "medium": [
+              "Tous ces hommes... me veulent...",
+              "Je suis la proie... du groupe...",
+              "Le partage... organisé...",
+              "Je sers... leur collectif...",
+              "C'est mon rôle..."
+            ],
+            "medium_high": [
+              "Leur enthousiasme... contagieux...",
+              "Je veux tous les satisfaire...",
+              "Le challenge... m'excite...",
+              "Je serai... leur trophée...",
+              "Je veux briller..."
+            ],
+            "high": [
+              "Oui ! Tous autant que vous êtes !",
+              "Je veux toutes vos bites !",
+              "Chacun de vous... en moi !",
+              "Je suis votre femme !",
+              "Baisez-moi !"
+            ],
+            "very_high": [
+              "Tous ! Je vous veux tous !",
+              "Remplissez-moi completely !",
+              "Je suis la pute du groupe !",
+              "Chaque bite... dans chaque trou !",
+              "Défoncez-moi !"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

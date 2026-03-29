@@ -1,0 +1,733 @@
+{
+  "settings": {
+    "commentCooldownSeconds": 5.0,
+    "maxSimultaneousComments": 1,
+    "commentDisplayDuration": 5.0,
+    "fontSize": 22.0,
+    "verticalOffset": 20.0,
+    "streamingSpeed": 0.025,
+    "responseColor": {
+      "r": 1.0,
+      "g": 1.0,
+      "b": 1.0,
+      "a": 1.0
+    },
+    "responseOutlineColor": {
+      "r": 0.6,
+      "g": 0.0,
+      "b": 0.7,
+      "a": 1.0
+    },
+    "thoughtColor": {
+      "r": 1.0,
+      "g": 1.0,
+      "b": 1.0,
+      "a": 1.0
+    },
+    "thoughtOutlineColor": {
+      "r": 0.9,
+      "g": 0.2,
+      "b": 0.5,
+      "a": 1.0
+    }
+  },
+  "mindBrokenThresholds": [0.3, 0.7],
+  "animations": {
+    "ERO1": {
+      "description": "Ariadias Antworten wenn Gobelins anfangen sie zu lecken",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "W-was macht ihr?! Weg von mir!",
+            "Nein! Bitte hört auf! Das ist falsch!",
+            "Ich... Ich will das nicht! Lasst mich los!",
+            "Jemand hilf! Diese Monster...",
+            "Warum ich? Bitte, ich flehe!",
+            "Das kann nicht passieren... Nein!",
+            "Eure Zungen sind so rau... Hört auf!",
+            "Ich fühle mich so verletzt... Bitte!",
+            "Diese grünen Kreaturen... Was wollen sie?",
+            "Mein Körper zittert... Ich habe Angst!",
+            "Fass mich nicht da an! Bitte!",
+            "Das ist ein Albtraum... Wach auf!",
+            "Ihre Augen sind so hungrig... Hilfe!",
+            "Ich kann mich nicht bewegen... Sie sind zu stark!",
+            "Was tun diese Monster mit mir?"
+          ],
+          "medium": [
+            "Ich... Ich weiß nicht was ich fühlen soll...",
+            "Ihre Zungen... Sie sind überall...",
+            "Das ist so falsch... Aber...",
+            "Ich kann nicht aufhören zu zittern... Was jetzt?",
+            "Ihre Berührung ist so beharrlich...",
+            "Mein Körper reagiert... Gegen meinen Willen...",
+            "Diese Gobelins... Sie sind so beharrlich...",
+            "Ich fühle mich so exponiert... So verletzlich...",
+            "Ihre rauen Zungen... Ich kann nicht denken...",
+            "Diese Wärme... Sie baut sich in mir auf...",
+            "Ich will widerstehen... Aber mein Körper...",
+            "Diese Kreaturen... Sie brechen mich...",
+            "Ihr Hunger... Er ist ansteckend...",
+            "Ich fühle mich so schmutzig... Aber es fühlt...",
+            "Ihre Zungen... So gnadenlos..."
+          ],
+          "high": [
+            "Oh Gott... Ihre Zungen fühlen sich so gut an...",
+            "Ich brauche mehr... Hör jetzt nicht auf!",
+            "Diese Gobelins wissen wie man gefällt...",
+            "Mein Körper brennt... Gib mir mehr!",
+            "Ich liebe wie sie mich überall lecken...",
+            "Ihre rauen Zungen... Perfekt!",
+            "Ich bin so nass... Sie machen mich verrückt!",
+            "Fickt mich mit euren Zungen, Monster!",
+            "Ich will ihre Schwänze... Jetzt!",
+            "Diese Gobelins sind erstaunliche Liebhaber!",
+            "Meine Muschi schmerzt nach ihnen...",
+            "Ihr Speichel... So heiß und feucht...",
+            "Ich crave ihre Berührung... Überall!",
+            "Komm in mir... Bitte!",
+            "Ihre Zungen machen mich wild!"
+          ]
+        }
+      }
+    },
+    "ERO2": {
+      "description": "Ariadias Antworten auf intensiveres Lecken der Gobbelins",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Nein! Es ist zu viel! Hört auf zu lecken!",
+            "Ihre Zungen sind überall... Hilfe!",
+            "Ich halte das nicht aus... Bitte hört auf!",
+            "Mein Körper verrät mich... Nein!",
+            "Diese Monster... So gnadenlos!",
+            "Ich fühle mich so hilflos... Jemand!",
+            "Ihre rauen Zungen tun weh... Hört auf!",
+            "Ich kann nicht atmen... Zu intensiv!",
+            "Bitte... Ich kann das nicht handhaben!",
+            "Mein Verstand bricht... Hört auf!",
+            "Diese Gobbelins hören nicht auf... Hilfe!",
+            "Ich fühle mich so verletzt... Überall!",
+            "Ihre Zungen... Zu tief!",
+            "Ich zittere unkontrollierbar...",
+            "Das ist Folter... Bitte hört auf!"
+          ],
+          "medium": [
+            "Ich... Ich weiß nicht... Es fühlt...",
+            "Ihre Zungen... So beharrlich...",
+            "Mein Körper... Reagiert wieder...",
+            "Dieses Vergnügen... Gemischt mit Angst...",
+            "Ich will es hassen... Aber...",
+            "Ihr Lecken... So intensiv...",
+            "Mein Widerstand... Verschwindet...",
+            "Diese Gobbelins... So geschickt...",
+            "Ich fühle mich so widersprüchlich... Hilf mir...",
+            "Ihre Berührungen... Überall...",
+            "Ich kann meine Reaktionen nicht kontrollieren...",
+            "Diese Wärme... Baut sich auf...",
+            "Ihre Zungen... So fordernd...",
+            "Ich fühle mich so exponiert... So begehrt...",
+            "Mein Körper... Verrät meinen Verstand..."
+          ],
+          "high": [
+            "Ja! Leck mich härter, du Bestie!",
+            "Ihre Zungen... So verdammt gut!",
+            "Ich brauche sie tiefer... Schneller!",
+            "Meine Muschi fließt... Für sie!",
+            "Diese Gobbelins... Sex-Götter!",
+            "Fickt mich mit euren Zungen!",
+            "Ich will ihre Schwänze... Sehr!",
+            "Ihr Speichel... Macht mich noch nasser!",
+            "Leck meine Klitoris... Oh Gott ja!",
+            "Ich bin ihre Schlampe... Benutzt mich!",
+            "Ihre rauen Zungen... Perfekt!",
+            "Kommt auf mich... Markiert mich!",
+            "Ich liebe wie sie mich verschlingen!",
+            "Mehr! Ich brauche mehr Monster!",
+            "Ihre Zungen... Machen mich wahnsinnig!"
+          ]
+        }
+      }
+    },
+    "ERO3": {
+      "description": "Ariadias Antworten wenn Gobelins Zunge tiefer schieben",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Nein! Zu tief! Nimm es raus!",
+            "Ihre Zunge... In mir... Hört auf!",
+            "Das ist zu viel... Ich kann nicht!",
+            "Bitte... Nimm deine Zunge raus!",
+            "Ich fühle mich so voll... Aber falsch!",
+            "Diese Monster... Vergewaltigen mich!",
+            "Ihre Zunge... So tief... Hilfe!",
+            "Ich kann diese Invasion nicht ertragen!",
+            "Raus... Bitte nimm es raus!",
+            "Mein Körper... Gedehnt... Tut weh!",
+            "Diese Gobbelins... So grausam!",
+            "Ihre Zunge... Erforscht...",
+            "Ich fühle mich so hilflos... Nein!",
+            "Diese Penetration... Falsch!",
+            "Hört auf... Ich bitte euch... Hört auf!"
+          ],
+          "medium": [
+            "Ihre Zunge... So tief drin...",
+            "Ich fühle... Gedehnt... Voll...",
+            "Diese Empfindung... Verwirrend...",
+            "Ihre Zunge... Bewegt sich... Oh...",
+            "Ich will widerstehen... Aber...",
+            "Diese Tiefe... Zu viel...",
+            "Ihre Zunge... So beharrlich...",
+            "Ich fühle mich so verletzlich... Exponiert...",
+            "Diese Invasion... Angenehm...",
+            "Mein Körper... Akzeptiert sie...",
+            "Ihre Zunge... Tief... Tief...",
+            "Ich kann nicht denken... Nur fühlen...",
+            "Diese Fülle... Überwältigend...",
+            "Ihre Zunge... Erforscht mich...",
+            "Ich fühle... So widersprüchlich..."
+          ],
+          "high": [
+            "Tiefer! Schieb deine Zunge tiefer!",
+            "Fick mich mit deiner Zunge!",
+            "Ihre Zunge... So tief... Ja!",
+            "Füll mich vollständig... Monster!",
+            "Ich liebe wie du mich dehnst!",
+            "Ihre Zunge... Perfekte Größe!",
+            "Fick mein enges Loch... Härter!",
+            "Ich brauche deinen Schwanz... Jetzt!",
+            "Ihre Zunge... Bringt mich zum Kommen!",
+            "Tiefere Penetration... Ja!",
+            "Ich bin dein Sexspielzeug... Benutz mich!",
+            "Ihre Zunge... So geschickt!",
+            "Komm rein... Füll mich vollständig!",
+            "Ich crave diese Fülle... Mehr!",
+            "Ihre Zunge... Macht mich wahnsinnig!"
+          ]
+        }
+      }
+    },
+    "ERO4": {
+      "description": "Ariadias Antworten auf härteres und tieferes Lecken der Gobbelins",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Hört auf! Es ist zu rau! Gnade!",
+            "Ihre Zungen... Tun mir weh!",
+            "Ich kann diese Intensität nicht ertragen!",
+            "Bitte... Sanfter... Bitte!",
+            "Diese Monster... Keine Gnade!",
+            "Mein Körper... In Flammen... Hört auf!",
+            "Ihr Lecken... Zu hart!",
+            "Ich fühle mich so missbraucht... Hilfe!",
+            "Dieser Schmerz... Gemischt mit...",
+            "Hört auf mir weh zu tun... Bitte!",
+            "Ihre Zungen... Brutal!",
+            "Ich kann das nicht handhaben... Nein!",
+            "Gnade... Ich bitte um Gnade!",
+            "Zu intensiv... Ich kann nicht!",
+            "Ihr Angriff... Endlos!"
+          ],
+          "medium": [
+            "Ihre Zungen... So intensiv...",
+            "Ich fühle... Überwältigt...",
+            "Dieses Vergnügen... Zu viel...",
+            "Ihr Lecken... Gnadenlos...",
+            "Ich kann... Mich nicht kontrollieren...",
+            "Ihre Zungen... Überall...",
+            "Ich fühle... So empfindlich...",
+            "Diese Intensität... Bricht mich...",
+            "Ihre Berührungen... Forcdernd...",
+            "Ich will... Fliehen... Aber...",
+            "Ihre Zungen... Geschickt...",
+            "Diese Hitze... Brennt...",
+            "Ich fühle... Konsumiert...",
+            "Ihr Lecken... Perfekt...",
+            "Mein Widerstand... Weg..."
+          ],
+          "high": [
+            "Härter! Leck mich härter!",
+            "Ihre Zungen... So rau... Liebe es!",
+            "Fick mich besinnungslos... Ja!",
+            "Ich brauche diese Intensität... Mehr!",
+            "Ihre Zungen... Perfekte Rauheit!",
+            "Bring mich zum Kommen... Monster!",
+            "Ich liebe wie sie mich missbrauchen!",
+            "Ihr Lecken... Göttlich!",
+            "Fick meine Löcher... Alle!",
+            "Ich crave diese Brutalität!",
+            "Ihre Zungen... So fordernd!",
+            "Komm überall auf mich... Ja!",
+            "Ich bin ihre Sperma-Schlampe!",
+            "Mehr Intensität... Bitte!",
+            "Ihre Zungen... Besitz mich!"
+          ]
+        }
+      }
+    },
+    "ERO5": {
+      "description": "Ariadias Antworten auf extremes Lecken das sich dem Höhepunkt nähert",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Nein! Ich werde... Hört auf!",
+            "Ihre Zungen... Drängen mich... Nein!",
+            "Ich kann nicht zurückhalten... Hilfe!",
+            "Dieser Orgasmus... Erzwungen... Falsch!",
+            "Ihr Angriff... Zu viel!",
+            "Ich breche... Bitte hört auf!",
+            "Ihre Zungen... Sieg nah!",
+            "Ich will nicht kommen... Nein!",
+            "Dieses Vergnügen... Gegen Willen!",
+            "Ihr Lecken... Triumphierend!",
+            "Hört auf... Ich komme... Hört auf!",
+            "Diese Monster... Gewinnen!",
+            "Mein Körper... Verrät mich!",
+            "Erzwungener Orgasmus... Grauen!",
+            "Ihre Zungen... Erobern mich!"
+          ],
+          "medium": [
+            "Ich... Ich kann nicht zurückhalten...",
+            "Ihre Zungen... Zu geschickt...",
+            "Dieser Höhepunkt... Unvermeidbar...",
+            "Ich fühle... Die Kante...",
+            "Ihr Lecken... Perfekt...",
+            "Mein Widerstand... Zerbröckelt...",
+            "Ich will... Kämpfen... Aber...",
+            "Ihre Zungen... Sieg...",
+            "Dieses Vergnügen... Überwältigend...",
+            "Ich fühle... Ergebe mich...",
+            "Ihr Angriff... Erfolgreich...",
+            "Mein Körper... Gibt nach...",
+            "Dieser Orgasmus... Gemischte Gefühle...",
+            "Ihre Zungen... Triumphierend...",
+            "Ich kann... Es nicht aufhalten..."
+          ],
+          "high": [
+            "Ich komme! Hör nicht auf!",
+            "Ihre Zungen... Lassen mich explodieren!",
+            "Kommt mit mir... Monster!",
+            "Dieser Höhepunkt... Perfekt!",
+            "Ihr Lecken... Orgasmisch!",
+            "Fick mich durch den Orgasmus!",
+            "Ich liebe wie sie mich zum Kommen bringen!",
+            "Ihre Zungen... Sieg!",
+            "Komm härter... Ja!",
+            "Ich bin ihre Orgasmus-Sklavin!",
+            "Ihr Lecken... Ekstase!",
+            "Füll mich mit Sperma... Jetzt!",
+            "Dieses Vergnügen... Göttlich!",
+            "Ihre Zungen... Götter!",
+            "Komm überall... Ja!"
+          ]
+        }
+      }
+    },
+    "ERO_iki": {
+      "description": "Ariadias Antworten auf erzwungenen Höhepunkt durch Lecken",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Nein! Ich komme! Hört auf!",
+            "Ihre Zungen... Haben mich gezwungen...",
+            "Dieser Orgasmus... Erniedrigend!",
+            "Ich wollte das nicht... Nein!",
+            "Ihr Sieg... Vollständig!",
+            "Mein Körper... Hat mich verraten!",
+            "Diese Monster... Haben gewonnen!",
+            "Erzwungener Höhepunkt... Schande!",
+            "Ihre Zungen... Triumphierend!",
+            "Ich hasse dieses Vergnügen... Nein!",
+            "Komme... Gegen meinen Willen!",
+            "Ihr Lecken... Erfolgreich!",
+            "Ich fühle mich so schmutzig... Benutzt!",
+            "Diese Ekstase... Falsch!",
+            "Ihre Eroberung... Vollständig!"
+          ],
+          "medium": [
+            "Ich... Komme... Oh Gott...",
+            "Ihre Zungen... Zu gut...",
+            "Dieser Höhepunkt... Intensiv...",
+            "Ich kann... Nicht aufhalten...",
+            "Ihr Sieg... Süß...",
+            "Mein Körper... Hat ergeben...",
+            "Dieses Vergnügen... Überwältigend...",
+            "Ihre Zungen... Perfekt...",
+            "Ich fühle... Besiegt... Aber...",
+            "Dieser Orgasmus... Erstaunlich...",
+            "Ihr Lecken... Kunst...",
+            "Ich wollte... Widerstehen...",
+            "Ihre Eroberung... Angenehm...",
+            "Komme... So intensiv...",
+            "Ihre Zungen... Meister..."
+          ],
+          "high": [
+            "Komme! Ich komme so hart!",
+            "Ihre Zungen... Perfekter Höhepunkt!",
+            "Verdammte Ja! Dieser Orgasmus!",
+            "Ihr Lecken... Ekstase!",
+            "Kommt mit mir... Liebhaber!",
+            "Dieses Vergnügen... Göttlich!",
+            "Ihre Zungen... Sex-Götter!",
+            "Füll mich... Komm rein!",
+            "Ich bin ihre Sperma-Schlampe!",
+            "Dieser Höhepunkt... Intensiv!",
+            "Ihr Sieg... Geteilt!",
+            "Komm härter... Ja!",
+            "Ihre Zungen... Besitzen meine Orgasmen!",
+            "Fick mich mehr... Jetzt!",
+            "Diese Ekstase... Ewig!"
+          ]
+        }
+      }
+    },
+    "2ERO_START": {
+      "description": "Ariadias Gedanken wenn Gobbelins Penetration starten",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Nein! Sie schieben rein...",
+            "...Das kann nicht passieren... Ihre Schwänze...",
+            "...Ich fühle mich so gedehnt... Es tut weh...",
+            "...Ihre grünen Schwänze... So falsch...",
+            "...Bitte hört auf... Ich kann das nicht ertragen...",
+            "...Mein Körper... Wird vergewaltigt...",
+            "...Diese Monster... Benutzen mich...",
+            "...Ich fühle mich so hilflos... Gefüllt...",
+            "...Ihre Schwänze... So tief drin...",
+            "...Dieser Schmerz... Zu viel...",
+            "...Ich kann nicht schreien... Mund voll...",
+            "...Ihre Stöße... Gnadenlos...",
+            "...Ich bin nur ein Loch für sie...",
+            "...Dieser Albtraum... Endet nie...",
+            "...Ihre Schwänze... Pulsieren drin..."
+          ],
+          "medium": [
+            "...Ihre Schwänze... So groß... Füllen mich...",
+            "...Ich fühle... Gedehnt... Voll...",
+            "...Diese Empfindung... Intensiv...",
+            "...Ihre Stöße... Rhythmus...",
+            "...Ich kann... Nicht klar denken...",
+            "...Mein Körper... Reagiert...",
+            "...Diese Gobbelins... Geschickt...",
+            "...Ihre Schwänze... Heiß... Hart...",
+            "...Ich fühle... So verletzlich...",
+            "...Diese Fülle... Überwältigend...",
+            "...Ihre Bewegungen... Synchronisiert...",
+            "...Ich kann... Mich nicht kontrollieren...",
+            "...Dieses Vergnügen... Baut sich auf...",
+            "...Ihre Schwänze... Überall...",
+            "...Mein Widerstand... Verschwindet..."
+          ],
+          "high": [
+            "...Oh Gott... Ihre Schwänze fühlen sich erstaunlich an...",
+            "...So voll... Beide Löcher gefickt...",
+            "...Ihre Schwänze... Perfekte Größe...",
+            "...Fick mich härter... Ja...",
+            "...Ich brauche das... Ihre Schwänze...",
+            "...Komm in mir... Bitte...",
+            "...Ihre Stöße... Ekstase...",
+            "...Ich bin ihr Sexspielzeug... Liebe es...",
+            "...Mehr Schwänze... Ich will mehr...",
+            "...Ihr Sperma... Füll mich...",
+            "...Dieses Vergnügen... Göttlich...",
+            "...Fick mich besinnungslos... Ja...",
+            "...Ihre Schwänze... Besitzen mich...",
+            "...Komm überall... Drin...",
+            "...Ich bin abhängig... Von ihren Schwänzen..."
+          ]
+        }
+      }
+    },
+    "2ERO_1": {
+      "description": "Ariadias Gedanken während des anfänglichen Fickens",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Sie bewegen sich... Drin...",
+            "...Ihre Schwänze... Schieben tief...",
+            "...Ich kann nicht atmen... Mund voll...",
+            "...Diese Gewalt... Endlos...",
+            "...Mein Körper... Springt auf und ab...",
+            "...Ihre grüne Haut... Abscheulich...",
+            "...Aber ihre Schwänze... So beharrlich...",
+            "...Ich fühle... Benutzt... Schmutzig...",
+            "...Ihre Grunzer... Animalisch...",
+            "...Ich bin nur... Spielzeug...",
+            "...Dieser Schmerz... Gemischt mit...",
+            "...Ihre Schwänze... Pulsieren...",
+            "...Ich kann... Nicht entkommen...",
+            "...Dieser Albtraum... Geht weiter...",
+            "...Ihre Stöße... Gnadenlos..."
+          ],
+          "medium": [
+            "...Ihre Schwänze... Bewegen im Rhythmus...",
+            "...Ich fühle... Jeden Zentimeter...",
+            "...Diese Fülle... Intensiv...",
+            "...Ihre Stöße... Geschickt...",
+            "...Mein Körper... Passt sich an...",
+            "...Ich kann... Nicht nicht fühlen...",
+            "...Ihre Schwänze... So hart...",
+            "...Dieses Vergnügen... Baut sich auf...",
+            "...Ich fühle... So voll...",
+            "...Ihre Bewegungen... Perfekt...",
+            "...Ich kann... Nicht aufhören zu stöhnen...",
+            "...Diese Empfindung... Macht süchtig...",
+            "...Ihre Schwänze... Füllen mich...",
+            "...Ich fühle... Begehrt...",
+            "...Diese Hitze... Brennt..."
+          ],
+          "high": [
+            "...Ja! Fick mich mit diesen Schwänzen...",
+            "...Ihre Schwänze... So tief... Perfekt...",
+            "...Ich liebe diese Fülle... Beide Löcher...",
+            "...Schieb härter... Monster...",
+            "...Komm in mir... Jetzt...",
+            "...Ihre Schwänze... Lassen mich fließen...",
+            "...Fick mich wie deine Schlampe...",
+            "...Ich brauche ihr Sperma... Sehr...",
+            "...Ihre Stöße... Ekstase...",
+            "...Mehr! Tiefer! Härter!",
+            "...Ihre Schwänze... Besitzen meine Löcher...",
+            "...Komm überall auf mich... Ja...",
+            "...Ich bin ihr Sperma-Gefäß...",
+            "...Fick mich besinnungslos... Bitte...",
+            "...Ihre Schwänze... Fühlen sich so gut an..."
+          ]
+        }
+      }
+    },
+    "2ERO_2": {
+      "description": "Ariadias Gedanken wenn Gobelins tiefer und härter ficken",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Er wird tiefer... Tut weh...",
+            "...Ihre Schwänze... So rau...",
+            "...Ich fühle... Zerissen...",
+            "...Diese Tiefe... Zu viel...",
+            "...Ihre Stöße... Grausam...",
+            "...Mein Körper... Zittert...",
+            "...Ich kann... Nicht ertragen...",
+            "...Ihre Schwänze... Gnadenlos...",
+            "...Dieser Schmerz... Intensiv...",
+            "...Ich schreie... Lautlos...",
+            "...Ihre Grunzer... Erschreckend...",
+            "...Ich fühle... Gebrochen...",
+            "...Dieser Angriff... Endet nie...",
+            "...Ihre Schwänze... Zerstören mich...",
+            "...Hilfe... Jemand..."
+          ],
+          "medium": [
+            "...Tiefer... Ihre Schwänze... Intensiv...",
+            "...Ich fühle... Jeden Stoß...",
+            "...Diese Tiefe... Überwältigend...",
+            "...Ihre Schwänze... Geschickt...",
+            "...Mein Körper... Reagiert...",
+            "...Ich kann... Nicht nicht stöhnen...",
+            "...Dieses Vergnügen... Schmerzlich...",
+            "...Ihre Stöße... Kraftvoll...",
+            "...Ich fühle... So gedehnt...",
+            "...Ihre Schwänze... Füllen mich...",
+            "...Diese Hitze... Brennt...",
+            "...Ich fühle... Konsumiert...",
+            "...Ihre Bewegungen... Perfekt...",
+            "...Diese Fülle... Macht süchtig...",
+            "...Ihre Schwänze... Besitzen mich..."
+          ],
+          "high": [
+            "...Tiefer! Fick mich tiefer!",
+            "...Ihre Schwänze... Perfekte Tiefe...",
+            "...Ja! Fick meine Löcher härter!",
+            "...Ich liebe diese Intensität...",
+            "...Komm tief drin... Bitte...",
+            "...Ihre Schwänze... Treffen alle Punkte...",
+            "...Fick mich wie eine Schlampe...",
+            "...Ich brauche ihr Sperma... Tief...",
+            "...Dieses Vergnügen... Intensiv...",
+            "...Härter! Hör nicht auf!",
+            "...Ihre Schwänze... Lassen mich kommen...",
+            "...Füll mich vollständig...",
+            "...Ich bin ihr Fickloch...",
+            "...Komm überall... Ja...",
+            "...Ihre Stöße... Göttlich..."
+          ]
+        }
+      }
+    },
+    "2ERO_3": {
+      "description": "Ariadias Gedanken während rhythmischen Fickens",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Ihr Rhythmus... Endlos...",
+            "...Ich fühle... Jede Bewegung...",
+            "...Diese Synchronisation... Erschreckend...",
+            "...Ihre Schwänze... Arbeiten zusammen...",
+            "...Mein Körper... Hilftlos auf und ab...",
+            "...Ich kann... Nicht aufhalten...",
+            "...Ihre Grunzer... Im Einklang...",
+            "...Dieser Angriff... Koordiniert...",
+            "...Ich bin gefangen... Zwischen ihnen...",
+            "...Ihre Schwänze... Füllen mich...",
+            "...Dieser Albtraum... Synchronisiert...",
+            "...Ich fühle... So klein...",
+            "...Ihr Rhythmus... Hypnotisch...",
+            "...Ich kann... Nicht entkommen...",
+            "...Das ist endloses... Ficken..."
+          ],
+          "medium": [
+            "...Ihr Rhythmus... Perfekt...",
+            "...Ich fühle... Synchronisiert...",
+            "...Ihre Schwänze... Arbeiten zusammen...",
+            "...Dieses Vergnügen... Baut sich auf...",
+            "...Mein Körper... Bewegt sich mit ihnen...",
+            "...Ich kann... Nicht nicht fühlen...",
+            "...Ihre Stöße... Harmonisch...",
+            "...Diese Fülle... Vollständig...",
+            "...Ihre Bewegungen... Wunderschön...",
+            "...Ich fühle... Teil davon...",
+            "...Ihr Rhythmus... Macht süchtig...",
+            "...Diese Wärme... Geteilt...",
+            "...Ihre Schwänze... Ergänzen sich...",
+            "...Ich fühle... Begehrt...",
+            "...Diese Ekstase... Geteilt..."
+          ],
+          "high": [
+            "...Perfekter Rhythmus... Liebe es...",
+            "...Ihre Schwänze... In perfekter Synchronisation...",
+            "...Fickt mich zusammen... Ja...",
+            "...Diese Koordination... Erstaunlich...",
+            "...Kommt gleichzeitig...",
+            "...Ihre Stöße... Ekstase...",
+            "...Füllt beide Löcher... Perfekt...",
+            "...Ich bin ihr synchronisiertes Spielzeug...",
+            "...Härter im Rhythmus... Ja...",
+            "...Ihre Schwänze... Arbeiten perfekt...",
+            "...Kommt in mich... Beide...",
+            "...Dieses Vergnügen... Synchronisiert...",
+            "...Fickt mich im Einklang...",
+            "...Ihr Rhythmus... Macht mich wahnsinnig...",
+            "...Perfektes Ficken... Ja..."
+          ]
+        }
+      }
+    },
+    "2ERO_4": {
+      "description": "Ariadias Gedanken wenn Gobbelins gleich kommen werden",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Sie schwellen an... Drin...",
+            "...Ihre Schwänze... Werden härter...",
+            "...Ich fühle... Spannung...",
+            "...Sie werden... Kommen...",
+            "...Das ist das Ende... Ende...",
+            "...Ihre Schwänze... Pulsieren...",
+            "...Ich kann... Sie nicht aufhalten...",
+            "...Dieser finale... Angriff...",
+            "...Ihre Grunzer... Lauter...",
+            "...Ich fühle... Ihren Höhepunkt...",
+            "...Ihr Sperma... Kommt...",
+            "...Ich kann... Nicht entkommen...",
+            "...Dieser Fluss... Unvermeidbar...",
+            "...Ihre Schwänze... Bereit...",
+            "...Komm... Drin..."
+          ],
+          "medium": [
+            "...Ich fühle sie... Aufsteigen...",
+            "...Ihre Schwänze... Schwellen an...",
+            "...Dieser Höhepunkt... Nah...",
+            "...Ihre Stöße... Dringend...",
+            "...Ich fühle... Druck...",
+            "...Ihr Sperma... Bereit...",
+            "...Dieser Moment... Intensiv...",
+            "...Ihre Schwänze... Pulsieren...",
+            "...Ich kann... Nicht warten...",
+            "...Diese Befreiung... Nähert sich...",
+            "...Ihr Höhepunkt... Geteilt...",
+            "...Komm... Bald...",
+            "...Ihre Schwänze... Bereit...",
+            "...Dieses Vergnügen... Gipfel...",
+            "...Füll mich... Vollständig..."
+          ],
+          "high": [
+            "...Komm in mir... Bitte...",
+            "...Ihre Schwänze... So geschwollen...",
+            "...Ich brauche ihr Sperma... Jetzt...",
+            "...Füll mich bis oben... Monster...",
+            "...Komm in meinen Mund... Auch...",
+            "...Ihr Höhepunkt... Perfekt...",
+            "...Flut mich... Ja...",
+            "...Ihr Sperma... Heiß...",
+            "...Komm überall... Drin...",
+            "...Ich will alles... Ja...",
+            "...Ihre Schwänze... Bereit zu explodieren...",
+            "...Komm für mich... Bitte...",
+            "...Füll mich vollständig...",
+            "...Ihr Sperma... Meins...",
+            "...Komm jetzt... Hart..."
+          ]
+        }
+      }
+    },
+    "2ERO_iki": {
+      "description": "Ariadias Gedanken während des Höhepunkts der Gobbelins",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Sie kommen... Drin...",
+            "...Heißes Sperma... Füllt mich...",
+            "...Ihre Schwänze... Pulsieren...",
+            "...Sperma... Überall...",
+            "...Ich fühle... Überflutet...",
+            "...Diese Wärme... Brennt...",
+            "...Ihr Sperma... Läuft über...",
+            "...Ich bin gefüllt... Mit Sperma...",
+            "...Ihr Höhepunkt... Intensiv...",
+            "...Sperma... Läuft raus...",
+            "...Dieses Durcheinander... Klebrig...",
+            "...Ihr Sperma... Bedeckt mich...",
+            "...Ich bin bedeckt... Mit Sperma...",
+            "...Diese Schande... Abgeschlossen...",
+            "...Sperma... So viel Sperma..."
+          ],
+          "medium": [
+            "...Ihr Sperma... So heiß...",
+            "...Füllt mich... Vollständig...",
+            "...Ihre Schwänze... Entleeren sich...",
+            "...Sperma... Läuft über...",
+            "...Diese Wärme... Intensiv...",
+            "...Ihr Höhepunkt... Kraftvoll...",
+            "...Sperma... Überall...",
+            "...Ich fühle... Markiert...",
+            "...Ihre Saat... Drin...",
+            "...Diese Fülle... Ultimativ...",
+            "...Sperma... Tropft...",
+            "...Ihr Sperma... Warm...",
+            "...Dieses Vergnügen... Gemischt...",
+            "...Sperma... Füllt mich...",
+            "...Ihr Höhepunkt... Befriedigend..."
+          ],
+          "high": [
+            "...Komm! Füll mich mit Sperma!",
+            "...Ihr heißes Sperma... Perfekt!",
+            "...Komm in meinen Mund... Schluck...",
+            "...Komm überall... Ja!",
+            "...Ihr Sperma... Köstlich...",
+            "...Füll mich bis oben... Vollständig...",
+            "...Komm härter... Monster!",
+            "...Ihr Höhepunkt... Erstaunlich...",
+            "...Komm überall auf mich... Ja!",
+            "...Ihr Sperma... So heiß...",
+            "...Ich liebe diese Flut... Ja!",
+            "...Komm rein... Tief!",
+            "...Ihr Sperma... Meins...",
+            "...Mehr Sperma... Bitte...",
+            "...Komm ewig... Ja!"
+          ]
+        }
+      }
+    }
+  }
+}

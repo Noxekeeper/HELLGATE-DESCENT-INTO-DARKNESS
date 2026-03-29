@@ -1,0 +1,126 @@
+# HELLGATE Spawn Configuration for UndergroundChurch
+# Format: X,Y,EnemyType,Count,Description
+# POOL[Type1,Type2,...] - random enemy from list at position
+# Reduced density — ~65 spawn points
+
+# ========== Points 1-3: POOL[Dorei,TouzokuAxe,TouzokuNormal] ==========
+304.15,-99.11,POOL[Dorei,TouzokuAxe,TouzokuNormal],1
+306.71,-100.32,POOL[Dorei,TouzokuAxe,TouzokuNormal],1
+315.55,-103.78,POOL[Dorei,TouzokuAxe,TouzokuNormal],1
+
+# ========== Points 4-5: SlaveBigAxe ==========
+313.15,-103.78,SlaveBigAxe,1
+321.13,-100.94,SlaveBigAxe,1
+
+# ========== Points 6-8: POOL[Dorei,TouzokuAxe] ==========
+324.33,-100.94,POOL[Dorei,TouzokuAxe],1
+328.85,-98.61,POOL[Dorei,TouzokuAxe],1
+340.08,-93.00,POOL[Dorei,TouzokuAxe],1
+
+# ========== Points 9-14: POOL[Dorei,TouzokuNormal,Vagrant,VagrantGuard,VagrantThrow] (6→4) ==========
+333.05,-93.00,POOL[Dorei,TouzokuNormal,Vagrant,VagrantGuard,Wolf],1
+346.96,-93.00,POOL[Dorei,TouzokuNormal,Vagrant,VagrantGuard,Wolf],1
+354.36,-96.28,POOL[Dorei,TouzokuNormal,Vagrant,VagrantGuard,VagrantThrow],1
+359.83,-91.13,POOL[Dorei,TouzokuNormal,Vagrant,VagrantGuard,VagrantThrow],1
+
+# ========== Points 15-16: Dorei ==========
+368.33,-89.91,Dorei,1
+368.71,-89.91,Dorei,1
+
+# ========== Points 17-18: TouzokuNormal ==========
+362.88,-98.60,TouzokuNormal,1
+368.28,-98.60,TouzokuNormal,1
+
+# ========== Points 19-21: POOL[TouzokuNormal,Vagrant,VagrantGuard,VagrantThrow] ==========
+375.33,-100.05,POOL[TouzokuNormal,Vagrant,VagrantGuard,Wolf],1
+373.18,-107.11,POOL[TouzokuNormal,Vagrant,VagrantGuard,VagrantThrow],1
+380.82,-107.11,POOL[TouzokuNormal,Vagrant,VagrantGuard,Wolf],1
+
+# ========== Point 22: InquisitionWhite ==========
+386.91,-107.11,InquisitionWhite,1
+
+# ========== Points 23-24: Wolf ==========
+389.75,-107.11,Wolf,1
+390.32,-100.05,Wolf,1
+
+# ========== Points 25-26: TouzokuNormal ==========
+393.30,-107.11,TouzokuNormal,1
+379.12,-107.11,TouzokuNormal,1
+
+# ========== Points 27-28: MafiaBossCustom (4→2) ==========
+423.61,-92.07,MafiaBossCustom,1
+417.10,-92.07,MafiaBossCustom,1
+
+# ========== Points 31-34: POOL[TouzokuNormal,Vagrant,VagrantGuard,VagrantThrow,Wolf] ==========
+403.13,-92.07,POOL[TouzokuNormal,Vagrant,VagrantGuard,VagrantThrow,Wolf],1
+397.61,-92.07,POOL[TouzokuNormal,Vagrant,VagrantGuard,VagrantThrow,Wolf],1
+411.29,-92.06,POOL[TouzokuNormal,Vagrant,VagrantGuard,VagrantThrow,Wolf],1
+420.47,-92.06,POOL[TouzokuNormal,Vagrant,VagrantGuard,VagrantThrow,Wolf],1
+
+# ========== Points 35-42: Dorei (8→5) ==========
+396.05,-83.07,Dorei,1
+386.96,-83.07,Dorei,1
+371.95,-83.03,Dorei,1
+355.25,-83.03,Dorei,1
+345.90,-83.03,Dorei,1
+
+# ========== Point 43: Tyoukyousi ==========
+347.69,-79.06,Tyoukyousi,1
+
+# ========== Points 44-46: InquisitionWhite, Wolf, Inquisition ==========
+328.63,-80.37,InquisitionWhite,1
+330.73,-80.37,Wolf,1
+329.58,-75.93,Inquisition,1
+
+# ========== Points 47-53: POOL (7→4) ==========
+327.27,-72.30,POOL[Dorei,TouzokuNormal,Vagrant,VagrantGuard,Wolf],1
+337.84,-73.98,POOL[Dorei,TouzokuNormal,Vagrant,VagrantGuard,Wolf],1
+345.23,-73.98,POOL[Dorei,TouzokuNormal,Vagrant,VagrantGuard,VagrantThrow],1
+
+# ========== Points 54-64: POOL (11→6, MafiaBossCustom removed from POOL) ==========
+366.05,-73.98,POOL[Dorei,TouzokuNormal,Mutude,Wolf,Vagrant,VagrantGuard,VagrantThrow,TouzokuAxe],1
+376.69,-73.98,POOL[Dorei,TouzokuNormal,Mutude,Wolf,Vagrant,VagrantGuard,Wolf,TouzokuAxe],1
+392.18,-69.42,POOL[Dorei,TouzokuNormal,Mutude,Wolf,Vagrant,VagrantGuard,VagrantThrow,TouzokuAxe],1
+399.87,-69.42,POOL[Dorei,TouzokuNormal,Mutude,Wolf,Vagrant,VagrantGuard,Wolf,TouzokuAxe],1
+411.43,-69.42,POOL[Dorei,TouzokuNormal,Mutude,Wolf,Vagrant,VagrantGuard,Wolf,TouzokuAxe],1
+424.30,-71.53,POOL[Dorei,TouzokuNormal,Mutude,Wolf,Vagrant,VagrantGuard,VagrantThrow,TouzokuAxe],1
+
+# ========== Point 65: SlaveBigAxe ==========
+418.90,-70.77,SlaveBigAxe,1
+
+# ========== Points 66-67: Dorei ==========
+327.07,-58.30,Dorei,1
+328.07,-58.30,Dorei,1
+
+# ========== Points 68-75: POOL (8→5, MafiaBossCustom removed) ==========
+346.56,-61.22,POOL[Dorei,TouzokuNormal,Mutude,Wolf,TouzokuAxe,Vagrant,VagrantGuard,Wolf],1
+353.50,-61.22,POOL[Dorei,TouzokuNormal,Mutude,Wolf,TouzokuAxe,Vagrant,VagrantGuard,VagrantThrow],1
+361.63,-60.30,POOL[Dorei,TouzokuNormal,Mutude,Wolf,TouzokuAxe,Vagrant,VagrantGuard,Wolf],1
+368.55,-61.16,POOL[Dorei,TouzokuNormal,Mutude,Wolf,TouzokuAxe,Vagrant,VagrantGuard,VagrantThrow],1
+
+# ========== Point 76: Dorei ==========
+418.29,-78.52,Dorei,1
+
+# ========== Points 77-85: POOL (9→5) ==========
+419.74,-78.52,POOL[Dorei,TouzokuNormal,Mutude,Wolf,TouzokuAxe],1
+439.62,-80.45,POOL[Dorei,TouzokuNormal,Mutude,Wolf,Wolf],1
+452.03,-80.45,POOL[Dorei,TouzokuNormal,Mutude,Wolf,Wolf],1
+470.28,-77.86,POOL[Dorei,TouzokuNormal,Mutude,Wolf,Wolf],1
+479.01,-73.91,POOL[Dorei,TouzokuNormal,Mutude,Wolf,TouzokuAxe],1
+
+# ========== Points 86-101: POOL (16→7) ==========
+490.15,-73.91,POOL[Mutude,TouzokuNormal,Inquisition,InquisitionWhite,InquisitionRED],1
+506.90,-67.07,POOL[Mutude,TouzokuNormal,Inquisition,InquisitionWhite,InquisitionRED],1
+516.36,-67.07,POOL[Mutude,TouzokuNormal,Inquisition,InquisitionWhite,InquisitionRED],1
+521.68,-67.07,POOL[Mutude,TouzokuNormal,Inquisition,InquisitionWhite,InquisitionRED],1
+532.72,-64.99,POOL[Mutude,TouzokuNormal,Inquisition,InquisitionWhite,InquisitionRED],1
+492.81,-73.91,POOL[Mutude,TouzokuNormal,Inquisition,InquisitionWhite,InquisitionRED],1
+488.63,-73.91,POOL[Mutude,TouzokuNormal,Inquisition,InquisitionWhite,InquisitionRED],1
+
+# ========== Points 102-104: POOL[TouzokuNormal,TouzokuAxe] ==========
+451.43,-58.76,POOL[TouzokuNormal,TouzokuAxe],1
+450.17,-58.76,POOL[TouzokuNormal,TouzokuAxe],1
+
+# ========== Points 105-108: POOL (4→2) ==========
+436.10,-17.53,POOL[Dorei,TouzokuNormal,Mutude,Wolf,Vagrant,VagrantGuard,Wolf,TouzokuAxe],1
+443.27,-17.53,POOL[Dorei,TouzokuNormal,Mutude,Wolf,Vagrant,VagrantGuard,VagrantThrow,TouzokuAxe],1

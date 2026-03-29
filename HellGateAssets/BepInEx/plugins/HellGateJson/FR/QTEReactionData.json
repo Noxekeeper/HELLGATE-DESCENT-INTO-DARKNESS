@@ -1,0 +1,293 @@
+{
+  "settings": {
+    "correctPressChance": 0.5,
+    "wrongPressChance": 0.5,
+    "comboMilestoneChance": 1.0,
+    "cooldownSeconds": 2.0,
+    "minComboForReaction": 1
+  },
+  "correctPress": {
+    "dominant": [
+      "Tu seras mon jouet...",
+      "De toute façon, je vais te briser...",
+      "Tu vas céder...",
+      "La résistance est futile, tu seras notre jouet...",
+      "Sois sage, je te laisserai vivre...",
+      "J'adore quand elles résistent, j'adore les briser...",
+      "Ta résistance ne fait que m'exciter...",
+      "Tu ne tiendras plus longtemps...",
+      "Bientôt, tu seras complètement brisée...",
+      "Ta volonté fond à chaque mouvement...",
+      "Tu es déjà au bord du gouffre... encore un peu...",
+      "Ton corps te trahit...",
+      "Tu le désires... avoue-le...",
+      "Abandonne... c'est inévitable...",
+      "Tu ne peux pas m'échapper...",
+      "Ta lutte est inutile...",
+      "Je vais te briser jusqu'au bout...",
+      "Tu m'appartiens...",
+      "Accepte ton destin...",
+      "Tu es déjà mienne..."
+    ],
+    "taunting": [
+      "Haha, la salope essaie de se libérer...",
+      "Calme-toi, salope, tu es finie...",
+      "Ne résiste pas, sinon ça fera mal...",
+      "Tu penses pouvoir t'échapper ? Drôle...",
+      "Continue de lutter... ça ne fait que m'exciter...",
+      "Ta lutte est amusante... mais inutile...",
+      "Tu es faible... abandonne déjà...",
+      "Ta résistance ne fait qu'accroître mon désir...",
+      "Continue... j'adore briser les têtues...",
+      "Tu ne veux pas abandonner ? Bien... ça sera plus intéressant...",
+      "Ta volonté est impressionnante... mais elle n'est pas éternelle...",
+      "J'attendrai... jusqu'à ce que tu cèdes...",
+      "Tu es persistante... mais moi, je suis patient...",
+      "Continue de lutter... c'est amusant...",
+      "Tu es incroyable... mais même toi, tu céderas..."
+    ],
+    "sexual": [
+      "Tu es si mouillée... ton corps te trahit...",
+      "Ta résistance ne fait que m'exciter...",
+      "Tu le désires... je le vois...",
+      "Ton corps dit la vérité...",
+      "Tu es déjà au bord du plaisir...",
+      "Abandonne-toi au plaisir... c'est plus facile...",
+      "Ta lutte ne fait qu'intensifier les sensations...",
+      "Tu ne peux pas cacher ton désir...",
+      "Ton corps m'appartient...",
+      "Accepte le plaisir... arrête de résister...",
+      "Tu as presque abandonné déjà...",
+      "Ta volonté faiblit... ton corps est plus fort...",
+      "Tu ne peux pas résister au plaisir...",
+      "Ton corps te trahit à chaque mouvement...",
+      "Abandonne... et tu en auras plus..."
+    ]
+  },
+  "wrongPress": {
+    "punishment": [
+      "Aah... !",
+      "Nghh... !",
+      "Non... ça fait mal... !",
+      "Aahh... je ne peux pas... !",
+      "Ughh... si fatiguée... !",
+      "Aah... pas ça... !",
+      "Nghh... je n'en peux plus... !",
+      "Aahh... non... !",
+      "Ughh... plus de force... !",
+      "Aah... pas comme ça... !",
+      "Nghh... je n'en peux plus... !",
+      "Aahh... fatiguée... !",
+      "Ughh... pas ça... !",
+      "Aah... pas assez forte... !",
+      "Nghh... non... !"
+    ],
+    "dominant": [
+      "Aah... je ne peux pas... !",
+      "Nghh... je n'en peux plus... !",
+      "Non... j'ai perdu... !",
+      "Ughh... je ne supporte pas... !",
+      "Aahh... j'abandonne... !",
+      "Nghh... plus de force... !",
+      "Aah... je ne peux pas résister... !",
+      "Ughh... j'ai perdu... !",
+      "Aahh... brisée... !",
+      "Nghh... je n'en peux plus... !",
+      "Aah... non... pas comme ça... !",
+      "Ughh... je ne peux pas... !",
+      "Aahh... fatiguée... plus de force... !",
+      "Nghh... je ne supporte pas... !",
+      "Aah... j'ai perdu... !"
+    ],
+    "sexual": [
+      "Mmmh... non... !",
+      "Aah... je ne peux pas... !",
+      "Nghh... fatiguée... !",
+      "Ughh... pas comme ça... !",
+      "Aahh... je n'en peux plus... !",
+      "Mmmh... pas ça... !",
+      "Aah... plus de force... !",
+      "Nghh... je n'en peux plus... !",
+      "Ughh... j'abandonne... !",
+      "Aahh... non... je ne peux pas... !",
+      "Mmmh... fatiguée... !",
+      "Aah... pas comme ça... pas ça... !",
+      "Nghh... plus la force de résister... !",
+      "Ughh... je ne peux pas... !",
+      "Aahh... j'ai perdu... !"
+    ],
+    "threatening": [
+      "Aah... j'ai peur... !",
+      "Nghh... non... !",
+      "Ughh... je ne peux pas... !",
+      "Aahh... terrifiée... !",
+      "Nghh... je n'en peux plus... !",
+      "Aah... pas ça... !",
+      "Ughh... fatiguée... !",
+      "Aahh... non... pas comme ça... !",
+      "Nghh... plus de force... !",
+      "Aah... je n'en peux plus... !",
+      "Ughh... j'ai perdu... !",
+      "Aahh... j'abandonne... !",
+      "Nghh... je ne supporte pas... !",
+      "Aah... non... pas ça... !",
+      "Ughh... je n'en peux plus... !"
+    ]
+  },
+  "comboMilestone": {
+    "x10": [
+      "Tu tiens bon... mais pas pour longtemps...",
+      "Ta volonté est forte... mais pas éternelle...",
+      "Continue... ça ne fait que m'exciter...",
+      "Tu es persistante... mais moi, je suis patient...",
+      "Ta résistance est impressionnante... mais inutile...",
+      "Continue de lutter... j'adore briser les têtues...",
+      "Tu ne veux pas abandonner ? Bien... ça sera plus intéressant...",
+      "Ta volonté est impressionnante... mais elle n'est pas éternelle...",
+      "J'attendrai... jusqu'à ce que tu cèdes...",
+      "Tu es incroyable... mais même toi, tu céderas..."
+    ],
+    "x20": [
+      "Tu es persistante... mais moi, je suis patient...",
+      "Ta résistance ne fait qu'accroître mon désir...",
+      "Continue de lutter... c'est amusant...",
+      "Tu ne veux pas abandonner ? Parfait... ça durera plus longtemps...",
+      "Ta volonté est forte... mais moi, je suis plus fort...",
+      "Continue... j'adore briser celles comme toi...",
+      "Tu penses pouvoir gagner ? Drôle...",
+      "Ta lutte ne fait que m'exciter...",
+      "Je vais te briser jusqu'au bout...",
+      "Tu ne veux pas abandonner ? Bien... ça fera plus mal..."
+    ],
+    "x30": [
+      "Tu es incroyable... mais même toi, tu céderas...",
+      "Ta volonté est impressionnante... mais elle n'est pas éternelle...",
+      "J'attendrai... jusqu'à ce que tu abandonnes...",
+      "Tu es persistante... mais moi, je suis patient... et cruel...",
+      "Continue de lutter... ça ne fait qu'accroître mon désir...",
+      "Tu ne veux pas abandonner ? Parfait... ça sera plus intéressant...",
+      "Ta lutte est amusante... mais inutile...",
+      "Je vais te briser jusqu'à la soumission complète...",
+      "Tu ne gagneras pas... abandonne déjà...",
+      "Ta volonté est forte... mais moi, je suis plus fort... et plus patient..."
+    ],
+    "x40": [
+      "Tu es incroyablement persistante... mais même toi, tu céderas...",
+      "Ta volonté est impressionnante... mais je vais la briser...",
+      "J'attendrai... jusqu'à ce que tu abandonnes complètement...",
+      "Tu ne veux pas abandonner ? Bien... ça fera plus mal et durera plus longtemps...",
+      "Ta lutte ne fait qu'accroître mon désir de te briser...",
+      "Continue... j'adore briser les têtues comme toi...",
+      "Tu penses pouvoir gagner ? Drôle... je vais te briser...",
+      "Ta volonté est forte... mais moi, je suis plus fort... et plus patient...",
+      "Je vais te briser jusqu'à la soumission complète...",
+      "Tu ne gagneras pas... abandonne déjà... c'est inévitable..."
+    ],
+    "x50": [
+      "Tu es incroyablement persistante... mais même toi, tu céderas...",
+      "Ta volonté est impressionnante... mais je vais la briser complètement...",
+      "J'attendrai... jusqu'à ce que tu abandonnes complètement...",
+      "Tu ne veux pas abandonner ? Bien... ça fera plus mal, durera plus longtemps et sera plus cruel...",
+      "Ta lutte ne fait qu'accroître mon désir de te briser...",
+      "Continue... j'adore briser les salopes têtues comme toi...",
+      "Tu penses pouvoir gagner ? Drôle... je vais te briser jusqu'au bout...",
+      "Ta volonté est forte... mais moi, je suis plus fort... plus patient... et plus cruel...",
+      "Je vais te briser jusqu'à la soumission complète... tu seras mon jouet...",
+      "Tu ne gagneras pas... abandonne déjà... c'est inévitable... tu es déjà mienne..."
+    ]
+  },
+  "enemySpecific": {
+    "Mutude": {
+      "correctPress": [
+        "Tu seras mon jouet...",
+        "Ta résistance est inutile contre moi...",
+        "Je vais te briser..."
+      ],
+      "wrongPress": [
+        "Aah... je ne peux pas... !",
+        "Nghh... pas ça... !",
+        "Ughh... fatiguée... !",
+        "Aahh... je n'en peux plus... !"
+      ]
+    },
+    "Touzoku": {
+      "correctPress": [
+        "Tu seras notre jouet, voleuse...",
+        "La résistance est futile, tu es à nous...",
+        "Nous allons te briser..."
+      ],
+      "wrongPress": [
+        "Aah... non... !",
+        "Nghh... je ne peux pas... !",
+        "Ughh... pas ça... !",
+        "Aahh... fatiguée... !"
+      ]
+    },
+    "TouzokuAxe": {
+      "correctPress": [
+        "Tu seras mon jouet...",
+        "La hache ne t'aidera pas à t'échapper...",
+        "Je vais te briser..."
+      ],
+      "wrongPress": [
+        "Aah... pas comme ça... !",
+        "Nghh... je ne peux pas... !",
+        "Ughh... plus de force... !",
+        "Aahh... pas ça... !"
+      ]
+    },
+    "SinnerslaveCrossbow": {
+      "correctPress": [
+        "Tu seras mon esclave...",
+        "La résistance est futile, esclave...",
+        "Je vais te briser, esclave..."
+      ],
+      "wrongPress": [
+        "Aah... je ne peux pas... !",
+        "Nghh... non... !",
+        "Ughh... fatiguée... !",
+        "Aahh... je n'en peux plus... !"
+      ]
+    },
+    "Kakasi": {
+      "correctPress": [
+        "Tu seras mon jouet, kakasi...",
+        "La résistance est futile...",
+        "Je vais te briser..."
+      ],
+      "wrongPress": [
+        "Aah... pas ça... !",
+        "Nghh... je ne peux pas... !",
+        "Ughh... plus de force... !",
+        "Aahh... fatiguée... !"
+      ]
+    },
+    "Goblin": {
+      "correctPress": [
+        "Tu seras mon jouet...",
+        "La résistance est futile...",
+        "Je vais te briser..."
+      ],
+      "wrongPress": [
+        "Aah... pas comme ça... !",
+        "Nghh... je ne peux pas... !",
+        "Ughh... pas ça... !",
+        "Aahh... plus de force... !"
+      ]
+    },
+    "BlackInquisitor": {
+      "correctPress": [
+        "Tu seras mon jouet, hérétique...",
+        "La résistance est futile, hérétique...",
+        "Je vais te briser, hérétique..."
+      ],
+      "wrongPress": [
+        "Aah... je ne peux pas... !",
+        "Nghh... fatiguée... !",
+        "Ughh... pas ça... !",
+        "Aahh... je n'en peux plus... !"
+      ]
+    }
+  }
+}
+

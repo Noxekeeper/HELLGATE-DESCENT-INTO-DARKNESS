@@ -1,0 +1,19 @@
+# Build outputs
+bin/
+obj/
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio / Rider
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# MSBuild
+*.cache
+*.FileListAbsolute.txt
+
+# Local dev helpers (build scripts, notes) — not part of the published mod tree
+dev/

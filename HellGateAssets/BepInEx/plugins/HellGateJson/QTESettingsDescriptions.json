@@ -1,0 +1,98 @@
+{
+  "settings": {
+    "QTE ENABLE": {
+      "description": "Enable or disable the QTE (Quick Time Event) system.",
+      "defaultValue": "true"
+    },
+    "SP Gain Base (0% MB)": {
+      "description": "SP gain for A/D buttons at 0% MindBroken (0.001-1.0, ~1.6% SP per press).",
+      "defaultValue": "0.016",
+      "minValue": "0.001",
+      "maxValue": "1.0"
+    },
+    "SP Gain Min (100% MB)": {
+      "description": "SP gain for A/D buttons at 100% MindBroken (0.001-0.5, ~0.2% SP per press).",
+      "defaultValue": "0.002",
+      "minValue": "0.001",
+      "maxValue": "0.5"
+    },
+    "Yellow Button SP Gain Min": {
+      "description": "Minimum SP gain for yellow button presses.",
+      "defaultValue": "0.05"
+    },
+    "Yellow Button SP Gain Max": {
+      "description": "Maximum SP gain for yellow button presses.",
+      "defaultValue": "0.2"
+    },
+    "MP Penalty Percent": {
+      "description": "MP penalty percentage when failing QTE (0.1-1.0, 30% = lose 30% of max MP).",
+      "defaultValue": "0.3",
+      "minValue": "0.1",
+      "maxValue": "1.0"
+    },
+    "MindBroken Penalty Percent": {
+      "description": "MindBroken penalty percentage when failing QTE.",
+      "defaultValue": "0.01"
+    },
+    "Red Button MB Penalty": {
+      "description": "MindBroken penalty for red button presses.",
+      "defaultValue": "0.02"
+    },
+    "SP Penalty Multiplier": {
+      "description": "Multiplier for SP penalty when failing QTE.",
+      "defaultValue": "2.0"
+    },
+    "Window Duration Min": {
+      "description": "Minimum duration for QTE window in seconds.",
+      "defaultValue": "2.0"
+    },
+    "Window Duration Max": {
+      "description": "Maximum duration for QTE window in seconds.",
+      "defaultValue": "3.5"
+    },
+    "Cooldown Duration Min": {
+      "description": "Minimum cooldown duration between QTE windows in seconds.",
+      "defaultValue": "2.0"
+    },
+    "Cooldown Duration Max": {
+      "description": "Maximum cooldown duration between QTE windows in seconds.",
+      "defaultValue": "4.0"
+    },
+    "Rotation Speed": {
+      "description": "Rotation speed of QTE buttons in degrees per second.",
+      "defaultValue": "90"
+    },
+    "Rotation Start Time": {
+      "description": "Time delay before rotation starts in seconds.",
+      "defaultValue": "0.5"
+    },
+    "Color Change Interval": {
+      "description": "Interval between color changes in seconds.",
+      "defaultValue": "1.0"
+    },
+    "Press Indicator Duration": {
+      "description": "Duration of press indicator animation in seconds.",
+      "defaultValue": "0.15"
+    },
+    "Max Button Transparency": {
+      "description": "Maximum transparency of QTE buttons (0.0 = opaque, 1.0 = transparent).",
+      "defaultValue": "0.5"
+    },
+    "Max Pink Shadow Intensity": {
+      "description": "Maximum intensity of pink shadow effect.",
+      "defaultValue": "1.0"
+    },
+    "Success Volume Multiplier": {
+      "description": "Volume multiplier for success sounds.",
+      "defaultValue": "1.0"
+    },
+    "Failure Volume Multiplier": {
+      "description": "Volume multiplier for failure sounds.",
+      "defaultValue": "1.0"
+    },
+    "Combo Milestone": {
+      "description": "Number of successful QTE presses needed for combo milestone.",
+      "defaultValue": "10"
+    }
+  }
+}

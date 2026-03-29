@@ -1,0 +1,46 @@
+{
+  "selectLanguage": "Select Language:",
+  "languages": {
+    "RU": {
+      "name": "Русский",
+      "flag": "🇷🇺"
+    },
+    "EN": {
+      "name": "English",
+      "flag": "🇬🇧"
+    },
+    "JP": {
+      "name": "日本語",
+      "flag": "🇯🇵"
+    },
+    "CN": {
+      "name": "中文",
+      "flag": "🇨🇳"
+    },
+    "KR": {
+      "name": "한국어",
+      "flag": "🇰🇷"
+    },
+    "FR": {
+      "name": "Français",
+      "flag": "🇫🇷"
+    },
+    "DE": {
+      "name": "Deutsch",
+      "flag": "🇩🇪"
+    },
+    "PT": {
+      "name": "Português",
+      "flag": "🇵🇹"
+    },
+    "BR": {
+      "name": "Português (Brasil)",
+      "flag": "🇧🇷"
+    },
+    "ES": {
+      "name": "Español",
+      "flag": "🇪🇸"
+    }
+  }
+}
+

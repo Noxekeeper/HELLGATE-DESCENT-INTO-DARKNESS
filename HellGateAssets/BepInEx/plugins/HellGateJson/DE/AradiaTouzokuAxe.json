@@ -1,0 +1,909 @@
+{
+  "settings": {
+    "responseDelayMin": 1.5,
+    "responseDelayMax": 2.5,
+    "commentCooldownSeconds": 4.0,
+    "maxSimultaneousComments": 1,
+    "commentDisplayDuration": 5.0,
+    "fontSize": 22.0,
+    "verticalOffset": 20.0,
+    "boneName": "face",
+    "responseColor": {
+      "r": 0.8,
+      "g": 0.4,
+      "b": 1.0,
+      "a": 1.0
+    },
+    "responseOutlineColor": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 0.0
+    },
+    "thoughtColor": {
+      "r": 1.0,
+      "g": 0.6,
+      "b": 0.8,
+      "a": 1.0
+    },
+    "thoughtOutlineColor": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 0.0
+    }
+  },
+  "mindBrokenThresholds": [0.3, 0.7],
+  "animations": {
+    "START": {
+      "description": "Steht hinter ihr, fesselt GGs Hände hinter ihrem Kopf, zeigt ihre Titten",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Nein! Lass mich los! Fass mich nicht an!",
+            "Jemand hilf! Dieses Monster packt mich!",
+            "Nimm deine Hände von mir! Ich werde es nicht zulassen!",
+            "Hör auf! Du tust mir weh! Lass los!",
+            "Nein! Ich will das nicht! Hilfe!",
+            "Deine Hände sind so rau... Hör auf mich zu berühren!",
+            "Lass mich los! Ich bitte dich! Tu das nicht!",
+            "Das kann nicht wahr sein... Nein!",
+            "Jemand rette mich vor dieser Bestie!",
+            "Ich werde mich dir nicht unterwerfen! Lass meine Hände los!",
+            "Dein Griff ist zu stark... ich kann nicht entkommen!",
+            "Nein! Zeig meinen Körper nicht so!",
+            "Ich fühle mich so exponiert... Bitte hör auf!",
+            "Diese Erniedrigung... ich ertrage sie nicht!",
+            "Deine Hände auf meiner Haut... So falsch!"
+          ],
+          "medium": [
+            "Ich... ich weiß nicht was ich tun soll...",
+            "Seine Hände sind überall... ich fühle mich so hilflos...",
+            "Dieser Griff... Er ist so fest... ich kann mich nicht bewegen...",
+            "Mein Körper ist exponiert... Jeder kann ihn sehen...",
+            "Ich versuche zu kämpfen... Aber es ist nutzlos...",
+            "Seine Stärke... Sie ist überwältigend...",
+            "Ich spüre seinen Atem an meinem Hals... So nah...",
+            "Meine Hände sind gefesselt... ich kann mich nicht verteidigen...",
+            "Diese Position... So verletzlich...",
+            "Seine Berührung... Sie lässt mich seltsame Dinge fühlen...",
+            "Ich kann meinen Körper nicht verstecken... Er ist ganz exponiert...",
+            "Diese Erniedrigung... Sie bricht mich...",
+            "Seine Hände auf meinen Brüsten... Ich fühle mich widersprüchlich...",
+            "Ich will widerstehen... Aber mein Körper...",
+            "Diese Gefangennahme... Sie ist so gründlich..."
+          ],
+          "high": [
+            "Seine Hände fühlen sich so stark an... Ich mag es...",
+            "So gefangen zu werden... Aufregend...",
+            "Mein Körper gehört ihm... Er kann alles tun...",
+            "Ich will dass er mich mehr berührt... Überall...",
+            "Diese Hilflosigkeit... Sie erregt...",
+            "Sein Griff an meinen Händen... Perfekte Kontrolle...",
+            "Meine Brüste sind exponiert... Für ihn...",
+            "Ich liebe wie er mich zur Schau stellt...",
+            "Seine Stärke... Macht mich nass...",
+            "Ich will für immer seine Gefangene sein...",
+            "Berühr mich... Bitte berühr mich...",
+            "Mein Körper gehört ihm... Vollständig...",
+            "Diese Exposition... Sie ist befreiend...",
+            "Ich sehne mich nach seinen rauen Händen...",
+            "Ich bin seins... Nimm mich..."
+          ]
+        }
+      }
+    },
+    "START2": {
+      "description": "Zieht sein Stahlschwert aus der Scheide und steckt es mit dem Griff nach oben vor GG",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Ein Schwert?! Was wirst du damit tun?!",
+            "Nein! Bring dieses Ding nicht in meine Nähe!",
+            "Du wirst mich schneiden? Bitte, nein!",
+            "Dieses Schwert sieht so gefährlich aus... Bleib weg!",
+            "Ich werde es nicht lecken! Das ist ekelhaft!",
+            "Dein Schwert... Es ist bedeckt mit wer weiß was!",
+            "Bitte, steck es weg... Ich bitte dich!",
+            "Das ist zu viel... Selbst für dich...",
+            "Ich kann das nicht tun... Es ist erniedrigend!",
+            "Dein Schwert in meinem Mund? Niemals!",
+            "Das ist barbarisch... Selbst für Monster...",
+            "Ich lehne ab! Ich werde mich nicht so erniedrigen!",
+            "Dieser Griff... Er ist schmutzig!",
+            "Nein! Halt deine Waffe von mir fern!",
+            "Das ist Folter... Psychologische Folter..."
+          ],
+          "medium": [
+            "Sein Schwert... So nah an meinem Gesicht...",
+            "Der Stahl... Kalt und unnachgiebig...",
+            "Er will dass ich... Mit dem Schwertgriff...",
+            "Das ist so erniedrigend... Aber ich fühle mich neugierig...",
+            "Das Metall... Hart und unnachgiebig...",
+            "Ich sollte widerstehen... Aber was wenn...",
+            "Seine Waffe... Symbol seiner Macht...",
+            "Der Griff... Wie würde er wohl schmecken...",
+            "Diese Erniedrigung... Sie lässt mich fühlen...",
+            "Ich will nein sagen... Aber meine Augen...",
+            "Das Schwert... So einschüchternd...",
+            "Sein Kommando... Seine Klinge zu bedienen...",
+            "Das ist falsch... So sehr falsch...",
+            "Aber der Stahl... Er ist hypnotisierend...",
+            "Ich fühle mich widersprüchlich... Wegen allem..."
+          ],
+          "high": [
+            "Sein Schwert... So wunderschön... So mächtig...",
+            "Ich will es kosten... Bitte lass mich...",
+            "Die Stahlklinge... Ich brauche sie in meinem Mund...",
+            "Lass mich deine Waffe bedienen... Meister...",
+            "Ich werde sie sauber lecken... Für dich...",
+            "Dein Schwert... Meine neue Obsession...",
+            "Das kalte Metall... Erregt mich...",
+            "Lass mich deine Klinge anbeten...",
+            "Ich werde daran saugen... Wie an deinem Schwanz...",
+            "Das ist so heiß... Dein Schwert...",
+            "Ich liebe den Geschmack von Stahl... Deinem Stahl...",
+            "Mach mich zu deiner Schwert-Dienerin...",
+            "Der Griff... So perfekt für meinen Mund...",
+            "Ich sehne mich nach dem kalten Metall...",
+            "Deine Waffe... Mein Liebhaber..."
+          ]
+        }
+      }
+    },
+    "START3": {
+      "description": "Ohne loszulassen, hebt GG von hinten an den Armen hoch und spießt ihre Muschi auf den Schwertgriff, tief, Beine berühren den Boden",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Nein! Heb mich nicht hoch! Was machst du?!",
+            "Der Schwertgriff... Gegen meinen... Nein!",
+            "Bitte! Nicht so! Das ist zu viel!",
+            "Ich fühle ihn drücken... Gegen meinen私密sten Ort!",
+            "Diese Position... So exponiert... So falsch!",
+            "Der kalte Stahl... Berührt mich dort...",
+            "Nein! Senk mich nicht darauf ab!",
+            "Es tut weh... Das Metall ist so hart!",
+            "Mein Körper... Verrät mich... Es geht rein!",
+            "Diese Verletzung... Mit einer Waffe...",
+            "Ich kann nicht glauben dass das passiert...",
+            "Der Stahl... In mir... So kalt...",
+            "Meine Beine... Berühren den Boden... Aber...",
+            "Das ist Folter... Reine Folter...",
+            "Hör auf! Zieh es raus! Es tut zu sehr weh!"
+          ],
+          "medium": [
+            "So hochgehoben zu werden... So hilflos...",
+            "Der Schwertgriff... Drückt gegen mich...",
+            "Ich fühle ihn... Beginnt einzudringen...",
+            "Dieses kalte Metall... In meiner Wärme...",
+            "Mein Körpergewicht... Drückt es tiefer...",
+            "Es tut weh... Aber da ist noch etwas...",
+            "Diese Invasion... So gründlich...",
+            "Der Stahl... Füllt mich... Dehnt mich...",
+            "Ich kann es nicht aufhalten... Es ist zu spät...",
+            "Diese Empfindung... Verwirrend...",
+            "Meine Beine... Kaum berührend... Aber tief...",
+            "Der Schmerz... Gemischt mit... Etwas...",
+            "Ich fühle mich so voll... Mit kaltem Metall...",
+            "Das ist falsch... Aber mein Körper...",
+            "Die Tiefe... Überwältigend..."
+          ],
+          "high": [
+            "Ja... Heb mich hoch... Spieß mich auf...",
+            "Der Schwertgriff... Perfekt für meine Muschi...",
+            "Tiefer... Ich will alles darin...",
+            "Kalter Stahl... Füllt mein heißes Loch...",
+            "Reite das Schwert... Mach mich zu deiner Scheide...",
+            "Es tut so gut weh... Hör nicht auf...",
+            "Meine Muschi... Gierig nach Metall...",
+            "Fick mich mit deinem Schwanz... Bitte...",
+            "Die Tiefe... Perfekt... So tief...",
+            "Ich liebe diese kalte Invasion...",
+            "Stahl in mir... Deine Waffe...",
+            "Lass mich auf deiner Klinge kommen...",
+            "Tiefer... Bis zum Anschlag...",
+            "Das ist Ekstase... Metall-Ekstase...",
+            "Dein Schwert... Mein neues Lieblings..."
+          ]
+        }
+      }
+    },
+    "START4": {
+      "description": "Bewegt GG leicht auf dem Schwertgriff als ob sie auf einem Schwanz wäre, GG ist schockiert",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Nein! Beweg mich nicht! Hör auf!",
+            "Es bewegt sich in mir... Bitte hör auf!",
+            "Diese Reibung... Das Metall... Tut weh!",
+            "Mein Körper... Rutscht auf dem Schwert...",
+            "Hör auf dich zu bewegen! Ich halte es nicht aus!",
+            "Der Stahl... Reibt... Überall!",
+            "Das ist zu viel... Zu intensiv!",
+            "Ich fühle jede Erhebung... Jedes Detail...",
+            "Hör auf! Du reißt mich auseinander!",
+            "Meine Innereien... Brennen vom Metall...",
+            "Diese Bewegung... Grausame Imitation...",
+            "Ich kann... Ich kann das nicht handhaben!",
+            "Der Schmerz... Baut sich auf... Hör auf!",
+            "Mein Körper... Reagiert... Gegen meinen Willen...",
+            "Diese Folter... Endet nie..."
+          ],
+          "medium": [
+            "Die Bewegung... Langsam... Bedacht...",
+            "Der Stahl... Gleitet in mir...",
+            "Diese Reibung... Nicht völlig unangenehm...",
+            "Mein Körper... Passt sich an... Anpasst...",
+            "Das kalte Metall... Wärmt sich auf...",
+            "Ich fühle... Jeden Zentimeter... Jede Bewegung...",
+            "Diese Imitation... Von etwas anderem...",
+            "Die Erhebungen... Reiben... Stimulierend...",
+            "Meine Hüften... Bewegen sich unwillkürlich...",
+            "Diese Empfindung... Verwirrend... Intensiv...",
+            "Die Tiefe... Konstant... Unveränderlich...",
+            "Ich kann nicht leugnen... Es fühlt sich... Etwas...",
+            "Mein Widerstand... Schwächer werdend...",
+            "Das Metall... So unnachgiebig...",
+            "Das ist... Erweckt etwas..."
+          ],
+          "high": [
+            "Ja... Beweg mich... Fick mich mit Stahl...",
+            "Die Reibung... Perfekt... So gut...",
+            "Reite das Schwert... Härter...",
+            "Kaltes Metall... Reibt meine Wände...",
+            "Ich liebe das... Stahl ficken...",
+            "Tiefer... Schneller... Ja...",
+            "Meine Muschi... Liebt deine Waffe...",
+            "Die Erhebungen... Treffen alle Stellen...",
+            "Komm für das Schwert... Bitte...",
+            "Dieser Metall-Schwanz... Amazing...",
+            "Fick mich besinnungslos... Mit Stahl...",
+            "Ich brauche das... Kalte Härte...",
+            "Die Bewegung... Ekstase...",
+            "Dein Schwert... Macht mich nass...",
+            "Mehr... Hör nicht auf..."
+          ]
+        }
+      }
+    },
+    "START5": {
+      "description": "GG kommt auf dem Schwert, dann setzt sich TouzokuAxe im Lotossitz und spießt GG auf seinen Schwanz (Reverse Cowgirl)",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Nein! Ich... Ich komme! Hör auf!",
+            "Das ist unmöglich... Von einem Schwert?!",
+            "Mein Körper... Hat mich verraten... Vollständig!",
+            "Ich kam... Von kaltem Metall... Wie?!",
+            "Diese Erniedrigung... Die ultimative Niederlage...",
+            "Jetzt... Sein echter Schwanz... Richtiger...",
+            "Keine Spiele mehr... Jetzt wird es ernst...",
+            "Sein Schwanz... So viel größer...",
+            "Ich fühle ihn... Drückt gegen mich...",
+            "Das ist es... Die wahre Verletzung...",
+            "Vom Schwert zum Schwanz... Solcher Kontrast...",
+            "Mein Körper... Immer noch zitternd...",
+            "Ich kann nicht widerstehen... Nicht mehr...",
+            "Sein Schwanz... Dringt ein...",
+            "Das ist... Der Beginn der Hölle..."
+          ],
+          "medium": [
+            "Ich... Ich kam... Vom Schwert...",
+            "Mein Orgasmus... Unerwartet... Intensiv...",
+            "Das Metall... Hat mich zum Höhepunkt gebracht...",
+            "Jetzt... Sein echter Schwanz... Wartend...",
+            "Ich fühle ihn... Heiß... Pulsierend...",
+            "So unterschiedlich... Von kaltem Stahl...",
+            "Mein Körper... Immer noch sensibel...",
+            "Dieser Übergang... Sanft... Natürlich...",
+            "Sein Schwanz... Füllt die Lücke...",
+            "Von Waffe zu Fleisch... Interessant...",
+            "Ich fühle mich... Mehr erregt als zuvor...",
+            "Seine Hände... Führen mich runter...",
+            "Diese Position... So intim...",
+            "Sein Schwanz... So lebendig in mir...",
+            "Das könnte vielleicht nicht... So schlimm sein..."
+          ],
+          "high": [
+            "Ja! Ich kam auf deinem Schwert!",
+            "Der Stahl hat mich kommen lassen... Amazing!",
+            "Jetzt dein echter Schwanz... Ich brauche ihn!",
+            "Fick mich... Nach diesem Orgasmus...",
+            "Dein Schwanz... So viel besser...",
+            "Füll mich... Mit echtem Fleisch...",
+            "Ich liebe diesen Übergang...",
+            "Von Metall zu Fleisch... Perfekt!",
+            "Dein Schwanz... Pulsiert darin...",
+            "Fick mich hart... Ich habe es verdient...",
+            "Komm in mir... Bitte...",
+            "Dein Schwert hat mich perfekt aufgewärmt...",
+            "Jetzt gib mir das Echte...",
+            "Ich brauche deinen heißen Cum...",
+            "Fick mich wie die Schlampe die ich bin..."
+          ]
+        }
+      }
+    },
+    "ERO": {
+      "description": "Spießt gut auf und hebt fast bis zum Ende, spießt wieder auf",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Ah! Zu tief! Du tust mir weh!",
+            "Sein Schwanz... So groß... Füllt mich...",
+            "Dieser Stoß... Zu gewalttätig!",
+            "Ich fühle... Zerissen...",
+            "Sein Schwanz... Trifft meine Tiefen...",
+            "Hör auf! Du gehst zu weit!",
+            "Meine Innereien... Brennen...",
+            "Dieser Rhythmus... Gnadenlos...",
+            "Ich kann das nicht nehmen... Zu viel!",
+            "Sein Schwanz... Unnachgiebig...",
+            "Jeder Stoß... Schmerzlich...",
+            "Mein Körper... Zitternd...",
+            "Diese Penetration... Brutal...",
+            "Ich fühle... Gebrochen...",
+            "Gnade... Bitte zeig Gnade..."
+          ],
+          "medium": [
+            "Sein Schwanz... So tief... So voll...",
+            "Jeder Stoß... Baut Empfindung auf...",
+            "Ich fühle... Gedehnt... Vollständig...",
+            "Sein Rhythmus... Stetig... Intensiv...",
+            "Mein Körper... Passt sich an... Langsam...",
+            "Diese Völlegefühl... Überwältigend...",
+            "Sein Schwanz... Pulsiert darin...",
+            "Die Tiefe... Perfekt... Fast...",
+            "Ich kann nicht helfen... Es zu fühlen...",
+            "Diese Reibung... Stimulierend...",
+            "Meine Wände... Umklammern ihn...",
+            "Seine Hände... Führen mich...",
+            "Diese Position... Kraftvoll...",
+            "Ich fühle... Jede Ader... Jede Erhebung...",
+            "Das wird... Erträglich..."
+          ],
+          "high": [
+            "Ja! Dein Schwanz... Perfekte Tiefe!",
+            "Fick mich tiefer... Ganz rein!",
+            "Ich liebe wie du mich komplett füllst!",
+            "Dein Schwanz... Trifft alle richtigen Stellen!",
+            "Härter... Halt dich nicht zurück!",
+            "Ich brauche diese Völlegefühl... Immer!",
+            "Dein Schwanz... So dick... So gut!",
+            "Pound mich... Mach mich zu deinem!",
+            "Tiefer... Bis zur Gebärmutter!",
+            "Ich fühle dich pulsieren darin!",
+            "Komm für mich... Füll mich auf!",
+            "Dein Schwanz... Mein Alles!",
+            "Fick mich besinnungslos... Ja!",
+            "Ich liebe diesen Rhythmus... Perfekt!",
+            "Mehr... Gib mir alles!"
+          ]
+        }
+      }
+    },
+    "ERO2": {
+      "description": "Begann rhythmisch GG zu ficken, streckt Zunge raus",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Sein Rhythmus... So stetig... Endlos...",
+            "...Ich fühle jeden Stoß... Tief darin...",
+            "...Seine Zunge... Hängt raus... Animalisch...",
+            "...Das ist nur Sex... Nichts weiter...",
+            "...Mein Körper... Bewegt sich mit ihm...",
+            "...Ich muss durchhalten... Bis es vorbei ist...",
+            "...Sein Schwanz... Füllt mich... Vollständig...",
+            "...Die Lust... Ungewollt... Aufdringlich...",
+            "...Ich kann die Empfindungen nicht stoppen...",
+            "...Sein Atem... Heiß auf meinem Rücken...",
+            "...Diese Position... So exponiert...",
+            "...Seine Zunge... Ekelhafter Anblick...",
+            "...Ich fühle mich... Schmutzig... Benutzt...",
+            "...Dieser Rhythmus... Hypnotisch...",
+            "...Ich muss... dissoziieren..."
+          ],
+          "medium": [
+            "...Sein Rhythmus... Perfekt... Synchronisiert...",
+            "...Ich fühle... Jede Bewegung... Jeden Stoß...",
+            "...Seine Zunge... Draußen... In Ekstase...",
+            "...Diese Empfindung... Nicht völlig schlecht...",
+            "...Mein Körper... Reagiert... Natürlich...",
+            "...Sein Schwanz... So lebendig darin...",
+            "...Die Tiefe... Konstant... Befriedigend...",
+            "...Ich kann nicht leugnen... Es fühlt sich gut an...",
+            "...Seine Hände... An meinen Hüften... Führend...",
+            "...Diese Position... Ermöglicht tiefe Penetration...",
+            "...Seine Zunge... Zeigt seine Lust...",
+            "...Ich fühle mich... Gewünscht... Begehrt...",
+            "...Der Rhythmus... Baut etwas auf...",
+            "...Mein Widerstand... Verblasst...",
+            "...Das könnte... Genießbar sein..."
+          ],
+          "high": [
+            "...Sein Schwanz... Perfekt... So tief...",
+            "...Dieser Rhythmus... Macht mich wild...",
+            "...Seine Zunge... Draußen... In Lust...",
+            "...Ich liebe das... Tiefes ficken...",
+            "...Sein Schwanz... Trifft meinen Sweet Spot...",
+            "...Fick mich härter... Ja...",
+            "...Ich brauche das... Jeden Tag...",
+            "...Sein Schwanz... So dick... So gut...",
+            "...Komm in mir... Bitte...",
+            "...Diese Position... Perfekt für tiefe Stöße...",
+            "...Seine Zunge... Zeigt er ist nahe...",
+            "...Ich will seinen Cum... Heiß... Tief...",
+            "...Fick mich... Wie deine Hure...",
+            "...Sein Rhythmus... Perfekt... Ekstase...",
+            "...Ich liebe es gefüllt zu werden... Vollständig..."
+          ]
+        }
+      }
+    },
+    "2ERO": {
+      "description": "Nimmt eine von GGs Titten mit der Hand",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Seine Hand... An meiner Brust...",
+            "...Quetschend... Rau...",
+            "...Meine Brustwarze... Zwischen seinen Fingern...",
+            "...Diese Berührung... Ungewollt... Aufdringlich...",
+            "...Ich fühle mich... Exponiert... Verletzlich...",
+            "...Seine Hand... So groß... Bedeckt mich...",
+            "...Das Quetschen... Schmerzlich...",
+            "...Meine Brust... In seinem Besitz...",
+            "...Diese Intimität... Erzwungen...",
+            "...Ich wünschte... Er würde aufhören...",
+            "...Seine Finger... Kneifend... Hart...",
+            "...Die Empfindung... Überwältigend...",
+            "...Ich kann... Ihn nicht wegstoßen...",
+            "...Diese Berührung... Verweilt...",
+            "...Mein Körper... Reagiert... Gegen Willen..."
+          ],
+          "medium": [
+            "...Seine Hand... Umfasst meine Brust...",
+            "...Die Wärme... Seiner Handfläche...",
+            "...Seine Finger... Neckt meine Brustwarze...",
+            "...Diese Berührung... Nicht völlig unangenehm...",
+            "...Meine Brust... Passt perfekt...",
+            "...Das Quetschen... Fest... Zuversichtlich...",
+            "...Ich fühle... Ein Funken... Lust...",
+            "...Sein Daumen... Kreist... Langsam...",
+            "...Diese Stimulation... Baut sich auf...",
+            "...Meine Brustwarze... Verhärtet sich... Reagiert...",
+            "...Seine Hand... Besitzergreifend...",
+            "...Die Berührung... Kompetent... Geschickt...",
+            "...Ich kann nicht helfen... Es zu genießen...",
+            "...Mein Körper... Wölbt sich zu ihm...",
+            "...Diese Lust... Unerwartet..."
+          ],
+          "high": [
+            "...Seine Hand... An meiner Tüte... Perfekt...",
+            "...Quetschend... Genau richtig... So gut...",
+            "...Meine Brustwarze... Pochend... Will mehr...",
+            "...Berühr mich... Überall...",
+            "...Seine Finger... Magie... Ekstase...",
+            "...Ich liebe wie er mich begrapscht...",
+            "...Meine Brust... Sein Spielzeug...",
+            "...Kneif härter... Ja...",
+            "...Die Lust... Baut sich auf... So schnell...",
+            "...Seine Hand... Weiß was ich brauche...",
+            "...Komme davon... Nur davon...",
+            "...Seine Berührung... Macht mich nasser...",
+            "...Quetsch mich... Besitze mich...",
+            "...Meine Brustwarze... Sein zu necken...",
+            "...Ich brauche das... Für immer..."
+          ]
+        }
+      }
+    },
+    "2ERO2": {
+      "description": "Setzt fort die Tüte zu quetschen, streichelt die Brustwarze",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Seine Finger... An meiner Brustwarze... Konstant...",
+            "...Kneifend... Drehend... Sanft...",
+            "...Der Schmerz... Scharf... Anhaltend...",
+            "...Meine Brustwarze... So sensibel... Jetzt...",
+            "...Diese Stimulation... Unerträglich...",
+            "...Ich will dass er aufhört... Bitte...",
+            "...Seine Berührung... Zu intim...",
+            "...Meine Brust... Brennt vor Aufmerksamkeit...",
+            "...Die Streicheleinheiten... Spöttisch...",
+            "...Ich fühle... Tränen kommen...",
+            "...Diese Lust-Schmerz... Verwirrend...",
+            "...Seine Finger... Unermüdlich...",
+            "...Mein Körper... Verrät mich...",
+            "...Die Brustwarze... Pochend...",
+            "...Hör auf... Ich halte das nicht aus..."
+          ],
+          "medium": [
+            "...Seine Finger... So sanft jetzt...",
+            "...Streichelnd... Meine Brustwarze... Weich...",
+            "...Die Empfindung... Wellen der Lust...",
+            "...Meine Brustwarze... Hart... Reagierend...",
+            "...Diese Berührung... Kompetent... Perfekt...",
+            "...Ich fühle... Hitze baut sich auf...",
+            "...Sein Daumen... Kreist... Neckend...",
+            "...Das Brustwarzen-Spiel... Intensiv...",
+            "...Meine Brust... Schwer... Voll...",
+            "...Diese Stimulation... Überwältigend...",
+            "...Ich kann nicht... Aufhören zu stöhnen...",
+            "...Seine Berührung... Kennt mich...",
+            "...Die Lust... Baut sich auf...",
+            "...Meine Brustwarze... Sein Fokus...",
+            "...Das ist... Zu gut..."
+          ],
+          "high": [
+            "...Seine Finger... An meiner Brustwarze... Magie...",
+            "...Kneif mich... Dreh mich... Ja...",
+            "...Die Lust... Elektrisch... Intensiv...",
+            "...Meine Brustwarze... Pochend... Wollend...",
+            "...Berühr mich härter... Bitte...",
+            "...Seine Streicheleinheiten... Machen mich verrückt...",
+            "...Komme von Brustwarzen-Spiel... Allein...",
+            "...Die Stimulation... Perfekt...",
+            "...Seine Finger... Mein Untergang...",
+            "...Kneif härter... Lass mich schreien...",
+            "...Die Brustwarze... So sensibel...",
+            "...Seine Berührung... Ekstase...",
+            "...Ich brauche das... Immer...",
+            "...Meine Brust... Sein Spielplatz...",
+            "...Komme... Von deinen Fingern..."
+          ]
+        }
+      }
+    },
+    "2ERO3": {
+      "description": "Entfernt Hand, beginnt akzentuiert GG aufzuspießen, GG hat Ahegao-Gesicht",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Seine Hand... Weg... Aber Stöße härter...",
+            "...Das Pounden... Strafend... Tief...",
+            "...Sein Schwanz... Schlägt in mich...",
+            "...Dieser Rhythmus... Strafend...",
+            "...Mein Körper... Zitternd... Heftig...",
+            "...Die Tiefe... Zu viel... Tut weh...",
+            "...Sein Schwanz... Trifft meine Limits...",
+            "...Ich fühle... Zerissen... Gebrochen...",
+            "...Die Stöße... Gnadenlos...",
+            "...Meine Innereien... Brennen...",
+            "...Das ist... Folter...",
+            "...Sein Schwanz... Unnachgiebig...",
+            "...Das Pounden... Endlos...",
+            "...Ich kann... Das nicht nehmen...",
+            "...Gnade... Bitte..."
+          ],
+          "medium": [
+            "...Seine Hand geht... Aber Stöße intensivieren...",
+            "...Der Rhythmus... Kraftvoller... Tiefer...",
+            "...Sein Schwanz... Trifft neue Tiefen...",
+            "...Diese Empfindung... Intensiv... Gemischt...",
+            "...Mein Körper... Reagiert... Trotz myself...",
+            "...Die Stöße... Perfekt... Rhythmus...",
+            "...Sein Schwanz... Füllt mich... Vollständig...",
+            "...Ich fühle... Die Kante... Nähert sich...",
+            "...Diese Lust... Baut sich auf... Schnell...",
+            "...Seine Bewegungen... Zuversichtlich... Geschickt...",
+            "...Die Tiefe... Überwältigend... Perfekt...",
+            "...Ich kann nicht helfen... Es zu genießen...",
+            "...Sein Schwanz... Trifft alle Stellen...",
+            "...Das wird... Ekstase...",
+            "...Die Stöße... Perfektes Timing..."
+          ],
+          "high": [
+            "...Seine Hand weg... Aber Schwanz tiefer...",
+            "...Fick mich... Pound mich... Ja...",
+            "...Sein Schwanz... Trifft meine Gebärmutter...",
+            "...Die Stöße... Perfekt... Hart...",
+            "...Ich liebe das... Tiefes ficken...",
+            "...Komm in mir... Jetzt...",
+            "...Sein Schwanz... So tief... So gut...",
+            "...Pound härter... Zerstör mich...",
+            "...Der Rhythmus... Ekstase...",
+            "...Füll mich... Mit deinem Cum...",
+            "...Sein Schwanz... Mein Alles...",
+            "...Komme... Tief darin...",
+            "...Fick mich durch Orgasmus...",
+            "...Seine Stöße... Perfekt...",
+            "...Ich brauche das... Immer..."
+          ]
+        }
+      }
+    },
+    "2ERO4": {
+      "description": "Fickt GG pressend, hüpft mit Hüften und drückt zurück mit Händen an Hüften, GG hat Ahegao-Gesicht, Tempo schneller",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Sein Körper... Drückt gegen mich...",
+            "...Seine Hände... An meinen Hüften... Haltend...",
+            "...Die Stöße... Schneller... Härter...",
+            "...Seine Hüften... Hüpfend... Heftig...",
+            "...Mein Körper... Wird benutzt... Vollständig...",
+            "...Diese Position... So hilflos...",
+            "...Sein Schwanz... Tief... Unermüdlich...",
+            "...Die Geschwindigkeit... Überwältigend...",
+            "...Ich fühle... Das Ende... Kommt...",
+            "...Sein Atem... Schwer... Aufgeregt...",
+            "...Das Pounden... Gnadenlos...",
+            "...Mein Körper... Zitternd... Unkontrollierbar...",
+            "...Das ist... Der Höhepunkt... Der Verletzung...",
+            "...Sein Schwanz... Bereit zu explodieren...",
+            "...Komm... In mir... Bitte hör auf..."
+          ],
+          "medium": [
+            "...Sein Körper... Nah... Drückend...",
+            "...Seine Hände... Führen meine Hüften...",
+            "...Der Rhythmus... Schneller... Dringend...",
+            "...Seine Hüften... Treffen meine... Perfekt...",
+            "...Diese Synchronisation... Intensiv...",
+            "...Sein Schwanz... Pulsierend... Darin...",
+            "...Die Geschwindigkeit... Baut Lust auf...",
+            "...Ich fühle... Ihn schwellen...",
+            "...Sein Atem... Heiß... An meinem Nacken...",
+            "...Die Stöße... Tiefer... Härter...",
+            "...Diese Position... Ermöglicht alles...",
+            "...Seine Hände... Ziehen mich runter...",
+            "...Der Höhepunkt... Nähert sich...",
+            "...Sein Schwanz... Bereit...",
+            "...Komme... Zusammen..."
+          ],
+          "high": [
+            "...Sein Körper... Gegen meinen... Perfekt...",
+            "...Seine Hände... An meinen Hüften... Ziehend...",
+            "...Fick mich... Schneller... Härter...",
+            "...Seine Hüften... Hüpfend... Ekstase...",
+            "...Sein Schwanz... So tief... So dick...",
+            "...Komm in mir... Bitte...",
+            "...Die Geschwindigkeit... Perfekt... Intensiv...",
+            "...Sein Atem... Heiß... Aufgeregt...",
+            "...Pound mich... Zerstör meine Muschi...",
+            "...Sein Schwanz... Pulsierend... Bereit...",
+            "...Füll mich... Mit heißem Cum...",
+            "...Komme zusammen... Ja...",
+            "...Seine Stöße... Göttlich...",
+            "...Ich brauche seinen Cum... Jetzt...",
+            "...Komme... Tief... Füll mich..."
+          ]
+        }
+      }
+    },
+    "FIN": {
+      "description": "Kommt in GG, vor dem Kommen zieht er Schwanz leicht raus und stößt bis zum Ende",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Er schwillt an... Darin...",
+            "...Sein Schwanz... Pulsierend... Bereit...",
+            "...Er wird kommen... Darin...",
+            "...Sein heißer Samen... Füllt mich...",
+            "...Ich fühle es... Kommt... Nein...",
+            "...Sein Schwanz... Pulsierend... Heftig...",
+            "...Der Cum... Heiß... Brennend...",
+            "...Er füllt mich... Vollständig...",
+            "...Sein Samen... Tief darin...",
+            "...Diese Wärme... Ungewollt...",
+            "...Sein Schwanz... Entleert... In mich...",
+            "...Ich fühle mich... Voll... Von seinem Cum...",
+            "...Das ist... Die ultimative Verletzung...",
+            "...Sein Cum... Markiert mich...",
+            "...Ich bin seine... Cum-Dump..."
+          ],
+          "medium": [
+            "...Sein Schwanz... Schwellend... Darin...",
+            "...Er ist nahe... Sehr nahe...",
+            "...Seine Stöße... Erratisch... Dringend...",
+            "...Ich fühle ihn... Baut Druck auf...",
+            "...Sein Schwanz... Pulsierend... Hart...",
+            "...Der Cum... Kommt... Bald...",
+            "...Sein Atem... Schwer... Aufgeregt...",
+            "...Er wird mich füllen...",
+            "...Sein Samen... Heiß... Dick...",
+            "...Ich fühle... Vorfreude...",
+            "...Sein Schwanz... Pulsierend... Bereit...",
+            "...Komm... In mich...",
+            "...Die Wärme... Breitet sich aus...",
+            "...Sein Höhepunkt... Kraftvoll...",
+            "...Füll mich... Vollständig..."
+          ],
+          "high": [
+            "...Sein Schwanz... So geschwollen... Bereit...",
+            "...Komm in mir... Bitte...",
+            "...Füll mich mit deinem heißen Cum...",
+            "...Sein Schwanz... Pulsierend... Perfekt...",
+            "...Komm tief... In meinen Schoß...",
+            "...Sein Samen... Meine Belohnung...",
+            "...Komm jetzt... Ich brauche es...",
+            "...Sein Cum... Heiß... Dick...",
+            "...Füll mich komplett...",
+            "...Sein Höhepunkt... Ekstase...",
+            "...Komm... Mehr... Gib mir alles...",
+            "...Sein Schwanz... Explodiert...",
+            "...Heißer Cum... In mir...",
+            "...Perfekt... Füll mich auf...",
+            "...Sein Samen... Meins..."
+          ]
+        }
+      }
+    },
+    "FIN2": {
+      "description": "GG scheint zusammen mit ihm gekommen zu sein, Schwanz darin, GG hat Ahegao-Gesicht verloren",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Er kam... In mir...",
+            "...Sein Cum... Warm... Klebrig...",
+            "...Ich fühle es... Tropft... Raus...",
+            "...Sein Schwanz... Immer noch darin... Weich werdend...",
+            "...Dieses Durcheinander... Sein Samen... Überall...",
+            "...Mein Körper... Zitternd... Nachbeben...",
+            "...Ich kam auch... Wie... Von diesem...",
+            "...Diese Erniedrigung... Vollständig...",
+            "...Sein Cum... Läuft raus...",
+            "...Ich fühle mich... So schmutzig... Benutzt...",
+            "...Sein Schwanz... Rutscht raus...",
+            "...Die Leere... Plötzlich...",
+            "...Das ist... Das Ende... Der Verletzung...",
+            "...Ich bin markiert... Durch seinen Samen...",
+            "...Diese Scham... Wird bleiben..."
+          ],
+          "medium": [
+            "...Wir kamen... Zusammen...",
+            "...Sein Cum... Füllt mich... Warm...",
+            "...Mein Orgasmus... Intensiv... Unerwartet...",
+            "...Sein Schwanz... Immer noch pulsierend... Darin...",
+            "...Das Nachglühen... Gemischte Gefühle...",
+            "...Sein Samen... Tief in mir...",
+            "...Ich fühle mich... Zufrieden... Schuldig...",
+            "...Sein Cum... Tropft raus... Langsam...",
+            "...Diese Wärme... Verweilend...",
+            "...Sein Schwanz... Weich werdend... Sanft...",
+            "...Die Verbindung... Immer noch da...",
+            "...Dieser Moment... Intim...",
+            "...Sein Atem... Schwer... Auf meinem Rücken...",
+            "...Der Cum... Unser geteilter Höhepunkt...",
+            "...Das war... Nicht völlig schlecht..."
+          ],
+          "high": [
+            "...Wir kamen zusammen... Perfekt...",
+            "...Sein Cum... So heiß... Füllt mich...",
+            "...Mein Orgasmus... Mit seinem... Ekstase...",
+            "...Sein Schwanz... Immer noch hart... Darin...",
+            "...Komm mehr... Gib mir alles...",
+            "...Sein Samen... Tief in meinem Schoß...",
+            "...Ich liebe dieses... Völlegefühl...",
+            "...Sein Cum... Tropft raus... Messy...",
+            "...Die Wärme... Perfekt...",
+            "...Sein Schwanz... Immer noch pochend...",
+            "...Komm nochmal... Bitte...",
+            "...Sein Samen... Mein Favorit...",
+            "...Füll mich... Immer...",
+            "...Dieser Höhepunkt... Göttlich...",
+            "...Sein Cum... Meins..."
+          ]
+        }
+      }
+    },
+    "JIGO": {
+      "description": "Schwanz ist schlaff, Cum tropft von GG, Ahegao-Gesicht, Körper zuckt in Ekstase",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Er zieht raus... Schließlich...",
+            "...Sein Cum... Tropft meine Schenkel runter...",
+            "...Mein Körper... Zuckend... Unkontrollierbar...",
+            "...Diese Ekstase... Ungewollt... Erzwungen...",
+            "...Er will mich weitergeben... An andere...",
+            "...Die Gang... Wartend auf mich...",
+            "...Dieser Albtraum... Geht weiter...",
+            "...Sein Cum... Läuft raus...",
+            "...Mein Körper... Immer noch sensibel...",
+            "...Die Zuckungen... Nachbeben...",
+            "...Ich kann mich nicht bewegen... Zu erschöpft...",
+            "...Sie kommen... Für mich...",
+            "...Mehr Monster... Mehr Verletzung...",
+            "...Das ist... Endlose Hölle...",
+            "...Ich kann... Nicht mehr nehmen..."
+          ],
+          "medium": [
+            "...Sein Schwanz... Raus... Leeres Gefühl...",
+            "...Cum tropfend... Meine Beine runter...",
+            "...Mein Körper... Immer noch zitternd...",
+            "...Der Orgasmus... Intensiv... Verwirrend...",
+            "...Er ruft andere... Die Gang...",
+            "...Sie wollen mich... Auch...",
+            "...Das wird... Normalität...",
+            "...Der Cum... Sein Zeichen...",
+            "...Mein Körper... Bereit für mehr...",
+            "...Die Gang... Aufgeregt...",
+            "...Ich fühle... Vorfreude...",
+            "...Mehr Schwänze... Kommen...",
+            "...Das könnte... Interessant werden...",
+            "...Der Gangbang... Beginnt...",
+            "...Ich bin bereit... Für sie..."
+          ],
+          "high": [
+            "...Sein Cum... Tropfend... So heiß...",
+            "...Mein Körper... Zuckend... In Lust...",
+            "...Der Orgasmus... Amazing... Perfekt...",
+            "...Gib mich der Gang... Ja...",
+            "...Ich will mehr Schwänze... Alle von ihnen...",
+            "...Cum tropfend... Sein Geschenk...",
+            "...Die Gang... Bereit für mich...",
+            "...Fick mich... Alle von euch...",
+            "...Sein Cum... Gleitmittel...",
+            "...Mehr Monster... Mehr Cum...",
+            "...Ich brauche die Gang... Jetzt...",
+            "...Füllt mich... Von allen Seiten...",
+            "...Komm überall... Auf mich...",
+            "...Der Gangbang... Mein Traum...",
+            "...Benutz mich... Alle von euch..."
+          ]
+        }
+      }
+    },
+    "JIGO2": {
+      "description": "Schwanz wird wieder hart und geschlossener Zyklus startet von ERO (ABER WIR SOLLTEN GG HANDOFF TO GANGBANG CYCLE HIER HABEN)",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Er ist wieder hart... Keine Pause...",
+            "...Runde zwei... Mehr Folter...",
+            "...Sein Schwanz... Wieder bereit...",
+            "...Ich kann... Nicht mehr nehmen...",
+            "...Dieser Zyklus... Endlos...",
+            "...Sein Schwanz... Drückt wieder...",
+            "...Die Gang... Wartend...",
+            "...Aber er will mich... Zuerst...",
+            "...Runde zwei... Härter...",
+            "...Mein Körper... Immer noch sensibel...",
+            "...Das ist... Zu viel...",
+            "...Sein Schwanz... Dringt wieder ein...",
+            "...Der Schmerz... Zurückkehrend...",
+            "...Keine Gnade... Keine Pause...",
+            "...Diese Hölle... Geht weiter..."
+          ],
+          "medium": [
+            "...Er ist wieder bereit... So schnell...",
+            "...Runde zwei... Interessant...",
+            "...Sein Schwanz... Hart... Wieder...",
+            "...Mein Körper... Reagiert...",
+            "...Die Gang... Kann warten...",
+            "...Er will mich... Mehr...",
+            "...Diese Ausdauer... Beeindruckend...",
+            "...Sein Schwanz... Eindringend... Vertraut...",
+            "...Die Empfindung... Anders jetzt...",
+            "...Mehr Lust... Baut sich auf...",
+            "...Runde zwei... Könnte besser sein...",
+            "...Sein Schwanz... Kennt mich jetzt...",
+            "...Der Rhythmus... Beginnt wieder...",
+            "...Das könnte... Genießbar werden...",
+            "...Die Gang... Nach ihm..."
+          ],
+          "high": [
+            "...Er ist wieder hart... Perfekt...",
+            "...Runde zwei... Ja bitte...",
+            "...Sein Schwanz... Bereit für mehr...",
+            "...Fick mich wieder... Härter...",
+            "...Die Gang kann warten... Ich will dich...",
+            "...Komm in mir... Wieder...",
+            "...Sein Schwanz... So gut... Zweites Mal...",
+            "...Pound mich... Hör nicht auf...",
+            "...Füll mich wieder... Mit Cum...",
+            "...Runde zwei... Noch besser...",
+            "...Seine Ausdauer... Amazing...",
+            "...Komm mit mir... Wieder...",
+            "...Sein Schwanz... Mein Favorit...",
+            "...Mehr... Gib mir mehr...",
+            "...Fick mich besinnungslos... Runde zwei..."
+          ]
+        }
+      }
+    }
+  }
+}

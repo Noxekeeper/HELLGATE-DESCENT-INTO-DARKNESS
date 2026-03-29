@@ -1,0 +1,42 @@
+# White Cathedral spawn (optimized: ~50% reduction, zoned difficulty)
+# Format: RANDOM,chance,X,Y,POOL[types],1
+# Zones: Entrance(60%) → Nave(50%) → Sanctuary(40%)
+
+# ========== ENTRANCE ZONE (60% chance - welcoming guards) ==========
+RANDOM,0.6,943.55,-209.46,POOL[TouzokuNormal,TouzokuAxe,Librarian,InquisitionWhite],1
+RANDOM,0.6,953.85,-208.50,POOL[TouzokuNormal,Wolf,Librarian,InquisitionWhite],1
+RANDOM,0.6,948.74,-199.88,POOL[TouzokuNormal,Wolf,Librarian,InquisitionWhite],1
+RANDOM,0.6,937.60,-227.35,POOL[TouzokuNormal,TouzokuAxe,Librarian,InquisitionWhite],1
+RANDOM,0.6,926.72,-222.79,POOL[TouzokuNormal,Wolf,Librarian,InquisitionWhite],1
+RANDOM,0.6,944.01,-217.58,POOL[TouzokuNormal,TouzokuAxe,Librarian,InquisitionWhite],1
+RANDOM,0.6,963.55,-218.10,POOL[TouzokuNormal,TouzokuAxe,Librarian,InquisitionWhite],1
+
+# ========== NAVE ZONE (50% chance - mixed encounters) ==========
+RANDOM,0.5,1070.62,-229.62,POOL[Librarian,InquisitionWhite,CrowInquisition,Mutude,TouzokuNormal,TouzokuAxe],1
+RANDOM,0.5,1113.77,-229.62,POOL[Librarian,InquisitionWhite,CrowInquisition,Mutude,TouzokuNormal,TouzokuAxe],1
+RANDOM,0.5,1067.93,-218.80,POOL[Librarian,InquisitionWhite,CrowInquisition,Mutude,TouzokuNormal,Wolf],1
+RANDOM,0.5,1086.52,-218.23,POOL[Librarian,InquisitionWhite,CrowInquisition,Mutude,TouzokuNormal,TouzokuAxe],1
+RANDOM,0.5,1102.25,-216.39,POOL[Librarian,InquisitionWhite,CrowInquisition,Mutude,TouzokuNormal,Wolf],1
+RANDOM,0.5,1116.74,-216.40,POOL[Librarian,InquisitionWhite,CrowInquisition,Mutude,TouzokuNormal,TouzokuAxe],1
+RANDOM,0.5,988.85,-219.20,POOL[Librarian,InquisitionWhite,CrowInquisition,Mutude,TouzokuNormal,Wolf],1
+RANDOM,0.5,996.68,-216.41,POOL[Librarian,InquisitionWhite,CrowInquisition,Mutude,TouzokuNormal,TouzokuAxe],1
+RANDOM,0.5,1017.96,-218.76,POOL[Librarian,InquisitionWhite,CrowInquisition,Mutude,TouzokuNormal,Wolf],1
+RANDOM,0.5,1031.71,-218.81,POOL[Librarian,InquisitionWhite,CrowInquisition,Mutude,TouzokuNormal,TouzokuAxe],1
+RANDOM,0.5,1007.21,-207.62,POOL[Librarian,InquisitionWhite,CrowInquisition,Mutude,TouzokuNormal,TouzokuAxe],1
+
+# ========== SANCTUARY ZONE (40% chance - elite guardians) ==========
+RANDOM,0.4,994.81,-196.27,POOL[Librarian,CrowInquisition,Mutude,InquisitionWhite],1
+RANDOM,0.4,980.48,-196.27,POOL[Librarian,CrowInquisition,Mutude,InquisitionWhite],1
+RANDOM,0.4,961.58,-194.07,POOL[Librarian,CrowInquisition,Wolf,InquisitionWhite],1
+RANDOM,0.4,944.32,-194.07,POOL[Librarian,CrowInquisition,Mutude,InquisitionWhite],1
+RANDOM,0.4,924.84,-194.09,POOL[Librarian,CrowInquisition,Wolf,InquisitionWhite],1
+RANDOM,0.4,905.54,-194.07,POOL[Librarian,CrowInquisition,Mutude,InquisitionWhite],1
+RANDOM,0.4,881.02,-194.07,POOL[Librarian,CrowInquisition,Wolf,InquisitionWhite],1
+RANDOM,0.4,855.50,-194.07,POOL[Librarian,CrowInquisition,Mutude,InquisitionWhite],1
+RANDOM,0.4,829.98,-194.07,POOL[Librarian,CrowInquisition,Wolf,InquisitionWhite],1
+RANDOM,0.4,804.46,-194.07,POOL[Librarian,CrowInquisition,Mutude,InquisitionWhite],1
+RANDOM,0.4,778.94,-194.07,POOL[Librarian,CrowInquisition,Wolf,InquisitionWhite],1
+RANDOM,0.4,753.42,-194.07,POOL[Librarian,CrowInquisition,Mutude,InquisitionWhite],1
+RANDOM,0.4,727.90,-194.07,POOL[Librarian,CrowInquisition,Mutude,InquisitionWhite],1
+RANDOM,0.4,702.38,-194.07,POOL[Librarian,CrowInquisition,Wolf,InquisitionWhite],1
+RANDOM,0.4,676.86,-194.07,POOL[Librarian,CrowInquisition,Mutude,InquisitionWhite],1

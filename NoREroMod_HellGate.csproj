@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B0C12E50-F231-4B5F-9075-9E5B986E5B4C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NoREroMod</RootNamespace>
+    <AssemblyName>NoR_HellGate</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <LangVersion>10.0</LangVersion>
+    <FileAlignment>512</FileAlignment>
+    <FrameworkPathOverride>$(MSBuildProjectDirectory)\References</FrameworkPathOverride>
+    <!-- Night of Revenge install root when this repo is at .../REZERVNIE COPY/HELLGATE for Git -->
+    <NorGameRoot>$([System.IO.Path]::GetFullPath('$(MSBuildProjectDirectory)\..\..'))</NorGameRoot>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+    <Reference Include="NoREroMod">
+      <HintPath>$(NorGameRoot)\BepInEx\plugins\NoREroMod.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>$(NorGameRoot)\BepInEx\core\0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(NorGameRoot)\NightofRevenge_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>$(NorGameRoot)\NightofRevenge_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="BepInEx">
+      <HintPath>$(NorGameRoot)\BepInEx\core\BepInEx.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="ES2">
+      <HintPath>$(NorGameRoot)\NightofRevenge_Data\Managed\ES2.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Rewired_Core">
+      <HintPath>$(NorGameRoot)\NightofRevenge_Data\Managed\Rewired_Core.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>$(NorGameRoot)\NightofRevenge_Data\Managed\UnityEngine.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>$(NorGameRoot)\NightofRevenge_Data\Managed\UnityEngine.UI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <!-- Core -->
+    <Compile Include="Core\Plugin.cs" />
+    <Compile Include="Core\PluginInfo.cs" />
+    
+    <!-- Patches/Base -->
+    <Compile Include="Patches\Base\PreventHarmonyUnpatch.cs" />
+    
+    <!-- Patches/Enemy -->
+    <!-- Базовые классы для новых врагов -->
+    <Compile Include="Patches\Enemy\Base\BaseEnemyPassPatch.cs" />
+    
+    <!-- Рабочие патчи врагов (НЕ ТРОГАТЬ - уже работают!) -->
+    <Compile Include="Patches\Enemy\TouzokuNormalPassPatch.cs" />
+    <Compile Include="Patches\Enemy\TouzokuAxePassPatch.cs" />
+    <Compile Include="Patches\Enemy\InquisitionBlackPassPatch.cs" />
+    <Compile Include="Patches\Enemy\InquisitionWhitePassPatch.cs" />
+    <Compile Include="Patches\Enemy\InquisitionRedPassPatch.cs" />
+    <Compile Include="Patches\Enemy\VagrantPassPatch.cs" />
+    <Compile Include="Patches\Enemy\PrisonOfficerPassPatch.cs" />
+    <Compile Include="Patches\Enemy\LibrarianPassPatch.cs" />
+    <Compile Include="Patches\Enemy\MummyDogPassPatch.cs" />
+    <Compile Include="Patches\Enemy\PilgrimPassPatch.cs" />
+    <Compile Include="Patches\Enemy\MummyManPassPatch.cs" />
+    <Compile Include="Patches\Enemy\UndeadPassPatch.cs" />
+    <!-- <Compile Include="Patches\Enemy\SuccubusPassPatch.cs" /> --> <!-- ВРЕМЕННО ОТКЛЮЧЕН -->
+    <Compile Include="Patches\Enemy\CrowInquisition\CrowInquisitionEROFix.cs" />
+    <Compile Include="Patches\Enemy\CrowInquisition\CrowInquisitionPassLogic.cs" />
+    
+    <!-- Новые враги -->
+    <Compile Include="Patches\Enemy\goblin\GoblinPassLogic.cs" />
+    <Compile Include="Patches\Enemy\goblin\GoblinStruggleSpawnPatch.cs" />
+    <!-- УДАЛЕНО: GoblinCamera.cs - файл эффектов удален -->
+    <!-- УДАЛЕНО: GoblinEffectsPatch.cs, GoblinGrabEffect.cs, GoblinClimaxEffect.cs - файлы эффектов удалены -->
+    <Compile Include="Patches\Enemy\HG_Mini_bose\BigoniBrotherPassLogic.cs" />
+    <Compile Include="Patches\Enemy\HG_Mini_bose\BigoniBrotherPatch.cs" />
+    <Compile Include="Patches\Enemy\HG_Mini_bose\BigoniBrotherGameOverBypass.cs" />
+    <!-- MafiaBossCustom: кастомный мафия-босс с handoff, пониженные статы -->
+    <Compile Include="Patches\Enemy\MafiaBossCustom\MafiaBossCustomStats.cs" />
+    <Compile Include="Patches\Enemy\MafiaBossCustom\MafiaBossCustomPassLogic.cs" />
+    <Compile Include="Patches\Enemy\MafiaBossCustom\MafiaBossCustomEROPatches.cs" />
+    <Compile Include="Patches\Enemy\MafiaBossCustom\MafiaBossCustomGrabPatch.cs" />
+    <Compile Include="Patches\Enemy\Dorei\DoreiPassLogic.cs" />
+    <Compile Include="Patches\Enemy\Kakash\KakasiPassLogic.cs" />
+    <Compile Include="Patches\Enemy\Kakash\KakasiCrossPatch.cs" />
+    <!-- УДАЛЕНО: KakasiCameraZoomPatch.cs - файл эффектов удален -->
+    <Compile Include="Patches\Enemy\Six_hand\MutudePassLogic.cs" />
+    <Compile Include="Patches\Enemy\Six_hand\MutudeEffects.cs" />
+    <Compile Include="Patches\Enemy\Six_hand\MutudeVideoPositionTracker.cs" />
+    <Compile Include="Patches\Enemy\NoREroModEliteGrabDisablerPatch.cs" />
+<!-- Wolf Mod: отдельный враг с ассетами Wolf Mod Spine -->
+    <Compile Include="Patches\Enemy\WolfModCustom\WolfTextureLoader.cs" />
+    <Compile Include="Patches\Enemy\WolfModCustom\WolfSkeletonLoader.cs" />
+    <!-- Dorei Mod: fapping idle во время ожидания в H-сцене -->
+    <Compile Include="Patches\Enemy\DoreiModCustom\DoreiTextureLoader.cs" />
+    <Compile Include="Patches\Enemy\DoreiModCustom\DoreiSkeletonLoader.cs" />
+    <Compile Include="Patches\Enemy\DoreiModCustom\DoreiSpectatorIdlePatch.cs" />
+    <Compile Include="Patches\Player\TimeScaleResetOnEscapePatch.cs" />
+    <Compile Include="Patches\Player\PlayerConUpdateDispatcher.cs" />
+    <Compile Include="Patches\Player\StruggleInvulnPatch.cs" />
+    <Compile Include="Patches\Player\GuardParryMindBrokenPatch.cs" />
+    <Compile Include="Patches\PlayerRespawn\VengeanceRespawnEffectPatch.cs" />
+    
+    <!-- Шаблоны в _Template/ НЕ компилируются автоматически -->
+    
+    <!-- Patches/Spawn -->
+    <Compile Include="Patches\Spawn\SpawnResetPatch.cs" />
+    <Compile Include="Patches\Spawn\SpawnPointAnalyzer.cs" />
+    <Compile Include="Patches\Spawn\HellGateSpawn_test.cs" />
+    <Compile Include="Patches\Spawn\SpawnSceneTransitionFix.cs" />
+    
+    <!-- Patches/Performance - Performance optimization patches -->
+    <Compile Include="Patches\Performance\CameraGetComponentPatch.cs" />
+    <Compile Include="Patches\Performance\EroEnemyStartPatch.cs" />
+    
+    <!-- Patches/UI -->
+    <Compile Include="Patches\UI\BadstatusUiPatch.cs" />
+    <Compile Include="Patches\UI\MindBroken\MindBrokenSystem.cs" />
+    <Compile Include="Patches\UI\MindBroken\MindBrokenBadEndSystem.cs" />
+    <Compile Include="Patches\UI\MindBroken\CorruptionCaptionsSystem.cs" />
+    <Compile Include="Patches\UI\MindBroken\MindBrokenRecoverySystem.cs" />
+    <Compile Include="Patches\UI\MindBroken\MindBrokenVisualEffectsSystem.cs" />
+    <Compile Include="Patches\UI\MindBroken\MutudeMindbrokenControl.cs" />
+    <Compile Include="Patches\UI\MindBroken\InquisitionWhiteMindbrokenControl.cs" />
+    <Compile Include="Patches\UI\MindBroken\CrowInquisitionMindbrokenControl.cs" />
+    <Compile Include="Patches\UI\MindBroken\PilgrimMindbrokenControl.cs" />
+    <Compile Include="Patches\UI\MindBroken\H_scenesAllEnemiesCorruption.cs" />
+    <Compile Include="Patches\UI\MindBroken\EnemyKillRecoveryPatch.cs" />
+    <Compile Include="Patches\UI\MindBroken\MindBrokenUniversalKillRecoveryPatch.cs" />
+    
+    <!-- Systems/Handoff -->
+    <Compile Include="Systems\Handoff\DelayedHandoffScript.cs" />
+    <Compile Include="Systems\Handoff\EnemyHandoffSystem.cs" />
+    
+    <!-- Systems/GrabSystem (GrabSystem NG) -->
+    <Compile Include="Systems\GrabSystem\GrabViaAttackContext.cs" />
+    <Compile Include="Systems\GrabSystem\DamageSourceClassifier.cs" />
+    <Compile Include="Systems\GrabSystem\GrabChanceCalculator.cs" />
+    <Compile Include="Systems\GrabSystem\GrabChanceUISystem.cs" />
+    <Compile Include="Systems\GrabSystem\Patches\RangedDamageFlagPatches.cs" />
+    <Compile Include="Systems\GrabSystem\Patches\MeleeAttackerContextPatches.cs" />
+    <Compile Include="Systems\GrabSystem\Patches\GrabViaAttackPatch.cs" />
+    
+    <!-- Systems/Speech - УДАЛЕНО: Все диалоговые системы удалены для создания новой модульной системы -->
+    <!-- Новая модульная система будет создана в Systems/Dialogue/ -->
+    
+    <!-- Systems/Effects -->
+    <!-- УДАЛЕНО: GrabSlowMotionEffect.cs, IGrabEffectStrategy.cs - файлы эффектов удалены -->
+    <!-- ВНИМАНИЕ: KakasiCameraEffectsPatch.cs НЕ включаем здесь, он уже в Patches/Enemy -->
+    
+    <!-- Systems/Gameplay -->
+    <Compile Include="Systems\Gameplay\QTESystem.cs" />
+    <Compile Include="Systems\Gameplay\StruggleVisualIndicators.cs" />
+    <Compile Include="Systems\Gameplay\QTEStruggleSystemDisabler.cs" />
+    <Compile Include="Systems\Gameplay\QTEStruggleHistoryDisabler.cs" />
+    <Compile Include="Systems\Gameplay\StruggleCameraShakeDisabler.cs" />
+    <Compile Include="Systems\Gameplay\QTESPCalculator.cs" />
+    <Compile Include="Systems\Gameplay\QTEStruggleWindowManager.cs" />
+    
+    <!-- Systems/Dialogue -->
+    <Compile Include="Systems\Dialogue\DialogueFramework.cs" />
+    <Compile Include="Systems\Dialogue\DialogueEventProcessor.cs" />
+    <Compile Include="Systems\Dialogue\DialogueSelector.cs" />
+    <Compile Include="Systems\Dialogue\DialogueDisplay.cs" />
+    <Compile Include="Systems\Dialogue\DialogueDatabase.cs" />
+    <Compile Include="Systems\Dialogue\DialoguePool.cs" />
+    <Compile Include="Systems\Dialogue\SoundRegistry.cs" />
+    <Compile Include="Systems\Dialogue\QTEReactionDatabase.cs" />
+    <Compile Include="Systems\Dialogue\QTEReactionFramework.cs" />
+    <Compile Include="Systems\Dialogue\SoundOnomatopoeiaPatch.cs" />
+    <Compile Include="Systems\Dialogue\GrabThreatDialogues.cs" />
+    <Compile Include="Systems\Dialogue\GrabThreatIdlePatch.cs" />
+    <Compile Include="Systems\Dialogue\SpectatorCommentsSystem.cs" />
+    <Compile Include="Systems\Dialogue\TouzokuNormalHSceneDialogues.cs" />
+    <Compile Include="Systems\Dialogue\AradiaTouzokuNormalDialogues.cs" />
+    <Compile Include="Systems\Dialogue\AradiaInquisitionBlackDialogues.cs" />
+    <Compile Include="Systems\Dialogue\TouzokuAxeHSceneDialogues.cs" />
+    <Compile Include="Systems\Dialogue\InquisitionBlackHSceneDialogues.cs" />
+    <Compile Include="Systems\Dialogue\KakasiHSceneDialogues.cs" />
+    <Compile Include="Systems\Dialogue\ColorParser.cs" />
+    <Compile Include="Systems\Dialogue\DialogueSystemBase.cs" />
+    <Compile Include="Systems\Dialogue\GoblinHSceneDialogues.cs" />
+
+    <!-- Systems/Audio -->
+    <Compile Include="Systems\Audio\AttackSoundRegistry.cs" />
+    <Compile Include="Systems\Audio\AttackSoundSystem.cs" />
+    <Compile Include="Systems\Audio\AttackSoundPatch.cs" />
+    <Compile Include="Systems\Audio\DeathSoundPatch.cs" />
+
+    <!-- Systems/Camera -->
+    <Compile Include="Systems\Camera\HSceneCameraController.cs" />
+    <Compile Include="Systems\Camera\CameraEffectsManager.cs" />
+    <Compile Include="Systems\Camera\CameraEventSubscriber.cs" />
+    <Compile Include="Systems\Camera\CameraSettings.cs" />
+    <Compile Include="Systems\Camera\CameraCache.cs" />
+    <Compile Include="Systems\Camera\CumDisplayManager.cs" />
+    <Compile Include="Systems\Camera\HSceneCameraZoomControlPatch.cs" />
+    <Compile Include="Systems\Camera\HSceneCameraDirectPanPatch.cs" />
+    
+    <!-- Systems/HSceneEffects -->
+    <Compile Include="Systems\HSceneEffects\HSceneStartZoomEffect.cs" />
+    <Compile Include="Systems\Camera\HSceneCameraPreventResetPatch.cs" />
+    <Compile Include="Systems\Camera\HSceneCameraCenterPreventPatch.cs" />
+    <Compile Include="Systems\Camera\HSceneCameraMoveOverridePatch.cs" />
+    <Compile Include="Systems\Camera\HSceneCameraGetTargetsMidPointPatch.cs" />
+    <Compile Include="Systems\Camera\HSceneCameraSmoothingDisablePatch.cs" />
+    <Compile Include="Systems\Camera\HSceneCameraSmoothApproachPatch.cs" />
+    <Compile Include="Systems\Camera\HSceneCameraArrowKeyBlockPatch.cs" />
+    <Compile Include="Systems\Camera\HSceneCameraResetPatch.cs" />
+    <Compile Include="Systems\Camera\CombatCameraPresetSystem.cs" />
+    <Compile Include="Patches\Effects\PregnancyClipTrigger.cs" />
+    
+    <!-- Systems/CombatAi -->
+    <Compile Include="Systems\CombatAi\CombatAiConfig.cs" />
+    <Compile Include="Systems\CombatAi\DoreiCombatAiConfig.cs" />
+    <Compile Include="Systems\CombatAi\Patches\EnemyDateDistanceFunPatch.cs" />
+    <Compile Include="Systems\CombatAi\Patches\EnemyDateOndamageSendPatch.cs" />
+    <Compile Include="Systems\CombatAi\Patches\SinnerslaveCrossbowCombatAiPatch.cs" />
+    
+    <!-- Systems/Rage -->
+    <Compile Include="Systems\Rage\RageSystem.cs" />
+    <Compile Include="Systems\Rage\RageUISystem.cs" />
+    <Compile Include="Systems\Rage\GrabChanceRageUILabel.cs" />
+    <Compile Include="Systems\Rage\RageVisualEffectsSystem.cs" />
+    <Compile Include="Systems\Rage\RageFireGradientEffect.cs" />
+    <Compile Include="Systems\Rage\RageHandsGlowSystem.cs" />
+    <Compile Include="Systems\Rage\RageHandsParticleSystem.cs" />
+    <Compile Include="Systems\Rage\RageWingsSystem.cs" />
+    <Compile Include="Systems\Rage\SlowMoVisualEffectsSystem.cs" />
+    <Compile Include="Systems\Rage\SlowMoBoneGlowSystem.cs" />
+    <Compile Include="Systems\Rage\TimeSlowMoSystem.cs" />
+    <Compile Include="Systems\Rage\RageInputHandler.cs" />
+    <Compile Include="Systems\Rage\RageComboSystem.cs" />
+    <Compile Include="Systems\Rage\RageComboUISystem.cs" />
+    <Compile Include="Systems\Rage\RageComboBloodEffect.cs" />
+    <Compile Include="Systems\Effects\HSceneBlackBackgroundSystem.cs" />
+    <Compile Include="Systems\Effects\HSceneBlackBackgroundTriggerPatch.cs" />
+    
+    <!-- Systems/UI -->
+    <Compile Include="Systems\UI\LoadingScreenSystem.cs" />
+    <Compile Include="Systems\BadEndPlayer\BadEndPlayerManifest.cs" />
+    <Compile Include="Systems\BadEndPlayer\BadEndPlayerLoader.cs" />
+    <Compile Include="Systems\BadEndPlayer\BadEndPlayerSystem.cs" />
+    <!-- ВРЕМЕННО ОТКЛЮЧЕНО: Система настроек GameSettingsMenu -->
+    <!-- <Compile Include="Systems\UI\GameSettingsMenu.cs" /> -->
+    <!-- <Compile Include="Systems\UI\GameSettingsMenuPatch.cs" /> -->
+    <!-- <Compile Include="Systems\UI\SettingsDataManager.cs" /> -->
+    <!-- <Compile Include="Systems\UI\UISettingsBuilder.cs" /> -->
+    <!-- <Compile Include="Systems\UI\SettingsValueManager.cs" /> -->
+    <!-- <Compile Include="Systems\UI\AnimationManager.cs" /> -->
+    <!-- <Compile Include="Systems\UI\SoundManager.cs" /> -->
+    <Compile Include="Systems\UI\InputFieldEnhancer.cs" />
+    <Compile Include="Systems\UI\SimpleInputFieldActivator.cs" />
+    <Compile Include="Systems\Rage\Patches\RageUniversalKillTrackerPatch.cs" />
+    <Compile Include="Systems\Rage\Patches\RageInputPatch.cs" />
+    <Compile Include="Systems\Rage\Patches\RageResetOnGrabDownPatch.cs" />
+    <Compile Include="Systems\Rage\Patches\RageHitTrackerPatch.cs" />
+    <Compile Include="Systems\Rage\Patches\WitchFineGreatswordPatch.cs" />
+    
+
+    <!-- Systems/Cache - Performance optimization -->
+    <Compile Include="Systems\Cache\UnifiedPlayerCacheManager.cs" />
+    <Compile Include="Systems\Cache\UnifiedCameraCacheManager.cs" />
+    <Compile Include="Systems\Cache\UnifiedGameControllerCacheManager.cs" />
+    
+    <!-- Systems/Spawn - Enemy spawn system -->
+    <Compile Include="Systems\Spawn\SpawnConfigExecutor.cs" />
+    <Compile Include="Systems\Spawn\EnemyPrefabRegistry.cs" />
+    <Compile Include="Systems\Spawn\UnifiedSpawnManager.cs" />
+    <Compile Include="Systems\Spawn\HellGateSpawn_FirstMap.cs" />
+    <Compile Include="Systems\Spawn\HellGateSpawn_VillageMain.cs" />
+    <Compile Include="Systems\Spawn\HellGateSpawn_ScapegoatEntrance.cs" />
+    <Compile Include="Systems\Spawn\HellGateSpawn_UndergroundChurch.cs" />
+    <Compile Include="Systems\Spawn\HellGateSpawn_InundergroundChurch.cs" />
+    <Compile Include="Systems\Spawn\HellGateSpawn_InsomniaTownC.cs" />
+    <Compile Include="Systems\Spawn\HellGateSpawn_ForestOfRequiem.cs" />
+    <Compile Include="Systems\Spawn\HellGateSpawn_UndergroundLaboratory.cs" />
+    <Compile Include="Systems\Spawn\HellGateSpawn_PilgrimageEntrance.cs" />
+    <Compile Include="Systems\Spawn\HellGateSpawn_WhiteCathedral.cs" />
+    <Compile Include="Systems\Spawn\HellGateSpawn_WhiteCathedralGarden.cs" />
+    <Compile Include="Systems\Spawn\HellGateSpawn_WhiteCathedralRooftop.cs" />
+
+    <!-- Logging - УДАЛЕНО: Кастомный логгер удален, используется стандартный BepInEx Logger -->
+
+    <!-- Properties -->
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
