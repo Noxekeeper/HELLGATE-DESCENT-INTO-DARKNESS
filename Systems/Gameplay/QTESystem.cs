@@ -820,6 +820,17 @@ public static class QTESystem {
             if (isWindowActiveLeftRight || isWindowActiveUpDown) {
                 ProcessInput();
             }
+
+            // If SP is full but vanilla did not auto-release this frame, force the same release path.
+            // This prevents soft-lock grabs on specific enemies (e.g., Cocoonman variants).
+            if (playerStatus.Sp >= playerStatus.AllMaxSP() && playerCon.erodown != 0)
+            {
+                if (TryExitHSceneViaVanillaFunNowdamage(playerCon, playerStatus))
+                {
+                    StopQTE();
+                    return;
+                }
+            }
             
             // STAGE 6: Process wrong press during cooldowns
             if ((!isWindowActiveLeftRight && cooldownTimerLeftRight > 0f) || 

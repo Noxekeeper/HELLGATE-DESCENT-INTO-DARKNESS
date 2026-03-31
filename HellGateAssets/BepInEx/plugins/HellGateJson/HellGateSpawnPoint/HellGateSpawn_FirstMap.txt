@@ -1,5 +1,4 @@
 # FirstMap spawn | reduced ~30 points | X,Y,EnemyType,Count
--118.31,-135.44,WallHip,1
 -118.31,-135.44,POOL[TouzokuNormal,TouzokuAxe,Vagrant,VagrantGuard],1
 -112.71,-135.44,POOL[TouzokuNormal,TouzokuAxe,Vagrant,VagrantGuard],1
 -109.31,-137.00,POOL[TouzokuNormal,TouzokuAxe,Vagrant,VagrantGuard],1
