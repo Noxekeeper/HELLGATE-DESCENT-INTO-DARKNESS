@@ -227,36 +227,11 @@ internal static class RageWingsSystem
             basePath = basePath.Substring(0, basePath.Length - 5);
         }
 
-        string path1 = Path.Combine(basePath, "sources");
-        path1 = Path.Combine(path1, "HellGate_sources");
-        path1 = Path.Combine(path1, "Rage");
-        path1 = Path.Combine(path1, "BlackRedWings");
-
-        string path2 = Path.Combine(basePath, "..");
-        path2 = Path.Combine(path2, "sources");
-        path2 = Path.Combine(path2, "HellGate_sources");
-        path2 = Path.Combine(path2, "Rage");
-        path2 = Path.Combine(path2, "BlackRedWings");
-
-        string path3 = Path.Combine(basePath, "BepInEx");
-        path3 = Path.Combine(path3, "plugins");
-        path3 = Path.Combine(path3, "NoR_HellGate");
-        path3 = Path.Combine(path3, "sources");
-        path3 = Path.Combine(path3, "HellGate_sources");
-        path3 = Path.Combine(path3, "Rage");
-        path3 = Path.Combine(path3, "BlackRedWings");
-
-        string[] candidates = { path1, path2, path3 };
-        for (int i = 0; i < candidates.Length; i++)
-        {
-            string candidate = Path.GetFullPath(candidates[i]);
-            if (Directory.Exists(candidate))
-            {
-                return candidate;
-            }
-        }
-
-        return Path.GetFullPath(path1);
+        string path = Path.Combine(basePath, "sources");
+        path = Path.Combine(path, "HellGate_sources");
+        path = Path.Combine(path, "Rage");
+        path = Path.Combine(path, "BlackRedWings");
+        return Path.GetFullPath(path);
     }
 
     private static Sprite LoadSpriteFromFile(string filePath)
