@@ -1,0 +1,48 @@
+{
+  "settings": {
+    "minActivationPercent": {
+      "value": 50.0,
+      "comment": "Mindestprozentsatz der Wut, der für die Aktivierung erforderlich ist (Standard: 50%)"
+    },
+    "rageCostDuringQTE": {
+      "value": 50.0,
+      "comment": "Wutkosten für die Aktivierung während QTE/H-Szene (Standard: 50%)"
+    },
+    "damageMultiplier": {
+      "value": 2.0,
+      "comment": "Schadensmultiplikator für physischen und magischen Schaden während Wut (Standard: 2.0x)"
+    },
+    "spGainPercent": {
+      "value": 0.5,
+      "comment": "SP-Gewinn pro Angriffsklick während Wut in Prozent des max. SP (Standard: 0.5 = 50%)"
+    },
+    "enemyPushbackForceMultiplier": {
+      "value": 100.0,
+      "comment": "Multiplikator für die Zurückstoßkraft von Gegnern bei Wutaktivierung (Standard: 100.0, Bereich: 200-300px)"
+    },
+    "grabDrainMin": {
+      "value": 1.0,
+      "comment": "Wutverbrauch pro Sekunde beim Griff bei 0% MindBroken (Standard: 1.0%/Sek)"
+    },
+    "grabDrainMax": {
+      "value": 10.0,
+      "comment": "Wutverbrauch pro Sekunde beim Griff bei 100% MindBroken (Standard: 10.0%/Sek, lineare Interpolation)"
+    },
+    "slowMoDrainMultiplier": {
+      "value": 2.0,
+      "comment": "Verbrauchsmultiplikator für Wut in Zeitlupe (Standard: 2.0x, Basisverbrauch * 2.0)"
+    },
+    "slowMoMBGainMultiplier": {
+      "value": 2.0,
+      "comment": "Gewinnmultiplikator für MindBroken in Zeitlupe (Standard: 2.0x, Basisgewinn * 2.0)"
+    },
+    "uiPositionX": {
+      "value": 360.0,
+      "comment": "X-Position der Wut-UI vom linken Rand (Standard: 360px)"
+    },
+    "uiPositionY": {
+      "value": -25.0,
+      "comment": "Y-Position der Wut-UI vom oberen Rand (Standard: -25px, negativ = unten vom oberen Rand)"
+    }
+  }
+}

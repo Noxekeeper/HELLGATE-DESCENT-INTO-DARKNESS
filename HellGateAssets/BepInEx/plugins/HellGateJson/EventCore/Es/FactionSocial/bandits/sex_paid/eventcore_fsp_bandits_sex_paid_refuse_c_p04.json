@@ -1,0 +1,8 @@
+{
+  "speakerLabel": "Bandido",
+  "stepId": "fsp_sex_refuse_c_p04",
+  "stepKind": "continue",
+  "continueOutcomeId": "noop",
+  "continueNextStepId": "fsp_sex_money_after_price",
+  "npcLine": "Vale… ¿y si {SEX_PRICE} monedas — solo una sonrisa? No te arrepentirás."
+}

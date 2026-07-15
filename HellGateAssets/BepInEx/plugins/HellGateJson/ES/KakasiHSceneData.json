@@ -1,0 +1,462 @@
+{
+  "settings": {
+    "commentCooldownSeconds": 2.0,
+    "maxSimultaneousComments": 1,
+    "commentDisplayDuration": 4.0,
+    "fontSize": 22.0,
+    "verticalOffset": 15.0,
+    "streamingSpeed": 0.03,
+    "goblinColor": {
+      "r": 1.0,
+      "g": 1.0,
+      "b": 1.0,
+      "a": 1.0
+    },
+    "goblinOutlineColor": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 1.0
+    }
+  },
+  "animations": {
+    "start": {
+      "description": "Agarra a GG y la lanza sobre la cruz, atando sus manos a la cruz, brazos crucificados",
+      "events": {
+        "start": [
+          "Vaya, vaya, ¿qué tenemos aquí? ¡Qué encuentro, bruja!",
+          "¡Ahora te convertiré en esclava de hombres, en puta!",
+          "¡Te crucificaré como a la última perra y haré lo que quiera!",
+          "¡Tu poder se acabó, ahora eres mi propiedad!",
+          "¡Te convertiré en un agujero obediente para follar!",
+          "¡Tu cuerpo me pertenece ahora, perra!",
+          "¡Ahora te convertiré en un objeto para el placer masculino!",
+          "¡Qué hermosa estás crucificada, puta!"
+        ],
+        "SE1": [
+          "¡Resiste todo lo que quieras, no te liberarás!",
+          "¡Tu lucha solo me excita!",
+          "¡Sigue resistiendo, me gusta!"
+        ]
+      }
+    },
+    "start2": {
+      "description": "Con una mano le tapa la boca a GG, y en la otra mano aparece un guante de goma empapado de afrodisíaco",
+      "events": {
+        "start2": [
+          "¡Esta impregnación penetrará cada uno de tus recovecos, perra!",
+          "¡Pronto este líquido estará dentro de tu coño!",
+          "¡Te frotaré el coño con este brebaje y pedirás más!",
+          "¡Sentirás cómo tu cuerpo arde de deseo, puta!",
+          "¡Cada célula de tu cuerpo gritará por ser follada!",
+          "¡Ahora convertiré tu coño en un hogar ardiente de lujuria!",
+          "¡Este lubricante hará que olvides tu voluntad, maldita!",
+          "¡Tu coño quedará empapado con este brebaje hasta el fondo!"
+        ],
+        "SE1": [
+          "¡Resiste, resiste, me gusta!",
+          "¡Tu lucha es inútil!",
+          "¡Sigue así, perra, me gusta!"
+        ]
+      }
+    },
+    "ero1": {
+      "description": "Empieza a frotar con el guante empapado el coño de GG, apartando las bragas, entra un poco dentro",
+      "events": {
+        "ero1": [
+          "¿Sientes cómo preparo tu agujero, puta?",
+          "¡Ahora dejaré tu coño húmedo y listo!",
+          "¡Te estiraré hasta que empieces a gotear!",
+          "¿Tu coño ya está húmedo? Espera, esto es solo el principio!",
+          "¡Te meteré los dedos tan profundo que aullarás!",
+          "¡Tu cuerpo ya responde, aunque no quieras!",
+          "¡Te trabajaré tanto que pedirás polla!",
+          "¡Cada movimiento te volverá loca, perra!"
+        ],
+        "SE1": [
+          "¡Tu lucha me excita aún más!",
+          "¡Sigue resistiendo hasta que te rompa por completo!",
+          "¡Resiste todo lo que quieras, ya no puedes escaparte!"
+        ]
+      }
+    },
+    "ero2": {
+      "description": "Entra más profundo sin parar, ya follando con la mano, sus dedos empujan más adentro aplicando afrodisíaco en sus paredes",
+      "events": {
+        "ero2": [
+          "Mis dedos ya están dentro, puta, ¡y no se detendrán!",
+          "¡Te estoy follando con la mano, frotando las paredes de tu coño!",
+          "Más profundo, más profundo... ¡quiero llegar hasta el fondo!",
+          "¿Sientes cómo te poseo por dentro, perra?",
+          "¡Tu coño es mío ahora, hago con él lo que quiera!",
+          "¡Cada empuje de mi mano inyecta deseo en ti!",
+          "¡Te desgarro por dentro y te gusta!",
+          "¡Tu coño engulle mis dedos, perra codiciosa!"
+        ],
+        "SE1": [
+          "¡Tus gemidos son tan excitantes, sigue!",
+          "¡Grita, grita más fuerte, perra, me gusta!",
+          "¡Pronto no podrás gritar, puta!"
+        ]
+      }
+    },
+    "ero3": {
+      "description": "Continúa follando rítmicamente y frotando afrodisíaco en GG",
+      "events": {
+        "ero3": [
+          "¡No quedará ningún lugar sin procesar!",
+          "¡Cada agujero quedará empapado!",
+          "¡Tu culo es el siguiente, perra!",
+          "¡Ahora también te frotaré la boca!",
+          "¡Todo estará listo para follar!",
+          "¡Quedarás empapada hasta los huesos!",
+          "¡Cada agujero arderá!",
+          "¡No quedará nada sin tocar!"
+        ],
+        "SE1": [
+          "¡Tu lucha me complace, perra!",
+          "¡Solo no te mueras, puta, antes de que termine!",
+          "¡Resiste todo lo que quieras, no me detendré!"
+        ]
+      }
+    },
+    "finish1": {
+      "description": "Varias veces empuja profundamente varios dedos en GG, se ve que muy profundo, GG comprende con horror que está llegando al clímax",
+      "events": {
+        "finish1": [
+          "¡Jajaja! ¡Te hice correrte, puta!",
+          "¡Así, corre! ¡Córrete con mi mano!",
+          "¡Qué perra eres, corriéndote contra tu voluntad!",
+          "¡Orgasmo forzado! ¡Tu cuerpo te traicionó!",
+          "¡Mira cómo te corres, crucificada en la cruz!",
+          "¡Tu coño se contrajo de placer y estás horrorizada!",
+          "¡Te hice experimentar lo que no querías!",
+          "¡Ahora eres mía, perra que se corre!"
+        ],
+        "SE1": [
+          "¡Zorra que se corre, te lo mereces!",
+          "Ahh... Joder, no puedo esperar a correrme dentro de ti!",
+          "¡Pronto te llenaré el vientre, lo recordarás!"
+        ]
+      }
+    },
+    "finish2": {
+      "description": "Quita las manos de GG, deja caer el guante, ríe y dice algo hacia GG",
+      "events": {
+        "finish2": [
+          "Descansa un poco, bruja. Pronto habrá follada de verdad!",
+          "¿Creías que eso era todo? ¡Eso fue solo el calentamiento!",
+          "¡Tu cuerpo ya está listo para mi polla!",
+          "¡Mírate, crucificada y perra que se corre!",
+          "¡Ahora estás lista para recibir mi polla negra!",
+          "Respira fuerte mientras tengas fuerzas. ¡Las necesitarás!",
+          "¡Ya no eres bruja, eres solo un agujero para el sexo!",
+          "Te rompí. Ahora te convertiré en mi juguete!"
+        ],
+        "SE1": [
+          "¡Tu coño chupa mi polla como una puta!",
+          "Aaa, qué fuerte me corro, tómalo todo!",
+          "¡Tómalo, perra, te lo ganaste!"
+        ]
+      }
+    },
+    "finish_end": {
+      "description": "GG abre los ojos y lo mira, comprendiendo claramente que esto está lejos del final",
+      "events": {
+        "finish_end": [
+          "¡Jajaja! ¡Entiendes todo correctamente, bruja!",
+          "¡Y ahora te follaré con mi polla negra!",
+          "¿Creías que eso era humillante? ¡Espera!",
+          "¡Ahora entraré en ti como nunca has sentido!",
+          "¡Prepárate para la dominación real, perra!",
+          "¡Tus ojos dicen la verdad: tienes miedo y lo quieres!",
+          "¡Mi polla te destrozará!",
+          "¡Dolerá, será sucio y pedirás más!"
+        ],
+        "SE1": [
+          "¡Chupa mi leche, puta, ese es tu trabajo!",
+          "¡Toma, tómalo todo, perra, te lo ganaste!",
+          "¡Sí, sí, sí, me corro, tómalo todo!"
+        ]
+      }
+    },
+    "finish_end2": {
+      "description": "La agarra por la cara y la tira al suelo",
+      "events": {
+        "finish_end2": [
+          "¡Así, al suelo, puta!",
+          "¡Ahora te acostarás como debes!",
+          "¡De la cruz al suelo, ese es tu destino, maldita!",
+          "¡Te tiré como basura, perra!",
+          "¡Ahora estás abajo, donde debes estar!",
+          "¡De la cruz al suelo, perfecta caída, bruja!",
+          "¡Caíste como una estrella fugaz, puta!",
+          "¡Ahora estás en el suelo, lista para la siguiente etapa!"
+        ],
+        "SE1": [
+          "¡Cae, cae, perra!",
+          "¡Tu lucha ha terminado!",
+          "¡Ahora eres completamente mía!"
+        ]
+      }
+    },
+    "START": {
+      "description": "Saca cepos de madera para manos y pies, manos encerradas en grilletes entre las piernas cerradas, GG yace sobre pecho y rostro",
+      "events": {
+        "START": [
+          "Quédate quieta, puta. ¡Ahora eres mi juguete sexual!",
+          "¡Tu posición es perfecta para que te rompa!",
+          "¡Mira lo indefensa que estás, perra inmovilizada!",
+          "¡Ahora te convertiré en una buena chica para follar!",
+          "¡Tu coño está alzado y espera mi polla negra!",
+          "¡Me servirás como un objeto obediente!",
+          "¡Estos cepos son tu nueva realidad, maldita!",
+          "¡Prepárate, entraré lo más profundo posible!"
+        ],
+        "SE1": [
+          "¡Resiste todo lo que quieras, no te liberarás!",
+          "¡Tu lucha solo me excita!",
+          "¡Sigue resistiendo, me gusta!"
+        ],
+        "SE2": [
+          "¡No te liberarás, puta!",
+          "¡Tu lucha es inútil!",
+          "¡Sigue así, perra, me gusta!"
+        ]
+      }
+    },
+    "ERO2": {
+      "description": "Follada profunda acentuada",
+      "events": {
+        "ERO2": [
+          "¿Sientes cómo te estiro el agujero, perra?",
+          "¡Te follo como te mereces!",
+          "¡Tu coño fue hecho para mi polla negra!",
+          "¡Cada embestida te hace mía!",
+          "¡Monta más profundo, maldita!",
+          "¡Tus grilletes repican al ritmo de mis nalgadas!",
+          "¡Tu cuerpo tiembla de placer y dolor!",
+          "¡Te poseo por completo, puta!"
+        ],
+        "ERO3": [
+          "¡Más profundo, aún más profundo, puta!",
+          "¡Quiero que sientas cada centímetro!",
+          "¡Tu coño me engulle más y más profundo, maldita!",
+          "¡Te estoy empalando hasta el fondo, perra!",
+          "¡Siente cómo te estiro por dentro!",
+          "¡Tus paredes me envuelven tan perfectamente!",
+          "¡Te estoy metiendo hasta el límite, perra codiciosa!",
+          "¡Más profundo, más profundo, hasta que llegues al final!"
+        ],
+        "SE1": [
+          "¡Tu lucha me excita aún más!",
+          "¡Sigue resistiendo hasta que te rompa por completo!",
+          "¡Resiste todo lo que quieras, ya no puedes escaparte!"
+        ]
+      }
+    },
+    "ERO3": {
+      "description": "Follando más profundo para que GG lo sienta",
+      "events": {
+        "ERO3": [
+          "¡Quiero que sientas cada centímetro de mi polla!",
+          "¡Siente cómo mi polla negra te llena!",
+          "¡Te estoy empalando en mí hasta el límite, perra!",
+          "¡Tu coño me engulle, perra codiciosa!",
+          "¡Más profundo, aún más profundo, puta!",
+          "¡Tus paredes me envuelven tan perfectamente!",
+          "¡Tu cuerpo fue hecho para esta follada!",
+          "¡Te estoy metiendo hasta el fondo, maldita!"
+        ],
+        "SE1": [
+          "¡Tus gemidos son tan excitantes, sigue!",
+          "¡Grita, grita más fuerte, perra, me gusta!",
+          "¡Pronto no podrás gritar, puta!"
+        ]
+      }
+    },
+    "ERO4": {
+      "description": "Follando más profundo y más fuerte",
+      "events": {
+        "ERO4": [
+          "¡Te follaré más fuerte y más duro, perra!",
+          "¡Tu culo está rojo de mis nalgadas!",
+          "¡Pronto me pedirás piedad!",
+          "¡Cada golpe es mi dominio sobre ti!",
+          "¡Tu coño ya es mío, desgarrado y húmedo!",
+          "¡Te convertiré en ruinas, maldita!",
+          "¡Sufre y disfruta, puta!",
+          "¡Te romperé con mi polla!"
+        ],
+        "SE1": [
+          "¡Tu lucha me complace, perra!",
+          "¡Solo no te mueras, puta, antes de que termine!",
+          "¡Resiste todo lo que quieras, no me detendré!"
+        ]
+      }
+    },
+    "ERO5": {
+      "description": "Follando profunda y jugosamente, preparándose para correrse dentro",
+      "events": {
+        "ERO5": [
+          "¡Ahora te llenaré hasta el borde, perra!",
+          "¡Te encantará mi leche, puta!",
+          "¡Prepárate para recibir todo mi jugo!",
+          "¡Me correré muy dentro de ti, maldita!",
+          "¡Tu coño rebosará de mí!",
+          "¡Cada gota de mi leche será tuya!",
+          "¡Te convertirás en mi muñeca de goma personal!",
+          "¡Ahora te haré mía para siempre, perra!"
+        ],
+        "FIN": [
+          "¡A-a-ah! ¡Me corro! ¡Tómalo todo, perra!",
+          "¡Sííí! ¡Te lleno, maldita!",
+          "¡Aquí está! ¡Mi leche dentro de ti!",
+          "¡Te lleno hasta el borde, puta!",
+          "¡Siente cómo exploto en ti!",
+          "¡Todo mío! ¡Toda mi leche para ti!",
+          "¡Sí! ¡Sí! ¡Sí! Me corro, perra!",
+          "¡Tu coño es ahora mi propiedad!"
+        ],
+        "SE1": [
+          "¡Tu coño chupa mi polla como una puta!",
+          "Aaa, qué fuerte me corro, tómalo todo!",
+          "¡Tómalo, perra, te lo ganaste!"
+        ]
+      }
+    },
+    "FIN": {
+      "description": "Se corre con una gran cantidad de semen",
+      "events": {
+        "FIN": [
+          "¡A-a-ah! ¡Me corro! ¡Tómalo todo, perra!",
+          "¡Sííí! ¡Te lleno, maldita!",
+          "¡Aquí está! ¡Mi leche dentro de ti!",
+          "¡Te lleno hasta el borde, puta!",
+          "¡Siente cómo exploto en ti!",
+          "¡Todo mío! ¡Toda mi leche para ti!",
+          "¡Sí! ¡Sí! ¡Sí! Me corro, perra!",
+          "¡Tu coño es ahora mi propiedad!"
+        ],
+        "JIGO1": [
+          "¡Mira cómo fluye mi semilla de ti, perra!",
+          "¡Tiemblas de placer y yo miro!",
+          "¡Ahora estás empapada de mí, bruja!",
+          "¡Mi leche fluye de ti y no puedes hacer nada!",
+          "¡Pareces una puta usada!",
+          "¡Perfecta apariencia para semejante perra!",
+          "¡Tu cuerpo aún tiembla por mi follada!",
+          "¡Ahora eres verdaderamente mía, perra!"
+        ],
+        "SE": {
+          "se_count_1": [
+            "¡Me corro, me corro! ¡Tómalo todo, perra!",
+            "¿Tu coño se llena hasta el borde, lo sientes?",
+            "Te lleno el vientre, ¿sientes cómo se llena?",
+            "¿Me sientes fertilizándote, puta?",
+            "¡Tu vientre es mío ahora y lo llené de leche!"
+          ],
+          "se_count_2": [
+            "¡Qué bien es correrse en ti, perra!",
+            "Maldita, ordeña mi leche, puta!",
+            "¿Tu coño rebosa, lo sientes?",
+            "¡Aún más leche para ti, perra!"
+          ]
+        },
+        "SE1": [
+          "¡Toma mi leche, perra, te lo ganaste!",
+          "Aaa... Maldita, me corro, tómalo todo!",
+          "¡Te llenaré el vientre y lo recordarás siempre!"
+        ]
+      }
+    },
+    "JIGO1": {
+      "description": "Saca la polla y se pone de pie, mirando a GG, cómo su leche fluye de ella",
+      "events": {
+        "JIGO1": [
+          "¡Mira cómo fluye mi semilla de ti, perra!",
+          "¡Tiemblas de placer y yo miro!",
+          "¡Ahora estás empapada de mí, bruja!",
+          "¡Mi leche fluye de ti y no puedes hacer nada!",
+          "¡Pareces una puta usada!",
+          "¡Perfecta apariencia para semejante perra!",
+          "¡Tu cuerpo aún tiembla por mi follada!",
+          "¡Ahora eres verdaderamente mía, perra!"
+        ],
+        "SE1": [
+          "¡Chupa mi leche, puta, ese es tu trabajo!",
+          "¡Toma, tómalo todo, perra, te lo ganaste!",
+          "¡Sí, sí, sí, me corro, tómalo todo!"
+        ]
+      }
+    },
+    "JIGO2": {
+      "description": "GG cierra los ojos, respira intentando recuperar el sentido, él mira a GG",
+      "events": {
+        "JIGO2": [
+          "Ahora irás en círculos, ahora eres una puta de verdad!",
+          "¡Siempre servirás a mi polla, perra!",
+          "¡Te daré para uso de otros, maldita!",
+          "¡Gran juguete sexual, verdad?",
+          "¡Tu propósito es ser un agujero para todos!",
+          "¡Ya no eres bruja, eres solo un objeto!",
+          "¡Ahora servirás a todos los que yo mande!",
+          "¡Tu nueva vida es follar constantemente, puta!"
+        ],
+        "START2": [
+          "Sin pensarlo mucho, tomaré lo mío de nuevo, perra!",
+          "¿Creías que eso era todo? ¡Solo empezamos!",
+          "Se acabó el descanso, puta. ¡Mi polla te desea de nuevo!",
+          "¡Tu coño aún no está satisfecho, lo siento!",
+          "¡Entraré en ti de nuevo, y esta vez aún más duro!",
+          "¡El círculo se cierra. Serás mía de nuevo, maldita!",
+          "¡Tu cuerpo está listo para usarse de nuevo!",
+          "¡Te follaré hasta el agotamiento total, perra!"
+        ],
+        "SE": {
+          "se_count_1": [
+            "Mírate, pareces una puta, ¡y es correcto!",
+            "¡Estás cubierta de mi leche y lo recordarás siempre!",
+            "¡Tu coño sigue goteando, qué hermoso!",
+            "¡Sabes dar placer, perra, sigue así!"
+          ],
+          "se_count_2": [
+            "¡Otra porción de leche para ti, perra!",
+            "¿Tu coño rebosa, lo sientes?",
+            "¡Tu vientre está lleno de mi leche y lo recordarás siempre!"
+          ]
+        },
+        "SE1": [
+          "¡Mira lo que me haces, oooouu eeee!",
+          "¡Te preñaré, perra, y lo recordarás siempre!",
+          "¡Produces mi leche como una puta!"
+        ]
+      }
+    },
+    "START2": {
+      "description": "Sin pensarlo mucho saca su polla y la introduce de nuevo repitiendo ciclos",
+      "events": {
+        "START2": [
+          "Sin pensarlo mucho, tomaré lo mío de nuevo, perra!",
+          "¿Creías que eso era todo? ¡Solo empezamos!",
+          "Se acabó el descanso, puta. ¡Mi polla te desea de nuevo!",
+          "¡Tu coño aún no está satisfecho, lo siento!",
+          "¡Entraré en ti de nuevo, y esta vez aún más duro!",
+          "¡El círculo se cierra. Serás mía de nuevo, maldita!",
+          "¡Tu cuerpo está listo para usarse de nuevo!",
+          "¡Te follaré hasta el agotamiento total, perra!"
+        ],
+        "SE1": [
+          "¡Resiste, resiste, me gusta!",
+          "¡Tu lucha es inútil!",
+          "¡Sigue así, perra, me gusta!"
+        ],
+        "SE2": [
+          "¡No te liberarás, puta!",
+          "¡Tu lucha es inútil!",
+          "¡Sigue así, perra, me gusta!"
+        ]
+      }
+    }
+  }
+}

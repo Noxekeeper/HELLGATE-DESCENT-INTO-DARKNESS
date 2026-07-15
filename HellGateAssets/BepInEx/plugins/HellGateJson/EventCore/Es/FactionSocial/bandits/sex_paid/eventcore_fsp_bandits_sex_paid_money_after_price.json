@@ -1,0 +1,21 @@
+{
+  "speakerLabel": "Bandido",
+  "stepId": "fsp_sex_money_after_price",
+  "stepKind": "choice",
+  "choiceLabels": [
+    "Vale. {SEX_PRICE} monedas me sirven.",
+    "Muy poco. No acepto.",
+    "Quita las manos. Ahora."
+  ],
+  "choiceOutcomeIds": [
+    "pay_confirm",
+    "noop",
+    "threaten"
+  ],
+  "choiceJumpStepIds": [
+    "fsp_sex_paid_grant_h",
+    "fsp_sex_refuse_d_p03",
+    "fsp_sex_paid_rage_win"
+  ],
+  "npcLine": "¿Qué dices, brujita? ¿Sí o no?"
+}

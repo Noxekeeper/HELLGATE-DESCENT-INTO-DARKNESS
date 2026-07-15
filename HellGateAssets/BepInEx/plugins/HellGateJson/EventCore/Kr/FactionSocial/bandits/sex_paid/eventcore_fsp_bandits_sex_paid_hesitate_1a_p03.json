@@ -1,0 +1,8 @@
+{
+  "speakerLabel": "도적",
+  "stepId": "fsp_sex_hesitate_1a_p03",
+  "stepKind": "continue",
+  "continueOutcomeId": "noop",
+  "continueNextStepId": "fsp_sex_hesitate_1b_p04",
+  "npcLine": "예상 못 했어? 난 직설적이야. 결정해——할 거냐, 말 거냐."
+}

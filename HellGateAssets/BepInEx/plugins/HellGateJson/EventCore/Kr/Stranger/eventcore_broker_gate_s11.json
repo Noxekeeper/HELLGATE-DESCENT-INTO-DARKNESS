@@ -1,0 +1,7 @@
+{
+  "stepId": "broker_force_take",
+  "stepKind": "continue",
+  "speakerLabel": "Stranger",
+  "npcLinePoolId": "broker_broker_take_anyway_q",
+  "choiceLabels": []
+}

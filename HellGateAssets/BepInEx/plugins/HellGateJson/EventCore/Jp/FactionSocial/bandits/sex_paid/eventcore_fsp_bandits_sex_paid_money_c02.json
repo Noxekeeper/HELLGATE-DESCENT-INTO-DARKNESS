@@ -1,0 +1,27 @@
+{
+  "speakerLabel": "野盗",
+  "stepId": "fsp_sex_money_c02",
+  "stepKind": "choice",
+  "choiceLabels": [
+    "金額を言って。",
+    "先に何が欲しいか言って。",
+    "早く——余計な目も避けて。",
+    "人目のない場所だけ。",
+    "先にコインを見せて。"
+  ],
+  "choiceOutcomeIds": [
+    "noop",
+    "noop",
+    "noop",
+    "noop",
+    "noop"
+  ],
+  "choiceJumpStepIds": [
+    "fsp_sex_money_price",
+    "fsp_sex_money_2_p03",
+    "fsp_sex_money_3_p03",
+    "fsp_sex_money_4_p03",
+    "fsp_sex_money_5_p03"
+  ],
+  "npcLine": "どうだ？ 条件を言え——さもなきゃ失せろ。"
+}

@@ -1,0 +1,8 @@
+{
+  "speakerLabel": "Бандит",
+  "stepId": "fsp_sex_rough_2_p04",
+  "stepKind": "continue",
+  "continueOutcomeId": "noop",
+  "continueNextStepId": "fsp_sex_paid_grant_h",
+  "npcLine": "Не сдерживаюсь — ты сама просила."
+}

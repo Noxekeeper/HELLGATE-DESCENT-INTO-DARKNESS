@@ -1,0 +1,48 @@
+{
+  "settings": {
+    "minActivationPercent": {
+      "value": 50.0,
+      "comment": "激活所需的Rage最低百分比（默认值：50%）"
+    },
+    "rageCostDuringQTE": {
+      "value": 50.0,
+      "comment": "QTE/H-场景中激活的Rage消耗（默认值：50%）"
+    },
+    "damageMultiplier": {
+      "value": 2.0,
+      "comment": "Rage期间物理和魔法伤害倍率（默认值：2.0x）"
+    },
+    "spGainPercent": {
+      "value": 0.5,
+      "comment": "Rage期间每次攻击点击获得的SP百分比（相对于最大SP，默认值：0.5 = 50%）"
+    },
+    "enemyPushbackForceMultiplier": {
+      "value": 100.0,
+      "comment": "Rage激活时敌人推回力倍率（默认值：100.0，范围：200-300px）"
+    },
+    "grabDrainMin": {
+      "value": 1.0,
+      "comment": "MindBroken 0%时被抓住时的Rage每秒消耗（默认值：1.0%/秒）"
+    },
+    "grabDrainMax": {
+      "value": 10.0,
+      "comment": "MindBroken 100%时被抓住时的Rage每秒消耗（默认值：10.0%/秒，线性插值）"
+    },
+    "slowMoDrainMultiplier": {
+      "value": 2.0,
+      "comment": "SlowMo时Rage消耗倍率（默认值：2.0x，基础消耗 * 2.0）"
+    },
+    "slowMoMBGainMultiplier": {
+      "value": 2.0,
+      "comment": "SlowMo时MindBroken获得倍率（默认值：2.0x，基础获得 * 2.0）"
+    },
+    "uiPositionX": {
+      "value": 360.0,
+      "comment": "Rage UI从左边缘的X位置（默认值：360px）"
+    },
+    "uiPositionY": {
+      "value": -25.0,
+      "comment": "Rage UI从上边缘的Y位置（默认值：-25px，负值 = 向下）"
+    }
+  }
+}

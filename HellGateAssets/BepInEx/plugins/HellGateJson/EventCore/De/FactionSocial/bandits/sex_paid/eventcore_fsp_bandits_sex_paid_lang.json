@@ -1,0 +1,134 @@
+{
+  "entries": [],
+  "linePools": [
+    {
+      "poolId": "fsp_sex_paid_prelude",
+      "lines": [
+        "Ein Mann hält dich an. Er sucht keine Keule — aber er schaut so selbstsicher, dass weitergehen ohne stehenzubleiben schon unangenehm wirkt.",
+        "Vor dir tritt ein Bandit. Kein Geschrei, keine Drohung — nur die freche Selbstsicherheit von jemandem, der gewohnt ist, seinen Willen zu kriegen.",
+        "Von der Seite kommt ein Mann. Er stürzt sich nicht auf dich, steht aber viel zu nah und viel zu ruhig für eine Zufallsbegegnung.",
+        "Sein Blick fängt dich ein. Er ist nicht wütend — er tut, als hätte das Gespräch schon ohne dein Ja begonnen.",
+        "Ein Mann blockiert den Weg. Ruhig, fast geschäftsmäßig, aber jede Bewegung stinkt nach Frechheit.",
+        "Nicht mit Gewalt wirst du gestoppt. Er ist selbstsicher bis zur Arroganz — deshalb wirkt Reden unausweichlich."
+      ]
+    },
+    {
+      "poolId": "fsp_bandits_sex_paid_open",
+      "lines": [
+        "Oh, was für ein Zufall… Du siehst verdammt gut aus, Schätzchen. Lust, ein paar Münzen zu verdienen? Ich zahl großzügig.",
+        "Glück gehabt. Heiße kleine Hexe — die Augen wissen nicht, wohin schauen. Willst verdienen? Ich zahl fair.",
+        "Heilige Scheiße… Du bist heute besonders verlockend. Willst Gold abstauben? Ich weiß, wie man's angenehm macht.",
+        "Oh, Süße… Von dir werden die Hosen eng. Willst schnell ein paar Münzen? Ich bin sanft… oder auch nicht.",
+        "Verdammt, du bist heiß. Keine Lust auf Münzen? Ich würd dich ordentlich belohnen.",
+        "Schau mal, wer da ist. Saftiges Mädel. Willst verdienen? Ich bin großzügig, wenn sich ein Mädel anstrengt.",
+        "Oh Mann… Heute besonders lecker. Münzen für schöne Zeit — interessiert?",
+        "Hey, Schöne. Bei dir wird jeder Bandit hart. Willst was verdienen?",
+        "Verdammt… Süße Hexe. Willst ein bisschen verdienen? Ich pack dich richtig.",
+        "Wow… Kann den Blick nicht abwenden. Willst Münzen? Ich zahl voll — versprochen."
+      ]
+    },
+    {
+      "poolId": "fsp_sex_refuse_react",
+      "lines": [
+        "Ach, schade… Ich war schon warm und du sagst sofort nein.",
+        "Komm schon… Nein, halt — du meinst es ernst.",
+        "Puh. So heiß — und klares Nein.",
+        "Willst nicht? Tut weh, aber verstanden.",
+        "Tch… Dir hätt's gefallen."
+      ]
+    },
+    {
+      "poolId": "fsp_sex_hesitate_react",
+      "lines": [
+        "Hehe, rot geworden? Heißt, du bist nicht dagegen — nur schüchtern.",
+        "Oh, verlegen. Mag ich.",
+        "Hm? Hör auf zu tun. Ich merk, dass dich's interessiert.",
+        "Ja, verwirrt? Passt — ich wärm dich schnell auf.",
+        "Süß, wie du errötest. Komm schon, du wirst's nicht bereuen."
+      ]
+    },
+    {
+      "poolId": "fsp_sex_money_react",
+      "lines": [
+        "So reden wir. Geld im Kopf — den Rest klären wir.",
+        "Kluges Mädel. Sag deine Bedingungen — ich bin nicht geizig.",
+        "Gut, ich hör zu. Wie viel du willst — und was du machst.",
+        "Willst verdienen? Ich zahl gut, wenn du nicht faul bist.",
+        "Wir machen einen Deal. Du weißt, was ich will — sag, was du willst."
+      ]
+    },
+    {
+      "poolId": "fsp_sex_soft_react",
+      "lines": [
+        "Werd ich nicht, werd ich nicht… na ja, fast. Verspreche, fast sanft zu sein.",
+        "Okay, weicher. Du bist Hexe — hältst das aus.",
+        "Ich werd lieb. Obwohl die Hand immer wieder zu deinen Haaren wandert…",
+        "Abgemacht: nicht zu grob — aber auch kein Heiligenschein.",
+        "He, okay. Ich versuch's. Aber wenn du laut stöhnst, vergess ich's vielleicht."
+      ]
+    },
+    {
+      "poolId": "fsp_sex_rough_react",
+      "lines": [
+        "Ooo, so mag ich das! Dann lass ich nicht locker, bis du kommst.",
+        "Endlich ein echtes Mädel! Wird hart.",
+        "Verdammt, du bist Feuer! Lieb's, wenn sie selbst grob wollen.",
+        "Gute Schlampe. Keine Zärtlichkeit — gleich hart ran.",
+        "Jetzt reden wir! Ich fick dich, bis du schreist."
+      ]
+    },
+    {
+      "poolId": "fsp_bandits_sex_paid_after_yes",
+      "lines": [
+        "Hier, deine {SEX_PRICE} Münzen. Nimm sie — und komm mit.",
+        "Wie versprochen. {SEX_PRICE} Münzen gehören dir. Zöger nicht.",
+        "Gold ist deins. Ich brenne schon.",
+        "{SEX_PRICE} Münzen bezahlt. Endlich.",
+        "Geld ist deins. Zeig mir, wofür ich zahle.",
+        "Hier die Münzen. Jetzt spreiz die Beine.",
+        "{SEX_PRICE} Gold — deins. Auf die Knie.",
+        "Erwarte keine Sanftheit — ich mag's hart.",
+        "Gute Schlampe. Gold ist deins — komm her."
+      ]
+    },
+    {
+      "poolId": "fsp_bandits_sex_paid_rage_win",
+      "lines": [
+        "Warte… warte! Ich seh, wie du guckst. Hände weg — ich rühr dich nicht an.",
+        "Scheiße… okay. Wir haben's übertrieben. Steck das Messer weg — ich weich zurück.",
+        "He… hey. Ruhig. Du machst keine Witze — ich spür's. Geh weiter.",
+        "Scheiße… verstanden. Beruhig dich.",
+        "Ruhig… Der Blick in deinen Augen — will nicht testen, wer gewinnt.",
+        "Spaß vorbei. Gehen wir auseinander, leise.",
+        "Okay, Hexe… du hast recht. Schwör's.",
+        "Kein Groll. Nur… guck mich nicht so an.",
+        "Gespräch vorbei. War'n Witz.",
+        "Verstanden. Wir gehen auseinander."
+      ]
+    },
+    {
+      "poolId": "fsp_bandits_sex_paid_rage_fail",
+      "lines": [
+        "Hey, pass auf, wen du bedrohst — dafür fick ich dich!",
+        "Red nicht so viel — dein Hals wird müde.",
+        "Ernst? Das endet schlecht für dich, Hexe.",
+        "Schwache Prahlerei. Ich fick dich, bis du brichst.",
+        "Worte ändern nichts. Ich kann dich mit Gewalt nehmen.",
+        "Hände zittern, Mund frech. Pack die Zunge ein, Schlampe."
+      ]
+    },
+    {
+      "poolId": "fsp_bandits_close_peaceful",
+      "lines": [
+        "Okay, geh. Wir halten dich nicht.",
+        "Bis zur nächsten Nacht.",
+        "Pass auf dich auf.",
+        "Okay, weiter.",
+        "Nächstes Mal weißt du, wo du mich findest.",
+        "Viel Glück. Vergess mich nicht.",
+        "Nächstes Mal bin ich nicht so nett.",
+        "Geh. Denk über meine Worte nach."
+      ]
+    }
+  ]
+}

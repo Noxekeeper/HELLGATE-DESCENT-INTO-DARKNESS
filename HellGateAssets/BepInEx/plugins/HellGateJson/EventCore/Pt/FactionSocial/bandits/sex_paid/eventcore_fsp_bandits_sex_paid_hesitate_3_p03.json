@@ -1,0 +1,8 @@
+{
+  "speakerLabel": "Bandido",
+  "stepId": "fsp_sex_hesitate_3_p03",
+  "stepKind": "continue",
+  "continueOutcomeId": "rep_roll_soft",
+  "continueNextStepId": "fsp_sex_paid_close",
+  "npcLine": "Sempre. E estás quente. Está bem — vai, antes que mude de ideias."
+}

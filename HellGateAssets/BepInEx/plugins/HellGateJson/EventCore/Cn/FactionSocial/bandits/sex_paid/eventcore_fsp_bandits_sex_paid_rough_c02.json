@@ -1,0 +1,24 @@
+{
+  "speakerLabel": "匪徒",
+  "stepId": "fsp_sex_rough_c02",
+  "stepKind": "choice",
+  "choiceLabels": [
+    "别忍着。",
+    "狠狠来。",
+    "让我看看你的本事。",
+    "要狠的。就这儿。"
+  ],
+  "choiceOutcomeIds": [
+    "noop",
+    "noop",
+    "noop",
+    "noop"
+  ],
+  "choiceJumpStepIds": [
+    "fsp_sex_rough_1_p03",
+    "fsp_sex_rough_2_p03",
+    "fsp_sex_rough_3_p03",
+    "fsp_sex_rough_4_p03"
+  ],
+  "npcLine": "这才像话。说要什么——老子照办。"
+}

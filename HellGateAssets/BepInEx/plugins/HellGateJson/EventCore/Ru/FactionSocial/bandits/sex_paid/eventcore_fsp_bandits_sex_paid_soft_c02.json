@@ -1,0 +1,24 @@
+{
+  "speakerLabel": "Бандит",
+  "stepId": "fsp_sex_soft_c02",
+  "stepKind": "choice",
+  "choiceLabels": [
+    "Обещай — не больно.",
+    "Ладно. {SEX_PRICE} и поехали.",
+    "Покажи, что умеешь быть нежным.",
+    "Хватит слов — начинай."
+  ],
+  "choiceOutcomeIds": [
+    "noop",
+    "pay_confirm",
+    "noop",
+    "pay_confirm"
+  ],
+  "choiceJumpStepIds": [
+    "fsp_sex_soft_1_p03",
+    "fsp_sex_paid_grant_h",
+    "fsp_sex_soft_3_p03",
+    "fsp_sex_paid_grant_h"
+  ],
+  "npcLine": "Нежно? Ладно… попробую. Но ты же не ангелочек."
+}

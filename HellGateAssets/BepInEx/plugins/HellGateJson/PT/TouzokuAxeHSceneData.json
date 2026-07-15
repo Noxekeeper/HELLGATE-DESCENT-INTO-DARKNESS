@@ -1,0 +1,290 @@
+{
+  "settings": {
+    "commentCooldownSeconds": 2.0,
+    "maxSimultaneousComments": 1,
+    "commentDisplayDuration": 4.0,
+    "fontSize": 30.0,
+    "verticalOffset": 15.0,
+    "streamingSpeed": 0.03,
+    "goblinColor": {
+      "r": 1.0,
+      "g": 1.0,
+      "b": 1.0,
+      "a": 1.0
+    },
+    "goblinOutlineColor": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 1.0
+    }
+  },
+  "animations": {
+    "START": {
+      "description": "De pé atrás, captura e amarra as mãos de GG atrás da cabeça, mostrando seus peitos",
+      "events": {
+        "START": [
+          "Te peguei, bruxa! Que peitos!",
+          "Finalmente te peguei, puta!",
+          "Agora você é minha, vadia!",
+          "Olha, que peitos ela tem!",
+          "Seus peitos são meus agora!",
+          "Que captura linda!",
+          "Você está em minhas mãos, bruxa!"
+        ],
+        "SE1": [
+          "Lute o quanto quiser, ainda não vai se libertar!",
+          "Sua luta só me excita!",
+          "Continue resistindo, eu gosto!",
+          "Você não vai se libertar, puta!"
+        ]
+      }
+    },
+    "START2": {
+      "description": "Tira sua espada de aço da bainha e enfia com o cabo para cima na frente de GG",
+      "events": {
+        "START2": [
+          "Primeiro, sirva minha lâmina, bruxa.",
+          "Lambe o cabo, puta, ou vai doer mais.",
+          "Sua saliva é o melhor lubrificante para aço.",
+          "Comece com a espada, depois vá para o pênis.",
+          "Deixe limpo com sua boca suja.",
+          "De joelhos e lambe o aço, carniça.",
+          "Sua língua deve conhecer o gosto da minha arma.",
+          "Prepare minha espada para seus atos sujos."
+        ]
+      }
+    },
+    "START3": {
+      "description": "Sem soltar, levanta GG por trás pelos braços e empala sua boceta no cabo da espada, profundamente, pernas tocam o chão",
+      "events": {
+        "START3": [
+          "Assim, vadia! Cavalgue mais fundo!",
+          "Sente como o aço rasga sua boceta?",
+          "Afunde no cabo, buraco ganancioso!",
+          "Siiim, agora você está na minha espada!",
+          "Cavalque até o fim, puta, não seja tímida.",
+          "Sua boceta foi feita para aço, bruxa.",
+          "Mais fundo, vadia, até seus dedos tocarem!",
+          "Aceite minha lâmina com toda sua sujeira."
+        ]
+      }
+    },
+    "START4": {
+      "description": "Move GG levemente no cabo da espada imitando que está em um pênis, GG está chocada",
+      "events": {
+        "START4": [
+          "Goze na minha espada, bruxa, deixe especial.",
+          "Encharque o aço com sua sujeira, carniça.",
+          "Minha espada vai lembrar o gosto da sua boceta.",
+          "Deixe molhado, puta, mostre sua excitação.",
+          "Goze, vadia, quero ver.",
+          "Sua porra no aço é uma visão linda.",
+          "Encharque o cabo, puta acabada.",
+          "Mostre como você goza de uma arma."
+        ]
+      }
+    },
+    "START5": {
+      "description": "GG goza na espada, então TouzokuAxe senta em posição de lótus e empala GG em seu pênis (reversecowgirl)",
+      "events": {
+        "START5": [
+          "Olha, a bruxa gozou na minha espada!",
+          "Agora minha lâmina é especial, certo, bruxa?",
+          "Você já gozou, e eu nem comecei.",
+          "Que puta patética, gozou de uma espada.",
+          "Agora vou te foder eu mesmo, de verdade.",
+          "Prepare-se para um pênis de verdade, vadia.",
+          "Seus primeiros orgasmos são os mais engraçados.",
+          "A espada foi um aquecimento, agora o inferno começa."
+        ]
+      }
+    },
+    "ERO": {
+      "description": "Empala bem e levanta quase até o fim, empala de novo",
+      "events": {
+        "ERO": [
+          "Agora vamos ver que tipo de puta você realmente é.",
+          "Sinta um pênis de verdade, não aço.",
+          "Cavalque, carniça, até o fim.",
+          "Sua boceta vai ser esticada sob mim.",
+          "Vou te rasgar com meu pênis, vadia.",
+          "Agora você vai entender o que é violência.",
+          "Mais fundo, puta, afunde no pênis.",
+          "Seu corpo foi feito para meu prazer."
+        ],
+        "SE1": [
+          "Sua boceta está tão apertada que quero rasgá-la!",
+          "Vou te foder até o fim, puta!",
+          "Você é minha propriedade, e vou fazer o que quiser com você!"
+        ]
+      }
+    },
+    "ERO2": {
+      "description": "Começou a foder GG ritmicamente, põe a língua para fora",
+      "events": {
+        "ERO2": [
+          "Siiim, assim!!! Melhor boceta da minha vida.",
+          "Sua boceta aperta meu pênis tão docemente.",
+          "Caramba, como você é boa na agonia.",
+          "Tão apertada e molhada, só paraíso.",
+          "Sua boceta foi feita para meu pênis.",
+          "Estou fodendo a melhor puta deste reino.",
+          "Sinto como você está pulsando, vadia.",
+          "Que buraco terno para um pênis tão duro."
+        ],
+        "SE1": [
+          "Sua luta só me excita mais!",
+          "Continue lutando até eu te quebrar completamente!",
+          "Lute o quanto quiser, não pode mais escapar!"
+        ]
+      }
+    },
+    "2ERO": {
+      "description": "Pega um dos peitos de GG com a mão",
+      "events": {
+        "2ERO": [
+          "Agora você vai gozar no meu pênis, posso sentir.",
+          "Sua boceta está pulsando, prepare-se para orgasmo.",
+          "Vou te fazer gozar de novo e de novo.",
+          "Seu corpo não vai conseguir me resistir.",
+          "Goze, puta, eu ordeno.",
+          "Seu orgasmo pertence só a mim.",
+          "Sinto como você está perto, carniça.",
+          "Me deixe molhado com seu suco, bruxa."
+        ]
+      }
+    },
+    "2ERO2": {
+      "description": "Continua apertando o peito, acaricia o mamilo",
+      "events": {
+        "2ERO2": [
+          "Goze vadia! Goze no meu pênis agora mesmo!",
+          "Grite mais alto, quero ouvir seu orgasmo.",
+          "Vamos, vamos, goze, puta suja!",
+          "Esprema tudo de si, carniça!",
+          "Sua boceta está tremendo, goze, vadia!",
+          "Siiim, assim, goze no meu pênis!",
+          "Sinto suas contrações, lindo!",
+          "Goze antes que eu te rasgue."
+        ]
+      }
+    },
+    "2ERO3": {
+      "description": "Remove a mão, começa a empalar GG acentuadamente, GG tem rosto ahegao",
+      "events": {
+        "2ERO3": [
+          "Vou encher sua fenda com porra, vadia!",
+          "Minha porra vai encher seu buraco sujo.",
+          "Prepare-se para pegar tudo até a última gota, puta.",
+          "Vou gozar bem fundo em você, bruxa.",
+          "Sua boceta vai ficar cheia da minha semente.",
+          "Aceite meu presente, carniça acabada.",
+          "Vou te encher até a borda.",
+          "Seu útero derrete da minha porra."
+        ]
+      }
+    },
+    "2ERO4": {
+      "description": "Fodendo GG pressionando, saltando com os quadris e pressionando para trás com as mãos nos quadris, GG tem rosto ahegao, ritmo mais rápido",
+      "events": {
+        "2ERO4": [
+          "Aaaa, estou gozando! Pegue, puta!",
+          "Vou te encher com minha semente agora!",
+          "Mantenha toda minha porra dentro, vadia!",
+          "Siiim, pegue a porra, carniça!",
+          "Caramba, estou gozando! GOZEM JUNTOS!",
+          "Meu pênis explode dentro de você!",
+          "Pegue toda minha porra quente!",
+          "LEMBRE DESTE SENTIMENTO, PUTA!"
+        ]
+      }
+    },
+    "FIN": {
+      "description": "Goza dentro de GG, antes de gozar puxa levemente o pênis e enfia até o fim",
+      "events": {
+        "FIN": [
+          "Aaaa, caramba, estou gozando, pegue tudo!",
+          "Pegue toda minha porra, vadia, você mereceu!",
+          "Sua boceta vai ficar cheia da minha porra!"
+        ],
+        "SE": {
+          "se_count_1": [
+            "Estou gozando, gozando! Pegue tudo, vadia!",
+            "Sua boceta está enchendo até a borda, sente?",
+            "Estou enchendo seu útero, sente enchendo?",
+            "Sente eu te fertilizando, puta?",
+            "Seu útero é meu agora, e eu o enchi com porra!"
+          ],
+          "se_count_2": [
+            "Como é bom gozar em você, vadia!",
+            "Caramba, mame minha porra, puta!",
+            "Sua boceta está transbordando, sente?",
+            "Ainda mais porra para você, vadia!"
+          ]
+        }
+      }
+    },
+    "FIN2": {
+      "description": "GG parece ter gozado junto com ele, pênis dentro, GG perdeu rosto ahegao",
+      "events": {
+        "FIN2": [
+          "Chupe tudo até a última gota, carniça.",
+          "Não perca uma gota, puta suja.",
+          "Meu pênis deve estar limpo depois de você.",
+          "Lambe tudo que te dei.",
+          "Chupe meu pênis seco, vadia.",
+          "Sua boca é meu banheiro, limpe.",
+          "Cada gota da minha porra é sua comida.",
+          "Chupe os restos, indigna."
+        ]
+      }
+    },
+    "FIN3": {
+      "description": "Levanta GG e pênis escorrega para fora",
+      "events": {
+        "FIN3": [
+          "Esta boceta é a melhor que já tive.",
+          "Agora você é nossa propriedade, para sempre.",
+          "Você vai se tornar nosso brinquedo pessoal para prazer.",
+          "Seu corpo pertence a todos nós.",
+          "Você não é mais uma bruxa, é nossa puta.",
+          "Sua vida é nos servir.",
+          "Sua boceta sempre estará aberta para nós.",
+          "Você vai permanecer nossa escrava sexual para sempre."
+        ]
+      }
+    },
+    "JIGO": {
+      "description": "Pênis está mole, porra pinga de GG, rosto ahegao, corpo se contorce em êxtase",
+      "events": {
+        "JIGO": [
+          "Ótimo aquecimento, agora passem ela.",
+          "Esta puta está pronta para toda a gangue.",
+          "Segurem ela, caras, ela ainda não se divertiu o suficiente.",
+          "A boceta dela espera os próximos pênis.",
+          "Passem a puta em círculo, não quebrem ela.",
+          "Ela está pronta para gangbang, eu preparei ela.",
+          "Próximo! Este buraco precisa ser esticado.",
+          "Aproveitem, caras, ela está à nossa disposição."
+        ]
+      }
+    },
+    "JIGO2": {
+      "description": "Pênis fica duro de novo e ciclo fechado começa de ERO (MAS DEVEMOS TER ENTREGA DE GG PARA CICLO DE GANGBANG AQUI)",
+      "events": {
+        "JIGO2": [
+          "Vamos para a próxima rodada, puta.",
+          "Descanso acabou, de volta no pênis.",
+          "Sua boceta quer violência de novo.",
+          "Rodada dois, prepare-se para novo inferno.",
+          "De volta em ação, carniça, ainda não terminamos.",
+          "Seu corpo será nosso de novo.",
+          "Continuem fodendo esta puta até de manhã.",
+          "Próxima rodada, gozem de novo."
+        ]
+      }
+    }
+  }
+}
+

@@ -1,0 +1,8 @@
+{
+  "stepId": "broker_threat_retort",
+  "stepKind": "continue",
+  "speakerLabel": "Stranger",
+  "npcLinePoolId": "broker_after_threat_d",
+  "npcLine": "",
+  "choiceLabels": []
+}

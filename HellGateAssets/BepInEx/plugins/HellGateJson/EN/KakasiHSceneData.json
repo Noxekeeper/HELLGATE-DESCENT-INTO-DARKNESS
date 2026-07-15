@@ -1,0 +1,462 @@
+{
+  "settings": {
+    "commentCooldownSeconds": 2.0,
+    "maxSimultaneousComments": 1,
+    "commentDisplayDuration": 4.0,
+    "fontSize": 22.0,
+    "verticalOffset": 15.0,
+    "streamingSpeed": 0.03,
+    "goblinColor": {
+      "r": 1.0,
+      "g": 1.0,
+      "b": 1.0,
+      "a": 1.0
+    },
+    "goblinOutlineColor": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 1.0
+    }
+  },
+  "animations": {
+    "start": {
+      "description": "Grabs GG and throws her body on the cross, tying hands to the cross, arms crucified on the cross",
+      "events": {
+        "start": [
+          "So-so, what do we have here? What a meeting, witch!",
+          "Now I'll turn you into a slave for men, make you a whore!",
+          "I'll crucify you like the last bitch, and do what I want!",
+          "Your power is over, now you're my property!",
+          "I'll make you into an obedient hole for fucking!",
+          "Your body belongs to me now, bitch!",
+          "Now I'll turn you into a thing for male pleasure!",
+          "How beautiful you are when crucified, whore!"
+        ],
+        "SE1": [
+          "Struggle all you want, you still won't break free!",
+          "Your struggle only arouses me!",
+          "Keep resisting, I like it!"
+        ]
+      }
+    },
+    "start2": {
+      "description": "With one hand he covers GG's mouth, and on the second straw hand a rubber glove appears, soaked with aphrodisiac",
+      "events": {
+        "start2": [
+          "This impregnation will penetrate every one of your crevices, bitch!",
+          "Soon this liquid will be inside your pussy!",
+          "I'll rub your pussy with this potion, and you'll beg for more!",
+          "You'll feel how your body burns with desire, whore!",
+          "Every cell of your body will scream to be fucked!",
+          "Now I'll turn your pussy into a burning hearth of lust!",
+          "This lubricant will make you forget about your will, damn!",
+          "Your pussy will be soaked with this potion to the very bottom!"
+        ],
+        "SE1": [
+          "Struggle, struggle, I like it!",
+          "Your struggle is useless!",
+          "Keep going, bitch, I like it!"
+        ]
+      }
+    },
+    "ero1": {
+      "description": "Starts rubbing with soaked glove, GG's pussy, moving panties aside, slightly enters inside",
+      "events": {
+        "ero1": [
+          "Feel how I'm preparing your hole, whore?",
+          "Now I'll make your pussy wet and ready!",
+          "I'll stretch you until you start dripping!",
+          "Your pussy is already wet? Wait, this is just the beginning!",
+          "I'll shove my fingers so deep you'll howl!",
+          "Your body is already responding, even if you don't want it!",
+          "I'll work you so much you'll beg for cock!",
+          "Every movement will drive you insane, bitch!"
+        ],
+        "SE1": [
+          "Your struggle only arouses me more!",
+          "Keep struggling until I break you completely!",
+          "Struggle all you want, you can't escape anymore!"
+        ]
+      }
+    },
+    "ero2": {
+      "description": "Enters deeper without stopping, already fucking with hand, his fingers push deeper applying aphrodisiac to her walls",
+      "events": {
+        "ero2": [
+          "My fingers are inside already, whore, and they won't stop!",
+          "I'm fucking you with my hand, rubbing the walls of your pussy!",
+          "Deeper, deeper... I want to reach the very bottom!",
+          "Feel how I own you from inside, bitch?",
+          "Your pussy is mine now, I do what I want with it!",
+          "Every hand thrust injects desire into you!",
+          "I'm tearing you from inside, and you like it!",
+          "Your pussy swallows my fingers, greedy bitch!"
+        ],
+        "SE1": [
+          "Your moans are so arousing, keep going!",
+          "Scream, scream louder, bitch, I like it!",
+          "Soon you won't be able to scream, whore!"
+        ]
+      }
+    },
+    "ero3": {
+      "description": "Continues rhythmically fucking and rubbing aphrodisiac into GG",
+      "events": {
+        "ero3": [
+          "No place will remain unprocessed!",
+          "Every hole will be soaked!",
+          "Your ass is next, bitch!",
+          "Now I'll rub your mouth too!",
+          "Everything will be ready for fucking!",
+          "You'll be soaked to the bones!",
+          "Every hole will burn!",
+          "Nothing will remain untouched!"
+        ],
+        "SE1": [
+          "Your struggle pleases me, bitch!",
+          "Just don't die, whore, before I'm done!",
+          "Resist all you want, I won't stop!"
+        ]
+      }
+    },
+    "finish1": {
+      "description": "Several times deeply pushes several fingers into GG, by GG it's visible that very deep, GG realizes in horror that she's cumming",
+      "events": {
+        "finish1": [
+          "Ahahaha! Made you cum, whore!",
+          "Like this, cum! Cum from my hand!",
+          "What a bitch you are, cumming against your will!",
+          "Forced orgasm! Your body betrayed you!",
+          "Look how you cum, crucified on the cross!",
+          "Your pussy clenched from pleasure, and you're in horror!",
+          "I made you experience what you didn't want!",
+          "Now you're mine, cumming bitch!"
+        ],
+        "SE1": [
+          "Cumming slut, you deserve it!",
+          "Ahh... Fuck, I can't wait to cum inside you!",
+          "I'll fill your womb soon, you'll remember this!"
+        ]
+      }
+    },
+    "finish2": {
+      "description": "Removes hands from GG, dropping the glove, laughs and says something towards GG",
+      "events": {
+        "finish2": [
+          "Rest a bit, witch. Soon there will be real fucking!",
+          "You thought that's all? That was just a warm-up!",
+          "Your body is already ready for my cock!",
+          "Look at yourself, crucified and cumming bitch!",
+          "Now you're ready to take my black cock!",
+          "Breathe hard while you have strength. You'll need it!",
+          "You're no longer a witch, you're just a hole for sex!",
+          "I broke you. Now I'll make you my toy!"
+        ],
+        "SE1": [
+          "Your pussy is like sucking my cock, like a whore!",
+          "Aaa, how strongly I'm cumming, take it all!",
+          "Take it, bitch, you earned it!"
+        ]
+      }
+    },
+    "finish_end": {
+      "description": "GG opens eyes and looks at him, clearly understanding this is far from the end",
+      "events": {
+        "finish_end": [
+          "Ahahah! You understand everything correctly, witch!",
+          "And now I'll fuck you with my black cock!",
+          "You thought that was humiliating? Wait!",
+          "Now I'll enter you like you've never felt!",
+          "Prepare for real domination, bitch!",
+          "Your eyes tell the truth: you're afraid and want it!",
+          "My cock will tear you apart!",
+          "It will hurt, be dirty and you'll beg for more!"
+        ],
+        "SE1": [
+          "Suck out my cum, whore, that's your job!",
+          "Here, take it all, bitch, you earned it!",
+          "Yes, yes, yes, I'm cumming, take it all!"
+        ]
+      }
+    },
+    "finish_end2": {
+      "description": "Grabs by face and throws to the ground",
+      "events": {
+        "finish_end2": [
+          "Like this, to the ground, whore!",
+          "Now you'll lie as you should!",
+          "From cross to ground - that's your fate, damn!",
+          "I threw you like trash, bitch!",
+          "Now you're down, where you should be!",
+          "From cross to dirt - perfect fall, witch!",
+          "You fell like a falling star, whore!",
+          "Now you're on the ground, ready for the next stage!"
+        ],
+        "SE1": [
+          "Fall, fall, bitch!",
+          "Your struggle is over!",
+          "Now you're completely mine!"
+        ]
+      }
+    },
+    "START": {
+      "description": "Takes out wooden stocks for hands and feet, hands locked in shackles between locked legs, GG lies on chest and face",
+      "events": {
+        "START": [
+          "Lie still, whore. Now you're my sex toy!",
+          "Your position is perfect for me to break you!",
+          "Look how helpless you are, immobilized bitch!",
+          "Now I'll make you a good girl for fucking!",
+          "Your pussy is raised and awaits my black cock!",
+          "You'll serve me like an obedient thing!",
+          "These stocks are your new reality, damn!",
+          "Prepare, I'll enter as deep as possible!"
+        ],
+        "SE1": [
+          "Struggle all you want, you still won't break free!",
+          "Your struggle only arouses me!",
+          "Keep resisting, I like it!"
+        ],
+        "SE2": [
+          "You won't break free, whore!",
+          "Your struggle is useless!",
+          "Keep going, bitch, I like it!"
+        ]
+      }
+    },
+    "ERO2": {
+      "description": "Accentuated deep fucking",
+      "events": {
+        "ERO2": [
+          "Feel how I'm stretching your hole, bitch?",
+          "I'm fucking you as you deserve!",
+          "Your pussy was made for my black cock!",
+          "Every thrust makes you mine!",
+          "Ride me deeper, damn!",
+          "Your shackles clatter to the rhythm of my slaps!",
+          "Your body trembles from pleasure and pain!",
+          "I own you completely, whore!"
+        ],
+        "ERO3": [
+          "Deeper, even deeper, whore!",
+          "I want you to feel every centimeter!",
+          "Your pussy swallows me deeper and deeper, damn!",
+          "I'm impaling you to the very bottom, bitch!",
+          "Feel how I'm stretching you from inside!",
+          "Your walls wrap around me so perfectly!",
+          "I'm ramming you to the limit, greedy bitch!",
+          "Deeper, deeper, until you reach the end!"
+        ],
+        "SE1": [
+          "Your struggle only arouses me more!",
+          "Keep struggling until I break you completely!",
+          "Struggle all you want, you can't escape anymore!"
+        ]
+      }
+    },
+    "ERO3": {
+      "description": "Fucking deeper so GG feels it",
+      "events": {
+        "ERO3": [
+          "I want you to feel every centimeter of my cock!",
+          "Feel how my black cock fills you!",
+          "I'm impaling you on myself to the limit, bitch!",
+          "Your pussy swallows me, greedy bitch!",
+          "Deeper, even deeper, whore!",
+          "Your walls wrap around me so perfectly!",
+          "Your body was made for such fucking!",
+          "I'm ramming you to the very bottom, damn!"
+        ],
+        "SE1": [
+          "Your moans are so arousing, keep going!",
+          "Scream, scream louder, bitch, I like it!",
+          "Soon you won't be able to scream, whore!"
+        ]
+      }
+    },
+    "ERO4": {
+      "description": "Fucking deeper and harder",
+      "events": {
+        "ERO4": [
+          "I'll fuck you harder and rougher, bitch!",
+          "Your ass is red from my slaps!",
+          "Soon you'll beg me for mercy!",
+          "Every strike is my dominion over you!",
+          "Your pussy is already mine, torn and wet!",
+          "I'll turn you into ruins, damn!",
+          "Suffer and enjoy, whore!",
+          "I'll break you with my cock!"
+        ],
+        "SE1": [
+          "Your struggle pleases me, bitch!",
+          "Just don't die, whore, before I'm done!",
+          "Resist all you want, I won't stop!"
+        ]
+      }
+    },
+    "ERO5": {
+      "description": "Fucking deeply and juicily, getting ready to cum inside",
+      "events": {
+        "ERO5": [
+          "I'll fill you to the brim now, bitch!",
+          "You'll love my cum, whore!",
+          "Prepare to take all my juice!",
+          "I'll cum deep inside you, damn!",
+          "Your pussy will be overflowing with me!",
+          "Every drop of my cum will be yours!",
+          "You'll become my personal rubber doll!",
+          "Now I'll make you mine forever, bitch!"
+        ],
+        "FIN": [
+          "A-a-ah! I'm cumming! Take it all, bitch!",
+          "Yesss! Filling you, damn!",
+          "Here it is! My cum inside you!",
+          "I'm filling you to the brim, whore!",
+          "Feel how I explode in you!",
+          "All mine! All my cum for you!",
+          "Yes! Yes! Yes! I'm cumming, bitch!",
+          "Your pussy is now my property!"
+        ],
+        "SE1": [
+          "Your pussy is like sucking my cock, like a whore!",
+          "Aaa, how strongly I'm cumming, take it all!",
+          "Take it, bitch, you earned it!"
+        ]
+      }
+    },
+    "FIN": {
+      "description": "Cums with huge amount of cum",
+      "events": {
+        "FIN": [
+          "A-a-ah! I'm cumming! Take it all, bitch!",
+          "Yesss! Filling you, damn!",
+          "Here it is! My cum inside you!",
+          "I'm filling you to the brim, whore!",
+          "Feel how I explode in you!",
+          "All mine! All my cum for you!",
+          "Yes! Yes! Yes! I'm cumming, bitch!",
+          "Your pussy is now my property!"
+        ],
+        "JIGO1": [
+          "Look how my seed flows from you, bitch!",
+          "You're shaking from pleasure, and I'm watching!",
+          "You're now soaked with me, witch!",
+          "My cum flows from you, and you can't do anything!",
+          "You look like a used whore!",
+          "Perfect look for such a bitch!",
+          "Your body still trembles from my fuck!",
+          "Now you're truly mine, bitch!"
+        ],
+        "SE": {
+          "se_count_1": [
+            "I'm cumming, cumming! Take it all, bitch!",
+            "Your pussy is filling to the brim, feel it?",
+            "I'm filling your womb, feel it filling?",
+            "Feel me fertilizing you, whore?",
+            "Your womb is mine now, and I filled it with cum!"
+          ],
+          "se_count_2": [
+            "How nice it is to cum in you, bitch!",
+            "Damn, milk my cum, whore!",
+            "Your pussy is overflowing, feel it?",
+            "Even more cum for you, bitch!"
+          ]
+        },
+        "SE1": [
+          "Take my cum, bitch, you earned it!",
+          "Aaa.. Damn, I'm cumming, take it all!",
+          "I'll fill your womb, and you'll remember this always!"
+        ]
+      }
+    },
+    "JIGO1": {
+      "description": "Pulls out cock and stands, looking at GG, how his cum flows from her",
+      "events": {
+        "JIGO1": [
+          "Look how my seed flows from you, bitch!",
+          "You're shaking from pleasure, and I'm watching!",
+          "You're now soaked with me, witch!",
+          "My cum flows from you, and you can't do anything!",
+          "You look like a used whore!",
+          "Perfect look for such a bitch!",
+          "Your body still trembles from my fuck!",
+          "Now you're truly mine, bitch!"
+        ],
+        "SE1": [
+          "Suck out my cum, whore, that's your job!",
+          "Here, take it all, bitch, you earned it!",
+          "Yes, yes, yes, I'm cumming, take it all!"
+        ]
+      }
+    },
+    "JIGO2": {
+      "description": "GG closes eyes, breathes trying to come to her senses, he looks at GG",
+      "events": {
+        "JIGO2": [
+          "Now you'll go in a circle, now you're a real whore!",
+          "You'll always serve my cock, bitch!",
+          "I'll give you for use to others, damn!",
+          "Great sex toy, aren't you?",
+          "Your purpose is to be a hole for everyone!",
+          "You're no longer a witch, you're just a thing!",
+          "Now you'll serve everyone I command!",
+          "Your new life is constant fucking, whore!"
+        ],
+        "START2": [
+          "Without thinking long, I'll take what's mine again, bitch!",
+          "You thought that's all? We just started!",
+          "Rest is over, whore. My cock thirsts for you again!",
+          "Your pussy isn't satiated yet, I can feel it!",
+          "I'll enter you again, and this time even rougher!",
+          "The circle closes. You'll be mine again, damn!",
+          "Your body is ready for use again!",
+          "I'll fuck you until complete exhaustion, bitch!"
+        ],
+        "SE": {
+          "se_count_1": [
+            "Look at yourself, you look like a whore, and that's right!",
+            "You're covered in my cum, and you'll remember this always!",
+            "Your pussy is still dripping, how beautiful!",
+            "You know how to give pleasure, bitch, keep going!"
+          ],
+          "se_count_2": [
+            "Another portion of cum for you, bitch!",
+            "Your pussy is overflowing, feel it?",
+            "Your womb is full of my cum, and you'll remember this always!"
+          ]
+        },
+        "SE1": [
+          "Look what you're doing to me, oooouu eeee!",
+          "I'll breed you, bitch, and you'll remember this always!",
+          "You're like producing my cum, like a whore!"
+        ]
+      }
+    },
+    "START2": {
+      "description": "Without thinking long takes out his cock and inserts again repeating cycles",
+      "events": {
+        "START2": [
+          "Without thinking long, I'll take what's mine again, bitch!",
+          "You thought that's all? We just started!",
+          "Rest is over, whore. My cock thirsts for you again!",
+          "Your pussy isn't satiated yet, I can feel it!",
+          "I'll enter you again, and this time even rougher!",
+          "The circle closes. You'll be mine again, damn!",
+          "Your body is ready for use again!",
+          "I'll fuck you until complete exhaustion, bitch!"
+        ],
+        "SE1": [
+          "Struggle, struggle, I like it!",
+          "Your struggle is useless!",
+          "Keep going, bitch, I like it!"
+        ],
+        "SE2": [
+          "You won't break free, whore!",
+          "Your struggle is useless!",
+          "Keep going, bitch, I like it!"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "speakerLabel": "도적",
+  "stepId": "fsp_sex_hesitate_1b_p04",
+  "stepKind": "continue",
+  "continueOutcomeId": "noop",
+  "continueNextStepId": "fsp_sex_money_price",
+  "npcLine": "코인 원하면——값을 말해. 충분한지 내가 말해줄게."
+}

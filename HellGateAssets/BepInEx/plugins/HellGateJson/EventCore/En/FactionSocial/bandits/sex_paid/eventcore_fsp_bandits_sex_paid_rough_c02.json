@@ -1,0 +1,24 @@
+{
+  "speakerLabel": "Bandit",
+  "stepId": "fsp_sex_rough_c02",
+  "stepKind": "choice",
+  "choiceLabels": [
+    "Don't hold back.",
+    "Take me hard.",
+    "Show me what you've got.",
+    "Hard. Right here."
+  ],
+  "choiceOutcomeIds": [
+    "noop",
+    "noop",
+    "noop",
+    "noop"
+  ],
+  "choiceJumpStepIds": [
+    "fsp_sex_rough_1_p03",
+    "fsp_sex_rough_2_p03",
+    "fsp_sex_rough_3_p03",
+    "fsp_sex_rough_4_p03"
+  ],
+  "npcLine": "Now that's talk. Say what you want — I'll do it."
+}

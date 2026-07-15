@@ -1,0 +1,8 @@
+{
+  "speakerLabel": "匪徒",
+  "stepId": "fsp_sex_paid_rage_win",
+  "stepKind": "continue",
+  "continueOutcomeId": "threaten_rage_success",
+  "continueNextStepId": "fsp_sex_paid_close",
+  "npcLinePoolId": "fsp_bandits_sex_paid_rage_win"
+}

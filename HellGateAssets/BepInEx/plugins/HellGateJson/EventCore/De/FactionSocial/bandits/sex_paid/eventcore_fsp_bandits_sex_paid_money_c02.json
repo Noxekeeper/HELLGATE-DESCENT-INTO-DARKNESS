@@ -1,0 +1,27 @@
+{
+  "speakerLabel": "Bandit",
+  "stepId": "fsp_sex_money_c02",
+  "stepKind": "choice",
+  "choiceLabels": [
+    "Sag den Betrag.",
+    "Sag erst, was du willst.",
+    "Schnell — und keine neugierigen Blicke.",
+    "Nur irgendwo abseits.",
+    "Zeig mir erst die Münzen."
+  ],
+  "choiceOutcomeIds": [
+    "noop",
+    "noop",
+    "noop",
+    "noop",
+    "noop"
+  ],
+  "choiceJumpStepIds": [
+    "fsp_sex_money_price",
+    "fsp_sex_money_2_p03",
+    "fsp_sex_money_3_p03",
+    "fsp_sex_money_4_p03",
+    "fsp_sex_money_5_p03"
+  ],
+  "npcLine": "Na? Sag deine Bedingungen — oder verpiss dich."
+}

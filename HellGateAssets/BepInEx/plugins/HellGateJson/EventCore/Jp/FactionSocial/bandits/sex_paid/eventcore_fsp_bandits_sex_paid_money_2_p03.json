@@ -1,0 +1,8 @@
+{
+  "speakerLabel": "野盗",
+  "stepId": "fsp_sex_money_2_p03",
+  "stepKind": "continue",
+  "continueOutcomeId": "noop",
+  "continueNextStepId": "fsp_sex_money_2_p04",
+  "npcLine": "お前が欲しい。{SEX_PRICE}コイン——中に出させてくれりゃな。"
+}

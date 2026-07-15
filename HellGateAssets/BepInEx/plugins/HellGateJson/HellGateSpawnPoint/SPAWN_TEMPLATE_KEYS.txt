@@ -1,0 +1,106 @@
+# HellGate spawn template keys (static reference, NOT overwritten by the mod)
+# Formats:
+#   TRAP,Key,X,Y,Count[,flip]
+#   OBJECT,Key,X,Y,Count[,flip]
+#   HOSTAGE,Key,X,Y,Count[,flip]
+#   RANDOM_HOSTAGE,chance,Key,X,Y,Count[,flip]
+# Optional flip (6th field): flip | mirror | -1 | left  (face left; horizontal mirror)
+#
+# HOSTAGE: key must appear in [CACHED] inside AVAILABLE_SPAWN_TEMPLATES_RUNTIME.txt
+#          (visit the vanilla map that has that prisoner once per play session)
+# TRAP/OBJECT: same — cache from visited scenes only; no additive scene preload
+
+[HOSTAGE]
+MobSlumSlave
+MobCrawlingSlave
+MobSpiderSlave
+MobRosewarm
+MobMutude
+witchslaveViolin
+witchslaveslime
+
+# Same prefab, different cache keys — try both if one fails on a map
+# (mod also maps some pairs in SpawnTemplateCatalog.RegisterTrapKeyAliases)
+
+[TRAP]
+# spider
+trapspider
+trapthreadofspider
+# tree
+wana_start
+woodwana
+# buttons / guns
+trap_button
+trap_button_ironmaiden
+trapshot
+trapgun2
+spearthrowtrap
+spear
+# magic
+magictrap
+magictrapcreateobject
+# controllers
+picturetrap
+picture_trap
+ivytrap
+ivy_trap
+ivy_monster
+cocoontrap
+cocoontrapnot
+cocooncreat
+# slime
+blackoozetrap
+blackoozetraptypeb
+blackoozetypeb
+# spikes — rot90/rot180/rot270 on TRAP lines (not lethal_magictrap)
+# static Trap_hari
+trapnormal
+trap_hari
+# LightImpactNormal
+impactdamage
+lightimpactnormal
+impactdamagebox
+# animated wave (cache from scene with WaveSpike)
+wavespike
+wavespikeguard
+# spear launcher (Valley)
+spearthrowtrap
+spear
+# iron maiden
+ironmaidendamage
+ironmaiden_damage
+trap_ironmaiden
+tent_ironmaiden
+trap_tentacleironmaiden
+# sex machine / H-trap
+trapmachine
+trap_machine
+trap_mokubaenemy
+trap_rockinghorse
+pictureeronon
+pictureero_non
+rosewarm
+wallhip
+# barrels / breakables
+breakobjct
+taru_brk
+taru_exp
+taruro_exp
+taruRO_exp
+inpactbreakkobj
+tubo2
+box_brk
+movebox_brk
+
+[TRAP_DO_NOT_USE]
+trap
+# alias trap -> trapnormal works; bare key "trap" alone often fails
+trapdoorup
+trapdamage
+trap_button_versatility
+magictrap_ironmaiden
+cocoonballtrap
+cocoonball
+cocoonspear
+angelstatue_trap
+gobtrap

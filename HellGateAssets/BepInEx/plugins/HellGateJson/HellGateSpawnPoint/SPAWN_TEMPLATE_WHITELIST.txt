@@ -1,0 +1,161 @@
+# HellGate — whitelist ключей для кэша шаблонов (SPAWN_TEMPLATE_WHITELIST.txt)
+# Постоянный кэш: SPAWN_TEMPLATE_DISK_CACHE.txt (сохраняется между запусками игры)
+# Формат: Key  или  Key@UnitySceneName  (@ — подсказка сцены для disk cache, НЕ для spawn txt)
+# Проверка: AVAILABLE_SPAWN_TEMPLATES_RUNTIME.txt
+# Конфиг: NoREroMod_HellGate.cfg → [SpawnTemplates] EnablePersistentCache=true
+#
+# WhitelistSceneLoad отключён — подгрузка сцен на главном меню ломала Gametitle.
+# После правок: перезапуск игры. Первый заход на карту восстанавливает кэш с диска.
+
+# ========== HOSTAGE (пленники) ==========
+MobSlumSlave
+MobCrawlingSlave
+MobSpiderSlave
+MobRosewarm
+MobMutude
+MobMachineSlave
+witchslaveViolin
+witchslaveslime
+EnemyMobCrowSlaveBack
+EnemyMobCrowSlaveStandup
+mobslumslave
+mobcrawlingslave
+mobspiderslave
+mobrosewarm
+mobmutude
+mobmachineslave
+enemymobcrowslaveback
+enemymobcrowslavestandup
+slave
+stand
+back
+
+# ========== TRAP — пауки / дерево ==========
+trapspider
+trapthreadofspider
+TRAPThreadOfSpider
+wana_start
+woodwana
+forest_long
+
+# ========== TRAP — кнопки / пушки / копья ==========
+trap_button
+trap_button_ironmaiden
+trapshot
+trapgun2
+trapgun3
+trapgun4
+trapgun5
+trapgun6
+trap_gun
+spearthrowtrap
+spear
+
+# ========== TRAP — magic (часто только на сцене) ==========
+magictrap@UndergroundChurch
+magictrapcreateobject@UndergroundChurch
+firecharge@UndergroundChurch
+magic2@UndergroundChurch
+
+# ========== TRAP — контроллеры сцены ==========
+picturetrap
+picture_trap
+Picture_trap
+ivytrap@WhiteCathedral
+ivy_trap@WhiteCathedral
+ivy_monster@WhiteCathedral
+Ivy_monster
+cocoontrap@ForestOfRequiem
+cocoontrapnot@ForestOfRequiem
+cocoontrapNot@ForestOfRequiem
+cocooncreat@ForestOfRequiem
+CocoonmanStart
+
+# ========== TRAP — slime ==========
+blackoozetrap
+blackoozetraptypeb
+blackoozetypeb
+BlackOozetrap
+BlackOozeTypeB
+
+# ========== TRAP — шипы (rot90/rot180/rot270) ==========
+trapnormal
+trap_hari
+Trap_hari
+impactdamage
+lightimpactnormal
+LightImpactNormal
+impactdamagebox
+ImpactDamage
+ImpactDamageBOX
+wavespike
+WaveSpike
+wavespikeguard
+WaveSpikeGuard
+spearthrowtrap
+spear
+SpearThrowtrap
+
+# ========== TRAP — iron maiden ==========
+ironmaidendamage
+ironmaiden_damage
+trap_ironmaiden
+tent_ironmaiden
+trap_tentacleironmaiden
+Trap_Ironmaiden
+Tent_Ironmaiden
+
+# ========== TRAP — машина / H ==========
+trapmachine
+trap_machine
+trap_mokubaenemy
+trap_rockinghorse
+Trap_mokubaEnemy
+Trap_machine
+pictureeronon
+pictureero_non
+PictureEro_non
+rosewarm
+Rosewarm
+wallhip
+wallHIP
+
+# ========== TRAP — бочки / ящики ==========
+breakobjct
+taru_brk
+taru_exp
+taruro_exp
+taruRO_exp
+inpactbreakkobj
+tubo2@UndergroundChurch
+box_brk
+movebox_brk
+MoveBox_brk
+Box_brk
+
+# ========== TRAP — impact (дубликаты в whitelist, см. шипы выше) ==========
+
+# ========== TRAP — прочее из кэша / алиасы ==========
+npcslaveenable
+npcslaveflag
+chaincowslavespine
+cowslavespine
+cow1
+
+# --- Scene decor (corpses / props) — see DECOR_CATALOG.txt ---
+mob_death1@scapegoatEntrance
+mob_death2@InundergroundChurch
+mob_sister@InundergroundChurch
+gob_look@scapegoatEntrance
+gob_look2@village_main
+Look_mutude@scapegoatEntrance
+Look_Dorei@InundergroundChurch
+Arrow@scapegoatEntrance
+scapegoat_Slave@scapegoatEntrance
+VillageSlave@village_main
+NpcSlave@Ranch
+InchchurchSlave@InundergroundChurch
+
+
+
+

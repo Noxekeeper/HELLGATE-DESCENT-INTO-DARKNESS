@@ -1,0 +1,48 @@
+{
+  "settings": {
+    "minActivationPercent": {
+      "value": 50.0,
+      "comment": "Percentual mínimo para ativação do Rage (padrão: 50%)"
+    },
+    "rageCostDuringQTE": {
+      "value": 50.0,
+      "comment": "Custo de ativação do Rage durante QTE/H-cena (padrão: 50%)"
+    },
+    "damageMultiplier": {
+      "value": 2.0,
+      "comment": "Multiplicador de dano físico e mágico durante Rage (padrão: 2.0x)"
+    },
+    "spGainPercent": {
+      "value": 0.5,
+      "comment": "Ganho de SP por clique de ataque durante Rage (percentual do SP máximo, padrão: 0.5 = 50%)"
+    },
+    "enemyPushbackForceMultiplier": {
+      "value": 100.0,
+      "comment": "Multiplicador da força de empurrão de inimigos na ativação do Rage (padrão: 100.0, alcance: 200-300px)"
+    },
+    "grabDrainMin": {
+      "value": 1.0,
+      "comment": "Taxa de drenagem de Rage por segundo quando agarrado com MindBroken 0% (padrão: 1.0%/seg)"
+    },
+    "grabDrainMax": {
+      "value": 10.0,
+      "comment": "Taxa de drenagem de Rage por segundo quando agarrado com MindBroken 100% (padrão: 10.0%/seg, interpolação linear)"
+    },
+    "slowMoDrainMultiplier": {
+      "value": 2.0,
+      "comment": "Multiplicador de drenagem de Rage durante SlowMo (padrão: 2.0x, drenagem base * 2.0)"
+    },
+    "slowMoMBGainMultiplier": {
+      "value": 2.0,
+      "comment": "Multiplicador de ganho de MindBroken durante SlowMo (padrão: 2.0x, ganho base * 2.0)"
+    },
+    "uiPositionX": {
+      "value": 360.0,
+      "comment": "Posição X da borda esquerda da UI do Rage (padrão: 360px)"
+    },
+    "uiPositionY": {
+      "value": -25.0,
+      "comment": "Posição Y da borda superior da UI do Rage (padrão: -25px, negativo = para baixo)"
+    }
+  }
+}

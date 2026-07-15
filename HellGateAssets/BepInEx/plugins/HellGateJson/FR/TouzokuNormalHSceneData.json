@@ -1,0 +1,702 @@
+{
+  "settings": {
+    "commentCooldownSeconds": 2.0,
+    "maxSimultaneousComments": 1,
+    "commentDisplayDuration": 4.0,
+    "fontSize": 22.0,
+    "verticalOffset": 15.0,
+    "streamingSpeed": 0.03,
+    "goblinColor": {
+      "r": 1.0,
+      "g": 1.0,
+      "b": 1.0,
+      "a": 1.0
+    },
+    "goblinOutlineColor": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 1.0
+    }
+  },
+  "animations": {
+    "START": {
+      "description": "Début de la scène H, première capture",
+      "events": {
+        "START": [
+          "Enfin attrapée, salope !",
+          "Maintenant tu es mienne, salope !",
+          "Prépare-toi, ça va faire mal !",
+          "Tu es entre mes mains, et il n'y a pas d'échappatoire !"
+        ],
+        "SE1": [
+          "Lutte autant que tu veux, tu ne t'échapperas toujours pas !",
+          "Ta lutte ne fait que m'exciter !",
+          "Continue de résister, j'aime ça !",
+          "Tu ne t'échapperas pas, salope !"
+        ]
+      }
+    },
+    "START2": {
+      "description": "Deuxième variante du début de scène H",
+      "events": {
+        "START2": [
+          "Te voilà, salope !",
+          "Maintenant tu es en mon pouvoir !",
+          "Prépare-toi à ce qui t'attend !",
+          "Tu ne m'échapperas pas !"
+        ],
+        "SE1": [
+          "Lutte, lutte, j'aime ça !",
+          "Ta lutte est inutile !",
+          "Continue, salope, j'aime ça !"
+        ]
+      }
+    },
+    "START3": {
+      "description": "Troisième variante du début de scène H",
+      "events": {
+        "START3": [
+          "Pris dans mon filet, salope !",
+          "Maintenant tu es mon jouet !",
+          "Prépare-toi à la douleur, salope !",
+          "Tu ne t'échapperas pas de mes mains !"
+        ],
+        "SE1": [
+          "Résiste, j'aime ça !",
+          "Ta lutte ne fait que renforcer mon désir !",
+          "Continue, salope !"
+        ]
+      }
+    },
+    "ERO": {
+      "description": "Baise à rythme normal en tirant légèrement. Une main de GG tient le collier, l'autre s'avance. Boucle",
+      "events": {
+        "ERO": [
+          "Ta chatte est si serrée que je veux la déchirer !",
+          "Je vais te baiser jusqu'au bout, salope !",
+          "Tu es ma propriété, et je ferai ce que je veux avec toi !",
+          "Prends-la, salope, crie plus fort, je ne m'arrêterai pas !"
+        ],
+        "SE1": [
+          "Ta lutte ne fait que m'exciter encore plus !",
+          "Continue de lutter jusqu'à ce que je te brise complètement !",
+          "Lutte autant que tu veux, tu ne peux plus t'échapper !",
+          "Ta chatte servira tout le monde aujourd'hui, salope !",
+          "Je te passerai, ne meurs pas avant ton heure !"
+        ],
+        "SE2": [
+          "Tes gémissements sont si excitants, continue !",
+          "Crie, crie plus fort, salope, j'aime ça !",
+          "Bientôt tu ne pourras plus crier, salope !"
+        ]
+      }
+    },
+    "ERO1": {
+      "description": "Tire la chaîne fortement, GG attrape le collier avec les deux mains. Transition",
+      "events": {
+        "ERO1": [
+          "La chaîne est serrée, salope, qu'est-ce que tu en penses ?",
+          "Tu tiens le collier, mais ça ne t'aidera pas !",
+          "Lutte plus fort, j'aime ta lutte !",
+          "Ta lutte ne fait que renforcer mon désir !"
+        ],
+        "SE1": [
+          "Continue de tenir, un long marathon t'attend !",
+          "Tu ne t'échapperas toujours pas, abandonne !",
+          "Ta lutte me fait plaisir, salope !",
+          "Ne meurs pas, salope, avant que j'aie fini !"
+        ]
+      }
+    },
+    "ERO2": {
+        "description": "Baise, mais GG tient maintenant avec les deux mains. Boucle",
+        "events": {
+          "ERO2": [
+            "Prends-la, salope, crie plus fort, je ne m'arrêterai pas !",
+            "Je vais te baiser jusqu'au bout, salope !",
+            "Ta chatte est si serrée que je veux la déchirer !",
+            "Tu es ma propriété, et je ferai ce que je veux avec toi !"
+          ],
+          "SE1": [
+            "Ta lutte ne fait que m'exciter encore plus !",
+            "Continue de lutter jusqu'à ce que je te brise complètement !",
+            "Lutte autant que tu veux, tu ne peux plus t'échapper !",
+            "Ta chatte servira tout le monde aujourd'hui, salope !",
+            "Je te passerai, ne meurs pas avant ton heure !",
+            "Quelle bonne chatte tu as, juste parfaite !",
+            "Tu es ma salope, et je vais te baiser à mort !"
+          ],
+          "SE2": [
+            "Tes gémissements sont si excitants, continue !",
+            "Crie, crie plus fort, salope, j'aime ça !",
+            "Bientôt tu ne pourras plus crier, salope !",
+            "Lutte autant que tu peux, tu perdras quand même !"
+          ]
+        }
+      },
+      "ERO3": {
+        "description": "Les bras de GG perdent leur force et pendent mollement, maintenant elle ne résiste plus. Transition",
+        "events": {
+          "ERO3": [
+            "Difficile de respirer, salope ? Ça sera encore plus dur !",
+            "Tu seras ma salope jusqu'à la fin de tes jours !",
+            "Ahahaha, plus fort, tu aimes ça, n'est-ce pas ?"
+          ],
+          "SE1": [
+            "Ta lutte me fait plaisir, salope !",
+            "Ne meurs pas, salope, avant que j'aie fini !",
+            "Résiste autant que tu veux, je ne m'arrêterai pas !",
+            "Ta lutte ne fait que renforcer mon désir !",
+            "Tu ne t'échapperas toujours pas, abandonne !",
+            "Continue de tenir, un long marathon t'attend !",
+            "Tu es ma propriété, salope, et c'est pour toujours !"
+          ]
+        }
+      },
+      "ERO4": {
+        "description": "Baise GG quand ses bras sont mous. Boucle",
+        "events": {
+          "ERO4": [
+            "Maintenant tu es complètement mienne, sorcière !",
+            "Tu es en mon pouvoir, salope, et il n'y a pas d'échappatoire !",
+            "Ta chatte m'appartient, et je la baiserai toujours !"
+          ],
+          "SE1": [
+            "Je vais t'étrangler et jouir en même temps, salope !",
+            "Difficile de respirer ? Ça sera encore plus dur quand je jouis !",
+            "Ne fais rien de stupide, ou je te tue tout de suite !",
+            "Enfonce-toi plus profond, salope, je veux sentir chaque pli !",
+            "Ta chatte prend chaque centimètre de ma bite !",
+            "N'espère pas de pitié, tu es condamnée à un tourment éternel !",
+            "Ta chatte prendra la forme de ma bite pour toujours !",
+            "Allez, étouffe-toi, salope, j'aime voir ton agonie !",
+            "Ta chatte se serre quand tu t'étouffes, c'est si excitant !",
+            "Je vais t'étrangler et te baiser jusqu'à ce que tu meures !",
+            "Tu vas mourir sur ma bite, salope, et ce sera ta dernière pensée !"
+          ],
+          "SE2": [
+            "Tes gémissements deviennent plus silencieux à cause de l'étouffement, comme c'est doux !",
+            "Tu t'étouffes, mais je me fous de ta vie !",
+            "Je baiserai ton corps sans vie si tu meurs !",
+            "Ne respire pas jusqu'à ce que je jouisse, ou je te tue !"
+          ]
+        }
+      },
+      "ERO5": {
+        "description": "Touzoku s'accroupit légèrement et soulève GG sur la bite au prochain coup. Transition",
+        "events": {
+          "ERO5": [
+            "Tu ne lutes plus ? Complètement abandonnée ?",
+            "Ta lutte est terminée ? Dommage, c'était amusant !",
+            "Non, trop tôt pour mourir, je viens de commencer !"
+          ],
+          "SE1": [
+            "Ta lutte est terminée, salope ? Comme tu t'es cassée rapidement !",
+            "Tu as abandonné ? Dommage, je voulais jouer plus !",
+            "Tu es complètement mienne, et il n'y a pas d'échappatoire !",
+            "Tu le veux plus profond ? Je peux t'en donner plus !",
+            "Ta chatte est à nous maintenant, et on la baisera toujours !",
+            "Tu as été faite pour la violence, et je l'ai prouvé !",
+            "Salope parfaite, exactement ce que je voulais !",
+            "Plus profond, plus profond, salope, je veux sentir ton utérus !",
+            "Je vais te briser jusqu'au bout jusqu'à ce que tu deviennes mon esclave !",
+            "Ta chatte est devenue plus obéissante ? Super, ça fonctionne !"
+          ]
+        }
+      },
+      "2ERO": {
+        "description": "Baise en l'air. Boucle",
+        "events": {
+          "2ERO": [
+            "Tu ne peux rien faire, salope ? Comme c'est pitoyable !",
+            "Ta chatte est le seul soutien maintenant, hahaha !",
+            "Tu es mon jouet, salope, et je ferai ce que je veux avec toi !"
+          ],
+          "SE1": [
+            "Je veux te baiser toujours, salope, tu es parfaite !",
+            "Ta chatte est la meilleure au monde, je ne m'en lasserai jamais !",
+            "Chaque coup me donne un plaisir incroyable !",
+            "Tu danses juste sur ma bite, merde, comme une salope !",
+            "Tes cris sont de la musique pour mes oreilles, continue !",
+            "Je vais te baiser jusqu'à ce que tu te brises complètement !",
+            "Ton corps sera détruit, mais je m'en fous !",
+            "Pas de pitié pour toi, salope, tu le mérites !",
+            "Tu es suspendue entre la vie et ma bite, comme c'est beau !",
+            "Je vais te baiser à mort, et ce sera ta dernière pensée !",
+            "Ta chatte ne t'appartient plus, elle est mienne !",
+            "Meilleure baise de ma vie, tu es juste parfaite !",
+            "Tu vas supplier pour pitié, mais je ne m'arrêterai pas !",
+            "Ta chatte est ma propriété, et je la baiserai toujours !",
+            "Tes tentatives sont inutiles, salope, abandonne !",
+            "Tu es maintenant ma poupée sexuelle vivante, et je t'utiliserai toujours !",
+            "Tu es mon jouet, salope, et il n'y a pas d'échappatoire !"
+          ],
+          "SE8": [
+            "Je promets de te détruire complètement, salope !",
+            "Tu couleras de foutre pendant que je te baise !",
+            "Ta chatte prend tout comme une championne, continue !",
+            "Merde, je ne peux pas m'arrêter, salope, tu es trop bonne !"
+          ]
+        }
+      },
+      "2ERO2": {
+        "description": "En l'air, accélère. Boucle",
+        "events": {
+          "2ERO2": [
+            "AAAAhhhh, merde, comme c'est agréable de te baiser !",
+            "Ta chatte est magique, je ne peux pas m'arrêter !",
+            "Je promets de te baiser toute ma vie, tu es mienne !"
+          ],
+          "SE1": [
+            "Tu n'as jamais été dans une telle position, salope ? Apprends à en profiter !",
+            "Apprends à en profiter, ou je te coupe la tête !",
+            "Chaque coup te fait rebondir comme un jouet !",
+            "Quand j'aurai fini, je te passerai dans le cercle, salope !",
+            "N'espère pas de pitié, salope, tu es condamnée !",
+            "Allez, bats-toi pour ta vie, salope, j'aime ça !",
+            "Je vais te baiser à mort, et ce sera ta dernière pensée !"
+          ],
+          "SE8": [
+            "Tu aimes ça ? Prends-en plus, salope !",
+            "Chaque coup plus profond, tu le sens ?",
+            "Ta chatte prend toute la force, continue !",
+            "Merde, je ne peux pas m'arrêter, salope, tu es trop bonne !",
+            "Tu es ma salope, ma propriété, et je te baiserai toujours !",
+            "Je vais te baiser à mort, et ce sera ta dernière pensée !",
+            "Ta chatte prend tout comme une championne, continue !",
+            "Merde, je ne peux pas m'arrêter, salope, tu es trop bonne !"
+          ]
+        }
+      },
+      "FIN": {
+        "description": "Jouissance. Une fin, plusieurs pulsations",
+        "events": {
+          "FIN": [
+            "Aaaa, merde, je jouis, prends tout !",
+            "Prends tout mon foutre, salope, tu l'as mérité !",
+            "Ta chatte sera pleine de mon foutre !"
+          ],
+          "SE": {
+            "se_count_1": [
+              "Je jouis, je jouis ! Prends tout, salope !",
+              "Ta chatte se remplit jusqu'au bord, tu le sens ?",
+              "Je remplis ton utérus, tu sens qu'il se remplit ?",
+              "Tu sens que je te féconde, salope ?",
+              "Ton utérus est mien maintenant, et je l'ai rempli de foutre !",
+              "Merde, le foutre coule sur tes jambes, comme c'est beau !",
+              "Tu es mienne pour toujours maintenant, et il n'y a pas d'échappatoire !",
+              "Je t'ai marquée, salope, maintenant tu es ma propriété !",
+              "Ta chatte est ma propriété, et je l'ai remplie de foutre !",
+              "Ta chatte est remplie, et tu t'en souviendras toujours !",
+              "Je t'ai remplie, salope, et ce n'est que le début !",
+              "Ça sera toujours comme ça, salope, tu es mienne pour toujours !",
+              "Maintenant je suis ton nouveau propriétaire, et tu me serviras toujours !",
+              "Ta chatte est mienne maintenant, et je la baiserai toujours !"
+            ],
+            "se_count_2": [
+              "Comme c'est agréable de jouir en toi, salope !",
+              "Merde, trais mon foutre, salope !",
+              "Ta chatte déborde, tu le sens ?",
+              "Encore plus de foutre pour toi, salope !",
+              "Ton utérus est plein de mon foutre, et tu t'en souviendras toujours !",
+              "Je jouis encore, prends tout !"
+            ]
+          },
+          "SE1": [
+            "Prends mon foutre, salope, tu l'as mérité !",
+            "Aaa.. Merde, je jouis, prends tout !",
+            "Je remplirai ton utérus, et tu t'en souviendras toujours !",
+            "Merde, c'est brutal, mais tu aimes ça !",
+            "Ta chatte suce ma bite, comme une salope !",
+            "Aaa, comme je jouis fort, prends tout !",
+            "Prends-la, salope, tu l'as mérité !",
+            "Suce mon foutre, salope, c'est ton travail !",
+            "Voilà, prends tout, salope, tu l'as mérité !"
+          ],
+          "SE8": [
+            "Oui, oui, oui, je jouis, prends tout !",
+            "Je vais te ruiner, salope, et tu t'en souviendras toujours !",
+            "Voilà, tu es mienne pour toujours !",
+            "Ta chatte est la meilleure de son genre, et je la baiserai toujours !"
+          ]
+        }
+      },
+      "FIN2": {
+        "description": "Retire sa bite",
+        "events": {
+          "FIN2": [
+            "Oh merde, c'est incroyable, tu es juste parfaite !",
+            "Ta chatte coule de mon foutre, comme c'est beau !",
+            "Tu es ma propriété, salope, et il n'y a pas d'échappatoire !"
+          ],
+          "SE": {
+            "se_count_1": [
+              "Pour toi tout ne fait que commencer, salope !",
+              "Maintenant tu serviras le suivant, salope !",
+              "Tu seras mon esclave, et je t'utiliserai toujours !",
+              "Tu es ma propriété, salope, et il n'y a pas d'échappatoire !",
+              "Ta chatte coule toujours, comme c'est beau !",
+              "Le foutre coule, c'est si vulgaire, ahahaha !",
+              "Tu es mienne pour toujours maintenant, et il n'y a pas d'échappatoire !",
+              "Ta chatte en veut plus, je le sais, et je t'en donnerai plus !",
+              "Tu te souviendras de cette baise, salope, jusqu'à la fin de tes jours !"
+            ],
+            "se_count_3": [
+              "Merde, tellement de foutre, salope, tu débordes juste !",
+              "Ta chatte peut en prendre plus, prépare-toi !",
+              "Tu supplieras pour plus, je le sais, et je t'en donnerai plus !"
+            ]
+          }
+        }
+      },
+      "JIGO": {
+        "description": "GG s'effondre, il continue de la tenir comme un chien",
+        "events": {
+          "JIGO": [
+            "Tu es mon chien, salope, et il n'y a pas d'échappatoire !",
+            "Tu es ma propriété, et je t'utiliserai toujours !",
+            "Ta chatte coule toujours, comme c'est beau !"
+          ],
+          "SE": {
+            "se_count_1": [
+              "Oh merde, quelle salope tu es, juste parfaite !",
+              "Tu es mon jouet, salope, et je jouerai avec toi toujours !",
+              "Maintenant ça sera toujours comme ça, et tu me serviras !",
+              "Combien de mon foutre est en toi, tu débordes juste !",
+              "Prête pour le prochain round, salope ? Je suis prêt !",
+              "Prépare-toi, ce n'est que le début, beaucoup plus t'attend !",
+              "Tu te souviendras de cette baise pour toujours, et ce n'est que le début !",
+              "Tu es mon esclave, salope, et je t'utiliserai toujours !"
+            ]
+          }
+        }
+      },
+      "JIGO2": {
+        "description": "Bave, jambes tremblantes, bras pendants, enchaînée par le collier, seins qui rebondissent. Pour le prochain ennemi du cycle",
+        "events": {
+          "SE": {
+            "se_count_1": [
+              "Regarde-toi, tu ressembles à une salope, et c'est bien !",
+              "Tu es couverte de mon foutre, et tu t'en souviendras toujours !",
+              "Ta chatte coule toujours, comme c'est beau !",
+              "Tu sais donner du plaisir, salope, continue !",
+              "Tu es ma propriété, salope, et il n'y a pas d'échappatoire !",
+              "Ta chatte est mienne pour toujours maintenant, et je la baiserai toujours !",
+              "Tu te souviendras de cette baise longtemps, et ce n'est que le début !",
+              "Ta chatte n'oubliera jamais ma bite, et c'est bien !",
+              "Tu es maintenant mon esclave, et je t'utiliserai toujours !",
+              "Tu es couverte de mon foutre, salope, et tu t'en souviendras toujours !",
+              "Ta chatte coule de ma baise, comme c'est beau !",
+              "Tu es ma salope pour toujours, et il n'y a pas d'échappatoire !"
+            ],
+            "se_count_2": [
+              "Une autre portion de foutre pour toi, salope !",
+              "Ta chatte déborde, tu le sens ?",
+              "Ton utérus est plein de mon foutre, et tu t'en souviendras toujours !",
+              "Tu portes maintenant mon foutre, et c'est ta nouvelle vie !",
+              "Mon foutre coule de toi, comme c'est beau !",
+              "Ta chatte est mienne pour toujours maintenant, et je la baiserai toujours !",
+              "Tu te souviendras de cette baise toute ta vie, et ce n'est que le début !",
+              "Encore plus de foutre en toi, salope, tu débordes juste !",
+              "Ton utérus est rempli, et tu t'en souviendras toujours !"
+            ]
+          },
+          "SE1": [
+            "Regarde ce que tu me fais, oooouu eeee !",
+            "Je vais te féconder, salope, et tu t'en souviendras toujours !",
+            "Tu produis mon foutre, comme une salope !",
+            "Maintenant tu le sentiras encore plus fort, prépare-toi !",
+            "Je vais te remplir encore et encore, et tu t'en souviendras toujours !",
+            "Tout le foutre pour toi, salope, tu l'as mérité !"
+          ],
+          "SE8": [
+            "Derniers coups, salope, prends tout !",
+            "AAA, voilà, je jouis, prends tout !",
+            "Tellement de foutre, salope, tu débordes juste !",
+            "Ta chatte suce mon foutre, comme une salope !"
+          ]
+        }
+      },
+      "_2ERO2": {
+        "description": "Baise en l'air. Boucle",
+        "events": {
+          "2ERO2": [
+            "Quelle position chaude, n'est-ce pas, salope ? Tu aimes ça ?",
+            "Inoubliable, merde, je ne peux pas m'arrêter !",
+            "Tu es mon jouet, ma propriété, et il n'y a pas d'échappatoire !"
+          ],
+          "SE1": [
+            "Prends ma bite, salope, tu l'as mérité !",
+            "Ta chatte est si serrée que je veux la déchirer !",
+            "Chaque coup en toi est un plaisir, continue !",
+            "Tu danses sur ma bite, merde, comme une salope !",
+            "Allez, essaie plus fort, salope, j'aime ça !",
+            "Tu vas bientôt jouir, et je vais te briser complètement !"
+          ]
+        }
+      },
+      "_2ERO3": {
+        "description": "Baise quand GG tient son cou avec les deux mains. Boucle",
+        "events": {
+          "2ERO3": [
+            "Difficile de respirer, salope ? Ça sera encore plus dur !",
+            "Mieux vaut ne pas mourir, je viens de commencer, salope !",
+            "Ta lutte est inutile, abandonne !"
+          ],
+          "SE1": [
+            "Ta lutte ne fait que m'exciter, continue !",
+            "Continue de lutter pendant que je te baise, j'aime ça !",
+            "Lutte autant que tu veux, j'aime ça, salope !",
+            "Je vais te baiser sans arrêt, et tu t'en souviendras toujours !",
+            "Tu es ma propriété, salope, et il n'y a pas d'échappatoire !"
+          ]
+        }
+      },
+      "_2ERO4": {
+        "description": "Baise en biais en l'air, jambes décollées du sol",
+        "events": {
+          "2ERO4": [
+            "Comment aimes-tu être empalée sur ma bite, salope ?",
+            "Maintenant tu ne peux plus décoller de ma bite, comme c'est pitoyable !",
+            "Tu es mon jouet, ma poupée sexuelle, et il n'y a pas d'échappatoire !"
+          ],
+          "SE1": [
+            "Merde, tu as été faite pour ça, salope, continue !",
+            "Meilleure chatte de toute ma vie, je ne peux pas m'arrêter !",
+            "Chaque coup est si agréable que je veux te baiser toujours !",
+            "Tu danses sur ma bite, merde, comme une salope !",
+            "Tes jambes tremblent, mais ce n'est que le début, salope !",
+            "Tu es maintenant ma poupée sexuelle vivante, salope, et je t'utiliserai toujours !"
+          ]
+        }
+      },
+      "_2ERO6": {
+        "description": "Baise en l'air, GG presque pressée contre lui",
+        "events": {
+          "2ERO6": [
+            "Quelle position sexy, salope, tu aimes ça ?",
+            "Tu es en mon pouvoir, et il n'y a pas d'échappatoire !",
+            "Quelle salope chaude, je ne peux pas m'arrêter !"
+          ],
+          "SE1": [
+            "Tu aimes être sur ma bite, salope ? Continue !",
+            "Ta chatte suce ma bite, comme une salope !",
+            "Chaque coup suivant est plus agréable, continue !",
+            "Tu danses sur ma bite, merde, comme une salope !",
+            "Je vais être très brutal avec toi, et tu t'en souviendras toujours !"
+          ]
+        }
+      },
+      "_2ERO7": {
+        "description": "Essaie d'attraper le collier d'une main",
+        "events": {
+          "2ERO7": [
+            "Tu seras ma salope, et il n'y a pas d'échappatoire !",
+            "Lutte pendant que je te baise, j'aime ça !",
+            "Ta lutte est inutile, salope, abandonne !"
+          ],
+          "SE1": [
+            "Ta lutte ne fait que m'exciter, continue !",
+            "Continue de lutter, te tordre, salope, j'aime ça !",
+            "Lutte plus fort, j'aime celles comme toi, salope !",
+            "Tu es mienne maintenant, salope, et il n'y a pas d'échappatoire !"
+          ]
+        }
+      },
+      "_ERO5": {
+        "description": "Baise par derrière, jambes au sol, bras tirés en arrière",
+        "events": {
+          "_ERO5": [
+            "Regarde-toi, salope, comme tu ressembles !",
+            "Ta chatte caresse ma bite, comme une salope !",
+            "Tu es mon jouet, ma propriété, et il n'y a pas d'échappatoire !"
+          ],
+          "SE1": [
+            "Je sais que tu l'aimes plus brutal, salope, continue !",
+            "Chaque coup est si agréable que je veux te baiser toujours !",
+            "Ta chatte suce ma bite, comme une salope !",
+            "Je vais te baiser jusqu'à la limite, et tu t'en souviendras toujours !",
+            "Ta chatte agit comme une salope, et c'est bien !",
+            "Je vais te déchirer de l'intérieur, salope, et tu t'en souviendras toujours !"
+          ]
+        }
+      },
+      "_ERO7": {
+        "description": "Baise aussi, seulement un bras pend déjà",
+        "events": {
+          "_ERO7": [
+            "Tu ne lutes plus ? Complètement abandonnée ?",
+            "Qu'est-ce qui ne va pas, salope ? Tu aimes déjà ça ?",
+            "Tu l'accepteras comme dû, et il n'y a pas d'échappatoire !"
+          ],
+          "SE1": [
+            "Ta lutte est double plaisir, continue !",
+            "Tu as abandonné, n'abandonne pas pendant que je te baise, j'aime ça !",
+            "Oh oui, tu n'as aucune idée de ce qui t'attend, salope !",
+            "Combien de bites peux-tu supporter avant de mourir, salope ?",
+            "Ta chatte serre ma bite, comme une salope, continue !"
+          ]
+        }
+      },
+      "_ERO8": {
+        "description": "Intensifie les coups",
+        "events": {
+          "_ERO8": [
+            "Tu es prête, salope ? Ça sera brutal !",
+            "Je vais te remplir de mon foutre, et tu t'en souviendras toujours !",
+            "Oui, allez, glisse sur ma bite, comme une salope !"
+          ],
+          "SE1": [
+            "Ce ne sera pas facile, salope, prépare-toi !",
+            "Merde, comme c'est agréable de te baiser plus fort !",
+            "Ta chatte a été faite pour la violence, et je le prouverai !",
+            "Je vais jouir en toi, et tu t'en souviendras toujours !",
+            "Ta chatte sera remplie de mon foutre, et tu t'en souviendras toujours !"
+          ]
+        }
+      },
+      "_ERO9": {
+        "description": "Les coups sont les mêmes, mais plus durs",
+        "events": {
+          "_ERO9": [
+            "Voilà, prends-la, salope, je vais jouir en toi !",
+            "Ta chatte veut ça, et je t'en donnerai plus !",
+            "Ta chatte est juste une salope, et c'est bien !"
+          ],
+          "SE1": [
+            "Merde, comme c'est agréable de te baiser plus fort, salope !",
+            "Chaque coup est plus fort, tu le sens ? Continue !",
+            "Ta chatte se déchire de ma bite, et tu t'en souviendras toujours !",
+            "Je vais te déchirer de l'intérieur, salope, et tu t'en souviendras toujours !",
+            "Ta chatte ne supportera pas une telle baise, mais je m'en fous !"
+          ]
+        }
+      },
+      "_ERO10": {
+        "description": "Les coups sont plus accentués",
+        "events": {
+          "_ERO10": [
+            "Ça sera brutal, salope, prépare-toi !",
+            "Ta chatte prendra chaque coup, et tu t'en souviendras toujours !",
+            "Je te baise avec emphase, apprécie, salope !"
+          ],
+          "SE1": [
+            "Chaque coup te fait crier, ouiiii, continue !",
+            "Je vais jouir en toi, salope, et tu t'en souviendras toujours !",
+            "Comme tu chevauches bien la bite, comme une salope !",
+            "Ta chatte s'étire comme elle doit, continue !"
+          ]
+        }
+      },
+      "_ERO11": {
+        "description": "Même qu'accentué",
+        "events": {
+          "_ERO11": [
+            "Tu es ma salope, salope, et il n'y a pas d'échappatoire !",
+            "Ta chatte est ma propriété, et je la baiserai toujours !",
+            "Tu feras tout ce que je dis, et il n'y a pas d'échappatoire !"
+          ],
+          "SE1": [
+            "Crie plus fort, salope, j'aime ça !",
+            "Tu es brisée, salope, et c'est bien !",
+            "Ta chatte est mienne maintenant, et je la baiserai toujours !",
+            "Tu es maintenant mon chien, et il n'y a pas d'échappatoire !"
+          ]
+        }
+      },
+      "_ERO12": {
+        "description": "Emphase encore plus forte",
+        "events": {
+          "_ERO12": [
+            "Tu es complètement brisée, salope, et c'est bien !",
+            "Ta chatte est mon jouet, et je jouerai avec toujours !",
+            "Tu seras mon esclave, salope, et il n'y a pas d'échappatoire !"
+          ],
+          "SE1": [
+            "Tu te souviendras de cette baise, salope, jusqu'à la fin de tes jours !",
+            "Ta chatte se déchire, mais je m'en fous, continue !",
+            "Je vais te déchirer, salope, et tu t'en souviendras toujours !",
+            "Ta chatte ne le supportera pas, mais peu importe, continue !",
+            "Tu es ma propriété, merde, et il n'y a pas d'échappatoire !"
+          ]
+        }
+      },
+      "_FIN3": {
+        "description": "Jouit encore plus fort",
+        "events": {
+          "_FIN3": [
+            "Je vais jouir en toi maintenant, salope, prends tout !",
+            "Prends tout mon foutre, salope, tu l'as mérité !",
+            "Ta chatte sera mienne, et je la baiserai toujours !"
+          ],
+          "SE": {
+            "se_count_1": [
+              "Je jouis, salope ! Tu es mienne, et il n'y a pas d'échappatoire !",
+              "Ta chatte est ma propriété maintenant, et je l'ai remplie de foutre !",
+              "Tu es mienne pour toujours maintenant, merde, et il n'y a pas d'échappatoire !",
+              "Ton utérus est mien maintenant, salope, et je l'ai rempli de foutre !",
+              "Mon foutre te remplira, et tu t'en souviendras toujours !",
+              "Tu es mienne pour toujours maintenant, salope, et il n'y a pas d'échappatoire !",
+              "J'ai laissé ma marque en toi, et tu t'en souviendras toujours !",
+              "Ta chatte est ma propriété, salope, et je l'ai remplie de foutre !",
+              "Tu portes maintenant mon foutre, et c'est ta nouvelle vie !",
+              "Je t'ai remplie, salope, et ce n'est que le début !"
+            ],
+            "se_count_2": [
+              "Encore plus de foutre, salope, tu débordes juste !",
+              "Deuxième portion pour toi, prends tout !",
+              "Ta chatte déborde, merde, tu le sens ?",
+              "Encore plus de foutre pour toi, salope, prends tout !",
+              "Ton utérus est plein de mon foutre, et tu t'en souviendras toujours !"
+            ]
+          },
+          "SE1": [
+            "Prends tout mon foutre, salope, tu l'as mérité !",
+            "Tu es mienne pour toujours maintenant, et il n'y a pas d'échappatoire !",
+            "Ta chatte va déborder, merde, tu le sens ?",
+            "Plus profond, plus profond, salope, prends tout !",
+            "Tu es ma propriété, et je te baiserai toujours !"
+          ]
+        }
+      },
+      "_JIGO2": {
+        "description": "GG s'effondre",
+        "events": {
+          "_JIGO2": [
+            "Tu t'effondres, salope, et c'est bien !",
+            "Tu es ma propriété, salope, et il n'y a pas d'échappatoire !",
+            "Ta chatte coule toujours, et ce n'est que le début !"
+          ],
+          "SE": {
+            "se_count_1": [
+              "Tu es ma propriété, salope, et je te baiserai toujours !",
+              "Ta chatte coule toujours, salope, et ce n'est que le début !",
+              "Le foutre coule de toi, merde, et c'est si beau !",
+              "Tu es mienne pour toujours maintenant, salope, et il n'y a pas d'échappatoire !",
+              "Ta chatte est mienne maintenant, salope, et je la baiserai toujours !",
+              "Tu te souviendras de cette baise, et ce n'est que le début !"
+            ]
+          }
+        }
+      },
+      "_JIGO4": {
+        "description": "GG est empalée sur la bite, comme s'il la baisait",
+        "events": {
+          "_JIGO4": [
+            "Tu es en mon pouvoir, salope, et il n'y a pas d'échappatoire !",
+            "Tu es ma propriété, salope, et je te baiserai toujours !",
+            "Ta chatte est mienne, merde, et ce n'est que le début !"
+          ],
+          "SE1": [
+            "Tu es mon jouet, salope, et je jouerai avec toi toujours !",
+            "Ta chatte est ma propriété, et je la baiserai toujours !",
+            "Tu es complètement en mon pouvoir, salope, et il n'y a pas d'échappatoire !",
+            "Tu es maintenant mon chien, et je te baiserai toujours !"
+          ]
+        }
+      }
+    }
+  }
+}
+

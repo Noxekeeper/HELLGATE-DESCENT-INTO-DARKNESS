@@ -1,0 +1,10 @@
+{
+  "stepId": "broker_pay_choice",
+  "stepKind": "choice",
+  "speakerLabel": "",
+  "npcLine": "",
+  "choicePoolIds": [],
+  "choiceLabels": [],
+  "choiceOutcomeIds": [],
+  "choiceJumpStepIds": []
+}

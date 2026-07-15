@@ -1,0 +1,8 @@
+{
+  "speakerLabel": "Bandit",
+  "stepId": "fsp_sex_refuse_r01",
+  "stepKind": "continue",
+  "continueOutcomeId": "noop",
+  "continueNextStepId": "fsp_sex_refuse_c02",
+  "npcLinePoolId": "fsp_sex_refuse_react"
+}

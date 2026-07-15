@@ -1,0 +1,21 @@
+{
+  "speakerLabel": "도적",
+  "stepId": "fsp_sex_money_after_price",
+  "stepKind": "choice",
+  "choiceLabels": [
+    "좋아. {SEX_PRICE} 코인이면 받을게.",
+    "너무 적어. 안 받아.",
+    "손 떼. 지금 당장."
+  ],
+  "choiceOutcomeIds": [
+    "pay_confirm",
+    "noop",
+    "threaten"
+  ],
+  "choiceJumpStepIds": [
+    "fsp_sex_paid_grant_h",
+    "fsp_sex_refuse_d_p03",
+    "fsp_sex_paid_rage_win"
+  ],
+  "npcLine": "그래서, 꼬마? 할 거냐, 말 거냐?"
+}

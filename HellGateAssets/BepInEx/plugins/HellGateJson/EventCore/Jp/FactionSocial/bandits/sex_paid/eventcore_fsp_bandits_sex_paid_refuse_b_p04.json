@@ -1,0 +1,8 @@
+{
+  "speakerLabel": "野盗",
+  "stepId": "fsp_sex_refuse_b_p04",
+  "stepKind": "continue",
+  "continueOutcomeId": "noop",
+  "continueNextStepId": "fsp_sex_paid_close",
+  "npcLine": "チッ……もったいねえ。まあいいか。"
+}

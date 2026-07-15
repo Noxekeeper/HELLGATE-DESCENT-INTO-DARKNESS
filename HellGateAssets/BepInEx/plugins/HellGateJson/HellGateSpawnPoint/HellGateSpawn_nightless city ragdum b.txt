@@ -1,0 +1,19 @@
+# HellGate Spawn — nightless city (ragdum b) / InsomniaTown
+# TRAP,trapnormal,X,Y,Count[,near]  |  X,Y,lethal_magictrap,Count
+
+
+
+#Trap
+467.06,-184.66,wallhip,1
+472.76,-185.66,mobslumslave,1
+
+#Other group neutral
+466.06,-184.00,MafiaBosscustom|faction=bandits,1
+468.10,-184.66,Vagrant,1
+470.06,-184.66,Vagrant,1
+470.06,-184.66,Vagrant,1
+474.76,-184.66,Vagrant,1
+476.25,-184.66,Vagrant,1
+475.25,-184.66,Vagrant,1
+
+

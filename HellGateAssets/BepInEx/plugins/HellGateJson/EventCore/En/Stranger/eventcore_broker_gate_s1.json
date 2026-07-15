@@ -1,0 +1,11 @@
+{
+  "stepId": "broker_gate",
+  "stepKind": "choice",
+  "speakerLabel": "Stranger",
+  "npcLinePoolId": "broker_open_a",
+  "npcLine": "",
+  "choicePoolIds": [],
+  "choiceOutcomeIds": [],
+  "choiceJumpStepIds": [],
+  "choiceLabels": []
+}

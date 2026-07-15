@@ -1,0 +1,401 @@
+{
+  "entries": [
+    {
+      "key": "eventcore_ui_continue",
+      "text": "Weiter (1 / Enter)"
+    },
+    {
+      "key": "eventcore_ui_click_continue",
+      "text": "Klicken zum Fortfahren"
+    },
+    {
+      "key": "eventcore_broker_pass_done",
+      "text": "Du kannst gehen."
+    },
+    {
+      "key": "eventcore_hint_need_mb",
+      "text": "MindBroken ≥ 20% erforderlich"
+    },
+    {
+      "key": "eventcore_hint_need_rage",
+      "text": "Wut ≥ 5% erforderlich"
+    }
+  ],
+  "linePools": [
+    {
+      "poolId": "broker_gate_prelude",
+      "lines": [
+        "Aradia bemerkte eine fremde Gestalt auf dem Pfad: breite Schultern, feste Haltung, das Gesicht hinter einer Maske verborgen. Er tat nicht so, als würde er sich ausruhen — er hatte bewusst die engste Stelle des Weges gewählt. Sofort kamen ihr die Geschichten von denen in den Sinn, die Wege terrorisieren und den Leuten alles abnehmen. Die Luft wurde schwerer, selbst Aradias Schritte klangen unnatürlich laut.",
+        "Zuerst hielt Aradia ihn für einen Schatten zwischen den Bäumen — bis der Schatten ihr entgegen trat. Die Maske verbarg seine Züge, aber nicht seine Absichten: Er stand da, als hätte er schon lange auf eine einsame Reisende gewartet. Solche Männer handeln laut Gerüchten nie impulsiv — sie berechnen Zeit und Entfernung. Ihr Herz schlug langsamer und schwerer; der vertraute Weg fühlte sich plötzlich wie eine Falle an.",
+        "Der Pfad war vertraut, doch der Mann darauf nicht. Aradia blieb stehen: Die maskierte Gestalt blockierte den Weg nicht zufällig, sondern gezielt, wie man eine Sperre errichtet. Sie erkannte den Stil der lokalen Wegelagerer — jene, die Schwache auswählen und sie nicht nur mit Münzen, sondern mit mehr bezahlen lassen. Der Wind legte sich, als wollte selbst er sich nicht einmischen.",
+        "Er tauchte so leise auf, dass Aradia ihn erst bemerkte, als die Distanz bereits gefährlich gering war. Sein Gesicht unter der Maske war nur schemenhaft zu erkennen, doch seine Gewohnheit, den Raum um sich herum zu beherrschen, war unmissverständlich. Es war genau wie in den Geschichten von den „Wölfen der Straße“ — jenen, die das einfache Volk in ständiger Angst halten. Ihre Kehle wurde trocken; jeder weitere Schritt fühlte sich wie ein Wagnis an.",
+        "Aradia hatte ihn zu spät bemerkt, um ohne Gesichtsverlust umzukehren — oder ohne Gefahr. Die maskierte männliche Gestalt stand aufrecht da, als gehöre der Weg ihm von Rechts wegen. Bei solchen Begegnungen gibt es selten Missverständnisse: Es geht immer um Kontrolle oder um Bezahlung. Sie ballte die Fäuste und versuchte, nicht zu zeigen, wie sehr sich alles in ihr zusammenzog.",
+        "Der Weg machte vorne eine leichte Biegung — und genau dahinter wartete er bereits. Aradia sah die Maske und verstand sofort: Das war kein Wanderer und kein Jäger. Er hatte sich so positioniert, dass jeder Versuch auszuweichen riskant wirkte. Die Geschichten über Banditen in dieser Gegend waren keine Übertreibung. Ein kalter Schauer lief über ihre Haut, wo eigentlich Zuversicht sein sollte.",
+        "Der Tag war grau gewesen, doch diese Begegnung machte ihn noch düsterer. Aradias Blick glitt über die schweigende Gestalt: Maske, verborgenes Gesicht, ruhige Bedrohung in jeder Linie seines Körpers. Er hatte offensichtlich nicht vor, sie „einfach so“ durchzulassen — wer einmal als Beute markiert war, wurde nie umsonst freigelassen. Die müden, wütenden und verängstigten Gesichter aus den Dörfern tauchten vor ihrem inneren Auge auf. Das Atmen fiel ihr etwas schwerer — wie vor einer hohen Schwelle.",
+        "Aradia spürte ihn, bevor sie ihn sah — die schwere Präsenz eines Fremden auf einem verlassenen Stück Weg. Als er aus dem Halbdunkel trat, verwandelte die Maske den Mann in eine stumme Warnung. So standen jene, die sich auf der Straße nahmen, was sie wollten, ohne Rücksicht auf andere. Sie kannte diese Geschichten zu gut, um an einen Zufall zu glauben. Die Zeit verlangsamte sich; die Welt schrumpfte auf wenige Meter und zwei Schicksale zusammen.",
+        "Der Waldkorridor zwischen den Stämmen hatte sicher gewirkt — bis er darin erschien. Aradia erkannte die Maske und blieb stehen: Die Gestalt hielt sich selbstsicher, ohne unnötige Bewegungen, wie jemand, der das jeden Tag macht. Das erinnerte sie an die lokalen Räuber — jene, die den Leuten nicht nur Geld, sondern auch den Seelenfrieden rauben. Selbst das Licht, das durch die Baumkronen fiel, wirkte kälter.",
+        "Er rief nicht „Stehenbleiben“ — das brauchte er nicht. Aradia verlangsamte selbst, als sie den maskierten Mann auf dem Pfad sah; seine Haltung war zu ruhig für einen harmlosen Zufall. Sie dachte sofort an jene, die das einfache Volk auf den Straßen quälen und den Durchgang zu einem Geschäft machen. Alles in ihr spannte sich an — Instinkt, Erinnerung und Verstand stritten über dasselbe. Und keine der Antworten versprach einen leichten Ausgang."
+      ]
+    },
+    {
+      "poolId": "broker_open_a",
+      "lines": [
+        "Na sieh mal einer an… Hast dich verlaufen, kleines Mädchen? Dumme kleine Schlampe geht ganz allein spazieren…",
+        "Ohho, was haben wir denn hier Süßes? Keine Angst, Schöne, Onkel erklärt dir alles.",
+        "Hehe, erwischt. Dachte schon, heute wird’s langweilig. Komm her, Prinzessin.",
+        "Na so was… So eine appetitliche kleine Schlampe läuft mir direkt in die Arme. Zappel nicht rum.",
+        "Schau mal, was für ein hübsches Gesichtchen. Willst du weit, Schlampe? Dieser Weg ist nicht umsonst.",
+        "Schön ruhig… Siehst du das Messer? Braves Mädchen. Jetzt lächle Onkel an.",
+        "Ohhh, wie saftig. So frisches Fleisch hatte ich lange nicht mehr. Zieh dich aus, mach mich nicht wütend.",
+        "Hast dich verlaufen, Schönheit? Armes kleines Mädchen… Jetzt wärmt Onkel dich… schön auf.",
+        "Mmm, der Geruch von Angst und teurem Parfüm. Gefällt mir. Hände hinter den Kopf, schnell.",
+        "Ha! Was für ein Glückstag. Ganz allein, unbewaffnet… Komm her. Du und ich werden ein langes, interessantes Gespräch führen."
+      ]
+    },
+    {
+      "poolId": "broker_pc_peace",
+      "lines": [
+        "Ich will keinen Ärger. Ich bin nur vorbeigegangen.",
+        "Was wollen Sie? Ich will keine Probleme.",
+        "Warten Sie… lassen Sie uns in Ruhe reden.",
+        "Ich wollte nicht hierher… Das war ein Versehen.",
+        "Darf ich vorbei… bitte.",
+        "Ich habe etwas Geld, ich kann für den Durchgang bezahlen.",
+        "Ich werde nicht schreien… fassen Sie mich nicht an.",
+        "Sie… Sie lassen mich doch gehen, oder? Wir können uns einigen?",
+        "Oh, entschuldigen Sie, ich wollte Sie nicht stören… kann ich einfach weitergehen?",
+        "Gut… reden wir wie Erwachsene. Ich will keinen Ärger."
+      ]
+    },
+    {
+      "poolId": "broker_pc_threat",
+      "lines": [
+        "Geh mir aus dem Weg. Oder du stirbst hier.",
+        "Noch einen Schritt und ich schneide dir die Kehle durch.",
+        "Nimm deine Hände weg. Sofort. Sonst hast du keine mehr.",
+        "Ich wiederhole mich nicht. Weg da oder stirb.",
+        "Du hast dir die falsche Frau ausgesucht. Letzte Chance, lebend davonzukommen.",
+        "Fass mich an und ich schneide dir die Augen raus. Ganz langsam.",
+        "Verpiss dich. Es ist mir scheißegal, wenn du in deinem Blut ertrinkst.",
+        "Ich habe Schlimmere als dich getötet. Zwing mich nicht anzufangen.",
+        "Bleib stehen. Sonst breche ich dir mit einer Bewegung das Genick.",
+        "Du stehst mir im Weg. Du kannst schön verschwinden… oder hässlich."
+      ]
+    },
+    {
+      "poolId": "broker_after_threat_d",
+      "lines": [
+        "Oh, ganz schön mutig… Für diese Worte wirst du bezahlen, Schlampe. Ich ficke dich so hart, dass du deine Stimme verlierst.",
+        "Wie kannst du es wagen, mich zu bedrohen, du Hure? Dafür ficke ich dich langsam und brutal.",
+        "Du drohst mir? Gut… Ich breche dich. Und dann ficke ich deinen kaputten Körper die ganze Nacht.",
+        "Freche Schlampe… Für diese Worte prügle ich dich erst windelweich und lasse dich dann meinen Schwanz lutschen als Dank.",
+        "Oh, ich hab solche Angst… Jetzt wirst du unter mir heulen und um Gnade betteln, während ich dich durchficke.",
+        "Mutig, was? Keine Sorge, ich ficke dir den ganzen Hochmut aus dem Leib. Du wirst unter mir kreischen wie die billigste Hure.",
+        "Du drohst mir ernsthaft? Ich ficke dich so hart, dass du eine Woche nicht laufen kannst, du Schlampe.",
+        "Was für eine dreiste Fotze… Dafür ficke ich dich nicht nur. Ich breche dich und lasse dich nach mehr betteln.",
+        "Du drohst mir? Wie niedlich. Ich liebe es, solche Stolzen zu brechen. Mach dich bereit, deine Strafe beginnt.",
+        "Du hast gerade einen großen Fehler gemacht… Jetzt ficke ich dich mit ganz besonderer Wut. Bis Blut und Tränen fließen."
+      ]
+    },
+    {
+      "poolId": "broker_demand",
+      "lines": [
+        "Das ist mein Privatgelände, Schönheit. Also zahl für den Durchgang (---) Münzen.",
+        "Du dachtest, du kannst einfach so durch? Nein, Süße. Hier kostet der Durchgang (---) Münzen.",
+        "Stehenbleiben. Das ist mein Territorium. Willst du durch, leg (---) Münzen hin.",
+        "Hehe, nicht so schnell. Sicheres Geleit kostet (---) Münzen. Her damit.",
+        "Siehst du, wo du gelandet bist? Jetzt wird bezahlt. (---) Münzen und ich lasse dich durch.",
+        "Geld auf den Tisch, Mädchen. Für meinen Weg — (---) Münzen.",
+        "Hier spaziert man nicht umsonst. Gib (---) Münzen her, dann trennen wir uns friedlich.",
+        "Du hast Pech gehabt, Schönheit. Durchgangsgebühr (---) Münzen. Schnell raus damit.",
+        "Hier hat alles seinen Preis. Besonders süße Dinger wie du. Gib (---) Münzen.",
+        "Nicht so eilig. Zuerst zahlst du (---) Münzen für den Durchgang, dann sehen wir weiter, ob ich dich gehen lasse oder nicht."
+      ]
+    },
+    {
+      "poolId": "broker_pay_agree_e",
+      "lines": [
+        "Gut… hier ist das Geld. Ich bezahle.",
+        "Okay, ich bezahle. Fassen Sie mich nur nicht an.",
+        "Hier, die Münzen. Ich bin einverstanden.",
+        "Ich bezahle… hier, nehmen Sie.",
+        "Gut, ich will keinen Ärger. Hier ist Ihr Geld."
+      ]
+    },
+    {
+      "poolId": "broker_pc_insufficient_f",
+      "lines": [
+        "So viel habe ich nicht… Ich habe nur {GOLD} Münzen.",
+        "Bitte, ich habe keine {REQ} Münzen… ich kann nur {GOLD} geben.",
+        "So viel kann ich nicht bezahlen. Ich habe nur {GOLD} Münzen dabei.",
+        "Es reicht nicht… Ich habe nur {GOLD} Münzen. Reicht das?",
+        "Ich würde mehr geben, aber ich habe nur {GOLD} Münzen. Nehmen Sie sie.",
+        "Tut mir leid… ich habe nur {GOLD} Münzen. Mehr habe ich nicht.",
+        "Ich habe diese Summe nicht. Ich kann nur {GOLD} Münzen geben.",
+        "Das ist alles, was ich habe… nur {GOLD} Münzen. Bitte nehmen Sie sie.",
+        "Ich trage nicht viel bei mir. Ich habe nur {GOLD} Münzen.",
+        "Gut… aber ich habe nur {GOLD} Münzen. Reicht das?"
+      ]
+    },
+    {
+      "poolId": "broker_refuse_pay_l",
+      "lines": [
+        "Ich werde dir gar nichts zahlen. Verpiss dich.",
+        "Nicht eine einzige Münze bekommst du von mir. Hau ab.",
+        "Vergiss das Geld. Geh aus dem Weg und halt mich nicht auf.",
+        "Ich zahle nicht. Verpiss dich friedlich.",
+        "Du denkst, ich zahle dir? Falsch gedacht. Verschwinde aus meinen Augen.",
+        "Keine einzige Münze wirst du sehen. Verschwinde, bevor ich wütend werde.",
+        "Ich zahle nicht, um auf meinem eigenen Weg zu gehen. Verpiss dich.",
+        "Auf Geld kannst du lange warten. Raus hier.",
+        "Ich verhandle nicht mit dir. Weg vom Weg.",
+        "Zahlen? Im Ernst? Verpiss dich, solange du noch ganz bist."
+      ]
+    },
+    {
+      "poolId": "broker_broker_accept_less_g",
+      "lines": [
+        "Hm… Na gut, es geht. Gib deine {GOLD} Münzen her und verpiss dich.",
+        "Wenig, aber heute bin ich gnädig. Gib {GOLD} Münzen und du kannst gehen.",
+        "Tss, armselige Summe… Na gut, her mit den {GOLD} Münzen.",
+        "Zufrieden bin ich nicht, aber meinetwegen. Gib {GOLD} Münzen her.",
+        "Gut, du hast mich überredet. {GOLD} Münzen und wir sind quitt.",
+        "Für so ein paar Kröten sage ich normalerweise nein… aber heute drücke ich ein Auge zu. Gib das Geld.",
+        "Na los, gib deine {GOLD} Münzen her und verschwinde schnell.",
+        "Hehe, willst billig davonkommen… Gut, wirf {GOLD} Münzen rüber.",
+        "Hätte besser sein können, aber es reicht. Gib {GOLD} Münzen her und verpiss dich.",
+        "Abgemacht. {GOLD} Münzen und ich rühre dich nicht mehr an. Her damit."
+      ]
+    },
+    {
+      "poolId": "broker_broker_body_topup_h",
+      "lines": [
+        "Gut, gib deine {GOLD} Münzen… aber den Rest zahlst du mit deinem Körper, Schlampe.",
+        "Zu wenig. Gib jetzt {GOLD} Münzen her, den Rest arbeitest du auf den Knien ab.",
+        "Hehe, lächerliche Summe. Gib {GOLD} Münzen, den Unterschied hole ich mir mit deiner Fotze.",
+        "Geht nicht. Gib deine {GOLD} Münzen, den Rest zahlst du mit deinem Körper ab.",
+        "Viel zu wenig. Gib was du hast — {GOLD} Münzen, den Rest mit Mund und gespreizten Beinen.",
+        "Ich bin kein Wohltäter. Wirf {GOLD} Münzen rüber, den Rest zahlst du mit gespreizten Beinen.",
+        "Na gut, ich nehme deine paar Kröten… {GOLD} Münzen her. Den Rest stöhnst du unter mir ab.",
+        "Nicht zufriedenstellend. Gib {GOLD} Münzen, den Rest ficke ich mir aus dir raus.",
+        "Zu wenig. Viel zu wenig. Gib {GOLD} Münzen, den Rest zahlst du mit deinem Loch.",
+        "Gut, ich nehme {GOLD} Münzen… aber den Rest gibst du mir mit deinem Körper zurück. Und glaub mir, ich nehme mir alles."
+      ]
+    },
+    {
+      "poolId": "broker_pc_refuse_body_i",
+      "lines": [
+        "Der Betrag reicht dir nicht? Dann verpiss dich. Meinen Körper bekommst du ganz sicher nicht.",
+        "Steck dir dein Geld in den Arsch. Meinen Körper fasst du nicht an.",
+        "Träum weiter. Weder Geld noch meinen Körper bekommst du.",
+        "Ich sagte nur Geld. Mein Körper ist nicht zu verkaufen und wird nie dir gehören.",
+        "Mit dem Körper bezahlen? Fick dich. Ich sterbe lieber hier.",
+        "Bist du völlig bescheuert? Für kein Geld der Welt bekommst du meinen Körper.",
+        "Angebot abgelehnt. Ich bin keine Hure, die mit ihrer Fotze bezahlt.",
+        "Vergiss es. Lieber sterbe ich, als mich unter so einen Abschaum wie dich zu legen.",
+        "Mit dir ficken? Ich beiße dir lieber die Kehle durch. Verpiss dich.",
+        "Keine einzige Stelle meines Körpers wirst du berühren. Nicht zufrieden? Dann hau ab."
+      ]
+    },
+    {
+      "poolId": "broker_pc_body_yes_j",
+      "lines": [
+        "…Gut. Ich bin einverstanden. Mach es nur schnell und tu mir nicht weh.",
+        "Ich habe keine Wahl… Ich mache, was du willst. Aber nur einmal.",
+        "Okay… Ich bezahle mit meinem Körper. Lass es uns schnell hinter uns bringen.",
+        "Wenn es keinen anderen Weg gibt… Ich bin einverstanden. Aber versprich, dass du mich danach gehen lässt.",
+        "Verdammt… Gut. Ich gebe dir meinen Körper. Aber nicht zu grob, bitte.",
+        "Ich… ich bin einverstanden, anders zu bezahlen. Aber ohne zu viel Demütigung.",
+        "Du hast gewonnen. Ich mache, was du willst… Aber beeil dich.",
+        "Ich habe nicht genug Geld… Deshalb… bin ich einverstanden. Aber ich werde dich dafür hassen.",
+        "Gut… Ich bezahle mit meinem Körper. Aber danach lässt du mich sofort gehen.",
+        "Ich will das nicht… aber wenn es keinen anderen Weg gibt, dann… bin ich einverstanden. Mach, was du vorhattest."
+      ]
+    },
+    {
+      "poolId": "broker_broker_body_ok_k",
+      "lines": [
+        "Braves Mädchen… Kluge Entscheidung.",
+        "Na also. Ich wusste, dass du vernünftig wirst.",
+        "Mmm, artig. Komm her, hab keine Angst.",
+        "Richtige Entscheidung, Schönheit. Jetzt machen wir ein richtiges Geschäft.",
+        "Hehe, jetzt reden wir dieselbe Sprache. Brave kleine Schlampe.",
+        "Gut gemacht. Du lernst schnell.",
+        "Ausgezeichnet… Ich liebe es, wenn Mädchen gehorsam werden.",
+        "Kluges Mädchen. Du hast dir gerade das Leben deutlich erleichtert.",
+        "So ist es besser. Komm näher, lass mich nicht warten.",
+        "Gute Wahl. Jetzt gefällst du mir viel besser."
+      ]
+    },
+    {
+      "poolId": "broker_pc_negotiate_other_m",
+      "lines": [
+        "Ich habe nicht so viel Geld… Können wir uns nicht anders einigen?",
+        "Diese Summe kann ich nicht zahlen. Gibt es einen anderen Weg?",
+        "Ich habe nicht genug Geld… Können wir eine andere Lösung finden?",
+        "Ich habe nur {GOLD} Münzen. Können wir anders verhandeln?",
+        "So viel kann ich nicht geben… Lass uns andere Bedingungen besprechen.",
+        "So viel Geld habe ich nicht… Gibt es eine andere Zahlungsart?",
+        "Ich habe nicht genug Münzen. Kann ich etwas anderes anbieten?",
+        "Ich würde zahlen, aber ich habe nicht genug… Geht es auch anders?",
+        "Zu wenig Geld… Können wir uns anders einigen?",
+        "Ich habe nicht die volle Summe… Lass uns eine andere Lösung finden?"
+      ]
+    },
+    {
+      "poolId": "broker_broker_entertain_offer_n",
+      "lines": [
+        "Geld ist schön, aber mit so einer süßen Kleinen würde ich mich lieber vergnügen. Zahlst du mit deinem Körper?",
+        "Hehe, die Münzen nehme ich so oder so… Aber wenn du umsonst durch willst — lass uns ein bisschen Erwachsenenspaß haben.",
+        "Nicht genug Geld? Kein Problem. Ich kenne eine andere Zahlungsweise. Beine breit und ich lasse dich durch.",
+        "Statt dem armseligen Geld gib mir lieber deinen Körper. Wir spielen ein bisschen, dann darfst du gehen.",
+        "Heute bin ich gut gelaunt. Du musst nicht mit Geld bezahlen… wenn du mich richtig unterhältst.",
+        "Geld oder deine Fotze — such es dir aus. Ich will mich hier ordentlich mit dir amüsieren.",
+        "Zu wenig Münzen? Dann so: Du machst mich richtig glücklich, und ich vergesse das Geld.",
+        "Mit so einer schönen Schlampe würde ich mich gerne vergnügen. Gib dich mir hin und der Weg ist frei.",
+        "Nicht genug Geld? Kein Ding. Leg dich unter mich und gib dir Mühe — dann sind wir quitt.",
+        "Weißt du, Geld ist langweilig. Aber wenn du mich mit deinem Körper richtig unterhältst… werde ich sehr großzügig."
+      ]
+    },
+    {
+      "poolId": "broker_pc_soft_agree_o",
+      "lines": [
+        "…Gut. Ich bin einverstanden.",
+        "Okay… ich mache, was du willst.",
+        "Gut… ich gebe mich hin.",
+        "Ich bin einverstanden… aber nicht zu grob.",
+        "Gut. Ich werde gehorsam sein."
+      ]
+    },
+    {
+      "poolId": "broker_pc_soft_refuse_p",
+      "lines": [
+        "Bitte… nicht. Ich bin nicht bereit dafür.",
+        "Lieber mit Geld… ich will das wirklich nicht.",
+        "Tut mir leid, aber so kann ich nicht bezahlen.",
+        "Ich will das wirklich nicht… Geht es nicht anders?",
+        "Nein… bitte nicht. Ich habe Angst."
+      ]
+    },
+    {
+      "poolId": "broker_broker_take_anyway_q",
+      "lines": [
+        "Hehe, du denkst, du hast eine Wahl? Ich nehme mir sowieso, was ich will.",
+        "Du kannst ruhig ablehnen. Ich nehme mir Geld und deinen Körper. So macht es noch mehr Spaß.",
+        "Wehr dich so viel du willst. Am Ende ficke ich dich trotzdem, wie ich will.",
+        "Ist mir egal, was du sagst. Heute gehörst du mir. Das ist beschlossen.",
+        "Bettel und flehe — ist mir scheißegal. Was mir gefällt, das nehme ich mir.",
+        "Du denkst, du kannst Nein sagen? Dummes Ding. Ich nehme mir immer, was ich will.",
+        "Wehr dich ruhig weiter. Das macht mich nur geiler. Am Ende liegst du trotzdem unter mir.",
+        "Du kommst hier nicht weg. Ich nehme mir alles — dein Geld und deine Fotze.",
+        "Du brauchst nichts mehr vorzuschlagen. Ich habe mich entschieden. Und ich werde es mir nehmen.",
+        "Gespräch beendet. Ich ficke dich sowieso. Die einzige Frage ist, ob du dich wehrst und Prügel beziehst."
+      ]
+    },
+    {
+      "poolId": "broker_pc_rage_r",
+      "lines": [
+        "Ich schneide dich in zwei Hälften! Weg von meinem Weg, du Bastard!",
+        "Verpiss dich! Noch einen Schritt und ich reiße dir das Herz raus!",
+        "Hältst du mich für blöd?! Ich zerfetze dich in Stücke!",
+        "Aus dem Weg, Abschaum! Sonst verteile ich dein Hirn auf dem Boden!",
+        "Ich schneide dich in Streifen, du Vieh!",
+        "Verpiss dich, bevor ich dir die Augen aussteche, du Missgeburt!",
+        "Du glaubst wirklich, du kannst mich aufhalten?! Ich schicke dich ins Grab!",
+        "Weg von meinem Weg, bevor ich dir jeden Knochen breche!",
+        "Ich bin wütend, Abschaum! Noch ein Wort und du verreckst unter Qualen!",
+        "Verrecke, du Sau! Ich reiße dich jetzt in Stücke!"
+      ]
+    },
+    {
+      "poolId": "broker_broker_rage_defiant_t",
+      "lines": [
+        "Hahahaha! Na komm, versuch’s, du verrückte Schlampe. Mal sehen, wer wen in Stücke schneidet.",
+        "Oh, was für eine Wut… Das macht mich nur geiler. Na los, greif an.",
+        "Du drohst mir? Mutig. Diese ganze Wut ficke ich dir zusammen mit deinen Schreien aus dem Leib.",
+        "Schneid mich doch, wenn du kannst, du Hure. Währenddessen ficke ich dich bewusstlos.",
+        "So aggressiv… Gut. Solche wilden Katzen breche ich besonders gerne.",
+        "Du dachtest, du machst mir Angst? Ich ficke dich so hart, dass deine ganze Wut zu Tränen und Stöhnen wird.",
+        "Schrei weiter, das gefällt mir. Je wütender du wirst, desto härter ficke ich dich.",
+        "Du drohst, mich aufzuschlitzen? Niedlich. Ich breche dir die Arme, bevor du das Messer ziehen kannst.",
+        "So richtig wütend… Perfekt. Dich zu zähmen und zu ficken wird besonders geil.",
+        "Schrei und droh nur… Am Ende kniest du trotzdem mit meinem Schwanz im Mund, Schlampe."
+      ]
+    },
+    {
+      "poolId": "broker_broker_rage_scared_s",
+      "lines": [
+        "Schon gut, schon gut! Nicht! Geh durch, ich tu dir nichts, beruhig dich!",
+        "Oh Scheiße… Beruhig dich, ich hab’s verstanden! Geh, geh, ich mach nichts!",
+        "Nicht schneiden! Okay, okay, du kannst passieren! Geh, wohin du willst!",
+        "Du bist eine Psychopathin… Gut, hau ab! Ich will keinen Ärger, geh schon!",
+        "Okay, okay! Komm nicht näher! Der Weg gehört dir, ich gehe zurück!",
+        "Verdammt… Ich hab’s kapiert, du bist gefährlich. Geh schon, ich lass dich in Ruhe!",
+        "Beruhige dich, bitte! Ich lasse dich durch, greif mich nur nicht an!",
+        "Ich ergebe mich! Geh durch, ich hab wirklich Angst vor dir! Los!",
+        "Nicht so wütend… Ich lasse dich passieren. Geh deinen Weg, bitte.",
+        "Verfluchte Verrückte! Geh! Ich will nicht wegen so einem Scheiß sterben!"
+      ]
+    },
+    {
+      "poolId": "broker_pc_mindbroken_seduce_u",
+      "lines": [
+        "Wenn du mich gehen lässt… kann ich dafür sorgen, dass es dir sehr gut geht.",
+        "Du willst mich? Ich kann sehr gehorsam sein, wenn du nett bist…",
+        "Ich sehe, wie du mich anschaust… Vielleicht machen wir statt Drohungen etwas Angenehmeres?",
+        "Ich weiß, was du willst… Lass es mich dir geben.",
+        "Sei nicht grob… Ich kann mich dir freiwillig hingeben, du wirst es nicht bereuen.",
+        "Du willst Spaß? Ich bin bereit. Sag mir einfach, wie du mich willst.",
+        "Du kannst mich nehmen… Wenn du sanft bist, bin ich zärtlich und nass für dich.",
+        "Du willst dieses Mädchen? Dann zeige ich dir, wozu ich fähig bin.",
+        "Ich bin es leid, mich zu wehren… Lieber mache ich dich richtig glücklich.",
+        "Schau mich an… Wenn du willst, werde ich sofort dein gehorsames Spielzeug."
+      ]
+    },
+    {
+      "poolId": "broker_broker_mindbroken_reply_v",
+      "lines": [
+        "«Oh? Du bietest dich selbst an? Na sieh mal einer an… Zeig mir, was du drauf hast, Schlampe.»",
+        "«Ha! Jetzt reden wir dieselbe Sprache. Auf die Knie und beweis, dass du nicht lügst.»",
+        "«Sanft, sagst du? Na gut, heute bin ich gnädig. Aber wenn du lügst — wirst du es bereuen.»",
+        "«Ich sehe, du bist schon feucht. Gut… Zieh dich aus und zeig mir, wie sehr du es willst.»",
+        "«Gehorsames Spielzeug? Perfekt. Dreh dich um, Arsch hoch und schön durchbiegen.»",
+        "«Du kannst gut betteln, Schlampe. Los, verwöhn mich. Wenn du es gut machst — lasse ich dich vielleicht gehen.»",
+        "«Hör sich einer das an… Gut, zeig mir, wie „zärtlich und nass“ du bist.»",
+        "«Kein Widerstand mehr? Braves Mädchen. Kriech her und nimm ihn in den Mund, dann sehen wir, wie gehorsam du bist.»",
+        "«Du willst dich freiwillig hingeben? Mutig. Beine breit, ich prüfe, ob du ehrlich bist.»",
+        "«Gutes Mädchen. Wenn du so nett bittest — dann ficke ich dich heute ordentlich durch.»"
+      ]
+    },
+    {
+      "poolId": "broker_pc_walk_ignore",
+      "lines": [
+        "Ich drehe um und gehe. Ich will keinen Ärger.",
+        "Gut… ich gehe einfach weiter. Vergessen wir einander.",
+        "Entschuldigung für die Störung. Ich verschwinde.",
+        "Ich will keinen Streit. Ich gehe ruhig weiter.",
+        "Vergiss, dass ich hier war. Ich gehe.",
+        "Ich muss weiter. Ich werde Sie nicht stören.",
+        "Gut, ich gehe. Beenden wir dieses Gespräch.",
+        "Ich trete einfach zurück. Folgen Sie mir nicht.",
+        "Kein Drama — ich gehe meinen Weg.",
+        "Ich bestehe nicht darauf. Wir sehen uns nie wieder — ich gehe."
+      ]
+    },
+    {
+      "poolId": "broker_walk_away",
+      "lines": [
+        "Gut, geh schon. Bis dann.",
+        "Na schön, geh deinen Weg. Für den Moment lasse ich dich in Ruhe.",
+        "Okay, passier. Aber lass dich nur nicht nochmal erwischen.",
+        "Schon gut, schon gut, verzieh dich. Bis vielleicht.",
+        "Gut, geh. Heute bin ich großzügig — beim nächsten Mal weiß man nicht.",
+        "Okay, pass durch. Bis dann.",
+        "Geh schon. Kein Groll, vorerst.",
+        "Gut, geh. Ich bleib hier stehen, du weiter.",
+        "Okay, ich lasse dich gehen. Aber ärgere mich beim nächsten Mal nicht.",
+        "Tschüss. Und guck, wo du hintrittst."
+      ]
+    }
+  ]
+}

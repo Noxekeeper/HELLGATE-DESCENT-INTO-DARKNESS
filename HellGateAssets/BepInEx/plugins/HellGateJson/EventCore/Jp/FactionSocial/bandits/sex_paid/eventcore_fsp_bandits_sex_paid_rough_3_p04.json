@@ -1,0 +1,8 @@
+{
+  "speakerLabel": "野盗",
+  "stepId": "fsp_sex_rough_3_p04",
+  "stepKind": "continue",
+  "continueOutcomeId": "noop",
+  "continueNextStepId": "fsp_sex_paid_grant_h",
+  "npcLine": "気に入ったか？ もっとキツくしてやる。"
+}

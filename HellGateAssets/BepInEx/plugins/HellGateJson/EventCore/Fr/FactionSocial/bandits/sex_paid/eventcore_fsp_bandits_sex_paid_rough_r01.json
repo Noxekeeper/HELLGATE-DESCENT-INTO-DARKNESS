@@ -1,0 +1,8 @@
+{
+  "speakerLabel": "Bandit",
+  "stepId": "fsp_sex_rough_r01",
+  "stepKind": "continue",
+  "continueOutcomeId": "noop",
+  "continueNextStepId": "fsp_sex_rough_c02",
+  "npcLinePoolId": "fsp_sex_rough_react"
+}

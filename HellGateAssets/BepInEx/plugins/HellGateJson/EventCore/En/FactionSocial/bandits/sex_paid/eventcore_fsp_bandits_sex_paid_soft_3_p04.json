@@ -1,0 +1,8 @@
+{
+  "speakerLabel": "Bandit",
+  "stepId": "fsp_sex_soft_3_p04",
+  "stepKind": "continue",
+  "continueOutcomeId": "noop",
+  "continueNextStepId": "fsp_sex_paid_grant_h",
+  "npcLine": "He pins you to the wall, but his hand doesn't choke you — it steadies you. \"See? Let's go — I'll pay.\""
+}

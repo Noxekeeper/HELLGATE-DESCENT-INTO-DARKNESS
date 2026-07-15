@@ -1,0 +1,8 @@
+{
+  "speakerLabel": "도적",
+  "stepId": "fsp_sex_refuse_c_p03",
+  "stepKind": "continue",
+  "continueOutcomeId": "noop",
+  "continueNextStepId": "fsp_sex_refuse_c_p04",
+  "npcLine": "뻔뻔하냐? 그런 게 더 좋아."
+}

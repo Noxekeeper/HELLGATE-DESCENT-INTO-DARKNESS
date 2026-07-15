@@ -1,0 +1,24 @@
+{
+  "speakerLabel": "野盗",
+  "stepId": "fsp_sex_refuse_c02",
+  "stepKind": "choice",
+  "choiceLabels": [
+    "また別の日に。",
+    "本気よ。放っておいて。",
+    "図々しすぎ。",
+    "行かせて。"
+  ],
+  "choiceOutcomeIds": [
+    "noop",
+    "noop",
+    "noop",
+    "noop"
+  ],
+  "choiceJumpStepIds": [
+    "fsp_sex_refuse_a_p03",
+    "fsp_sex_refuse_b_p03",
+    "fsp_sex_refuse_c_p03",
+    "fsp_sex_refuse_d_p03"
+  ],
+  "npcLine": "よし、強制はしない。はっきり言え——行くのか、まだ話すのか？"
+}

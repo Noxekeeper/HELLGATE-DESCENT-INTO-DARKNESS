@@ -1,0 +1,8 @@
+{
+  "speakerLabel": "Бандит",
+  "stepId": "fsp_sex_hesitate_1a_p03",
+  "stepKind": "continue",
+  "continueOutcomeId": "noop",
+  "continueNextStepId": "fsp_sex_hesitate_1b_p04",
+  "npcLine": "Не ожидала? Я прямой. Решай — да или нет."
+}

@@ -1,0 +1,3 @@
+# WhiteCathedralRooftop — HOSTAGE (keys: SPAWN_TEMPLATE_KEYS.txt; cache: AVAILABLE_SPAWN_TEMPLATES_RUNTIME.txt)
+# _re_Scenename: WhiteCathedralRooftop | F11+ПКМ — hot-reload
+

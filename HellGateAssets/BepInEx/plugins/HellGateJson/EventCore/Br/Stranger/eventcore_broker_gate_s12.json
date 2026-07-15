@@ -1,0 +1,8 @@
+{
+  "stepId": "broker_rage_scared",
+  "stepKind": "continue",
+  "speakerLabel": "Estranho",
+  "npcLinePoolId": "broker_broker_rage_scared_s",
+  "continueNextStepId": "broker_pass_done",
+  "choiceLabels": []
+}

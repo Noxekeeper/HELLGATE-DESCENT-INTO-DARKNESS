@@ -1,0 +1,8 @@
+{
+  "speakerLabel": "Bandido",
+  "stepId": "fsp_sex_money_3_p04",
+  "stepKind": "continue",
+  "continueOutcomeId": "noop",
+  "continueNextStepId": "fsp_sex_paid_grant_h",
+  "npcLine": "Intentaré no alargarlo. {SEX_PRICE} monedas son tuyas — vamos."
+}

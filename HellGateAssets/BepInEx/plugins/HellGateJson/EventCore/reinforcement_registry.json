@@ -1,0 +1,7 @@
+{
+  "enabled": true,
+  "checkIntervalSeconds": 0.25,
+  "discoverAnchorsFromSpawnPoint": true,
+  "eventFoldersAllowed": ["boss_reinf_touzoku"],
+  "eventSceneContains": ""
+}

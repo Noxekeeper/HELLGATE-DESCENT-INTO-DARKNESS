@@ -1,0 +1,8 @@
+{
+  "speakerLabel": "Bandit",
+  "stepId": "fsp_sex_money_5_p04",
+  "stepKind": "continue",
+  "continueOutcomeId": "noop",
+  "continueNextStepId": "fsp_sex_paid_grant_h",
+  "npcLine": "Here's {SEX_PRICE} coins. Happy? Then let's go."
+}

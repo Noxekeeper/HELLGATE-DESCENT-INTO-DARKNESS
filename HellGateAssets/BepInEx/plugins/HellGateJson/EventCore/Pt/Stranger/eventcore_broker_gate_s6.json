@@ -1,0 +1,18 @@
+{
+  "stepId": "broker_body_choice",
+  "stepKind": "choice",
+  "speakerLabel": "",
+  "npcLine": "",
+  "choicePoolIds": [
+    "broker_pc_body_yes_j",
+    "broker_pc_refuse_body_i"
+  ],
+  "choiceOutcomeIds": [
+    "accept_body",
+    "refuse_body"
+  ],
+  "choiceJumpStepIds": [
+    "broker_body_ok",
+    "broker_force_take"
+  ]
+}

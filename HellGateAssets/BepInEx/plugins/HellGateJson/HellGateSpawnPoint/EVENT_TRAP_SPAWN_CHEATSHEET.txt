@@ -1,0 +1,183 @@
+# =============================================================================
+# HELLGATE — словарь событий спавна (EventTrap / Reinforcement / Modal EventCore)
+# =============================================================================
+# Этот файл НЕ выполняется игрой — только подсказка для авторов spawn-файлов.
+# Живые карты: HellGateSpawn_<Location>.txt
+# F11 + ЛКМ — записать координату; F11 + ПКМ — hot-reload.
+#
+# Полный RU-гайд: docs/SpawnSystem/SPAWN_SYSTEM_COMMUNITY_RU.md
+# EventTrap/Reinforcement EN: docs/EventTrap_Setup_Guide.md, docs/Reinforcement_Setup_Guide.md
+# =============================================================================
+
+
+## 1. Форматы строк
+
+### KO-зоны (EventTrap / Reinforcement)
+
+  EVENTTRAP,<packFolder>,<x>,<y>
+  REINFORCEMENT,<packFolder>,<x>,<y>
+
+Отдельный anchorId НЕ нужен — id генерируется автоматически из pack + координат.
+Имя события = имя пака (packFolder).
+
+### Модальные события EventCore (NPC + диалог)
+
+  X,Y,EnemyType|ec_event=<eventId>,Count
+  X,Y,EnemyType|faction=<id>|ec_event=<eventId>,Count
+  X,Y,EnemyType|ec_pool=<eventA>,<eventB>,Count
+
+Сокращение: |ec=<eventId>  (= |ec_event=)
+При загрузке зоны сразу спавнится 1 NPC; модалка открывается при подходе.
+
+
+## 2. Что происходит в игре
+
+EVENTTRAP:
+  - Вход в зону → мысли Арадии (event_trap_gate/phrases.json)
+  - Боевой нокдаун в зоне → засада (НЕ H-сцена / grab)
+  - До 3 волн за сессию на одну точку
+
+REINFORCEMENT:
+  - Только боевой нокдаун в зоне (без мыслей)
+  - Подкрепление с обеих сторон, 1–3 врага
+  - До 3 волн за сессию
+
+МОДАЛКА (ec_event):
+  - NPC спавнится при загрузке зоны (обычная строка врага + |ec_event=)
+  - Подход к NPC → модальное окно (пошлина / переговоры / FSP)
+  - Нокдаун-зона НЕ нужна
+  - broker: при враждебном исходе → засада 4N + 4Axe
+  - sex_paid: социальное FSP-событие, без KO-засады
+
+
+## 3. Два шаблона поведения
+
+### Шаблон A — «touzoku» (узкая ловушка, радиус 5)
+  - Зона подозрения и засады: 5
+  - 1 враг, спавн справа (+X), дистанция 6
+  - Задержка засады: 0 с
+  - Мысли Арадии: да
+
+### Шаблон B — «undead» (широкая зона, радиус 12)
+  - Зона подозрения и засады: 12
+  - 1 враг, фланговый offset 1
+  - Задержка засады: 1 с
+  - Мысли Арадии: да
+
+
+## 4. Все доступные паки — копировать в spawn-файл
+
+Формат:  КОМАНДА,packFolder,X,Y  — подставьте свои координаты.
+
+
+### REINFORCEMENT (подкрепление при нокдауне)
+
+  boss_reinf_touzoku
+    Враги: TouzokuNormal или TouzokuAxe (случайно)
+    Кол-во: 1–3, обе стороны, радиус 8, фракция bandits
+    Пример:
+      REINFORCEMENT,boss_reinf_touzoku,1.57,-123.50
+
+
+### EVENTTRAP — шаблон A (радиус 5, 1 враг справа)
+
+  etrap_touzoku_touzokuaxe
+    Враги: TouzokuNormal или TouzokuAxe (случайно), фракция bandits
+    Пример:
+      EVENTTRAP,etrap_touzoku_touzokuaxe,-111.86,-124.50
+
+  etrap_dorei           → Dorei
+  etrap_goblin          → Goblin
+  etrap_kakasi          → Kakasi
+  etrap_mafiabosscustom → MafiaBossCustom
+  etrap_mafia           → Mafia
+  etrap_mutude          → Mutude
+  etrap_prisonofficer   → PrisonOfficer
+  etrap_slaughterer     → Slaughterer
+  etrap_vagrant         → Vagrant
+  etrap_bigonibrother   → BigoniBrother
+
+  Пример (любой враг из списка):
+      EVENTTRAP,etrap_goblin,<X>,<Y>
+      EVENTTRAP,etrap_prisonofficer,<X>,<Y>
+
+
+### EVENTTRAP — шаблон B (радиус 12, задержка 1 с)
+
+  etrap_undead
+    Враг: Undead
+    Пример:
+      EVENTTRAP,etrap_undead,1195.55,-285.69
+
+
+### MODAL EventCore — модальные NPC-события
+
+Активны в EventCore/eventcore_manifest.json.
+Включить: [EventCore] Enable = true
+
+  eventcore_broker_gate
+    Хост: TouzokuNormal (или другой EnemyType)
+    Пошлина 500 gold, переговоры, Rage, MindBroken
+    Враждебный исход → 4× TouzokuNormal + 4× TouzokuAxe
+    Пример:
+      623.54,-286.95,TouzokuNormal|ec_event=eventcore_broker_gate,1
+
+  eventcore_fsp_bandits_sex_paid
+    Хост: бандит (TouzokuNormal / TouzokuAxe / Vagrant …)
+    Обязательно: |faction=bandits
+    FSP sex_paid: MB + репутация bandits; consent grab; despawn после H
+    Подход ≤ 1.5 юнитов
+    Пример:
+      -118.0,-135.0,TouzokuNormal|ec_event=eventcore_fsp_bandits_sex_paid,1
+      -118.0,-135.0,TouzokuAxe|ec_event=eventcore_fsp_bandits_sex_paid,1
+
+  Случайный event из пула (на одной точке):
+      620.0,-287.0,TouzokuNormal|ec_pool=eventcore_broker_gate,eventcore_fsp_bandits_sex_paid,1
+
+
+## 5. Быстрый выбор — что ставить на карте
+
+  Узкий коридор / дерево / засада сбоку     → etrap_<враг>  (шаблон A)
+  Открытая зона / лес / несколько точек     → etrap_undead  (шаблон B) или etrap_<враг>
+  Зона босса / подкрепление при падении     → boss_reinf_touzoku
+  NPC-брокер (пошлина / засада)             → |ec_event=eventcore_broker_gate
+  NPC-бандит FSP sex_paid                   → |ec_event=eventcore_fsp_bandits_sex_paid
+
+  Визуал ловушки (проп, НЕ логика):
+      TRAP,woodwana,<X>,<Y>,1
+
+
+## 6. Включение в конфиге
+
+  [EventCore] Enable = true                      ← модалки (broker, sex_paid)
+  [EventCore] EventTrapEncountersEnable = true   ← EVENTTRAP
+  [EventCore] ReinforcementEncountersEnable = true ← REINFORCEMENT
+
+Whitelist KO: EventCore/event_trap_registry.json, reinforcement_registry.json
+Модалки: EventCore/eventcore_manifest.json
+
+
+## 7. Устаревшие имена (НЕ использовать)
+
+  boss_reinforcement_touzoku        → boss_reinf_touzoku
+  etrap_touzoku_touzokuaxe_ontree   → etrap_touzoku_touzokuaxe
+  firstmap_01_boss_reinf_touzoku    → не нужен (короткий формат)
+  forest_01_etrap_undead            → не нужен (короткий формат)
+
+
+## 8. Чеклист — новая точка на карте
+
+KO-ловушка (EVENTTRAP / REINFORCEMENT):
+  1. F11 + ЛКМ — взять X,Y
+  2. Выбрать packFolder из раздела 4
+  3. Вставить строку в HellGateSpawn_<Map>.txt
+  4. F11 + ПКМ — reload
+  5. Зайти в зону, получить боевой нокдаун — проверить спавн
+
+Модалка (broker / sex_paid):
+  1. F11 + ЛКМ — взять X,Y
+  2. Строка: X,Y,EnemyType|ec_event=<id>,1
+  3. F11 + ПКМ — reload
+  4. Подойти к NPC (≤ 1.5 юнитов) — проверить модальное окно
+
+# =============================================================================

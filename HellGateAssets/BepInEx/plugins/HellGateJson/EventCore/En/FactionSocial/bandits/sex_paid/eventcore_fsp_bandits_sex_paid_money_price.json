@@ -1,0 +1,8 @@
+{
+  "speakerLabel": "Bandit",
+  "stepId": "fsp_sex_money_price",
+  "stepKind": "continue",
+  "continueOutcomeId": "noop",
+  "continueNextStepId": "fsp_sex_money_after_price",
+  "npcLine": "{SEX_PRICE} coins. And I'll fuck you good."
+}

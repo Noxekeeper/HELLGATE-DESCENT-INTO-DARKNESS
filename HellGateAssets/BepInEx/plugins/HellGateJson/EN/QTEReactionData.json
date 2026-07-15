@@ -1,0 +1,293 @@
+{
+  "settings": {
+    "correctPressChance": 0.5,
+    "wrongPressChance": 0.5,
+    "comboMilestoneChance": 1.0,
+    "cooldownSeconds": 2.0,
+    "minComboForReaction": 1
+  },
+  "correctPress": {
+    "dominant": [
+      "You will be my toy...",
+      "I'll break you anyway...",
+      "You'll break...",
+      "Resistance is futile, you'll be our toy...",
+      "Be a good girl, I'll let you live...",
+      "I love when they resist, I love breaking them...",
+      "Your resistance only arouses me...",
+      "You can't hold on much longer...",
+      "Soon you'll break completely...",
+      "Your will melts with every movement...",
+      "You're already on the edge... just a bit more...",
+      "Your body betrays you...",
+      "You want this... admit it...",
+      "Give up... it's inevitable...",
+      "You can't run away from me...",
+      "Your struggle is useless...",
+      "I'll break you to the end...",
+      "You belong to me...",
+      "Accept your fate...",
+      "You're already mine..."
+    ],
+    "taunting": [
+      "Haha, the whore is trying to break free...",
+      "Calm down bitch, you're finished...",
+      "Don't resist, or it will hurt...",
+      "You think you can break free? Funny...",
+      "Keep struggling... it only arouses me...",
+      "Your struggle is amusing... but useless...",
+      "You're weak... give up already...",
+      "Your resistance only strengthens my desire...",
+      "Keep going... I love breaking stubborn ones...",
+      "You won't give up? Good... this will be more interesting...",
+      "Your will is impressive... but it's not eternal...",
+      "I'll wait... until you break...",
+      "You're persistent... but I'm patient...",
+      "Keep struggling... it's amusing...",
+      "You're incredible... but even you will break..."
+    ],
+    "sexual": [
+      "You're so wet... your body betrays you...",
+      "Your resistance only excites me...",
+      "You want this... I can see...",
+      "Your body tells the truth...",
+      "You're already on the edge of pleasure...",
+      "Give in to pleasure... it's easier...",
+      "Your struggle only intensifies the sensations...",
+      "You can't hide your desire...",
+      "Your body belongs to me...",
+      "Accept the pleasure... stop resisting...",
+      "You've almost given up already...",
+      "Your will weakens... your body is stronger...",
+      "You can't resist the pleasure...",
+      "Your body betrays you with every movement...",
+      "Give up... and you'll get more..."
+    ]
+  },
+  "wrongPress": {
+    "punishment": [
+      "Aah...!",
+      "Nghh...!",
+      "No... it hurts...!",
+      "Aahh... I can't...!",
+      "Ughh... so tired...!",
+      "Aah... wrong...!",
+      "Nghh... can't take it...!",
+      "Aahh... no...!",
+      "Ughh... no strength...!",
+      "Aah... not like this...!",
+      "Nghh... can't do this anymore...!",
+      "Aahh... tired...!",
+      "Ughh... wrong...!",
+      "Aah... not strong enough...!",
+      "Nghh... no...!"
+    ],
+    "dominant": [
+      "Aah... I can't...!",
+      "Nghh... can't take it...!",
+      "No... I lost...!",
+      "Ughh... can't handle it...!",
+      "Aahh... I give up...!",
+      "Nghh... no strength...!",
+      "Aah... can't resist...!",
+      "Ughh... I lost...!",
+      "Aahh... broken...!",
+      "Nghh... can't take any more...!",
+      "Aah... no... not like this...!",
+      "Ughh... I can't...!",
+      "Aahh... tired... no strength...!",
+      "Nghh... can't handle it...!",
+      "Aah... I lost...!"
+    ],
+    "sexual": [
+      "Mmmh... no...!",
+      "Aah... I can't...!",
+      "Nghh... tired...!",
+      "Ughh... not like this...!",
+      "Aahh... can't take it...!",
+      "Mmmh... wrong...!",
+      "Aah... no strength...!",
+      "Nghh... can't do this anymore...!",
+      "Ughh... I give up...!",
+      "Aahh... no... I can't...!",
+      "Mmmh... tired...!",
+      "Aah... not like this... wrong...!",
+      "Nghh... no strength to resist...!",
+      "Ughh... I can't...!",
+      "Aahh... I lost...!"
+    ],
+    "threatening": [
+      "Aah... scared...!",
+      "Nghh... no...!",
+      "Ughh... I can't...!",
+      "Aahh... afraid...!",
+      "Nghh... can't take it...!",
+      "Aah... wrong...!",
+      "Ughh... tired...!",
+      "Aahh... no... not like this...!",
+      "Nghh... no strength...!",
+      "Aah... can't do this anymore...!",
+      "Ughh... I lost...!",
+      "Aahh... I give up...!",
+      "Nghh... can't handle it...!",
+      "Aah... no... wrong...!",
+      "Ughh... can't take it...!"
+    ]
+  },
+  "comboMilestone": {
+    "x10": [
+      "You're holding on... but not for long...",
+      "Your will is strong... but not eternal...",
+      "Keep going... it only arouses me...",
+      "You're persistent... but I'm patient...",
+      "Your resistance is impressive... but useless...",
+      "Keep struggling... I love breaking stubborn ones...",
+      "You won't give up? Good... this will be more interesting...",
+      "Your will is impressive... but it's not eternal...",
+      "I'll wait... until you break...",
+      "You're incredible... but even you will break..."
+    ],
+    "x20": [
+      "You're persistent... but I'm patient...",
+      "Your resistance only strengthens my desire...",
+      "Keep struggling... it's amusing...",
+      "You won't give up? Perfect... this will last longer...",
+      "Your will is strong... but I'm stronger...",
+      "Keep going... I love breaking ones like you...",
+      "You think you can win? Funny...",
+      "Your struggle only arouses me...",
+      "I'll break you to the end...",
+      "You won't give up? Good... this will hurt more..."
+    ],
+    "x30": [
+      "You're incredible... but even you will break...",
+      "Your will is impressive... but it's not eternal...",
+      "I'll wait... until you give up...",
+      "You're persistent... but I'm patient... and cruel...",
+      "Keep struggling... it only strengthens my desire...",
+      "You won't give up? Perfect... this will be more interesting...",
+      "Your struggle is amusing... but useless...",
+      "I'll break you until complete submission...",
+      "You won't win... give up already...",
+      "Your will is strong... but I'm stronger... and more patient..."
+    ],
+    "x40": [
+      "You're incredibly persistent... but even you will break...",
+      "Your will is impressive... but I'll break it...",
+      "I'll wait... until you give up completely...",
+      "You won't give up? Good... this will hurt more and last longer...",
+      "Your struggle only strengthens my desire to break you...",
+      "Keep going... I love breaking such stubborn ones...",
+      "You think you can win? Funny... I'll break you...",
+      "Your will is strong... but I'm stronger... and more patient...",
+      "I'll break you until complete submission...",
+      "You won't win... give up already... it's inevitable..."
+    ],
+    "x50": [
+      "You're incredibly persistent... but even you will break...",
+      "Your will is impressive... but I'll break it completely...",
+      "I'll wait... until you give up completely...",
+      "You won't give up? Good... this will hurt more, last longer and be more cruel...",
+      "Your struggle only strengthens my desire to break you...",
+      "Keep going... I love breaking such stubborn whores...",
+      "You think you can win? Funny... I'll break you to the end...",
+      "Your will is strong... but I'm stronger... more patient... and more cruel...",
+      "I'll break you until complete submission... you'll be my toy...",
+      "You won't win... give up already... it's inevitable... you're already mine..."
+    ]
+  },
+  "enemySpecific": {
+    "Mutude": {
+      "correctPress": [
+        "You will be my toy...",
+        "Your resistance is useless against me...",
+        "I'll break you..."
+      ],
+      "wrongPress": [
+        "Aah... I can't...!",
+        "Nghh... wrong...!",
+        "Ughh... tired...!",
+        "Aahh... can't take it...!"
+      ]
+    },
+    "Touzoku": {
+      "correctPress": [
+        "You'll be our toy, thief...",
+        "Resistance is futile, you're ours...",
+        "We'll break you..."
+      ],
+      "wrongPress": [
+        "Aah... no...!",
+        "Nghh... I can't...!",
+        "Ughh... wrong...!",
+        "Aahh... tired...!"
+      ]
+    },
+    "TouzokuAxe": {
+      "correctPress": [
+        "You will be my toy...",
+        "The axe won't help you escape...",
+        "I'll break you..."
+      ],
+      "wrongPress": [
+        "Aah... not like this...!",
+        "Nghh... I can't...!",
+        "Ughh... no strength...!",
+        "Aahh... wrong...!"
+      ]
+    },
+    "SinnerslaveCrossbow": {
+      "correctPress": [
+        "You will be my slave...",
+        "Resistance is futile, slave...",
+        "I'll break you, slave..."
+      ],
+      "wrongPress": [
+        "Aah... I can't...!",
+        "Nghh... no...!",
+        "Ughh... tired...!",
+        "Aahh... can't take it...!"
+      ]
+    },
+    "Kakasi": {
+      "correctPress": [
+        "You will be my toy, kakasi...",
+        "Resistance is futile...",
+        "I'll break you..."
+      ],
+      "wrongPress": [
+        "Aah... wrong...!",
+        "Nghh... I can't...!",
+        "Ughh... no strength...!",
+        "Aahh... tired...!"
+      ]
+    },
+    "Goblin": {
+      "correctPress": [
+        "You will be my toy...",
+        "Resistance is futile...",
+        "I'll break you..."
+      ],
+      "wrongPress": [
+        "Aah... not like this...!",
+        "Nghh... I can't...!",
+        "Ughh... wrong...!",
+        "Aahh... no strength...!"
+      ]
+    },
+    "BlackInquisitor": {
+      "correctPress": [
+        "You will be my toy, heretic...",
+        "Resistance is futile, heretic...",
+        "I'll break you, heretic..."
+      ],
+      "wrongPress": [
+        "Aah... I can't...!",
+        "Nghh... tired...!",
+        "Ughh... wrong...!",
+        "Aahh... can't take it...!"
+      ]
+    }
+  }
+}
+

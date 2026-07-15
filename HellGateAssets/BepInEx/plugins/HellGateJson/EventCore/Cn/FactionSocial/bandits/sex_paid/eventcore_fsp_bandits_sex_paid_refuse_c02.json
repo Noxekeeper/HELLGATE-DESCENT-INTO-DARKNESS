@@ -1,0 +1,24 @@
+{
+  "speakerLabel": "匪徒",
+  "stepId": "fsp_sex_refuse_c02",
+  "stepKind": "choice",
+  "choiceLabels": [
+    "改天吧。",
+    "我是认真的。滚开。",
+    "你太嚣张了。",
+    "放我走。"
+  ],
+  "choiceOutcomeIds": [
+    "noop",
+    "noop",
+    "noop",
+    "noop"
+  ],
+  "choiceJumpStepIds": [
+    "fsp_sex_refuse_a_p03",
+    "fsp_sex_refuse_b_p03",
+    "fsp_sex_refuse_c_p03",
+    "fsp_sex_refuse_d_p03"
+  ],
+  "npcLine": "行，不逼你。说清楚——走，还是继续谈？"
+}

@@ -1,0 +1,8 @@
+{
+  "speakerLabel": "野盗",
+  "stepId": "fsp_sex_rough_1_p04",
+  "stepKind": "continue",
+  "continueOutcomeId": "noop",
+  "continueNextStepId": "fsp_sex_paid_grant_h",
+  "npcLine": "叫べ、もっと荒くしてやる。行くぞ。"
+}

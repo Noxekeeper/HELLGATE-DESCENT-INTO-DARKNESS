@@ -1,0 +1,292 @@
+{
+  "settings": {
+    "correctPressChance": 0.5,
+    "wrongPressChance": 0.5,
+    "comboMilestoneChance": 1.0,
+    "cooldownSeconds": 2.0,
+    "minComboForReaction": 1
+  },
+  "correctPress": {
+    "dominant": [
+      "Serás mi juguete...",
+      "Te romperé de todas formas...",
+      "Te romperás...",
+      "La resistencia es inútil, serás nuestro juguete...",
+      "Sé buena, te dejaré vivir...",
+      "Me encanta cuando resisten, me encanta romperlas...",
+      "Tu resistencia solo me excita...",
+      "No puedes aguantar mucho más...",
+      "Pronto te romperás por completo...",
+      "Tu voluntad se derrite con cada movimiento...",
+      "Ya estás al borde... solo un poco más...",
+      "Tu cuerpo te traiciona...",
+      "Quieres esto... admítelo...",
+      "Ríndete... es inevitable...",
+      "No puedes huir de mí...",
+      "Tu lucha es inútil...",
+      "Te romperé hasta el final...",
+      "Me perteneces...",
+      "Acepta tu destino...",
+      "Ya eres mía..."
+    ],
+    "taunting": [
+      "Ja ja, la puta intenta liberarse...",
+      "Cálmate perra, estás acabada...",
+      "No te resistas, o dolerá...",
+      "¿Crees que puedes liberarte? Gracioso...",
+      "Sigue luchando... solo me excita...",
+      "Tu lucha es divertida... pero inútil...",
+      "Eres débil... ríndete ya...",
+      "Tu resistencia solo fortalece mi deseo...",
+      "Sigue... me encanta romper a las obstinadas...",
+      "¿No te rindes? Bien... será más interesante...",
+      "Tu voluntad es impresionante... pero no es eterna...",
+      "Esperaré... hasta que te rompas...",
+      "Eres persistente... pero yo soy paciente...",
+      "Sigue luchando... es divertido...",
+      "Eres increíble... pero incluso tú te romperás..."
+    ],
+    "sexual": [
+      "Estás tan húmeda... tu cuerpo te traiciona...",
+      "Tu resistencia solo me excita...",
+      "Quieres esto... lo veo...",
+      "Tu cuerpo dice la verdad...",
+      "Ya estás al borde del placer...",
+      "Entrégate al placer... es más fácil...",
+      "Tu lucha solo intensifica las sensaciones...",
+      "No puedes ocultar tu deseo...",
+      "Tu cuerpo me pertenece...",
+      "Acepta el placer... deja de resistirte...",
+      "Ya casi te rendiste...",
+      "Tu voluntad se debilita... tu cuerpo es más fuerte...",
+      "No puedes resistir el placer...",
+      "Tu cuerpo te traiciona con cada movimiento...",
+      "Ríndete... y tendrás más..."
+    ]
+  },
+  "wrongPress": {
+    "punishment": [
+      "¡Aah...!",
+      "¡Nghh...!",
+      "¡No... duele...!",
+      "¡Aahh... no puedo...!",
+      "¡Ughh... tan cansada...!",
+      "¡Aah... mal...!",
+      "¡Nghh... no aguanto...!",
+      "¡Aahh... no...!",
+      "¡Ughh... sin fuerza...!",
+      "¡Aah... así no...!",
+      "¡Nghh... no puedo más...!",
+      "¡Aahh... cansada...!",
+      "¡Ughh... mal...!",
+      "¡Aah... no soy lo bastante fuerte...!",
+      "¡Nghh... no...!"
+    ],
+    "dominant": [
+      "¡Aah... no puedo...!",
+      "¡Nghh... no aguanto...!",
+      "¡No... perdí...!",
+      "¡Ughh... no lo soporto...!",
+      "¡Aahh... me rindo...!",
+      "¡Nghh... sin fuerza...!",
+      "¡Aah... no puedo resistir...!",
+      "¡Ughh... perdí...!",
+      "¡Aahh... rota...!",
+      "¡Nghh... no aguanto más...!",
+      "¡Aah... no... así no...!",
+      "¡Ughh... no puedo...!",
+      "¡Aahh... cansada... sin fuerza...!",
+      "¡Nghh... no lo soporto...!",
+      "¡Aah... perdí...!"
+    ],
+    "sexual": [
+      "¡Mmmh... no...!",
+      "¡Aah... no puedo...!",
+      "¡Nghh... cansada...!",
+      "¡Ughh... así no...!",
+      "¡Aahh... no aguanto...!",
+      "¡Mmmh... mal...!",
+      "¡Aah... sin fuerza...!",
+      "¡Nghh... no puedo más...!",
+      "¡Ughh... me rindo...!",
+      "¡Aahh... no... no puedo...!",
+      "¡Mmmh... cansada...!",
+      "¡Aah... así no... mal...!",
+      "¡Nghh... sin fuerza para resistir...!",
+      "¡Ughh... no puedo...!",
+      "¡Aahh... perdí...!"
+    ],
+    "threatening": [
+      "¡Aah... miedo...!",
+      "¡Nghh... no...!",
+      "¡Ughh... no puedo...!",
+      "¡Aahh... asustada...!",
+      "¡Nghh... no aguanto...!",
+      "¡Aah... mal...!",
+      "¡Ughh... cansada...!",
+      "¡Aahh... no... así no...!",
+      "¡Nghh... sin fuerza...!",
+      "¡Aah... no puedo más...!",
+      "¡Ughh... perdí...!",
+      "¡Aahh... me rindo...!",
+      "¡Nghh... no lo soporto...!",
+      "¡Aah... no... mal...!",
+      "¡Ughh... no aguanto...!"
+    ]
+  },
+  "comboMilestone": {
+    "x10": [
+      "Te aguantas... pero no por mucho...",
+      "Tu voluntad es fuerte... pero no eterna...",
+      "Sigue... solo me excita...",
+      "Eres persistente... pero yo soy paciente...",
+      "Tu resistencia es impresionante... pero inútil...",
+      "Sigue luchando... me encanta romper obstinadas...",
+      "¿No te rindes? Bien... será más interesante...",
+      "Tu voluntad es impresionante... pero no es eterna...",
+      "Esperaré... hasta que te rompas...",
+      "Eres increíble... pero incluso tú te romperás..."
+    ],
+    "x20": [
+      "Eres persistente... pero yo soy paciente...",
+      "Tu resistencia solo fortalece mi deseo...",
+      "Sigue luchando... es divertido...",
+      "¿No te rindes? Perfecto... durará más...",
+      "Tu voluntad es fuerte... pero yo soy más fuerte...",
+      "Sigue... me encanta romper a las como tú...",
+      "¿Crees que puedes ganar? Gracioso...",
+      "Tu lucha solo me excita...",
+      "Te romperé hasta el final...",
+      "¿No te rindes? Bien... dolerá más..."
+    ],
+    "x30": [
+      "Eres increíble... pero incluso tú te romperás...",
+      "Tu voluntad es impresionante... pero no es eterna...",
+      "Esperaré... hasta que te rindas...",
+      "Eres persistente... pero yo soy paciente... y cruel...",
+      "Sigue luchando... solo fortalece mi deseo...",
+      "¿No te rindes? Perfecto... será más interesante...",
+      "Tu lucha es divertida... pero inútil...",
+      "Te romperé hasta la sumisión total...",
+      "No ganarás... ríndete ya...",
+      "Tu voluntad es fuerte... pero yo soy más fuerte... y más paciente..."
+    ],
+    "x40": [
+      "Eres increíblemente persistente... pero incluso tú te romperás...",
+      "Tu voluntad es impresionante... pero la romperé...",
+      "Esperaré... hasta que te rindas por completo...",
+      "¿No te rindes? Bien... dolerá más y durará más...",
+      "Tu lucha solo fortalece mi deseo de romperte...",
+      "Sigue... me encanta romper a obstinadas así...",
+      "¿Crees que puedes ganar? Gracioso... te romperé...",
+      "Tu voluntad es fuerte... pero yo soy más fuerte... y más paciente...",
+      "Te romperé hasta la sumisión total...",
+      "No ganarás... ríndete ya... es inevitable..."
+    ],
+    "x50": [
+      "Eres increíblemente persistente... pero incluso tú te romperás...",
+      "Tu voluntad es impresionante... pero la romperé por completo...",
+      "Esperaré... hasta que te rindas por completo...",
+      "¿No te rindes? Bien... dolerá más, durará más y será más cruel...",
+      "Tu lucha solo fortalece mi deseo de romperte...",
+      "Sigue... me encanta romper putas tan obstinadas...",
+      "¿Crees que puedes ganar? Gracioso... te romperé hasta el final...",
+      "Tu voluntad es fuerte... pero yo soy más fuerte... más paciente... y más cruel...",
+      "Te romperé hasta la sumisión total... serás mi juguete...",
+      "No ganarás... ríndete ya... es inevitable... ya eres mía..."
+    ]
+  },
+  "enemySpecific": {
+    "Mutude": {
+      "correctPress": [
+        "Serás mi juguete...",
+        "Tu resistencia es inútil contra mí...",
+        "Te romperé..."
+      ],
+      "wrongPress": [
+        "¡Aah... no puedo...!",
+        "¡Nghh... mal...!",
+        "¡Ughh... cansada...!",
+        "¡Aahh... no aguanto...!"
+      ]
+    },
+    "Touzoku": {
+      "correctPress": [
+        "Serás nuestro juguete, ladrona...",
+        "La resistencia es inútil, eres nuestra...",
+        "Te romperemos..."
+      ],
+      "wrongPress": [
+        "¡Aah... no...!",
+        "¡Nghh... no puedo...!",
+        "¡Ughh... mal...!",
+        "¡Aahh... cansada...!"
+      ]
+    },
+    "TouzokuAxe": {
+      "correctPress": [
+        "Serás mi juguete...",
+        "El hacha no te ayudará a escapar...",
+        "Te romperé..."
+      ],
+      "wrongPress": [
+        "¡Aah... así no...!",
+        "¡Nghh... no puedo...!",
+        "¡Ughh... sin fuerza...!",
+        "¡Aahh... mal...!"
+      ]
+    },
+    "SinnerslaveCrossbow": {
+      "correctPress": [
+        "Serás mi esclava...",
+        "La resistencia es inútil, esclava...",
+        "Te romperé, esclava..."
+      ],
+      "wrongPress": [
+        "¡Aah... no puedo...!",
+        "¡Nghh... no...!",
+        "¡Ughh... cansada...!",
+        "¡Aahh... no aguanto...!"
+      ]
+    },
+    "Kakasi": {
+      "correctPress": [
+        "Serás mi juguete, kakasi...",
+        "La resistencia es inútil...",
+        "Te romperé..."
+      ],
+      "wrongPress": [
+        "¡Aah... mal...!",
+        "¡Nghh... no puedo...!",
+        "¡Ughh... sin fuerza...!",
+        "¡Aahh... cansada...!"
+      ]
+    },
+    "Goblin": {
+      "correctPress": [
+        "Serás mi juguete...",
+        "La resistencia es inútil...",
+        "Te romperé..."
+      ],
+      "wrongPress": [
+        "¡Aah... así no...!",
+        "¡Nghh... no puedo...!",
+        "¡Ughh... mal...!",
+        "¡Aahh... sin fuerza...!"
+      ]
+    },
+    "BlackInquisitor": {
+      "correctPress": [
+        "Serás mi juguete, hereje...",
+        "La resistencia es inútil, hereje...",
+        "Te romperé, hereje..."
+      ],
+      "wrongPress": [
+        "¡Aah... no puedo...!",
+        "¡Nghh... cansada...!",
+        "¡Ughh... mal...!",
+        "¡Aahh... no aguanto...!"
+      ]
+    }
+  }
+}

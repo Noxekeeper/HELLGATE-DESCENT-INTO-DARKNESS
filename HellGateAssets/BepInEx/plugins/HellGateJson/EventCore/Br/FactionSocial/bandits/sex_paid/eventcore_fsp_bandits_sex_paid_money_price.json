@@ -1,0 +1,8 @@
+{
+  "speakerLabel": "Bandido",
+  "stepId": "fsp_sex_money_price",
+  "stepKind": "continue",
+  "continueOutcomeId": "noop",
+  "continueNextStepId": "fsp_sex_money_after_price",
+  "npcLine": "{SEX_PRICE} moedas. E vou te foder bem."
+}

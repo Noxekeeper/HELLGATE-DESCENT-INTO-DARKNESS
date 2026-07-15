@@ -1,0 +1,9 @@
+{
+  "Enable": false,
+  "HeartbeatSec": 0.25,
+  "YDropWarnThreshold": 0.05,
+  "LogStackTraceOnSimulatedEnable": true,
+  "LogStackTraceOnStruggleInvul": true,
+  "WatchAllTraps": true,
+  "MaxLogsPerSession": 2000
+}

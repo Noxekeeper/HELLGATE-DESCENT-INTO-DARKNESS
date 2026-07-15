@@ -1,0 +1,8 @@
+{
+  "speakerLabel": "Bandido",
+  "stepId": "fsp_sex_rough_4_p04",
+  "stepKind": "continue",
+  "continueOutcomeId": "noop",
+  "continueNextStepId": "fsp_sex_paid_grant_h",
+  "npcLine": "Vamos, bruxa — não demora."
+}

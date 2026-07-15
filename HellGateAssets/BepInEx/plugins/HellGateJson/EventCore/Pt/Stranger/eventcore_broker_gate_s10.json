@@ -1,0 +1,18 @@
+{
+  "stepId": "broker_neg_soft_choice",
+  "stepKind": "choice",
+  "speakerLabel": "",
+  "npcLine": "",
+  "choicePoolIds": [
+    "broker_pc_soft_agree_o",
+    "broker_pc_soft_refuse_p"
+  ],
+  "choiceOutcomeIds": [
+    "soft_agree",
+    "soft_refuse"
+  ],
+  "choiceJumpStepIds": [
+    "broker_body_ok",
+    "broker_force_take"
+  ]
+}

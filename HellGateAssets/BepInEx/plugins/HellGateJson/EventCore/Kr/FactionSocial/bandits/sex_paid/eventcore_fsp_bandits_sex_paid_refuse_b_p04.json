@@ -1,0 +1,8 @@
+{
+  "speakerLabel": "도적",
+  "stepId": "fsp_sex_refuse_b_p04",
+  "stepKind": "continue",
+  "continueOutcomeId": "noop",
+  "continueNextStepId": "fsp_sex_paid_close",
+  "npcLine": "쯧…… 아깝네. 뭐, 어쩔 수 없지."
+}

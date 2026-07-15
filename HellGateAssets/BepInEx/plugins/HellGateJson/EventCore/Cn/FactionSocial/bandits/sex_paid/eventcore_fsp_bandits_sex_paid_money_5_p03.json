@@ -1,0 +1,8 @@
+{
+  "speakerLabel": "匪徒",
+  "stepId": "fsp_sex_money_5_p03",
+  "stepKind": "continue",
+  "continueOutcomeId": "noop",
+  "continueNextStepId": "fsp_sex_money_5_p04",
+  "npcLine": "对。先金子——再老子。"
+}

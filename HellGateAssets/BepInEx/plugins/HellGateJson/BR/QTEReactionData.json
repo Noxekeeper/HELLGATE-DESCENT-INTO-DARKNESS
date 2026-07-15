@@ -1,0 +1,293 @@
+{
+  "settings": {
+    "correctPressChance": 0.5,
+    "wrongPressChance": 0.5,
+    "comboMilestoneChance": 1.0,
+    "cooldownSeconds": 2.0,
+    "minComboForReaction": 1
+  },
+  "correctPress": {
+    "dominant": [
+      "Você será meu brinquedo...",
+      "Vou te quebrar de qualquer forma...",
+      "Você vai quebrar...",
+      "Resistência é inútil, você será nosso brinquedo...",
+      "Seja uma boa garota, vou deixar você viver...",
+      "Adoro quando elas resistem, adoro quebrá-las...",
+      "Sua resistência só me excita...",
+      "Você não consegue aguentar muito mais...",
+      "Logo você vai quebrar completamente...",
+      "Sua vontade derrete a cada movimento...",
+      "Você já está no limite... só mais um pouco...",
+      "Seu corpo te trai...",
+      "Você quer isso... admita...",
+      "Desista... é inevitável...",
+      "Você não pode fugir de mim...",
+      "Sua luta é inútil...",
+      "Vou te quebrar até o fim...",
+      "Você me pertence...",
+      "Aceite seu destino...",
+      "Você já é minha..."
+    ],
+    "taunting": [
+      "Haha, a puta está tentando se libertar...",
+      "Se acalme, vadia, você está acabada...",
+      "Não resista, ou vai doer...",
+      "Acha que pode se libertar? Engraçado...",
+      "Continue lutando... só me excita...",
+      "Sua luta é divertida... mas inútil...",
+      "Você é fraca... desista logo...",
+      "Sua resistência só fortalece meu desejo...",
+      "Continue... adoro quebrar as teimosas...",
+      "Não vai desistir? Bom... isso será mais interessante...",
+      "Sua vontade é impressionante... mas não é eterna...",
+      "Vou esperar... até você quebrar...",
+      "Você é persistente... mas eu sou paciente...",
+      "Continue lutando... é divertido...",
+      "Você é incrível... mas até você vai quebrar..."
+    ],
+    "sexual": [
+      "Você está tão molhada... seu corpo te trai...",
+      "Sua resistência só me excita...",
+      "Você quer isso... posso ver...",
+      "Seu corpo fala a verdade...",
+      "Você já está no limite do prazer...",
+      "Ceda ao prazer... é mais fácil...",
+      "Sua luta só intensifica as sensações...",
+      "Você não pode esconder seu desejo...",
+      "Seu corpo me pertence...",
+      "Aceite o prazer... pare de resistir...",
+      "Você quase já desistiu...",
+      "Sua vontade enfraquece... seu corpo é mais forte...",
+      "Você não pode resistir ao prazer...",
+      "Seu corpo te trai a cada movimento...",
+      "Desista... e você receberá mais..."
+    ]
+  },
+  "wrongPress": {
+    "punishment": [
+      "Aah...!",
+      "Nghh...!",
+      "Não... dói...!",
+      "Aahh... não consigo...!",
+      "Ughh... tão cansada...!",
+      "Aah... errado...!",
+      "Nghh... não aguento...!",
+      "Aahh... não...!",
+      "Ughh... sem força...!",
+      "Aah... não assim...!",
+      "Nghh... não consigo mais...!",
+      "Aahh... cansada...!",
+      "Ughh... errado...!",
+      "Aah... não forte o suficiente...!",
+      "Nghh... não...!"
+    ],
+    "dominant": [
+      "Aah... não consigo...!",
+      "Nghh... não aguento...!",
+      "Não... perdi...!",
+      "Ughh... não consigo lidar...!",
+      "Aahh... desisto...!",
+      "Nghh... sem força...!",
+      "Aah... não consigo resistir...!",
+      "Ughh... perdi...!",
+      "Aahh... quebrada...!",
+      "Nghh... não aguento mais...!",
+      "Aah... não... não assim...!",
+      "Ughh... não consigo...!",
+      "Aahh... cansada... sem força...!",
+      "Nghh... não consigo lidar...!",
+      "Aah... perdi...!"
+    ],
+    "sexual": [
+      "Mmmh... não...!",
+      "Aah... não consigo...!",
+      "Nghh... cansada...!",
+      "Ughh... não assim...!",
+      "Aahh... não aguento...!",
+      "Mmmh... errado...!",
+      "Aah... sem força...!",
+      "Nghh... não consigo mais...!",
+      "Ughh... desisto...!",
+      "Aahh... não... não consigo...!",
+      "Mmmh... cansada...!",
+      "Aah... não assim... errado...!",
+      "Nghh... sem força para resistir...!",
+      "Ughh... não consigo...!",
+      "Aahh... perdi...!"
+    ],
+    "threatening": [
+      "Aah... com medo...!",
+      "Nghh... não...!",
+      "Ughh... não consigo...!",
+      "Aahh... com medo...!",
+      "Nghh... não aguento...!",
+      "Aah... errado...!",
+      "Ughh... cansada...!",
+      "Aahh... não... não assim...!",
+      "Nghh... sem força...!",
+      "Aah... não consigo mais...!",
+      "Ughh... perdi...!",
+      "Aahh... desisto...!",
+      "Nghh... não consigo lidar...!",
+      "Aah... não... errado...!",
+      "Ughh... não aguento...!"
+    ]
+  },
+  "comboMilestone": {
+    "x10": [
+      "Você está aguentando... mas não por muito tempo...",
+      "Sua vontade é forte... mas não é eterna...",
+      "Continue... só me excita...",
+      "Você é persistente... mas eu sou paciente...",
+      "Sua resistência é impressionante... mas inútil...",
+      "Continue lutando... adoro quebrar as teimosas...",
+      "Não vai desistir? Bom... isso será mais interessante...",
+      "Sua vontade é impressionante... mas não é eterna...",
+      "Vou esperar... até você quebrar...",
+      "Você é incrível... mas até você vai quebrar..."
+    ],
+    "x20": [
+      "Você é persistente... mas eu sou paciente...",
+      "Sua resistência só fortalece meu desejo...",
+      "Continue lutando... é divertido...",
+      "Não vai desistir? Perfeito... isso vai durar mais...",
+      "Sua vontade é forte... mas eu sou mais forte...",
+      "Continue... adoro quebrar pessoas como você...",
+      "Acha que pode vencer? Engraçado...",
+      "Sua luta só me excita...",
+      "Vou te quebrar até o fim...",
+      "Não vai desistir? Bom... isso vai doer mais..."
+    ],
+    "x30": [
+      "Você é incrível... mas até você vai quebrar...",
+      "Sua vontade é impressionante... mas não é eterna...",
+      "Vou esperar... até você desistir...",
+      "Você é persistente... mas eu sou paciente... e cruel...",
+      "Continue lutando... só fortalece meu desejo...",
+      "Não vai desistir? Perfeito... isso será mais interessante...",
+      "Sua luta é divertida... mas inútil...",
+      "Vou te quebrar até submissão completa...",
+      "Você não vai vencer... desista logo...",
+      "Sua vontade é forte... mas eu sou mais forte... e mais paciente..."
+    ],
+    "x40": [
+      "Você é incrivelmente persistente... mas até você vai quebrar...",
+      "Sua vontade é impressionante... mas vou quebrá-la...",
+      "Vou esperar... até você desistir completamente...",
+      "Não vai desistir? Bom... isso vai doer mais e durar mais...",
+      "Sua luta só fortalece meu desejo de te quebrar...",
+      "Continue... adoro quebrar as tão teimosas...",
+      "Acha que pode vencer? Engraçado... vou te quebrar...",
+      "Sua vontade é forte... mas eu sou mais forte... e mais paciente...",
+      "Vou te quebrar até submissão completa...",
+      "Você não vai vencer... desista logo... é inevitável..."
+    ],
+    "x50": [
+      "Você é incrivelmente persistente... mas até você vai quebrar...",
+      "Sua vontade é impressionante... mas vou quebrá-la completamente...",
+      "Vou esperar... até você desistir completamente...",
+      "Não vai desistir? Bom... isso vai doer mais, durar mais e ser mais cruel...",
+      "Sua luta só fortalece meu desejo de te quebrar...",
+      "Continue... adoro quebrar putas tão teimosas...",
+      "Acha que pode vencer? Engraçado... vou te quebrar até o fim...",
+      "Sua vontade é forte... mas eu sou mais forte... mais paciente... e mais cruel...",
+      "Vou te quebrar até submissão completa... você será meu brinquedo...",
+      "Você não vai vencer... desista logo... é inevitável... você já é minha..."
+    ]
+  },
+  "enemySpecific": {
+    "Mutude": {
+      "correctPress": [
+        "Você será meu brinquedo...",
+        "Sua resistência é inútil contra mim...",
+        "Vou te quebrar..."
+      ],
+      "wrongPress": [
+        "Aah... não consigo...!",
+        "Nghh... errado...!",
+        "Ughh... cansada...!",
+        "Aahh... não aguento...!"
+      ]
+    },
+    "Touzoku": {
+      "correctPress": [
+        "Você será nosso brinquedo, ladra...",
+        "Resistência é inútil, você é nossa...",
+        "Vamos te quebrar..."
+      ],
+      "wrongPress": [
+        "Aah... não...!",
+        "Nghh... não consigo...!",
+        "Ughh... errado...!",
+        "Aahh... cansada...!"
+      ]
+    },
+    "TouzokuAxe": {
+      "correctPress": [
+        "Você será meu brinquedo...",
+        "O machado não vai te ajudar a escapar...",
+        "Vou te quebrar..."
+      ],
+      "wrongPress": [
+        "Aah... não assim...!",
+        "Nghh... não consigo...!",
+        "Ughh... sem força...!",
+        "Aahh... errado...!"
+      ]
+    },
+    "SinnerslaveCrossbow": {
+      "correctPress": [
+        "Você será minha escrava...",
+        "Resistência é inútil, escrava...",
+        "Vou te quebrar, escrava..."
+      ],
+      "wrongPress": [
+        "Aah... não consigo...!",
+        "Nghh... não...!",
+        "Ughh... cansada...!",
+        "Aahh... não aguento...!"
+      ]
+    },
+    "Kakasi": {
+      "correctPress": [
+        "Você será meu brinquedo, kakasi...",
+        "Resistência é inútil...",
+        "Vou te quebrar..."
+      ],
+      "wrongPress": [
+        "Aah... errado...!",
+        "Nghh... não consigo...!",
+        "Ughh... sem força...!",
+        "Aahh... cansada...!"
+      ]
+    },
+    "Goblin": {
+      "correctPress": [
+        "Você será meu brinquedo...",
+        "Resistência é inútil...",
+        "Vou te quebrar..."
+      ],
+      "wrongPress": [
+        "Aah... não assim...!",
+        "Nghh... não consigo...!",
+        "Ughh... errado...!",
+        "Aahh... sem força...!"
+      ]
+    },
+    "BlackInquisitor": {
+      "correctPress": [
+        "Você será meu brinquedo, herege...",
+        "Resistência é inútil, herege...",
+        "Vou te quebrar, herege..."
+      ],
+      "wrongPress": [
+        "Aah... não consigo...!",
+        "Nghh... cansada...!",
+        "Ughh... errado...!",
+        "Aahh... não aguento...!"
+      ]
+    }
+  }
+}
+

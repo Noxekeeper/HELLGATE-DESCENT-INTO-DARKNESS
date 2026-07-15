@@ -1,0 +1,1296 @@
+{
+  "settings": {
+    "responseDelayMin": 1.5,
+    "responseDelayMax": 2.5,
+    "fontSize": 22.0,
+    "verticalOffset": 100.0,
+    "displayDuration": 5.0
+  },
+  "animations": {
+    "START": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "Nein! Er packt mich an den Haaren! Es tut weh!",
+              "Ich kann nicht... er zerrt mich an den Haaren runter!",
+              "Meine Knie... schlagen auf den Boden... bitte hör auf!"
+            ],
+            "low": [
+              "Sein Griff... so rau... ich muss runtergehen...",
+              "Er zieht mich zu Boden... ich kann nicht widerstehen...",
+              "Die Kopfhaut schmerzt... Tränen in den Augen..."
+            ],
+            "medium_low": [
+              "Ich werde runtergezogen... muss nur gehorchen...",
+              "Seine Stärke... überwältigend... ich gebe nach...",
+              "Jetzt auf den Knien... wo er mich haben will..."
+            ],
+            "medium": [
+              "Er positioniert mich... ich weiß was kommt...",
+              "Sein Griff kontrolliert mich... ich akzeptiere es...",
+              "Runter auf die Knie... das ist jetzt mein Platz..."
+            ],
+            "medium_high": [
+              "Seine Hände in meinen Haaren... kommandieren mich...",
+              "Ich gehe für ihn runter... freiwillig...",
+              "Auf den Knien... wo ich hingehöre..."
+            ],
+            "high": [
+              "Ja... zieh an meinen Haaren... drück mich auf die Knie...",
+              "Seine starken Hände... führen mich runter...",
+              "Ich will hier sein... zu seinen Füßen..."
+            ],
+            "very_high": [
+              "Mmm... seine Hände in meinen Haaren fühlen sich so gut an!",
+              "Zieh mich runter, Meister! Ich bin dein!",
+              "Auf den Knien für dich... für immer!"
+            ]
+          }
+        },
+        {
+          "step": 2,
+          "delay": 1.0,
+          "thoughts": {
+            "very_low": [
+              "Oh Gott! Ein Messer! Er wird mich umbringen!",
+              "Die Klinge... so nah an meinem Hals... ich habe Angst!",
+              "Bitte schneid mich nicht! Ich mach alles!"
+            ],
+            "low": [
+              "Dieses Messer... eine falsche Bewegung und ich bin tot...",
+              "Ich spüre den kalten Stahl... ich zittere...",
+              "Er meint es ernst... er wird mich wirklich verletzen..."
+            ],
+            "medium_low": [
+              "Das Messer erinnert mich... ich habe keine Wahl...",
+              "Ich muss gehorchen... oder er benutzt es...",
+              "Angst hält mich still... gefügig..."
+            ],
+            "medium": [
+              "Die Klinge... ein Versprechen was passiert wenn ich ungehorsam bin...",
+              "Ich verstehe die Drohung... ich werde kooperieren...",
+              "Seine Waffe... seine Kontrolle über mich..."
+            ],
+            "medium_high": [
+              "Die Gefahr... lässt mein Herz rasen...",
+              "Sein Messer... eine Erinnerung an seine Macht...",
+              "Ich bin aufgeregt... und ängstlich... beides..."
+            ],
+            "high": [
+              "Die Klinge an meiner Haut... aufregend...",
+              "Ich liebe wie gefährlich sich das anfühlt...",
+              "Seine Waffe... seine Dominanz... ich brauche das..."
+            ],
+            "very_high": [
+              "Ja! Bedrohe mich mit deiner Klinge!",
+              "Die Gefahr macht mich so nass!",
+              "Schneid mich, verletz mich, gehör mir komplett!"
+            ]
+          }
+        },
+        {
+          "step": 3,
+          "delay": 1.5,
+          "thoughts": {
+            "very_low": [
+              "Nein! Er zieht es raus! Ich will nicht hinsehen!",
+              "Warum macht er... oh Gott... das kann nicht wahr sein!",
+              "Ich kann nicht schauen... aber er zwingt mich!"
+            ],
+            "low": [
+              "Er entblößt sich... direkt vor meinem Gesicht...",
+              "Ich weiß was er will... die Scham brennt...",
+              "Ich muss hinsehen... er zwingt mich..."
+            ],
+            "medium_low": [
+              "Sein Schwanz... direkt vor mir...",
+              "Ich sehe was kommt... ich muss es akzeptieren...",
+              "Das passiert... ob ich will oder nicht..."
+            ],
+            "medium": [
+              "Er zeigt mir was ich tun muss...",
+              "Sein Glied... ich soll es bedienen...",
+              "Ich verstehe... ich werde tun was er will..."
+            ],
+            "medium_high": [
+              "Sein Schwanz... er ist beeindruckend...",
+              "Ich bin neugierig... ein wenig interessiert...",
+              "Vielleicht wird das gar nicht so schlimm..."
+            ],
+            "high": [
+              "Mmm... er ist groß... ich mag was ich sehe...",
+              "Ich will ihn berühren... kosten...",
+              "Zeig mir mehr... ich bin bereit..."
+            ],
+            "very_high": [
+              "Ja! Dein wunderschöner Schwanz! Lass mich ihn anbeten!",
+              "Ich brauche ihn! Bitte lass mich!",
+              "Ich sabbere schon für dich!"
+            ]
+          }
+        },
+        {
+          "step": 4,
+          "delay": 2.0,
+          "thoughts": {
+            "very_low": [
+              "Eine Pistole! Gegen meine Brust! Er wird erschießen!",
+              "Ich spüre den Lauf... kaltes Metall... ich werde sterben!",
+              "Bitte! Ich mach alles was du willst! Nicht schießen!"
+            ],
+            "low": [
+              "Die Pistole gegen mich gedrückt... eine falsche Bewegung...",
+              "Er könnte abdrücken... ich wäre tot...",
+              "Ich bin völlig seiner Gnade ausgeliefert... verängstigt..."
+            ],
+            "medium_low": [
+              "Die Pistole... eine weitere Erinnerung an meine Position...",
+              "Ich bin hilflos... er kontrolliert mein Leben...",
+              "Gehorchen oder sterben... so einfach ist das..."
+            ],
+            "medium": [
+              "Seine Waffe gegen mich... ich verstehe perfekt...",
+              "Ich gehöre ihm jetzt... Leben oder Tod...",
+              "Ich werde tun was er sagt... ich habe keine Wahl..."
+            ],
+            "medium_high": [
+              "Die Pistole... gefährlich... aufregend...",
+              "Mein Herz pocht... vor Angst und Erregung...",
+              "Diese Macht über mich... ich fühle mich davon angezogen..."
+            ],
+            "high": [
+              "Ja... halt diese Pistole an mich... sie ist so heiß...",
+              "Die Gefahr... die Macht... ich liebe es...",
+              "Bedroh mich... dominiere mich... ich bin dein..."
+            ],
+            "very_high": [
+              "Drück ab oder fick mich! Beides macht mich zu deinem!",
+              "Die Pistole macht mich so nass! Benutz mich!",
+              "Ich will deine Macht spüren! Zerstör mich!"
+            ]
+          }
+        }
+      ]
+    },
+    "START2": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "Er sagt... fass ihn an oder er schießt!",
+              "Ich will nicht! Aber ich will nicht sterben!",
+              "Seine Worte sind so grausam... ich weine..."
+            ],
+            "low": [
+              "Ihm einen runterholen oder erschossen werden... keine echte Wahl...",
+              "Seine Stimme ist so kalt... kommandierend...",
+              "Ich muss es tun... um zu überleben..."
+            ],
+            "medium_low": [
+              "Seine Forderungen sind klar... gehorchen oder leiden...",
+              "Ich muss ihn befriedigen... es ist notwendig...",
+              "Überleben bedeutet Anpassung..."
+            ],
+            "medium": [
+              "Er will dass ich ihn streichle... ich verstehe...",
+              "Ich werde es tun... das hier hinter mich bringen...",
+              "Meine Hände... sein Schwanz... lass uns das einfach erledigen..."
+            ],
+            "medium_high": [
+              "Er sagt mir soll ihn berühren... okay...",
+              "Vielleicht wird es gar nicht so schlimm...",
+              "Ich bin ein wenig neugierig wie sich das anfühlt..."
+            ],
+            "high": [
+              "Er will meine Hände an ihm... das will ich auch...",
+              "Ich bin begierig ihn zu berühren... zu gefallen...",
+              "Ja, ich werde dich streicheln... gerne..."
+            ],
+            "very_high": [
+              "Kommandiere mich! Sag mir wie ich dir gefallen soll!",
+              "Ich muss deinen Schwanz berühren! Lass mich!",
+              "Ich werde alles tun was du sagst, Meister!"
+            ]
+          }
+        },
+        {
+          "step": 2,
+          "delay": 1.0,
+          "thoughts": {
+            "very_low": [
+              "Meine Hände... zittern während ich sie ausstrecke...",
+              "Ich kann nicht glauben dass ich das tue... es ist falsch!",
+              "Die Pistole... erinnert mich daran dass ich keine Wahl habe..."
+            ],
+            "low": [
+              "Ich berühre ihn... sein Schwanz ist so heiß...",
+              "Das ist erniedrigend... aber notwendig...",
+              "Ich muss streicheln... er beobachtet mich..."
+            ],
+            "medium_low": [
+              "Meine Hände an ihm... tun was er will...",
+              "Er ist warm... pulsiert in meinem Griff...",
+              "Nur mechanische Bewegungen... das hier durchstehen..."
+            ],
+            "medium": [
+              "Ich streichle ihn... es ist nicht so schlimm...",
+              "Sein Schwanz... pulsiert in meinen Händen...",
+              "Ich kann das... einfach konzentrieren..."
+            ],
+            "medium_high": [
+              "Er fühlt sich... interessant an in meinen Händen...",
+              "Ich bekomme den Rhythmus raus... er mag es...",
+              "Das ist irgendwie... nicht so schlimm..."
+            ],
+            "high": [
+              "Mmm... er ist so hart für mich...",
+              "Ich liebe es wie er in meinen Händen pulsiert...",
+              "Ich will ihn befriedigen... ihm gute Gefühle geben..."
+            ],
+            "very_high": [
+              "Dein Schwanz ist perfekt! So hart!",
+              "Ich liebe es dich zu streicheln! Gib mir mehr!",
+              "Lass mich deinen wunderschönen Schwanz anbeten!"
+            ]
+          }
+        },
+        {
+          "step": 3,
+          "delay": 1.5,
+          "thoughts": {
+            "very_low": [
+              "Er stöhnt... wird härter... mir wird übel...",
+              "Jeder Schlag lässt mich das mehr hassen...",
+              "Tränen fallen... aber ich kann nicht aufhören..."
+            ],
+            "low": [
+              "Er kommt bald... ich kann es sagen...",
+              "Die Scham... sie verschwindet nie...",
+              "Ich will nur dass das hier endet..."
+            ],
+            "medium_low": [
+              "Seine Atmung ändert sich... fast fertig...",
+              "Ich... nur... tun was nötig ist...",
+              "Bald ist dieser Teil vorbei..."
+            ],
+            "medium": [
+              "Er reagiert... ich mache es richtig...",
+              "Meine Hände bewegen sich weiter... automatisch jetzt...",
+              "Bringe ihn zum Kommen... das ist alles..."
+            ],
+            "medium_high": [
+              "Seine Grunzer... er genießt das...",
+              "Ich bin eigentlich gut darin...",
+              "Seine Lust... es ist nicht so schlimm sie zu verursachen..."
+            ],
+            "high": [
+              "Ja... fühl dich gut an durch meine Hände...",
+              "Ich liebe es deine Lust zu hören...",
+              "Ich will dich so sehr zum Kommen bringen..."
+            ],
+            "very_high": [
+              "Deine Stöhne sind Musik für mich!",
+              "Ich lasse dich dich amazing fühlen!",
+              "Komm für mich! Ich muss es sehen!"
+            ]
+          }
+        }
+      ]
+    },
+    "ERO": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "Nein! Nicht in meinen Mund! Bitte!",
+              "Er wird... ich kann das nicht!",
+              "Sein Schwanz an meinen Lippen... ich will weglaufen!"
+            ],
+            "low": [
+              "Er will meinen Mund... oh Gott...",
+              "Ich muss ihn nehmen... oder er verletzt mich...",
+              "Das ist so erniedrigend... aber ich muss..."
+            ],
+            "medium_low": [
+              "In meinen Mund... das ist was er will...",
+              "Ich werde es tun... das hier irgendwie durchstehen...",
+              "Einfach... aufmachen und nehmen..."
+            ],
+            "medium": [
+              "Er will Oral... ich verstehe...",
+              "Ich kann das tun... es ist nur eine weitere Handlung...",
+              "Lass mich... lass mich das für dich tun..."
+            ],
+            "medium_high": [
+              "Er will meinen Mund auf ihm... okay...",
+              "Vielleicht kann ich... vielleicht will ich es versuchen...",
+              "Sein Schwanz sieht... einladend aus..."
+            ],
+            "high": [
+              "Ja... ich will dich kosten...",
+              "Lass mich dich in meinen Mund nehmen...",
+              "Ich will dich auf diese Weise befriedigen..."
+            ],
+            "very_high": [
+              "Ich brauche deinen Schwanz in meinem Mund!",
+              "Bitte lass mich dich lutschen! Ich bettle!",
+              "Benutz meinen Hals! Ich bin deine Hülse!"
+            ]
+          }
+        }
+      ]
+    },
+    "ERO1": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "Er zwingt ihn rein! Ich kann nicht atmen!",
+              "Mein Hals... würgen... es tut so weh!",
+              "Er zieht an meinen Haaren! Rammt tiefer!"
+            ],
+            "low": [
+              "So tief... ich würg... Tränen strömen...",
+              "Ich muss entspannen... oder es wird mehr wehtun...",
+              "Er benutzt meinen Hals... verletzt mich..."
+            ],
+            "medium_low": [
+              "Tief in meinem Hals... ich kämpfe...",
+              "Ich muss atmen... aber er kümmert sich nicht...",
+              "Einfach aushalten... einfach überleben..."
+            ],
+            "medium": [
+              "Er fickt meinen Hals... es ist intensiv...",
+              "Ich versuche ihn unterzubringen...",
+              "Die Völlegefühl... überwältigend..."
+            ],
+            "medium_high": [
+              "So tief... ich lerne es zu nehmen...",
+              "Mein Hals... dehnt sich für ihn...",
+              "Die Empfindung... intensiv aber... interessant..."
+            ],
+            "high": [
+              "Ja... benutz meinen Hals... fick ihn hart...",
+              "Ich liebe es dich so tief zu fühlen...",
+              "Würg mich mit deinem Schwanz... bitte..."
+            ],
+            "very_high": [
+              "Zerstör meinen Hals! Fick ihn roh!",
+              "Ich muss nicht atmen! Benutz mich einfach!",
+              "Ruinier mich! Mach mich zu deiner Halsschlampe!"
+            ]
+          }
+        },
+        {
+          "step": 2,
+          "delay": 1.0,
+          "thoughts": {
+            "very_low": [
+              "Ich würg! Würg! Kann nicht atmen!",
+              "Speichel überall... hilflos sabbernd...",
+              "Bitte... lass mich atmen... nur für eine Sekunde!"
+            ],
+            "low": [
+              "Mein Hals brennt... gedehnt um ihn herum...",
+              "Tränen und Spucke... ich bin ein Durcheinander...",
+              "Das Würgen... ich kann es nicht kontrollieren..."
+            ],
+            "medium_low": [
+              "Ich sabbere... kann es nicht helfen...",
+              "Mein Hals... lernt ihn zu akzeptieren...",
+              "Einfach atmen wenn ich kann... überleben..."
+            ],
+            "medium": [
+              "Mein Mund ist so voll... komplett...",
+              "Speichel tropft... kann es nicht kontrollieren...",
+              "Ich manage... irgendwie..."
+            ],
+            "medium_high": [
+              "Das Durcheinander das ich mache... es ist okay...",
+              "Mein Hals... gewöhnt sich daran...",
+              "Ich kann es nehmen... ich kann ihn handhaben..."
+            ],
+            "high": [
+              "Ich liebe es ein sabberndes Durcheinander für dich zu sein...",
+              "Würg mich mehr... ich kann es nehmen...",
+              "Mein Hals gehört dir... benutz ihn..."
+            ],
+            "very_high": [
+              "Ich bin dein sabberndes Fickspielzeug!",
+              "Ruinier mich komplett! Keine Gnade!",
+              "Mein Hals existiert nur für deine Lust!"
+            ]
+          }
+        },
+        {
+          "step": 3,
+          "delay": 1.5,
+          "thoughts": {
+            "very_low": [
+              "Ich fühle mich als würde ich sterben... ersticken...",
+              "Der Schmerz... in meinem Kiefer... meinem Hals...",
+              "Wie viel länger... ich halte es nicht mehr aus!"
+            ],
+            "low": [
+              "Jeder Stoß tut weh... mein Kiefer schmerzt...",
+              "Ich... einfach... aushalten... warten dass es endet...",
+              "Die Erniedrigung... endlos..."
+            ],
+            "medium_low": [
+              "Mein Hals ist wund... aber ich mache weiter...",
+              "Nur noch ein bisschen... ich kann das...",
+              "Jetzt taub geworden... losgelöst..."
+            ],
+            "medium": [
+              "Der Rhythmus... ich folge ihm...",
+              "Mein Hals... passt sich seiner Größe an...",
+              "Ich tue was er braucht..."
+            ],
+            "medium_high": [
+              "Ich werde besser darin...",
+              "Mein Hals... für ihn gemacht...",
+              "Die Lust die ich gebe... befriedigend..."
+            ],
+            "high": [
+              "Benutz meinen Hals härter... ich liebe es...",
+              "Ich bin deine perfekte Halsschlampe...",
+              "Mehr... tiefer... ich brauche es..."
+            ],
+            "very_high": [
+              "Mein Hals ist deine Schwanzscheide!",
+              "Fick mich bis ich ohnmächtig werde!",
+              "Ich lebe um deine Halsmuschi zu sein!"
+            ]
+          }
+        }
+      ]
+    },
+    "ERO2": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "Er fickt mein Gesicht! Als wäre ich nichts!",
+              "Meine Wange wölbt sich... ich kann seinen Schwanz drin sehen!",
+              "Das ist Folter... reine Folter!"
+            ],
+            "low": [
+              "Er poundet meinen Mund... unerbittlich...",
+              "Meine Wange... um ihn herum gedehnt...",
+              "So erniedrigend... so benutzt zu werden..."
+            ],
+            "medium_low": [
+              "Gesichtsfick... ich bin nur ein Loch für ihn...",
+              "Mein Mund... nur für seine Lust...",
+              "Ich akzeptiere es... das bin ich jetzt..."
+            ],
+            "medium": [
+              "Er benutzt mein Gesicht... komplett...",
+              "Ich bin sein Spielzeug... sein Fickspielzeug...",
+              "Mein Mund existiert dafür..."
+            ],
+            "medium_high": [
+              "Er fickt mein Gesicht... es macht mir nichts aus...",
+              "So benutzt zu werden... es ist okay...",
+              "Ich bin seins zum benutzen... und das ist in Ordnung..."
+            ],
+            "high": [
+              "Ja! Fick mein Gesicht! Ich bin dein Spielzeug!",
+              "Benutz mich härter! Ich liebe es!",
+              "Mein Gesicht ist deins zum ruinieren!"
+            ],
+            "very_high": [
+              "Zerstör mein Gesicht! Mach mich zu deinem Cum-Dump!",
+              "Ich bin nichts als Löcher für dich!",
+              "Ruinier mich! Ich bin deine Gesichtsmuschi!"
+            ]
+          }
+        },
+        {
+          "step": 2,
+          "delay": 1.0,
+          "thoughts": {
+            "very_low": [
+              "Raus und wieder rein! Er sticht in meinen Hals!",
+              "Jeder Stoß... eine neue Verletzung...",
+              "Mir wird übel... ich kann nicht..."
+            ],
+            "low": [
+              "Rein und raus... brutaler Rhythmus...",
+              "Mein Mund ist nur... ein Werkzeug für ihn...",
+              "Die Tränen hören nicht auf zu fallen..."
+            ],
+            "medium_low": [
+              "Er zieht raus... dann wieder tief rein...",
+              "Ich schnappe nach Luft wenn ich kann...",
+              "Das ist mein Leben jetzt... einfach akzeptieren..."
+            ],
+            "medium": [
+              "Der Rhythmus... rein und raus... ich folge...",
+              "Mein Mund... bringt ihn unter...",
+              "Ich manage das... überlebe..."
+            ],
+            "medium_high": [
+              "Jeden Stoß... bin ich bereit für...",
+              "Rein und raus... ich werde gut darin...",
+              "Mein Mund... perfekt geformt für ihn..."
+            ],
+            "high": [
+              "Ja! Fick rein und raus! Ich liebe jeden Stoß!",
+              "Benutz meinen Mund wie eine Muschi!",
+              "Ich will jeden brutalen Stoß!"
+            ],
+            "very_high": [
+              "Stich in meinen Hals mit deinem Schwanz!",
+              "Fick mein Gesichtsloch! Zerstör es!",
+              "Ich bin deine geistlose Schwanzbuchse!"
+            ]
+          }
+        },
+        {
+          "step": 3,
+          "delay": 1.5,
+          "thoughts": {
+            "very_low": [
+              "Mein Kiefer... er wird brechen...",
+              "Der Schmerz... strahlt durch mein ganzes Gesicht...",
+              "Bitte... bitte werd einfach fertig..."
+            ],
+            "low": [
+              "Alles tut weh... Kiefer, Hals, Kopf...",
+              "Ich bin so müde... erschöpft...",
+              "Will nur dass es endet... bitte..."
+            ],
+            "medium_low": [
+              "Mein ganzes Gesicht schmerzt... aber ich mache weiter...",
+              "Mechanische Bewegungen... automatisch...",
+              "Fast taub dafür... losgelöst..."
+            ],
+            "medium": [
+              "Ich bin an das Gefühl gewöhnt...",
+              "Mein Kiefer... wund aber funktionsfähig...",
+              "Mache meine Arbeit... das ist alles..."
+            ],
+            "medium_high": [
+              "Das Schmerzgefühl... irgendwie befriedigend...",
+              "Ich beweise dass ich es nehmen kann...",
+              "Meine Ausdauer... wächst..."
+            ],
+            "high": [
+              "Der Schmerz ist jetzt Lust...",
+              "Ich liebe wie mein Kiefer für dich schmerzt...",
+              "Brich mein Gesicht... ich will es..."
+            ],
+            "very_high": [
+              "Zerschmetter meinen Kiefer! Ist mir egal!",
+              "Schmerz ist meine Ekstase!",
+              "Ruinier mich komplett! Ich bin dein!"
+            ]
+          }
+        }
+      ]
+    },
+    "ERO3": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "Er sagt ich werde alles schlucken... nein...",
+              "Ich will seinen Cum nicht! Bitte!",
+              "Der Gedanke macht mich krank..."
+            ],
+            "low": [
+              "Er wird... in meinen Mund...",
+              "Ich muss schlucken... oh Gott...",
+              "Diese letzte Erniedrigung..."
+            ],
+            "medium_low": [
+              "Er wird in meinem Mund kommen... ich weiß...",
+              "Ich muss es trinken... akzeptieren...",
+              "Nur noch eine Sache die ich durchstehen muss..."
+            ],
+            "medium": [
+              "Er ist nahe... ich kann es fühlen...",
+              "Ich werde schlucken wenn er kommt... ich verstehe...",
+              "Das wird erwartet... was ich tun muss..."
+            ],
+            "medium_high": [
+              "Er wird bald kommen... in meinem Mund...",
+              "Ich werde es nehmen... es ist okay...",
+              "Vielleicht wird es gar nicht so schlimm..."
+            ],
+            "high": [
+              "Ja... komm in meinen Mund... ich will es...",
+              "Ich will deinen Samen kosten...",
+              "Füll meinen Mund... ich bin bereit..."
+            ],
+            "very_high": [
+              "Flut meinen Mund mit deinem Cum!",
+              "Ich muss deinen Samen trinken!",
+              "Gib mir jeden Tropfen! Ich hungere danach!"
+            ]
+          }
+        },
+        {
+          "step": 2,
+          "delay": 1.0,
+          "thoughts": {
+            "very_low": [
+              "Er stößt schneller... es kommt!",
+              "Ich kann nicht entkommen... ich muss es nehmen!",
+              "Nein nein nein... bitte nicht in meinen Mund!"
+            ],
+            "low": [
+              "Fast da... ich kann es sagen...",
+              "Ich bereite mich vor... auf das Unvermeidliche...",
+              "Dieser schreckliche Moment... nähert sich..."
+            ],
+            "medium_low": [
+              "Er kommt näher... ich bereite mich vor...",
+              "Bald ist es vorbei... einfach schlucken und fertig...",
+              "Noch ein Moment... dann ist es beendet..."
+            ],
+            "medium": [
+              "Er ist dabei zu kommen... ich bin bereit...",
+              "Ich werde nehmen was kommt... akzeptieren...",
+              "Das ist Teil davon... ich verstehe..."
+            ],
+            "medium_high": [
+              "Er ist fast da... ich will sehen...",
+              "Ich bin neugierig wie es sein wird...",
+              "Bereit zu empfangen..."
+            ],
+            "high": [
+              "Komm für mich! Ich bin bereit!",
+              "Ich will fühlen wie du explodierst...",
+              "Gib es mir alles... jetzt!"
+            ],
+            "very_high": [
+              "Ja! Komm! Flut mich!",
+              "Ich brauche deinen heißen Cum!",
+              "Mal meine Innereien weiß!"
+            ]
+          }
+        },
+        {
+          "step": 3,
+          "delay": 1.5,
+          "thoughts": {
+            "very_low": [
+              "Hier kommt es... oh Gott!",
+              "Ich fühle ihn schwellen... es passiert!",
+              "Mir wird übel... ich kann nicht!"
+            ],
+            "low": [
+              "Jede Sekunde jetzt... mich zusammenreißen...",
+              "Der Moment den ich gefürchtet habe...",
+              "Einfach durchstehen... irgendwie..."
+            ],
+            "medium_low": [
+              "Er ist gleich da... kurz vor dem Platzen...",
+              "Ich bin so bereit wie ich je sein werde...",
+              "Hier kommt es... akzeptieren..."
+            ],
+            "medium": [
+              "Er pulsiert... ich fühle es...",
+              "Ich bin vorbereitet... Mund offen...",
+              "Das passiert... jetzt..."
+            ],
+            "medium_high": [
+              "Ich fühle ihn pulsieren... aufregend...",
+              "Ich bin bereit zu empfangen...",
+              "Komm schon... lass mich haben..."
+            ],
+            "high": [
+              "Ich fühle dich pulsieren! Gib es mir!",
+              "Explodier in meinem Mund!",
+              "Ich will jeden Tropfen! Jetzt!"
+            ],
+            "very_high": [
+              "Ausbruch in mir! Fütter mich!",
+              "Ich bin deine Cum-Toilette!",
+              "Pump mich voll! Mach es!"
+            ]
+          }
+        }
+      ]
+    },
+    "ERO4": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "Tiefer! Er hört nicht auf! Ersticken!",
+              "Kann überhaupt nicht atmen! Sterbe!",
+              "Mein Hals... komplett blockiert!"
+            ],
+            "low": [
+              "So tief... keine Luft... Sterne in meiner Vision...",
+              "Er ist in meinem Hals vergraben... zieht nicht raus...",
+              "Ich vergehe... brauche Luft..."
+            ],
+            "medium_low": [
+              "Komplett gefüllt... kein Raum für Luft...",
+              "Einfach durchhalten... er wird bald kommen...",
+              "Mein Hals... bis ans Limit gedehnt..."
+            ],
+            "medium": [
+              "Vollständig gespießt... nehme alles von ihm...",
+              "Ich halte aus... warte dass er kommt...",
+              "Fast da... ich kann das..."
+            ],
+            "medium_high": [
+              "So tief in mir... ich liebe die Völlegefühl...",
+              "Mein Hals... dafür gemacht...",
+              "Komm in mir... ich bin bereit..."
+            ],
+            "high": [
+              "Vergraben in meinem Hals! Ja! Komm!",
+              "Ich brauche keine Luft! Nur deinen Schwanz!",
+              "Explodier tief in meinem Hals!"
+            ],
+            "very_high": [
+              "Töt mich mit deinem Schwanz! Ist mir egal!",
+              "Komm direkt in meinen Magen!",
+              "Ich bin deine Hals-Kondom! Füll mich!"
+            ]
+          }
+        },
+        {
+          "step": 2,
+          "delay": 1.0,
+          "thoughts": {
+            "very_low": [
+              "Ich werde ohnmächtig... Bewusstsein schwindet...",
+              "Kann nicht... durchhalten... viel... länger...",
+              "Alles wird dunkel... ersticken..."
+            ],
+            "low": [
+              "Vision verschwimmt... verzweifelt Luft brauchend...",
+              "Wie viel länger... kann nicht atmen...",
+              "Bitte... werd einfach fertig... bitte..."
+            ],
+            "medium_low": [
+              "Benommen... halte mich mit Willenskraft...",
+              "Nur noch ein bisschen... ich schaff es...",
+              "Bewusst bleiben... fast geschafft..."
+            ],
+            "medium": [
+              "Der Druck... intensiv... aber handhabbar...",
+              "Ich bin darauf trainiert jetzt... ich kann durchhalten...",
+              "Jeden Moment... er wird release..."
+            ],
+            "medium_high": [
+              "Die Intensität... berauschend...",
+              "Ich kann das nehmen... mich beweisen...",
+              "Komm in mir... ich bin dein..."
+            ],
+            "high": [
+              "Würg mich mit deinem Cum!",
+              "Ich will in deinem Samen ertrinken!",
+              "Benutz meinen Hals bis du explodierst!"
+            ],
+            "very_high": [
+              "Erstick mich mit deinem Schwanz!",
+              "Tod durch Schwanz! Perfekt!",
+              "Füll jede Zelle meines Körpers!"
+            ]
+          }
+        },
+        {
+          "step": 3,
+          "delay": 1.5,
+          "thoughts": {
+            "very_low": [
+              "Jede Sekunde... er wird...",
+              "Ich fühle ihn... pulsieren... wachsen...",
+              "Oh Gott... es passiert... jetzt!"
+            ],
+            "low": [
+              "Sein Schwanz pulsiert... genau da...",
+              "Der Moment... endlich... wird passieren...",
+              "Ich werde es fühlen... in mich spritzen..."
+            ],
+            "medium_low": [
+              "Er ist dabei auszubrechen... ich fühle es...",
+              "Bereit... so bereit wie ich sein kann...",
+              "Es kommt... das Ende..."
+            ],
+            "medium": [
+              "Ich fühle das Pulsieren... er ist da...",
+              "Jeden Moment jetzt... ich bin vorbereitet...",
+              "Lass es passieren... einfach lass es passieren..."
+            ],
+            "medium_high": [
+              "Er ist kurz vor der Kante... ich fühle es...",
+              "Ich will sein Release fühlen...",
+              "Komm schon... gib es mir..."
+            ],
+            "high": [
+              "Ich fühle du bist dabei zu explodieren! Tu es!",
+              "Komm! Komm tief in meinem Hals!",
+              "Ich sterbe danach dich platzen zu fühlen!"
+            ],
+            "very_high": [
+              "Ausbruch! Flut meinen Körper!",
+              "Ich bin dein Cum-Auffangbehälter!",
+              "Pump alles in mich! JETZT!"
+            ]
+          }
+        }
+      ]
+    },
+    "FIN": {
+      "events": {
+        "FIN": {
+          "very_low": [
+            "Oh Gott! Er kommt! So viel!",
+            "Es füllt meinen Mund! Ich kann nicht... es ist überall!",
+            "Der Geschmack... oh Gott... mir wird übel!",
+            "Es ist so viel! Es hört nicht auf!",
+            "Ich ertrinke darin! Würg!",
+            "Heiß... dick... ekelhaft! Hör auf!",
+            "Mein Mund läuft über! Ich kann es nicht alles halten!",
+            "Es schießt meinen Hals runter! Nein!"
+          ],
+          "low": [
+            "Er kommt... füllt meinen Mund komplett...",
+            "So viel Cum... warm und dick... ich hasse das...",
+            "Ich kann jeden Schwall fühlen... einer nach dem anderen...",
+            "Es bedeckt alles... meine Zunge, meinen Hals...",
+            "Das Volumen... es ist so viel... überwältigend...",
+            "Welle um Welle... füllt mich auf...",
+            "Ich halte es in meinem Mund... kaum...",
+            "Der Geschmack... salzig... bitter... Tränen vermischen sich damit..."
+          ],
+          "medium_low": [
+            "Er release... ich fühle es flutet meinen Mund...",
+            "Warmer Cum füllt mich... ich akzeptiere es...",
+            "So viel... aber ich halte es alles...",
+            "Jeder Puls... mehr und mehr...",
+            "Mein Mund ist voll... halte es da...",
+            "Das ist es... der letzte Teil...",
+            "Ich fasse es alles ein... warte auf sein Kommando...",
+            "Die Wärme breitet sich aus... in meinem ganzen Mund..."
+          ],
+          "medium": [
+            "Er kommt... ich empfange es alles...",
+            "Die Wärme... füllt meinen Mund komplett...",
+            "Schlag um Schlag... ich nehme alles...",
+            "Mein Mund hält seinen Samen... alles davon...",
+            "Die Empfindung... seltsam aber... akzeptabel...",
+            "Ich bin sein Gefäß... für diesen Moment...",
+            "Jeden Schwall... fühle und akzeptiere ich...",
+            "Voller Mund... wartend... gehorsam..."
+          ],
+          "medium_high": [
+            "Mmm... er kommt... ich fühle jeden Puls...",
+            "Die Wärme ist nett... füllt mich auf...",
+            "So viel für mich... ich nehme es alles...",
+            "Jeder Schwall... ein Geschenk das ich empfange...",
+            "Mein Mund hält seinen kostbaren Samen...",
+            "Der Geschmack... nicht schlecht... sogar interessant...",
+            "Ich bin geehrt dies zu erhalten...",
+            "Warm und dick... beschichtet meinen Mund..."
+          ],
+          "high": [
+            "Ja! Komm für mich! Füll meinen Mund!",
+            "So viel leckerer Cum! Ich liebe es!",
+            "Jeder Puls... jeder Tropfen... meins!",
+            "Ich fange es alles ein! Verschwend keinen Tropfen!",
+            "Der Geschmack... amazing! Gib mir mehr!",
+            "Mein Mund ist dein Cum-Napf! Füll ihn!",
+            "Ich will jeden Bissen kosten!",
+            "Mal meinen Mund weiß! Ja!"
+          ],
+          "very_high": [
+            "JA! FLUT MICH! ERTRÄNK MICH IN CUM!",
+            "ICH BIN DEIN CUM-DUMP! FÜLL MICH!",
+            "MEHR! GIB MIR ALLES!",
+            "ICH LEBE FÜR DEINEN SAMEN!",
+            "MEIN MUND IST DEINE TOILETTE!",
+            "PUMP MICH VOLL! ICH BIN NUR NOCH EIN LOCH!",
+            "GÖTTLICHER NEKTAR! SEGNE MICH DAMIT!",
+            "ICH STEIGE AUF! CUM IST MEIN HIMMEL!"
+          ]
+        }
+      }
+    },
+    "FIN2": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "Er zieht raus... Cum dehnt sich von seinem Schwanz...",
+              "Ich sehe den Cum-Faden... verbindet uns... widerlich...",
+              "Er schüttelt meinen Kopf... ich will es so gerne ausspucken!"
+            ],
+            "low": [
+              "Der Cum dehnt sich zwischen uns... sichtbarer Beweis...",
+              "Er hält meine Haare... schüttelt meinen Kopf herum...",
+              "Ich will spucken... aber die Pistole... ich kann nicht..."
+            ],
+            "medium_low": [
+              "Cum-Faden hängt... er beobachtet mich...",
+              "Mein Kopf wird bewegt... ich halte meinen Mund geschlossen...",
+              "Muss es halten... kann nichts verschütten..."
+            ],
+            "medium": [
+              "Die Optik... er zieht weg... Cum verbindet uns...",
+              "Ich halte alles in meinem Mund... gehorsam...",
+              "Er untersucht mich... stellt sicher dass ich comply..."
+            ],
+            "medium_high": [
+              "Der Cum-Faden... er ist irgendwie... schön...",
+              "Er schaut mich an... ich zeige dass ich gut bin...",
+              "Halte sein Geschenk... bereit zu schlucken..."
+            ],
+            "high": [
+              "Der Cum-Faden ist wunderschön! Ich liebe diesen Moment!",
+              "Schau mich an! Ich halte deinen ganzen Cum!",
+              "Ich bin dein gutes Mädchen! Siehst du?"
+            ],
+            "very_high": [
+              "Göttlicher Faden der uns verbindet! Heiliger Moment!",
+              "Ich schätze jeden Tropfen den du mir gegeben hast!",
+              "Ich bin deine perfekte Cum-Bewahrerin!"
+            ]
+          }
+        },
+        {
+          "step": 2,
+          "delay": 1.0,
+          "thoughts": {
+            "very_low": [
+              "Er sagt ich soll schlucken... oder er erschießt mich!",
+              "Die Pistole gegen meine Brust... ich habe keine Wahl!",
+              "Ich muss... ich muss das hier trinken..."
+            ],
+            "low": [
+              "Schlucken oder sterben... das Ultimatum ist klar...",
+              "Der Pistolenlauf auf meiner Brust... kalt und drohend...",
+              "Ich bereite mich vor... es zu tun..."
+            ],
+            "medium_low": [
+              "Sein Kommando... schlucken... die Pistole verstärkt es...",
+              "Ich muss seinen Cum trinken... keine Alternative...",
+              "Einfach machen... hinter mich bringen..."
+            ],
+            "medium": [
+              "Er will dass ich schlucke... ich werde es tun...",
+              "Die Pistole ist nur Versicherung... ich verstehe...",
+              "Ich werde es jetzt tun... runtertrinken..."
+            ],
+            "medium_high": [
+              "Er will dass ich schlucke... okay...",
+              "Die Pistole... nur für Show... ich würde es trotzdem tun...",
+              "Zeit zu trinken... ich bin bereit..."
+            ],
+            "high": [
+              "Ich will schlucken! Lass mich!",
+              "Ich werde jeden Tropfen gerne trinken!",
+              "Sieh mir zu wie ich deinen kostbaren Samen schlucke!"
+            ],
+            "very_high": [
+              "Ich werde es trinken! Es ist meine Kommunion!",
+              "Lass mich deine göttliche Essenz konsumieren!",
+              "Ich bin geehrt dein Geschenk zu schlucken!"
+            ]
+          }
+        },
+        {
+          "step": 3,
+          "delay": 1.5,
+          "thoughts": {
+            "very_low": [
+              "Ich... ich schlucke es... oh Gott...",
+              "Die Textur... dick... rutscht runter...",
+              "Ich kann es fühlen... geht in meinen Magen... ich weine..."
+            ],
+            "low": [
+              "Schluckend... der warme Cum rutscht meinen Hals runter...",
+              "Ich fühle es... absteigend... beschichtet alles...",
+              "Es ist jetzt in mir... sein Samen... ich bin komplett verletzt..."
+            ],
+            "medium_low": [
+              "Trinke es runter... dick und warm...",
+              "Ich fühle es reisen... in meinen Magen...",
+              "Es ist geschafft... ich habe es alles geschluckt... wie befohlen..."
+            ],
+            "medium": [
+              "Schluckend... der Cum gleitet sanft runter...",
+              "Ich kann es fühlen... setzt sich in meinem Magen ab...",
+              "Fertig... ich habe alles konsumiert... wie erforderlich..."
+            ],
+            "medium_high": [
+              "Mmm... schluckend... eigentlich gar nicht schlecht...",
+              "Die Wärme breitet sich in mir aus... innen...",
+              "Ich habe es alles getrunken... ich habe es gut gemacht..."
+            ],
+            "high": [
+              "Köstlich! Schlucke jeden Tropfen!",
+              "Ich liebe es wie es in mich rein gleitet!",
+              "Dein Cum ist jetzt in mir! Perfekt!"
+            ],
+            "very_high": [
+              "Göttlicher Nektar füllt meinen Körper!",
+              "Ich bin gesegnet! Dein Samen nährt meine Seele!",
+              "Ich bin jetzt komplett! Danke, Meister!"
+            ]
+          }
+        }
+      ]
+    },
+    "JIGO": {
+      "events": {
+        "JIGO": {
+          "very_low": [
+            "Bitte... ich habe es alles geschluckt... ich verspreche es!",
+            "Erschieß mich nicht! Ich habe getan was du gesagt hast!",
+            "Mein Mund ist leer... siehst du? Bitte glaub mir!",
+            "Ich will nicht sterben! Ich habe gehorcht!",
+            "Die Pistole... bitte... ich war brav!",
+            "Ich habe alles geschluckt! Verletz mich nicht!",
+            "Bitte hab Gnade... ich habe es gemacht...",
+            "Ich bettle... ich habe deine Befehle befolgt!"
+          ],
+          "low": [
+            "Ich habe alles geschluckt... du kannst nachschauen...",
+            "Mein Mund ist sauber... ich habe gemacht wie du kommandiert hast...",
+            "Die Angst... sie verschwindet nie... aber ich habe gehorcht...",
+            "Ich habe alles richtig gemacht... bitte...",
+            "Sein Cum ist in meinem Magen... Beweis dass ich comply habe...",
+            "Die Pistole bedroht immer noch... sogar nachdem ich gehorcht habe...",
+            "Was kann ich mehr tun... ich habe alles gemacht...",
+            "Ich bin so müde... aber ich habe überlebt..."
+          ],
+          "medium_low": [
+            "Ich habe alles geschluckt... wie angewiesen...",
+            "Mein Mund ist leer... du kannst sehen...",
+            "Ich habe getan was notwendig war... es ist erledigt...",
+            "Die Wärme im Magen... Beweis...",
+            "Ich habe vollständig comply... kein Widerstand...",
+            "Es ist vorbei... dieser Teil jedenfalls...",
+            "Ich habe überlebt... durch Gehorsam...",
+            "Leerer Mund... voller Magen..."
+          ],
+          "medium": [
+            "Ich habe alles geschluckt... komplett...",
+            "Mein Mund ist sauber... wie du es wolltest...",
+            "Ich habe meinen Teil gemacht... meine Rolle erfüllt...",
+            "Sein Samen ist in mir... alles davon...",
+            "Ich habe performt... adäquat...",
+            "Die Transaktion... abgeschlossen...",
+            "Ich bin was ich jetzt bin...",
+            "Sein Cum... Teil von mir..."
+          ],
+          "medium_high": [
+            "Ich habe jeden Tropfen geschluckt... stolz...",
+            "Mein Mund ist sauber... ich war gut...",
+            "Ich habe es gut gemacht... oder?",
+            "Sein Cum ist in mir... wo er hingehört...",
+            "Ich bin erfreut dass ich ihn erfreuen konnte...",
+            "Das warme Gefühl... befriedigend...",
+            "Ich habe ihm richtig gedient...",
+            "Schau... alles weg... ich bin ein gutes Mädchen..."
+          ],
+          "high": [
+            "Ich habe es alles geschluckt! Es war köstlich!",
+            "Mein Mund ist leer weil ich jeden Tropfen geliebt habe!",
+            "Ich will dass du weißt dass ich es genossen habe!",
+            "Dein Cum ist in meinem Bauch wo ich ihn haben will!",
+            "Ich bin so froh dass ich dich erfreuen konnte!",
+            "Das war amazing! Danke!",
+            "Ich bin deine perfekte Cumslut!",
+            "Ich habe es alles begierig getrunken!"
+          ],
+          "very_high": [
+            "ICH HABE DEINE GÖTTLICHE ESSENZ KONSUMIERT!",
+            "MEIN MUND IST JETZT LEERES HEILIGES GEFÄSS!",
+            "ICH BIN GESEGNET DURCH DEINEN HEILIGEN SAMEN!",
+            "DEIN CUM IST MEIN SAKRAMENT!",
+            "ICH BIN GEEHRT DEINE CUM-TOILETTE ZU SEIN!",
+            "JEDER TROPFEN WAR HIMMEL!",
+            "ICH BIN DEINE ERGEBENE CUM-ANBETERIN!",
+            "ICH LEBE UM DEINEN SAMEN ZU TRINKEN!"
+          ]
+        }
+      }
+    },
+    "JIGO2": {
+      "events": {
+        "JIGO2": {
+          "very_low": [
+            "Er will dass ich aufmache... um es zu beweisen...",
+            "Ich habe Angst... was wenn er mir nicht glaubt...",
+            "Öffne meinen Mund... zitternd..."
+          ],
+          "low": [
+            "Aufmachen... lass ihn verifizieren...",
+            "Ich muss ihm zeigen... meinen leeren Mund...",
+            "Die Inspektion... so erniedrigend..."
+          ],
+          "medium_low": [
+            "Öffne zur Inspektion... nervös...",
+            "Er muss sehen... ich verstehe...",
+            "Zeige ihm... Beweis dass ich gehorcht habe..."
+          ],
+          "medium": [
+            "Öffne meinen Mund... zeige Compliance...",
+            "Er will verifizieren... ich zeige es ihm...",
+            "Sauberer Mund... Beweis des Gehorsams..."
+          ],
+          "medium_high": [
+            "Öffne für ihn... zeige dass ich gut war...",
+            "Schau... alles sauber... ich habe es gut gemacht...",
+            "Ich will dass er sieht dass ich gehorcht habe..."
+          ],
+          "high": [
+            "Schau! Sieh wie gut ich war!",
+            "Mein Mund ist leer weil ich das Schlucken geliebt habe!",
+            "Ich bin so stolz dass ich dich erfreut habe!"
+          ],
+          "very_high": [
+            "SIEH MEINE HINGABE!",
+            "MEIN MUND IST DEIN TEMPEL!",
+            "ICH BIN DEINE PERFEKTE DIENERIN!"
+          ]
+        }
+      }
+    },
+    "JIGOFIN": {
+      "events": {
+        "JIGOFIN": {
+          "very_low": [
+            "Er sagt... andere werden mich auch benutzen...",
+            "Nein... bitte... nicht noch mehr von ihnen!",
+            "Ich kann... ich kann das nicht nochmal machen..."
+          ],
+          "low": [
+            "Die anderen warten... das geht weiter...",
+            "Er gibt mich weiter... wie Eigentum...",
+            "Mehr Männer... mehr Verletzung... wann endet das..."
+          ],
+          "medium_low": [
+            "Er ist fertig... jetzt kommen andere...",
+            "Ich soll sie alle bedienen... ich verstehe...",
+            "Der Zyklus geht weiter... ich bin nur ein Werkzeug..."
+          ],
+          "medium": [
+            "Seine Runde ist vorbei... andere warten...",
+            "Ich werde sie auch bedienen... es wird erwartet...",
+            "Das ist jetzt mein Zweck... ich akzeptiere..."
+          ],
+          "medium_high": [
+            "Er ist zufrieden... jetzt die anderen...",
+            "Ich bin bereit für mehr... ich kann das...",
+            "Mehrere Männer bedienen... ich bin dazu fähig..."
+          ],
+          "high": [
+            "Gut! Schick mich zu den anderen!",
+            "Ich will sie alle befriedigen!",
+            "Ich bin bereit für mehr Schwänze!"
+          ],
+          "very_high": [
+            "JA! BRING SIE ALLE!",
+            "ICH BRAUCHE MEHR! ENDLOSE SCHWÄNZE!",
+            "ICH BIN JEDERMANS SCHLAMPE!"
+          ]
+        }
+      }
+    },
+    "JIGOFIN2": {
+      "events": {
+        "JIGOFIN2": {
+          "very_low": [
+            "NEIN! Nicht noch einer! Bitte hör auf!",
+            "Ich kann nicht mehr nehmen! Ich breche!",
+            "Jemand hilf mir! Bitte! Jeder!",
+            "Mein Körper kann das nicht aushalten! Hör auf!",
+            "Ich bettle... nicht mehr... hab Gnade!",
+            "Das wird mich umbringen! Ich sterbe innerlich!",
+            "Bitte... ich mach alles... nur nicht mehr...",
+            "Ich bin nicht... ich bin nicht stark genug dafür..."
+          ],
+          "low": [
+            "Noch ein Mann... mein Albtraum geht weiter...",
+            "Ich werde herumgereicht... wie Fleisch...",
+            "Wann wird das enden... wie viele noch...",
+            "Ich bin so erschöpft... gebrochen... bitte...",
+            "Sie wechseln sich ab... zerstören mich...",
+            "Ich weine... aber es interessiert sie nicht...",
+            "Nur ein Objekt für sie... nichts weiter...",
+            "Diese Hölle... sie endet nie..."
+          ],
+          "medium_low": [
+            "Zum nächsten weitergegeben... da gehen wir wieder...",
+            "Noch ein Schwanz... noch eine Prüfung...",
+            "Ich muss... das auch überstehen...",
+            "Wie viele sind es... ich habe den Überblick verloren...",
+            "Ich bin jetzt taub... gehe nur noch durch die Bewegungen...",
+            "Das ist meine Realität... akzeptiere es...",
+            "Der nächste nähert sich... ich bereite vor...",
+            "Durchstehen... einfach durchstehen..."
+          ],
+          "medium": [
+            "Der nächste in der Reihe... ich verstehe das System...",
+            "Ich werde diesen auch bedienen... dann den nächsten...",
+            "Das ist was ich jetzt bin... was ich tue...",
+            "Noch ein Mann... gleiche Routine...",
+            "Ich bin effizient darin... mechanisch...",
+            "Mein Zweck... klar und einfach...",
+            "Der nächste... ich bin bereit...",
+            "Das ist meine Funktion... ich performe..."
+          ],
+          "medium_high": [
+            "Der nächste Mann... ich bin neugierig...",
+            "Vielleicht ist dieser anders...",
+            "Ich werde gut darin... geübt...",
+            "Bring ihn zu mir... ich bin bereit...",
+            "Eine weitere Gelegenheit zu dienen...",
+            "Ich werde geschickt... kompetent...",
+            "Der nächste... lass uns sehen...",
+            "Ich kann mehr handhaben... ich weiß ich kann..."
+          ],
+          "high": [
+            "Ja! Der nächste! Bring ihn!",
+            "Ich will mehr Schwänze! Mehr Männer!",
+            "Ich bin unersättlich! Halt sie kommen!",
+            "Lass mich nicht warten! Ich brauche es!",
+            "Mehr! Immer mehr! Ich liebe das!",
+            "Jeder Schwanz ist ein Geschenk! Gib mir mehr!",
+            "Ich bin jedermanns Hure! Ich liebe es!",
+            "Stell sie auf! Ich werde sie alle nehmen!"
+          ],
+          "very_high": [
+            "ENDLOSE SCHWÄNZE! MEIN PARADIES!",
+            "ICH BIN DIE GANGBANG-GÖTTIN!",
+            "JEDES MANNES CUM-DUMP! JA!",
+            "ICH BRAUCHE UNENDLICHE SCHWÄNZE! MEHR!",
+            "REICH MICH FÜR IMMER HERUM!",
+            "ICH BIN REINE SCHWANZ-SUCHT!",
+            "GANGBANG IST MEINE RELIGION!",
+            "ICH BIN SCHWANZ-ANBETENDE SCHLAMPE EWIG!"
+          ]
+        }
+      }
+    }
+  }
+}

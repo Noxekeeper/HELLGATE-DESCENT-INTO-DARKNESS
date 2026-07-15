@@ -1,0 +1,27 @@
+{
+  "speakerLabel": "匪徒",
+  "stepId": "fsp_sex_paid_open",
+  "stepKind": "choice",
+  "choiceLabels": [
+    "不。今天没心情。",
+    "你是认真的？",
+    "来点金币也不错……你提什么条件？",
+    "别太粗暴——说好了？",
+    "我反而喜欢狠一点。"
+  ],
+  "choiceOutcomeIds": [
+    "refuse_open",
+    "hesitate_open",
+    "money_open",
+    "soft_open",
+    "rough_open"
+  ],
+  "choiceJumpStepIds": [
+    "fsp_sex_refuse_r01",
+    "fsp_sex_hesitate_r01",
+    "fsp_sex_money_r01",
+    "fsp_sex_soft_r01",
+    "fsp_sex_rough_r01"
+  ],
+  "npcLinePoolId": "fsp_bandits_sex_paid_open"
+}

@@ -1,0 +1,26 @@
+# HELLGATE Spawn Configuration for InundergroundChurch
+
+-67.15,-231.00,mob_death1,1,sort+100
+-71.48,-231.15,gold=1-15,1
+-68.22,-230.00,Look_Dorei,1
+-65.46,-231.00,lethal_magictrap,1
+-64.64,-231.00,lethal_magictrap,1
+-63.19,-231.00,lethal_magictrap,1
+-62.55,-231.00,lethal_magictrap,1
+-65.00,-230.40,box_brk,1
+-62.79,-230.40,box_brk,1
+-60.79,-230.40,box_brk,1
+-70.32,-230.93,movebox_brk,1
+-70.32,-230.93,movebox_brk,1
+-70.32,-230.93,movebox_brk,1
+-70.32,-230.93,movebox_brk,1
+-70.32,-230.93,movebox_brk,1
+-66.89,-231.16,movebox_brk,1
+
+
+-13.40,-284.82,mutude|faction=demons,1
+22.04,-284.01,InquisitionWhite|faction=church,1
+29.04,-284.01,Wolf|faction=church,1
+
+
+-25.35,-297.05,Slaughterer,1

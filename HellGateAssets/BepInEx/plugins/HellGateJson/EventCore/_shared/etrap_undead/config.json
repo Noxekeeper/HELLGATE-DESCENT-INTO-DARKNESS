@@ -1,0 +1,19 @@
+{
+  "anchorX": 0,
+  "anchorY": 0,
+  "phrasesFromEventFolder": "event_trap_gate",
+  "suspicionEnterRadius": 12,
+  "ambushZoneRadius": 12,
+  "thoughtVerticalOffsetPx": 30,
+  "thoughtDurationSeconds": 5,
+  "suspicionRepeatCooldownSeconds": 30,
+  "suspicionThoughtOnlyOnEnteringZone": false,
+  "spawnEnemyType": "Undead",
+  "spawnFactionIdRaw": "",
+  "ambushOnce": false,
+  "maxAmbushSpawns": 3,
+  "flankAmbushPerSideMin": 0,
+  "flankAmbushPerSideMax": 0,
+  "ambushSpawnDelaySeconds": 1,
+  "ambushSideOffset": 1
+}

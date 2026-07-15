@@ -1,0 +1,8 @@
+{
+  "speakerLabel": "도적",
+  "stepId": "fsp_sex_soft_r01",
+  "stepKind": "continue",
+  "continueOutcomeId": "noop",
+  "continueNextStepId": "fsp_sex_soft_c02",
+  "npcLinePoolId": "fsp_sex_soft_react"
+}

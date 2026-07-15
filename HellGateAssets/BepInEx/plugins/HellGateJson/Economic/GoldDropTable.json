@@ -1,0 +1,38 @@
+{
+  "Settings": {
+    "ApplyDifficultyScaling": true,
+    "MinAmountFloor": 1
+  },
+  "ExcludeBiscord": false,
+
+  "FactionRules": [
+    { "Faction": "bandits",             "Chance": 0.50, "MinAmount": 2,  "MaxAmount": 7  },
+    { "Faction": "bandits_inquisition", "Chance": 0.50, "MinAmount": 3,  "MaxAmount": 9  },
+    { "Faction": "bandits_mafia",       "Chance": 0.50, "MinAmount": 6,  "MaxAmount": 14 },
+    { "Faction": "bandits_demons",      "Chance": 0.50, "MinAmount": 4,  "MaxAmount": 10 },
+    { "Faction": "mafia",               "Chance": 0.50, "MinAmount": 7,  "MaxAmount": 17 },
+    { "Faction": "church",              "Chance": 0.50, "MinAmount": 4,  "MaxAmount": 9  },
+    { "Faction": "demons",              "Chance": 0.50, "MinAmount": 1,  "MaxAmount": 5  },
+    { "Faction": "undead",              "Chance": 0.50, "MinAmount": 1,  "MaxAmount": 2  },
+    { "Faction": "monsters",            "Chance": 0.50, "MinAmount": 1,  "MaxAmount": 2  },
+    { "Faction": "neutral",             "Chance": 0.00, "MinAmount": 0,  "MaxAmount": 0  }
+  ],
+
+  "EnemyOverrides": [
+    { "EnemyType": "biscord",                "Chance": 1.00, "MinAmount": 300, "MaxAmount": 600 },
+    { "EnemyType": "MafiaBossCustom",        "Chance": 1.00, "MinAmount": 100, "MaxAmount": 175 },
+    { "EnemyType": "BigoniBrother",          "Chance": 1.00, "MinAmount": 120, "MaxAmount": 220 },
+    { "EnemyType": "Wolf",                   "Chance": 0.40, "MinAmount": 6,   "MaxAmount": 14  },
+    { "EnemyType": "BossTouzoku",            "Chance": 1.00, "MinAmount": 150, "MaxAmount": 250 },
+    { "EnemyType": "BossTouzokuCustom",      "Chance": 1.00, "MinAmount": 50,  "MaxAmount": 90  },
+    { "EnemyType": "BOSS_Village",           "Chance": 1.00, "MinAmount": 250, "MaxAmount": 400 },
+    { "EnemyType": "BossInsomniaUnder",      "Chance": 1.00, "MinAmount": 250, "MaxAmount": 400 },
+    { "EnemyType": "BossLeftinsomniaUnder",  "Chance": 1.00, "MinAmount": 200, "MaxAmount": 300 },
+    { "EnemyType": "BossRightinsomniaUnder", "Chance": 1.00, "MinAmount": 200, "MaxAmount": 300 },
+    { "EnemyType": "BossScapegoatentrance",  "Chance": 1.00, "MinAmount": 220, "MaxAmount": 360 },
+    { "EnemyType": "DemonRequiemKnight",     "Chance": 1.00, "MinAmount": 200, "MaxAmount": 350 },
+    { "EnemyType": "OriginIbaranoMajyo",     "Chance": 1.00, "MinAmount": 300, "MaxAmount": 500 },
+    { "EnemyType": "LastIbaranoMajyo",       "Chance": 1.00, "MinAmount": 350, "MaxAmount": 550 },
+    { "EnemyType": "Boss_Ranch",             "Chance": 1.00, "MinAmount": 220, "MaxAmount": 360 }
+  ]
+}

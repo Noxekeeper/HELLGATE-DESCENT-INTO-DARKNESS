@@ -1,0 +1,349 @@
+{
+  "settings": {
+    "commentCooldownSeconds": 2.0,
+    "maxSimultaneousComments": 1,
+    "commentDisplayDuration": 4.0,
+    "fontSize": 24.0,
+    "verticalOffset": 15.0,
+    "streamingSpeed": 0.03,
+    "goblinColor": {
+      "r": 1.0,
+      "g": 1.0,
+      "b": 1.0,
+      "a": 1.0
+    },
+    "goblinOutlineColor": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 1.0
+    }
+  },
+  "animations": {
+    "START": {
+      "description": "Start of H-scene with goblin, capture",
+      "events": {
+        "START": [
+          "Ke-ke-ke ! Attrapée par nous, salope !",
+          "Femelle humaine ! À nous maintenant !",
+          "Ke-ke-ke, tu seras notre jouet !",
+          "Attrapée, grosses seins ! À nous !"
+        ],
+        "SE1": [
+          "Lutte, lutte ! On aime ça !",
+          "Tu ne nous échapperas pas !",
+          "Résiste, salope humaine !"
+        ]
+      }
+    },
+    "ERO1": {
+      "description": "First phase of fucking",
+      "events": {
+        "ERO1": [
+          "Ke-ke-ke ! Ma bite est déjà dedans !",
+          "Ton trou est serré, humaine !",
+          "On aime les grosses seins !",
+          "Prends la bite, femelle !"
+        ],
+        "SE1": [
+          "Crie plus fort, femelle !",
+          "Les gobelins aiment tes gémissements !",
+          "Ta chatte nous appartient !"
+        ]
+      }
+    },
+    "ERO2": {
+      "description": "Continuation of fucking, more intense",
+      "events": {
+        "ERO2": [
+          "Ke-ke-ke ! Comment ça te plaît ?",
+          "Ta chatte serre la bite si fort !",
+          "Les femelles humaines sont les meilleures !",
+          "Prends-la encore plus profond !"
+        ],
+        "SE1": [
+          "Ta lutte est inutile !",
+          "Les femelles humaines sont faibles !",
+          "Crie pendant qu'on te baise !"
+        ]
+      }
+    },
+    "ERO3": {
+      "description": "Tempo increase",
+      "events": {
+        "ERO3": [
+          "Ke-ke-ke ! Bientôt on va jouir en toi !",
+          "Notre foutre va te remplir !",
+          "On va te faire enfanter, tu vas accoucher !",
+          "Ton ventre va être plein !"
+        ],
+        "SE1": [
+          "Prends la semence, femelle !",
+          "Ta chatte a été faite pour nous !",
+          "Tu vas accoucher de nos enfants !"
+        ]
+      }
+    },
+    "ERO4": {
+      "description": "Preparation for finale",
+      "events": {
+        "ERO4": [
+          "Ke-ke-ke ! On va bientôt jouir !",
+          "Prépare-toi pour le foutre, femelle !",
+          "Ton trou va déborder bientôt !",
+          "Dernières poussées, femelle !"
+        ],
+        "SE1": [
+          "Crie de nos bites !",
+          "Ta chatte tremble !",
+          "Bientôt tu seras pleine de foutre !"
+        ]
+      }
+    },
+    "ERO5": {
+      "description": "Final phase before cumming",
+      "events": {
+        "ERO5": [
+          "Ke-ke-ke ! On jouit maintenant !",
+          "Prépare-toi à prendre la semence !",
+          "Le foutre est chaud !",
+          "Ton ventre va être rempli !"
+        ],
+        "SE1": [
+          "Prends tout jusqu'à la dernière goutte !",
+          "La semence gobeline est forte !",
+          "Tu te souviendras de notre bite !"
+        ]
+      }
+    },
+    "ERO_iki": {
+      "description": "Moment of goblin cumming - first ejaculation",
+      "events": {
+        "ERO_iki": [
+          "Ke-ke-ke ! On jouit ! Prends ça !",
+          "Aaa ! Je jouis !",
+          "Je jouis dans la femelle humaine !",
+          "Prends notre semence !"
+        ],
+        "SE1": [
+          "Ton ventre se remplit !",
+          "Tu sens le foutre chaud ?",
+          "La semence est en toi !",
+          "Prends tout, femelle !"
+        ]
+      }
+    },
+    "ERO_iki2": {
+      "description": "Continuation of cumming, additional pulses",
+      "events": {
+        "ERO_iki2": [
+          "Encore plus de foutre !",
+          "Ke-ke-ke ! Ça coule et ça coule !",
+          "Ton trou déborde !",
+          "Tant de foutre !"
+        ],
+        "SE1": [
+          "Suce nos bites jusqu'au bout !",
+          "Suce tout le foutre !",
+          "Ta chatte est avide !",
+          "Prends-en plus !"
+        ]
+      }
+    },
+    "ERO_jigo": {
+      "description": "After cumming, goblin still inside",
+      "events": {
+        "ERO_jigo": [
+          "Ke-ke-ke ! Comment tu aimes le foutre gobelin ?",
+          "Maintenant tu appartiens à la tribu !",
+          "Ta chatte est pleine de notre semence !",
+          "Tu vas accoucher de notre progéniture !"
+        ],
+        "SE1": [
+          "Le foutre coule de toi !",
+          "Tu es marquée par nous !",
+          "Ton ventre nous appartient !"
+        ]
+      }
+    },
+    "2ERO_START": {
+      "description": "Start of second round",
+      "events": {
+        "2ERO_START": [
+          "Ke-ke-ke ! Deuxième round commence !",
+          "Pas tous n'ont pas encore joui, viens !",
+          "On va te faire passer en cercle !",
+          "Prépare-toi pour une nouvelle bite !"
+        ],
+        "SE1": [
+          "Tu ne te reposeras pas !",
+          "On en veut plus !",
+          "Ta chatte n'est pas encore fatiguée !"
+        ]
+      }
+    },
+    "2ERO_START2": {
+      "description": "Preparation for second round",
+      "events": {
+        "2ERO_START2": [
+          "Ke-ke-ke ! Regarde comme c'est gros !",
+          "La deuxième bite est encore plus grosse !",
+          "Ton trou va s'étirer encore plus !",
+          "Prépare-toi pour le double plaisir !"
+        ],
+        "SE1": [
+          "Ça sera encore plus brutal !",
+          "On est plus forts que toi !",
+          "Ta chatte va prendre toutes nos bites !"
+        ]
+      }
+    },
+    "2ERO_1": {
+      "description": "Second round, first phase",
+      "events": {
+        "2ERO_1": [
+          "Ke-ke-ke ! Deuxième bite en toi !",
+          "Tu sens la différence, femelle ?",
+          "Cette bite est encore plus épaisse !",
+          "Ta chatte s'étire !"
+        ],
+        "SE1": [
+          "Crie de la deuxième bite !",
+          "Ton trou est déjà habitué !",
+          "On va te prendre à tour de rôle !"
+        ]
+      }
+    },
+    "2ERO_2": {
+      "description": "Second round, tempo increase",
+      "events": {
+        "2ERO_2": [
+          "Ke-ke-ke ! Comment tu aimes un autre round ?",
+          "Ta chatte a encore faim !",
+          "Le deuxième gobelin baise plus brutal !",
+          "Prends une double portion !"
+        ],
+        "SE1": [
+          "Ta chatte est avide de bites !",
+          "Crie plus fort, femelle !",
+          "La deuxième bite est meilleure que la première ?"
+        ]
+      }
+    },
+    "2ERO_3": {
+      "description": "Second round, intense phase",
+      "events": {
+        "2ERO_3": [
+          "Ke-ke-ke ! On baise sans arrêt !",
+          "Ton ventre va être plein à nouveau !",
+          "Le deuxième gobelin va jouir aussi !",
+          "Prépare-toi pour une nouvelle portion !"
+        ],
+        "SE1": [
+          "Ta chatte prend tout le monde !",
+          "Il y aura encore plus de foutre !",
+          "On ne se lassera jamais de te baiser !"
+        ]
+      }
+    },
+    "2ERO_4": {
+      "description": "Second round, preparation for cumming",
+      "events": {
+        "2ERO_4": [
+          "Ke-ke-ke ! Le deuxième va jouir aussi !",
+          "Une autre portion de semence !",
+          "Ton trou va déborder !",
+          "Prépare-toi pour la deuxième vague !"
+        ],
+        "SE1": [
+          "Prends la deuxième portion !",
+          "Ton ventre va tout contenir !",
+          "La deuxième bite est chaude aussi !"
+        ]
+      }
+    },
+    "2ERO_iki": {
+      "description": "Second goblin cumming - KEY EVENT for black background and x-ray",
+      "events": {
+        "2ERO_iki": [
+          "Ke-ke-ke ! Le deuxième jouit ! Aaaa !",
+          "Encore plus de foutre !",
+          "Ton ventre déborde !",
+          "Prends la deuxième portion de semence !"
+        ],
+        "SE1": [
+          "Tu sens comment le foutre coule ?",
+          "Ta chatte fond de la semence !",
+          "Deuxième charge dans ton ventre !",
+          "Notre semence se mélange !"
+        ]
+      }
+    },
+    "2ERO_iki2": {
+      "description": "Continuation of second goblin cumming",
+      "events": {
+        "2ERO_iki2": [
+          "Ke-ke-ke ! Ça coule sans arrêt !",
+          "Tant de foutre de nous !",
+          "Ton trou ne peut pas tout contenir !",
+          "La semence coule dehors !"
+        ],
+        "SE1": [
+          "Suce la deuxième bite aussi !",
+          "Ta chatte est avide de foutre !",
+          "Prends tout jusqu'à la dernière goutte !",
+          "Sers-nous, femelle !"
+        ]
+      }
+    },
+    "2ERO_JIGO": {
+      "description": "After second cumming",
+      "events": {
+        "2ERO_JIGO": [
+          "Ke-ke-ke ! Deux charges en toi !",
+          "Maintenant tu vas vraiment tomber enceinte !",
+          "Tant de semence !",
+          "Ton ventre est plein-plein !"
+        ],
+        "SE1": [
+          "Le foutre coule comme une rivière !",
+          "Tu es marquée deux fois !",
+          "On a joui en toi, ça te plaît ?!",
+          "Tu vas accoucher de jumeaux ha-ha !"
+        ]
+      }
+    },
+    "2ERO_JIGO2": {
+      "description": "Final phase after second round",
+      "events": {
+        "2ERO_JIGO2": [
+          "Ke-ke-ke ! Excellente femelle humaine !",
+          "Maintenant tu es la salope de la tribu !",
+          "Tu reviendras chez nous encore !",
+          "Ta chatte se souvient de nos bites !"
+        ],
+        "SE": {
+          "se_count_1": [
+            "Tu es maintenant mère de la future progéniture !",
+            "La semence gobeline est forte !",
+            "Bientôt tu vas accoucher de nos enfants !",
+            "Ton ventre appartient à la tribu !"
+          ],
+          "se_count_2": [
+            "Encore plus de foutre coule dehors !",
+            "Tant de semence ne rentre pas !",
+            "Tu débordes de notre semence !",
+            "Hé-hé, on a bien travaillé !"
+          ]
+        },
+        "SE1": [
+          "Reviens encore, femelle !",
+          "On a aimé ta chatte !",
+          "On t'attendra encore !",
+          "Ton trou est le meilleur !"
+        ]
+      }
+    }
+  }
+}
+

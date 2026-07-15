@@ -1,0 +1,27 @@
+{
+  "speakerLabel": "Bandit",
+  "stepId": "fsp_sex_money_c02",
+  "stepKind": "choice",
+  "choiceLabels": [
+    "Donne le montant.",
+    "Dis d'abord ce que tu veux.",
+    "Vite — et pas de regards curieux.",
+    "Seulement à l'écart.",
+    "Montre-moi les pièces d'abord."
+  ],
+  "choiceOutcomeIds": [
+    "noop",
+    "noop",
+    "noop",
+    "noop",
+    "noop"
+  ],
+  "choiceJumpStepIds": [
+    "fsp_sex_money_price",
+    "fsp_sex_money_2_p03",
+    "fsp_sex_money_3_p03",
+    "fsp_sex_money_4_p03",
+    "fsp_sex_money_5_p03"
+  ],
+  "npcLine": "Alors ? Donne tes conditions — ou dégage."
+}

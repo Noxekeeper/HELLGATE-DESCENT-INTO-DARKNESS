@@ -1,0 +1,615 @@
+using System;
+using HarmonyLib;
+using UnityEngine;
+using Spine.Unity;
+using System.Collections.Generic;
+using System.Reflection;
+using NoREroMod.Patches.UI.MindBroken;
+using NoREroMod.Systems.Cache;
+using Object = UnityEngine.Object;
+using Random = UnityEngine.Random;
+
+namespace NoREroMod;
+
+/// <summary>
+/// Patch for InquisitionBlack - player handoff after 2 cycles
+/// Optimized: Uses UnifiedPlayerCacheManager instead of FindGameObjectWithTag
+/// </summary>
+class InquisitionBlackPassPatch {
+    
+    // Animation cycle tracking per enemy instance
+    private static Dictionary<object, int> enemyAnimationCycles = new Dictionary<object, int>();
+    
+    // H-session start time per enemy
+    private static Dictionary<object, float> enemySessionStartTime = new Dictionary<object, float>();
+    
+    // Last cycle time (prevents duplicates)
+    private static Dictionary<object, float> lastCycleTime = new Dictionary<object, float>();
+    
+    // Flag that enemy already passed GG (avoid repeat)
+    private static Dictionary<object, bool> enemyHasPassed = new Dictionary<object, bool>();
+    
+    // Flag that enemy should be disabled from patch
+    private static Dictionary<object, bool> enemyDisabled = new Dictionary<object, bool>();
+    
+    // Legacy message timing removed - using JSON system via DialogueDisplay
+    
+    // Global handoff session tracking
+    private static int globalHandoffCount = 0;
+    private static float globalSessionStartTime = 0f;
+    
+    // Legacy hardcoded phrases removed - now using JSON system via DialogueDisplay
+    
+    // UI variables removed - using JSON system via DialogueDisplay
+
+    internal static void ResetAll()
+    {
+        enemyAnimationCycles.Clear();
+        enemySessionStartTime.Clear();
+        lastCycleTime.Clear();
+        enemyHasPassed.Clear();
+        enemyDisabled.Clear();
+        // Legacy UI cleared - using JSON system
+        globalHandoffCount = 0;
+        globalSessionStartTime = 0f;
+    }
+    
+    // Patch for InquisitionBlack (InquiBlackEro)
+    [HarmonyPatch(typeof(InquiBlackEro), "OnEvent")]
+    [HarmonyPostfix]
+    static void InquisitionBlackPass(InquiBlackEro __instance, Spine.Event e, int ___se_count) {
+        try {
+            if (enemyDisabled.ContainsKey(__instance) && enemyDisabled[__instance]) {
+                return;
+            }
+            
+            // Optimization: use cached playercon
+            var player = UnifiedPlayerCacheManager.GetPlayer();
+            if (player == null || !player.eroflag || player.erodown == 0) {
+                return;
+            }
+            
+            // Get spine via reflection (field name unknown)
+            var spineField = __instance.GetType().GetField("myspine", BindingFlags.NonPublic | BindingFlags.Instance) 
+                          ?? __instance.GetType().GetField("mySpine", BindingFlags.NonPublic | BindingFlags.Instance);
+            
+            if (spineField == null) {
+                return;
+            }
+            
+            var spine = spineField.GetValue(__instance) as SkeletonAnimation;
+            if (spine == null) {
+                return;
+            }
+            
+            string currentAnim = spine.AnimationName;
+            
+            // Check this is H-animation, not combat
+            if (!IsHAnimation(currentAnim)) {
+                return; // Ignore combat animations
+            }
+
+            // (X-ray banner for inquisitor removed in favor of the new shared approach)
+            
+            // Processing dialogue system events
+            try {
+                string eventName = e?.Data?.Name ?? e?.ToString() ?? string.Empty;
+                
+                // Process custom InquisitionBlack phrases during H-scene
+                // IMPORTANT: For START, START2 force-process using the animation name
+                if (currentAnim == "START" || currentAnim == "START2")
+                {
+                    // Force-process the event using the animation name for initial events
+                    NoREroMod.Systems.Dialogue.InquisitionBlackHSceneDialogues.ProcessHSceneEvent(
+                        __instance,
+                        currentAnim,
+                        currentAnim, // Use animation name as event name
+                        0
+                    );
+
+                    // For InquisitionBlack always invoke the Aradia system after enemy phrases
+                    // Plugin.Log.LogInfo($"[InquisitionBlackPassPatch] START animation, calling Aradia system: anim={currentAnim}");
+                    NoREroMod.Systems.Dialogue.AradiaInquisitionBlackDialogues.ProcessInquisitionBlackAradiaEvent(
+                        __instance,
+                        currentAnim,
+                        currentAnim,
+                        0
+                    );
+                }
+                
+                // Check if this is an animation-switch event
+                bool isAnimationSwitchEvent = eventName == currentAnim || 
+                    eventName == "START" || eventName == "START2" ||
+                    eventName == "ERO" || eventName == "ERO1" || eventName == "ERO2" || 
+                    eventName == "ERO3" || eventName == "ERO4" ||
+                    eventName == "FIN" || eventName == "FIN2" ||
+                    eventName == "JIGO" || eventName == "JIGO2" ||
+                    eventName == "JIGOFIN" || eventName == "JIGOFIN2";
+                
+                // Process animation-switch event (ERO, FIN, etc.)
+                // IMPORTANT: For FIN/FIN2 use event name as animation name, since currentAnim has not updated yet
+                if (isAnimationSwitchEvent && (currentAnim != "START" && currentAnim != "START2"))
+                {
+                    string targetAnim = currentAnim;
+                    
+                    // If animation-switch event (FIN, FIN2, etc.), use event name as animation name
+                    if (eventName == "FIN" || eventName == "FIN2" || eventName == "ERO" || eventName == "ERO1" || 
+                        eventName == "ERO2" || eventName == "ERO3" || eventName == "ERO4" ||
+                        eventName == "JIGO" || eventName == "JIGO2" || eventName == "JIGOFIN" || eventName == "JIGOFIN2")
+                    {
+                        targetAnim = eventName; // Use event name as animation name
+                    }
+                    
+                    // Process animation-switch event using animation name as event
+                    NoREroMod.Systems.Dialogue.InquisitionBlackHSceneDialogues.ProcessHSceneEvent(
+                        __instance,
+                        targetAnim, // Use the correct animation name
+                        targetAnim, // Use animation name as event name
+                        0
+                    );
+
+                    // For InquisitionBlack always invoke the Aradia system after enemy phrases
+                    // Plugin.Log.LogInfo($"[InquisitionBlackPassPatch] Animation switch, calling Aradia system: anim={targetAnim}, event={targetAnim}");
+                    NoREroMod.Systems.Dialogue.AradiaInquisitionBlackDialogues.ProcessInquisitionBlackAradiaEvent(
+                        __instance,
+                        targetAnim,
+                        targetAnim,
+                        0
+                    );
+                }
+                
+                // Then process all events (including SE, SE1, SE2, SE3, SE8)
+                // But only if this is NOT an animation-switch event (to avoid duplicate)
+                // IMPORTANT: Animation-switch events (FIN, FIN2, ERO, etc.) already handled above
+                if (!isAnimationSwitchEvent)
+                {
+                    // Process phrase enemy
+                    NoREroMod.Systems.Dialogue.InquisitionBlackHSceneDialogues.ProcessHSceneEvent(
+                        __instance,
+                        currentAnim,
+                        eventName,
+                        ___se_count
+                    );
+
+                    // For InquisitionBlack always invoke the Aradia system after enemy phrases
+                    // Plugin.Log.LogInfo($"[InquisitionBlackPassPatch] Enemy spoke, calling Aradia system: anim={currentAnim}, event={eventName}");
+                    NoREroMod.Systems.Dialogue.AradiaInquisitionBlackDialogues.ProcessInquisitionBlackAradiaEvent(
+                        __instance,
+                        currentAnim,
+                        eventName,
+                        ___se_count
+                    );
+                }
+                
+                NoREroMod.Systems.Dialogue.DialogueFramework.ProcessAnimationEvent(
+                    __instance,
+                    currentAnim,
+                    eventName,
+                    ___se_count
+                );
+            } catch (System.Exception ex) {
+            }
+            
+            TrackCycles(__instance, spine, e, ___se_count);
+        } catch (System.Exception ex) {
+        }
+    }
+    
+    /// <summary>
+    /// Returns true if the animation is an H-animation
+    /// List matches real animations from InquiBlackEro.cs
+    /// </summary>
+    private static bool IsHAnimation(string animationName) {
+        if (string.IsNullOrEmpty(animationName)) return false;
+        
+        // H-animation list for InquisitionBlack (from InquiBlackEro.cs source)
+        string[] hAnimations = {
+            "START", "START2",
+            "ERO", "ERO1", "ERO2", "ERO3", "ERO4",
+            "FIN", "FIN2",
+            "JIGO", "JIGO2",
+            "JIGOFIN", "JIGOFIN2"
+        };
+        
+        foreach (string hAnim in hAnimations) {
+            if (animationName.StartsWith(hAnim)) {
+                return true;
+            }
+        }
+        
+        return false;
+    }
+    
+    /// <summary>
+    /// Tracks animation cycles and hands off the player after 2 cycles
+    /// </summary>
+    private static void TrackCycles(object enemyInstance, SkeletonAnimation spine, Spine.Event e, int seCount) {
+        // Plugin.Log.LogInfo($"[TRACK CYCLES] ENTRY: anim={spine?.AnimationName}, event={e?.ToString()}");
+        
+        try {
+            if (Plugin.enableEnemyPass != null && !Plugin.enableEnemyPass.Value) {
+                // Plugin.Log.LogInfo("[TRACK CYCLES] EXIT: enabled=false");
+                return;
+            }
+        } catch {
+            // If Plugin is not initialized, continue
+        }
+        
+        // Skip if this enemy already handed off the player
+        if (enemyHasPassed.ContainsKey(enemyInstance) && enemyHasPassed[enemyInstance]) {
+            // Plugin.Log.LogInfo("[TRACK CYCLES] EXIT: enemy already passed");
+            return;
+        }
+        
+        string currentAnim = spine.AnimationName;
+        string eventName = e.ToString();
+
+        // Process MindBroken system
+        MindBrokenSystem.ProcessAnimationEvent(enemyInstance, currentAnim, eventName);
+        
+        // Initialize session on first call
+        if (!enemySessionStartTime.ContainsKey(enemyInstance)) {
+            enemySessionStartTime[enemyInstance] = Time.time;
+            
+            // Initialize global session if this is the first enemy
+            if (EnemyHandoffSystem.GlobalHandoffCount == 0) {
+                globalSessionStartTime = Time.time;
+                // Plugin.Log.LogInfo($"[INQUISITION BLACK] Start global session at {Time.time:F3}s (globalHandoffCount={globalHandoffCount})");
+            }
+            
+            // Check if this is the first enemy or a subsequent one (shared — any type)
+            if (EnemyHandoffSystem.GlobalHandoffCount > 0) {
+                // Plugin.Log.LogInfo($"[INQUISITION BLACK] Subsequent enemy #{globalHandoffCount + 1} at {Time.time:F3}s - force to middle (globalHandoffCount={globalHandoffCount})");
+                // Force transition to mid-cycle animation
+                ForceAnimationToMiddle(spine);
+            } else {
+                // Plugin.Log.LogInfo($"[INQUISITION BLACK] First enemy at {Time.time:F3}s - full animation {currentAnim}");
+            }
+        }
+        
+        // OLD SYSTEM DISABLED - EnemySpeechDisplayPatch is used instead
+        
+        // Compute elapsed time from session start for this enemy
+        float enemyElapsedTime = Time.time - enemySessionStartTime[enemyInstance];
+        float globalElapsedTime = globalSessionStartTime > 0 ? Time.time - globalSessionStartTime : 0f;
+        
+        // Check for animation-cycle completion
+        // Log only important events about once per second
+        if ((currentAnim.Contains("START") || currentAnim.Contains("ERO") || currentAnim.Contains("FIN") || currentAnim.Contains("JIGO")) 
+            && (enemyElapsedTime % 1.0f < 0.1f)) {
+            // Plugin.Log.LogInfo($"[TIME] TouzokuNormal | Global={globalElapsedTime:F1}s | Local={enemyElapsedTime:F1}s | Anim={currentAnim} | Event={eventName} | SE={seCount}");
+        }
+        
+        if (IsCycleComplete(currentAnim, eventName, seCount)) {
+            if (!enemyAnimationCycles.ContainsKey(enemyInstance)) {
+                enemyAnimationCycles[enemyInstance] = 0;
+            }
+            enemyAnimationCycles[enemyInstance]++;
+            
+            // Plugin.Log.LogInfo($"[CYCLE] TouzokuNormal: Completed cycle #{enemyAnimationCycles[enemyInstance]} in {enemyElapsedTime:F2}s (anim={currentAnim}, event={eventName})");
+            
+            // Hand off the player after two full cycles
+            if (enemyAnimationCycles[enemyInstance] >= 2) {
+                globalHandoffCount++;
+                EnemyHandoffSystem.GlobalHandoffCount++;
+                // Logs disabled
+                // Plugin.Log.LogInfo($"[INQUISITION BLACK] Passing GG after {enemyAnimationCycles[enemyInstance]} cycles! (Global handoff #{globalHandoffCount})");
+                // Plugin.Log.LogInfo("[DEBUG] About to call ShowHandoffMessage and PushPlayerAwayFromEnemy");
+                
+                enemyHasPassed[enemyInstance] = true;
+                
+                // OLD SYSTEM DISABLED - phrases via EnemySpeechDisplayPatch!
+                // if (Plugin.enableHandoffMessages.Value) {
+                //     ShowHandoffMessage();
+                // }
+                
+                // Hand off the player with delay from config
+                StartDelayedHandoff(enemyInstance);
+                
+                // Plugin.Log.LogInfo("[DEBUG] After PushPlayerAwayFromEnemy, about to return");
+                return;
+            }
+        }
+    }
+    
+    /// <summary>
+    /// Determines completion of a full animation cycle
+    /// </summary>
+    private static bool IsCycleComplete(string animationName, string eventName, int seCount) {
+        // Inquisitor cycle complete — strictly on JIGOFIN (not JIGOFIN2)
+        if (animationName == "JIGOFIN" && eventName == "JIGOFIN") {
+            // Plugin.Log.LogInfo("[CYCLE DETECTION] InquisitionBlack: CYCLE COMPLETE on JIGOFIN");
+            return true;
+        }
+        // Fallback: return to ERO (start of next cycle)
+        else if (animationName == "ERO" && eventName == "ERO") {
+            // Plugin.Log.LogInfo("[CYCLE DETECTION] InquisitionBlack: CYCLE COMPLETE! ERO + ERO (Start of next cycle, fallback)");
+            return true;
+        }
+        
+        return false;
+    }
+    
+    /// <summary>
+    /// Force animation to a mid-cycle entry point
+    /// Possible options: JIGO, ERO, ERO1, ERO2
+    /// </summary>
+    private static void ForceAnimationToMiddle(SkeletonAnimation spine) {
+        try {
+            if (spine == null) return;
+            
+            // For InquisitionBlack: start at START2 (skip only START, short prelude)
+            // Plugin.Log.LogInfo($"[ANIMATION] Force InquisitionBlack to START2 (short intro)");
+            
+            // Clear current animation and set START2
+            spine.AnimationState.ClearTracks();
+            spine.AnimationState.AddAnimation(0, "START2", false, 0f);
+        } catch (System.Exception ex) {
+        }
+    }
+    
+    /// <summary>
+    /// Pushes the player away from the enemy for handoff to another enemy
+    /// </summary>
+    private static void PushPlayerAwayFromEnemy(object enemyInstance) {
+        // Logs disabled
+        // Plugin.Log.LogInfo("[DEBUG] PushPlayerAwayFromEnemy called!");
+        try {
+            // Plugin.Log.LogInfo("[INQUISITION BLACK] === Pushing GG away ===");
+            
+            // Find the player
+            // Optimization: use cached playercon
+            GameObject playerObject = UnifiedPlayerCacheManager.GetPlayerObject();
+            if (playerObject == null) {
+                return;
+            }
+            
+            // Plugin.Log.LogInfo($"[DEBUG] Player found, name={playerObject?.name ?? "NULL"}");
+            
+            // Mark enemy as disabled and hide it
+            enemyDisabled[enemyInstance] = true;
+            // Plugin.Log.LogInfo($"[INQUISITION BLACK] Enemy marked as disabled. Type: {enemyInstance?.GetType()?.Name}");
+            
+            // Stop H-animation enemy
+            var enemyComponent = enemyInstance as InquiBlackEro;
+            // Plugin.Log.LogInfo($"[DEBUG] enemyComponent after cast: {enemyComponent != null}");
+            if (enemyComponent != null) {
+                try {
+                    // Get spine enemy via reflection
+                    var enemySpineField = enemyComponent.GetType().GetField("myspine", BindingFlags.NonPublic | BindingFlags.Instance) 
+                                        ?? enemyComponent.GetType().GetField("mySpine", BindingFlags.NonPublic | BindingFlags.Instance);
+                    if (enemySpineField != null) {
+                        var enemySpine = enemySpineField.GetValue(enemyComponent) as SkeletonAnimation;
+                        if (enemySpine != null) {
+                            // Plugin.Log.LogInfo("[INQUISITION BLACK] Stopping enemy H-animation... looking for idle animation");
+                            enemySpine.AnimationState.ClearTracks();
+                            
+                            // Try different idle animation variants
+                            string[] idleAnimations = { "idle", "Idle", "IDLE", "wait", "Wait", "WAIT" };
+                            bool animationSet = false;
+                            foreach (string animName in idleAnimations) {
+                                try {
+                                    enemySpine.AnimationState.SetAnimation(0, animName, true);
+                                    // Plugin.Log.LogInfo($"[INQUISITION BLACK] Set enemy animation to '{animName}'");
+                                    animationSet = true;
+                                    break;
+                                } catch {
+                                    // Try next animation
+                                }
+                            }
+                            
+                            if (!animationSet) {
+                            }
+                        }
+                    }
+                    
+                    // Make enemy invisible (as in original - hide only erodata)
+                    var enemyMonoBehaviour = enemyComponent as MonoBehaviour;
+                    // Plugin.Log.LogInfo($"[DEBUG] enemyMonoBehaviour: {enemyMonoBehaviour != null}");
+                    if (enemyMonoBehaviour != null) {
+                        var enemyGameObject = enemyMonoBehaviour.gameObject;
+                        // Plugin.Log.LogInfo($"[DEBUG] enemyGameObject name: {enemyGameObject?.name ?? "NULL"}");
+                        if (enemyGameObject != null) {
+                            // Plugin.Log.LogInfo("[INQUISITION BLACK] Hiding erodata GameObject...");
+                            enemyGameObject.SetActive(false);
+                        }
+                    }
+                } catch (System.Exception ex) {
+                }
+            }
+            
+            // Clear player animation
+            // Plugin.Log.LogInfo("[DEBUG] Getting SkeletonAnimation...");
+            var playerSpine = playerObject.GetComponentInChildren<SkeletonAnimation>();
+            // Plugin.Log.LogInfo($"[DEBUG] SkeletonAnimation: {playerSpine?.name ?? "NULL"}");
+            if (playerSpine != null) {
+                try {
+                    // Plugin.Log.LogInfo("[DEBUG] Calling ClearTracks...");
+                    playerSpine.AnimationState.ClearTracks();
+                    // Plugin.Log.LogInfo("[DEBUG] ClearTracks completed!");
+                    // Plugin.Log.LogInfo("[INQUISITION BLACK] Player spine cleared");
+                } catch (System.Exception ex) {
+                }
+            }
+            
+            // Get playercon via reflection
+            // Plugin.Log.LogInfo("[DEBUG] Getting playercon...");
+            var playerComponent = playerObject.GetComponent<playercon>();
+            // Plugin.Log.LogInfo($"[DEBUG] playercon: {playerComponent != null}");
+            if (playerComponent == null) {
+                return;
+            }
+            
+            // Clear eroflag via reflection
+            // Plugin.Log.LogInfo("[DEBUG] Getting eroflag field...");
+            var eroFlagField = typeof(playercon).GetField("eroflag", BindingFlags.Public | BindingFlags.Instance);
+            // Plugin.Log.LogInfo($"[DEBUG] eroFlagField: {eroFlagField != null}");
+            if (eroFlagField != null) {
+                try {
+                    // Plugin.Log.LogInfo("[DEBUG] Setting eroflag to false...");
+                    eroFlagField.SetValue(playerComponent, false);
+                    // Plugin.Log.LogInfo("[INQUISITION BLACK] eroflag set to false (exit H-scene)");
+                } catch (System.Exception ex) {
+                }
+            }
+            
+            // Set GG animation to lying
+            string[] downAnims = { "DOWN", "down", "Idle", "idle" };
+            foreach (string animName in downAnims) {
+                if (playerSpine != null) {
+                    try {
+                        playerSpine.AnimationState.SetAnimation(0, animName, true);
+                        // Plugin.Log.LogInfo($"[INQUISITION BLACK] GG animation set to '{animName}'");
+                        break;
+                    }
+                    catch (System.Exception ex)
+                    {
+                    }
+                }
+            }
+            
+            // Set erodown via reflection
+            var eroDownField = typeof(playercon).GetField("erodown", BindingFlags.Public | BindingFlags.Instance);
+            if (eroDownField != null) {
+                eroDownField.SetValue(playerComponent, 1);
+                // Plugin.Log.LogInfo("[INQUISITION BLACK] erodown set to 1 (prone)");
+            }
+            
+            // Reset SP via PlayerStatus
+            var playerStatus = playerObject.GetComponent<PlayerStatus>();
+            if (playerStatus != null) {
+                playerStatus.Sp = 0f;
+                // Plugin.Log.LogInfo("[INQUISITION BLACK] SP reset to 0");
+            }
+            
+            // Push the player away from the enemy
+            var enemyTransform = (enemyInstance as MonoBehaviour)?.transform;
+            if (enemyTransform != null) {
+                Vector3 enemyPos = enemyTransform.position;
+                Vector3 playerPos = playerComponent.transform.position;
+                Vector3 direction = playerPos - enemyPos;
+                direction.Normalize();
+                
+                // Fix: if enemy is left of the player, push right
+                if (direction.x < 0) {
+                    direction = Vector3.right;
+                } else {
+                    direction = Vector3.left;
+                }
+                
+                float pushDistance = 2f;
+                Vector3 newPosition = playerComponent.transform.position + (direction * pushDistance);
+                playerComponent.transform.position = newPosition;
+                
+                // Force-reset vertical velocity to avoid bouncing upward
+                var rigi2d = playerComponent.rigi2d;
+                if (rigi2d != null) {
+                    rigi2d.velocity = new Vector2(rigi2d.velocity.x, 0f);
+                    // Plugin.Log.LogInfo("[INQUISITION BLACK] Vertical velocity reset to prevent bounce");
+                }
+                
+                // Plugin.Log.LogInfo($"[INQUISITION BLACK] GG pushed to: {newPosition}");
+                // Plugin.Log.LogInfo($"[INQUISITION BLACK] Direction: {direction}");
+            }
+            
+            // Reset struggle flag
+            StruggleSystem.setStruggleLevel(-1);
+            
+            // Enable sprite renderer
+            var spriteRenderer = playerObject.GetComponent<SpriteRenderer>();
+            if (spriteRenderer != null) {
+                spriteRenderer.enabled = true;
+                // Plugin.Log.LogInfo("[INQUISITION BLACK] Sprite renderer enabled");
+            }
+            
+            // Plugin.Log.LogInfo("[INQUISITION BLACK] === Push completed ===");
+            
+        } catch (System.Exception ex) {
+        }
+    }
+    
+    // DisplayMessage function removed - using JSON system via DialogueDisplay
+    
+    // ShowDirtyMessage removed - using JSON system via DialogueDisplay
+    
+    // ShowHandoffMessage removed - using JSON system via DialogueDisplay
+    
+    // Patch ImmediatelyERO for cleanup on escape via GiveUp
+    [HarmonyPatch(typeof(playercon), "ImmediatelyERO")]
+    [HarmonyPostfix]
+    static void ClearStateOnImmediatelyERO() {
+        try {
+            // Plugin.Log.LogInfo("[INQUISITION BLACK] === CLEAR ON IMMEDIATELYERO (GiveUp) ===");
+            ClearStateData();
+        } catch (System.Exception ex) {
+        }
+    }
+    
+    // Patch StruggleSystem.startGrabInvul for cleanup on manual struggle
+    [HarmonyPatch(typeof(StruggleSystem), "startGrabInvul")]
+    [HarmonyPostfix]
+    static void ClearStateCuStruggleEscape() {
+        try {
+            // Plugin.Log.LogInfo("[INQUISITION BLACK] === CLEAR ON STRUGGLE ESCAPE ===");
+            ClearStateData();
+        } catch (System.Exception ex) {
+        }
+    }
+    
+    // Shared state-clear function
+    private static void ClearStateData() {
+        // Plugin.Log.LogInfo($"[CLEAR STATE] Before clear: globalHandoffCount={globalHandoffCount}, dictCounts=[cycles={enemyAnimationCycles.Count}, startTimes={enemySessionStartTime.Count}, hasPassed={enemyHasPassed.Count}]");
+        
+        // Clear all dictionaries
+        enemyAnimationCycles.Clear();
+        enemySessionStartTime.Clear();
+        lastCycleTime.Clear();
+        enemyHasPassed.Clear();
+        enemyDisabled.Clear();
+        
+        // Reset global counters
+        int oldGlobalCount = globalHandoffCount;
+        globalHandoffCount = 0;
+        globalSessionStartTime = 0f;
+        
+        // Plugin.Log.LogInfo($"[CLEAR STATE] After clear: globalHandoffCount={oldGlobalCount} -> {globalHandoffCount}, state fully cleared!");
+    }
+    
+    /// <summary>
+    /// Start delay before player handoff
+    /// </summary>
+    private static void StartDelayedHandoff(object enemyInstance) {
+        try {
+            // Optimization: use cached playercon
+            var playerObj = UnifiedPlayerCacheManager.GetPlayerObject();
+            if (playerObj == null) {
+                // If no Player, use a temporary GameObject
+                GameObject temp = new GameObject("DelayedHandoffTemp");
+                var script = temp.AddComponent<DelayedHandoffScript>();
+                script.StartDelayedHandoff(enemyInstance);
+            } else {
+                var script = playerObj.GetComponent<DelayedHandoffScript>();
+                if (script == null) {
+                    script = playerObj.AddComponent<DelayedHandoffScript>();
+                }
+                script.StartDelayedHandoff(enemyInstance);
+            }
+        } catch (System.Exception ex) {
+            // Fallback: pass immediately without delay
+            PushPlayerAwayFromEnemy(enemyInstance);
+        }
+    }
+    
+    /// <summary>
+    /// Public method for invoking handoff (used by DelayedHandoffScript)
+    /// </summary>
+    public static void ExecuteHandoff(object enemyInstance) {
+        PushPlayerAwayFromEnemy(enemyInstance);
+    }
+}
+
+/// <summary>
+/// MonoBehaviour for message-hide coroutines
+/// </summary>
+// MessageDisplayScriptInqui class removed - using JSON system via DialogueDisplay
+

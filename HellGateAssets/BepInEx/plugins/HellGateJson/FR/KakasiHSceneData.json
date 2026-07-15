@@ -1,0 +1,463 @@
+{
+  "settings": {
+    "commentCooldownSeconds": 2.0,
+    "maxSimultaneousComments": 1,
+    "commentDisplayDuration": 4.0,
+    "fontSize": 30.0,
+    "verticalOffset": 15.0,
+    "streamingSpeed": 0.03,
+    "goblinColor": {
+      "r": 1.0,
+      "g": 1.0,
+      "b": 1.0,
+      "a": 1.0
+    },
+    "goblinOutlineColor": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 1.0
+    }
+  },
+  "animations": {
+    "start": {
+      "description": "Grabs GG and throws her body on the cross, tying hands to the cross, arms crucified on the cross",
+      "events": {
+        "start": [
+          "Alors, qu'est-ce qu'on a là ? Quelle rencontre, sorcière !",
+          "Maintenant je vais faire de toi une esclave pour les hommes, faire de toi une salope !",
+          "Je vais te crucifier comme la dernière salope, et faire ce que je veux !",
+          "Ton pouvoir est terminé, maintenant tu es ma propriété !",
+          "Je vais faire de toi un trou obéissant pour baiser !",
+          "Ton corps m'appartient maintenant, salope !",
+          "Maintenant je vais faire de toi un objet pour le plaisir masculin !",
+          "Comme tu es belle crucifiée, salope !"
+        ],
+        "SE1": [
+          "Lutte autant que tu veux, tu ne t'échapperas toujours pas !",
+          "Ta lutte ne fait que m'exciter !",
+          "Continue de résister, j'aime ça !"
+        ]
+      }
+    },
+    "start2": {
+      "description": "With one hand he covers GG's mouth, and on the second straw hand a rubber glove appears, soaked with aphrodisiac",
+      "events": {
+        "start2": [
+          "Cette imprégnation va pénétrer dans chacun de tes creux, salope !",
+          "Bientôt ce liquide sera dans ta chatte !",
+          "Je vais frotter ta chatte avec ce philtre, et tu supplieras pour plus !",
+          "Tu vas sentir comment ton corps brûle de désir, salope !",
+          "Chaque cellule de ton corps va crier pour être baisée !",
+          "Maintenant je vais transformer ta chatte en foyer brûlant de luxure !",
+          "Ce lubrifiant va te faire oublier ta volonté, merde !",
+          "Ta chatte sera imprégnée de ce philtre jusqu'au fond !"
+        ],
+        "SE1": [
+          "Lutte, lutte, j'aime ça !",
+          "Ta lutte est inutile !",
+          "Continue, salope, j'aime ça !"
+        ]
+      }
+    },
+    "ero1": {
+      "description": "Starts rubbing with soaked glove, GG's pussy, moving panties aside, slightly enters inside",
+      "events": {
+        "ero1": [
+          "Tu sens comment je prépare ton trou, salope ?",
+          "Maintenant je vais rendre ta chatte mouillée et prête !",
+          "Je vais t'étirer jusqu'à ce que tu commences à dégouliner !",
+          "Ta chatte est déjà mouillée ? Attends, ce n'est que le début !",
+          "Je vais enfoncer mes doigts si profond que tu vas hurler !",
+          "Ton corps répond déjà, même si tu ne le veux pas !",
+          "Je vais te travailler tellement que tu supplieras pour une bite !",
+          "Chaque mouvement va te rendre folle, salope !"
+        ],
+        "SE1": [
+          "Ta lutte ne fait que m'exciter encore plus !",
+          "Continue de lutter jusqu'à ce que je te brise complètement !",
+          "Lutte autant que tu veux, tu ne peux plus t'échapper !"
+        ]
+      }
+    },
+    "ero2": {
+      "description": "Enters deeper without stopping, already fucking with hand, his fingers push deeper applying aphrodisiac to her walls",
+      "events": {
+        "ero2": [
+          "Mes doigts sont déjà dedans, salope, et ils ne s'arrêteront pas !",
+          "Je te baise avec ma main, frottant les parois de ta chatte !",
+          "Plus profond, plus profond... je veux atteindre le fond !",
+          "Tu sens comment je te possède de l'intérieur, salope ?",
+          "Ta chatte est mienne maintenant, j'en fais ce que je veux !",
+          "Chaque poussée de main injecte du désir en toi !",
+          "Je te déchire de l'intérieur, et tu aimes ça !",
+          "Ta chatte avale mes doigts, salope avide !"
+        ],
+        "SE1": [
+          "Tes gémissements sont si excitants, continue !",
+          "Crie, crie plus fort, salope, j'aime ça !",
+          "Bientôt tu ne pourras plus crier, salope !"
+        ]
+      }
+    },
+    "ero3": {
+      "description": "Continues rhythmically fucking and rubbing aphrodisiac into GG",
+      "events": {
+        "ero3": [
+          "Aucun endroit ne restera intact !",
+          "Chaque trou sera imprégné !",
+          "Ton cul est le suivant, salope !",
+          "Maintenant je vais aussi frotter ta bouche !",
+          "Tout sera prêt pour baiser !",
+          "Tu seras imprégnée jusqu'aux os !",
+          "Chaque trou va brûler !",
+          "Rien ne restera intact !"
+        ],
+        "SE1": [
+          "Ta lutte me plaît, salope !",
+          "Juste ne meurs pas, salope, avant que j'aie fini !",
+          "Résiste autant que tu veux, je ne m'arrêterai pas !"
+        ]
+      }
+    },
+    "finish1": {
+      "description": "Several times deeply pushes several fingers into GG, by GG it's visible that very deep, GG realizes in horror that she's cumming",
+      "events": {
+        "finish1": [
+          "Ahahaha ! Je t'ai fait jouir, salope !",
+          "Comme ça, jouis ! Jouis de ma main !",
+          "Quelle salope tu es, jouissant contre ta volonté !",
+          "Orgasme forcé ! Ton corps t'a trahie !",
+          "Regarde comment tu jouis, crucifiée sur la croix !",
+          "Ta chatte s'est serrée de plaisir, et tu es terrifiée !",
+          "Je t'ai fait ressentir ce que tu ne voulais pas !",
+          "Maintenant tu es mienne, salope qui jouit !"
+        ],
+        "SE1": [
+          "Prends mon foutre, salope, tu l'as mérité !",
+          "Aaa... Merde, je jouis, prends tout !",
+          "Je vais remplir ton ventre, et tu t'en souviendras toujours !"
+        ]
+      }
+    },
+    "finish2": {
+      "description": "Removes hands from GG, dropping the glove, laughs and says something towards GG",
+      "events": {
+        "finish2": [
+          "Repose-toi un peu, sorcière. Bientôt il y aura de la vraie baise !",
+          "Tu pensais que c'était tout ? Ce n'était qu'un échauffement !",
+          "Ton corps est déjà prêt pour ma bite !",
+          "Regarde-toi, crucifiée et jouissant, salope !",
+          "Maintenant tu es prête à prendre ma bite noire !",
+          "Respire fort tant que tu as de la force. Tu en auras besoin !",
+          "Tu n'es plus une sorcière, tu es juste un trou pour le sexe !",
+          "Je t'ai brisée. Maintenant je vais faire de toi mon jouet !"
+        ],
+        "SE1": [
+          "Ta chatte aspire ma bite, comme une salope !",
+          "Aaa, comme je jouis fort, prends tout !",
+          "Prends ça, salope, tu l'as mérité !"
+        ]
+      }
+    },
+    "finish_end": {
+      "description": "GG opens eyes and looks at him, clearly understanding this is far from the end",
+      "events": {
+        "finish_end": [
+          "Ahahah ! Tu comprends tout correctement, sorcière !",
+          "Et maintenant je vais te baiser avec ma bite noire !",
+          "Tu pensais que c'était humiliant ? Attends !",
+          "Maintenant je vais entrer en toi comme tu ne l'as jamais senti !",
+          "Prépare-toi pour la vraie domination, salope !",
+          "Tes yeux disent la vérité : tu as peur et tu le veux !",
+          "Ma bite va te déchirer !",
+          "Ça fera mal, ce sera sale et tu supplieras pour plus !"
+        ],
+        "SE1": [
+          "Suce mon foutre, salope, c'est ton travail !",
+          "Tiens, prends tout, salope, tu l'as mérité !",
+          "Oui, oui, oui, je jouis, prends tout !"
+        ]
+      }
+    },
+    "finish_end2": {
+      "description": "Grabs by face and throws to the ground",
+      "events": {
+        "finish_end2": [
+          "Comme ça, par terre, salope !",
+          "Maintenant tu vas t'allonger comme tu le dois !",
+          "De la croix au sol - c'est ton destin, merde !",
+          "Je t'ai jetée comme une ordure, salope !",
+          "Maintenant tu es en bas, où tu dois être !",
+          "De la croix à la boue - chute parfaite, sorcière !",
+          "Tu es tombée comme une étoile filante, salope !",
+          "Maintenant tu es par terre, prête pour l'étape suivante !"
+        ],
+        "SE1": [
+          "Tombe, tombe, salope !",
+          "Ta lutte est terminée !",
+          "Maintenant tu es complètement mienne !"
+        ]
+      }
+    },
+    "START": {
+      "description": "Takes out wooden stocks for hands and feet, hands locked in shackles between locked legs, GG lies on chest and face",
+      "events": {
+        "START": [
+          "Reste immobile, salope. Maintenant tu es mon jouet sexuel !",
+          "Ta position est parfaite pour que je te brise !",
+          "Regarde comme tu es impuissante, salope immobilisée !",
+          "Maintenant je vais faire de toi une bonne fille pour baiser !",
+          "Ta chatte est levée et attend ma bite noire !",
+          "Tu vas me servir comme un objet obéissant !",
+          "Ces ceps sont ta nouvelle réalité, merde !",
+          "Prépare-toi, je vais entrer le plus profond possible !"
+        ],
+        "SE1": [
+          "Lutte autant que tu veux, tu ne t'échapperas toujours pas !",
+          "Ta lutte ne fait que m'exciter !",
+          "Continue de résister, j'aime ça !"
+        ],
+        "SE2": [
+          "Tu ne t'échapperas pas, salope !",
+          "Ta lutte est inutile !",
+          "Continue, salope, j'aime ça !"
+        ]
+      }
+    },
+    "ERO2": {
+      "description": "Accentuated deep fucking",
+      "events": {
+        "ERO2": [
+          "Tu sens comment j'étire ton trou, salope ?",
+          "Je te baise comme tu le mérites !",
+          "Ta chatte a été faite pour ma bite noire !",
+          "Chaque poussée te rend mienne !",
+          "Enfourche-moi plus profond, merde !",
+          "Tes chaînes cliquettent au rythme de mes claques !",
+          "Ton corps tremble de plaisir et de douleur !",
+          "Je te possède complètement, salope !"
+        ],
+        "ERO3": [
+          "Plus profond, encore plus profond, salope !",
+          "Je veux que tu sentes chaque centimètre !",
+          "Ta chatte m'avale de plus en plus profond, merde !",
+          "Je t'empale jusqu'au fond, salope !",
+          "Tu sens comment je t'étire de l'intérieur !",
+          "Tes parois s'enroulent autour de moi si parfaitement !",
+          "Je te défonce jusqu'à la limite, salope avide !",
+          "Plus profond, plus profond, jusqu'à ce que tu atteignes la fin !"
+        ],
+        "SE1": [
+          "Ta lutte ne fait que m'exciter encore plus !",
+          "Continue de lutter jusqu'à ce que je te brise complètement !",
+          "Lutte autant que tu veux, tu ne peux plus t'échapper !"
+        ]
+      }
+    },
+    "ERO3": {
+      "description": "Fucking deeper so GG feels it",
+      "events": {
+        "ERO3": [
+          "Je veux que tu sentes chaque centimètre de ma bite !",
+          "Tu sens comment ma bite noire te remplit !",
+          "Je t'empale sur moi jusqu'à la limite, salope !",
+          "Ta chatte m'avale, salope avide !",
+          "Plus profond, encore plus profond, salope !",
+          "Tes parois s'enroulent autour de moi si parfaitement !",
+          "Ton corps a été fait pour une telle baise !",
+          "Je te défonce jusqu'au fond, merde !"
+        ],
+        "SE1": [
+          "Tes gémissements sont si excitants, continue !",
+          "Crie, crie plus fort, salope, j'aime ça !",
+          "Bientôt tu ne pourras plus crier, salope !"
+        ]
+      }
+    },
+    "ERO4": {
+      "description": "Fucking deeper and harder",
+      "events": {
+        "ERO4": [
+          "Je vais te baiser plus fort et plus brutal, salope !",
+          "Ton cul est rouge de mes claques !",
+          "Bientôt tu supplieras pour pitié !",
+          "Chaque coup est ma domination sur toi !",
+          "Ta chatte est déjà mienne, déchirée et mouillée !",
+          "Je vais te réduire en ruines, merde !",
+          "Souffre et jouis, salope !",
+          "Je vais te briser avec ma bite !"
+        ],
+        "SE1": [
+          "Ta lutte me plaît, salope !",
+          "Juste ne meurs pas, salope, avant que j'aie fini !",
+          "Résiste autant que tu veux, je ne m'arrêterai pas !"
+        ]
+      }
+    },
+    "ERO5": {
+      "description": "Fucking deeply and juicily, getting ready to cum inside",
+      "events": {
+        "ERO5": [
+          "Je vais te remplir jusqu'au bord maintenant, salope !",
+          "Tu vas aimer mon foutre, salope !",
+          "Prépare-toi à prendre tout mon jus !",
+          "Je vais jouir profondément en toi, merde !",
+          "Ta chatte va déborder de moi !",
+          "Chaque goutte de mon foutre sera tienne !",
+          "Tu deviendras ma poupée en caoutchouc personnelle !",
+          "Maintenant je vais faire de toi mienne pour toujours, salope !"
+        ],
+        "FIN": [
+          "A-a-ah ! Je jouis ! Prends tout, salope !",
+          "Oui ! Je te remplis, merde !",
+          "Voilà ! Mon foutre en toi !",
+          "Je te remplis jusqu'au bord, salope !",
+          "Tu sens comment j'explose en toi !",
+          "Tout mien ! Tout mon foutre pour toi !",
+          "Oui ! Oui ! Oui ! Je jouis, salope !",
+          "Ta chatte est maintenant ma propriété !"
+        ],
+        "SE1": [
+          "Ta chatte aspire ma bite, comme une salope !",
+          "Aaa, comme je jouis fort, prends tout !",
+          "Prends ça, salope, tu l'as mérité !"
+        ]
+      }
+    },
+    "FIN": {
+      "description": "Cums with huge amount of cum",
+      "events": {
+        "FIN": [
+          "A-a-ah ! Je jouis ! Prends tout, salope !",
+          "Oui ! Je te remplis, merde !",
+          "Voilà ! Mon foutre en toi !",
+          "Je te remplis jusqu'au bord, salope !",
+          "Tu sens comment j'explose en toi !",
+          "Tout mien ! Tout mon foutre pour toi !",
+          "Oui ! Oui ! Oui ! Je jouis, salope !",
+          "Ta chatte est maintenant ma propriété !"
+        ],
+        "JIGO1": [
+          "Regarde comment ma semence coule de toi, salope !",
+          "Tu trembles de plaisir, et je regarde !",
+          "Tu es maintenant trempée de moi, sorcière !",
+          "Mon foutre coule de toi, et tu ne peux rien faire !",
+          "Tu ressembles à une salope usée !",
+          "Apparence parfaite pour une telle salope !",
+          "Ton corps tremble encore de ma baise !",
+          "Maintenant tu es vraiment mienne, salope !"
+        ],
+        "SE": {
+          "se_count_1": [
+            "Je jouis, je jouis ! Prends tout, salope !",
+            "Ta chatte se remplit jusqu'au bord, tu le sens ?",
+            "Je remplis ton ventre, tu sens qu'il se remplit ?",
+            "Tu sens comment je te fertilise, salope ?",
+            "Ton ventre est mien maintenant, et je l'ai rempli de foutre !"
+          ],
+          "se_count_2": [
+            "Comme c'est agréable de jouir en toi, salope !",
+            "Merde, suce mon foutre, salope !",
+            "Ta chatte déborde, tu le sens ?",
+            "Encore plus de foutre pour toi, salope !"
+          ]
+        },
+        "SE1": [
+          "Prends mon foutre, salope, tu l'as mérité !",
+          "Aaa... Merde, je jouis, prends tout !",
+          "Je vais remplir ton ventre, et tu t'en souviendras toujours !"
+        ]
+      }
+    },
+    "JIGO1": {
+      "description": "Pulls out cock and stands, looking at GG, how his cum flows from her",
+      "events": {
+        "JIGO1": [
+          "Regarde comment ma semence coule de toi, salope !",
+          "Tu trembles de plaisir, et je regarde !",
+          "Tu es maintenant trempée de moi, sorcière !",
+          "Mon foutre coule de toi, et tu ne peux rien faire !",
+          "Tu ressembles à une salope usée !",
+          "Apparence parfaite pour une telle salope !",
+          "Ton corps tremble encore de ma baise !",
+          "Maintenant tu es vraiment mienne, salope !"
+        ],
+        "SE1": [
+          "Suce mon foutre, salope, c'est ton travail !",
+          "Tiens, prends tout, salope, tu l'as mérité !",
+          "Oui, oui, oui, je jouis, prends tout !"
+        ]
+      }
+    },
+    "JIGO2": {
+      "description": "GG closes eyes, breathes trying to come to her senses, he looks at GG",
+      "events": {
+        "JIGO2": [
+          "Maintenant tu vas tourner en cercle, maintenant tu es une vraie salope !",
+          "Tu vas toujours servir ma bite, salope !",
+          "Je vais te donner à d'autres, merde !",
+          "Excellent jouet sexuel, n'est-ce pas ?",
+          "Ton but est d'être un trou pour tout le monde !",
+          "Tu n'es plus une sorcière, tu es juste un objet !",
+          "Maintenant tu vas servir tous ceux que je commande !",
+          "Ta nouvelle vie est une baise constante, salope !"
+        ],
+        "START2": [
+          "Sans réfléchir longtemps, je vais reprendre ce qui est mien, salope !",
+          "Tu pensais que c'était tout ? On vient de commencer !",
+          "Le repos est terminé, salope. Ma bite a soif de toi encore !",
+          "Ta chatte n'est pas encore rassasiée, je le sens !",
+          "Je vais entrer en toi encore, et cette fois encore plus brutal !",
+          "Le cercle se ferme. Tu seras mienne encore, merde !",
+          "Ton corps est prêt à être utilisé encore !",
+          "Je vais te baiser jusqu'à l'épuisement complet, salope !"
+        ],
+        "SE": {
+          "se_count_1": [
+            "Regarde-toi, tu ressembles à une salope, et c'est bien !",
+            "Tu es couverte de mon foutre, et tu t'en souviendras toujours !",
+            "Ta chatte dégouline encore, comme c'est beau !",
+            "Tu sais donner du plaisir, salope, continue !"
+          ],
+          "se_count_2": [
+            "Une autre portion de foutre pour toi, salope !",
+            "Ta chatte déborde, tu le sens ?",
+            "Ton ventre est plein de mon foutre, et tu t'en souviendras toujours !"
+          ]
+        },
+        "SE1": [
+          "Regarde ce que tu me fais, oooouu eeee !",
+          "Je vais te faire enfanter, salope, et tu t'en souviendras toujours !",
+          "Tu produis mon foutre, comme une salope !"
+        ]
+      }
+    },
+    "START2": {
+      "description": "Without thinking long takes out his cock and inserts again repeating cycles",
+      "events": {
+        "START2": [
+          "Sans réfléchir longtemps, je vais reprendre ce qui est mien, salope !",
+          "Tu pensais que c'était tout ? On vient de commencer !",
+          "Le repos est terminé, salope. Ma bite a soif de toi encore !",
+          "Ta chatte n'est pas encore rassasiée, je le sens !",
+          "Je vais entrer en toi encore, et cette fois encore plus brutal !",
+          "Le cercle se ferme. Tu seras mienne encore, merde !",
+          "Ton corps est prêt à être utilisé encore !",
+          "Je vais te baiser jusqu'à l'épuisement complet, salope !"
+        ],
+        "SE1": [
+          "Lutte, lutte, j'aime ça !",
+          "Ta lutte est inutile !",
+          "Continue, salope, j'aime ça !"
+        ],
+        "SE2": [
+          "Tu ne t'échapperas pas, salope !",
+          "Ta lutte est inutile !",
+          "Continue, salope, j'aime ça !"
+        ]
+      }
+    }
+  }
+}
+

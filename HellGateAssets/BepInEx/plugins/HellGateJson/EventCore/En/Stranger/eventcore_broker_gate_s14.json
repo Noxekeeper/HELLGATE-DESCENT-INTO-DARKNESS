@@ -1,0 +1,8 @@
+{
+  "stepId": "broker_mindbroken_broker",
+  "stepKind": "continue",
+  "speakerLabel": "Stranger",
+  "npcLinePoolId": "broker_broker_mindbroken_reply_v",
+  "npcLine": "",
+  "choiceLabels": []
+}

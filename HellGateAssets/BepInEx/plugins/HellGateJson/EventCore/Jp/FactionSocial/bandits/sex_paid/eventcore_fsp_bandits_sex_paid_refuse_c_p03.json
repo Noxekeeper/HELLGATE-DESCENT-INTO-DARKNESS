@@ -1,0 +1,8 @@
+{
+  "speakerLabel": "野盗",
+  "stepId": "fsp_sex_refuse_c_p03",
+  "stepKind": "continue",
+  "continueOutcomeId": "noop",
+  "continueNextStepId": "fsp_sex_refuse_c_p04",
+  "npcLine": "図々しい？ そういうの、もっと好きだ。"
+}

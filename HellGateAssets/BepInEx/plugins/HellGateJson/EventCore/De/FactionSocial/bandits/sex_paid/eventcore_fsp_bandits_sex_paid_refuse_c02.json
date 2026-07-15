@@ -1,0 +1,24 @@
+{
+  "speakerLabel": "Bandit",
+  "stepId": "fsp_sex_refuse_c02",
+  "stepKind": "choice",
+  "choiceLabels": [
+    "Vielleicht ein andermal.",
+    "Ich mein's ernst. Lass mich in Ruhe.",
+    "Du bist zu frech.",
+    "Lass mich einfach gehen."
+  ],
+  "choiceOutcomeIds": [
+    "noop",
+    "noop",
+    "noop",
+    "noop"
+  ],
+  "choiceJumpStepIds": [
+    "fsp_sex_refuse_a_p03",
+    "fsp_sex_refuse_b_p03",
+    "fsp_sex_refuse_c_p03",
+    "fsp_sex_refuse_d_p03"
+  ],
+  "npcLine": "Okay, ich dräng nicht. Sag's klar — gehst du oder reden wir noch?"
+}

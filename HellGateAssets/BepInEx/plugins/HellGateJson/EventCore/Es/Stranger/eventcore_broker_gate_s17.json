@@ -1,0 +1,8 @@
+{
+  "stepId": "broker_pass_done",
+  "stepKind": "continue",
+  "speakerLabel": "",
+  "npcLine": "",
+  "npcLineKey": "eventcore_broker_pass_done",
+  "choiceLabels": []
+}

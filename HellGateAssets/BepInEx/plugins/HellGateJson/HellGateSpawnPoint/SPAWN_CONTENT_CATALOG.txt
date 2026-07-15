@@ -1,0 +1,194 @@
+﻿# SPAWN CONTENT CATALOG (HellGate 1.2)
+# =============================================================================
+# Справочник: ЧТО можно ставить в HellGateSpawn_*.txt прямо сейчас.
+# Этот файл НЕ выполняется игрой — только для авторов. Не дублируйте сюда координаты.
+#
+# Живые конфиги карт:     HellGateSpawn_<Location>.txt  (в этой же папке)
+# Тест FirstMap:          HellGateSpawn_FirstMap.txt
+# Ключи TRAP/OBJECT:      AVAILABLE_SPAWN_TEMPLATES_RUNTIME.txt (после запуска игры)
+# Описания ловушек:      SPAWN_TRAP_OBJECT_CATALOG.txt (авторский, не перезаписывается)
+# Keys (EN):              SPAWN_TEMPLATE_KEYS.txt
+# Cached this session:    AVAILABLE_SPAWN_TEMPLATES_RUNTIME.txt
+# Полный гайд:            docs/SpawnSystem/SPAWN_SYSTEM_GUIDE.md
+# EventCore (модалка):    docs/EventCore/README.md
+# EventTrap / Reinforcement: docs/EventTrap_Setup_Guide.md, docs/Reinforcement_Setup_Guide.md
+#
+# Обновлено: 2026-06-07. Полный RU-гайд: docs/SpawnSystem/SPAWN_SYSTEM_COMMUNITY_RU.md
+# =============================================================================
+
+
+## 1. Форматы строк (кратко)
+
+Враги (основной):
+  X,Y,EnemyType,Count[,описание]
+  X,Y,EnemyType|faction=<id>|ec_event=<eventId>,Count
+  X,Y,POOL[TypeA,TypeB],Count
+  RANDOM,chance,X,Y,EnemyType,Count
+  RANDOM_GROUP,N,START ... END
+
+Якоря EventCore (не враги — отдельные драйверы):
+  EVENTTRAP,<packFolder>,<x>,<y>
+  REINFORCEMENT,<packFolder>,<x>,<y>
+  Шпаргалка: EVENT_TRAP_SPAWN_CHEATSHEET.txt
+
+Визуальные шаблоны сцены (ловушки-пропы, не EventTrap-логика):
+  TRAP,<Key>,<x>,<y>,<Count>
+  OBJECT,<Key>,<x>,<y>,<Count>
+  SPAWN,Trap|<Object>,<Key>,<x>,<y>,<Count>
+
+
+## 2. Карты — какой файл спавна
+
+HellGateSpawn_FirstMap.txt
+HellGateSpawn_VillageMain.txt
+HellGateSpawn_ScapegoatEntrance.txt
+HellGateSpawn_ParishChurch.txt
+HellGateSpawn_UndergroundChurch.txt
+HellGateSpawn__inunderground church.txt
+HellGateSpawn_Prison.txt
+HellGateSpawn_nightless city C.txt
+HellGateSpawn_nightless city ragdum b.txt
+HellGateSpawn_nightless city under road.txt
+HellGateSpawn_hidden Forest area.txt
+HellGateSpawn_UndergroundLaboratory.txt
+HellGateSpawn_PilgrimageEntrance.txt
+HellGateSpawn_WhiteCathedral.txt
+HellGateSpawn_WhiteCathedralGarden.txt
+HellGateSpawn_WhiteCathedralRooftop.txt
+HellGateSpawn_Valley.txt
+HellGateSpawn_LabGarden.txt
+
+F11 + ЛКМ — записать точку; F11 + ПКМ — hot-reload активного HellGateSpawn_*.txt.
+
+
+## 3. Типы врагов (EnemyType → EnemyPrefabRegistry)
+
+Используйте имя из левой колонки. Prefab подбирается автоматически.
+
+AngelStatue          BigMerman            Bigoni               BigoniBrother
+BlackOoze            biscord              Cocoonman            Coolmaiden
+CrawlingCreatures    CrawlingDead         CrawlingSisterKnight CrowInquisition
+Dorei                DifferentBigMerman   GobBigAlter          Goblin
+GobRider             Gorotuki             HighInquisitionFemale Inquisition
+InquisitionRED       InquisitionWhite     IronmaidenDamage     Kakasi
+Kinoko               Librarian            Mafia                MafiaBossCustom
+Mafiamuscle          Minotaurosu          MummyDog             MummyMan
+Mutude               NormalSnailshell     OtherSlavebigAxe     Pilgrim
+PrisonOfficer        RequiemKnight        Sheepheaddemon       Sisterknight
+SkeltonOoze          Slaimu               SlaveBigAxe          Slaughterer
+Snailshell           Tentacle             TouzokuAxe           TouzokuNormal
+Tyoukyousi           TyoukyousiRed        Undead               Vagrant
+VagrantGuard         VagrantThrow         WaveSpike            WaveSpikeGuard
+Wolf                 WoodWana             (и др. из EnemyPrefabRegistry.cs)
+
+HellGate-кастом: biscord, MafiaBossCustom, BigoniBrother, HellishTouzokuBoss, HellishTouzokuAxe, HellishTouzokuSword, Wolf.
+
+
+## 4. Фракции (pipe |faction=)
+
+Основные id (CombatAi/Factions.json):
+
+  bandits              — бандиты (база)
+  bandits_inquisition  — бандиты + церковь (подфракция)
+  bandits_mafia        — бандиты + мафия
+  bandits_demons       — бандиты + демоны
+  church               — инквизиция
+  mafia                — мафия
+  demons               — демоны
+  undead               — нежить
+  monsters             — монстры
+
+Пример:
+  -90.0,-120.0,TouzokuNormal|faction=bandits,2
+  -90.0,-120.0,Inquisition|faction=church,1
+
+EventCore-NPC (пассив до резолва события):
+  |faction=eventcore_encounter
+
+
+## 5. EventCore — модальные события (|ec_event=)
+
+Включить: [EventCore] Enable = true
+Активны в eventcore_manifest.json:
+
+  eventcore_broker_gate           — брокер (пошлина 500g / переговоры / засада 4N+4Axe)
+  eventcore_fsp_bandits_sex_paid  — FSP бандиты, платный секс (MB + репутация bandits; consent grab)
+
+Примеры:
+  623.54,-286.95,TouzokuNormal|ec_event=eventcore_broker_gate,1
+  -118.0,-135.0,TouzokuNormal|ec_event=eventcore_fsp_bandits_sex_paid,1
+  620.0,-287.0,TouzokuNormal|ec_pool=eventcore_broker_gate,eventcore_fsp_bandits_sex_paid,1
+
+Сокращение: |ec=<eventId>  (= |ec_event=)
+
+УДАЛЕНО / не использовать:
+  eventcore_fsp_bandits_buyher, sharegold, chat, sex_friend
+
+
+## 6. EventTrap — координатные ловушки (EVENTTRAP)
+
+Реестр: EventCore/event_trap_registry.json
+Включить: [EventCore] EventTrapEncountersEnable = true
+
+Разрешённые packFolder (whitelist) — полный список в EVENT_TRAP_SPAWN_CHEATSHEET.txt
+
+  etrap_touzoku_touzokuaxe          — TouzokuNormal/Axe, спавн справа, до 3 волн
+  etrap_undead                      — Undead, радиус 12, задержка засады 1 с
+  etrap_dorei, etrap_goblin, etrap_kakasi, etrap_mafiabosscustom, etrap_mafia,
+  etrap_mutude, etrap_prisonofficer, etrap_slaughterer, etrap_vagrant, etrap_bigonibrother
+
+Пример:
+  EVENTTRAP,etrap_touzoku_touzokuaxe,-111.86,-124.50
+  EVENTTRAP,etrap_goblin,<X>,<Y>
+
+Мысли Арадии: EventCore/<Lang>/event_trap_gate/phrases.json
+Не путать с TRAP,Key,X,Y — там только визуал сцены.
+
+
+## 7. Reinforcement — KO-засада (REINFORCEMENT)
+
+Реестр: EventCore/reinforcement_registry.json
+Включить: [EventCore] ReinforcementEncountersEnable = true
+
+  boss_reinf_touzoku
+
+Пример:
+  REINFORCEMENT,boss_reinf_touzoku,1.57,-123.50
+
+
+## 8. TRAP / OBJECT — шаблоны сцены
+
+Статический список (док): docs/Lore/AVAILABLE_SPAWN_TEMPLATES.txt
+Runtime (после preload):  AVAILABLE_SPAWN_TEMPLATES_RUNTIME.txt  ← ключи, что реально в кэше
+Авторский с описаниями:   SPAWN_TRAP_OBJECT_CATALOG.txt
+
+Примеры ключей (могут отличаться по сборке):
+  BlackOozeTrapTypeB, TrapMachine, TrapSpider, Trap_Rockinghorse, woodwana, trap_hari, …
+
+Пример:
+  TRAP,BlackOozeTrapTypeB,100.0,-120.0,1
+  OBJECT,woodwana,-100.0,-120.0,1
+
+
+## 9. Быстрые тестовые строки (копировать в HellGateSpawn_FirstMap.txt)
+
+# Бандит + FSP sex_paid
+-118.0,-135.0,TouzokuNormal|ec_event=eventcore_fsp_bandits_sex_paid,1
+
+# Брокер
+623.0,-287.0,TouzokuNormal|ec_event=eventcore_broker_gate,1
+
+# Фракционный стенд (как в текущем FirstMap)
+-98.0,-133.0,POOL[TouzokuNormal,TouzokuAxe,VagrantGuard]|faction=bandits_inquisition,1
+
+# EventTrap (нужен whitelist + якорь на карте)
+# EVENTTRAP,etrap_goblin,-112.0,-125.0
+
+
+## 10. Чего НЕТ в этом каталоге
+
+- H-сцена dialogue JSON (отдельная система Dialogue)
+- Удалённые FSP-события (buyher / sharegold / chat / sex_friend)
+- HellGateSpawn_FirstMap_FSP_test.txt — удалён; тесты только в HellGateSpawn_FirstMap.txt
+
+# =============================================================================

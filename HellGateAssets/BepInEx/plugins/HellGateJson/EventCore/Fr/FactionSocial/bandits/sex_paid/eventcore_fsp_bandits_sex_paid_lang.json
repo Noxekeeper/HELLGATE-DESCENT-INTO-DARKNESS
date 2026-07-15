@@ -1,0 +1,134 @@
+{
+  "entries": [],
+  "linePools": [
+    {
+      "poolId": "fsp_sex_paid_prelude",
+      "lines": [
+        "Un homme t'arrête. Il ne cherche pas la bagarre, mais il te regarde avec une telle assurance que continuer sans t'arrêter devient gênant.",
+        "Un bandit se met devant toi. Pas de cris ni de menaces — juste l'audace de quelqu'un habitué à avoir ce qu'il veut.",
+        "Un homme surgit sur le côté. Il ne se jette pas sur toi, mais il est trop près et trop calme pour une rencontre au hasard.",
+        "Son regard t'intercepte. Il n'est pas en colère — il agit comme si la conversation avait déjà commencé sans ton accord.",
+        "Un homme bloque le chemin. Calme, presque professionnel, mais chaque geste pue l'audace.",
+        "On ne t'arrête pas par la force. Il est si sûr de lui que parler semble inévitable."
+      ]
+    },
+    {
+      "poolId": "fsp_bandits_sex_paid_open",
+      "lines": [
+        "Eh bien… T'es putain de canon, ma belle. Envie de gagner quelques pièces ? Je paie généreusement.",
+        "Quelle chance. Petite sorcière brûlante — les yeux ne savent plus où regarder. Tu veux gagner ? Je paie bien.",
+        "Putain… T'es particulièrement tentante aujourd'hui. Tu veux de l'or ? Je sais rendre ça agréable.",
+        "Oh, chérie… À cause de toi, le pantalon me serre. Quelques pièces vite fait ? Je serai doux… ou pas.",
+        "Merde, t'es bonne. Pas envie de pièces ? Je te le paierais bien.",
+        "Regarde qui voilà. Une fille juteuse. Tu veux gagner ? Je suis généreux si tu fais l'effort.",
+        "Oh là… T'es spécialement appétissante aujourd'hui. Des pièces pour un bon moment — ça t'intéresse ?",
+        "Hé, beauté. Avec toi n'importe quel bandit bande. Tu veux gagner un peu ?",
+        "Putain… Douce sorcière. Un peu d'argent ? Je te le ferai bien.",
+        "Wow… J'arrive pas à détacher le regard. Tu veux des pièces ? Je paie au complet, promis."
+      ]
+    },
+    {
+      "poolId": "fsp_sex_refuse_react",
+      "lines": [
+        "Ah, dommage… J'étais déjà chaud et tu balances non tout de suite.",
+        "Allez… Non, attends — tu es sérieuse.",
+        "Ouf. T'es si bonne — et un non sec.",
+        "Tu veux pas ? Ça fait mal, mais j'ai compris.",
+        "Tch… T'aurais aimé."
+      ]
+    },
+    {
+      "poolId": "fsp_sex_hesitate_react",
+      "lines": [
+        "Hé hé, tu rougis ? Ça veut dire que t'es pas contre — juste timide.",
+        "Oh, gênée. J'aime bien.",
+        "Hein ? Arrête de faire semblant. Je vois que ça t'intéresse.",
+        "Oui, déconcertée ? Parfait — je te réchauffe vite.",
+        "Mignon de rougir. Allez, tu le regretteras pas."
+      ]
+    },
+    {
+      "poolId": "fsp_sex_money_react",
+      "lines": [
+        "Voilà comme j'aime. L'argent en tête — le reste on verra.",
+        "Fillette maligne. Donne tes conditions — je suis pas avare.",
+        "Bon, j'écoute. Combien tu veux — et ce que tu feras.",
+        "Tu veux gagner ? Je paie bien si t'es pas paresseuse.",
+        "On fait un marché. Tu sais ce que je veux — dis ce que tu veux."
+      ]
+    },
+    {
+      "poolId": "fsp_sex_soft_react",
+      "lines": [
+        "Je le ferai pas, je le ferai pas… enfin, presque. Promis, presque doux.",
+        "D'accord, plus doux. T'es une sorcière — tu tiens le coup.",
+        "Je serai gentil. Même si la main revient vers tes cheveux…",
+        "Marché conclu : pas trop brutal — mais pas non plus une sainte.",
+        "Hé, ok. J'essaie. Mais si tu gémit fort, j'oublie peut-être la promesse."
+      ]
+    },
+    {
+      "poolId": "fsp_sex_rough_react",
+      "lines": [
+        "Oooh, comme ça j'aime ! Alors je lâche pas avant que tu jouisses.",
+        "Enfin une vraie ! Ça va être dur.",
+        "Putain, t'es le feu ! J'adore quand elles demandent du brutal.",
+        "Bonne salope. Pas de tendresse — direct au dur.",
+        "Là on parle ! Je te baise jusqu'à ce que tu cries."
+      ]
+    },
+    {
+      "poolId": "fsp_bandits_sex_paid_after_yes",
+      "lines": [
+        "Tiens, tes {SEX_PRICE} pièces. Prends — et viens.",
+        "Comme promis. Tes {SEX_PRICE} pièces sont à toi. Traîne pas.",
+        "L'or est à toi. Je brûle déjà.",
+        "Payé {SEX_PRICE} pièces. Enfin.",
+        "L'argent est à toi. Montre-moi pourquoi je paie.",
+        "Voilà les pièces. Maintenant écarte les jambes.",
+        "{SEX_PRICE} en or — à toi. À genoux.",
+        "Attends pas de douceur — j'aime dur.",
+        "Bonne salope. L'or est à toi — viens là."
+      ]
+    },
+    {
+      "poolId": "fsp_bandits_sex_paid_rage_win",
+      "lines": [
+        "Attends… attends ! Je vois comment tu me regardes. Mains basses — je te touche pas.",
+        "Merde… ok. On a trop poussé. Range la lame — je recule.",
+        "Hé… doucement. Tu plaisantes pas — je le sens. Passe.",
+        "Putain… compris. Calme-toi.",
+        "Doucement… Ce regard — j'veux pas voir qui gagne.",
+        "Blague finie. On se sépare en silence.",
+        "D'accord, sorcière… t'as raison. Je le jure.",
+        "Sans rancune. Juste… ne me regarde pas comme ça.",
+        "Conversation terminée. C'était une blague.",
+        "Compris. Chacun de son côté."
+      ]
+    },
+    {
+      "poolId": "fsp_bandits_sex_paid_rage_fail",
+      "lines": [
+        "Hé, regarde qui tu menaces — je vais te baiser pour ça !",
+        "Parle pas trop — tu vas avoir mal à la gorge.",
+        "Sérieux ? Ça va mal finir pour toi, sorcière.",
+        "Fanfaronnade de merde. Je te baise jusqu'à ce que tu lâches.",
+        "Les mots changent rien. Je peux te prendre de force.",
+        "Tes mains tremblent et ta bouche est insolente. Occupe cette langue, salope."
+      ]
+    },
+    {
+      "poolId": "fsp_bandits_close_peaceful",
+      "lines": [
+        "Bon, va. On te retient pas.",
+        "À une autre nuit.",
+        "Prends soin de toi.",
+        "Bon, passe.",
+        "La prochaine fois tu sauras où me trouver.",
+        "Bonne chance. Je t'oublierai pas.",
+        "La prochaine fois je serai pas si gentil.",
+        "Va. Pense à ce que j'ai dit."
+      ]
+    }
+  ]
+}

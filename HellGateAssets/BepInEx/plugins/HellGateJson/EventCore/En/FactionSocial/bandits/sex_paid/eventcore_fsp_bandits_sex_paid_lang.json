@@ -1,0 +1,134 @@
+{
+  "entries": [],
+  "linePools": [
+    {
+      "poolId": "fsp_sex_paid_prelude",
+      "lines": [
+        "A man stops you. He doesn't pick a fight, but he looks so sure of himself that walking on without stopping already feels awkward.",
+        "A bandit steps in front of you. No shouting, no threat — just the smug confidence of someone used to getting his way.",
+        "A man comes up from the side. He doesn't rush you, but he stands too close and too calm for a chance meeting.",
+        "His gaze catches you. He isn't angry — he acts like the conversation already started without your say-so.",
+        "A man blocks the road. Calm, almost businesslike, but every move reeks of nerve.",
+        "You aren't stopped by force. He's confident to the point of arrogance — and that makes talking feel inevitable."
+      ]
+    },
+    {
+      "poolId": "fsp_bandits_sex_paid_open",
+      "lines": [
+        "Well, well… You look fucking incredible, sweetheart. Feel like earning a few coins? I'll pay you well.",
+        "Lucky me. Hot little witch — can't take my eyes off you. Wanna make some coin? I'll pay fair.",
+        "Holy shit… You're extra tempting today. Want to get paid in gold? I know how to make it worth your while.",
+        "Oh, darling… You're making my pants tight. Want a quick handful of coins? I'll be gentle… or not.",
+        "Damn, you're hot. Don't want some coin? I'll pay you well.",
+        "Look who showed up. Juicy girl. Wanna earn? I'm generous when a girl puts in effort.",
+        "Oh boy… Especially tasty today. Coins for a good time — interested?",
+        "Hey, gorgeous. You'd get any bandit hard. Wanna make some coin?",
+        "Damn… Sweet witch. Come earn a little? I'll handle you right.",
+        "Whoa… Can't look away. Want coins? I'll pay you full, promise."
+      ]
+    },
+    {
+      "poolId": "fsp_sex_refuse_react",
+      "lines": [
+        "Aw, shame… I was already worked up and you shut me down.",
+        "Come on… No, wait — you're serious.",
+        "Phew. So hot — and a flat no.",
+        "Don't want to? Hurts, but I get it.",
+        "Tch… You would've liked it."
+      ]
+    },
+    {
+      "poolId": "fsp_sex_hesitate_react",
+      "lines": [
+        "Heh-heh, blushing? Means you're not against it — just shy.",
+        "Oh, embarrassed. I like that.",
+        "Hm? Quit pretending. I can tell you're interested.",
+        "Yeah, flustered? Fine — I'll warm you up fast.",
+        "Cute when you blush. Come on, you won't regret it."
+      ]
+    },
+    {
+      "poolId": "fsp_sex_money_react",
+      "lines": [
+        "Now we're talking. You've got money on the mind — we'll sort the rest.",
+        "Smart girl. Name your terms — I'm not stingy.",
+        "Alright, I'm listening. How much you want — and what you'll do.",
+        "Wanna earn? I pay well if you don't slack.",
+        "We'll deal. You know what I want — say what you want."
+      ]
+    },
+    {
+      "poolId": "fsp_sex_soft_react",
+      "lines": [
+        "I won't, I won't… well, almost. Promise I'll be almost gentle.",
+        "Fine, softer. You're a witch — you can take it.",
+        "I'll be sweeter. Though my hand keeps drifting to your hair…",
+        "Deal: not too rough — but no saint act either.",
+        "Heh, okay. I'll try. But if you moan loud I might forget the promise."
+      ]
+    },
+    {
+      "poolId": "fsp_sex_rough_react",
+      "lines": [
+        "Ooh, that's what I like! Then I won't quit till you cum.",
+        "Finally a real girl! It's gonna be rough.",
+        "Damn, you're fire! Love when they ask for it hard.",
+        "Good bitch. No tenderness — straight to rough.",
+        "Now we're talking! I'll fuck you till you scream."
+      ]
+    },
+    {
+      "poolId": "fsp_bandits_sex_paid_after_yes",
+      "lines": [
+        "Here's your {SEX_PRICE} coins. Take them — let's go.",
+        "Like I said. {SEX_PRICE} coins are yours. Don't stall.",
+        "Gold's yours. I'm already burning up.",
+        "Paid {SEX_PRICE} coins. About time.",
+        "Money's yours. Show me what I paid for.",
+        "Here are your coins. Now spread your legs.",
+        "{SEX_PRICE} gold — yours. On your knees.",
+        "Don't expect gentle — I like it hard.",
+        "Good bitch. Gold's yours — come here."
+      ]
+    },
+    {
+      "poolId": "fsp_bandits_sex_paid_rage_win",
+      "lines": [
+        "Wait… wait! I see how you're looking. Hands off — I won't touch you.",
+        "Shit… fine. We pushed it. Put the blade away — I'm backing off.",
+        "H-hey… easy. You're not joking — I feel it. Go on.",
+        "Fuck… I get it. Calm down.",
+        "Easy… That look in your eyes — I don't want to find out who wins.",
+        "Joke's over. Let's part ways quietly.",
+        "Alright, witch… you're right. I swear.",
+        "No hard feelings. Just… don't look at me like that.",
+        "Talk's done. I was kidding.",
+        "Got it. We're walking away."
+      ]
+    },
+    {
+      "poolId": "fsp_bandits_sex_paid_rage_fail",
+      "lines": [
+        "Hey, watch who you threaten — I'll fuck you for that!",
+        "Don't talk so much — you'll tire your throat.",
+        "Seriously? This ends bad for you, witch.",
+        "Weak bravado. I'll fuck you till you break.",
+        "Words change nothing. I can take you by force.",
+        "Hands shaking, mouth bold. Put that tongue to work, bitch."
+      ]
+    },
+    {
+      "poolId": "fsp_bandits_close_peaceful",
+      "lines": [
+        "Alright, go. We're not holding you.",
+        "See you another night.",
+        "Take care of yourself.",
+        "Fine, move along.",
+        "Next time you know where to find me.",
+        "Good luck. Won't forget you.",
+        "Next time I won't be this nice.",
+        "Go on. Think about what I said."
+      ]
+    }
+  ]
+}

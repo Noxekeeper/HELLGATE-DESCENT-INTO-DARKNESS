@@ -1,0 +1,27 @@
+{
+  "speakerLabel": "Bandido",
+  "stepId": "fsp_sex_hesitate_c02",
+  "stepKind": "choice",
+  "choiceLabels": [
+    "No esperaba una oferta así…",
+    "¿Cuánto estarías dispuesto a pagar?",
+    "¿Siempre hablas así con las chicas?",
+    "Dame un segundo para pensarlo.",
+    "Quita las manos. Ahora."
+  ],
+  "choiceOutcomeIds": [
+    "noop",
+    "noop",
+    "noop",
+    "noop",
+    "threaten"
+  ],
+  "choiceJumpStepIds": [
+    "fsp_sex_hesitate_1a_p03",
+    "fsp_sex_money_price",
+    "fsp_sex_hesitate_3_p03",
+    "fsp_sex_hesitate_4_p03",
+    "fsp_sex_paid_rage_win"
+  ],
+  "npcLine": "¿Por qué te quedas helada? Aún no he hecho nada."
+}

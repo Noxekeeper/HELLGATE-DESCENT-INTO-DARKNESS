@@ -1,0 +1,6 @@
+# HELLGATE Spawn Configuration for Nightless City C (Optimized)
+# Total: 50 spawn points (37% reduction from 79)
+# MafiaBossCustom: 10 points (kept for H-scene diversity)
+# Vagrant spawn chance: reduced by 50%
+# Format: X,Y,EnemyType,Count or POOL[Type1,Type2,...]
+

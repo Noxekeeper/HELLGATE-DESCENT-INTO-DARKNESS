@@ -1,0 +1,8 @@
+{
+  "speakerLabel": "Bandit",
+  "stepId": "fsp_sex_soft_3_p04",
+  "stepKind": "continue",
+  "continueOutcomeId": "noop",
+  "continueNextStepId": "fsp_sex_paid_grant_h",
+  "npcLine": "Il te plaque contre le mur, mais sa main ne t'étouffe pas — elle te soutient plutôt. « Tu vois ? Allez — je paie. »"
+}

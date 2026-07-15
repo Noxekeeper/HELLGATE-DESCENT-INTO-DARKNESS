@@ -1,0 +1,8 @@
+{
+  "speakerLabel": "Bandit",
+  "stepId": "fsp_sex_refuse_d_p03",
+  "stepKind": "continue",
+  "continueOutcomeId": "walk_away",
+  "continueNextStepId": "fsp_sex_paid_close",
+  "npcLine": "Schade. Viel Glück."
+}

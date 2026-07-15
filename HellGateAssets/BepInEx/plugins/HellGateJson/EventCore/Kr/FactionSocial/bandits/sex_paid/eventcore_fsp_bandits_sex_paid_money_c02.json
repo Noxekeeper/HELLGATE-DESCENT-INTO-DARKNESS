@@ -1,0 +1,27 @@
+{
+  "speakerLabel": "도적",
+  "stepId": "fsp_sex_money_c02",
+  "stepKind": "choice",
+  "choiceLabels": [
+    "금액 말해.",
+    "먼저 뭐 원하는지 말해.",
+    "빨리——시선도 피하고.",
+    "사람 없는 곳에서만.",
+    "코인부터 보여줘."
+  ],
+  "choiceOutcomeIds": [
+    "noop",
+    "noop",
+    "noop",
+    "noop",
+    "noop"
+  ],
+  "choiceJumpStepIds": [
+    "fsp_sex_money_price",
+    "fsp_sex_money_2_p03",
+    "fsp_sex_money_3_p03",
+    "fsp_sex_money_4_p03",
+    "fsp_sex_money_5_p03"
+  ],
+  "npcLine": "그래서? 조건 말해——아니면 꺼져."
+}

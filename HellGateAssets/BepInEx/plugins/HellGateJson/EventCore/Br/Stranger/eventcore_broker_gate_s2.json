@@ -1,0 +1,8 @@
+{
+  "stepId": "broker_demand",
+  "stepKind": "continue",
+  "speakerLabel": "Estranho",
+  "npcLinePoolId": "broker_demand",
+  "npcLine": "",
+  "choiceLabels": []
+}

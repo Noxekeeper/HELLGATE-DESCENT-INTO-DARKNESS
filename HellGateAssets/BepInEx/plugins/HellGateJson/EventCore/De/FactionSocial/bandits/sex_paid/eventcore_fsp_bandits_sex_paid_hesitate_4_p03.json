@@ -1,0 +1,8 @@
+{
+  "speakerLabel": "Bandit",
+  "stepId": "fsp_sex_hesitate_4_p03",
+  "stepKind": "continue",
+  "continueOutcomeId": "noop",
+  "continueNextStepId": "fsp_sex_soft_r01",
+  "npcLine": "Überleg's dir. Münzen laufen nicht weg."
+}

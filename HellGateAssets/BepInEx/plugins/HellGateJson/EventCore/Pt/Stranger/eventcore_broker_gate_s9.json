@@ -1,0 +1,7 @@
+{
+  "stepId": "broker_negotiate_intro",
+  "stepKind": "continue",
+  "speakerLabel": "Stranger",
+  "npcLine": "",
+  "choiceLabels": []
+}

@@ -1,0 +1,8 @@
+{
+  "speakerLabel": "도적",
+  "stepId": "fsp_sex_refuse_a_p03",
+  "stepKind": "continue",
+  "continueOutcomeId": "noop",
+  "continueNextStepId": "fsp_sex_refuse_a_p04",
+  "npcLine": "헤. 마음 바뀌길 바란다. 이 얼굴 기억해 둘게."
+}

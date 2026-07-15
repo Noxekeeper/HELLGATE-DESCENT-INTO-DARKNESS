@@ -1,0 +1,24 @@
+{
+  "speakerLabel": "Bandit",
+  "stepId": "fsp_sex_soft_c02",
+  "stepKind": "choice",
+  "choiceLabels": [
+    "Versprich — kein Schmerz.",
+    "Okay. {SEX_PRICE} Münzen — und los.",
+    "Zeig mir, dass du sanft kannst.",
+    "Genug Gerede — fang an."
+  ],
+  "choiceOutcomeIds": [
+    "noop",
+    "pay_confirm",
+    "noop",
+    "pay_confirm"
+  ],
+  "choiceJumpStepIds": [
+    "fsp_sex_soft_1_p03",
+    "fsp_sex_paid_grant_h",
+    "fsp_sex_soft_3_p03",
+    "fsp_sex_paid_grant_h"
+  ],
+  "npcLine": "Sanft? Okay… ich versuch's. Du bist auch kein Engel."
+}

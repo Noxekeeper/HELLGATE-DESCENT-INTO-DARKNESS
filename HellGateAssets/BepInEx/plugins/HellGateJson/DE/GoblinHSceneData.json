@@ -1,0 +1,349 @@
+{
+  "settings": {
+    "commentCooldownSeconds": 2.0,
+    "maxSimultaneousComments": 1,
+    "commentDisplayDuration": 4.0,
+    "fontSize": 24.0,
+    "verticalOffset": 15.0,
+    "streamingSpeed": 0.03,
+    "goblinColor": {
+      "r": 1.0,
+      "g": 1.0,
+      "b": 1.0,
+      "a": 1.0
+    },
+    "goblinOutlineColor": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 1.0
+    }
+  },
+  "animations": {
+    "START": {
+      "description": "Start der H-Szene mit Goblin, Gefangennahme",
+      "events": {
+        "START": [
+          "Ke-ke-ke! Von uns gefangen, Hure!",
+          "Menschenweib! Jetzt unser!",
+          "Ke-ke-ke, du wirst unser Spielzeug sein!",
+          "Gefangen, große Titten! Unser!"
+        ],
+        "SE1": [
+          "Wehr dich, wehr dich! Wir mögen das!",
+          "Du kannst uns nicht entkommen!",
+          "Widersteh, Menschenhure!"
+        ]
+      }
+    },
+    "ERO1": {
+      "description": "Erste Phase des Fickens",
+      "events": {
+        "ERO1": [
+          "Ke-ke-ke! Schwanz schon drin!",
+          "Dein Loch ist eng, Mensch!",
+          "Wir mögen große Titten!",
+          "Nimm den Schwanz, Weib!"
+        ],
+        "SE1": [
+          "Schrei lauter, Weib!",
+          "Goblins mögen dein Stöhnen!",
+          "Deine Fotze gehört uns!"
+        ]
+      }
+    },
+    "ERO2": {
+      "description": "Fortsetzung des Fickens, intensiver",
+      "events": {
+        "ERO2": [
+          "Ke-ke-ke! Wie gefällt es dir?",
+          "Deine Fotze kneift den Schwanz so fest!",
+          "Menschenweiber sind die Besten!",
+          "Nimm ihn noch tiefer!"
+        ],
+        "SE1": [
+          "Dein Kampf ist nutzlos!",
+          "Menschenweiber sind schwach!",
+          "Schrei, während wir dich ficken!"
+        ]
+      }
+    },
+    "ERO3": {
+      "description": "Tempoerhöhung",
+      "events": {
+        "ERO3": [
+          "Ke-ke-ke! Bald kommen wir in dir!",
+          "Unser Sperma wird dich füllen!",
+          "Wir werden dich schwängern, du wirst gebären!",
+          "Deine Gebärmutter wird voll sein!"
+        ],
+        "SE1": [
+          "Nimm den Samen, Weib!",
+          "Deine Fotze wurde für uns gemacht!",
+          "Du wirst unsere Kinder gebären!"
+        ]
+      }
+    },
+    "ERO4": {
+      "description": "Vorbereitung auf Finale",
+      "events": {
+        "ERO4": [
+          "Ke-ke-ke! Fast am Kommen!",
+          "Bereite dich auf Sperma vor, Weib!",
+          "Dein Loch wird bald überlaufen!",
+          "Letzte Stöße, Weib!"
+        ],
+        "SE1": [
+          "Schrei von unseren Schwänzen!",
+          "Deine Fotze zittert!",
+          "Bald wirst du voller Sperma sein!"
+        ]
+      }
+    },
+    "ERO5": {
+      "description": "Letzte Phase vor dem Kommen",
+      "events": {
+        "ERO5": [
+          "Ke-ke-ke! Komme jetzt!",
+          "Bereite dich vor, Samen zu nehmen!",
+          "Sperma ist heiß!",
+          "Deine Gebärmutter wird gefüllt!"
+        ],
+        "SE1": [
+          "Nimm alles bis zum letzten Tropfen!",
+          "Goblin-Samen ist stark!",
+          "Du wirst unseren Schwanz in Erinnerung behalten!"
+        ]
+      }
+    },
+    "ERO_iki": {
+      "description": "Moment des Goblin-Kommens - erste Ejakulation",
+      "events": {
+        "ERO_iki": [
+          "Ke-ke-ke! Komme! Nimm es!",
+          "Aaa! Ich komme!",
+          "Kommen im Menschenweib!",
+          "Nimm unseren Samen!"
+        ],
+        "SE1": [
+          "Deine Gebärmutter füllt sich!",
+          "Spürst du das heiße Sperma?",
+          "Samen in dir!",
+          "Nimm alles, Weib!"
+        ]
+      }
+    },
+    "ERO_iki2": {
+      "description": "Fortsetzung des Kommens, zusätzliche Pulse",
+      "events": {
+        "ERO_iki2": [
+          "Noch mehr Sperma!",
+          "Ke-ke-ke! Fließt und fließt!",
+          "Dein Loch läuft über!",
+          "So viel Sperma!"
+        ],
+        "SE1": [
+          "Melke unsere Schwänze bis zum Ende!",
+          "Saug alles Sperma raus!",
+          "Deine Fotze ist gierig!",
+          "Nimm mehr!"
+        ]
+      }
+    },
+    "ERO_jigo": {
+      "description": "Nach dem Kommen, Goblin noch drin",
+      "events": {
+        "ERO_jigo": [
+          "Ke-ke-ke! Wie gefällt dir Goblin-Sperma?",
+          "Jetzt gehörst du dem Stamm!",
+          "Deine Fotze ist voll unserem Samen!",
+          "Du wirst unseren Nachwuchs gebären!"
+        ],
+        "SE1": [
+          "Sperma fließt aus dir!",
+          "Du bist von uns markiert!",
+          "Deine Gebärmutter gehört uns!"
+        ]
+      }
+    },
+    "2ERO_START": {
+      "description": "Start der zweiten Runde",
+      "events": {
+        "2ERO_START": [
+          "Ke-ke-ke! Zweite Runde beginnt!",
+          "Nicht alle sind noch gekommen, komm!",
+          "Wir werden dich im Kreis herumreichen!",
+          "Bereite dich auf einen neuen Schwanz vor!"
+        ],
+        "SE1": [
+          "Du wirst keine Ruhe haben!",
+          "Wir brauchen mehr!",
+          "Deine Fotze ist noch nicht müde!"
+        ]
+      }
+    },
+    "2ERO_START2": {
+      "description": "Vorbereitung auf zweite Runde",
+      "events": {
+        "2ERO_START2": [
+          "Ke-ke-ke! Sieh wie groß!",
+          "Zweiter Schwanz ist noch größer!",
+          "Dein Loch wird sich noch mehr dehnen!",
+          "Bereite dich auf doppelte Lust vor!"
+        ],
+        "SE1": [
+          "Es wird noch härter!",
+          "Wir sind stärker als du!",
+          "Deine Fotze wird alle unsere Schwänze nehmen!"
+        ]
+      }
+    },
+    "2ERO_1": {
+      "description": "Zweite Runde, erste Phase",
+      "events": {
+        "2ERO_1": [
+          "Ke-ke-ke! Zweiter Schwanz in dir!",
+          "Spürst du den Unterschied, Weib?",
+          "Dieser Schwanz ist noch dicker!",
+          "Deine Fotze dehnt sich!"
+        ],
+        "SE1": [
+          "Schrei vom zweiten Schwanz!",
+          "Dein Loch ist schon daran gewöhnt!",
+          "Wir werden dich abwechselnd benutzen!"
+        ]
+      }
+    },
+    "2ERO_2": {
+      "description": "Zweite Runde, Tempoerhöhung",
+      "events": {
+        "2ERO_2": [
+          "Ke-ke-ke! Wie gefällt dir eine weitere Runde?",
+          "Deine Fotze ist noch hungrig!",
+          "Zweiter Goblin fickt härter!",
+          "Nimm die doppelte Portion!"
+        ],
+        "SE1": [
+          "Deine Fotze ist gierig nach Schwänzen!",
+          "Schrei lauter, Weib!",
+          "Zweiter Schwanz besser als der erste?"
+        ]
+      }
+    },
+    "2ERO_3": {
+      "description": "Zweite Runde, intensive Phase",
+      "events": {
+        "2ERO_3": [
+          "Ke-ke-ke! Ficken ohne Pause!",
+          "Deine Gebärmutter wird wieder voll sein!",
+          "Zweiter Goblin kommt auch!",
+          "Bereite dich auf neue Portion vor!"
+        ],
+        "SE1": [
+          "Deine Fotze nimmt alle!",
+          "Es wird noch mehr Sperma geben!",
+          "Wir werden nie müde, dich zu ficken!"
+        ]
+      }
+    },
+    "2ERO_4": {
+      "description": "Zweite Runde, Vorbereitung auf Kommen",
+      "events": {
+        "2ERO_4": [
+          "Ke-ke-ke! Zweiter kommt auch!",
+          "Noch eine Portion Samen!",
+          "Dein Loch wird überlaufen!",
+          "Bereite dich auf zweite Welle vor!"
+        ],
+        "SE1": [
+          "Nimm die zweite Portion!",
+          "Deine Gebärmutter wird alles halten!",
+          "Zweiter Schwanz ist auch heiß!"
+        ]
+      }
+    },
+    "2ERO_iki": {
+      "description": "Zweiter Goblin kommt - WICHTIGES EREIGNIS für schwarzen Hintergrund und Röntgen",
+      "events": {
+        "2ERO_iki": [
+          "Ke-ke-ke! Zweiter kommt! Aaaa!",
+          "Noch mehr Sperma!",
+          "Deine Gebärmutter läuft über!",
+          "Nimm die zweite Portion Samen!"
+        ],
+        "SE1": [
+          "Spürst du, wie Sperma fließt?",
+          "Deine Fotze schmilzt vor Samen!",
+          "Zweite Ladung in deiner Gebärmutter!",
+          "Unser Samen vermischt sich!"
+        ]
+      }
+    },
+    "2ERO_iki2": {
+      "description": "Fortsetzung des zweiten Goblin-Kommens",
+      "events": {
+        "2ERO_iki2": [
+          "Ke-ke-ke! Fließt ohne Pause!",
+          "So viel Sperma von uns!",
+          "Dein Loch kann nicht alles halten!",
+          "Samen fließt raus!"
+        ],
+        "SE1": [
+          "Saug auch den zweiten Schwanz aus!",
+          "Deine Fotze ist gierig nach Sperma!",
+          "Nimm alles bis zum letzten Tropfen!",
+          "Diene uns, Weib!"
+        ]
+      }
+    },
+    "2ERO_JIGO": {
+      "description": "Nach dem zweiten Kommen",
+      "events": {
+        "2ERO_JIGO": [
+          "Ke-ke-ke! Zwei Ladungen in dir!",
+          "Jetzt wirst du definitiv schwanger!",
+          "So viel Samen!",
+          "Deine Gebärmutter ist voll-voll!"
+        ],
+        "SE1": [
+          "Sperma fließt wie ein Fluss!",
+          "Du bist zweimal markiert!",
+          "Wir sind in dir gekommen, gefällt es dir!?",
+          "Du wirst Zwillinge gebären ha-ha!"
+        ]
+      }
+    },
+    "2ERO_JIGO2": {
+      "description": "Letzte Phase nach zweiter Runde",
+      "events": {
+        "2ERO_JIGO2": [
+          "Ke-ke-ke! Großartiges Menschenweib!",
+          "Jetzt bist du eine Stammeshure!",
+          "Du wirst zu uns zurückkehren!",
+          "Deine Fotze hat sich an unsere Schwänze erinnert!"
+        ],
+        "SE": {
+          "se_count_1": [
+            "Du bist jetzt Mutter zukünftigen Nachwuchses!",
+            "Goblin-Samen ist stark!",
+            "Bald wirst du unsere Kinder gebären!",
+            "Deine Gebärmutter gehört dem Stamm!"
+          ],
+          "se_count_2": [
+            "Noch mehr Sperma fließt raus!",
+            "So viel Samen passt nicht rein!",
+            "Du läufst über von unserem Samen!",
+            "He-he, wir haben gut gearbeitet!"
+          ]
+        },
+        "SE1": [
+          "Komm wieder zurück, Weib!",
+          "Wir mochten deine Fotze!",
+          "Wir werden wieder auf dich warten!",
+          "Dein Loch ist das Beste!"
+        ]
+      }
+    }
+  }
+}
+

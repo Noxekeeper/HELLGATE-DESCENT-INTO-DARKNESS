@@ -1,0 +1,909 @@
+{
+  "settings": {
+    "responseDelayMin": 1.5,
+    "responseDelayMax": 2.5,
+    "commentCooldownSeconds": 4.0,
+    "maxSimultaneousComments": 1,
+    "commentDisplayDuration": 5.0,
+    "fontSize": 22.0,
+    "verticalOffset": 20.0,
+    "boneName": "face",
+    "responseColor": {
+      "r": 0.8,
+      "g": 0.4,
+      "b": 1.0,
+      "a": 1.0
+    },
+    "responseOutlineColor": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 0.0
+    },
+    "thoughtColor": {
+      "r": 1.0,
+      "g": 0.6,
+      "b": 0.8,
+      "a": 1.0
+    },
+    "thoughtOutlineColor": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 0.0
+    }
+  },
+  "mindBrokenThresholds": [0.3, 0.7],
+  "animations": {
+    "START": {
+      "description": "Standing behind, captures and binds GG's hands behind her head, showing her tits",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "No! Let me go! Don't touch me!",
+            "Somebody help! This monster is grabbing me!",
+            "Get your hands off me! I won't let you!",
+            "Stop! You're hurting me! Let go!",
+            "No! I don't want this! Help!",
+            "Your hands are so rough... Stop touching me!",
+            "Let me go! I beg you! Don't do this!",
+            "This can't be happening... No!",
+            "Somebody save me from this beast!",
+            "I won't submit to you! Let go of my hands!",
+            "Your grip is too strong... I can't escape!",
+            "No! Don't show my body like this!",
+            "I feel so exposed... Please stop!",
+            "This humiliation... I can't bear it!",
+            "Your hands on my skin... So wrong!"
+          ],
+          "medium": [
+            "I... I don't know what to do...",
+            "His hands are everywhere... I feel so helpless...",
+            "This grip... It's so firm... I can't move...",
+            "My body is exposed... Everyone can see...",
+            "I try to struggle... But it's useless...",
+            "His strength... It's overwhelming...",
+            "I feel his breath on my neck... So close...",
+            "My hands are tied... I can't defend myself...",
+            "This position... So vulnerable...",
+            "His touch... It's making me feel strange...",
+            "I can't hide my body... It's all exposed...",
+            "This humiliation... It's breaking me...",
+            "His hands on my breasts... I feel conflicted...",
+            "I want to resist... But my body...",
+            "This capture... It's so thorough..."
+          ],
+          "high": [
+            "His hands feel so strong... I like it...",
+            "Being captured like this... Exciting...",
+            "My body is his... He can do anything...",
+            "I want him to touch me more... Everywhere...",
+            "This helplessness... It's arousing...",
+            "His grip on my hands... Perfect control...",
+            "My breasts are exposed... For him...",
+            "I love how he shows me off...",
+            "His strength... Makes me wet...",
+            "I want to be his prisoner... Forever...",
+            "Touch me... Please touch me...",
+            "My body belongs to him... Completely...",
+            "This exposure... It's liberating...",
+            "I crave his rough hands...",
+            "I'm his... Take me..."
+          ]
+        }
+      }
+    },
+    "START2": {
+      "description": "Takes out his steel sword from scabbard and sticks it hilt up in front of GG",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "A sword?! What are you going to do with it?!",
+            "No! Don't bring that thing near me!",
+            "You're going to cut me? Please, no!",
+            "That sword looks so dangerous... Stay away!",
+            "I won't lick it! That's disgusting!",
+            "Your sword... It's covered in who knows what!",
+            "Please, put it away... I beg you!",
+            "This is too much... Even for you...",
+            "I can't do that... It's humiliating!",
+            "Your sword in my mouth? Never!",
+            "This is barbaric... Even for monsters...",
+            "I refuse! I won't debase myself!",
+            "That hilt... It's filthy!",
+            "No! Keep your weapon away from me!",
+            "This is torture... Psychological torture..."
+          ],
+          "medium": [
+            "His sword... So close to my face...",
+            "The steel... Cold and unyielding...",
+            "He wants me to... With the sword hilt...",
+            "This is so degrading... But I feel curious...",
+            "The metal... Hard and unforgiving...",
+            "I should resist... But what if...",
+            "His weapon... Symbol of his power...",
+            "The hilt... What would it taste like...",
+            "This humiliation... It's making me feel...",
+            "I want to say no... But my eyes...",
+            "The sword... So intimidating...",
+            "His command... To service his blade...",
+            "This is wrong... So very wrong...",
+            "But the steel... It's mesmerizing...",
+            "I feel conflicted... About everything..."
+          ],
+          "high": [
+            "His sword... So beautiful... So powerful...",
+            "I want to taste it... Please let me...",
+            "The steel hilt... I need it in my mouth...",
+            "Make me service your weapon... Master...",
+            "I'll lick it clean... For you...",
+            "Your sword... My new obsession...",
+            "The cold metal... Excites me...",
+            "Let me worship your blade...",
+            "I'll suck on it... Like it's your cock...",
+            "This is so hot... Your sword...",
+            "I love the taste of steel... Your steel...",
+            "Make me your sword-servant...",
+            "The hilt... So perfect for my mouth...",
+            "I crave the cold metal...",
+            "Your weapon... My lover..."
+          ]
+        }
+      }
+    },
+    "START3": {
+      "description": "Without releasing, lifts GG from behind by the arms up and impales her pussy on the sword hilt, deeply, legs touch the ground",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "No! Don't lift me! What are you doing?!",
+            "The sword hilt... Against my... No!",
+            "Please! Not like this! It's too much!",
+            "I feel it pressing... Against my most private place!",
+            "This position... So exposed... So wrong!",
+            "The cold steel... Touching me there...",
+            "No! Don't lower me onto it!",
+            "It hurts... The metal is so hard!",
+            "My body... Betraying me... It's going in!",
+            "This violation... With a weapon...",
+            "I can't believe this is happening...",
+            "The steel... Inside me... So cold...",
+            "My legs... Touching the ground... But...",
+            "This is torture... Pure torture...",
+            "Stop! Pull it out! It hurts too much!"
+          ],
+          "medium": [
+            "Being lifted like this... So helpless...",
+            "The sword hilt... Pressing against me...",
+            "I feel it... Starting to enter...",
+            "This cold metal... Inside my warmth...",
+            "My body weight... Pushing it deeper...",
+            "It hurts... But there's something else...",
+            "This invasion... So thorough...",
+            "The steel... Filling me... Stretching me...",
+            "I can't stop it... It's too late...",
+            "This sensation... Confusing...",
+            "My legs... Barely touching... But deep...",
+            "The pain... Mixed with... Something...",
+            "I feel so full... With cold metal...",
+            "This is wrong... But my body...",
+            "The depth... Overwhelming..."
+          ],
+          "high": [
+            "Yes... Lift me... Impale me...",
+            "The sword hilt... Perfect for my pussy...",
+            "Deeper... I want it all inside...",
+            "Cold steel... Filling my hot hole...",
+            "Ride the sword... Make me your sheath...",
+            "It hurts so good... Don't stop...",
+            "My pussy... Greedy for metal...",
+            "Fuck me with your sword... Please...",
+            "The depth... Perfect... So deep...",
+            "I love this cold invasion...",
+            "Steel inside me... Your weapon...",
+            "Make me cum on your blade...",
+            "Deeper... To the hilt...",
+            "This is ecstasy... Metal ecstasy...",
+            "Your sword... My new favorite..."
+          ]
+        }
+      }
+    },
+    "START4": {
+      "description": "Slightly moves GG on the sword hilt imitating she's on a cock, GG is shocked",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "No! Don't move me! Stop!",
+            "It's moving inside me... Please stop!",
+            "This friction... The metal... Hurts!",
+            "My body... Sliding on the sword...",
+            "Stop moving! I can't take it!",
+            "The steel... Rubbing... Everywhere!",
+            "This is too much... Too intense!",
+            "I feel every ridge... Every detail...",
+            "Stop! You're tearing me apart!",
+            "My insides... Burning from the metal...",
+            "This movement... Cruel imitation...",
+            "I can't... I can't handle this!",
+            "The pain... Building... Stop!",
+            "My body... Responding... Against will...",
+            "This torture... Never ends..."
+          ],
+          "medium": [
+            "The movement... Slow... Deliberate...",
+            "The steel... Sliding inside me...",
+            "This friction... Not entirely unpleasant...",
+            "My body... Adjusting... Adapting...",
+            "The cold metal... Warming up...",
+            "I feel... Every inch... Every movement...",
+            "This imitation... Of something else...",
+            "The ridges... Rubbing... Stimulating...",
+            "My hips... Moving involuntarily...",
+            "This sensation... Confusing... Intense...",
+            "The depth... Constant... Unchanging...",
+            "I can't deny... It feels... Something...",
+            "My resistance... Weakening...",
+            "The metal... So unyielding...",
+            "This is... Awakening something..."
+          ],
+          "high": [
+            "Yes... Move me... Fuck me with steel...",
+            "The friction... Perfect... So good...",
+            "Ride the sword... Harder...",
+            "Cold metal... Rubbing my walls...",
+            "I love this... Steel fucking...",
+            "Deeper... Faster... Yes...",
+            "My pussy... Loves your weapon...",
+            "The ridges... Hitting all spots...",
+            "Cum for the sword... Please...",
+            "This metal cock... Amazing...",
+            "Fuck me senseless... With steel...",
+            "I need this... Cold hardness...",
+            "The movement... Ecstasy...",
+            "Your sword... Makes me wet...",
+            "More... Don't stop..."
+          ]
+        }
+      }
+    },
+    "START5": {
+      "description": "GG cums on the sword, then TouzokuAxe sits in lotus position and impales GG on his cock (reversecowgirl)",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "No! I'm... I'm cumming! Stop!",
+            "This is impossible... From a sword?!",
+            "My body... Betrayed me... Completely!",
+            "I came... From cold metal... How?!",
+            "This humiliation... The ultimate defeat...",
+            "Now... His cock... Real one...",
+            "No more games... Now it's serious...",
+            "His cock... So much bigger...",
+            "I feel it... Pressing against me...",
+            "This is it... The real violation...",
+            "From sword to cock... Such contrast...",
+            "My body... Still trembling...",
+            "I can't resist... Not anymore...",
+            "His cock... Entering me...",
+            "This is... The beginning of hell..."
+          ],
+          "medium": [
+            "I... I came... From the sword...",
+            "My orgasm... Unexpected... Intense...",
+            "The metal... Brought me to climax...",
+            "Now... His real cock... Waiting...",
+            "I feel it... Hot... Pulsing...",
+            "So different... From cold steel...",
+            "My body... Still sensitive...",
+            "This transition... Smooth... Natural...",
+            "His cock... Filling the void...",
+            "From weapon to flesh... Interesting...",
+            "I feel... More aroused than before...",
+            "His hands... Guiding me down...",
+            "This position... So intimate...",
+            "His cock... So alive inside me...",
+            "This might not be... So bad..."
+          ],
+          "high": [
+            "Yes! I came on your sword!",
+            "The steel made me cum... Amazing!",
+            "Now your real cock... I need it!",
+            "Fuck me... After that orgasm...",
+            "Your cock... So much better...",
+            "Fill me... With real meat...",
+            "I love this transition...",
+            "From metal to flesh... Perfect!",
+            "Your cock... Pulsing inside...",
+            "Fuck me hard... I earned it...",
+            "Cum inside me... Please...",
+            "Your sword warmed me up perfectly...",
+            "Now give me the real thing...",
+            "I need your hot cum...",
+            "Fuck me like the slut I am..."
+          ]
+        }
+      }
+    },
+    "ERO": {
+      "description": "Impales well and lifts almost to the end, impales again",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Ah! Too deep! You're hurting me!",
+            "His cock... So big... Filling me...",
+            "This thrust... Too violent!",
+            "I feel... Torn apart...",
+            "His cock... Hitting my depths...",
+            "Stop! You're going too far!",
+            "My insides... Burning...",
+            "This rhythm... Merciless...",
+            "I can't take this... Too much!",
+            "His cock... Unforgiving...",
+            "Each thrust... Painful...",
+            "My body... Shaking...",
+            "This penetration... Brutal...",
+            "I feel... Broken...",
+            "Mercy... Please show mercy..."
+          ],
+          "medium": [
+            "His cock... So deep... So full...",
+            "Each thrust... Building sensation...",
+            "I feel... Stretched... Completely...",
+            "His rhythm... Steady... Intense...",
+            "My body... Adjusting... Slowly...",
+            "This fullness... Overwhelming...",
+            "His cock... Pulsing inside...",
+            "The depth... Perfect... Almost...",
+            "I can't help... Feeling it...",
+            "This friction... Stimulating...",
+            "My walls... Clenching around him...",
+            "His hands... Guiding me...",
+            "This position... Powerful...",
+            "I feel... Every vein... Every ridge...",
+            "This is... Becoming bearable..."
+          ],
+          "high": [
+            "Yes! Your cock... Perfect depth!",
+            "Fuck me deeper... All the way!",
+            "I love how you fill me completely!",
+            "Your cock... Hits all the right spots!",
+            "Harder... Don't hold back!",
+            "I need this fullness... Always!",
+            "Your cock... So thick... So good!",
+            "Pound me... Make me yours!",
+            "Deeper... To the womb!",
+            "I feel you throbbing inside!",
+            "Cum for me... Fill me up!",
+            "Your cock... My everything!",
+            "Fuck me senseless... Yes!",
+            "I love this rhythm... Perfect!",
+            "More... Give me everything!"
+          ]
+        }
+      }
+    },
+    "ERO2": {
+      "description": "Started rhythmically fucking GG, sticks out tongue",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...His rhythm... So steady... Unending...",
+            "...I feel every thrust... Deep inside...",
+            "...His tongue... Hanging out... Animalistic...",
+            "...This is just sex... Nothing more...",
+            "...My body... Moving with him...",
+            "...I have to endure... Until it's over...",
+            "...His cock... Filling me... Completely...",
+            "...The pleasure... Unwanted... Intrusive...",
+            "...I can't stop... The sensations...",
+            "...His breath... Hot on my back...",
+            "...This position... So exposed...",
+            "...His tongue... Disgusting sight...",
+            "...I feel... Dirty... Used...",
+            "...This rhythm... Hypnotic...",
+            "...I have to... Dissociate..."
+          ],
+          "medium": [
+            "...His rhythm... Perfect... Synchronized...",
+            "...I feel... Every movement... Every thrust...",
+            "...His tongue... Out... In ecstasy...",
+            "...This sensation... Not entirely bad...",
+            "...My body... Responding... Naturally...",
+            "...His cock... So alive inside me...",
+            "...The depth... Constant... Satisfying...",
+            "...I can't deny... It feels good...",
+            "...His hands... On my hips... Guiding...",
+            "...This position... Allows deep penetration...",
+            "...His tongue... Shows his pleasure...",
+            "...I feel... Desired... Wanted...",
+            "...The rhythm... Building something...",
+            "...My resistance... Fading...",
+            "...This might be... Enjoyable..."
+          ],
+          "high": [
+            "...His cock... Perfect... So deep...",
+            "...This rhythm... Drives me wild...",
+            "...His tongue... Out... In pleasure...",
+            "...I love this... Deep fucking...",
+            "...His cock... Hits my sweet spot...",
+            "...Fuck me harder... Yes...",
+            "...I need this... Every day...",
+            "...His cock... So thick... So good...",
+            "...Cum inside me... Please...",
+            "...This position... Perfect for deep thrusts...",
+            "...His tongue... Shows he's close...",
+            "...I want his cum... Hot... Deep...",
+            "...Fuck me... Like your whore...",
+            "...His rhythm... Perfect... Ecstasy...",
+            "...I love being filled... Completely..."
+          ]
+        }
+      }
+    },
+    "2ERO": {
+      "description": "Takes one of GG's tits with hand",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...His hand... On my breast...",
+            "...Squeezing... Roughly...",
+            "...My nipple... Between his fingers...",
+            "...This touch... Unwanted... Intrusive...",
+            "...I feel... Exposed... Vulnerable...",
+            "...His hand... So large... Covering me...",
+            "...The squeezing... Painful...",
+            "...My breast... In his possession...",
+            "...This intimacy... Forced...",
+            "...I wish... He would stop...",
+            "...His fingers... Pinching... Hard...",
+            "...The sensation... Overwhelming...",
+            "...I can't... Push him away...",
+            "...This touch... Lingers...",
+            "...My body... Reacting... Against will..."
+          ],
+          "medium": [
+            "...His hand... Cupping my breast...",
+            "...The warmth... Of his palm...",
+            "...His fingers... Teasing my nipple...",
+            "...This touch... Not entirely unpleasant...",
+            "...My breast... Fitting perfectly...",
+            "...The squeezing... Firm... Confident...",
+            "...I feel... A spark... Of pleasure...",
+            "...His thumb... Circling... Slowly...",
+            "...This stimulation... Building...",
+            "...My nipple... Hardening... Responding...",
+            "...His hand... Possessive...",
+            "...The touch... Expert... Skilled...",
+            "...I can't help... Enjoying this...",
+            "...My body... Arching towards him...",
+            "...This pleasure... Unexpected..."
+          ],
+          "high": [
+            "...His hand... On my tit... Perfect...",
+            "...Squeezing... Just right... So good...",
+            "...My nipple... Throbbing... Wanting more...",
+            "...Touch me... Everywhere...",
+            "...His fingers... Magic... Ecstasy...",
+            "...I love how he gropes me...",
+            "...My breast... His toy...",
+            "...Pinch harder... Yes...",
+            "...The pleasure... Building... So fast...",
+            "...His hand... Knows what I need...",
+            "...Cum from this... Just this...",
+            "...His touch... Makes me wetter...",
+            "...Squeeze me... Own me...",
+            "...My nipple... His to tease...",
+            "...I need this... Forever..."
+          ]
+        }
+      }
+    },
+    "2ERO2": {
+      "description": "Continues squeezing the tit, caresses the nipple",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...His fingers... On my nipple... Constant...",
+            "...Pinching... Twisting... Gently...",
+            "...The pain... Sharp... Persistent...",
+            "...My nipple... So sensitive... Now...",
+            "...This stimulation... Unbearable...",
+            "...I want him to stop... Please...",
+            "...His touch... Too intimate...",
+            "...My breast... Burning from attention...",
+            "...The caresses... Mocking...",
+            "...I feel... Tears coming...",
+            "...This pleasure-pain... Confusing...",
+            "...His fingers... Relentless...",
+            "...My body... Betraying me...",
+            "...The nipple... Throbbing...",
+            "...Stop... I can't take this..."
+          ],
+          "medium": [
+            "...His fingers... So gentle now...",
+            "...Caressing... My nipple... Softly...",
+            "...The sensation... Waves of pleasure...",
+            "...My nipple... Hard... Responsive...",
+            "...This touch... Expert... Perfect...",
+            "...I feel... Heat building...",
+            "...His thumb... Circling... Teasing...",
+            "...The nipple play... Intense...",
+            "...My breast... Heavy... Full...",
+            "...This stimulation... Overwhelming...",
+            "...I can't... Stop moaning...",
+            "...His touch... Knows me...",
+            "...The pleasure... Building...",
+            "...My nipple... His focus...",
+            "...This is... Too good..."
+          ],
+          "high": [
+            "...His fingers... On my nipple... Magic...",
+            "...Pinch me... Twist me... Yes...",
+            "...The pleasure... Electric... Intense...",
+            "...My nipple... Throbbing... Wanting...",
+            "...Touch me harder... Please...",
+            "...His caresses... Drive me crazy...",
+            "...Cum from nipple play... Alone...",
+            "...The stimulation... Perfect...",
+            "...His fingers... My undoing...",
+            "...Pinch harder... Make me scream...",
+            "...The nipple... So sensitive...",
+            "...His touch... Ecstasy...",
+            "...I need this... Always...",
+            "...My breast... His playground...",
+            "...Cum... From your fingers..."
+          ]
+        }
+      }
+    },
+    "2ERO3": {
+      "description": "Removes hand, starts accentuatedly impaling GG, GG has ahegao face",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...His hand... Gone... But thrusts harder...",
+            "...The pounding... Violent... Deep...",
+            "...His cock... Slamming into me...",
+            "...This rhythm... Punishing...",
+            "...My body... Shaking... Violently...",
+            "...The depth... Too much... Hurts...",
+            "...His cock... Hitting my limits...",
+            "...I feel... Torn... Broken...",
+            "...The thrusts... Merciless...",
+            "...My insides... Burning...",
+            "...This is... Torture...",
+            "...His cock... Unforgiving...",
+            "...The pounding... Endless...",
+            "...I can't... Take this...",
+            "...Mercy... Please..."
+          ],
+          "medium": [
+            "...His hand leaves... But thrusts intensify...",
+            "...The rhythm... More powerful... Deeper...",
+            "...His cock... Hitting new depths...",
+            "...This sensation... Intense... Mixed...",
+            "...My body... Responding... Despite myself...",
+            "...The thrusts... Perfect... Rhythm...",
+            "...His cock... Filling me... Completely...",
+            "...I feel... The edge... Approaching...",
+            "...This pleasure... Building... Fast...",
+            "...His movements... Confident... Skilled...",
+            "...The depth... Overwhelming... Perfect...",
+            "...I can't help... Enjoying this...",
+            "...His cock... Hitting all spots...",
+            "...This is... Becoming ecstasy...",
+            "...The thrusts... Perfect timing..."
+          ],
+          "high": [
+            "...His hand gone... But cock deeper...",
+            "...Fuck me... Pound me... Yes...",
+            "...His cock... Hitting my womb...",
+            "...The thrusts... Perfect... Hard...",
+            "...I love this... Deep fucking...",
+            "...Cum inside me... Now...",
+            "...His cock... So deep... So good...",
+            "...Pound harder... Destroy me...",
+            "...The rhythm... Ecstasy...",
+            "...Fill me... With your cum...",
+            "...His cock... My everything...",
+            "...Cum... Deep inside...",
+            "...Fuck me through orgasm...",
+            "...His thrusts... Perfect...",
+            "...I need this... Always..."
+          ]
+        }
+      }
+    },
+    "2ERO4": {
+      "description": "Fucking GG pressing, bouncing with hips and pressing back with hands on hips, GG has ahegao face, tempo faster",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...His body... Pressing against me...",
+            "...His hands... On my hips... Holding...",
+            "...The thrusts... Faster... Harder...",
+            "...His hips... Bouncing... Violently...",
+            "...My body... Being used... Completely...",
+            "...This position... So helpless...",
+            "...His cock... Deep... Relentless...",
+            "...The speed... Overwhelming...",
+            "...I feel... The end... Coming...",
+            "...His breath... Heavy... Excited...",
+            "...The pounding... Merciless...",
+            "...My body... Shaking... Uncontrollably...",
+            "...This is... The climax... Of violation...",
+            "...His cock... Ready to explode...",
+            "...Cum... Inside me... Please stop..."
+          ],
+          "medium": [
+            "...His body... Close... Pressing...",
+            "...His hands... Guiding my hips...",
+            "...The rhythm... Faster... Urgent...",
+            "...His hips... Meeting mine... Perfectly...",
+            "...This synchronization... Intense...",
+            "...His cock... Throbbing... Inside...",
+            "...The speed... Building pleasure...",
+            "...I feel... Him swelling...",
+            "...His breath... Hot... On my neck...",
+            "...The thrusts... Deeper... Harder...",
+            "...This position... Allows everything...",
+            "...His hands... Pulling me down...",
+            "...The climax... Approaching...",
+            "...His cock... Ready...",
+            "...Cum... Together..."
+          ],
+          "high": [
+            "...His body... Against mine... Perfect...",
+            "...His hands... On my hips... Pulling...",
+            "...Fuck me... Faster... Harder...",
+            "...His hips... Bouncing... Ecstasy...",
+            "...His cock... So deep... So thick...",
+            "...Cum inside me... Please...",
+            "...The speed... Perfect... Intense...",
+            "...His breath... Hot... Excited...",
+            "...Pound me... Destroy my pussy...",
+            "...His cock... Throbbing... Ready...",
+            "...Fill me... With hot cum...",
+            "...Cum together... Yes...",
+            "...His thrusts... Divine...",
+            "...I need his cum... Now...",
+            "...Cum... Deep... Fill me..."
+          ]
+        }
+      }
+    },
+    "FIN": {
+      "description": "Cums inside GG, before cumming slightly pulls out cock and thrusts to the end",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...He's swelling... Inside me...",
+            "...His cock... Pulsing... Ready...",
+            "...He's going to cum... Inside...",
+            "...His hot seed... Filling me...",
+            "...I feel it... Coming... No...",
+            "...His cock... Throbbing... Violently...",
+            "...The cum... Hot... Burning...",
+            "...He's filling me... Completely...",
+            "...His seed... Deep inside...",
+            "...This warmth... Unwanted...",
+            "...His cock... Emptying... Into me...",
+            "...I feel... Full... Of his cum...",
+            "...This is... The ultimate violation...",
+            "...His cum... Marking me...",
+            "...I'm his... Cum dump..."
+          ],
+          "medium": [
+            "...His cock... Swelling... Inside...",
+            "...He's close... Very close...",
+            "...His thrusts... Erratic... Urgent...",
+            "...I feel him... Building pressure...",
+            "...His cock... Throbbing... Hard...",
+            "...The cum... Coming... Soon...",
+            "...His breath... Heavy... Excited...",
+            "...He's going to fill me...",
+            "...His seed... Hot... Thick...",
+            "...I feel... Anticipation...",
+            "...His cock... Pulsing... Ready...",
+            "...Cum... Inside me...",
+            "...The warmth... Spreading...",
+            "...His climax... Powerful...",
+            "...Fill me... Completely..."
+          ],
+          "high": [
+            "...His cock... So swollen... Ready...",
+            "...Cum inside me... Please...",
+            "...Fill me with your hot cum...",
+            "...His cock... Throbbing... Perfect...",
+            "...Cum deep... In my womb...",
+            "...His seed... My reward...",
+            "...Cum now... I need it...",
+            "...His cum... Hot... Thick...",
+            "...Fill me completely...",
+            "...His climax... Ecstasy...",
+            "...Cum... More... Give me all...",
+            "...His cock... Exploding...",
+            "...Hot cum... Inside me...",
+            "...Perfect... Fill me up...",
+            "...His seed... Mine..."
+          ]
+        }
+      }
+    },
+    "FIN2": {
+      "description": "GG seems to have cum together with him, cock inside, GG has lost ahegao face",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...He came... Inside me...",
+            "...His cum... Warm... Sticky...",
+            "...I feel it... Dripping... Out...",
+            "...His cock... Still inside... Softening...",
+            "...This mess... His seed... Everywhere...",
+            "...My body... Trembling... Aftershocks...",
+            "...I came too... How... From this...",
+            "...This humiliation... Complete...",
+            "...His cum... Leaking out...",
+            "...I feel... So dirty... Used...",
+            "...His cock... Slipping out...",
+            "...The emptiness... Sudden...",
+            "...This is... The end... Of violation...",
+            "...I'm marked... By his seed...",
+            "...This shame... Will stay..."
+          ],
+          "medium": [
+            "...We came... Together...",
+            "...His cum... Filling me... Warm...",
+            "...My orgasm... Intense... Unexpected...",
+            "...His cock... Still pulsing... Inside...",
+            "...The afterglow... Mixed feelings...",
+            "...His seed... Deep inside me...",
+            "...I feel... Satisfied... Guilty...",
+            "...His cum... Leaking out... Slowly...",
+            "...This warmth... Lingering...",
+            "...His cock... Softening... Gently...",
+            "...The connection... Still there...",
+            "...This moment... Intimate...",
+            "...His breath... Heavy... On my back...",
+            "...The cum... Our shared climax...",
+            "...This was... Not entirely bad..."
+          ],
+          "high": [
+            "...We came together... Perfect...",
+            "...His cum... So hot... Filling me...",
+            "...My orgasm... With his... Ecstasy...",
+            "...His cock... Still hard... Inside...",
+            "...Cum more... Give me everything...",
+            "...His seed... Deep in my womb...",
+            "...I love this... Full feeling...",
+            "...His cum... Leaking out... Messy...",
+            "...The warmth... Perfect...",
+            "...His cock... Still throbbing...",
+            "...Cum again... Please...",
+            "...His seed... My favorite...",
+            "...Fill me... Always...",
+            "...This climax... Divine...",
+            "...His cum... Mine..."
+          ]
+        }
+      }
+    },
+    "JIGO": {
+      "description": "Cock is limp, cum drips from GG, ahegao face, body twitches in ecstasy",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...He's pulling out... Finally...",
+            "...His cum... Dripping down my thighs...",
+            "...My body... Twitching... Uncontrollably...",
+            "...This ecstasy... Unwanted... Forced...",
+            "...He wants to pass me... To others...",
+            "...The gang... Waiting for me...",
+            "...This nightmare... Continues...",
+            "...His cum... Leaking out...",
+            "...My body... Still sensitive...",
+            "...The twitches... Aftershocks...",
+            "...I can't move... Too exhausted...",
+            "...They're coming... For me...",
+            "...More monsters... More violation...",
+            "...This is... Endless hell...",
+            "...I can't... Take more..."
+          ],
+          "medium": [
+            "...His cock... Out... Empty feeling...",
+            "...Cum dripping... Down my legs...",
+            "...My body... Still trembling...",
+            "...The orgasm... Intense... Confusing...",
+            "...He's calling others... The gang...",
+            "...They want me... Too...",
+            "...This is... Becoming normal...",
+            "...The cum... His mark...",
+            "...My body... Ready for more...",
+            "...The gang... Excited...",
+            "...I feel... Anticipation...",
+            "...More cocks... Coming...",
+            "...This could be... Interesting...",
+            "...The gangbang... Beginning...",
+            "...I'm ready... For them..."
+          ],
+          "high": [
+            "...His cum... Dripping... So hot...",
+            "...My body... Twitching... In pleasure...",
+            "...The orgasm... Amazing... Perfect...",
+            "...Pass me to the gang... Yes...",
+            "...I want more cocks... All of them...",
+            "...Cum dripping... His gift...",
+            "...The gang... Ready for me...",
+            "...Fuck me... All of you...",
+            "...His cum... Lubricant...",
+            "...More monsters... More cum...",
+            "...I need the gang... Now...",
+            "...Fill me... From all sides...",
+            "...Cum everywhere... On me...",
+            "...The gangbang... My dream...",
+            "...Use me... All of you..."
+          ]
+        }
+      }
+    },
+    "JIGO2": {
+      "description": "Cock gets hard again and closed cycle starts from ERO (BUT WE SHOULD HAVE GG HANDOFF TO GANGBANG CYCLE HERE)",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...He's hard again... No rest...",
+            "...Round two... More torture...",
+            "...His cock... Ready again...",
+            "...I can't... Take more...",
+            "...This cycle... Endless...",
+            "...His cock... Pressing again...",
+            "...The gang... Waiting...",
+            "...But he wants me... First...",
+            "...Round two... Harder...",
+            "...My body... Still sensitive...",
+            "...This is... Too much...",
+            "...His cock... Entering again...",
+            "...The pain... Returning...",
+            "...No mercy... No break...",
+            "...This hell... Continues..."
+          ],
+          "medium": [
+            "...He's ready again... So soon...",
+            "...Round two... Interesting...",
+            "...His cock... Hard... Again...",
+            "...My body... Responding...",
+            "...The gang... Can wait...",
+            "...He wants me... More...",
+            "...This stamina... Impressive...",
+            "...His cock... Entering... Familiar...",
+            "...The sensation... Different now...",
+            "...More pleasure... Building...",
+            "...Round two... Might be better...",
+            "...His cock... Knows me now...",
+            "...The rhythm... Starting again...",
+            "...This could be... Enjoyable...",
+            "...The gang... After him..."
+          ],
+          "high": [
+            "...He's hard again... Perfect...",
+            "...Round two... Yes please...",
+            "...His cock... Ready for more...",
+            "...Fuck me again... Harder...",
+            "...The gang can wait... I want you...",
+            "...Cum inside me... Again...",
+            "...His cock... So good... Second time...",
+            "...Pound me... Don't stop...",
+            "...Fill me again... With cum...",
+            "...Round two... Even better...",
+            "...His stamina... Amazing...",
+            "...Cum with me... Again...",
+            "...His cock... My favorite...",
+            "...More... Give me more...",
+            "...Fuck me senseless... Round two..."
+          ]
+        }
+      }
+    }
+  }
+}

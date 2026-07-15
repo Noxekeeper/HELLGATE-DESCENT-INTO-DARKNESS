@@ -1,0 +1,21 @@
+{
+  "speakerLabel": "Bandit",
+  "stepId": "fsp_sex_money_after_price",
+  "stepKind": "choice",
+  "choiceLabels": [
+    "Okay. {SEX_PRICE} Münzen reichen mir.",
+    "Zu wenig. Dafür mach ich's nicht.",
+    "Nimm die Hände von mir. Sofort."
+  ],
+  "choiceOutcomeIds": [
+    "pay_confirm",
+    "noop",
+    "threaten"
+  ],
+  "choiceJumpStepIds": [
+    "fsp_sex_paid_grant_h",
+    "fsp_sex_refuse_d_p03",
+    "fsp_sex_paid_rage_win"
+  ],
+  "npcLine": "Na, Hexe? Ja oder nein?"
+}

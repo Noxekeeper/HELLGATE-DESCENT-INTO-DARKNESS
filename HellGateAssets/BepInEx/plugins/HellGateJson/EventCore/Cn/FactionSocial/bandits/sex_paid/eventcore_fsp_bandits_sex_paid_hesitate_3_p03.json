@@ -1,0 +1,8 @@
+{
+  "speakerLabel": "匪徒",
+  "stepId": "fsp_sex_hesitate_3_p03",
+  "stepKind": "continue",
+  "continueOutcomeId": "rep_roll_soft",
+  "continueNextStepId": "fsp_sex_paid_close",
+  "npcLine": "一直这样。你够辣。行——走，趁我还没改主意。"
+}

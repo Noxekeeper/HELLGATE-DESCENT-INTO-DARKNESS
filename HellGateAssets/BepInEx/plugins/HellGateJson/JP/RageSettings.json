@@ -1,0 +1,48 @@
+{
+  "settings": {
+    "minActivationPercent": {
+      "value": 50.0,
+      "comment": "Rage発動に必要な最小パーセンテージ（デフォルト: 50%）"
+    },
+    "rageCostDuringQTE": {
+      "value": 50.0,
+      "comment": "QTE/H-scene中のRage発動コスト（デフォルト: 50%）"
+    },
+    "damageMultiplier": {
+      "value": 2.0,
+      "comment": "Rage中の物理・魔法ダメージ倍率（デフォルト: 2.0x）"
+    },
+    "spGainPercent": {
+      "value": 0.5,
+      "comment": "Rage中の攻撃クリックごとのSP獲得量（最大SPに対するパーセンテージ、デフォルト: 0.5 = 50%）"
+    },
+    "enemyPushbackForceMultiplier": {
+      "value": 100.0,
+      "comment": "Rage発動時の敵押し返し力倍率（デフォルト: 100.0、範囲: 200-300px）"
+    },
+    "grabDrainMin": {
+      "value": 1.0,
+      "comment": "MindBroken 0%時のつかみ状態でのRage毎秒減少量（デフォルト: 1.0%/秒）"
+    },
+    "grabDrainMax": {
+      "value": 10.0,
+      "comment": "MindBroken 100%時のつかみ状態でのRage毎秒減少量（デフォルト: 10.0%/秒、直線補間）"
+    },
+    "slowMoDrainMultiplier": {
+      "value": 2.0,
+      "comment": "SlowMo時のRage減少倍率（デフォルト: 2.0x、基本減少量 * 2.0）"
+    },
+    "slowMoMBGainMultiplier": {
+      "value": 2.0,
+      "comment": "SlowMo時のMindBroken獲得倍率（デフォルト: 2.0x、基本獲得量 * 2.0）"
+    },
+    "uiPositionX": {
+      "value": 360.0,
+      "comment": "Rage UIの左端からのX位置（デフォルト: 360px）"
+    },
+    "uiPositionY": {
+      "value": -25.0,
+      "comment": "Rage UIの上端からのY位置（デフォルト: -25px、負の値 = 上端より下）"
+    }
+  }
+}

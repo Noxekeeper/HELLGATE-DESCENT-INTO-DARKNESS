@@ -1,0 +1,102 @@
+{
+  "Enable": true,
+  "DebugLogging": false,
+
+  "AnimFps": 9,
+
+  "PhysicsEnabled": true,
+  "PhysicsInitialVelocityX": 3.5,
+  "PhysicsInitialVelocityY": 5.0,
+  "PhysicsGravity": 9.81,
+  "PhysicsBounceScale": 1.15,
+  "PhysicsBounceTime": 0.1,
+  "PickupSpriteScale": 1.25,
+  "PickupTriggerRadius": 0.55,
+  "DropSpawnYOffset": -1.0,
+
+  "BigDropSplit": {
+    "Enable": true,
+    "SmallSplitMinTotalGold": 15,
+    "SmallSplitPileCount": 2,
+    "MinTotalGold": 80,
+    "MinPiles": 8,
+    "MaxPiles": 11,
+    "HorizontalSpread": 0.45
+  },
+
+  "Hud": {
+    "Enable": true,
+    "AnchorX": 0.0,
+    "AnchorY": 0.0,
+    "AnchoredPositionX": 20.0,
+    "AnchoredPositionY": 20.0,
+    "IconSizePx": 32,
+    "FontSize": 28,
+    "TextColorHex": "#FFC83D"
+  },
+
+  "Popup": {
+    "Enable": true,
+    "RiseDistance": 0.6,
+    "DurationSec": 0.9,
+    "FadeStartFraction": 0.55,
+    "FontSize": 28,
+    "TextColorHex": "#FFD24A"
+  },
+
+  "Audio": {
+    "Enable": true,
+    "DropFolder": "EconomicHG/Audio/NormalDrop",
+    "PickupFolder": "EconomicHG/Audio/PickUpGold",
+    "RandomizePickup": false,
+    "DropVolume": 0.85,
+    "PickupVolume": 1.0
+  },
+
+  "OnPlayerDeath": "DropPercent",
+  "DeathDropPercent": 0.10,
+  "DeathLossReturnable": false,
+  "DeathLossShowPopup": true,
+  "DeathLossMinAmount": 0,
+
+  "CombatGoldLoss": {
+    "Enable": true,
+    "ChanceOnDamage": 0.03,
+    "MinLossAmount": 1,
+    "MaxLossAmount": 3,
+    "MinWalletToDrop": 1,
+    "CooldownSeconds": 0.35,
+    "SpawnPickupPile": true
+  },
+
+  "KnockdownGoldLoss": {
+    "Enable": true,
+    "LossPercent": 0.01,
+    "MinLossAmount": 0,
+    "CooldownSeconds": 0.5,
+    "SpawnPickupPile": false,
+    "ShowPopup": true
+  },
+
+  "DifficultyMultipliers": {
+    "D0": 0.8,
+    "D1": 1.0,
+    "D2": 1.2,
+    "D3": 1.5
+  },
+
+  "HSceneEarnings": {
+    "Enable": true,
+    "PerFaction": [
+      { "Faction": "bandits",             "MinAmount": 10, "MaxAmount": 25 },
+      { "Faction": "bandits_inquisition", "MinAmount": 15, "MaxAmount": 30 },
+      { "Faction": "bandits_mafia",       "MinAmount": 25, "MaxAmount": 50 },
+      { "Faction": "bandits_demons",      "MinAmount": 12, "MaxAmount": 30 },
+      { "Faction": "mafia",               "MinAmount": 30, "MaxAmount": 60 },
+      { "Faction": "church",              "MinAmount": 20, "MaxAmount": 45 },
+      { "Faction": "demons",              "MinAmount": 5,  "MaxAmount": 15 },
+      { "Faction": "undead",              "MinAmount": 0,  "MaxAmount": 5  },
+      { "Faction": "monsters",            "MinAmount": 0,  "MaxAmount": 5  }
+    ]
+  }
+}

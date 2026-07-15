@@ -1,0 +1,27 @@
+{
+  "speakerLabel": "Bandit",
+  "stepId": "fsp_sex_hesitate_c02",
+  "stepKind": "choice",
+  "choiceLabels": [
+    "Je m'attendais pas à une offre comme ça…",
+    "Combien tu serais prêt à payer ?",
+    "Tu parles toujours comme ça aux filles ?",
+    "Donne-moi une seconde pour réfléchir.",
+    "Enlève tes mains. Maintenant."
+  ],
+  "choiceOutcomeIds": [
+    "noop",
+    "noop",
+    "noop",
+    "noop",
+    "threaten"
+  ],
+  "choiceJumpStepIds": [
+    "fsp_sex_hesitate_1a_p03",
+    "fsp_sex_money_price",
+    "fsp_sex_hesitate_3_p03",
+    "fsp_sex_hesitate_4_p03",
+    "fsp_sex_paid_rage_win"
+  ],
+  "npcLine": "Pourquoi tu figes ? J'ai encore rien fait."
+}

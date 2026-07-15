@@ -1,0 +1,590 @@
+{
+  "settings": {
+    "responseDelayMin": 1.5,
+    "responseDelayMax": 2.5,
+    "fontSize": 22.0,
+    "verticalOffset": 150.0,
+    "displayDuration": 5.0
+  },
+  "mindBrokenThresholds": [0.0, 0.15, 0.3, 0.5, 0.7, 0.85, 1.0],
+  "animations": {
+    "START": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "No! This bandit caught me! His grip is too strong!",
+              "I can't break free from his hands! What does he want?",
+              "His strength is overwhelming... I'm trapped in the forest!",
+              "I need to scream... someone help me... anyone!",
+              "His hands are grabbing me... I can't escape!"
+            ],
+            "low": [
+              "This bandit is too strong... his hands hold me firmly...",
+              "I should have been more careful walking through these woods...",
+              "His grip won't let go... I'm completely helpless...",
+              "I need to stay calm... find a way to escape...",
+              "His strength is terrifying... what will he do to me?"
+            ],
+            "medium_low": [
+              "His hands are everywhere... touching me... I can't move...",
+              "The forest is so quiet... no one will hear my cries...",
+              "This bandit won't let me go easily... I'm doomed...",
+              "His body is pressing against mine... so close...",
+              "I can feel his breath on my neck... it's frightening..."
+            ],
+            "medium": [
+              "His strength is completely overwhelming me...",
+              "I need to conserve my energy for when I can escape...",
+              "Maybe if I don't resist too much... he'll be gentler...",
+              "His breath is hot on my neck... I feel so vulnerable...",
+              "I can feel his heart beating... so close to me..."
+            ],
+            "medium_high": [
+              "His touch... it makes me shiver in a strange way...",
+              "The danger... it's exciting me somehow...",
+              "I wonder what this bandit plans to do with me...",
+              "His hands are rough but... not unpleasant...",
+              "The thrill of being caught... I can't deny it..."
+            ],
+            "high": [
+              "His hands feel so strong... so commanding...",
+              "I can't deny the thrill running through me...",
+              "What will this bandit do to me... I want to know...",
+              "His touch is awakening something in me...",
+              "The forest air feels cool against my heated skin..."
+            ],
+            "very_high": [
+              "His touch... I crave it more than anything...",
+              "Take me right here... bandit...",
+              "I want to feel your strength completely...",
+              "Don't stop... I need you...",
+              "Your hands... they're perfect..."
+            ]
+          }
+        },
+        {
+          "step": 2,
+          "delay": 1.0,
+          "thoughts": {
+            "very_low": [
+              "He's pulling me down... I can't stay on my feet!",
+              "My knees are hitting the ground... it hurts...",
+              "He's forcing me to kneel... I don't want this!",
+              "The ground is cold and hard... tears in my eyes...",
+              "His hands won't let me stand... I'm trapped..."
+            ],
+            "low": [
+              "He's pulling me to my knees... I can't resist...",
+              "The pain in my knees... but I have to endure...",
+              "His strength is too much... I'm kneeling before him...",
+              "I need to think... there must be a way out...",
+              "His grip on my hair... controlling me..."
+            ],
+            "medium_low": [
+              "I'm being pulled down... just have to obey...",
+              "His control over me is absolute... kneeling...",
+              "The forest floor is rough... but I accept it...",
+              "His hands guide me... I follow...",
+              "This position... so humiliating..."
+            ],
+            "medium": [
+              "He's positioning me... I know what's coming...",
+              "His hands control me... I accept it...",
+              "Down on my knees... where he wants me...",
+              "This is my place now... kneeling before him...",
+              "His dominance... I feel it completely..."
+            ],
+            "medium_high": [
+              "His hands in my hair... commanding me...",
+              "I'm going down for him... willingly...",
+              "On my knees... where I should be...",
+              "His touch... guiding me perfectly...",
+              "I want to be here... at his feet..."
+            ],
+            "high": [
+              "Yes... pull my hair... put me on my knees...",
+              "His strong hands... guiding me down...",
+              "I want to be here... at his mercy...",
+              "On my knees... serving him...",
+              "His dominance... I crave it..."
+            ],
+            "very_high": [
+              "Yes! Force me down... I need this!",
+              "On my knees for you... master...",
+              "Pull my hair harder... I'm yours!",
+              "This position... perfect for me...",
+              "I belong on my knees... serving you..."
+            ]
+          }
+        },
+        {
+          "step": 3,
+          "delay": 1.5,
+          "thoughts": {
+            "very_low": [
+              "Oh god! He's exposing himself! Right in my face!",
+              "I can't look... but he's forcing my head!",
+              "His... manhood... so close... I want to run!",
+              "This is too much... I can't handle this!",
+              "His hands hold me... I can't escape!"
+            ],
+            "low": [
+              "He's showing me... right in front of my face...",
+              "I know what he wants... the shame burns...",
+              "I have to look... he's making me...",
+              "His size... intimidating... frightening...",
+              "This is happening... whether I want it or not..."
+            ],
+            "medium_low": [
+              "His cock... right in front of me...",
+              "I see what's coming... I have to accept it...",
+              "This is happening... I can't stop it...",
+              "His hands control my head... my gaze...",
+              "I have to look... there's no choice..."
+            ],
+            "medium": [
+              "He's showing me what I have to do...",
+              "His manhood... I'm supposed to service it...",
+              "I understand... I'll do what he wants...",
+              "His size... impressive... commanding...",
+              "This is my task now... I accept it..."
+            ],
+            "medium_high": [
+              "His cock... it's impressive...",
+              "I'm curious... a little interested...",
+              "Maybe this won't be so terrible...",
+              "His size... makes me wonder...",
+              "I could... touch it... maybe..."
+            ],
+            "high": [
+              "Mmm... he's so big... I like what I see...",
+              "I want to touch it... taste it...",
+              "Show me more... I'm ready...",
+              "His cock... beautiful... powerful...",
+              "I need to feel it... taste it..."
+            ],
+            "very_high": [
+              "Yes! Your beautiful cock! Let me worship it!",
+              "I need it! Please let me have it!",
+              "I'm drooling for you already!",
+              "Your cock... perfect... mine!",
+              "Let me serve it... please!"
+            ]
+          }
+        }
+      ]
+    },
+    "START2": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "He's saying... touch him or he'll hurt me!",
+              "I don't want to! But I don't want to die!",
+              "His words are so cruel... I'm terrified...",
+              "His hands... his weapon... I have no choice...",
+              "I have to obey... to survive..."
+            ],
+            "low": [
+              "Touch him or get hurt... no real choice...",
+              "His voice is so cold... commanding...",
+              "I have to do it... to survive...",
+              "His demands... absolute...",
+              "I need to comply... stay alive..."
+            ],
+            "medium_low": [
+              "His commands are clear... obey or suffer...",
+              "I have to please him... it's necessary...",
+              "His control over me is absolute...",
+              "His words are law in this forest...",
+              "I must submit to his will..."
+            ],
+            "medium": [
+              "He wants me to stroke him... I understand...",
+              "I'll do it... get through this...",
+              "My hands... his cock... just mechanical...",
+              "This is just survival... nothing more...",
+              "I can do this... I have to..."
+            ],
+            "medium_high": [
+              "He wants my hands on him... okay...",
+              "Maybe it won't be so bad...",
+              "I'm a little curious about how it feels...",
+              "His cock... warm... throbbing...",
+              "I could get used to this..."
+            ],
+            "high": [
+              "He wants my hands... I want that too...",
+              "I'm eager to touch... to please...",
+              "Yes, I'll stroke you... gladly...",
+              "His cock... responds to my touch...",
+              "I want to make him feel good..."
+            ],
+            "very_high": [
+              "Command me! Tell me how to please you!",
+              "I need to touch your cock! Let me!",
+              "I'll do anything you say, master!",
+              "My hands... for your pleasure!",
+              "Use me... I'm yours!"
+            ]
+          }
+        },
+        {
+          "step": 2,
+          "delay": 1.0,
+          "thoughts": {
+            "very_low": [
+              "My hands... shaking as I reach out...",
+              "I can't believe I'm doing this... it's wrong!",
+              "His weapon... reminding me I have no choice...",
+              "Tears falling... but I have to touch...",
+              "His cock... hot... pulsing... I hate this..."
+            ],
+            "low": [
+              "I'm touching him... his cock is so hot...",
+              "This is humiliating... but necessary...",
+              "I have to stroke... he's watching me...",
+              "My hands... moving... mechanical...",
+              "The shame... burning... but I continue..."
+            ],
+            "medium_low": [
+              "My hands on him... doing what he wants...",
+              "It's warm... throbbing in my grip...",
+              "Just mechanical motions... get through it...",
+              "His breathing changes... I must be doing something right...",
+              "I can feel him... responding..."
+            ],
+            "medium": [
+              "I'm stroking him... it's not terrible...",
+              "His cock... pulsing in my hands...",
+              "I'm doing what he needs... that's all...",
+              "My rhythm... steady... consistent...",
+              "This is just... a task... nothing more..."
+            ],
+            "medium_high": [
+              "He's getting harder... I can feel it...",
+              "I'm actually good at this... he likes it...",
+              "His reactions... encouraging...",
+              "Maybe I'm pleasing him... that's good...",
+              "His cock... growing... in my hands..."
+            ],
+            "high": [
+              "Mmm... he's so hard for me...",
+              "I love feeling him throb in my hands...",
+              "I want to please him... make him feel good...",
+              "His pleasure... mine to give...",
+              "I want him to enjoy this..."
+            ],
+            "very_high": [
+              "Your cock is perfect! So hard!",
+              "I love stroking you! Give me more!",
+              "Let me worship your beautiful cock!",
+              "My hands... your pleasure!",
+              "I need to make you cum!"
+            ]
+          }
+        }
+      ]
+    },
+    "ERO": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "He's pushing into me! It hurts so much!",
+              "His cock... too big... tearing me!",
+              "I can't take it! Please stop!",
+              "The pain... overwhelming... I can't!",
+              "He's forcing himself... I can't breathe!"
+            ],
+            "low": [
+              "He's entering me... the stretch is terrible...",
+              "I need to relax... or it'll hurt more...",
+              "His size... too much... but I have to endure...",
+              "Tears streaming... but I stay still...",
+              "This pain... when will it end?"
+            ],
+            "medium_low": [
+              "He's inside me... filling me completely...",
+              "The fullness... strange... uncomfortable...",
+              "I need to adjust... get used to it...",
+              "His thrusts... slow... but deep...",
+              "I can do this... I have to..."
+            ],
+            "medium": [
+              "His cock... moving inside me...",
+              "The sensation... not just pain anymore...",
+              "I'm adjusting... finding a rhythm...",
+              "His hands... holding me steady...",
+              "This is happening... I accept it..."
+            ],
+            "medium_high": [
+              "His thrusts... building a rhythm...",
+              "The pain... fading... replaced by something else...",
+              "His cock... feels... interesting...",
+              "My body... responding... despite myself...",
+              "This might not be so bad..."
+            ],
+            "high": [
+              "Yes... his cock feels so good inside me...",
+              "I want him deeper... harder...",
+              "Don't stop... please...",
+              "His thrusts... perfect... amazing...",
+              "I need this... I need him..."
+            ],
+            "very_high": [
+              "Fuck me harder! I need your cock!",
+              "Deeper! Fill me completely!",
+              "Your cock is perfect! Don't stop!",
+              "I love feeling you inside me!",
+              "More! Give me everything!"
+            ]
+          }
+        }
+      ]
+    },
+    "ERO1": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "The collar... tight around my neck!",
+              "He's pulling the chain! I can't breathe!",
+              "My neck... straining... it hurts!",
+              "I can't move... he's controlling me!",
+              "The pressure... too much... I panic!"
+            ],
+            "low": [
+              "The chain pulls tight... restricting me...",
+              "I have to follow... or choke...",
+              "His control... absolute... terrifying...",
+              "The collar... marks me as his...",
+              "I can't resist... I have to obey..."
+            ],
+            "medium_low": [
+              "The chain guides me... I follow...",
+              "His control... I accept it...",
+              "The collar... his mark on me...",
+              "I move as he wants... obedient...",
+              "This is my life now... chained..."
+            ],
+            "medium": [
+              "The chain... connects us...",
+              "His pulls... guide my movements...",
+              "I follow his lead... perfectly...",
+              "The collar... symbolizes my submission...",
+              "I belong to him... completely..."
+            ],
+            "medium_high": [
+              "The chain feels... exciting...",
+              "His control... arouses me...",
+              "I want him to pull harder...",
+              "The collar... his claim on me...",
+              "I love being his... controlled..."
+            ],
+            "high": [
+              "Pull the chain! Control me!",
+              "I love feeling your dominance!",
+              "The collar makes me yours!",
+              "Harder! Pull me closer!",
+              "I need your control!"
+            ],
+            "very_high": [
+              "Choke me with the chain! I need it!",
+              "Your control drives me wild!",
+              "I'm your chained slut!",
+              "Pull harder! Own me!",
+              "The collar is my pleasure!"
+            ]
+          }
+        }
+      ]
+    },
+    "ERO2": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "His thrusts... harder now... I can't take it!",
+              "Each push... deeper... more painful...",
+              "My body... shaking... from the force...",
+              "I want to scream... but I hold back...",
+              "The intensity... overwhelming me..."
+            ],
+            "low": [
+              "His rhythm... faster... more intense...",
+              "I have to match him... stay with him...",
+              "The force... building... I endure...",
+              "His grunts... animalistic... frightening...",
+              "I hold on... survive this..."
+            ],
+            "medium_low": [
+              "His thrusts... deeper... more demanding...",
+              "I adjust... take what he gives...",
+              "The intensity... I can handle it...",
+              "His body... slamming against mine...",
+              "I find my rhythm... with him..."
+            ],
+            "medium": [
+              "His pace... perfect... intense...",
+              "I move with him... in sync...",
+              "The force... exciting... powerful...",
+              "His cock... hitting all the right spots...",
+              "I feel... alive... desired..."
+            ],
+            "medium_high": [
+              "Harder! Yes... just like that!",
+              "His thrusts... amazing... intense...",
+              "I want more... deeper...",
+              "His power... turns me on...",
+              "Don't stop... please..."
+            ],
+            "high": [
+              "Fuck me harder! I love it!",
+              "Your cock feels incredible!",
+              "Deeper! Faster! Yes!",
+              "I need your power!",
+              "Make me scream!"
+            ],
+            "very_high": [
+              "Destroy me with your cock!",
+              "Fuck me senseless! I need it!",
+              "Harder! Break me!",
+              "Your power is everything!",
+              "I live for your thrusts!"
+            ]
+          }
+        }
+      ]
+    },
+    "FIN": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "He's going to... inside me! No!",
+              "I feel him swelling... he's close!",
+              "His thrusts... erratic... he's cumming!",
+              "I can't stop him... he's filling me!",
+              "The warmth... spreading inside... I cry..."
+            ],
+            "low": [
+              "He's about to cum... I feel it...",
+              "His cock... pulsing... ready...",
+              "He's going to fill me... I can't stop it...",
+              "The inevitability... I accept it...",
+              "His seed... inside me... forever..."
+            ],
+            "medium_low": [
+              "He's cumming... I feel the pulses...",
+              "Warmth... filling me... spreading...",
+              "His release... inside my body...",
+              "I contain it... all of it...",
+              "This moment... intimate... unwanted..."
+            ],
+            "medium": [
+              "His climax... I feel every spurt...",
+              "His cum... warm... filling me...",
+              "I take it all... as I should...",
+              "His pleasure... complete...",
+              "I did this... for him..."
+            ],
+            "medium_high": [
+              "He's cumming inside me... hot...",
+              "Each pulse... I feel it...",
+              "His cum... filling me completely...",
+              "The sensation... not bad...",
+              "I want to feel it all..."
+            ],
+            "high": [
+              "Yes! Cum inside me!",
+              "Fill me with your hot cum!",
+              "I want every drop!",
+              "Your seed... mine!",
+              "Cum for me!"
+            ],
+            "very_high": [
+              "Flood me! Fill me completely!",
+              "Your cum is divine!",
+              "Pump me full!",
+              "I need your seed!",
+              "Breed me!"
+            ]
+          }
+        }
+      ]
+    },
+    "JIGO": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "He's done... but I'm so weak...",
+              "My legs... won't hold me...",
+              "I collapse... exhausted... broken...",
+              "The ground... cold... against my skin...",
+              "I'm spent... completely..."
+            ],
+            "low": [
+              "His weight... off me... but I can't stand...",
+              "My body... trembling... weak...",
+              "I collapse... onto the ground...",
+              "Exhausted... from the ordeal...",
+              "Just want to rest... forget..."
+            ],
+            "medium_low": [
+              "He's finished... I can rest now...",
+              "My body... sore... but alive...",
+              "I collapse... spent...",
+              "The ground... welcomes me...",
+              "Recovery... begins..."
+            ],
+            "medium": [
+              "His climax... my signal to rest...",
+              "I lower myself... carefully...",
+              "The ground... cool... soothing...",
+              "My body... satisfied... in a way...",
+              "I did well... I think..."
+            ],
+            "medium_high": [
+              "He's done... but I feel... good...",
+              "My body... tingling... alive...",
+              "I collapse... with a smile...",
+              "The afterglow... surprising...",
+              "Maybe... it wasn't all bad..."
+            ],
+            "high": [
+              "Amazing... I collapse in bliss...",
+              "My body... humming... satisfied...",
+              "That was incredible...",
+              "I want more... soon...",
+              "Perfect..."
+            ],
+            "very_high": [
+              "Bliss! Pure ecstasy!",
+              "I collapse in heavenly pleasure!",
+              "Your cum inside me... divine!",
+              "I need more of this!",
+              "Perfection!"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "speakerLabel": "Bandido",
+  "stepId": "fsp_sex_money_c02",
+  "stepKind": "choice",
+  "choiceLabels": [
+    "Diz a quantia.",
+    "Diz primeiro o que você quer.",
+    "Rápido — e sem olhares curiosos.",
+    "Só num lugar à parte.",
+    "Mostra as moedas primeiro."
+  ],
+  "choiceOutcomeIds": [
+    "noop",
+    "noop",
+    "noop",
+    "noop",
+    "noop"
+  ],
+  "choiceJumpStepIds": [
+    "fsp_sex_money_price",
+    "fsp_sex_money_2_p03",
+    "fsp_sex_money_3_p03",
+    "fsp_sex_money_4_p03",
+    "fsp_sex_money_5_p03"
+  ],
+  "npcLine": "Então? Diz condições — ou vaza."
+}

@@ -1,0 +1,8 @@
+{
+  "speakerLabel": "匪徒",
+  "stepId": "fsp_sex_refuse_c_p03",
+  "stepKind": "continue",
+  "continueOutcomeId": "noop",
+  "continueNextStepId": "fsp_sex_refuse_c_p04",
+  "npcLine": "嚣张？我更吃这套。"
+}

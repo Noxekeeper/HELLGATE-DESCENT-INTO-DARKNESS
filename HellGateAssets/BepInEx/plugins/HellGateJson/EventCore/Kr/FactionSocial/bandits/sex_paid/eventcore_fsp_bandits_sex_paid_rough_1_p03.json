@@ -1,0 +1,8 @@
+{
+  "speakerLabel": "도적",
+  "stepId": "fsp_sex_rough_1_p03",
+  "stepKind": "continue",
+  "continueOutcomeId": "noop",
+  "continueNextStepId": "fsp_sex_rough_1_p04",
+  "npcLine": "오, 창녀……불 붙였네. 무릎 꿇어."
+}

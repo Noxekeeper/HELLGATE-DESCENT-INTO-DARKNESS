@@ -1,0 +1,8 @@
+{
+  "speakerLabel": "도적",
+  "stepId": "fsp_sex_money_2_p03",
+  "stepKind": "continue",
+  "continueOutcomeId": "noop",
+  "continueNextStepId": "fsp_sex_money_2_p04",
+  "npcLine": "널 원해. {SEX_PRICE} 코인——안에 싸게 해주면."
+}

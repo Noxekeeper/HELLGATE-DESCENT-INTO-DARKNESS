@@ -1,0 +1,21 @@
+{
+  "speakerLabel": "Bandit",
+  "stepId": "fsp_sex_money_after_price",
+  "stepKind": "choice",
+  "choiceLabels": [
+    "Fine. {SEX_PRICE} coins work for me.",
+    "Too little. I won't agree.",
+    "Get your hands off me. Now."
+  ],
+  "choiceOutcomeIds": [
+    "pay_confirm",
+    "noop",
+    "threaten"
+  ],
+  "choiceJumpStepIds": [
+    "fsp_sex_paid_grant_h",
+    "fsp_sex_refuse_d_p03",
+    "fsp_sex_paid_rage_win"
+  ],
+  "npcLine": "So, witch? Taking it or not?"
+}

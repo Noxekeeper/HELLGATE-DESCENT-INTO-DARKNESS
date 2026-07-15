@@ -1,0 +1,3 @@
+# Parishchurch — HOSTAGE test (keys: SPAWN_TEMPLATE_KEYS.txt)
+# _re_Scenename: Parishchurch | F11+ПКМ — hot-reload
+

@@ -1,0 +1,8 @@
+{
+  "speakerLabel": "Бандит",
+  "stepId": "fsp_sex_money_2_p03",
+  "stepKind": "continue",
+  "continueOutcomeId": "noop",
+  "continueNextStepId": "fsp_sex_money_2_p04",
+  "npcLine": "Хочу тебя. {SEX_PRICE} — если дашь кончить внутрь."
+}

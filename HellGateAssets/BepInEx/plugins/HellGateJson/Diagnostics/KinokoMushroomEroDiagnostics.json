@@ -1,0 +1,8 @@
+{
+  "Enable": false,
+  "HeartbeatSec": 0.5,
+  "StuckWarnSec": 1.5,
+  "LogAllEvents": true,
+  "LogInterestingOnly": false,
+  "MaxLogsPerSession": 3000
+}

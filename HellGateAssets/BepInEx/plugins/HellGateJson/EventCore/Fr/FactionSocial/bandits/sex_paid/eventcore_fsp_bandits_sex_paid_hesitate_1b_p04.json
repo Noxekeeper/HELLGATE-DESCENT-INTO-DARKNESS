@@ -1,0 +1,8 @@
+{
+  "speakerLabel": "Bandit",
+  "stepId": "fsp_sex_hesitate_1b_p04",
+  "stepKind": "continue",
+  "continueOutcomeId": "noop",
+  "continueNextStepId": "fsp_sex_money_price",
+  "npcLine": "Tu veux des pièces — dis ton prix. Je dis si ça suffit."
+}

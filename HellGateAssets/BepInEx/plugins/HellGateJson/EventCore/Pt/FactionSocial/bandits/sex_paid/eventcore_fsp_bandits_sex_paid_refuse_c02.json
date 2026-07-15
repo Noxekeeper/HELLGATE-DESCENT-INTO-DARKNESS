@@ -1,0 +1,24 @@
+{
+  "speakerLabel": "Bandido",
+  "stepId": "fsp_sex_refuse_c02",
+  "stepKind": "choice",
+  "choiceLabels": [
+    "Talvez noutro dia.",
+    "Falo a sério. Deixa-me em paz.",
+    "És demasiado descarado.",
+    "Deixa-me ir."
+  ],
+  "choiceOutcomeIds": [
+    "noop",
+    "noop",
+    "noop",
+    "noop"
+  ],
+  "choiceJumpStepIds": [
+    "fsp_sex_refuse_a_p03",
+    "fsp_sex_refuse_b_p03",
+    "fsp_sex_refuse_c_p03",
+    "fsp_sex_refuse_d_p03"
+  ],
+  "npcLine": "Está bem, não insisto. Diz claro — vais-te embora ou ainda falamos?"
+}

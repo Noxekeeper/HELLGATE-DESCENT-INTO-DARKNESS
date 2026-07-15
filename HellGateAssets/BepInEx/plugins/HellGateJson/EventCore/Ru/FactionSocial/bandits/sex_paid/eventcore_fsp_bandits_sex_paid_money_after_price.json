@@ -1,0 +1,21 @@
+{
+  "speakerLabel": "Бандит",
+  "stepId": "fsp_sex_money_after_price",
+  "stepKind": "choice",
+  "choiceLabels": [
+    "Ладно. {SEX_PRICE} меня устраивает.",
+    "Мало. Не согласна.",
+    "Убери руки. Сейчас."
+  ],
+  "choiceOutcomeIds": [
+    "pay_confirm",
+    "noop",
+    "threaten"
+  ],
+  "choiceJumpStepIds": [
+    "fsp_sex_paid_grant_h",
+    "fsp_sex_refuse_d_p03",
+    "fsp_sex_paid_rage_win"
+  ],
+  "npcLine": "Ну что, ведьмочка? Берёшь или нет?"
+}

@@ -1,0 +1,8 @@
+{
+  "speakerLabel": "匪徒",
+  "stepId": "fsp_sex_refuse_a_p03",
+  "stepKind": "continue",
+  "continueOutcomeId": "noop",
+  "continueNextStepId": "fsp_sex_refuse_a_p04",
+  "npcLine": "呵。希望你改主意。这张脸我记住了。"
+}

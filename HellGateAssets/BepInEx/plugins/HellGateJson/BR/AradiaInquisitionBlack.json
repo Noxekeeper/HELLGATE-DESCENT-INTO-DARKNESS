@@ -1,0 +1,991 @@
+{
+  "settings": {
+    "responseDelayMin": 1.5,
+    "responseDelayMax": 2.5,
+    "fontSize": 22.0,
+    "verticalOffset": 100.0,
+    "displayDuration": 5.0
+  },
+  "animations": {
+    "START": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "Não!Cabelo sendo agarrado!Dói!",
+              "Não consigo... Sendo arrastada para baixo!",
+              "Joelhos... Batendo no chão... Por favor,pare!"
+            ],
+            "low": [
+              "Seu aperto... Tão rude... Não consigo descer...",
+              "Ele me arrasta para os joelhos... Não consigo resistir...",
+              "Dor no couro cabeludo... Lágrimas nos olhos..."
+            ],
+            "medium_low": [
+              "Sendo arrastada para baixo... Só posso obedecer...",
+              "Sua força... Avassaladora... Eu cedo...",
+              "Agora nos joelhos... Onde ele quer..."
+            ],
+            "medium": [
+              "Ele está me posicionando... Eu sei o que vem...",
+              "Seu aperto controla minha cabeça... Eu aceito...",
+              "Nos joelhos... É meu lugar..."
+            ],
+            "medium_high": [
+              "Sua mão no meu cabelo... Comando...",
+              "Ele me faz descer... Voluntariamente...",
+              "Nos joelhos... Onde devo estar..."
+            ],
+            "high": [
+              "Sim... Puxe meu cabelo... Me coloque nos joelhos...",
+              "Suas mãos fortes... Me guiando para baixo...",
+              "Quero estar lá... Aos seus pés..."
+            ],
+            "very_high": [
+              "Umm... Sentir a mão no cabelo é tão bom!",
+              "Puxe-me para baixo,mestre!Eu pertenço a você!",
+              "Aos seus joelhos... Sempre!"
+            ]
+          }
+        },
+        {
+          "step": 2,
+          "delay": 1.0,
+          "thoughts": {
+            "very_low": [
+              "Meu deus!Uma lâmina!Ele vai me matar!",
+              "A lâmina... Tão próxima da minha garganta... Estou tão apavorada!",
+              "Não me corte!Farei qualquer coisa!"
+            ],
+            "low": [
+              "Aquela lâmina... Um movimento errado e estou morta...",
+              "Sinto o aço frio... Estou tremendo...",
+              "Ele é sério... Ele realmente vai me machucar..."
+            ],
+            "medium_low": [
+              "A lâmina lembra... Não tenho escolha...",
+              "Desobedecer... Ele vai usá-la...",
+              "Medo me mantém... Obediente..."
+            ],
+            "medium": [
+              "A lâmina... Promessa do que vem se desobedecer...",
+              "Eu entendo a ameaça... Eu coopero...",
+              "Sua arma... Meu controle sobre ele..."
+            ],
+            "medium_high": [
+              "Perigo... Faz meu coração acelerar...",
+              "Sua lâmina... Memória de seu poder...",
+              "Estou com medo... Excitação... Ambas..."
+            ],
+            "high": [
+              "Lâmina na pele... Estimulante...",
+              "Esta sensação de perigo... Eu gosto...",
+              "Sua arma... Seu domínio... Eu preciso..."
+            ],
+            "very_high": [
+              "Sim!Ameace-me com sua lâmina!",
+              "Perigo me deixa tão molhada!",
+              "Corte-me,machuque-me,possua-me completamente!"
+            ]
+          }
+        },
+        {
+          "step": 3,
+          "delay": 1.5,
+          "thoughts": {
+            "very_low": [
+              "Não!Ele está se despindo!Bem no meu rosto!",
+              "Não consigo ver... Mas ele força minha cabeça!",
+              "Seu... Pau... Tão próximo... Quero correr!",
+              "Isso é demais... Não consigo suportar!",
+              "Suas mãos me seguram... Não consigo escapar!"
+            ],
+            "low": [
+              "Ele está se mostrando para mim... Bem na minha cara...",
+              "Eu sei o que ele quer... Vergonha queimando...",
+              "Preciso olhar... Ele me faz...",
+              "Seu tamanho... Intimidante... Horrível...",
+              "Isso está acontecendo... Quer eu queira ou não..."
+            ],
+            "medium_low": [
+              "Seu pau... Bem diante dos meus olhos...",
+              "Vejo o que vem... Preciso aceitar...",
+              "Isso está acontecendo... Não consigo parar...",
+              "Suas mãos controlam minha cabeça... Meu olhar...",
+              "Preciso olhar... Sem escolha..."
+            ],
+            "medium": [
+              "Ele está me mostrando o que preciso fazer...",
+              "Seu pau... Eu devo servi-lo...",
+              "Eu entendo... Eu farei o que ele quer...",
+              "Seu tamanho... Impressionante... Comando...",
+              "Esta é minha tarefa agora... Eu aceito..."
+            ],
+            "medium_high": [
+              "Seu pau... Impressionante...",
+              "Estou curiosa... Um pouco interessada...",
+              "Talvez não seja tão ruim...",
+              "Seu tamanho... Me faz pensar...",
+              "Eu poderia... Tocá-lo... Talvez..."
+            ],
+            "high": [
+              "Umm... Ele é tão grande... Eu gosto do que vejo...",
+              "Quero tocá-lo... Prová-lo...",
+              "Me mostre mais... Estou pronta...",
+              "Seu pau... Lindo... Poderoso...",
+              "Preciso senti-lo... Prová-lo..."
+            ],
+            "very_high": [
+              "Sim!Seu pau bonito!Deixe-me adorá-lo!",
+              "Preciso dele!Por favor,me dê!",
+              "Já estou babando!"
+            ]
+          }
+        },
+        {
+          "step": 4,
+          "delay": 2.0,
+          "thoughts": {
+            "very_low": [
+              "Arma!Contra meu peito!Ele vai atirar em mim!",
+              "Sinto a boca da arma... Aço frio... Vou morrer!",
+              "Por favor!Farei qualquer coisa!Não atire!"
+            ],
+            "low": [
+              "Aquela arma... Perfeita ameaça para mim...",
+              "Aço frio na minha pele... Medo...",
+              "Ele é sério... Ele vai puxar o gatilho..."
+            ],
+            "medium_low": [
+              "A arma lembra... Só devo obedecer...",
+              "Desobedecer... Ele vai usá-la...",
+              "Medo me mantém obediente..."
+            ],
+            "medium": [
+              "Sua arma... Seu controle final...",
+              "Eu entendo a ameaça... Eu coopero...",
+              "Seu poder... Me faz ceder..."
+            ],
+            "medium_high": [
+              "Perigo... Tão excitante...",
+              "Sua arma... Símbolo de seu domínio...",
+              "Estou com medo... Excitada... Ambas..."
+            ],
+            "high": [
+              "Arma no peito... Estimulante...",
+              "Este perigo... Eu gosto...",
+              "Sua arma... Seu poder... Eu preciso..."
+            ],
+            "very_high": [
+              "Sim!Ameace-me com a arma!",
+              "Perigo me deixa tão molhada!",
+              "Atire em mim,machuque-me,possua-me completamente!"
+            ]
+          }
+        },
+        {
+          "step": 5,
+          "delay": 1.0,
+          "thoughts": {
+            "very_low": [
+              "Não!Ele... Está empurrando!Abra a boca!",
+              "Seu pau... Nos meus lábios... Não!",
+              "Sendo forçada... Só posso aceitar!"
+            ],
+            "low": [
+              "Ele está enfiando o pau na minha boca... Humilhação...",
+              "Seu gosto... Seu cheiro... Nojo...",
+              "Desobedecer... Ele vai atirar..."
+            ],
+            "medium_low": [
+              "Seu pau... Entrando na minha boca...",
+              "Eu aceito... Eu obedeço...",
+              "Este é meu destino... Agora..."
+            ],
+            "medium": [
+              "Sua ordem obedecida... Eu sirvo...",
+              "Seu pau... Sinto na boca...",
+              "Fazê-lo feliz... Para sobreviver..."
+            ],
+            "medium_high": [
+              "Seu pau... Quente... Duro...",
+              "Gosto... Não tão ruim...",
+              "Estou começando a gostar..."
+            ],
+            "high": [
+              "Umm... Eu gosto do seu pau... Quero provar...",
+              "Mais fundo... Tudo...",
+              "Sentir ele feliz... Eu gosto..."
+            ],
+            "very_high": [
+              "Sim!Chupe seu pau!",
+              "Tão delicioso!Mais!",
+              "Sou sua escrava oral!"
+            ]
+          }
+        }
+      ]
+    },
+    "START2": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "Ele está dizendo... Toque nele ou ele vai me machucar!",
+              "Não quero!Mas não quero morrer!",
+              "Suas palavras são tão cruéis... Estou chorando..."
+            ],
+            "low": [
+              "Masturbe-o ou seja machucada... Não há escolha real...",
+              "Sua voz é tão fria... Comando...",
+              "Preciso fazer... Para sobreviver..."
+            ],
+            "medium_low": [
+              "Sua exigência é clara... Obedeça ou sofra...",
+              "Preciso agradá-lo... É necessário...",
+              "Sobrevivência significa obediência..."
+            ],
+            "medium": [
+              "Ele quer minha mão nele... Eu entendo...",
+              "Eu farei... Passarei por isso...",
+              "Minha mão... Seu pau... Vamos acabar com isso..."
+            ],
+            "medium_high": [
+              "Ele quer minha mão nele... Tudo bem...",
+              "Talvez não seja tão ruim...",
+              "Estou um pouco curiosa de como se sente..."
+            ],
+            "high": [
+              "Ele quer minha mão nele... Eu também quero...",
+              "Estou ansiosa para tocar... Agradar...",
+              "Sim,eu vou masturbá-lo... Com prazer..."
+            ],
+            "very_high": [
+              "Comande-me!Diga-me como agradá-lo!",
+              "Preciso tocar seu pau!Deixe-me!",
+              "Farei qualquer coisa que você diga,mestre!"
+            ]
+          }
+        },
+        {
+          "step": 2,
+          "delay": 1.0,
+          "thoughts": {
+            "very_low": [
+              "Minha mão... Tremendo estendendo-se...",
+              "Não acredito que estou fazendo isso... É errado!",
+              "Sua arma... Lembra que não tenho escolha...",
+              "Lágrimas caindo... Mas preciso tocar...",
+              "Seu pau... Quente... Pulsando... Odeio isso..."
+            ],
+            "low": [
+              "Eu o toco... Seu pau tão quente...",
+              "Esta é humilhação... Mas necessária...",
+              "Não o masturbo... Ele me observa...",
+              "Minha mão... Movendo... Mecânica...",
+              "Vergonha... Queimando... Mas continuo..."
+            ],
+            "medium_low": [
+              "Minha mão nele... Fazendo o que ele quer...",
+              "É quente... Pulsando na minha mão...",
+              "Apenas movimentos mecânicos... Passar por isso...",
+              "Sua respiração muda... Devo estar fazendo certo...",
+              "Sinto ele... Respondendo..."
+            ],
+            "medium": [
+              "Estou masturbando-o... Não é ruim...",
+              "Seu pau... Pulsando na minha mão...",
+              "Estou fazendo o que ele precisa... Só isso...",
+              "Meu ritmo... Estável... Consistente...",
+              "É apenas... Uma tarefa... Só isso..."
+            ],
+            "medium_high": [
+              "Ele fica mais duro... Eu sinto...",
+              "É realmente tão hábil... Ele gosta...",
+              "Sua reação... Incentiva...",
+              "Talvez eu esteja agradando ele... Bom...",
+              "Seu pau... Crescendo na minha mão..."
+            ],
+            "high": [
+              "Umm... Ele fica tão duro para mim...",
+              "Eu gosto de sentir pulsar na minha mão...",
+              "Quero agradá-lo... Fazê-lo sentir bem...",
+              "Seu prazer... Meu dar...",
+              "Quero que ele aproveite..."
+            ],
+            "very_high": [
+              "Seu pau é perfeito!Tão duro!",
+              "Eu gosto de masturbá-lo!Mais!",
+              "Deixe-me adorar seu pau bonito!",
+              "Minha mão... Seu prazer!",
+              "Preciso fazê-lo gozar!"
+            ]
+          }
+        }
+      ]
+    },
+    "ERO": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "Não!Ele entra em mim!Dói tanto!",
+              "Seu pau... Grande demais... Rasgando-me!",
+              "Não consigo suportar!Por favor,pare!",
+              "Dor... Avassaladora... Não consigo!",
+              "Ele força... Não consigo respirar!"
+            ],
+            "low": [
+              "Ele entra em mim... Esticando horrivelmente...",
+              "Preciso relaxar... Ou dói mais...",
+              "Seu tamanho... É demais... Mas preciso suportar...",
+              "Lágrimas caem... Mas mantenho imóvel...",
+              "Esta dor... Quando acaba?"
+            ],
+            "medium_low": [
+              "Ele está dentro de mim... Completamente cheio...",
+              "Plenitude... Estranha... Desconfortável...",
+              "Preciso me ajustar... Me acostumar...",
+              "Seus empurrões... Lentos... Profundos...",
+              "Eu posso fazer isso... Preciso..."
+            ],
+            "medium": [
+              "Seu pau... Movendo dentro de mim...",
+              "Sensação... Não é só dor...",
+              "Estou me ajustando... Encontrando ritmo...",
+              "Suas mãos... Firmemente me segurando...",
+              "Isso está acontecendo... Eu aceito..."
+            ],
+            "medium_high": [
+              "Seus empurrões... Construindo ritmo...",
+              "Dor... Diminuindo... Substituída por outra coisa...",
+              "Seu pau... Sente... Interessante...",
+              "Meu corpo... Respondendo... Contra si mesmo...",
+              "Isso pode não ser tão ruim..."
+            ],
+            "high": [
+              "Sim... Seu pau sente tão bom dentro de mim...",
+              "Quero mais fundo... Mais forte...",
+              "Não pare... Por favor...",
+              "Seus empurrões... Perfeitos... Incríveis...",
+              "Preciso disso... Preciso dele..."
+            ],
+            "very_high": [
+              "Mais forte!Foda-me mais forte!Preciso do seu pau!",
+              "Mais fundo!Me encha completamente!",
+              "Seu pau é perfeito!Não pare!",
+              "Eu gosto de senti-lo dentro!",
+              "Mais!Me dê tudo!"
+            ]
+          }
+        }
+      ]
+    },
+    "ERO1": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "Coleira... Apertada ao redor do meu pescoço!",
+              "Ele puxa a corrente!Não consigo respirar!",
+              "Meu pescoço... Tens... Dói!",
+              "Não consigo me mover... Ele me controla!",
+              "Pressão... É demais... Estou em pânico!"
+            ],
+            "low": [
+              "A corrente puxa... Restringindo-me...",
+              "Preciso seguir... Ou sufoco...",
+              "Seu controle... Absoluto... Horrível...",
+              "Coleira... Marca que sou dele...",
+              "Não consigo resistir... Preciso obedecer..."
+            ],
+            "medium_low": [
+              "A corrente guia-me... Eu sigo...",
+              "Seu controle... Eu aceito...",
+              "Coleira... Sua marca em mim...",
+              "Eu me movo como ele quer... Obediente...",
+              "Esta é minha vida agora... Acorrentada..."
+            ],
+            "medium": [
+              "A corrente... Conecta-nos...",
+              "Seu puxão... Guia meus movimentos...",
+              "Eu sigo perfeitamente sua liderança...",
+              "Coleira... Símbolo da minha submissão...",
+              "Eu pertenço a ele... Completamente..."
+            ],
+            "medium_high": [
+              "A corrente sente... Excitante...",
+              "Seu controle... Me excita...",
+              "Quero que ele puxe mais forte...",
+              "Coleira... Sua reivindicação em mim...",
+              "Eu gosto de ser dele... Controlada..."
+            ],
+            "high": [
+              "Puxe a corrente!Controle-me!",
+              "Eu gosto de sentir seu domínio!",
+              "A coleira me faz sua!",
+              "Puxe mais forte!Me aproxime!",
+              "Preciso do seu controle!"
+            ],
+            "very_high": [
+              "Estrangule-me com a corrente!Preciso disso!",
+              "Seu controle me enlouquece!",
+              "Sou sua cadela acorrentada!",
+              "Puxe mais forte!Possua-me!",
+              "A coleira é meu prazer!"
+            ]
+          }
+        }
+      ]
+    },
+    "ERO2": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "Seus empurrões... Agora mais fortes... Não consigo suportar!",
+              "Cada empurrão... Mais fundo... Mais doloroso...",
+              "Meu corpo... Tremendo com força...",
+              "Quero gritar... Mas me contenho...",
+              "Intensidade... Me oprime..."
+            ],
+            "low": [
+              "Seu ritmo... Mais rápido... Mais intenso...",
+              "Preciso acompanhar... Seguir...",
+              "Força... Construindo... Eu suporto...",
+              "Seu grunhido... Selvagem... Horrível...",
+              "Eu persisto... Sobrevivo a isso..."
+            ],
+            "medium_low": [
+              "Seus empurrões... Mais profundos... Mais insistentes...",
+              "Eu me ajusto... Aceito o que ele dá...",
+              "Intensidade... Eu posso suportar...",
+              "Seu corpo... Batendo no meu...",
+              "Eu encontro meu ritmo com ele..."
+            ],
+            "medium": [
+              "Seu ritmo... Perfeito... Intenso...",
+              "Eu me movo com ele... Em sincronia...",
+              "Força... Excitante... Poderosa...",
+              "Seu pau... Atinge todos os pontos certos...",
+              "Eu sinto... Viva... Desejada..."
+            ],
+            "medium_high": [
+              "Mais forte!Sim... Como isso!",
+              "Seus empurrões... Incríveis... Intensos...",
+              "Quero mais... Mais profundo...",
+              "Sua força... Me excita...",
+              "Não pare... Por favor..."
+            ],
+            "high": [
+              "Mais forte me foda!Eu gosto!",
+              "Seu pau sente incrível!",
+              "Mais fundo!Mais rápido!Sim!",
+              "Preciso da sua força!",
+              "Me faça gritar!"
+            ],
+            "very_high": [
+              "Destrua-me com seu pau!Me faça desmaiar!Preciso disso!",
+              "Mais forte!Quebre-me!",
+              "Sua força é tudo!",
+              "Eu vivo para seus empurrões!"
+            ]
+          }
+        }
+      ]
+    },
+    "ERO3": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "Não!Ele está brincando com meus seios... Não!",
+              "Suas mãos... Agarrando rudemente...",
+              "Dói... Forte demais...",
+              "Meus seios... Sendo espremidos...",
+              "Pare... É demais..."
+            ],
+            "low": [
+              "Suas mãos nos meus seios... Espremendo...",
+              "Sensação... Desagradável...",
+              "Ele é rude demais... Dói...",
+              "Quero que ele pare...",
+              "Meus seios... Sensíveis demais..."
+            ],
+            "medium_low": [
+              "Suas mãos... Agora nos meus seios...",
+              "Espremendo... Não tão ruim...",
+              "Sensação... Estranha...",
+              "Meu corpo... Respondendo...",
+              "Talvez... Eu possa suportar..."
+            ],
+            "medium": [
+              "Suas mãos... Espremendo perfeitamente meus seios...",
+              "Sensação... Na verdade boa...",
+              "Meus seios... Respondendo ao seu toque...",
+              "Quero que ele continue...",
+              "Isso sente... Bom..."
+            ],
+            "medium_high": [
+              "Sim... Esprema meus seios...",
+              "Sente tão bom...",
+              "Mais forte... Por favor...",
+              "Meus seios... Pertencem a ele...",
+              "Quero que ele me toque... Mais..."
+            ],
+            "high": [
+              "Esprema meus seios!Sim!",
+              "Sente incrível...",
+              "Mais forte nos mamilos...",
+              "Meus seios... Seus...",
+              "Me faça gozar..."
+            ],
+            "very_high": [
+              "Pince meus seios!Com força!",
+              "Preciso disso!",
+              "Mamilos... Puxe mais forte!",
+              "Me faça gozar dos seios!",
+              "Suas mãos... Perfeitas!"
+            ]
+          }
+        }
+      ]
+    },
+    "ERO4": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "Não!Ele está beliscando meus mamilos!Dói!",
+              "Sensível... Sensível demais...",
+              "Pare... Beliscando forte demais...",
+              "Meus mamilos... Doendo...",
+              "Não consigo suportar..."
+            ],
+            "low": [
+              "Seus dedos... Nos meus mamilos...",
+              "Beliscando... Dói...",
+              "Sensível demais...",
+              "Quero que ele pare...",
+              "Sensação... Forte demais..."
+            ],
+            "medium_low": [
+              "Seu toque... Nos meus mamilos...",
+              "Sensação... Estranha...",
+              "Sensível... Mas não ruim...",
+              "Meu corpo... Respondendo...",
+              "Talvez... Eu goste..."
+            ],
+            "medium": [
+              "Seus dedos... Beliscando perfeitamente meus mamilos...",
+              "Sensação... Tão boa...",
+              "Meus mamilos... Endurecendo...",
+              "Quero que ele continue...",
+              "Isso... Excitante..."
+            ],
+            "medium_high": [
+              "Belisque meus mamilos... Sim...",
+              "Sente incrível...",
+              "Mais forte... Gire...",
+              "Meus mamilos... Tão sensíveis...",
+              "Me deixa molhada..."
+            ],
+            "high": [
+              "Belisque os mamilos!Com força!",
+              "Sente tão bom...",
+              "Me faça gozar...",
+              "Mamilos... Seus...",
+              "Mais... Por favor..."
+            ],
+            "very_high": [
+              "Belisque meus mamilos!Me faça gritar!",
+              "Puxe mais forte!",
+              "Orgasmo dos mamilos!",
+              "Preciso disso!",
+              "Perfeito!"
+            ]
+          }
+        }
+      ]
+    },
+    "FIN": {
+      "events": {
+        "FIN": {
+          "very_low": [
+            "Meu deus!Ele está gozando!Tão cheio!",
+            "Enche minha boca!Não consigo... Está em todos os lugares!",
+            "O gosto... Meu deus... Vou vomitar!",
+            "É demais!Não para!",
+            "Afogando-me nisso!Sufocando!",
+            "Quente... Grosso... Nojento!Faça parar!",
+            "Minha boca está transbordando!Não consigo segurar tudo!",
+            "Ele goza na minha garganta!Não!"
+          ],
+          "low": [
+            "Ele está gozando... Enchendo minha boca completamente...",
+            "Tão sêmen... Quente e grosso... Odeio isso...",
+            "Posso sentir cada jato... Um após outro...",
+            "Cobre tudo... Minha língua,minha garganta...",
+            "Volume... É demais... Avassalador...",
+            "Onda após onda... Me enchendo...",
+            "Seguro na boca... Mal...",
+            "Gosto... Salgado... Amargo... Lágrimas misturam..."
+          ],
+          "medium_low": [
+            "Ele está liberando... Sinto inundar minha boca...",
+            "Sêmen quente enchendo-me... Eu aceito...",
+            "Tão cheio... Mas seguro tudo...",
+            "Cada pulso... Mais e mais...",
+            "Minha boca cheia... Seguro...",
+            "Este é... A parte final...",
+            "Seguro tudo... Esperando seu comando...",
+            "Calor se espalha... Por toda minha boca..."
+          ],
+          "medium": [
+            "Ele está gozando... Eu recebo tudo...",
+            "Calor... Enchendo completamente minha boca...",
+            "Pulso após pulso... Eu aceito tudo...",
+            "Minha boca segura sua semente... Tudo...",
+            "Sensação... Estranha mas... Aceitável...",
+            "Sou seu recipiente... Neste momento...",
+            "Cada jato... Eu sinto e aceito...",
+            "Boca cheia... Esperando... Obediente..."
+          ],
+          "medium_high": [
+            "Umm... Ele está gozando... Eu sinto cada pulso...",
+            "Calor é bom... Me enchendo...",
+            "Tão cheio para mim... Eu aceito tudo...",
+            "Cada jato... Um presente que recebo...",
+            "Minha boca segura sua semente preciosa...",
+            "Gosto... Não ruim... Mesmo interessante...",
+            "Estou honrada em receber isso...",
+            "Quente e grosso... Cobre minha boca..."
+          ],
+          "high": [
+            "Sim!Gozem para mim!Encham minha boca!",
+            "Tão sêmen delicioso!Eu amo!",
+            "Cada pulso... Cada gota... Minha!",
+            "Recebo tudo!Não desperdice uma gota!",
+            "Gosto... Incrível!Me dê mais!",
+            "Minha boca é sua tigela de sêmen!Encha!",
+            "Quero provar cada gota!",
+            "Pinte minha boca de branco!Sim!"
+          ],
+          "very_high": [
+            "Sim!Inunde-me!Me afogue em sêmen!",
+            "Sou seu lixo de sêmen!Encha-me!",
+            "Mais!Me dê tudo!",
+            "Eu vivo pela sua semente!",
+            "Néctar sagrado!Me abençoe com ele!",
+            "Eu ascendo!Sêmen é meu paraíso!"
+          ]
+        },
+        "SE": {
+          "se_count_1": {
+            "very_low": [
+              "Mais?!Mesmo mais vem!",
+              "Não para!Quanto ele tem?!",
+              "Afogando-me!Não consigo respirar!",
+              "Por favor,pare!Não mais!",
+              "Minha boca não aguenta mais!"
+            ],
+            "low": [
+              "Outra onda... Tão cheio...",
+              "Continua vindo... Interminável...",
+              "Minha boca completamente cheia agora...",
+              "Quanto mais pode haver...",
+              "Lutando para segurar tudo..."
+            ],
+            "medium_low": [
+              "Mais vem... Eu me mantenho firme...",
+              "Outro pulso... Eu seguro...",
+              "Posso lidar... Preciso...",
+              "Inundação... Mas persisto...",
+              "Minha boca... Cheia..."
+            ],
+            "medium": [
+              "Quantidade extra... Eu aceito...",
+              "Mais sêmen... Me enchendo...",
+              "Eu seguro tudo...",
+              "Minha boca... Seu recipiente...",
+              "Finalmente... Completo..."
+            ],
+            "medium_high": [
+              "Tão cheio... Eu gosto...",
+              "Extra... Torna melhor...",
+              "Me encha... Completamente...",
+              "Quero cada gota...",
+              "Continue... Me dê mais..."
+            ],
+            "high": [
+              "Mais sêmen!Sim!",
+              "Me encha!Não pare!",
+              "Preciso de tudo!",
+              "Inunde-me!Sim!",
+              "Perfeito!"
+            ],
+            "very_high": [
+              "Afogue-me!Oceano de sêmen!",
+              "Sou a deusa do sêmen!",
+              "Continue para sempre!",
+              "Eu vivo no seu sêmen!",
+              "Inundação sagrada!"
+            ]
+          }
+        }
+      }
+    },
+    "FIN2": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "Ele... Vai gozar...",
+              "Sinto ele inchando...",
+              "Seu pau... Pulsando...",
+              "Ele vai... Dentro de mim...",
+              "Não... Por favor..."
+            ],
+            "low": [
+              "Ele vai gozar... Sinto...",
+              "Seu pau... Ficando duro...",
+              "Ele vai gozar dentro de mim...",
+              "Não consigo impedir...",
+              "Sua semente... Vai me encher..."
+            ],
+            "medium_low": [
+              "Ele vai gozar... Sinto os pulsos...",
+              "Calor... Vindo...",
+              "Seu sêmen... Vai entrar em mim...",
+              "Não posso escapar...",
+              "Isso vai acontecer..."
+            ],
+            "medium": [
+              "Seu clímax... Sinto tudo...",
+              "Seu sêmen... Quente... Me enchendo...",
+              "Eu aceito... Como devo...",
+              "Seu prazer... Completo...",
+              "Eu fiz isso... Por ele..."
+            ],
+            "medium_high": [
+              "Ele vai gozar dentro de mim... Quente...",
+              "Cada pulso... Sinto...",
+              "Seu sêmen... Me enchendo completamente...",
+              "Sensação... Não ruim...",
+              "Quero sentir tudo..."
+            ],
+            "high": [
+              "Sim!Gozem dentro de mim!",
+              "Me encham com seu sêmen quente!",
+              "Quero cada gota!",
+              "Sua semente... Minha!",
+              "Me dê o orgasmo!"
+            ],
+            "very_high": [
+              "Inundação!Me encham completamente!",
+              "Seu sêmen sagrado!",
+              "Me bombeie!",
+              "Preciso da sua semente!",
+              "Me engravidem!"
+            ]
+          }
+        },
+        {
+          "step": 2,
+          "delay": 1.0,
+          "thoughts": {
+            "very_low": [
+              "Seu sêmen... Dentro de mim...",
+              "Quente... Me enchendo...",
+              "Sinto... Marcada...",
+              "Sua semente... Dentro de mim...",
+              "Vergonha... Completa..."
+            ],
+            "low": [
+              "Ele gozou... Dentro de mim...",
+              "Seu sêmen... Quente...",
+              "Sinto... Cheia...",
+              "Não posso escapar...",
+              "Agora sou dele..."
+            ],
+            "medium_low": [
+              "Seu sêmen... Me enchendo...",
+              "Calor... Se espalhando...",
+              "Sinto... Possuída...",
+              "Sua semente... Minha...",
+              "Não posso negar..."
+            ],
+            "medium": [
+              "Seu sêmen... Perfeito...",
+              "Sinto... Completa...",
+              "Sua semente... Pertence a mim...",
+              "Eu aceito...",
+              "Este é meu destino..."
+            ],
+            "medium_high": [
+              "Seu sêmen... Tão quente...",
+              "Me enchendo... Completamente...",
+              "Sinto... Possuída...",
+              "Sua semente... Minha...",
+              "Quero mais..."
+            ],
+            "high": [
+              "Seu sêmen... Perfeito!",
+              "Sinto... Marcada!",
+              "Sua semente... Minha!",
+              "Mais sêmen!"
+            ],
+            "very_high": [
+              "Seu sêmen... Sagrado!",
+              "Me encham completamente!",
+              "Eu pertenço a você!",
+              "Sua semente... Permanente!",
+              "Me engravidem!"
+            ]
+          }
+        },
+        {
+          "step": 3,
+          "delay": 1.5,
+          "thoughts": {
+            "very_low": [
+              "Ele acabou... Mas estou tão fraca...",
+              "Minhas pernas... Não me sustentam...",
+              "Caio... Cansada... Quebrada...",
+              "Chão... Frio... Na minha pele...",
+              "Estou exausta... Completamente..."
+            ],
+            "low": [
+              "Seu peso... Deixando-me... Mas não consigo ficar de pé...",
+              "Meu corpo... Tremendo... Fraco...",
+              "Caio... Para o chão...",
+              "Do tormento... Cansada...",
+              "Só quero descansar... Esquecer..."
+            ],
+            "medium_low": [
+              "Ele acabou... Agora posso descansar...",
+              "Meu corpo... Dói... Mas vivo...",
+              "Caio... Exausta...",
+              "Chão... Bem-vindo...",
+              "Recuperação... Começando..."
+            ],
+            "medium": [
+              "Seu clímax... Meu sinal para descansar...",
+              "Eu baixo-me... Cuidadosamente...",
+              "Chão... Fresco... Calmante...",
+              "Meu corpo... De alguma forma satisfeito...",
+              "Acho que fiz bem..."
+            ],
+            "medium_high": [
+              "Ele acabou... Mas sinto... Bem...",
+              "Meu corpo... Formigando... Vivo...",
+              "Caio... Sorrindo...",
+              "Pós-prazer... Surpreendente...",
+              "Talvez... Não foi tudo ruim..."
+            ],
+            "high": [
+              "Incrível... Caindo no êxtase...",
+              "Meu corpo... Zumbindo... Satisfeito...",
+              "Foi inacreditável...",
+              "Quero mais... Em breve...",
+              "Perfeito..."
+            ],
+            "very_high": [
+              "Êxtase!Puro prazer!",
+              "Caindo no paraíso do prazer!",
+              "Seu sêmen dentro de mim... Sagrado!",
+              "Preciso de mais disso!",
+              "Perfeito!"
+            ]
+          }
+        }
+      ]
+    },
+    "JIGO": {
+      "events": {
+        "JIGO": [
+          "Acabou... Sua vontade está quebrada...",
+          "Agora você é minha propriedade...",
+          "Não mais resistência...",
+          "Seu corpo pertence a mim...",
+          "Aceite a escuridão...",
+          "Você é minha para sempre...",
+          "Alma... Quebrada...",
+          "Você é minha escrava...",
+          "Não há escapatória...",
+          "Escuridão abraça você...",
+          "Sua resistência acabou...",
+          "Você é minha..."
+        ]
+      }
+    },
+    "JIGO2": {
+      "events": {
+        "JIGO2": [
+          "Você vai se lembrar disso para sempre...",
+          "Seu corpo... Mudando...",
+          "Escuridão dentro de você...",
+          "Você é meu fantoche...",
+          "Para sempre...",
+          "Sua vontade... Minha...",
+          "Escuridão possui você...",
+          "Você é minha escrava...",
+          "Sirva para sempre...",
+          "Brinquedo da escuridão...",
+          "Seu destino... Selado...",
+          "Você é minha..."
+        ]
+      }
+    },
+    "JIGOFIN": {
+      "events": {
+        "JIGOFIN": [
+          "Submissão final...",
+          "Sua alma pertence à escuridão...",
+          "Não há mais esperança...",
+          "Você é escrava da escuridão...",
+          "Para sempre...",
+          "Sua vontade quebrada...",
+          "Escuridão abraça você...",
+          "Você é minha propriedade...",
+          "Não há escapatória...",
+          "Brinquedo da escuridão...",
+          "Acabou...",
+          "Você é minha..."
+        ]
+      }
+    },
+    "JIGOFIN2": {
+      "events": {
+        "JIGOFIN2": [
+          "Escuridão possui você completamente...",
+          "Sua alma... Quebrada...",
+          "Você é escrava da escuridão...",
+          "Para sempre...",
+          "Não há escapatória...",
+          "Abraço da escuridão...",
+          "Você é minha...",
+          "Acabou...",
+          "Vitória da escuridão...",
+          "Você é brinquedo da escuridão...",
+          "Para sempre...",
+          "Você é minha..."
+        ]
+      }
+    }

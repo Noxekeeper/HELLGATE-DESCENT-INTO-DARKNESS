@@ -1,0 +1,50 @@
+{
+  "id": "eventcore_broker_gate",
+  "handlerId": "broker_toll",
+  "tollGold": 500,
+  "negotiateTakeGoldBranchWeight": 70,
+  "negotiateBodyOnlyBranchWeight": 30,
+  "revealFactionPool": [
+    "bandits",
+    "bandits_inquisition",
+    "bandits_mafia",
+    "bandits_demons"
+  ],
+  "peacefulFactionId": "eventcore_encounter",
+  "ambushes": [
+    {
+      "ambushId": "broker_refusal_ambush",
+      "slots": [
+        {
+          "enemyType": "TouzokuNormal",
+          "offsetX": -8.0,
+          "offsetY": 0.0,
+          "count": 4
+        },
+        {
+          "enemyType": "TouzokuAxe",
+          "offsetX": 8.0,
+          "offsetY": 0.0,
+          "count": 4
+        }
+      ]
+    }
+  ],
+  "stepFiles": [
+    "Stranger/eventcore_broker_gate_s1.json",
+    "Stranger/eventcore_broker_gate_s2.json",
+    "Stranger/eventcore_broker_gate_s3.json",
+    "Stranger/eventcore_broker_gate_s4.json",
+    "Stranger/eventcore_broker_gate_s5.json",
+    "Stranger/eventcore_broker_gate_s6.json",
+    "Stranger/eventcore_broker_gate_s7.json",
+    "Stranger/eventcore_broker_gate_s9.json",
+    "Stranger/eventcore_broker_gate_s10.json",
+    "Stranger/eventcore_broker_gate_s11.json",
+    "Stranger/eventcore_broker_gate_s12.json",
+    "Stranger/eventcore_broker_gate_s13.json",
+    "Stranger/eventcore_broker_gate_s14.json",
+    "Stranger/eventcore_broker_gate_s16.json",
+    "Stranger/eventcore_broker_gate_s17.json"
+  ]
+}

@@ -1,0 +1,303 @@
+{
+  "settings": {
+    "commentCooldownSeconds": 2.0,
+    "maxSimultaneousComments": 5,
+    "commentDisplayDuration": 4.0,
+    "fontSize": 22.0,
+    "verticalOffset": 15.0,
+    "streamingSpeed": 0.03,
+    "goblinColor": {
+      "r": 1.0,
+      "g": 1.0,
+      "b": 1.0,
+      "a": 1.0
+    },
+    "goblinOutlineColor": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 1.0
+    }
+  },
+  "animations": {
+    "START": {
+      "description": "Tres goblins capturan a GG: uno sujeta los hombros, otro el pelo, otro se posiciona entre las piernas",
+      "events": {
+        "START": [
+          "¡Ji-ji! ¡Te atrapamos, puta humana!",
+          "¡Tres de nosotros para una hembra débil!",
+          "¡Serás nuestro juguete esta noche!",
+          "¡Tetas grandes y coño jugoso, ahora son nuestros!",
+          "¡Sujétala fuerte, hermanos!",
+          "¡Se resiste, me encanta!",
+          "¡Tu cuerpo pertenece a la tribu goblin!",
+          "¡No hay escape de nuestro agarre, puta!"
+        ]
+      }
+    },
+    "ERO1": {
+      "description": "Los goblins empiezan a lamer: un pecho, un pezón, el coño",
+      "events": {
+        "ERO1": [
+          "Mmm... ¡qué ricas tetas humanas!",
+          "¡Sus pezones están tan duros!",
+          "¡Ji-ji! ¡Ya tiene el coño húmedo!",
+          "¡Lámela bien, hermanos!",
+          "¡Sabe a miedo y miel!",
+          "¡Las lenguas goblin son mágicas!",
+          "¡La haremos suplicar más!",
+          "¡A las hembras humanas les encanta el tacto goblin!"
+        ]
+      }
+    },
+    "ERO2": {
+      "description": "Los goblins intensifican el lamido: pecho, pezón, coño",
+      "events": {
+        "ERO2": [
+          "¡Más fuerte! ¡Chupa más fuerte!",
+          "¡Su coño se moja más!",
+          "¡Ji-ji! ¡Se está calentando!",
+          "¡Lenguas goblin implacables!",
+          "¡Lamaremos hasta que reviente!",
+          "¡El cuerpo humano responde bien!",
+          "¡Más gemidos! ¡Más temblores!",
+          "¡Ya está cerca!"
+        ]
+      }
+    },
+    "ERO3": {
+      "description": "El goblin introduce la lengua más profundo en el coño",
+      "events": {
+        "ERO3": [
+          "¡Más hondo! ¡La lengua llega profundo!",
+          "¡Sus entrañas deliciosas!",
+          "¡Ji-ji! ¡Me está apretando!",
+          "¡La magia de la lengua goblin funciona!",
+          "¡Exploraremos cada agujero!",
+          "¡Coño humano apretado!",
+          "¡Más profundidad! ¡Más placer!",
+          "¡Está perdiendo el control!"
+        ]
+      }
+    },
+    "ERO4": {
+      "description": "Los goblins lamen más fuerte y profundo",
+      "events": {
+        "ERO4": [
+          "¡Más fuerte! ¡Más hondo! ¡Más rápido!",
+          "¡Su cuerpo arde!",
+          "¡Ji-ji! ¡Casi llega!",
+          "¡La resistencia goblin es infinita!",
+          "¡Lamaremos hasta que suplique!",
+          "¡Su placer es nuestro!",
+          "¡Máxima intensidad! ¡Máximo calor!",
+          "¡Se derrite bajo nosotros!"
+        ]
+      }
+    },
+    "ERO5": {
+      "description": "Los goblins lamen aún más fuerte y profundo",
+      "events": {
+        "ERO5": [
+          "¡Lamido extremo! ¡Sin piedad!",
+          "¡Su cuerpo tiembla violentamente!",
+          "¡Ji-ji! ¡Está al límite!",
+          "¡Las lenguas goblin son armas!",
+          "¡La empujaremos más allá del límite!",
+          "¡La voluntad humana se desmorona!",
+          "¡Asalto final con las lenguas!",
+          "¡Está a punto de explotar!"
+        ]
+      }
+    },
+    "ERO_iki": {
+      "description": "El goblin introduce la lengua hasta el fondo, haciendo que GG llegue al orgasmo",
+      "events": {
+        "ERO_iki": [
+          "¡Penetración completa con la lengua!",
+          "¡Su orgasmo aquí!",
+          "¡Ji-ji! ¡Cumple fuerte!",
+          "¡Victoria de la lengua goblin!",
+          "¡Bebamos sus jugos!",
+          "¡Su clímax es nuestro!",
+          "¡Está chorreando por todas partes!",
+          "¡Prueba la derrota!"
+        ]
+      }
+    },
+    "ERO_JIGO": {
+      "description": "Los goblins se ríen de hacer que GG llegue al orgasmo, su cuerpo convulsiona",
+      "events": {
+        "ERO_JIGO": [
+          "¡Ji-ji-ji! ¡Mírala correrse!",
+          "¡La puta humana se corrió solo con lenguas!",
+          "¡Se retuerce como una puta!",
+          "¡Tu coño es nuestro ahora!",
+          "¡La tribu goblin te ha roto!",
+          "¡Ríete de la hembra débil!",
+          "¡Quedó marcada para siempre!",
+          "¡Nuestra saliva te posee!"
+        ]
+      }
+    },
+    "2ERO_START": {
+      "description": "El goblin se posiciona sobre el pecho de GG con la polla entre las tetas, otro goblin coloca su polla en el coño, preparan doble penetración",
+      "events": {
+        "2ERO_START": [
+          "¡Llega la diversión de verdad!",
+          "¡Ji-ji! ¡Mi polla está lista!",
+          "¡Sus tetas son almohadas perfectas!",
+          "¡Prepárate para las pollas goblin!",
+          "¡Llenaremos todos sus agujeros!",
+          "¡El cuerpo humano es nuestro!",
+          "¡Sin piedad con las pollas!",
+          "¡Hora de cría goblin!"
+        ]
+      }
+    },
+    "2ERO_1": {
+      "description": "Empiezan a follar a GG en la boca y el coño",
+      "events": {
+        "2ERO_1": [
+          "¡Fóllale la boca profundo!",
+          "¡Su coño está tan apretado!",
+          "¡Ji-ji! ¡Se atraganta con la polla!",
+          "¡Empieza la follada goblin!",
+          "¡Machacaremos sus agujeros!",
+          "¡El cuerpo humano rebota!",
+          "¡Más embestidas! ¡Más fuerte!",
+          "¡Está aguantando las pollas goblin!"
+        ]
+      }
+    },
+    "2ERO_2": {
+      "description": "Siguen follando, el goblin del coño folla más profundo y fuerte",
+      "events": {
+        "2ERO_2": [
+          "¡Más hondo en el coño! ¡Más fuerte!",
+          "¡Su garganta llena!",
+          "¡Ji-ji! ¡No puede respirar!",
+          "¡Las pollas goblin la poseen!",
+          "¡Destruiremos sus agujeros!",
+          "¡Cuerpo humano nuestro!",
+          "¡Máxima intensidad de follada!",
+          "¡Está completamente llena!"
+        ]
+      }
+    },
+    "2ERO_3": {
+      "description": "Encuentran el ritmo y follan a GG",
+      "events": {
+        "2ERO_3": [
+          "¡Ritmo perfecto encontrado!",
+          "¡Su cuerpo rebota perfectamente!",
+          "¡Ji-ji! ¡Está sincronizada!",
+          "¡La coordinación goblin funciona!",
+          "¡Follaremos al unísono!",
+          "¡Sus gritos son música!",
+          "¡Ritmo de conquista!",
+          "¡Es nuestra para follar!"
+        ]
+      }
+    },
+    "2ERO_4": {
+      "description": "Siguen follando, a punto de correrse",
+      "events": {
+        "2ERO_4": [
+          "¡Casi! ¡Sigue follando!",
+          "¡Sus agujeros perfectos!",
+          "¡Ji-ji! ¡Estamos cerca!",
+          "¡Leche goblin llegando!",
+          "¡La llenaremos!",
+          "¡El cuerpo humano desbordará!",
+          "¡Últimas embestidas!",
+          "¡Está a punto de ser preñada!"
+        ]
+      }
+    },
+    "2ERO_iki": {
+      "description": "Se corren fuerte: uno en la boca cubriendo la cara, otro profundo en el coño con semen saliendo",
+      "events": {
+        "2ERO_iki": [
+          "¡Córrete en su boca! ¡Inúndala!",
+          "¡Creampie profundo en el coño!",
+          "¡Ji-ji! ¡Traga la leche!",
+          "¡Leche goblin por todas partes!",
+          "¡Su cara está cubierta!",
+          "¡El coño desborda de semilla!",
+          "¡Marcada por dentro y por fuera!",
+          "¡Cría goblin completa!",
+          "¡Su coño chupa mi leche profundo!",
+          "¡Lo sientes? ¡Me está ordeñando!",
+          "¡La semilla goblin llena su vientre!",
+          "¡Hay tanta leche que ya desborda!",
+          "¡Su agujero apretado atrapa mi leche!",
+          "¡Ji-ji! ¡Bebe leche goblin!",
+          "¡El coño se traga cada gota!",
+          "¡Su vientre hinchará con semilla!",
+          "¡La leche dispara profundo!",
+          "¡Absorbe la esencia goblin!",
+          "¡El coño se contrae, quiere más leche!",
+          "¡La leche goblin la marca como nuestra!",
+          "¡Siente cómo su coño chupa más fuerte!",
+          "¡La leche la llena hasta el borde!",
+          "¡Está goteando pero sigue hambrienta!",
+          "¡Instinto de cría goblin satisfecho!",
+          "¡Su vientre acepta la semilla superior!",
+          "¡La leche se mezcla profundo en ella!",
+          "¡El coño devora la leche goblin!",
+          "¡Está completamente llena ahora!",
+          "¡La leche goblin reclama su cuerpo!",
+          "¡Siente cómo tiembla por el calor de la leche!"
+        ]
+      }
+    },
+    "2ERO_iki2": {
+      "description": "Terminan y sacan sus pollas",
+      "events": {
+        "2ERO_iki2": [
+          "¡Sácala despacio!",
+          "¡Mira el desastre que hicimos!",
+          "¡Ji-ji! ¡Está goteando leche!",
+          "¡Trabajo goblin completado!",
+          "¡Cuerpo humano arruinado!",
+          "¡Marcada para siempre!",
+          "¡Victoria en leche!",
+          "¡La tribu goblin gana!"
+        ]
+      }
+    },
+    "2ERO_JIGO": {
+      "description": "Se ponen de pie y se ríen de GG que acaba de correrse y su cuerpo tiembla; la pasan a los siguientes enemigos",
+      "events": {
+        "2ERO_JIGO": [
+          "¡Ji-ji-ji! ¡Mírala correrse!",
+          "¡La puta humana se corrió otra vez!",
+          "¡El cuerpo tiembla del orgasmo!",
+          "¡Leche gotea de ambos agujeros!",
+          "¡Es nuestra puta de leche!",
+          "¡La follada goblin funcionó!",
+          "¡Ahora está enganchada!",
+          "¡Ríete de la hembra rota!",
+          "¡Hora de pasarla!",
+          "¡El siguiente puede tenerla!",
+          "¡Todavía se retuerce!",
+          "¡Deja que otros la prueben!",
+          "¡Pasa el juguete lleno de leche!",
+          "¡Turno del siguiente goblin!",
+          "¡Suplica más!",
+          "¡Que la tribu disfrute!",
+          "¡Pásala al siguiente!",
+          "¡Es nuestra para compartir!",
+          "¡Hora de la segunda ronda!",
+          "¡Que otros la rompan!",
+          "¡Completamente nuestra!",
+          "¡Pasa la puta rota!",
+          "¡Al siguiente le encantará!",
+          "¡La marcamos nosotros!",
+          "¡Comparte la victoria!"
+        ]
+      }
+    }
+  }
+}

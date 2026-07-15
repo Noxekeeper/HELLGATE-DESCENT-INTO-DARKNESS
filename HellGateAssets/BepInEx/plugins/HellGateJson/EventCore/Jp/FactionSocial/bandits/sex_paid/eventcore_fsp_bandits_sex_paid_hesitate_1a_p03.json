@@ -1,0 +1,8 @@
+{
+  "speakerLabel": "野盗",
+  "stepId": "fsp_sex_hesitate_1a_p03",
+  "stepKind": "continue",
+  "continueOutcomeId": "noop",
+  "continueNextStepId": "fsp_sex_hesitate_1b_p04",
+  "npcLine": "想定外か？ 俺はストレートだ。決めろ——やるか、やらねえか。"
+}

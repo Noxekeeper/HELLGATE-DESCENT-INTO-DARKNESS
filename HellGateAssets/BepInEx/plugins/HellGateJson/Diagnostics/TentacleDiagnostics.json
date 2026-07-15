@@ -1,0 +1,7 @@
+{
+  "Enable": false,
+  "HeartbeatSec": 0.5,
+  "LogStackTraceOnErodataDeactivate": true,
+  "LogStackTraceOnDestroyDuringHScene": true,
+  "MaxLogsPerSession": 500
+}

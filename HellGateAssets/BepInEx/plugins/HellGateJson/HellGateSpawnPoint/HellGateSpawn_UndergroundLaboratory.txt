@@ -1,0 +1,141 @@
+# Underground Laboratory spawn | X,Y,EnemyType,Count
+# Librarian=Librarian, Undead=Undead, Mutude=Mutude, CrowInquisition=CrowInquisition (50% RANDOM)
+
+# Librarian
+1615.56,-336.99,Librarian,1
+1621.44,-336.99,Librarian,1
+
+# Undead
+1626.24,-336.99,Undead,1
+1629.24,-336.99,Undead,1
+1633.04,-336.99,Undead,1
+1641.96,-336.99,Undead,1
+1643.82,-336.99,MummyDog,1
+1624.44,-345.89,Undead,1
+1627.95,-345.89,Undead,1
+1636.78,-345.89,MummyDog,1
+1639.30,-345.89,Undead,1
+1645.00,-345.89,Undead,1
+1651.51,-345.89,Undead,1
+1660.36,-345.89,Undead,1
+1669.41,-345.89,MummyDog,1
+1593.13,-384.01,Undead,1
+1589.06,-384.01,MummyDog,1
+1581.07,-384.01,Undead,1
+1578.73,-384.01,Undead,1
+1586.47,-384.01,Undead,1
+
+# Mutude
+1632.75,-384.01,Mutude,1
+
+# CrowInquisition 50% chance
+RANDOM,0.5,1613.22,-379.69,CrowInquisition,1
+RANDOM,0.5,1605.33,-384.01,CrowInquisition,1
+
+# Undead
+1609.61,-384.01,Undead,1
+1613.74,-384.01,Undead,1
+1606.45,-375.62,MummyDog,1
+1621.56,-384.01,Undead,1
+
+# Librarian
+1624.73,-384.01,Librarian,1
+
+# Undead
+1630.75,-384.01,Undead,1
+1635.67,-384.01,Undead,1
+1640.19,-384.01,Undead,1
+
+# Librarian
+1649.46,-383.09,Librarian,1
+
+# Undead
+1666.22,-384.01,Undead,1
+1661.24,-384.01,Undead,1
+1684.72,-384.01,MummyDog,1
+1695.98,-390.42,Undead,1
+1705.16,-395.94,MummyDog,1
+1715.24,-401.99,Undead,1
+1725.80,-405.50,MummyDog,1
+1724.75,-405.50,Undead,1
+1721.94,-405.50,Undead,1
+
+# Librarian
+1684.72,-384.01,Librarian,1
+1724.75,-405.50,Librarian,1
+
+# Mutude
+1651.55,-379.01,Mutude,1
+1645.20,-374.64,Wolf,1
+1638.14,-373.49,Mutude,1
+
+# CrowInquisition 50% chance
+RANDOM,0.5,1656.55,-373.00,CrowInquisition,1
+
+# Undead
+1667.30,-380.21,Undead,1
+
+# Mutude
+1631.33,-373.55,Mutude,1
+
+# Undead
+1572.18,-373.37,Undead,1
+1576.27,-373.37,MummyDog,1
+1582.55,-372.45,Undead,1
+1590.28,-373.37,MummyDog,1
+1595.76,-373.37,Undead,1
+
+# Mutude
+1599.21,-373.37,Mutude,1
+
+# Librarian
+1647.08,-363.97,Librarian,1
+
+# Undead
+1642.21,-363.97,Undead,1
+1639.01,-363.97,Undead,1
+
+# Librarian
+1636.47,-363.97,Librarian,1
+
+# Undead
+1626.00,-363.97,Undead,1
+1629.11,-363.97,Undead,1
+
+# Librarian
+1572.25,-363.97,Librarian,1
+1576.78,-363.97,Librarian,1
+
+# Undead
+1581.95,-363.97,Undead,1
+1586.47,-363.97,Undead,1
+1591.20,-363.97,Undead,1
+
+# Mutude
+1606.99,-354.98,Mutude,1
+
+# Undead
+1602.17,-354.98,Undead,1
+1598.25,-354.98,MummyDog,1
+1591.77,-354.98,MummyDog,1
+1587.06,-354.98,Undead,1
+1577.96,-354.98,Undead,1
+
+# Librarian
+1580.13,-354.98,Librarian,1
+
+# Undead
+1591.74,-319.04,Undead,1
+1589.27,-314.57,Undead,1
+1577.34,-319.04,Undead,1
+
+# Librarian
+1608.71,-328.00,Librarian,1
+1602.94,-328.00,Librarian,1
+
+# Undead
+1599.41,-328.00,Undead,1
+1586.26,-328.00,MummyDog,1
+
+# Mutude
+1576.91,-328.00,Mutude,1

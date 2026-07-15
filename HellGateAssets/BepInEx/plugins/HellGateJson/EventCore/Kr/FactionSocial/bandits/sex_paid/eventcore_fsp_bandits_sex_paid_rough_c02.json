@@ -1,0 +1,24 @@
+{
+  "speakerLabel": "도적",
+  "stepId": "fsp_sex_rough_c02",
+  "stepKind": "choice",
+  "choiceLabels": [
+    "거리낌 하지 마.",
+    "세게 해줘.",
+    "할 수 있는 거 보여줘.",
+    "거칠게. 여기서."
+  ],
+  "choiceOutcomeIds": [
+    "noop",
+    "noop",
+    "noop",
+    "noop"
+  ],
+  "choiceJumpStepIds": [
+    "fsp_sex_rough_1_p03",
+    "fsp_sex_rough_2_p03",
+    "fsp_sex_rough_3_p03",
+    "fsp_sex_rough_4_p03"
+  ],
+  "npcLine": "그래, 그거지. 뭐 원하는지 말해——해줄게."
+}

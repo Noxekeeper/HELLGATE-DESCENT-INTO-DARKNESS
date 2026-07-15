@@ -1,0 +1,21 @@
+{
+  "speakerLabel": "Bandit",
+  "stepId": "fsp_sex_money_after_price",
+  "stepKind": "choice",
+  "choiceLabels": [
+    "D'accord. {SEX_PRICE} pièces me conviennent.",
+    "Trop peu. J'accepte pas.",
+    "Enlève tes mains. Maintenant."
+  ],
+  "choiceOutcomeIds": [
+    "pay_confirm",
+    "noop",
+    "threaten"
+  ],
+  "choiceJumpStepIds": [
+    "fsp_sex_paid_grant_h",
+    "fsp_sex_refuse_d_p03",
+    "fsp_sex_paid_rage_win"
+  ],
+  "npcLine": "Alors, petite sorcière ? Oui ou non ?"
+}

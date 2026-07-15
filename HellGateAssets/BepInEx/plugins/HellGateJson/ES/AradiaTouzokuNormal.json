@@ -1,0 +1,590 @@
+{
+  "settings": {
+    "responseDelayMin": 1.5,
+    "responseDelayMax": 2.5,
+    "fontSize": 22.0,
+    "verticalOffset": 150.0,
+    "displayDuration": 5.0
+  },
+  "mindBrokenThresholds": [0.0, 0.15, 0.3, 0.5, 0.7, 0.85, 1.0],
+  "animations": {
+    "START": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "¡No! ¡Este bandido me atrapó! ¡Su agarre es demasiado fuerte!",
+              "¡No puedo soltarme de sus manos! ¿Qué quiere?",
+              "Su fuerza es abrumadora... ¡Estoy atrapada en el bosque!",
+              "Necesito gritar... que alguien me ayude... ¡alguien!",
+              "Sus manos me agarran... ¡no puedo escapar!"
+            ],
+            "low": [
+              "Este bandido es demasiado fuerte... sus manos me sujetan con firmeza...",
+              "Debería haber tenido más cuidado caminando por este bosque...",
+              "Su agarre no suelta... estoy completamente indefensa...",
+              "Necesito mantener la calma... encontrar una forma de escapar...",
+              "Su fuerza es aterradora... ¿qué me hará?"
+            ],
+            "medium_low": [
+              "Sus manos están por todas partes... tocándome... no puedo moverme...",
+              "El bosque está tan silencioso... nadie oirá mis gritos...",
+              "Este bandido no me soltará fácilmente... estoy perdida...",
+              "Su cuerpo presiona el mío... tan cerca...",
+              "Siento su aliento en mi cuello... da miedo..."
+            ],
+            "medium": [
+              "Su fuerza me abruma por completo...",
+              "Necesito conservar energía para cuando pueda escapar...",
+              "Tal vez si no resisto tanto... será más gentil...",
+              "Su aliento está caliente en mi cuello... me siento tan vulnerable...",
+              "Siento su corazón latir... tan cerca de mí..."
+            ],
+            "medium_high": [
+              "Su tacto... me hace temblar de forma extraña...",
+              "El peligro... de algún modo me excita...",
+              "Me pregunto qué planea hacer este bandido conmigo...",
+              "Sus manos son ásperas pero... no desagradables...",
+              "La emoción de ser atrapada... no puedo negarlo..."
+            ],
+            "high": [
+              "Sus manos se sienten tan fuertes... tan dominantes...",
+              "No puedo negar la emoción que recorre mi cuerpo...",
+              "Qué me hará este bandido... quiero saberlo...",
+              "Su tacto despierta algo en mí...",
+              "El aire del bosque se siente fresco contra mi piel caliente..."
+            ],
+            "very_high": [
+              "Su tacto... lo deseo más que nada...",
+              "Tómame aquí mismo... bandido...",
+              "Quiero sentir tu fuerza por completo...",
+              "No pares... te necesito...",
+              "Tus manos... son perfectas..."
+            ]
+          }
+        },
+        {
+          "step": 2,
+          "delay": 1.0,
+          "thoughts": {
+            "very_low": [
+              "¡Me está empujando hacia abajo... no puedo mantenerme en pie!",
+              "Mis rodillas golpean el suelo... duele...",
+              "Me obliga a arrodillarme... ¡no quiero esto!",
+              "El suelo está frío y duro... lágrimas en los ojos...",
+              "Sus manos no me dejan estar de pie... estoy atrapada..."
+            ],
+            "low": [
+              "Me empuja a mis rodillas... no puedo resistir...",
+              "El dolor en las rodillas... pero tengo que aguantar...",
+              "Su fuerza es demasiada... me arrodillo ante él...",
+              "Necesito pensar... debe haber una salida...",
+              "Su agarre en mi cabello... controlando..."
+            ],
+            "medium_low": [
+              "Me están empujando hacia abajo... solo obedecer...",
+              "Su control sobre mí es absoluto... arrodillándome...",
+              "El suelo del bosque es áspero... pero lo acepto...",
+              "Sus manos me guían... sigo...",
+              "Esta posición... tan humillante..."
+            ],
+            "medium": [
+              "Me está posicionando... sé lo que viene...",
+              "Sus manos me controlan... lo acepto...",
+              "De rodillas... donde me quiere...",
+              "Este es mi lugar ahora... arrodillada ante él...",
+              "Su dominio... lo siento por completo..."
+            ],
+            "medium_high": [
+              "Sus manos en mi cabello... mandándome...",
+              "Bajo por él... voluntariamente...",
+              "De rodillas... donde debo estar...",
+              "Su tacto... guiándome perfectamente...",
+              "Quiero estar aquí... a sus pies..."
+            ],
+            "high": [
+              "Sí... tira de mi cabello... ponme de rodillas...",
+              "Sus manos fuertes... guiándome hacia abajo...",
+              "Quiero estar aquí... a su merced...",
+              "De rodillas... sirviéndole...",
+              "Su dominio... lo anhelo..."
+            ],
+            "very_high": [
+              "¡Sí! ¡Fuerza hacia abajo... necesito esto!",
+              "De rodillas para ti... amo...",
+              "¡Tira de mi cabello más fuerte... soy tuya!",
+              "Esta posición... perfecta para mí...",
+              "Pertenezco de rodillas... sirviéndote..."
+            ]
+          }
+        },
+        {
+          "step": 3,
+          "delay": 1.5,
+          "thoughts": {
+            "very_low": [
+              "¡Por Dios! ¡Se está exponiendo! ¡Justo en mi cara!",
+              "No puedo mirar... ¡pero fuerza mi cabeza!",
+              "Su... virilidad... tan cerca... ¡quiero huir!",
+              "Esto es demasiado... ¡no puedo con esto!",
+              "Sus manos me sujetan... ¡no puedo escapar!"
+            ],
+            "low": [
+              "Me está mostrando... justo frente a mi cara...",
+              "Sé lo que quiere... la vergüenza quema...",
+              "Tengo que mirar... me obliga...",
+              "Su tamaño... intimidante... aterrador...",
+              "Esto está pasando... lo quiera o no..."
+            ],
+            "medium_low": [
+              "Su polla... justo frente a mí...",
+              "Veo lo que viene... tengo que aceptarlo...",
+              "Esto está pasando... no puedo detenerlo...",
+              "Sus manos controlan mi cabeza... mi mirada...",
+              "Tengo que mirar... no hay opción..."
+            ],
+            "medium": [
+              "Me muestra lo que tengo que hacer...",
+              "Su virilidad... debo servirla...",
+              "Entiendo... haré lo que quiera...",
+              "Su tamaño... impresionante... dominante...",
+              "Esta es mi tarea ahora... lo acepto..."
+            ],
+            "medium_high": [
+              "Su polla... es impresionante...",
+              "Tengo curiosidad... un poco interesada...",
+              "Tal vez esto no sea tan terrible...",
+              "Su tamaño... me hace pensar...",
+              "Podría... tocarla... tal vez..."
+            ],
+            "high": [
+              "Mmm... es tan grande... me gusta lo que veo...",
+              "Quiero tocarla... saborearla...",
+              "Muéstrame más... estoy lista...",
+              "Su polla... hermosa... poderosa...",
+              "Necesito sentirla... saborearla..."
+            ],
+            "very_high": [
+              "¡Sí! ¡Tu hermosa polla! ¡Déjame adorarla!",
+              "¡La necesito! ¡Por favor dámela!",
+              "¡Ya babeo por ti!",
+              "Tu polla... perfecta... ¡mía!",
+              "¡Déjame servirla... por favor!"
+            ]
+          }
+        }
+      ]
+    },
+    "START2": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "Dice... tócalo o me hará daño!",
+              "¡No quiero! ¡Pero no quiero morir!",
+              "Sus palabras son tan crueles... estoy aterrada...",
+              "Sus manos... su arma... no tengo opción...",
+              "Tengo que obedecer... para sobrevivir..."
+            ],
+            "low": [
+              "Tócalo o te harán daño... no hay elección real...",
+              "Su voz es tan fría... imperativa...",
+              "Tengo que hacerlo... para sobrevivir...",
+              "Sus exigencias... absolutas...",
+              "Necesito cumplir... seguir viva..."
+            ],
+            "medium_low": [
+              "Sus órdenes son claras... obedece o sufre...",
+              "Tengo que complacerle... es necesario...",
+              "Su control sobre mí es absoluto...",
+              "Sus palabras son ley en este bosque...",
+              "Debo someterme a su voluntad..."
+            ],
+            "medium": [
+              "Quiere que lo masturbe... entiendo...",
+              "Lo haré... salir de esto...",
+              "Mis manos... su polla... solo mecánico...",
+              "Esto es solo supervivencia... nada más...",
+              "Puedo hacerlo... tengo que..."
+            ],
+            "medium_high": [
+              "Quiere mis manos sobre él... bien...",
+              "Tal vez no sea tan malo...",
+              "Tengo un poco de curiosidad por cómo se siente...",
+              "Su polla... caliente... palpitante...",
+              "Podría acostumbrarme a esto..."
+            ],
+            "high": [
+              "Quiere mis manos... yo también quiero eso...",
+              "Estoy ansiosa por tocar... por complacer...",
+              "Sí, te masturbaré... con gusto...",
+              "Su polla... responde a mi tacto...",
+              "Quiero hacerle sentir bien..."
+            ],
+            "very_high": [
+              "¡Ordéname! ¡Dime cómo complacerte!",
+              "¡Necesito tocar tu polla! ¡Déjame!",
+              "¡Haré lo que digas, amo!",
+              "Mis manos... para tu placer!",
+              "¡Úsame... soy tuya!"
+            ]
+          }
+        },
+        {
+          "step": 2,
+          "delay": 1.0,
+          "thoughts": {
+            "very_low": [
+              "Mis manos... tiemblan al extenderse...",
+              "No puedo creer que esté haciendo esto... ¡está mal!",
+              "Su arma... recordándome que no tengo opción...",
+              "Lágrimas cayendo... pero tengo que tocar...",
+              "Su polla... caliente... palpitante... odio esto..."
+            ],
+            "low": [
+              "Lo estoy tocando... su polla está tan caliente...",
+              "Esto es humillante... pero necesario...",
+              "Tengo que masturbarlo... me está mirando...",
+              "Mis manos... moviéndose... mecánicas...",
+              "La vergüenza... arde... pero continúo..."
+            ],
+            "medium_low": [
+              "Mis manos sobre él... haciendo lo que quiere...",
+              "Está caliente... palpitando en mi agarre...",
+              "Solo movimientos mecánicos... superarlo...",
+              "Su respiración cambia... debo estar haciendo algo bien...",
+              "Puedo sentirlo... respondiendo..."
+            ],
+            "medium": [
+              "Lo estoy masturbando... no es terrible...",
+              "Su polla... palpitando en mis manos...",
+              "Hago lo que necesita... eso es todo...",
+              "Mi ritmo... constante... regular...",
+              "Esto es solo... una tarea... nada más..."
+            ],
+            "medium_high": [
+              "Se está poniendo más duro... lo siento...",
+              "En realidad soy buena en esto... le gusta...",
+              "Sus reacciones... alentadoras...",
+              "Tal vez lo estoy complaciendo... eso está bien...",
+              "Su polla... creciendo... en mis manos..."
+            ],
+            "high": [
+              "Mmm... está tan duro por mí...",
+              "Me encanta sentir cómo late en mis manos...",
+              "Quiero complacerle... hacerle sentir bien...",
+              "Su placer... mío para dar...",
+              "Quiero que disfrute esto..."
+            ],
+            "very_high": [
+              "¡Tu polla es perfecta! ¡Tan dura!",
+              "¡Me encanta masturbarte! ¡Dame más!",
+              "¡Déjame adorar tu hermosa polla!",
+              "Mis manos... tu placer!",
+              "¡Necesito hacerte correr!"
+            ]
+          }
+        }
+      ]
+    },
+    "ERO": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "¡Me está empujando dentro! ¡Duele tanto!",
+              "Su polla... demasiado grande... ¡me desgarra!",
+              "¡No puedo soportarlo! ¡Por favor para!",
+              "El dolor... abrumador... ¡no puedo!",
+              "¡Se está forzando... no puedo respirar!"
+            ],
+            "low": [
+              "Me está entrando... el estiramiento es terrible...",
+              "Necesito relajarme... o dolerá más...",
+              "Su tamaño... demasiado... pero tengo que aguantar...",
+              "Lágrimas cayendo... pero me quedo quieta...",
+              "Este dolor... ¿cuándo terminará?"
+            ],
+            "medium_low": [
+              "Está dentro de mí... llenándome por completo...",
+              "La plenitud... extraña... incómoda...",
+              "Necesito adaptarme... acostumbrarme...",
+              "Sus embestidas... lentas... pero profundas...",
+              "Puedo hacerlo... tengo que..."
+            ],
+            "medium": [
+              "Su polla... moviéndose dentro de mí...",
+              "La sensación... ya no solo dolor...",
+              "Me estoy adaptando... encontrando un ritmo...",
+              "Sus manos... manteniéndome estable...",
+              "Esto está pasando... lo acepto..."
+            ],
+            "medium_high": [
+              "Sus embestidas... construyendo un ritmo...",
+              "El dolor... desaparece... reemplazado por algo más...",
+              "Su polla... se siente... interesante...",
+              "Mi cuerpo... respondiendo... a pesar de mí...",
+              "Tal vez esto no sea tan malo..."
+            ],
+            "high": [
+              "Sí... su polla se siente tan bien dentro de mí...",
+              "Lo quiero más profundo... más fuerte...",
+              "No pares... por favor...",
+              "Sus embestidas... perfectas... increíbles...",
+              "Necesito esto... lo necesito a él..."
+            ],
+            "very_high": [
+              "¡Fóllame más fuerte! ¡Necesito tu polla!",
+              "¡Más profundo! ¡Lléname por completo!",
+              "¡Tu polla es perfecta! ¡No pares!",
+              "¡Me encanta sentirte dentro de mí!",
+              "¡Más! ¡Dame todo!"
+            ]
+          }
+        }
+      ]
+    },
+    "ERO1": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "¡El collar... apretado en mi cuello!",
+              "¡Está tirando de la cadena! ¡No puedo respirar!",
+              "Mi cuello... tenso... ¡duele!",
+              "¡No puedo moverme... me está controlando!",
+              "La presión... demasiada... ¡pánico!"
+            ],
+            "low": [
+              "La cadena se tensa... restringiéndome...",
+              "Tengo que seguir... o asfixiarme...",
+              "Su control... absoluto... aterrador...",
+              "El collar... me marca como suya...",
+              "No puedo resistir... tengo que obedecer..."
+            ],
+            "medium_low": [
+              "La cadena me guía... sigo...",
+              "Su control... lo acepto...",
+              "El collar... su marca en mí...",
+              "Me muevo como él quiere... obediente...",
+              "Esta es mi vida ahora... encadenada..."
+            ],
+            "medium": [
+              "La cadena... nos conecta...",
+              "Sus tirones... guían mis movimientos...",
+              "Sigo su ritmo... perfectamente...",
+              "El collar... simboliza mi sumisión...",
+              "Le pertenezco... por completo..."
+            ],
+            "medium_high": [
+              "La cadena se siente... excitante...",
+              "Su control... me excita...",
+              "Quiero que tire más fuerte...",
+              "El collar... su posesión sobre mí...",
+              "Me encanta ser suya... controlada..."
+            ],
+            "high": [
+              "¡Tira de la cadena! ¡Contrólame!",
+              "¡Me encanta sentir tu dominio!",
+              "¡El collar me hace tuya!",
+              "¡Más fuerte! ¡Acércame más!",
+              "¡Necesito tu control!"
+            ],
+            "very_high": [
+              "¡Asfíxiame con la cadena! ¡Lo necesito!",
+              "¡Tu control me vuelve loca!",
+              "¡Soy tu puta encadenada!",
+              "¡Tira más fuerte! ¡Sé mi dueño!",
+              "¡El collar es mi placer!"
+            ]
+          }
+        }
+      ]
+    },
+    "ERO2": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "Sus embestidas... más fuertes ahora... ¡no puedo soportarlo!",
+              "Cada empuje... más profundo... más doloroso...",
+              "Mi cuerpo... temblando... por la fuerza...",
+              "Quiero gritar... pero me contengo...",
+              "La intensidad... abrumándome..."
+            ],
+            "low": [
+              "Su ritmo... más rápido... más intenso...",
+              "Tengo que igualarle... seguirle...",
+              "La fuerza... creciendo... aguanto...",
+              "Sus gruñidos... animalistas... aterradores...",
+              "Me aferro... sobrevivir esto..."
+            ],
+            "medium_low": [
+              "Sus embestidas... más profundas... más exigentes...",
+              "Me adapto... acepto lo que da...",
+              "La intensidad... puedo manejarla...",
+              "Su cuerpo... golpeando contra el mío...",
+              "Encuentro mi ritmo... con él..."
+            ],
+            "medium": [
+              "Su ritmo... perfecto... intenso...",
+              "Me muevo con él... sincronizada...",
+              "La fuerza... emocionante... poderosa...",
+              "Su polla... tocando todos los puntos...",
+              "Me siento... viva... deseada..."
+            ],
+            "medium_high": [
+              "¡Más fuerte! Sí... ¡así!",
+              "Sus embestidas... increíbles... intensas...",
+              "Quiero más... más profundo...",
+              "Su poder... me excita...",
+              "No pares... por favor..."
+            ],
+            "high": [
+              "¡Fóllame más fuerte! ¡Me encanta!",
+              "¡Tu polla se siente increíble!",
+              "¡Más profundo! ¡Más rápido! ¡Sí!",
+              "¡Necesito tu poder!",
+              "¡Hazme gritar!"
+            ],
+            "very_high": [
+              "¡Destrúyeme con tu polla!",
+              "¡Fóllame hasta perder el sentido! ¡Lo necesito!",
+              "¡Más fuerte! ¡Rómpeme!",
+              "¡Tu poder es todo!",
+              "¡Vivo por tus embestidas!"
+            ]
+          }
+        }
+      ]
+    },
+    "FIN": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "Va a... ¡dentro de mí! ¡No!",
+              "Lo siento hincharse... ¡está cerca!",
+              "Sus embestidas... erráticas... ¡se está corriendo!",
+              "¡No puedo detenerle... me está llenando!",
+              "El calor... esparciéndose dentro... lloro..."
+            ],
+            "low": [
+              "Está a punto de correrse... lo siento...",
+              "Su polla... palpitando... lista...",
+              "Va a llenarme... no puedo evitarlo...",
+              "La inevitabilidad... la acepto...",
+              "Su semilla... dentro de mí... para siempre..."
+            ],
+            "medium_low": [
+              "Se está corriendo... siento las pulsaciones...",
+              "Calor... llenándome... esparciéndose...",
+              "Su liberación... dentro de mi cuerpo...",
+              "Lo contengo... todo...",
+              "Este momento... íntimo... no deseado..."
+            ],
+            "medium": [
+              "Su clímax... siento cada chorro...",
+              "Su semen... caliente... llenándome...",
+              "Lo tomo todo... como debo...",
+              "Su placer... completo...",
+              "Hice esto... por él..."
+            ],
+            "medium_high": [
+              "Se corre dentro de mí... caliente...",
+              "Cada pulsación... la siento...",
+              "Su semen... llenándome por completo...",
+              "La sensación... no está mal...",
+              "Quiero sentirlo todo..."
+            ],
+            "high": [
+              "¡Sí! ¡Córrete dentro de mí!",
+              "¡Lléname con tu semen caliente!",
+              "¡Quiero cada gota!",
+              "Tu semilla... ¡mía!",
+              "¡Córrete por mí!"
+            ],
+            "very_high": [
+              "¡Inúndame! ¡Lléname por completo!",
+              "¡Tu semen es divino!",
+              "¡Lléname!",
+              "¡Necesito tu semilla!",
+              "¡Fécondame!"
+            ]
+          }
+        }
+      ]
+    },
+    "JIGO": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "Ha terminado... pero estoy tan débil...",
+              "Mis piernas... no me sostienen...",
+              "Me desplomo... exhausta... rota...",
+              "El suelo... frío... contra mi piel...",
+              "Estoy agotada... por completo..."
+            ],
+            "low": [
+              "Su peso... encima de mí... pero no puedo estar de pie...",
+              "Mi cuerpo... temblando... débil...",
+              "Me desplomo... al suelo...",
+              "Exhausta... del suplicio...",
+              "Solo quiero descansar... olvidar..."
+            ],
+            "medium_low": [
+              "Ha terminado... puedo descansar ahora...",
+              "Mi cuerpo... dolorido... pero viva...",
+              "Me desplomo... agotada...",
+              "El suelo... me recibe...",
+              "La recuperación... comienza..."
+            ],
+            "medium": [
+              "Su clímax... mi señal para descansar...",
+              "Me bajo... con cuidado...",
+              "El suelo... fresco... calmante...",
+              "Mi cuerpo... satisfecho... de algún modo...",
+              "Lo hice bien... creo..."
+            ],
+            "medium_high": [
+              "Ha terminado... pero me siento... bien...",
+              "Mi cuerpo... hormigueando... vivo...",
+              "Me desplomo... con una sonrisa...",
+              "El resplandor... sorprendente...",
+              "Tal vez... no fue tan malo..."
+            ],
+            "high": [
+              "Increíble... me desplomo en felicidad...",
+              "Mi cuerpo... zumbando... satisfecho...",
+              "Eso fue increíble...",
+              "Quiero más... pronto...",
+              "Perfecto..."
+            ],
+            "very_high": [
+              "¡Felicidad! ¡Puro éxtasis!",
+              "¡Me desplomo en placer celestial!",
+              "Tu semen dentro de mí... ¡divino!",
+              "¡Necesito más de esto!",
+              "¡Perfección!"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,885 @@
+{
+  "settings": {
+    "commentCooldownSeconds": 3.0,
+    "maxSimultaneousComments": 1,
+    "commentDisplayDuration": 5.0,
+    "fontSize": 22.0,
+    "verticalOffset": 35.0,
+    "streamingSpeed": 0.03,
+    "goblinColor": {
+      "r": 1.0,
+      "g": 1.0,
+      "b": 1.0,
+      "a": 1.0
+    },
+    "goblinOutlineColor": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 1.0
+    }
+  },
+  "animations": {
+    "START": {
+      "description": "Start of H-scene, first capture",
+      "events": {
+        "START": [
+          "Finally caught you, whore!",
+          "Now you're mine, bitch!",
+          "Get ready, this will hurt!",
+          "You're in my hands, and there's no escape!"
+        ],
+        "SE": {
+          "se_count_1": [
+            "Struggle all you want, you still won't break free!",
+            "Your struggle only arouses me!",
+            "Keep resisting, I like it!",
+            "You won't break free, whore!",
+            "Fight harder, it only makes me harder!",
+            "Your resistance is futile, bitch!",
+            "Keep squirming, I love it!"
+          ],
+          "se_count_2": [
+            "The more you struggle, the tighter I hold!",
+            "Your fighting just turns me on more!",
+            "Resist all you want, you're mine now!",
+            "Keep trying to escape, whore!",
+            "Your struggles are useless against me!",
+            "Fight me, bitch, it feels good!",
+            "The harder you fight, the better!"
+          ],
+          "se_count_3": [
+            "Give up already, you're not going anywhere!",
+            "Your resistance is getting boring!",
+            "Stop fighting, accept your fate!",
+            "You're only delaying the inevitable!",
+            "Quit struggling, bitch, it's over!",
+            "Just submit already, whore!",
+            "Your fight is pointless now!"
+          ]
+        },
+        "SE1": [
+          "Struggle all you want, you still won't break free!",
+          "Your struggle only arouses me!",
+          "Keep resisting, I like it!",
+          "You won't break free, whore!"
+        ]
+      }
+    },
+    "START2": {
+      "description": "Second variant of H-scene start",
+      "events": {
+        "START2": [
+          "There you are, bitch!",
+          "Now you're in my power!",
+          "Prepare for what awaits you!",
+          "You won't escape from me!"
+        ],
+        "SE": {
+          "se_count_1": [
+            "Struggle, struggle, I like it!",
+            "Your struggle is useless!",
+            "Keep going, bitch, I like it!",
+            "Fight me harder, whore!",
+            "Your resistance amuses me!",
+            "Keep resisting, it won't help!",
+            "The more you fight, the better!"
+          ],
+          "se_count_2": [
+            "You're not getting away from me!",
+            "Keep struggling, bitch, entertain me!",
+            "Your fight is pathetic!",
+            "Resist more, I enjoy it!",
+            "You're only making me stronger!",
+            "Fight harder, whore, it's fun!",
+            "Your struggles mean nothing!"
+          ]
+        },
+        "SE1": [
+          "Struggle, struggle, I like it!",
+          "Your struggle is useless!",
+          "Keep going, bitch, I like it!"
+        ]
+      }
+    },
+    "START3": {
+      "description": "Third variant of H-scene start",
+      "events": {
+        "START3": [
+          "Caught in my net, whore!",
+          "Now you're my toy!",
+          "Prepare for pain, bitch!",
+          "You won't escape from my hands!"
+        ],
+        "SE1": [
+          "Resist, I like it!",
+          "Your struggle only strengthens my desire!",
+          "Keep going, whore!"
+        ]
+      }
+    },
+    "ERO": {
+      "description": "Fucking at normal pace and pulling slightly. One hand of GG holds the collar, the other reaches forward. Looped",
+      "events": {
+        "ERO": [
+          "Your pussy is so tight I want to tear it!",
+          "I'll fuck you to the end, whore!",
+          "You're my property, and I'll do what I want with you!",
+          "Take it, bitch, scream louder, I won't stop!"
+        ],
+        "SE": {
+          "se_count_1": [
+            "Your struggle only arouses me more!",
+            "Keep struggling until I break you completely!",
+            "Struggle all you want, you can't escape anymore!",
+            "Your pussy will serve everyone today, bitch!",
+            "I'll pass you on, don't die before your time!",
+            "Fight me harder, whore, it feels amazing!",
+            "Your resistance just makes me want you more!",
+            "Keep resisting, bitch, I love breaking you!",
+            "The more you fight, the harder I fuck!"
+          ],
+          "se_count_2": [
+            "Your moans are so arousing, keep going!",
+            "Scream, scream louder, bitch, I like it!",
+            "Soon you won't be able to scream, whore!",
+            "Your cries are music to my ears!",
+            "Keep screaming, it turns me on!",
+            "Louder, bitch! Let everyone hear you!",
+            "Your voice is breaking, how sweet!",
+            "Scream for me, whore, I command it!"
+          ],
+          "se_count_3": [
+            "Take it deeper, bitch!",
+            "Your pussy is gripping me so tight!",
+            "Feel every inch, whore!",
+            "I'm going to ruin you completely!",
+            "Your body belongs to me now!",
+            "Fight all you want, you're mine!",
+            "I'll fuck you until you break!",
+            "Your pussy is mine to destroy!"
+          ]
+        },
+        "SE1": [
+          "Your struggle only arouses me more!",
+          "Keep struggling until I break you completely!",
+          "Struggle all you want, you can't escape anymore!",
+          "Your pussy will serve everyone today, bitch!",
+          "I'll pass you on, don't die before your time!"
+        ],
+        "SE2": [
+          "Your moans are so arousing, keep going!",
+          "Scream, scream louder, bitch, I like it!",
+          "Soon you won't be able to scream, whore!"
+        ]
+      }
+    },
+    "ERO1": {
+      "description": "Pulls the chain tightly, GG grabs the collar with both hands. Transition",
+      "events": {
+        "ERO1": [
+          "The chain is tight, bitch, how do you like it?",
+          "You're holding the collar, but it won't help!",
+          "Struggle harder, I like your struggle!",
+          "Your struggle only strengthens my desire!"
+        ],
+        "SE": {
+          "se_count_1": [
+            "Keep holding on, a long marathon awaits you!",
+            "You still won't escape, give up!",
+            "Your struggle pleases me, bitch!",
+            "Just don't die, whore, before I'm done!",
+            "The chain controls you completely!",
+            "Fight the collar, it won't help!",
+            "You're chained like the animal you are!",
+            "Pull harder, bitch, it only hurts you!"
+          ],
+          "se_count_2": [
+            "Your neck is mine, whore!",
+            "The collar marks you as my property!",
+            "Struggle against the chain, entertain me!",
+            "You're leashed like a dog, bitch!",
+            "Pull all you want, you're not free!",
+            "The chain is your new reality!",
+            "Fight it, whore, I love seeing you try!"
+          ]
+        },
+        "SE1": [
+          "Keep holding on, a long marathon awaits you!",
+          "You still won't escape, give up!",
+          "Your struggle pleases me, bitch!",
+          "Just don't die, whore, before I'm done!"
+        ]
+      }
+    },
+    "ERO2": {
+        "description": "Fucking, but GG now holds with both hands. Looped",
+        "events": {
+          "ERO2": [
+            "Take it, bitch, scream louder, I won't stop!",
+            "I'll fuck you to the end, whore!",
+            "Your pussy is so tight I want to tear it!",
+            "You're my property, and I'll do what I want with you!"
+          ],
+          "SE": {
+            "se_count_1": [
+              "Your struggle only arouses me more!",
+              "Keep struggling until I break you completely!",
+              "Struggle all you want, you can't escape anymore!",
+              "Your pussy will serve everyone today, bitch!",
+              "I'll pass you on, don't die before your time!",
+              "What a good pussy you have, just perfect!",
+              "You're my whore, and I'll fuck you to death!",
+              "Fight me harder, it feels amazing!",
+              "Your resistance makes me want you more!",
+              "Keep resisting, bitch, I love it!"
+            ],
+            "se_count_2": [
+              "Your moans are so arousing, keep going!",
+              "Scream, scream louder, bitch, I like it!",
+              "Soon you won't be able to scream, whore!",
+              "Struggle all you can, you'll still lose!",
+              "Your cries are music to my ears!",
+              "Louder, bitch! Let me hear you!",
+              "Scream for mercy, whore!",
+              "Your voice breaking is so hot!",
+              "Keep moaning, it drives me crazy!"
+            ],
+            "se_count_3": [
+              "Take it deeper, bitch!",
+              "Your pussy grips me so tight!",
+              "Feel every thrust, whore!",
+              "I'm destroying you completely!",
+              "Your body is mine to ruin!",
+              "Fight back, it only makes me harder!",
+              "I'll break you with my cock!",
+              "Your pussy was made for me!"
+            ],
+            "se_count_4": [
+              "You're mine forever, bitch!",
+              "No escape from this fucking!",
+              "Your pussy belongs to me!",
+              "I'll use you until you break!",
+              "Scream louder, whore!",
+              "Your struggle is useless!",
+              "Feel my power inside you!",
+              "You're my fuck toy now!"
+            ],
+            "se_count_5": [
+              "Harder! Faster! Take it all!",
+              "Your pussy is perfect!",
+              "I'm going to ruin you!",
+              "No mercy for you, bitch!",
+              "Feel my dominance!",
+              "You're nothing but holes!",
+              "Take my cock like the slut you are!",
+              "I'll fuck you senseless!"
+            ]
+          },
+          "SE1": [
+            "Your struggle only arouses me more!",
+            "Keep struggling until I break you completely!",
+            "Struggle all you want, you can't escape anymore!",
+            "Your pussy will serve everyone today, bitch!",
+            "I'll pass you on, don't die before your time!",
+            "What a good pussy you have, just perfect!",
+            "You're my whore, and I'll fuck you to death!"
+          ],
+          "SE2": [
+            "Your moans are so arousing, keep going!",
+            "Scream, scream louder, bitch, I like it!",
+            "Soon you won't be able to scream, whore!",
+            "Struggle all you can, you'll still lose!"
+          ]
+        }
+      },
+      "ERO3": {
+        "description": "GG's arms lose strength and hang limp, now she's not resisting. Transition",
+        "events": {
+          "ERO3": [
+            "Hard to breathe, bitch? It will be even harder!",
+            "You'll be my whore until the end of your days!",
+            "Ahahaha, harder, you like it, right?"
+          ],
+          "SE1": [
+            "Your struggle pleases me, bitch!",
+            "Just don't die, whore, before I'm done!",
+            "Resist all you want, I won't stop!",
+            "Your struggle only strengthens my desire!",
+            "You still won't escape, give up!",
+            "Keep holding on, a long marathon awaits you!",
+            "You're my property, whore, and it's forever!"
+          ]
+        }
+      },
+      "ERO4": {
+        "description": "Fucking GG when her arms are limp. Looped",
+        "events": {
+          "ERO4": [
+            "Now you're completely mine, witch!",
+            "You're in my power, whore, and there's no escape!",
+            "Your pussy belongs to me, and I'll fuck it always!"
+          ],
+          "SE1": [
+            "I'll choke you and cum at the same time, bitch!",
+            "Hard to breathe? It will be even harder when I cum!",
+            "Don't do anything stupid, or I'll kill you right now!",
+            "Ride deeper, whore, I want to feel every fold!",
+            "Your pussy takes every inch of my cock!",
+            "Don't hope for mercy, you're doomed to eternal torment!",
+            "Your pussy will take the shape of my cock forever!",
+            "Come on, suffocate, bitch, I like seeing your agony!",
+            "Your pussy clenches when you suffocate, it's so arousing!",
+            "I'll choke and fuck you until you die!",
+            "You'll die on my cock, bitch, and that will be your last thought!"
+          ],
+          "SE2": [
+            "Your moans get quieter from suffocation, how sweet!",
+            "You're suffocating, but I don't care about your life!",
+            "I'll fuck your lifeless body if you die!",
+            "Don't breathe until I cum, or I'll kill you!"
+          ]
+        }
+      },
+      "ERO5": {
+        "description": "Touzoku slightly crouches and lifts GG on cock on next thrust. Transition",
+        "events": {
+          "ERO5": [
+            "You're not struggling anymore? Completely given up?",
+            "Your struggle is over? Too bad, it was fun!",
+            "No, too early to die, I just started!"
+          ],
+          "SE1": [
+            "Your struggle is over, bitch? How quickly you broke!",
+            "You gave up? Too bad, I wanted to play more!",
+            "You're completely mine, and there's no escape!",
+            "Want it deeper? I can give you more!",
+            "Your pussy is ours now, and we'll fuck it always!",
+            "You were made for violence, and I proved it!",
+            "Perfect whore, exactly what I wanted!",
+            "Deeper, deeper, bitch, I want to feel your womb!",
+            "I'll break you to the end until you become my slave!",
+            "Your pussy became more obedient? Great, it's working!"
+          ]
+        }
+      },
+      "2ERO": {
+        "description": "Fucking in the air. Looped",
+        "events": {
+          "2ERO": [
+            "Can't do anything, whore? How pitiful!",
+            "Your pussy is the only support now, hahaha!",
+            "You're my toy, bitch, and I'll do what I want with you!"
+          ],
+          "SE1": [
+            "I want to fuck you always, whore, you're perfect!",
+            "Your pussy is the best in the world, I'll never tire of it!",
+            "Every thrust gives me incredible pleasure!",
+            "You're just dancing on my cock, damn, like a whore!",
+            "Your screams are music to my ears, keep going!",
+            "I'll fuck you until you break completely!",
+            "Your body will be destroyed, but I don't care!",
+            "No mercy for you, bitch, you deserve it!",
+            "You're suspended between life and my cock, how beautiful!",
+            "I'll fuck you to death, and that will be your last thought!",
+            "Your pussy no longer belongs to you, it's mine!",
+            "Best fuck in my life, you're just perfect!",
+            "You'll beg for mercy, but I won't stop!",
+            "Your pussy is my property, and I'll fuck it always!",
+            "Your attempts are useless, bitch, give up!",
+            "You're now my living sex doll, and I'll use you always!",
+            "You're my toy, whore, and there's no escape!"
+          ],
+          "SE8": [
+            "I promise to destroy you completely, bitch!",
+            "You'll be dripping cum while I fuck you!",
+            "Your pussy takes everything like a champion, keep going!",
+            "Damn, can't stop, bitch, you're too good!"
+          ]
+        }
+      },
+      "2ERO2": {
+        "description": "In the air, speeds up. Looped",
+        "events": {
+          "2ERO2": [
+            "AAAAhhhh, damn, how nice it is to fuck you!",
+            "Your pussy is magical, I can't stop!",
+            "I promise to fuck you my whole life, you're mine!"
+          ],
+          "SE1": [
+            "Never been in such a position, bitch? Learn to enjoy it!",
+            "Learn to enjoy it, or I'll cut your head off!",
+            "Every thrust bounces you like a toy!",
+            "When I finish, I'll pass you on in the circle, bitch!",
+            "Don't hope for mercy, bitch, you're doomed!",
+            "Come on, fight for your life, whore, I like it!",
+            "I'll fuck you to death, and that will be your last thought!"
+          ],
+          "SE8": [
+            "Like it? Take more, bitch!",
+            "Every strike deeper, feel it?",
+            "Your pussy takes all the force, keep going!",
+            "Damn, I can't stop, bitch, you're too good!",
+            "You're my whore, my property, and I'll fuck you always!",
+            "I'll fuck you to death, and that will be your last thought!",
+            "Your pussy takes everything like a champion, keep going!",
+            "Damn, can't stop, bitch, you're too good!"
+          ]
+        }
+      },
+      "FIN": {
+        "description": "Cumming. One ending, several pulses",
+        "events": {
+          "FIN_pre": [
+            "I'm about to cum, bitch!",
+            "I'm going to cum in you!",
+            "Get ready, I'm going to fill you!",
+            "I'm going to cum inside you!",
+            "I'm about to fill you with my cum!",
+            "I'm going to breed you, whore!",
+            "Get ready, I'm cumming inside!",
+            "I'm going to mark you as mine!",
+            "I'm about to fill your womb!",
+            "I'm going to cum deep inside you!"
+          ],
+          "FIN": [
+            "Aaaa, damn, I'm cumming, take it all!",
+            "Take all my cum, bitch, you earned it!",
+            "Your pussy will be full of my cum!"
+          ],
+          "SE": {
+            "se_count_1": [
+              "I'm cumming, cumming! Take it all, bitch!",
+              "Your pussy is filling to the brim, feel it?",
+              "I'm filling your womb, feel it filling?",
+              "Feel me fertilizing you, whore?",
+              "Your womb is mine now, and I filled it with cum!",
+              "Damn, cum is flowing down your legs, how beautiful!",
+              "You're mine forever now, and there's no escape!",
+              "I marked you, bitch, now you're my property!",
+              "Your pussy is my property, and I filled it with cum!",
+              "Your pussy is filled, and you'll remember this always!",
+              "I filled you, whore, and this is just the beginning!",
+              "It will always be like this, bitch, you're mine forever!",
+              "Now I'm your new owner, and you'll serve me always!",
+              "Your pussy is mine now, and I'll fuck it always!"
+            ],
+            "se_count_2": [
+              "How nice it is to cum in you, bitch!",
+              "Damn, milk my cum, whore!",
+              "Your pussy is overflowing, feel it?",
+              "Even more cum for you, bitch!",
+              "Your womb is full of my cum, and you'll remember this always!",
+              "I'm cumming again, take it all!"
+            ]
+          },
+          "SE1": [
+            "Take my cum, bitch, you earned it!",
+            "Aaa.. Damn, I'm cumming, take it all!",
+            "I'll fill your womb, and you'll remember this always!",
+            "Damn, it's rough, but you like it!",
+            "Your pussy is like sucking my cock, like a whore!",
+            "Aaa, how strongly I'm cumming, take it all!",
+            "Take it, bitch, you earned it!",
+            "Suck out my cum, whore, that's your job!",
+            "Here, take it all, bitch, you earned it!"
+          ],
+          "SE8": [
+            "Yes, yes, yes, I'm cumming, take it all!",
+            "I'll ruin you, bitch, and you'll remember this always!",
+            "That's it, you're mine forever!",
+            "Your pussy is the best of its kind, and I'll fuck it always!"
+          ]
+        }
+      },
+      "FIN2": {
+        "description": "Pulls out cock",
+        "events": {
+          "FIN2": [
+            "Oh damn, this is incredible, you're just perfect!",
+            "Your pussy is dripping with my cum, how beautiful!",
+            "You're my property, whore, and there's no escape!"
+          ],
+          "SE": {
+            "se_count_1": [
+              "For you everything is just beginning, whore!",
+              "Now you'll serve the next one, bitch!",
+              "You'll be my slave, and I'll use you always!",
+              "You're my property, whore, and there's no escape!",
+              "Your pussy is still dripping, how beautiful!",
+              "Cum is flowing out, it's so vulgar, ahahaha!",
+              "You're mine forever now, and there's no escape!",
+              "Your pussy wants more, I know, and I'll give you more!",
+              "You'll remember this fuck, bitch, until the end of your days!"
+            ],
+            "se_count_3": [
+              "Damn, so much cum, bitch, you're just overflowing!",
+              "Your pussy can take more, get ready!",
+              "You'll beg for more, I know, and I'll give you more!"
+            ]
+          }
+        }
+      },
+      "JIGO": {
+        "description": "GG collapses, he continues holding her like a dog",
+        "events": {
+          "JIGO": [
+            "You're my dog, whore, and there's no escape!",
+            "You're my property, and I'll use you always!",
+            "Your pussy is still dripping, how beautiful!"
+          ],
+          "SE": {
+            "se_count_1": [
+              "Oh damn, what a bitch you are, just perfect!",
+              "You're my toy, bitch, and I'll play with you always!",
+              "Now it will always be like this, and you'll serve me!",
+              "How much of my cum is in you, you're just overflowing!",
+              "Ready for the next round, bitch? I'm ready!",
+              "Get ready, this is just the beginning, much more awaits you!",
+              "You'll remember this fuck forever, and this is just the beginning!",
+              "You're my slave, bitch, and I'll use you always!"
+            ]
+          }
+        }
+      },
+      "JIGO2": {
+        "description": "Drooling, trembling legs, hanging arms, chained by collar, tits bouncing. For next enemy in cycle",
+        "events": {
+          "JIGO2": [
+            "Look at yourself, you look like a whore, and that's right!",
+            "You're covered in my cum, and you'll remember this always!",
+            "Your pussy is still dripping, how beautiful!",
+            "Now you'll serve the next one, bitch!",
+            "I'll pass you on to the others, don't die before your time!",
+            "Your pussy will serve everyone in the circle, whore!",
+            "Enjoy, comrades! This slut is ready for the next one!",
+            "Ha! Let others try this whore too!",
+            "This bitch is too good for one, let everyone have a turn!",
+            "You're my property, whore, and there's no escape!",
+            "You'll remember this fuck for a long time, and this is just the beginning!",
+            "You're now my slave, and I'll use you always!"
+          ],
+          "SE": {
+            "se_count_1": [
+              "Look at yourself, you look like a whore, and that's right!",
+              "You're covered in my cum, and you'll remember this always!",
+              "Your pussy is still dripping, how beautiful!",
+              "You know how to give pleasure, bitch, keep going!",
+              "You're my property, whore, and there's no escape!",
+              "Your pussy is mine forever now, and I'll fuck it always!",
+              "You'll remember this fuck for a long time, and this is just the beginning!",
+              "Your pussy will never forget my cock, and that's right!",
+              "You're now my slave, and I'll use you always!",
+              "You're covered in my cum, bitch, and you'll remember this always!",
+              "Your pussy is dripping from my fuck, how beautiful!",
+              "You're my whore forever, and there's no escape!"
+            ],
+            "se_count_2": [
+              "Another portion of cum for you, bitch!",
+              "Your pussy is overflowing, feel it?",
+              "Your womb is full of my cum, and you'll remember this always!",
+              "You're now carrying my cum, and that's your new life!",
+              "My cum is flowing out of you, how beautiful!",
+              "Your pussy is mine forever now, and I'll fuck it always!",
+              "You'll remember this fuck your whole life, and this is just the beginning!",
+              "Even more cum in you, bitch, you're just overflowing!",
+              "Your womb is filled, and you'll remember this always!"
+            ]
+          },
+          "SE1": [
+            "Look what you're doing to me, oooouu eeee!",
+            "I'll breed you, bitch, and you'll remember this always!",
+            "You're like producing my cum, like a whore!",
+            "Now you'll feel it even stronger, get ready!",
+            "I'll fill you again and again, and you'll remember this always!",
+            "All the cum for you, whore, you earned it!"
+          ],
+          "SE8": [
+            "Last strikes, bitch, take it all!",
+            "AAA, here it is, I'm cumming, take it all!",
+            "So much cum, bitch, you're just overflowing!",
+            "Your pussy is sucking out my cum, like a whore!"
+          ]
+        }
+      },
+      "_2ERO2": {
+        "description": "Fucking in the air. Looped",
+        "events": {
+          "2ERO2": [
+            "What a hot position, right, whore? You like it?",
+            "Unforgettable, damn, I can't stop!",
+            "You're my toy, my property, and there's no escape!"
+          ],
+          "SE1": [
+            "Take my cock, bitch, you earned it!",
+            "Your pussy is so tight I want to tear it!",
+            "Every thrust into you is a high, keep going!",
+            "You're like dancing on my cock, damn, like a whore!",
+            "Come on, try harder, bitch, I like it!",
+            "You'll cum soon, and I'll break you completely!"
+          ]
+        }
+      },
+      "_2ERO3": {
+        "description": "Fucking when GG holds her neck with both hands. Looped",
+        "events": {
+          "2ERO3": [
+            "Hard to breathe, bitch? It will be even harder!",
+            "Better not die, I just started, bitch!",
+            "Your struggle is useless, give up!"
+          ],
+          "SE1": [
+            "Your struggle only arouses me, keep going!",
+            "Keep struggling while I fuck you, I like it!",
+            "Struggle all you want, I like it, bitch!",
+            "I'll fuck you non-stop, and you'll remember this always!",
+            "You're my property, whore, and there's no escape!"
+          ]
+        }
+      },
+      "_2ERO4": {
+        "description": "Fucking at an angle in the air, legs off the ground",
+        "events": {
+          "2ERO4": [
+            "How do you like being impaled on my cock, bitch?",
+            "Now you can't get off my cock, how pitiful!",
+            "You're my toy, my sex doll, and there's no escape!"
+          ],
+          "SE1": [
+            "Damn, you were made for this, bitch, keep going!",
+            "Best pussy in my whole life, I can't stop!",
+            "Every thrust is so pleasant I want to fuck you always!",
+            "You're like dancing on my cock, damn, like a whore!",
+            "Your legs are trembling, but this is just the beginning, whore!",
+            "You're now my living sex doll, bitch, and I'll use you always!"
+          ]
+        }
+      },
+      "_2ERO6": {
+        "description": "Fucking in the air, GG almost pressed back to him",
+        "events": {
+          "2ERO6": [
+            "Such a sexy position, whore, you like it?",
+            "You're in my power, and there's no escape!",
+            "What a hot bitch, I can't stop!"
+          ],
+          "SE1": [
+            "Like being on my cock, whore? Keep going!",
+            "Your pussy is like sucking my cock, like a whore!",
+            "Each next thrust is more pleasant, keep going!",
+            "You're dancing on my cock, damn, like a whore!",
+            "I'll be very rough with you, and you'll remember this always!"
+          ]
+        }
+      },
+      "_2ERO7": {
+        "description": "Tries to grab the collar with one hand",
+        "events": {
+          "2ERO7": [
+            "You'll be my whore, and there's no escape!",
+            "Struggle while I fuck you, I like it!",
+            "Your struggle is useless, bitch, give up!"
+          ],
+          "SE1": [
+            "Your struggle only arouses me, keep going!",
+            "Keep struggling, writhe, bitch, I like it!",
+            "Struggle harder, I love ones like you, bitch!",
+            "You're mine now, whore, and there's no escape!"
+          ]
+        }
+      },
+      "_ERO5": {
+        "description": "Fucking from behind, legs on ground, arms pulled back",
+        "events": {
+          "_ERO5": [
+            "Look at yourself, whore, how you look!",
+            "Your pussy caresses my cock, like a whore!",
+            "You're my toy, my property, and there's no escape!"
+          ],
+          "SE1": [
+            "I know you like it rougher, bitch, keep going!",
+            "Every thrust is so pleasant I want to fuck you always!",
+            "Your pussy is like sucking my cock, like a whore!",
+            "I'll fuck you to the limit, and you'll remember this always!",
+            "Your pussy acts like a whore, and that's right!",
+            "I'll tear you from inside, whore, and you'll remember this always!"
+          ]
+        }
+      },
+      "_ERO7": {
+        "description": "Also fucking, only one arm is already hanging",
+        "events": {
+          "_ERO7": [
+            "You're not struggling anymore? Completely given up?",
+            "What's wrong, bitch? You like it already?",
+            "You'll accept it as due, and there's no escape!"
+          ],
+          "SE1": [
+            "Your struggle is double pleasure, keep going!",
+            "You gave up, don't give up while I fuck you, I like it!",
+            "Oh yes, you have no idea what awaits you, bitch!",
+            "How many cocks can you handle before you die, whore?",
+            "Your pussy clenches my cock, like a whore, keep going!"
+          ]
+        }
+      },
+      "_ERO8": {
+        "description": "Intensifies thrusts",
+        "events": {
+          "_ERO8": [
+            "You ready, whore? This will be rough!",
+            "I'll fill you with my cum, and you'll remember this always!",
+            "Yes, come on, slide on my cock, like a whore!"
+          ],
+          "SE1": [
+            "This won't be easy, bitch, get ready!",
+            "Damn, how nice it is to fuck you harder!",
+            "Your pussy was made for violence, and I'll prove it!",
+            "I'll cum right in you, and you'll remember this always!",
+            "Your pussy will be filled with my cum, and you'll remember this always!"
+          ]
+        }
+      },
+      "_ERO9": {
+        "description": "Thrusts are the same, but harder",
+        "events": {
+          "_ERO9": [
+            "Here, take it, bitch, I'll cum right in you!",
+            "Your pussy wants this, and I'll give you more!",
+            "Your pussy is just a whore, and that's right!"
+          ],
+          "SE1": [
+            "Damn, how nice it is to fuck you harder, bitch!",
+            "Every strike is stronger, feel it? Keep going!",
+            "Your pussy is tearing from my cock, and you'll remember this always!",
+            "I'll tear you from inside, whore, and you'll remember this always!",
+            "Your pussy won't handle such fucking, but I don't care!"
+          ]
+        }
+      },
+      "_ERO10": {
+        "description": "Thrusts are more accentuated",
+        "events": {
+          "_ERO10": [
+            "This will be rough, whore, get ready!",
+            "Your pussy will take every strike, and you'll remember this always!",
+            "I'm fucking you with emphasis, appreciate it, bitch!"
+          ],
+          "SE1": [
+            "Every thrust makes you scream, yesss, keep going!",
+            "I'll cum in you, bitch, and you'll remember this always!",
+            "How good you ride the cock, like a whore!",
+            "Your pussy stretches as it should, keep going!"
+          ]
+        }
+      },
+      "_ERO11": {
+        "description": "Same as accentuated",
+        "events": {
+          "_ERO11": [
+            "You're my whore, bitch, and there's no escape!",
+            "Your pussy is my property, and I'll fuck it always!",
+            "You'll do everything I say, and there's no escape!"
+          ],
+          "SE1": [
+            "Scream louder, whore, I like it!",
+            "You're broken, bitch, and that's right!",
+            "Your pussy is mine now, and I'll fuck it always!",
+            "You're now my dog, and there's no escape!"
+          ]
+        }
+      },
+      "_ERO12": {
+        "description": "Even stronger emphasis",
+        "events": {
+          "_ERO12": [
+            "You're completely broken, bitch, and that's right!",
+            "Your pussy is my toy, and I'll play with it always!",
+            "You'll be my slave, whore, and there's no escape!"
+          ],
+          "SE1": [
+            "You'll remember this fuck, bitch, until the end of your days!",
+            "Your pussy is tearing, but I don't care, keep going!",
+            "I'll tear you, whore, and you'll remember this always!",
+            "Your pussy won't handle it, but it doesn't matter, keep going!",
+            "You're my property, damn, and there's no escape!"
+          ]
+        }
+      },
+      "_FIN3": {
+        "description": "Cumming even harder",
+        "events": {
+          "_FIN3": [
+            "I'll cum in you now, bitch, take it all!",
+            "Take all my cum, whore, you earned it!",
+            "Your pussy will be mine, and I'll fuck it always!"
+          ],
+          "SE": {
+            "se_count_1": [
+              "I'm cumming, bitch! You're mine, and there's no escape!",
+              "Your pussy is my property now, and I filled it with cum!",
+              "You're mine forever now, damn, and there's no escape!",
+              "Your womb is mine now, bitch, and I filled it with cum!",
+              "My cum will fill you, and you'll remember this always!",
+              "You're mine forever now, whore, and there's no escape!",
+              "I left my mark in you, and you'll remember this always!",
+              "Your pussy is my property, bitch, and I filled it with cum!",
+              "You're now carrying my cum, and that's your new life!",
+              "I filled you, whore, and this is just the beginning!"
+            ],
+            "se_count_2": [
+              "Even more cum, bitch, you're just overflowing!",
+              "Second portion for you, take it all!",
+              "Your pussy is overflowing, damn, feel it?",
+              "Even more cum for you, whore, take it all!",
+              "Your womb is full of my cum, and you'll remember this always!"
+            ]
+          },
+          "SE1": [
+            "Take all my cum, bitch, you earned it!",
+            "You're mine forever now, and there's no escape!",
+            "Your pussy will be overflowing, damn, feel it?",
+            "Deeper, deeper, bitch, take it all!",
+            "You're my property, and I'll fuck you always!"
+          ]
+        }
+      },
+      "_JIGO2": {
+        "description": "GG collapses",
+        "events": {
+          "_JIGO2": [
+            "You're collapsing, whore, and that's right!",
+            "You're my property, bitch, and there's no escape!",
+            "Your pussy is still dripping, and this is just the beginning!"
+          ],
+          "SE": {
+            "se_count_1": [
+              "You're my property, whore, and I'll fuck you always!",
+              "Your pussy is still dripping, bitch, and this is just the beginning!",
+              "Cum is flowing out of you, damn, and it's so beautiful!",
+              "You're mine forever now, whore, and there's no escape!",
+              "Your pussy is mine now, bitch, and I'll fuck it always!",
+              "You'll remember this fuck, and this is just the beginning!"
+            ]
+          }
+        }
+      },
+      "_JIGO4": {
+        "description": "GG is impaled on cock, as if he's fucking her",
+        "events": {
+          "_JIGO4": [
+            "You're in my power, whore, and there's no escape!",
+            "You're my property, bitch, and I'll fuck you always!",
+            "Your pussy is mine, damn, and this is just the beginning!"
+          ],
+          "SE1": [
+            "You're my toy, bitch, and I'll play with you always!",
+            "Your pussy is my property, and I'll fuck it always!",
+            "You're completely in my power, whore, and there's no escape!",
+            "You're now my dog, and I'll fuck you always!"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "speakerLabel": "Bandit",
+  "stepId": "fsp_sex_hesitate_1a_p03",
+  "stepKind": "continue",
+  "continueOutcomeId": "noop",
+  "continueNextStepId": "fsp_sex_hesitate_1b_p04",
+  "npcLine": "Nicht erwartet? Ich bin direkt. Entscheid dich — ja oder nein."
+}

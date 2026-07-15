@@ -1,0 +1,4 @@
+# Pilgrimage Entrance spawn | X,Y,EnemyType,Count
+# POOL[TouzokuNormal,TouzokuAxe,Dorei] = random from 3 types
+# InquisitionWhite, Librarian, CrowInquisition, Inquisition
+

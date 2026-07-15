@@ -1,0 +1,63 @@
+HELLGATE — event anchor naming (quick reference)
+================================================
+
+Full documentation: docs/EventCore/README.md
+Cheat sheet (RU):   HellGateSpawnPoint/EVENT_TRAP_SPAWN_CHEATSHEET.txt
+
+Spawn line (preferred — short):
+  REINFORCEMENT,<packFolder>,x,y
+  EVENTTRAP,<packFolder>,x,y
+
+packFolder = behaviour pack: EventCore/_shared/<packFolder>/config.json
+Anchor id is auto-generated from pack + coordinates (no manual anchorId needed).
+
+Legacy 5-field format still works:
+  REINFORCEMENT,<anchorId>,<packFolder>,x,y
+
+
+1) packFolder names (active packs)
+----------------------------------
+
+  REINFORCEMENT:
+    boss_reinf_touzoku              TouzokuNormal/Axe, 1-3, both sides, radius 8
+
+  EVENTTRAP — template A (radius 5, spawn right):
+    etrap_touzoku_touzokuaxe        TouzokuNormal/Axe (random)
+    etrap_dorei                     Dorei
+    etrap_goblin                    Goblin
+    etrap_kakasi                    Kakasi
+    etrap_mafiabosscustom           MafiaBossCustom
+    etrap_mafia                     Mafia
+    etrap_mutude                    Mutude
+    etrap_prisonofficer             PrisonOfficer
+    etrap_slaughterer               Slaughterer
+    etrap_vagrant                   Vagrant
+    etrap_bigonibrother             BigoniBrother
+
+  EVENTTRAP — template B (radius 12, 1s delay):
+    etrap_undead                    Undead
+
+Phrases (all etrap): EventCore/<Lang>/event_trap_gate/phrases.json
+
+
+2) Modal broker (NOT anchor lines)
+----------------------------------
+
+  X,Y,EnemyType|ec_event=eventcore_broker_gate,Count
+
+
+3) Registries
+-------------
+
+  reinforcement_registry.json
+  event_trap_registry.json
+
+
+4) New anchor checklist
+-----------------------
+
+  1. Pick packFolder from section 1
+  2. Line in HellGateSpawn_<Map>.txt
+  3. packFolder in registry whitelist (if new pack)
+  4. F11 → RMB or reload scene
+  5. Test combat knockdown in zone (not H-scene)

@@ -1,0 +1,8 @@
+{
+  "speakerLabel": "Bandit",
+  "stepId": "fsp_sex_refuse_b_p03",
+  "stepKind": "continue",
+  "continueOutcomeId": "rep_roll_soft",
+  "continueNextStepId": "fsp_sex_refuse_b_p04",
+  "npcLine": "Got it. Don't boil over — just leave."
+}

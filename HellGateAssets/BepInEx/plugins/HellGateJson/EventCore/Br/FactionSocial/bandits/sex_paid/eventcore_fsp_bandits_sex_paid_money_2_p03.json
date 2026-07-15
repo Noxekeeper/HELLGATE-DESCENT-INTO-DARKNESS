@@ -1,0 +1,8 @@
+{
+  "speakerLabel": "Bandido",
+  "stepId": "fsp_sex_money_2_p03",
+  "stepKind": "continue",
+  "continueOutcomeId": "noop",
+  "continueNextStepId": "fsp_sex_money_2_p04",
+  "npcLine": "Quero você. {SEX_PRICE} moedas — se me deixar gozar dentro."
+}

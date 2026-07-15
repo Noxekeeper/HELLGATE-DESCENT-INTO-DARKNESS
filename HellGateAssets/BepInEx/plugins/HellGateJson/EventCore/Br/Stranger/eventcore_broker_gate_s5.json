@@ -1,0 +1,8 @@
+{
+  "stepId": "broker_insufficient_body_line",
+  "stepKind": "continue",
+  "speakerLabel": "Estranho",
+  "npcLinePoolId": "broker_broker_body_topup_h",
+  "continueNextStepId": "broker_body_choice",
+  "choiceLabels": []
+}

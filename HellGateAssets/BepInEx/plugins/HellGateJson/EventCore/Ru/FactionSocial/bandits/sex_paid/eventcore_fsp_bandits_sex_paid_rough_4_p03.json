@@ -1,0 +1,8 @@
+{
+  "speakerLabel": "Бандит",
+  "stepId": "fsp_sex_rough_4_p03",
+  "stepKind": "continue",
+  "continueOutcomeId": "noop",
+  "continueNextStepId": "fsp_sex_rough_4_p04",
+  "npcLine": "Прямо здесь. {SEX_PRICE} — и начнём."
+}

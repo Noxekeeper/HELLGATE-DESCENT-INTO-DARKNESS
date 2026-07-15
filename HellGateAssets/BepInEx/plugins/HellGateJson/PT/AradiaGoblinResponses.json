@@ -1,0 +1,731 @@
+{
+  "settings": {
+    "commentCooldownSeconds": 5.0,
+    "maxSimultaneousComments": 1,
+    "commentDisplayDuration": 5.0,
+    "fontSize": 22.0,
+    "verticalOffset": 20.0,
+    "streamingSpeed": 0.025,
+    "responseColor": {
+      "r": 1.0,
+      "g": 1.0,
+      "b": 1.0,
+      "a": 1.0
+    },
+    "responseOutlineColor": {
+      "r": 0.6,
+      "g": 0.0,
+      "b": 0.7,
+      "a": 1.0
+    },
+    "thoughtColor": {
+      "r": 1.0,
+      "g": 1.0,
+      "b": 1.0,
+      "a": 1.0
+    },
+    "thoughtOutlineColor": {
+      "r": 0.9,
+      "g": 0.2,
+      "b": 0.5,
+      "a": 1.0
+    }
+  },
+  "mindBrokenThresholds": [0.3, 0.7],
+  "animations": {
+    "ERO1": {
+      "description": "Aradia responses to goblins starting to lick her",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "O quê?! O quê é isso?! Sai daí!",
+            "Não! Por favor, pare! Isso é errado!",
+            "Eu... eu não gosto disso! Me solta!",
+            "Alguém me ajude! Esses monstros...",
+            "Por que eu? Por favor, me perdoe!",
+            "Isso está realmente acontecendo... Não!",
+            "Suas línguas são muito ásperas... Pare!",
+            "Me sinto tão violada... Por favor!",
+            "Essas criaturas verdes... O que querem?",
+            "Meu corpo está tremendo... Tenho medo!",
+            "Não toque aí! Por favor!",
+            "Isso é um pesadelo... Acorda!",
+            "Seus olhos parecem tão famintos... Me ajude!",
+            "Não consigo me mover... Eles são muito fortes!",
+            "O que esses monstros estão fazendo comigo?"
+          ],
+          "medium": [
+            "Eu... eu não sei o que sentir...",
+            "Suas línguas... estão em todos os lugares...",
+            "Isso é tão errado... Mas...",
+            "Os tremores não param... O que faço agora?",
+            "Seus toques são tão persistentes...",
+            "Meu corpo está respondendo... Contra minha vontade...",
+            "Esses goblins... são tão persistentes...",
+            "Me sinto tão exposta... Tão vulnerável...",
+            "Suas línguas ásperas... Não consigo pensar...",
+            "Este calor... está se acumulando dentro de mim...",
+            "Quero resistir... Mas meu corpo...",
+            "Essas criaturas... estão me quebrando...",
+            "Sua fome... é contagiosa...",
+            "Me sinto tão suja... Mas sinto isso...",
+            "Suas línguas... são tão persistentes..."
+          ],
+          "high": [
+            "Deus... suas línguas são tão boas...",
+            "Preciso de mais... Não pare!",
+            "Esses goblins sabem como agradar...",
+            "Meu corpo está queimando... Me dê mais!",
+            "Eles lambendo todo meu corpo... Adoro!",
+            "Suas línguas ásperas... Perfeitas!",
+            "Estou tão molhada... Eles me enlouquecem!",
+            "Lambam meu clitóris, monstros!",
+            "Quero seus paus... Agora!",
+            "Esses goblins são amantes incríveis!",
+            "Minha buceta dói por eles...",
+            "Sua saliva... Tão quente e molhada...",
+            "Anseio por seus toques... Em todos os lugares!",
+            "Goze dentro de mim... Por favor!",
+            "Suas línguas... Me enlouquecem!"
+          ]
+        }
+      }
+    },
+    "ERO2": {
+      "description": "Aradia responses to goblins intensifying licking",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Não! É muito! Pare de lamber!",
+            "Suas línguas estão em todos os lugares... Me ajude!",
+            "Não aguento... Por favor, pare!",
+            "Meu corpo está me traindo... Não!",
+            "Esses monstros... São tão implacáveis!",
+            "Me sinto tão indefesa... Alguém!",
+            "Suas línguas ásperas doem... Pare!",
+            "Não consigo respirar... É tão intenso!",
+            "Por favor... Não aguento isso!",
+            "Minha mente está quebrando... Pare!",
+            "Esses goblins não param... Me ajude!",
+            "Me sinto tão violada... Em todos os lugares!",
+            "Suas línguas... São tão profundas!",
+            "Estou tremendo muito...",
+            "Isso é tortura... Por favor, pare!"
+          ],
+          "medium": [
+            "Eu... eu não aguento...",
+            "Suas línguas... São tão intensas...",
+            "Meu corpo... Está respondendo novamente...",
+            "Este prazer... Misturado com terror...",
+            "Quero odiar... Mas...",
+            "Sua lambida... É tão intensa...",
+            "Minha resistência... Está enfraquecendo...",
+            "Esses goblins... São tão habilidosos...",
+            "Me sinto tão conflitante... Me ajude...",
+            "Seus toques... Em todos os lugares...",
+            "Não controlo minhas respostas...",
+            "Este calor... Está se acumulando...",
+            "Suas línguas... São tão exigentes...",
+            "Me sinto tão exposta... Tão desejosa...",
+            "Meu corpo... Me trai..."
+          ],
+          "high": [
+            "Mais forte! Mais forte me lambam, suas feras!",
+            "Suas línguas... Tão malditas boas!",
+            "Me deixe insensível... Sim!",
+            "Minha buceta está pingando... Por eles!",
+            "Esses goblins... Deuses do sexo!",
+            "Lambam-me!",
+            "Quero seus paus... Tão mal!",
+            "Sua saliva... Me deixa mais molhada!",
+            "Lambam meu clitóris... Oh deus, sim!",
+            "Sou sua cadela... Me use!",
+            "Suas línguas ásperas... Perfeitas!",
+            "Goze em mim... Me marque!",
+            "Adoro eles me engolindo!",
+            "Preciso de mais monstros... Mais!",
+            "Suas línguas... Me enlouquecem!"
+          ]
+        }
+      }
+    },
+    "ERO3": {
+      "description": "Aradia responses to goblin pushing tongue deeper",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Não! É muito profundo! Tire!",
+            "Suas línguas... Dentro de mim... Pare!",
+            "Isso é tão intenso... Não consigo!",
+            "Por favor... Tire a língua!",
+            "Me sinto tão cheia... Mas errado!",
+            "Esses monstros... Me violam!",
+            "Suas línguas... São tão profundas... Me ajude!",
+            "Não aguento essa invasão!",
+            "Tire... Por favor, tire!",
+            "Meu corpo... Está se esticando... Dói!",
+            "Esses goblins... São tão cruéis!",
+            "Suas línguas... Estão explorando...",
+            "Me sinto tão indefesa... Não!",
+            "Essa penetração... Errado!",
+            "Pare... Por favor, pare... Pare!"
+          ],
+          "medium": [
+            "Suas línguas... São tão profundas dentro de mim...",
+            "Me sinto esticando... Tão cheia...",
+            "Esta sensação... É confusa...",
+            "Suas línguas... Estão se movendo... Ah...",
+            "Quero resistir... Mas...",
+            "Esta profundidade... É tão intensa...",
+            "Suas línguas... São tão persistentes...",
+            "Me sinto tão vulnerável... Exposta...",
+            "Esta invasão... É prazerosa...",
+            "Meu corpo... Está aceitando eles...",
+            "Suas línguas... Mais profundas... Mais profundas...",
+            "Não consigo pensar... Só sentir...",
+            "Esta plenitude... É avassaladora...",
+            "Suas línguas... Me exploram...",
+            "Me sinto tão conflitante..."
+          ],
+          "high": [
+            "Mais profundo! Empurre a língua mais fundo!",
+            "Me foda com a língua!",
+            "Suas línguas... São tão profundas... Sim!",
+            "Me encha completamente... Monstro!",
+            "Adoro você me esticando!",
+            "Suas línguas... Tamanho perfeito!",
+            "Foda meu buraco de trás... Mais forte!",
+            "Quero seus paus agora!",
+            "Suas línguas... Me fazem gozar!",
+            "Penetração mais profunda... Sim!",
+            "Sou seu buraco... Me use!",
+            "Suas línguas... São tão habilidosas!",
+            "Goze dentro... Me encha!",
+            "Anseio por esta plenitude... Mais!",
+            "Suas línguas... Me enlouquecem!"
+          ]
+        }
+      }
+    },
+    "ERO4": {
+      "description": "Aradia responses to goblins licking harder and deeper",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Pare! É muito áspero! Misericórdia!",
+            "Suas línguas... Me machucam!",
+            "Não aguento esta intensidade!",
+            "Por favor... Mais suavemente... Por favor!",
+            "Esses monstros... Não têm misericórdia!",
+            "Meu corpo... Está queimando... Pare!",
+            "Sua lambida... É tão forte!",
+            "Me sinto tão abusada... Me ajude!",
+            "Esta dor... E misturada...",
+            "Pare de me machucar... Por favor!",
+            "Suas línguas... São cruéis!",
+            "Não aguento isso... Não!",
+            "Misericórdia... Peço misericórdia!",
+            "É muito intenso... Não aguento!",
+            "Seu ataque... Não para!"
+          ],
+          "medium": [
+            "Suas línguas... São tão intensas...",
+            "Me sinto oprimida...",
+            "Este prazer... É muito...",
+            "Sua lambida... É implacável...",
+            "Não controlo... Mais...",
+            "Suas línguas... Em todos os lugares...",
+            "Me sinto tão sensível...",
+            "Esta intensidade... Me quebra...",
+            "Seus toques... São exigentes...",
+            "Quero fugir... Mas...",
+            "Suas línguas... São habilidosas...",
+            "Este calor... Está queimando...",
+            "Me sinto consumida...",
+            "Sua lambida... É perfeita...",
+            "Minha resistência... Sumiu..."
+          ],
+          "high": [
+            "Mais forte! Me lambam mais forte!",
+            "Suas línguas... São tão ásperas... Adoro!",
+            "Me deixe insensível... Sim!",
+            "Esta intensidade é necessária... Mais!",
+            "Suas línguas... Aspereza perfeita!",
+            "Me faça gozar... Monstros!",
+            "Adoro eles me abusando!",
+            "Sua lambida... É divina!",
+            "Foda todos os meus buracos... Todos!",
+            "Anseio por esta crueldade!",
+            "Suas línguas... São tão exigentes!",
+            "Goze em mim... Sim!",
+            "Sou seu lixo de sêmen!",
+            "Mais intensidade... Por favor!",
+            "Suas línguas... Me possuem!"
+          ]
+        }
+      }
+    },
+    "ERO5": {
+      "description": "Aradia responses to extreme licking approaching climax",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Não! Vou gozar... Pare!",
+            "Suas línguas... Me empurram... Não!",
+            "Não aguento... Me ajude!",
+            "Este clímax... Forçado... Errado!",
+            "Seu ataque... É tão intenso!",
+            "Estou quebrando... Por favor, pare!",
+            "Suas línguas... Vitória próxima!",
+            "Não quero gozar... Não!",
+            "Este prazer... Contra minha vontade!",
+            "Sua lambida... É vitoriosa!",
+            "Pare... Estou gozando... Pare!",
+            "Esses monstros... Estão ganhando!",
+            "Meu corpo... Me trai!",
+            "Gozar forçado... Terror!",
+            "Suas línguas... Me conquistam!"
+          ],
+          "medium": [
+            "Eu... eu não aguento...",
+            "Suas línguas... São tão habilidosas...",
+            "Este clímax... É inevitável...",
+            "Na borda... Sinto...",
+            "Sua lambida... É perfeita...",
+            "Minha resistência... Está ruindo...",
+            "Quero lutar... Mas...",
+            "Suas línguas... Vitória...",
+            "Este prazer... É avassalador...",
+            "Me sinto rendendo...",
+            "Seu ataque... É bem-sucedido...",
+            "Meu corpo... Está cedendo...",
+            "Este gozar... É complexo...",
+            "Suas línguas... São vitoriosas...",
+            "Não consigo parar..."
+          ],
+          "high": [
+            "Estou gozando! Não parem!",
+            "Suas línguas... Me explodem!",
+            "Gozem comigo... Monstros!",
+            "Este clímax... Perfeito!",
+            "Sua lambida... É orgástica!",
+            "Me fodam até o gozo!",
+            "Adoro eles me fazendo gozar!",
+            "Suas línguas... Vitória!",
+            "Mais forte no gozo... Sim!",
+            "Sou sua escrava do orgasmo!",
+            "Sua lambida... É celestial!",
+            "Me encha com sêmen... Agora!",
+            "Este prazer... É divino!",
+            "Suas línguas... Deus!",
+            "Goze em todos os lugares... Sim!"
+          ]
+        }
+      }
+    },
+    "ERO_iki": {
+      "description": "Aradia responses to forced climax from licking",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Não! Estou gozando! Pare!",
+            "Suas línguas... Me forçaram...",
+            "Este gozo... Humilhante!",
+            "Não queria... Não!",
+            "Sua vitória... Completa!",
+            "Meu corpo... Me traiu!",
+            "Esses monstros... Ganharam!",
+            "Clímax forçado... Vergonha!",
+            "Suas línguas... São vitoriosas!",
+            "Odeio este prazer... Não!",
+            "Contra minha vontade... Gozando!",
+            "Sua lambida... É bem-sucedida!",
+            "Me sinto tão suja... Usada!",
+            "Este êxtase... Errado!",
+            "Sua conquista... Completa!"
+          ],
+          "medium": [
+            "Estou gozando... Oh deus...",
+            "Suas línguas... São tão boas...",
+            "Este clímax... É intenso...",
+            "Não consigo parar...",
+            "Sua vitória... Doce...",
+            "Meu corpo... Se rendeu...",
+            "Este prazer... É avassalador...",
+            "Suas línguas... São perfeitas...",
+            "Me sinto derrotada... Mas...",
+            "Este gozo... É incrível...",
+            "Sua lambida... É arte...",
+            "Queria resistir...",
+            "Sua conquista... É prazerosa...",
+            "Gozando tão intensamente...",
+            "Suas línguas... Meus senhores..."
+          ],
+          "high": [
+            "Sêmen! Me encham com sêmen!",
+            "Seu sêmen quente... Perfeito!",
+            "Na boca... Engula...",
+            "Em todos os lugares... Sim!",
+            "Seu sêmen... Delicioso...",
+            "Me encham completamente...",
+            "Goze mais forte... Monstros!",
+            "Seu clímax... Incrível!",
+            "Goze em mim... Sim!",
+            "Seu sêmen... Quente...",
+            "Adoro esta inundação... Sim!",
+            "Goze fundo... Fundo!",
+            "Seu sêmen... É meu...",
+            "Mais sêmen... Por favor...",
+            "Goze para sempre... Sim!"
+          ]
+        }
+      }
+    },
+    "2ERO_START": {
+      "description": "Aradia thoughts when goblins start penetration",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Não! Eles estão entrando...!",
+            "...Isso está realmente acontecendo... Seus paus...",
+            "...Me sinto tão esticada... Dói...",
+            "...Seus paus verdes... São tão errados...",
+            "...Por favor, pare... Não aguento...",
+            "...Meu corpo... Está sendo violado...",
+            "...Esses monstros... Me usam...",
+            "...Me sinto tão indefesa... Cheia...",
+            "...Seus paus... São tão profundos dentro de mim...",
+            "...Esta dor... É tão intensa...",
+            "...Não consigo gritar... Boca cheia...",
+            "...Seu empurrão... É implacável...",
+            "...Sou apenas um buraco para eles...",
+            "...Este pesadelo... Não acaba...",
+            "...Seus paus... Pulsando dentro de mim..."
+          ],
+          "medium": [
+            "...Seus paus... São tão grandes... Me enchendo...",
+            "...Me sinto esticando... Tão cheia...",
+            "...Esta sensação... É intensa...",
+            "...Seu empurrão... Ritmo...",
+            "...Direto... Não consigo pensar...",
+            "...Meu corpo... Está respondendo...",
+            "...Esses goblins... São habilidosos...",
+            "...Seus paus... Quentes... Duros...",
+            "...Me sinto tão vulnerável...",
+            "...Esta plenitude... É avassaladora...",
+            "...Seu movimento... Sincronizado...",
+            "...Não controlo... Mais...",
+            "...Este prazer... Está se acumulando...",
+            "...Seus paus... Em todos os lugares...",
+            "...Minha resistência... Está enfraquecendo..."
+          ],
+          "high": [
+            "...Oh deus... Seus paus sentem tão incríveis dentro de mim...",
+            "...Tão cheia... Ambos os buracos bloqueados...",
+            "...Seus paus... Tamanho perfeito...",
+            "...Me fodam mais forte... Sim...",
+            "...Preciso disso... Seus paus...",
+            "...Goze dentro... Por favor...",
+            "...Seu empurrão... Celestial...",
+            "...Sou seu buraco... Adoro...",
+            "...Preciso de mais paus... Quero...",
+            "...Seu sêmen... Me encha...",
+            "...Este prazer... É divino...",
+            "...Me deixe insensível... Sim...",
+            "...Seus paus... Me possuem...",
+            "...Em todos os lugares... Dentro...",
+            "...Viciada... Seus paus..."
+          ]
+        }
+      }
+    },
+    "2ERO_1": {
+      "description": "Aradia thoughts during initial fucking",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Eles estão se movendo... Dentro...",
+            "...Seus paus... Empurrando fundo...",
+            "...Não consigo respirar... Boca cheia...",
+            "...Esta violação... Não acaba...",
+            "...Meu corpo... Está saltando...",
+            "...Sua pele verde... Nojenta...",
+            "...Mas seus paus... São tão persistentes...",
+            "...Me sinto usada... Suja...",
+            "...Seu rugido... Selvagem... Medo...",
+            "...Sou apenas... Um brinquedo...",
+            "...Esta dor... E misturada...",
+            "...Seus paus... Pulsando...",
+            "...Não posso escapar...",
+            "...Este pesadelo... Continua...",
+            "...Seu empurrão... Implacável..."
+          ],
+          "medium": [
+            "...Seus paus... Se movendo ritmicamente...",
+            "...Cada centímetro... Sinto...",
+            "...Esta plenitude... É intensa...",
+            "...Seu empurrão... Habilidoso...",
+            "...Meu corpo... Se adaptando...",
+            "...Não posso ajudar... Mas sinto...",
+            "...Seus paus... São tão duros...",
+            "...Este prazer... Está se acumulando...",
+            "...Me sinto tão cheia...",
+            "...Seu movimento... Perfeito...",
+            "...Gemidos... Não consigo parar...",
+            "...Esta sensação... Viciante...",
+            "...Seus paus... Me enchendo...",
+            "...Quero mais...",
+            "...Este calor... Queimando..."
+          ],
+          "high": [
+            "...Sim! Me fodam com esses paus!",
+            "...Seus paus... São tão profundos... Perfeitos...",
+            "...Esta plenitude adoro... Ambos os buracos...",
+            "...Empurrem mais forte... Monstros...",
+            "...Goze dentro agora...",
+            "...Seus paus... Me deixam molhada...",
+            "...Como uma cadela... Me fodam...",
+            "...Preciso de seu sêmen... Tão mal...",
+            "...Seu empurrão... Celestial...",
+            "...Mais! Mais fundo! Mais forte!",
+            "...Seus paus... Possuem meus buracos...",
+            "...Goze em mim... Sim...",
+            "...Sou seu recipiente de sêmen...",
+            "...Me deixe insensível... Por favor...",
+            "...Seus paus... Sentem tão bem..."
+          ]
+        }
+      }
+    },
+    "2ERO_2": {
+      "description": "Aradia thoughts when goblin fucks deeper and harder",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Indo mais fundo... Dói...",
+            "...Seus paus... São tão ásperos...",
+            "...Me sinto rasgando...",
+            "...Esta profundidade... É muita...",
+            "...Seu empurrão... Violento...",
+            "...Meu corpo... Tremendo...",
+            "...Não aguento...",
+            "...Seus paus... Implacáveis...",
+            "...Esta dor... É intensa...",
+            "...Silenciosamente... Gritando...",
+            "...Seu rugido... Medo...",
+            "...Me sinto quebrando...",
+            "...Este ataque... Não para...",
+            "...Seus paus... Me destroem...",
+            "...Me ajude... Alguém..."
+          ],
+          "medium": [
+            "...Mais fundo... Seus paus... Intensos...",
+            "...Cada empurrão... Sinto...",
+            "...Esta profundidade... Avassaladora...",
+            "...Seus paus... Habilidosos...",
+            "...Meu corpo... Respondendo...",
+            "...Não posso ajudar... Mas gemendo...",
+            "...Este prazer... Doloroso...",
+            "...Seu empurrão... Forte...",
+            "...Me sinto tão esticada...",
+            "...Seus paus... Me enchendo...",
+            "...Este calor... Queimando...",
+            "...Me sinto consumida...",
+            "...Seu movimento... Perfeito...",
+            "...Esta plenitude... Viciante...",
+            "...Seus paus... Me possuem..."
+          ],
+          "high": [
+            "...Mais fundo! Me fodam mais fundo!",
+            "...Seus paus... Profundidade perfeita...",
+            "...Sim! Batam mais forte nos meus buracos!",
+            "...Adoro esta intensidade...",
+            "...Goze fundo dentro... Por favor...",
+            "...Seus paus... Atingem todos os pontos...",
+            "...Como uma puta... Me fodam...",
+            "...Preciso de seu sêmen... Fundo...",
+            "...Este prazer... Intenso...",
+            "...Mais forte！Não parem！",
+            "...Seus paus... Me fazem gozar...",
+            "...Me encham completamente...",
+            "...Sou seu buraco...",
+            "...Goze em todos os lugares... Sim...",
+            "...Seu empurrão... Divino..."
+          ]
+        }
+      }
+    },
+    "2ERO_3": {
+      "description": "Aradia thoughts during rhythmic fucking",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Seu ritmo... Não para...",
+            "...Cada movimento... Sinto...",
+            "...Esta sincronização... Medo...",
+            "...Seus paus... Trabalhando juntos...",
+            "...Meu corpo... Saltando indefeso...",
+            "...Não consigo parar...",
+            "...Seu rugido... Sincronizado...",
+            "...Este ataque... Coordenado...",
+            "...Preso... Entre eles...",
+            "...Seus paus... Me enchendo...",
+            "...Este pesadelo... Sincronizado...",
+            "...Tão pequena me sinto...",
+            "...Seu ritmo... Hipnótico...",
+            "...Não posso escapar...",
+            "...Esta foda... Interminável..."
+          ],
+          "medium": [
+            "...Seu ritmo... Perfeito...",
+            "...Me sinto sincronizando...",
+            "...Seus paus... Trabalhando juntos...",
+            "...Este prazer... Está se acumulando...",
+            "...Meu corpo... Movendo com eles...",
+            "...Não posso ajudar... Mas sentindo...",
+            "...Seu empurrão... Harmonioso...",
+            "...Esta plenitude... Completa...",
+            "...Seu movimento... Belo...",
+            "...Me sinto parte disto...",
+            "...Seu ritmo... Viciante...",
+            "...Este calor... Compartilhado...",
+            "...Seus paus... Complementares...",
+            "...Quero mais...",
+            "...Este êxtase... Compartilhado..."
+          ],
+          "high": [
+            "...Ritmo perfeito... Adoro...",
+            "...Seus paus... Sincronização perfeita...",
+            "...Me fodam juntos... Sim...",
+            "...Esta coordenação... Incrível...",
+            "...Gozem simultaneamente...",
+            "...Seu empurrão... Celestial...",
+            "...Ambos os buracos perfeitamente cheios...",
+            "...Sou seu brinquedo sincronizado...",
+            "...Mais forte no ritmo... Sim...",
+            "...Seus paus... Trabalham perfeitamente...",
+            "...Goze dentro... Ambos...",
+            "...Este prazer... Sincronizado...",
+            "...Me fodam em sincronia...",
+            "...Seu ritmo... Me enlouquece...",
+            "...Foda perfeita... Sim..."
+          ]
+        }
+      }
+    },
+    "2ERO_4": {
+      "description": "Aradia thoughts when goblins are about to cum",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Eles estão inchando... Dentro...",
+            "...Seus paus... Ficando duros...",
+            "...Tensão... Sinto...",
+            "...Eles vão... Gozar...",
+            "...Isso é... O fim...",
+            "...Seus paus... Pulsando...",
+            "...Não posso detê-los...",
+            "...Este clímax... Final...",
+            "...Seu rugido... Mais alto...",
+            "...Seu orgasmo... Sinto...",
+            "...Seu sêmen... Vindo...",
+            "...Não posso escapar...",
+            "...Esta inundação... Inevitável...",
+            "...Seus paus... Preparados...",
+            "...Gozar... Dentro..."
+          ],
+          "medium": [
+            "...Sinto eles se acumulando...",
+            "...Seus paus... Inchando...",
+            "...Este clímax... Próximo...",
+            "...Seu empurrão... Urgente...",
+            "...Pressão... Sinto...",
+            "...Seu sêmen... Preparado...",
+            "...Este momento... Intenso...",
+            "...Seus paus... Pulsando...",
+            "...Não posso esperar...",
+            "...Esta libertação... Vindo...",
+            "...Seu orgasmo... Compartilhado...",
+            "...Sêmen... Logo...",
+            "...Seus paus... Preparados...",
+            "...Este prazer... Pico...",
+            "...Completamente cheia..."
+          ],
+          "high": [
+            "...Goze dentro... Por favor...",
+            "...Seus paus... São tão inchados...",
+            "...Preciso de seu sêmen... Agora...",
+            "...Me encham... Monstros...",
+            "...Na boca também...",
+            "...Seu clímax... Perfeito...",
+            "...Inundação... Sim...",
+            "...Seu sêmen... Quente...",
+            "...Em todos os lugares... Dentro...",
+            "...Quero tudo... Sim...",
+            "...Seus paus... Preparados para explodir...",
+            "...Goze em mim... Por favor...",
+            "...Me encham completamente...",
+            "...Seu sêmen... É meu...",
+            "...Goze agora... Forte..."
+          ]
+        }
+      }
+    },
+    "2ERO_iki": {
+      "description": "Aradia thoughts during goblin climax",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Eles estão gozando... Dentro...",
+            "...Sêmen quente... Me enchendo...",
+            "...Seus paus... Pulsando...",
+            "...Sêmen... Em todos os lugares...",
+            "...Inundação... Sinto...",
+            "...Este calor... Queimando...",
+            "...Seu sêmen... Transbordando...",
+            "...Cheia de sêmen...",
+            "...Seu clímax... Intenso...",
+            "...Sêmen... Caindo...",
+            "...Esta confusão... Pegajosa...",
+            "...Seu sêmen... Me marcando...",
+            "...Coberta de sêmen...",
+            "...Esta vergonha... Completa...",
+            "...Sêmen... Tanto sêmen..."
+          ],
+          "medium": [
+            "...Seu sêmen... É tão quente...",
+            "...Completamente cheia...",
+            "...Seus paus... Se esvaziando...",
+            "...Sêmen... Transbordando...",
+            "...Este calor... Intenso...",
+            "...Seu clímax... Forte...",
+            "...Sêmen... Em todos os lugares...",
+            "...Me sinto marcada...",
+            "...Sua semente... Dentro...",
+            "...Esta plenitude... Última...",
+            "...Sêmen... Caindo...",
+            "...Seu sêmen... Quente...",
+            "...Este prazer... Misturado...",
+            "...Sêmen... Me enchendo...",
+            "...Seu orgasmo... Satisfatório..."
+          ],
+          "high": [
+            "...Sêmen! Me encham com sêmen!",
+            "...Seu sêmen quente... Perfeito!",
+            "...Na boca... Engula...",
+            "...Em todos os lugares... Sim!",
+            "...Seu sêmen... Delicioso...",
+            "...Me encham completamente...",
+            "...Goze mais forte... Monstros!",
+            "...Seu clímax... Incrível!",
+            "...Goze em mim... Sim!",
+            "...Seu sêmen... Tão quente...",
+            "...Adoro esta inundação... Sim!",
+            "...Goze fundo... Fundo!",
+            "...Seu sêmen... É meu...",
+            "...Mais sêmen... Por favor...",
+            "...Goze para sempre... Sim!"
+          ]
+        }
+      }
+    }

@@ -1,0 +1,8 @@
+{
+  "speakerLabel": "Бандит",
+  "stepId": "fsp_sex_hesitate_r01",
+  "stepKind": "continue",
+  "continueOutcomeId": "noop",
+  "continueNextStepId": "fsp_sex_hesitate_c02",
+  "npcLinePoolId": "fsp_sex_hesitate_react"
+}

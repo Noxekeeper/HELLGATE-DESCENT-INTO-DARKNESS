@@ -1,0 +1,1393 @@
+{
+  "settings": {
+    "responseDelayMin": 1.5,
+    "responseDelayMax": 2.5,
+    "fontSize": 22.0,
+    "verticalOffset": 100.0,
+    "displayDuration": 5.0
+  },
+  "animations": {
+    "START": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "No! He's grabbing my hair! It hurts!",
+              "I can't... he's dragging me down by my hair!",
+              "My knees... hitting the floor... please stop!"
+            ],
+            "low": [
+              "His grip... so rough... I have to go down...",
+              "He's pulling me to my knees... I can't resist...",
+              "The pain in my scalp... tears in my eyes..."
+            ],
+            "medium_low": [
+              "I'm being pulled down... just have to obey...",
+              "His strength... overwhelming... I submit...",
+              "On my knees now... where he wants me..."
+            ],
+            "medium": [
+              "He's positioning me... I know what's coming...",
+              "His grip controls me... I accept it...",
+              "Down on my knees... this is my place now..."
+            ],
+            "medium_high": [
+              "His hands in my hair... commanding me...",
+              "I'm going down for him... willingly...",
+              "On my knees... where I should be..."
+            ],
+            "high": [
+              "Yes... pull my hair... put me on my knees...",
+              "His strong hands... guiding me down...",
+              "I want to be here... at his feet..."
+            ],
+            "very_high": [
+              "Mmm... his hands in my hair feel so good!",
+              "Pull me down, master! I'm yours!",
+              "On my knees for you... always!"
+            ]
+          }
+        },
+        {
+          "step": 2,
+          "delay": 1.0,
+          "thoughts": {
+            "very_low": [
+              "Oh god! A knife! He's going to kill me!",
+              "The blade... so close to my throat... I'm terrified!",
+              "Please don't cut me! I'll do anything!"
+            ],
+            "low": [
+              "That knife... one wrong move and I'm dead...",
+              "I can feel the cold steel... I'm shaking...",
+              "He's serious... he'll really hurt me..."
+            ],
+            "medium_low": [
+              "The knife reminds me... I have no choice...",
+              "I must obey... or he'll use it...",
+              "Fear keeps me still... compliant..."
+            ],
+            "medium": [
+              "The blade... a promise of what happens if I disobey...",
+              "I understand the threat... I'll cooperate...",
+              "His weapon... his control over me..."
+            ],
+            "medium_high": [
+              "The danger... it makes my heart race...",
+              "His knife... a reminder of his power...",
+              "I'm excited... and scared... both..."
+            ],
+            "high": [
+              "The blade against my skin... thrilling...",
+              "I love how dangerous this feels...",
+              "His weapon... his dominance... I need it..."
+            ],
+            "very_high": [
+              "Yes! Threaten me with your blade!",
+              "The danger makes me so wet!",
+              "Cut me, hurt me, own me completely!"
+            ]
+          }
+        },
+        {
+          "step": 3,
+          "delay": 1.5,
+          "thoughts": {
+            "very_low": [
+              "No! He's taking it out! I don't want to see!",
+              "Why is he... oh god... this can't be happening!",
+              "I can't look... but he's forcing me to!"
+            ],
+            "low": [
+              "He's exposing himself... right in my face...",
+              "I know what he wants... the shame burns...",
+              "I have to look... he's making me..."
+            ],
+            "medium_low": [
+              "His cock... right in front of me...",
+              "I see what's coming... I have to accept it...",
+              "This is happening... whether I want it or not..."
+            ],
+            "medium": [
+              "He's showing me what I have to do...",
+              "His manhood... I'm supposed to service it...",
+              "I understand... I'll do what he wants..."
+            ],
+            "medium_high": [
+              "His cock... it's impressive...",
+              "I'm curious... a little interested...",
+              "Maybe this won't be so terrible..."
+            ],
+            "high": [
+              "Mmm... he's big... I like what I see...",
+              "I want to touch it... taste it...",
+              "Show me more... I'm ready..."
+            ],
+            "very_high": [
+              "Yes! Your beautiful cock! Let me worship it!",
+              "I need it! Please let me have it!",
+              "I'm drooling for you already!"
+            ]
+          }
+        },
+        {
+          "step": 4,
+          "delay": 2.0,
+          "thoughts": {
+            "very_low": [
+              "A gun! Against my chest! He'll shoot me!",
+              "I can feel the barrel... cold metal... I'm going to die!",
+              "Please! I'll do whatever you want! Don't shoot!"
+            ],
+            "low": [
+              "The gun pressed against me... one wrong move...",
+              "He could pull the trigger... I'd be dead...",
+              "I'm completely at his mercy... terrified..."
+            ],
+            "medium_low": [
+              "The gun... another reminder of my position...",
+              "I'm helpless... he controls my life...",
+              "Obey or die... simple as that..."
+            ],
+            "medium": [
+              "His weapon against me... I understand perfectly...",
+              "I belong to him now... life or death...",
+              "I'll do what he says... I have no choice..."
+            ],
+            "medium_high": [
+              "The gun... dangerous... exciting...",
+              "My heart pounds... from fear and arousal...",
+              "This power over me... I'm drawn to it..."
+            ],
+            "high": [
+              "Yes... hold that gun to me... it's so hot...",
+              "The danger... the power... I love it...",
+              "Threaten me... dominate me... I'm yours..."
+            ],
+            "very_high": [
+              "Pull the trigger or fuck me! Either way I'm yours!",
+              "The gun makes me so wet! Use me!",
+              "I want to feel your power! Destroy me!"
+            ]
+          }
+        }
+      ]
+    },
+    "START2": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "He's telling me... touch him or he'll shoot!",
+              "I don't want to! But I don't want to die!",
+              "His words are so cruel... I'm crying..."
+            ],
+            "low": [
+              "Jerk him off or get shot... no real choice...",
+              "His voice is so cold... commanding...",
+              "I have to do it... to survive..."
+            ],
+            "medium_low": [
+              "His demands are clear... obey or suffer...",
+              "I have to please him... it's necessary...",
+              "Survival means compliance..."
+            ],
+            "medium": [
+              "He wants me to stroke him... I understand...",
+              "I'll do it... get through this...",
+              "My hands... his cock... let's just finish this..."
+            ],
+            "medium_high": [
+              "He's telling me to touch him... okay...",
+              "Maybe it won't be so bad...",
+              "I'm a little curious about how it feels..."
+            ],
+            "high": [
+              "He wants my hands on him... I want that too...",
+              "I'm eager to touch... to please...",
+              "Yes, I'll stroke you... gladly..."
+            ],
+            "very_high": [
+              "Command me! Tell me how to please you!",
+              "I need to touch your cock! Let me!",
+              "I'll do anything you say, master!"
+            ]
+          }
+        },
+        {
+          "step": 2,
+          "delay": 1.0,
+          "thoughts": {
+            "very_low": [
+              "My hands... shaking as I reach out...",
+              "I can't believe I'm doing this... it's wrong!",
+              "The gun... reminding me I have no choice..."
+            ],
+            "low": [
+              "I'm touching him... his cock is so hot...",
+              "This is humiliating... but necessary...",
+              "I have to stroke... he's watching me..."
+            ],
+            "medium_low": [
+              "My hands on him... doing what he wants...",
+              "It's warm... throbbing in my grip...",
+              "Just mechanical motions... get through it..."
+            ],
+            "medium": [
+              "I'm stroking him... it's not terrible...",
+              "His cock... pulsing in my hands...",
+              "I can do this... just focus..."
+            ],
+            "medium_high": [
+              "He feels... interesting in my hands...",
+              "I'm getting the rhythm... he likes it...",
+              "This is kind of... not awful..."
+            ],
+            "high": [
+              "Mmm... he's so hard for me...",
+              "I love feeling him throb in my hands...",
+              "I want to please him... make him feel good..."
+            ],
+            "very_high": [
+              "Your cock is perfect! So hard!",
+              "I love stroking you! Give me more!",
+              "Let me worship your beautiful cock!"
+            ]
+          }
+        },
+        {
+          "step": 3,
+          "delay": 1.5,
+          "thoughts": {
+            "very_low": [
+              "He's groaning... getting harder... I feel sick...",
+              "Every stroke makes me hate this more...",
+              "Tears are falling... but I can't stop..."
+            ],
+            "low": [
+              "He's getting close... I can tell...",
+              "The shame... it never goes away...",
+              "I just want this to end..."
+            ],
+            "medium_low": [
+              "His breathing changes... almost done...",
+              "I'm just... doing what's necessary...",
+              "Soon this part will be over..."
+            ],
+            "medium": [
+              "He's responding... I'm doing it right...",
+              "My hands keep moving... automatic now...",
+              "Getting him ready... that's all..."
+            ],
+            "medium_high": [
+              "His grunts... he's enjoying this...",
+              "I'm actually good at this...",
+              "His pleasure... it's not terrible to cause..."
+            ],
+            "high": [
+              "Yes... feel good from my hands...",
+              "I love hearing your pleasure...",
+              "I want to make you cum so bad..."
+            ],
+            "very_high": [
+              "Your moans are music to me!",
+              "I'm making you feel amazing!",
+              "Cum for me! I need to see it!"
+            ]
+          }
+        }
+      ]
+    },
+    "ERO": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "No! Not in my mouth! Please!",
+              "He's going to... I can't do this!",
+              "His cock at my lips... I want to run!"
+            ],
+            "low": [
+              "He wants my mouth... oh god...",
+              "I have to take it... or he'll hurt me...",
+              "This is so degrading... but I must..."
+            ],
+            "medium_low": [
+              "In my mouth... that's what he wants...",
+              "I'll do it... get through it somehow...",
+              "Just... open up and take it..."
+            ],
+            "medium": [
+              "He wants oral... I understand...",
+              "I can do this... it's just another act...",
+              "Let me... let me do this for you..."
+            ],
+            "medium_high": [
+              "He wants my mouth on him... okay...",
+              "Maybe I can... maybe I want to try...",
+              "His cock looks... inviting..."
+            ],
+            "high": [
+              "Yes... I want to taste you...",
+              "Let me take you in my mouth...",
+              "I want to please you this way..."
+            ],
+            "very_high": [
+              "I need your cock in my mouth!",
+              "Please let me suck you! I'm begging!",
+              "Use my throat! I'm your cock sleeve!"
+            ]
+          }
+        }
+      ]
+    },
+    "ERO1": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "He's forcing it in! I can't breathe!",
+              "My throat... choking... it hurts so much!",
+              "He's pulling my hair! Ramming deeper!"
+            ],
+            "low": [
+              "So deep... I'm gagging... tears streaming...",
+              "I have to relax... or it'll hurt more...",
+              "He's using my throat... violating me..."
+            ],
+            "medium_low": [
+              "Deep in my throat... I'm struggling...",
+              "I need to breathe... but he doesn't care...",
+              "Just endure... just survive this..."
+            ],
+            "medium": [
+              "He's throatfucking me... it's intense...",
+              "I'm trying to accommodate him...",
+              "The fullness... overwhelming..."
+            ],
+            "medium_high": [
+              "So deep... I'm learning to take it...",
+              "My throat... stretching for him...",
+              "The sensation... intense but... interesting..."
+            ],
+            "high": [
+              "Yes... use my throat... fuck it hard...",
+              "I love feeling you so deep...",
+              "Choke me with your cock... please..."
+            ],
+            "very_high": [
+              "Destroy my throat! Fuck it raw!",
+              "I don't need to breathe! Just use me!",
+              "Ruin me! Make me your throat slut!"
+            ]
+          }
+        },
+        {
+          "step": 2,
+          "delay": 1.0,
+          "thoughts": {
+            "very_low": [
+              "I'm choking! Gagging! Can't breathe!",
+              "Saliva everywhere... drooling helplessly...",
+              "Please... let me breathe... just for a second!"
+            ],
+            "low": [
+              "My throat burns... stretched around him...",
+              "Tears and spit... I'm a mess...",
+              "The gagging... I can't control it..."
+            ],
+            "medium_low": [
+              "I'm drooling... can't help it...",
+              "My throat... learning to accept him...",
+              "Just breathe when I can... survive..."
+            ],
+            "medium": [
+              "My mouth is so full... completely...",
+              "Saliva dripping... can't control it...",
+              "I'm managing... somehow..."
+            ],
+            "medium_high": [
+              "The mess I'm making... it's okay...",
+              "My throat... getting used to this...",
+              "I can take it... I can handle him..."
+            ],
+            "high": [
+              "I love being a drooling mess for you...",
+              "Choke me more... I can take it...",
+              "My throat is yours... use it..."
+            ],
+            "very_high": [
+              "I'm your drooling fuck toy!",
+              "Ruin me completely! No mercy!",
+              "My throat exists only for your pleasure!"
+            ]
+          }
+        },
+        {
+          "step": 3,
+          "delay": 1.5,
+          "thoughts": {
+            "very_low": [
+              "I feel like I'm dying... suffocating...",
+              "The pain... in my jaw... my throat...",
+              "How much longer... I can't take much more!"
+            ],
+            "low": [
+              "Every thrust hurts... my jaw aches...",
+              "I'm just... enduring... waiting for it to end...",
+              "The humiliation... never-ending..."
+            ],
+            "medium_low": [
+              "My throat is sore... but I continue...",
+              "Just a little longer... I can do this...",
+              "Numb to it now... detached..."
+            ],
+            "medium": [
+              "The rhythm... I'm following it...",
+              "My throat... adjusting to his size...",
+              "I'm doing what he needs..."
+            ],
+            "medium_high": [
+              "I'm getting better at this...",
+              "My throat... made for him...",
+              "The pleasure I'm giving... satisfying..."
+            ],
+            "high": [
+              "Use my throat harder... I love it...",
+              "I'm your perfect throat slut...",
+              "More... deeper... I need it..."
+            ],
+            "very_high": [
+              "My throat is your cock sheath!",
+              "Fuck me until I pass out!",
+              "I live to be your throat pussy!"
+            ]
+          }
+        }
+      ]
+    },
+    "ERO2": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "He's fucking my face! Like I'm nothing!",
+              "My cheek bulges... I can see his cock inside!",
+              "This is torture... pure torture!"
+            ],
+            "low": [
+              "He's pounding my mouth... relentless...",
+              "My cheek... stretched around him...",
+              "So degrading... being used like this..."
+            ],
+            "medium_low": [
+              "Face fucking... I'm just a hole to him...",
+              "My mouth... just for his pleasure...",
+              "I accept it... this is what I am now..."
+            ],
+            "medium": [
+              "He's using my face... completely...",
+              "I'm his toy... his fucktoy...",
+              "My mouth exists for this..."
+            ],
+            "medium_high": [
+              "He's fucking my face... I don't mind...",
+              "Being used like this... it's okay...",
+              "I'm his to use... and that's fine..."
+            ],
+            "high": [
+              "Yes! Fuck my face! I'm your toy!",
+              "Use me harder! I love it!",
+              "My face is yours to ruin!"
+            ],
+            "very_high": [
+              "Destroy my face! Make me your cum dump!",
+              "I'm nothing but holes for you!",
+              "Ruin me! I'm your face pussy!"
+            ]
+          }
+        },
+        {
+          "step": 2,
+          "delay": 1.0,
+          "thoughts": {
+            "very_low": [
+              "Out and back in! He's stabbing my throat!",
+              "Each thrust... a new violation...",
+              "I'm going to be sick... I can't..."
+            ],
+            "low": [
+              "In and out... brutal rhythm...",
+              "My mouth is just... a tool for him...",
+              "The tears won't stop falling..."
+            ],
+            "medium_low": [
+              "He pulls out... then back in deep...",
+              "I gasp for air when I can...",
+              "This is my life now... just accept it..."
+            ],
+            "medium": [
+              "The rhythm... in and out... I follow...",
+              "My mouth... accommodating him...",
+              "I'm managing this... surviving..."
+            ],
+            "medium_high": [
+              "Each thrust... I'm ready for...",
+              "In and out... I'm getting good at this...",
+              "My mouth... perfectly shaped for him..."
+            ],
+            "high": [
+              "Yes! Fuck in and out! I love every thrust!",
+              "Use my mouth like a pussy!",
+              "I want every brutal thrust!"
+            ],
+            "very_high": [
+              "Stab my throat with your cock!",
+              "Fuck my face hole! Destroy it!",
+              "I'm your mindless cock socket!"
+            ]
+          }
+        },
+        {
+          "step": 3,
+          "delay": 1.5,
+          "thoughts": {
+            "very_low": [
+              "My jaw... it's going to break...",
+              "The pain... radiating through my face...",
+              "Please... please just finish..."
+            ],
+            "low": [
+              "Everything hurts... jaw, throat, head...",
+              "I'm so tired... exhausted...",
+              "Just want it to end... please..."
+            ],
+            "medium_low": [
+              "My whole face aches... but I continue...",
+              "Mechanical movements... automatic...",
+              "Almost numb to it... disconnected..."
+            ],
+            "medium": [
+              "I'm used to the feeling now...",
+              "My jaw... sore but functional...",
+              "Doing my job... that's all..."
+            ],
+            "medium_high": [
+              "The ache... somehow satisfying...",
+              "I'm proving I can take it...",
+              "My endurance... growing..."
+            ],
+            "high": [
+              "The pain is pleasure now...",
+              "I love how my jaw aches for you...",
+              "Break my face... I want it..."
+            ],
+            "very_high": [
+              "Shatter my jaw! I don't care!",
+              "Pain is my ecstasy!",
+              "Ruin me completely! I'm yours!"
+            ]
+          }
+        }
+      ]
+    },
+    "ERO3": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "He says I'll swallow it all... no...",
+              "I don't want his cum! Please!",
+              "The thought makes me sick..."
+            ],
+            "low": [
+              "He's going to... in my mouth...",
+              "I'll have to swallow... oh god...",
+              "This final humiliation..."
+            ],
+            "medium_low": [
+              "He'll finish in my mouth... I know...",
+              "I'll have to drink it... accept it...",
+              "Just one more thing to endure..."
+            ],
+            "medium": [
+              "He's close... I can feel it...",
+              "I'll swallow when he cums... I understand...",
+              "That's what's expected... what I must do..."
+            ],
+            "medium_high": [
+              "He's going to cum soon... in my mouth...",
+              "I'll take it... it's okay...",
+              "Maybe it won't be so bad..."
+            ],
+            "high": [
+              "Yes... cum in my mouth... I want it...",
+              "I want to taste your seed...",
+              "Fill my mouth... I'm ready..."
+            ],
+            "very_high": [
+              "Flood my mouth with your cum!",
+              "I need to drink your seed!",
+              "Give me every drop! I'm starving for it!"
+            ]
+          }
+        },
+        {
+          "step": 2,
+          "delay": 1.0,
+          "thoughts": {
+            "very_low": [
+              "He's thrusting faster... it's coming!",
+              "I can't escape... I'll have to take it!",
+              "No no no... please not in my mouth!"
+            ],
+            "low": [
+              "Almost there... I can tell...",
+              "I'm bracing myself... for the inevitable...",
+              "This horrible moment... approaching..."
+            ],
+            "medium_low": [
+              "He's getting close... I prepare myself...",
+              "Soon it'll be over... just swallow and done...",
+              "One more moment... then it's finished..."
+            ],
+            "medium": [
+              "He's about to finish... I'm ready...",
+              "I'll take what comes... accept it...",
+              "This is part of it... I understand..."
+            ],
+            "medium_high": [
+              "He's almost there... I want to see...",
+              "I'm curious what it'll be like...",
+              "Ready to receive him..."
+            ],
+            "high": [
+              "Cum for me! I'm ready!",
+              "I want to feel you explode...",
+              "Give it all to me... now!"
+            ],
+            "very_high": [
+              "Yes! Cum! Flood me!",
+              "I need your hot cum!",
+              "Paint my insides white!"
+            ]
+          }
+        },
+        {
+          "step": 3,
+          "delay": 1.5,
+          "thoughts": {
+            "very_low": [
+              "Here it comes... oh god!",
+              "I feel him swelling... it's happening!",
+              "I'm going to vomit... I can't!"
+            ],
+            "low": [
+              "Any second now... steel myself...",
+              "The moment I've been dreading...",
+              "Just get through it... somehow..."
+            ],
+            "medium_low": [
+              "He's right there... about to burst...",
+              "I'm as ready as I'll ever be...",
+              "Here it comes... accept it..."
+            ],
+            "medium": [
+              "He's pulsing... I feel it...",
+              "I'm prepared... mouth open...",
+              "This is happening... now..."
+            ],
+            "medium_high": [
+              "I feel him throbbing... exciting...",
+              "I'm ready to receive...",
+              "Come on... let me have it..."
+            ],
+            "high": [
+              "I feel you pulsing! Give it to me!",
+              "Explode in my mouth!",
+              "I want every drop! Now!"
+            ],
+            "very_high": [
+              "Erupt in me! Feed me!",
+              "I'm your cum toilet!",
+              "Pump me full! Do it!"
+            ]
+          }
+        }
+      ]
+    },
+    "ERO4": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "Deeper! He won't stop! Suffocating!",
+              "Can't breathe at all! Dying!",
+              "My throat... completely blocked!"
+            ],
+            "low": [
+              "So deep... no air... stars in my vision...",
+              "He's buried in my throat... won't pull out...",
+              "I'm fading... need air..."
+            ],
+            "medium_low": [
+              "Completely filled... no room for air...",
+              "Just hold on... he'll finish soon...",
+              "My throat... stretched to the limit..."
+            ],
+            "medium": [
+              "Fully impaled... taking all of him...",
+              "I'm holding... waiting for him to cum...",
+              "Almost there... I can do this..."
+            ],
+            "medium_high": [
+              "So deep inside me... I love the fullness...",
+              "My throat... made for this...",
+              "Finish in me... I'm ready..."
+            ],
+            "high": [
+              "Buried in my throat! Yes! Cum!",
+              "I don't need air! Just your cock!",
+              "Explode deep in my throat!"
+            ],
+            "very_high": [
+              "Kill me with your cock! I don't care!",
+              "Cum straight into my stomach!",
+              "I'm your throat condom! Fill me!"
+            ]
+          }
+        },
+        {
+          "step": 2,
+          "delay": 1.0,
+          "thoughts": {
+            "very_low": [
+              "I'm blacking out... consciousness fading...",
+              "Can't... hold on... much... longer...",
+              "Everything going dark... suffocating..."
+            ],
+            "low": [
+              "Vision blurring... desperately need air...",
+              "How much longer... can't breathe...",
+              "Please... just finish... please..."
+            ],
+            "medium_low": [
+              "Lightheaded... holding on by willpower...",
+              "Just a bit more... I can make it...",
+              "Stay conscious... almost done..."
+            ],
+            "medium": [
+              "The pressure... intense... but manageable...",
+              "I'm trained for this now... I can last...",
+              "Any moment... he'll release..."
+            ],
+            "medium_high": [
+              "The intensity... exhilarating...",
+              "I can take this... prove myself...",
+              "Finish in me... I'm yours..."
+            ],
+            "high": [
+              "Choke me with your cum!",
+              "I want to drown in your seed!",
+              "Use my throat until you explode!"
+            ],
+            "very_high": [
+              "Suffocate me with your cock!",
+              "Death by cock! Perfect!",
+              "Fill every cell of my body!"
+            ]
+          }
+        },
+        {
+          "step": 3,
+          "delay": 1.5,
+          "thoughts": {
+            "very_low": [
+              "Any second... he's going to...",
+              "I feel him... pulsing... growing...",
+              "Oh god... it's happening... now!"
+            ],
+            "low": [
+              "His cock is throbbing... right there...",
+              "The moment... finally... about to happen...",
+              "I'm going to feel it... shoot into me..."
+            ],
+            "medium_low": [
+              "He's about to erupt... I feel it...",
+              "Ready... as ready as I can be...",
+              "It's coming... the end..."
+            ],
+            "medium": [
+              "I feel the pulsing... he's there...",
+              "Any moment now... I'm prepared...",
+              "Let it happen... just let it happen..."
+            ],
+            "medium_high": [
+              "He's right at the edge... I feel it...",
+              "I want to feel him release...",
+              "Come on... give it to me..."
+            ],
+            "high": [
+              "I feel you about to explode! Do it!",
+              "Cum! Cum deep in my throat!",
+              "I'm dying to feel you burst!"
+            ],
+            "very_high": [
+              "Erupt! Flood my body!",
+              "I'm your cum receptacle!",
+              "Pump it all into me! NOW!"
+            ]
+          }
+        }
+      ]
+    },
+    "FIN": {
+      "events": {
+        "FIN": {
+          "very_low": [
+            "Oh god! He's cumming! So much!",
+            "It's filling my mouth! I can't... it's everywhere!",
+            "The taste... oh god... I'm going to be sick!",
+            "There's so much! It won't stop!",
+            "I'm drowning in it! Choking!",
+            "Hot... thick... disgusting! Make it stop!",
+            "My mouth is overflowing! I can't hold it all!",
+            "It's shooting down my throat! No!"
+          ],
+          "low": [
+            "He's cumming... filling my mouth completely...",
+            "So much cum... warm and thick... I hate this...",
+            "I can feel each spurt... one after another...",
+            "It's coating everything... my tongue, my throat...",
+            "The volume... there's so much... overwhelming...",
+            "Wave after wave... filling me up...",
+            "I'm holding it in my mouth... barely...",
+            "The taste... salty... bitter... tears mixing with it..."
+          ],
+          "medium_low": [
+            "He's releasing... I feel it flooding my mouth...",
+            "Warm cum filling me... I accept it...",
+            "So much... but I hold it all...",
+            "Each pulse... more and more...",
+            "My mouth is full... holding it there...",
+            "This is it... the final part...",
+            "I'm containing it all... waiting for his command...",
+            "The warmth spreads... throughout my mouth..."
+          ],
+          "medium": [
+            "He's cumming... I receive it all...",
+            "The warmth... filling my mouth completely...",
+            "Pulse after pulse... I take everything...",
+            "My mouth holds his seed... all of it...",
+            "The sensation... strange but... acceptable...",
+            "I'm his vessel... for this moment...",
+            "Each spurt... I feel and accept...",
+            "Full mouth... waiting... obedient..."
+          ],
+          "medium_high": [
+            "Mmm... he's cumming... I feel every pulse...",
+            "The warmth is nice... filling me up...",
+            "So much for me... I'm taking it all...",
+            "Each spurt... a gift I receive...",
+            "My mouth holds his precious seed...",
+            "The taste... not bad... interesting even...",
+            "I'm honored to receive this...",
+            "Warm and thick... coating my mouth..."
+          ],
+          "high": [
+            "Yes! Cum for me! Fill my mouth!",
+            "So much delicious cum! I love it!",
+            "Every pulse... every drop... mine!",
+            "I'm catching it all! Don't waste a drop!",
+            "The taste... amazing! Give me more!",
+            "My mouth is your cum bowl! Fill it!",
+            "I want to savor every bit!",
+            "Paint my mouth white! Yes!"
+          ],
+          "very_high": [
+            "YES! FLOOD ME! DROWN ME IN CUM!",
+            "I'M YOUR CUM DUMP! FILL ME!",
+            "MORE! GIVE ME EVERYTHING!",
+            "I LIVE FOR YOUR SEED!",
+            "MY MOUTH IS YOUR TOILET!",
+            "PUMP ME FULL! I'M NOTHING BUT A HOLE!",
+            "DIVINE NECTAR! BLESS ME WITH IT!",
+            "I'M ASCENDING! CUM IS MY HEAVEN!"
+          ]
+        },
+        "SE": {
+          "se_count_1": {
+            "very_low": [
+              "More?! There's even more coming!",
+              "It won't stop! How much can he have?!",
+              "I'm drowning! Can't breathe!",
+              "Please stop! No more!",
+              "My mouth can't hold anymore!"
+            ],
+            "low": [
+              "Another wave... so much...",
+              "It keeps coming... endlessly...",
+              "My mouth is completely full now...",
+              "How much more... can there be...",
+              "I'm struggling to hold it all..."
+            ],
+            "medium_low": [
+              "More coming... I'm holding steady...",
+              "Another pulse... I contain it...",
+              "My mouth is packed... but I manage...",
+              "Keep cumming... I can take it...",
+              "I'm his reservoir... I accept all..."
+            ],
+            "medium": [
+              "More seed... I collect it all...",
+              "Each additional spurt... received...",
+              "My mouth handles the volume...",
+              "I'm doing well... keeping it all in...",
+              "His pleasure continues... I serve..."
+            ],
+            "medium_high": [
+              "More! Yes! Keep cumming!",
+              "I want every drop you have!",
+              "Fill me more! I can take it!",
+              "My mouth wants more of your cum!",
+              "Don't stop! I love this!"
+            ],
+            "high": [
+              "More cum! Yes! Give it all to me!",
+              "I'm greedy for your seed!",
+              "Pump more into my slutty mouth!",
+              "I want to be completely filled!",
+              "Every drop is precious to me!"
+            ],
+            "very_high": [
+              "ENDLESS CUM! MY DREAM!",
+              "NEVER STOP CUMMING IN ME!",
+              "I'M YOUR INFINITE CUM STORAGE!",
+              "DROWN ME! KILL ME WITH CUM!",
+              "I WORSHIP YOUR ENDLESS SEED!"
+            ]
+          },
+          "se_count_2": {
+            "very_low": [
+              "STILL MORE?! This is insane!",
+              "I can't... it's overflowing!",
+              "Too much! Way too much!",
+              "I'm going to vomit it all out!"
+            ],
+            "low": [
+              "Even more... unbelievable...",
+              "I'm at my limit... can barely hold...",
+              "The amount... staggering...",
+              "My cheeks are bulging... so full..."
+            ],
+            "medium_low": [
+              "Still cumming... impressive volume...",
+              "I'm holding it... all of it...",
+              "My mouth is stretched... but managing...",
+              "So much seed... but I contain it..."
+            ],
+            "medium": [
+              "Continuing to cum... I receive all...",
+              "My mouth accommodates everything...",
+              "Such volume... but I'm capable...",
+              "I hold it all... dutifully..."
+            ],
+            "medium_high": [
+              "So much! I love how much you came!",
+              "My mouth is stuffed! Perfect!",
+              "You came so much for me!",
+              "This is amazing! So full!"
+            ],
+            "high": [
+              "Incredible load! I'm in heaven!",
+              "You filled me completely! Yes!",
+              "I'm your perfect cum container!",
+              "Best gift ever! So much cum!"
+            ],
+            "very_high": [
+              "OCEANIC LOAD! I'M SWIMMING IN IT!",
+              "MY MOUTH UNIVERSE OF CUM!",
+              "INFINITE BLESSING! THANK YOU!",
+              "I'M TRANSCENDING THROUGH YOUR SEED!"
+            ]
+          }
+        }
+      }
+    },
+    "FIN2": {
+      "chain": [
+        {
+          "step": 1,
+          "delay": 0.5,
+          "thoughts": {
+            "very_low": [
+              "He's pulling out... cum is stretching from his cock...",
+              "I see the string of cum... connecting us... disgusting...",
+              "He's shaking my head... I want to spit it out so bad!"
+            ],
+            "low": [
+              "The cum stretches between us... visible proof...",
+              "He's holding my hair... shaking my head around...",
+              "I want to spit... but the gun... I can't..."
+            ],
+            "medium_low": [
+              "Cum string hanging... he's watching me...",
+              "My head being moved... I keep my mouth closed...",
+              "Have to hold it... can't let any spill..."
+            ],
+            "medium": [
+              "The visual... him pulling away... cum connects us...",
+              "I'm holding it all in my mouth... obediently...",
+              "He's examining me... making sure I comply..."
+            ],
+            "medium_high": [
+              "The cum string... it's kind of... beautiful...",
+              "He's looking at me... I show I'm good...",
+              "Holding his gift... ready to swallow..."
+            ],
+            "high": [
+              "The cum string is beautiful! I love this moment!",
+              "Look at me! I'm holding all your cum!",
+              "I'm your good girl! See?"
+            ],
+            "very_high": [
+              "Divine string connecting us! Holy moment!",
+              "I treasure every drop you gave me!",
+              "I'm your perfect cum keeper!"
+            ]
+          }
+        },
+        {
+          "step": 2,
+          "delay": 1.0,
+          "thoughts": {
+            "very_low": [
+              "He's telling me to swallow... or he'll shoot me!",
+              "The gun against my breast... I have no choice!",
+              "I have to... I have to drink this..."
+            ],
+            "low": [
+              "Swallow or die... the ultimatum is clear...",
+              "The gun barrel on my chest... cold and threatening...",
+              "I'm preparing myself... to do it..."
+            ],
+            "medium_low": [
+              "His command... swallow... the gun reinforces it...",
+              "I have to drink his cum... no alternative...",
+              "Just do it... get it over with..."
+            ],
+            "medium": [
+              "He wants me to swallow... I will...",
+              "The gun is just insurance... I understand...",
+              "I'll do it now... drink it down..."
+            ],
+            "medium_high": [
+              "He wants me to swallow... okay...",
+              "The gun... just for show... I'll do it anyway...",
+              "Time to drink... I'm ready..."
+            ],
+            "high": [
+              "I want to swallow! Let me!",
+              "I'll drink every drop gladly!",
+              "Watch me swallow your precious seed!"
+            ],
+            "very_high": [
+              "I'll drink it! It's my communion!",
+              "Let me consume your divine essence!",
+              "I'm honored to swallow your gift!"
+            ]
+          }
+        },
+        {
+          "step": 3,
+          "delay": 1.5,
+          "thoughts": {
+            "very_low": [
+              "I'm... I'm swallowing it... oh god...",
+              "The texture... thick... sliding down...",
+              "I can feel it... going into my stomach... I'm crying..."
+            ],
+            "low": [
+              "Swallowing... the warm cum slides down my throat...",
+              "I feel it... descending... coating everything...",
+              "It's inside me now... his seed... I'm violated completely..."
+            ],
+            "medium_low": [
+              "Drinking it down... thick and warm...",
+              "I feel it travel down... into my stomach...",
+              "It's done... I swallowed it all... as commanded..."
+            ],
+            "medium": [
+              "Swallowing... the cum goes down smoothly...",
+              "I can feel it... settling in my stomach...",
+              "Done... I consumed it all... as required..."
+            ],
+            "medium_high": [
+              "Mmm... swallowing it... not bad actually...",
+              "The warmth spreads through me... inside...",
+              "I drank it all... I did good..."
+            ],
+            "high": [
+              "Delicious! Swallowing every drop!",
+              "I love feeling it slide down into me!",
+              "Your cum is inside me now! Perfect!"
+            ],
+            "very_high": [
+              "Divine nectar filling my body!",
+              "I'm blessed! Your seed nourishes my soul!",
+              "I'm complete now! Thank you, master!"
+            ]
+          }
+        }
+      ]
+    },
+    "JIGO": {
+      "events": {
+        "JIGO": {
+          "very_low": [
+            "Please... I swallowed it all... I promise!",
+            "Don't shoot me! I did what you said!",
+            "My mouth is empty... see? Please believe me!",
+            "I don't want to die! I obeyed!",
+            "The gun... please... I was good!",
+            "I swallowed everything! Don't hurt me!",
+            "Please have mercy... I did it...",
+            "I'm begging... I followed your orders!"
+          ],
+          "low": [
+            "I swallowed it all... you can check...",
+            "My mouth is clean... I did as you commanded...",
+            "The fear... it never leaves... but I obeyed...",
+            "I did everything right... please...",
+            "His cum is in my stomach... proof I complied...",
+            "The gun still threatens... even after I obeyed...",
+            "What more can I do... I did everything...",
+            "I'm so tired... but I survived this..."
+          ],
+          "medium_low": [
+            "I swallowed all of it... as instructed...",
+            "My mouth is empty... you can see...",
+            "I did what was necessary... it's done...",
+            "The warmth in my stomach... evidence...",
+            "I complied fully... no resistance...",
+            "It's over... this part anyway...",
+            "I survived... by obeying...",
+            "Empty mouth... full stomach..."
+          ],
+          "medium": [
+            "I swallowed everything... completely...",
+            "My mouth is clean... as you wanted...",
+            "I did my part... fulfilled my role...",
+            "His seed is inside me... all of it...",
+            "I performed... adequately...",
+            "The transaction... complete...",
+            "I am what I am now...",
+            "His cum... part of me..."
+          ],
+          "medium_high": [
+            "I swallowed every drop... proudly...",
+            "My mouth is clean... I was good...",
+            "I did well... didn't I?",
+            "His cum is in me... where it belongs...",
+            "I'm pleased I could please him...",
+            "The warm feeling... satisfying...",
+            "I served him properly...",
+            "Look... all gone... I'm a good girl..."
+          ],
+          "high": [
+            "I swallowed it all! It was delicious!",
+            "My mouth is empty because I loved every drop!",
+            "I want you to know I enjoyed it!",
+            "Your cum is in my belly where I want it!",
+            "I'm so happy I could please you!",
+            "That was amazing! Thank you!",
+            "I'm your perfect cumslut!",
+            "I drank it all eagerly!"
+          ],
+          "very_high": [
+            "I CONSUMED YOUR DIVINE ESSENCE!",
+            "MY MOUTH IS HOLY VESSEL NOW EMPTY!",
+            "I'M BLESSED BY YOUR SACRED SEED!",
+            "YOUR CUM IS MY SACRAMENT!",
+            "I'M HONORED TO BE YOUR CUM TOILET!",
+            "EVERY DROP WAS HEAVEN!",
+            "I'M YOUR DEVOTED CUM WORSHIPPER!",
+            "I LIVE TO DRINK YOUR SEED!"
+          ]
+        }
+      }
+    },
+    "JIGO2": {
+      "events": {
+        "JIGO2": {
+          "very_low": [
+            "He wants me to open... to prove it...",
+            "I'm scared... what if he doesn't believe me...",
+            "Opening my mouth... trembling..."
+          ],
+          "low": [
+            "Open up... let him verify...",
+            "I have to show him... my empty mouth...",
+            "The inspection... so humiliating..."
+          ],
+          "medium_low": [
+            "Opening for inspection... nervous...",
+            "He needs to see... I understand...",
+            "Showing him... proof I obeyed..."
+          ],
+          "medium": [
+            "Opening my mouth... showing compliance...",
+            "He wants to verify... I show him...",
+            "Clean mouth... proof of obedience..."
+          ],
+          "medium_high": [
+            "Opening for him... showing I was good...",
+            "Look... all clean... I did well...",
+            "I want him to see I obeyed..."
+          ],
+          "high": [
+            "Look! See how good I was!",
+            "My mouth is empty because I loved swallowing!",
+            "I'm so proud I pleased you!"
+          ],
+          "very_high": [
+            "BEHOLD MY DEVOTION!",
+            "MY MOUTH IS YOUR TEMPLE!",
+            "I'M YOUR PERFECT SERVANT!"
+          ]
+        }
+      }
+    },
+    "JIGOFIN": {
+      "events": {
+        "JIGOFIN": {
+          "very_low": [
+            "He's saying... others will use me too...",
+            "No... please... not more of them!",
+            "I can't... I can't do this again..."
+          ],
+          "low": [
+            "The others are waiting... this continues...",
+            "He's passing me on... like property...",
+            "More men... more violation... when does it end..."
+          ],
+          "medium_low": [
+            "He's done... now others will come...",
+            "I'm to service them all... I understand...",
+            "The cycle continues... I'm just a tool..."
+          ],
+          "medium": [
+            "His turn is over... others await...",
+            "I'll serve them too... it's expected...",
+            "This is my purpose now... I accept..."
+          ],
+          "medium_high": [
+            "He's satisfied... now the others...",
+            "I'm ready for more... I can do this...",
+            "Serving multiple men... I'm capable..."
+          ],
+          "high": [
+            "Good! Send me to the others!",
+            "I want to please them all!",
+            "I'm ready for more cock!"
+          ],
+          "very_high": [
+            "YES! BRING THEM ALL!",
+            "I NEED MORE! ENDLESS COCK!",
+            "I'M EVERYONE'S SLUT!"
+          ]
+        }
+      }
+    },
+    "JIGOFIN2": {
+      "events": {
+        "JIGOFIN2": {
+          "very_low": [
+            "NO! Not another one! Please stop!",
+            "I can't take more! I'm breaking!",
+            "Someone help me! Please! Anyone!",
+            "My body can't endure this! Stop!",
+            "I'm begging... no more... have mercy!",
+            "This will kill me! I'm dying inside!",
+            "Please... I'll do anything... just no more...",
+            "I'm not... I'm not strong enough for this..."
+          ],
+          "low": [
+            "Another man... my nightmare continues...",
+            "I'm being handed around... like meat...",
+            "When will this end... how many more...",
+            "I'm so exhausted... broken... please...",
+            "They're taking turns... destroying me...",
+            "I'm crying... but they don't care...",
+            "Just an object to them... nothing more...",
+            "This hell... it never ends..."
+          ],
+          "medium_low": [
+            "Passed to the next... here we go again...",
+            "Another cock... another ordeal...",
+            "I just... have to survive this too...",
+            "How many are there... I lost count...",
+            "I'm numb now... just going through motions...",
+            "This is my reality... accept it...",
+            "The next one approaches... I prepare...",
+            "Endure... just endure..."
+          ],
+          "medium": [
+            "Next in line... I understand the system...",
+            "I'll service this one too... then the next...",
+            "This is what I am now... what I do...",
+            "Another man... same routine...",
+            "I'm efficient at this... mechanical...",
+            "My purpose... clear and simple...",
+            "The next one... I'm ready...",
+            "This is my function... I perform..."
+          ],
+          "medium_high": [
+            "The next man... I'm curious...",
+            "Maybe this one will be different...",
+            "I'm getting good at this... practiced...",
+            "Bring him to me... I'm ready...",
+            "Another opportunity to serve...",
+            "I'm becoming skilled... proficient...",
+            "The next one... let's see...",
+            "I can handle more... I know I can..."
+          ],
+          "high": [
+            "Yes! The next one! Bring him!",
+            "I want more cock! More men!",
+            "I'm insatiable! Keep them coming!",
+            "Don't make me wait! I need it!",
+            "More! Always more! I love this!",
+            "Every cock is a gift! Give me more!",
+            "I'm everyone's whore! I love it!",
+            "Line them up! I'll take them all!"
+          ],
+          "very_high": [
+            "ENDLESS COCKS! MY PARADISE!",
+            "I'M THE GANGBANG GODDESS!",
+            "EVERY MAN'S CUM DUMP! YES!",
+            "I NEED INFINITE COCK! MORE!",
+            "PASS ME AROUND FOREVER!",
+            "I'M PURE COCK ADDICTION!",
+            "GANGBANG IS MY RELIGION!",
+            "I'M COCK-WORSHIPPING SLUT ETERNAL!"
+          ]
+        }
+      }
+    }
+  }
+}

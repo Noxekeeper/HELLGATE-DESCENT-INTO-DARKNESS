@@ -1,0 +1,24 @@
+{
+  "speakerLabel": "Bandido",
+  "stepId": "fsp_sex_soft_c02",
+  "stepKind": "choice",
+  "choiceLabels": [
+    "Promete — sem dor.",
+    "Está bem. {SEX_PRICE} moedas — vamos.",
+    "Mostra que consegues ser suave.",
+    "Chega de conversa — começa."
+  ],
+  "choiceOutcomeIds": [
+    "noop",
+    "pay_confirm",
+    "noop",
+    "pay_confirm"
+  ],
+  "choiceJumpStepIds": [
+    "fsp_sex_soft_1_p03",
+    "fsp_sex_paid_grant_h",
+    "fsp_sex_soft_3_p03",
+    "fsp_sex_paid_grant_h"
+  ],
+  "npcLine": "Suave? Está bem… vou tentar. Tu também não és um anjo."
+}

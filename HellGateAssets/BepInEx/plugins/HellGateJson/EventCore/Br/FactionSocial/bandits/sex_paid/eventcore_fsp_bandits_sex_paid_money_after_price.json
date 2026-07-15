@@ -1,0 +1,21 @@
+{
+  "speakerLabel": "Bandido",
+  "stepId": "fsp_sex_money_after_price",
+  "stepKind": "choice",
+  "choiceLabels": [
+    "Tá bom. {SEX_PRICE} moedas servem.",
+    "Muito pouco. Não aceito.",
+    "Tira as mãos. Agora."
+  ],
+  "choiceOutcomeIds": [
+    "pay_confirm",
+    "noop",
+    "threaten"
+  ],
+  "choiceJumpStepIds": [
+    "fsp_sex_paid_grant_h",
+    "fsp_sex_refuse_d_p03",
+    "fsp_sex_paid_rage_win"
+  ],
+  "npcLine": "Então, bruxinha? Sim ou não?"
+}

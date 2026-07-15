@@ -1,0 +1,8 @@
+{
+  "speakerLabel": "Bandido",
+  "stepId": "fsp_sex_soft_3_p04",
+  "stepKind": "continue",
+  "continueOutcomeId": "noop",
+  "continueNextStepId": "fsp_sex_paid_grant_h",
+  "npcLine": "Ele te empurra contra a parede, mas a mão não te sufoca — mais pra te segurar. «Viu? Vamos — eu pago.»"
+}

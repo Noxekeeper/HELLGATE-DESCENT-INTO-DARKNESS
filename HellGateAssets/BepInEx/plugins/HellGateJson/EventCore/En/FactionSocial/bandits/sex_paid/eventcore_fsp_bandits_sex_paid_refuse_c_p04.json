@@ -1,0 +1,8 @@
+{
+  "speakerLabel": "Bandit",
+  "stepId": "fsp_sex_refuse_c_p04",
+  "stepKind": "continue",
+  "continueOutcomeId": "noop",
+  "continueNextStepId": "fsp_sex_money_after_price",
+  "npcLine": "Fine… what if {SEX_PRICE} coins — just a smile? You won't regret it."
+}

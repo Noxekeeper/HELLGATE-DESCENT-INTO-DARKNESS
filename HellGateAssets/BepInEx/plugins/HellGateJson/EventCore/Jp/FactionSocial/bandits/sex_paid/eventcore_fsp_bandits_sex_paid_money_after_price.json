@@ -1,0 +1,21 @@
+{
+  "speakerLabel": "野盗",
+  "stepId": "fsp_sex_money_after_price",
+  "stepKind": "choice",
+  "choiceLabels": [
+    "分かった。{SEX_PRICE}コインなら受け取る。",
+    "少なすぎ。受けない。",
+    "手を離して。今すぐ。"
+  ],
+  "choiceOutcomeIds": [
+    "pay_confirm",
+    "noop",
+    "threaten"
+  ],
+  "choiceJumpStepIds": [
+    "fsp_sex_paid_grant_h",
+    "fsp_sex_refuse_d_p03",
+    "fsp_sex_paid_rage_win"
+  ],
+  "npcLine": "どうだ、小娘？ やるか、やらねえか？"
+}

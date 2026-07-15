@@ -1,0 +1,24 @@
+{
+  "speakerLabel": "Bandido",
+  "stepId": "fsp_sex_rough_c02",
+  "stepKind": "choice",
+  "choiceLabels": [
+    "Não te contenhas.",
+    "Fode-me forte.",
+    "Mostra o que sabes fazer.",
+    "À bruta. Aqui mesmo."
+  ],
+  "choiceOutcomeIds": [
+    "noop",
+    "noop",
+    "noop",
+    "noop"
+  ],
+  "choiceJumpStepIds": [
+    "fsp_sex_rough_1_p03",
+    "fsp_sex_rough_2_p03",
+    "fsp_sex_rough_3_p03",
+    "fsp_sex_rough_4_p03"
+  ],
+  "npcLine": "Assim gosto. Diz o que queres — faço."
+}

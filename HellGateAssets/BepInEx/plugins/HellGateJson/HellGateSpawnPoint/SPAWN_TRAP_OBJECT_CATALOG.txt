@@ -1,0 +1,166 @@
+# HellGate — personal author notes (EN), mod does not overwrite
+# EN keys / formats: SPAWN_TEMPLATE_KEYS.txt
+# Cache this session: AVAILABLE_SPAWN_TEMPLATES_RUNTIME.txt (auto)
+# Pre-cache keys: SPAWN_TEMPLATE_WHITELIST.txt (whitelist — filled from this catalog)
+# Enemies / EventCore: SPAWN_CONTENT_CATALOG.txt
+#
+# How TRAP cache works (important):
+# — Whitelist (SPAWN_TEMPLATE_WHITELIST.txt) + visiting maps = keys in runtime.
+# — Teleport through all locations — most reliable for scene-only (ivytrap, magictrap…).
+# — Full-world additive preload is disabled; @SceneName in whitelist loads only those scenes.
+
+[HOSTAGE]
+# HOSTAGE,Key,X,Y,Count[,flip]  — flip | mirror | -1 | left = face left (persistent)
+# Keys below support flip when listed in spawn txt (6th field).
+MobSlumSlave
+MobCrawlingSlave
+MobSpiderSlave
+MobRosewarm
+MobMutude
+MobMachineSlave
+witchslaveViolin - 3x dorei+slave
+witchslaveslime
+EnemyMobCrowSlaveBack
+EnemyMobCrowSlaveStandup
+mobslumslave
+mobcrawlingslave
+mobspiderslave
+mobrosewarm
+mobmutude
+mobmachineslave
+enemymobcrowslaveback
+enemymobcrowslavestandup
+slave
+stand - standing inquisitor
+back
+
+# Examples:
+# HOSTAGE,mobslumslave,-100.0,-120.0,1,flip
+# HOSTAGE,enemymobcrowslaveback,968.0,-597.0,1,-1
+# HOSTAGE,stand,957.0,-597.0,1,mirror
+
+[TRAP]
+# TRAP,Key,X,Y,Count[,flip] — same flip tokens as HOSTAGE
+# Spider / tree (WoodWana assembly — flip locks spine + root scale):
+# TRAP,trapspider,-90.0,-120.0,1,flip
+# TRAP,woodwana,-85.0,-118.0,1,flip
+# TRAP,forest_long,-85.0,-118.0,1,flip
+# H-traps (Trapdata — flip locks DIR against player-facing):
+# TRAP,trapmachine,-80.0,-115.0,1,flip
+# TRAP,pictureeronon,-75.0,-115.0,1,flip
+# TRAP,rosewarm,-70.0,-115.0,1,flip
+# TRAP,wallhip,-65.0,-115.0,1,flip
+
+# --- verified OK (FirstMap test 2026-05-28) ---
+
+# spider
+trapspider -> TRAPThreadOfSpider - WEB TRAP WITH SPIDERS H-SCENE
+trapthreadofspider -> TRAPThreadOfSpider - WEB TRAP WITH SPIDERS H-SCENE
+
+# tree
+wana_start -> forest_long - TREE TRAP WITH FLIP-OPEN DOOR
+woodwana -> forest_long - TREE TRAP WITH FLIP-OPEN DOOR
+
+# buttons / guns
+trap_button -> Trap_button - TRAP BUTTON
+trap_button_ironmaiden -> Trap_button - BUTTON UNDER IRON MAIDEN
+trapshot -> trapgun2 - FIRES BULLET ON BUTTON
+trapgun2 -> trapgun2 - FIRES BULLET (GO name on map)
+spearthrowtrap -> spear - SPEAR SPAWNER (SPEAR SPINS ON HIT)
+spear -> spear - SPEAR SPAWNER (GO name alias)
+
+# magic trap
+magictrap -> FireCharge - MAGIC TRAP — ONCE, LIKE VANILLA
+magictrapcreateobject -> magic2 - CREATES TRAP OBJECT — ONCE
+
+# scene controllers (not Trapdata, but spawnable)
+picturetrap -> Picture_trap - PICTURE CONTROLLER
+picture_trap -> Picture_trap - PICTURE CONTROLLER
+ivytrap -> ivy_trap - IVY CONTROLLER
+ivy_trap -> ivy_trap - IVY CONTROLLER
+ivy_monster -> Ivy_monster - IVY H-TRAP (Trapdata, OK on FirstMap and others)
+cocoontrap -> cocoontrapNot - COCOON CONTROLLER
+cocoontrapnot -> cocoontrapNot - COCOON CONTROLLER
+cocooncreat -> CocoonmanStart - SPAWNS COCCONMAN ENEMY
+
+# --- vanilla trapdata (not tested in this pass, usually OK) ---
+
+# slime
+blackoozetrap -> BlackOozetrap - BLACK SLIME TYPE 1
+blackoozetraptypeb -> BlackOozeTypeB - BLACK SLIME TYPE 2
+blackoozetypeb -> BlackOozeTypeB - BLACK SLIME TYPE 2
+
+# --- spikes and damage-spike (TRAP + rot90/rot180/rot270; not lethal_magictrap) ---
+
+# Trap_hari — static floor/wall/ceiling spikes (TrapNormal)
+trapnormal -> Trap_hari - SPIKES
+trap_hari -> Trap_hari - SPIKES
+# trap -> trapnormal (alias; bare key trap often fails to spawn)
+
+# LightImpactNormal — lighter spikes (ImpactDamage, Resources)
+impactdamage -> LightImpactNormal - SPIKES (light impact)
+lightimpactnormal -> LightImpactNormal - SPIKES (same prefab)
+
+# ImpactDamageBOX — damage collider (walls/objects)
+impactdamagebox -> body - SPIKE/DAMAGE COLLIDER (often child body)
+
+# WaveSpike — animated spike wave (needs visit to a map with WaveSpike)
+wavespike -> WaveSpike - SPIKE WAVE
+wavespikeguard -> WaveSpikeGuard - SPIKE WAVE (variant)
+
+# SpearThrowtrap — rotating spear thrower (Valley)
+spearthrowtrap -> spear - SPEAR SPAWNER
+spear -> spear - SPEAR SPAWNER (alias)
+
+# Rotation examples:
+# TRAP,trap_hari,-120.0,-130.0,1,rot90
+# TRAP,impactdamage,-125.0,-130.0,1,rot180
+# TRAP,lightimpactnormal,-130.0,-130.0,1,rot270
+# TRAP,wavespike,-135.0,-130.0,1,flip,rot90
+
+# iron maiden
+ironmaidendamage -> Trap_Ironmaiden - IRON MAIDEN DROPS FROM ABOVE AND DEALS DAMAGE
+ironmaiden_damage -> Trap_Ironmaiden - IRON MAIDEN (cache alias)
+trap_ironmaiden -> Trap_Ironmaiden - IRON MAIDEN
+tent_ironmaiden -> Tent_Ironmaiden - IRON MAIDEN WITH TENTACLES
+trap_tentacleironmaiden -> Tent_Ironmaiden - IRON MAIDEN WITH TENTACLES
+
+# sex machine / H-trap
+trapmachine -> Trap_machine - SEX MACHINE
+trap_machine -> Trap_machine - SEX MACHINE (cache alias)
+trap_mokubaenemy -> Trap_mokubaEnemy - WOODEN HORSE
+trap_rockinghorse -> Trap_mokubaEnemy - WOODEN HORSE (cache alias)
+pictureeronon -> PictureEro_non - PICTURE H-TRAP (Trapdata)
+pictureero_non -> PictureEro_non - PICTURE H-TRAP (Trapdata)
+rosewarm -> Rosewarm - ROSE ON A BOARD
+wallhip -> wallHIP - WALL VAGRANT H-TRAP
+
+# barrel / vase / box
+breakobjct -> taru_exp - EXPLOSIVE BARREL
+taru_brk -> taru_brk - BARREL +10 XP
+taru_exp -> taru_exp - EXPLOSIVE BARREL
+taruro_exp -> taruRO_exp - HUGE EXPLOSIVE BARREL
+inpactbreakkobj -> tubo2 - VASE WITH TENTACLES
+tubo2 -> tubo2 - VASE WITH TENTACLES
+box_brk -> Box_brk - CRATE DECOR
+movebox_brk -> MoveBox_brk - MOVABLE CRATE
+
+# --- does not work / do not use ---
+
+# --- aliases from mod code (if primary key is not in cache — try the pair) ---
+# ironmaiden_damage -> ironmaidendamage
+# trap_machine -> trapmachine
+# trap_rockinghorse -> trap_mokubaenemy
+# trapgun2 -> trapshot (GO name on some maps)
+# spear -> spearthrowtrap
+# taruro_exp -> taruRO_exp (same barrel, different spelling)
+
+# trap -> Trap_hari - SPIKES — use trapnormal / trap_hari
+# cocoonspear — projectile, not a static TRAP
+# wavespike — now under [TRAP] after visiting a map with WaveSpike
+# impactdamage, impactdamagebox, trapdoorup — DOES NOT WORK
+# trapdamage — LOG COMPONENT, USELESS ALONE
+# trap_button_versatility, magictrap_ironmaiden — DOES NOT WORK
+# cocoonballtrap, cocoonball — DOES NOT WORK
+# angelstatue_trap, gobtrap — cache scanner does not copy them (not “fails on FirstMap”)
+# If needed on custom maps — ask; we can lift the filter in SpawnTemplateCatalog (preload already off)

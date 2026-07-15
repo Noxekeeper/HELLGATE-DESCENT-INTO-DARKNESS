@@ -1,0 +1,162 @@
+# AVAILABLE PREFABS FOR SPAWN SYSTEM
+# Список доступных префабов врагов для системы спавна HELLGATE
+# Только те префабы, которые УСПЕШНО закешированы и доступны для спавна
+# ВСЕГО ДОСТУПНО: 49 врагов (без боссов)
+# Используйте эти имена в конфигурационных файлах спавна (HellGateSpawn_*.txt)
+
+AngelStatue - Ангельская статуя
+Arulaune - Арулаун
+BigMerman - Большой русал
+Bigoni - Большой демон/орк
+BigoniBrother - Кастомный мини-босс (слабый брат Bigoni, HP 1000, урон 70%)
+BlackOoze - Черный слизень
+Coolmaiden - Прохладная дева
+Cocoonman - Человек-кокон
+CrawlingCreatures - Ползающие существа
+CrawlingDead - Ползающие мертвецы
+CrawlingSisterKnight - Ползающая сестра-рыцарь
+CrowInquisition - Ворон-инквизитор
+DifferentBigMerman - Другой большой русал
+Dorei - Раб
+Goblin - Гоблин
+Gorotuki - Горотуки
+HighInquisitionFemale - Высокий инквизитор (женский)
+Inquisition - Инквизитор (черный)
+InquisitionRED - Инквизитор (красный)
+InquisitionWhite - Инквизитор (белый)
+Kakasi - Какаш
+Kinoko - Гриб
+Librarian - Библиотекарь
+Mafia - Мафия
+Mafiamuscle - Мафия-мускулы
+MafiaBossCustom мой мафия
+Minotaurosu - Минотавр
+MummyDog - Мумия-собака
+MummyMan - Мумия-человек
+Mutude - Мутуде
+NormalSnailshell - Обычная ракушка улитки
+OtherSlavebigAxe - Другой большой раб с топором (НЕ РАБОТАЕТ, НЕТ ТАКОГО NPC)
+Pilgrim - Пилигрим
+PrisonOfficer - Тюремный офицер
+RequiemKnight - Рыцарь реквиема
+Sheepheaddemon - Овцеголовый демон
+Sisiruirui - Сисируируи - Гора трупов с H сценой.
+Sisterknight - Сестра-рыцарь
+SkeltonOoze - Скелет-слизь
+Slaimu - Сурайму
+Slaughterer - Мясник
+SlaveBigAxe - Большой раб с топором
+Snailshell - Ракушка улитки
+TouzokuAxe - Разбойник с топором
+TouzokuNormal - Обычный разбойник
+Tentacle - Искусственное щупальце (EnemyDate, обычный spawn format: X,Y,Tentacle,Count)
+Tyoukyousi - Тренер забирает на ранче катсцена в случае проигрыша в борьбе
+TyoukyousiRed - Красный учитель
+Undead - Нежить
+Vagrant - Бродяга
+VagrantGuard - Бродяга-страж
+VagrantThrow - Бродяга-метатель
+
+TRAP TEMPLATE PREFABS (Trapdata, используйте формат TRAP,Key,X,Y,Count):
+
+AngelStatue_Trap - Ангельская статуя-ловушка
+BlackOozetrap - Черная слизь-ловушка
+BlackOozeTrapTypeB - Черная слизь-ловушка, вариант B
+GobTrap - Гоблинская ловушка
+Ivy_monster - Плющ/растительная ловушка
+PictureEroNon - Картина-ловушка
+Rosewarm - Роза/червь-ловушка
+TrapMachine - Машина-ловушка
+TrapSpider - Паучья ловушка
+Trap_Rockinghorse - Деревянная лошадь / rocking horse
+Trap_TentacleIronmaiden - Тентаклевая железная дева
+WallHip - Стенная ловушка
+
+Универсальный формат также поддерживается:
+SPAWN,Trap,Key,X,Y,Count
+
+Семантический алиас «объект сцены» (тот же каталог ключей, что и TRAP/WoodWana и т.д.):
+OBJECT,Key,X,Y,Count
+SPAWN,Object,Key,X,Y,Count   (или SceneObject / Prop — см. HellGateSpawnLineFormat)
+
+Пример: OBJECT,woodwana,-100.5,-120.3,1  — тот же ключ каталога, что и у TRAP (wana_start / woodwana и т.д.).
+
+TRAP-LIKE MONOBEHAVIOURS (не Trapdata, не для текущего TRAP-каталога):
+
+TrapDoorUp - мгновенный damage trigger вверх/дверь
+Trap_Ironmaiden - пустой MonoBehaviour/маркер старой железной девы
+TrapNormal - простой damage trigger
+Trapshot - стреляет serialized bullet через кнопку
+Trap_button / Trap_button_ironmaiden - кнопки/триггеры для связанных объектов
+SpearThrowtrap - сценовый спавнер копий
+Magictrap / MagicTrapCreateObject / magicTrap_Ironmaiden - магические trap controllers
+PictureTrap / IvyTrap / Cocoontrap / CocoonBallTrap - scene/event trap controllers
+trapDamage - damage collider для физической ловушки
+
+NON-H DAMAGE / PHYSICS TRAPS (без H-сцены, дамажат/отталкивают/вырубают):
+
+Runtime-confirmed direct spawn keys on current preload:
+WoodWana - большой объект "дерево с ловушкой" (связанная ловушка с trapDamage; на FirstMap убран из теста, т.к. перекрывает обзор)
+TrapNormal - простой постоянный damage trigger
+Ironmaiden_damage - damage-only iron maiden collider/animation
+
+Убрано из активной тестовой системы (служебные/плохо видимые trigger-объекты):
+trapDamage - внутренний damage collider для WoodWana (часто как невидимый/служебный узел)
+TrapDoorUp - instant damage trigger, обычно без наглядной отдельной визуальной модели
+SpearThrowtrap - убран как бесполезный для текущего теста (спавнится как "крутящееся копьё", без ожидаемой ловушки)
+
+Found in Assembly-CSharp but not direct-spawned from the current runtime catalog:
+WaveSpike - волна шипов/копий; дамажит через ExecuteInterface
+WaveSpikeGuard - вариант WaveSpike с активным colobj и таймером
+Cocoonspear - летящее копье/снаряд; обычно создается SpearThrowtrap/врагами и может отражаться
+ImpactDamage - временный круглый impact damage collider Востанавливает
+ImpactDamageBOX - временный box impact damage collider
+
+FACTION_CHURCH (Церковь):
+- Все Inquisition варианты
+- Pilgrim, RequiemKnight, Sisterknight
+- PrisonOfficer, Dorei, SlaveBigAxe
+- Librarian, AngelStatue
+
+FACTION_DEMONS (Демоны):
+- Bigoni, Sheepheaddemon, Minotaurosu
+- Goblin, Gorotuki, Kakasi
+- Все слизни и нежить
+- BigMerman, Mutude, Arulaune, Kinoko
+
+FACTION_BANDITS (Бандиты):
+- TouzokuAxe, TouzokuNormal
+
+FACTION_MAFIA (Мафия):
+- Mafia, Mafiamuscle, MafiaBossCustom
+- Возможно Tyoukyousi (работорговцы)
+
+FACTION_NEUTRAL (Нейтральные):
+- Vagrant группа
+
+================================================================================
+EVENTCORE + AMBIENT (JSON под HellGateJson/EventCore, не HellGateSpawn_*.txt)
+================================================================================
+
+Имена врагов в EventCore / EventTrap — это те же ключи префабов, что и в списке
+врагов выше (кеш EnemyPrefabRegistry / SpawnConfigExecutor). Ошибка в строке
+= 0 заспавненных юнитов в логе.
+
+--- Modal EventCore (dialogue + branches) ---
+
+Full setup: docs/EventCore_Modal_Setup_Guide.md
+
+Manifest: EventCore/eventcore_manifest.json → eventFiles[]
+Spawn: X,Y,EnemyType|ec_event=eventcore_broker_gate,Count
+Steps: EventCore/<Lang>/Stranger/eventcore_*_s*.json
+Text pools: EventCore/<Lang>/Stranger/eventcore_lang.json
+
+--- EventTrap (coordinate zone / suspicion / knockdown ambush) ---
+
+Full setup: docs/EventTrap_Setup_Guide.md
+
+Registry: EventCore/event_trap_registry.json
+Anchors: EVENTTRAP,event_folder,x,y in HellGateSpawn_*.txt (logic only; no world trap).
+World spikes: TRAP,key,x,y,count on separate lines (SpawnConfigExecutor); not EventTrap anchors.
+Content: EventCore/_shared/<eventFolder>/config.json + EventCore/<Lang>/<eventFolder>/phrases.json
+spawnEnemyType: enemy key from this file (e.g. Undead)

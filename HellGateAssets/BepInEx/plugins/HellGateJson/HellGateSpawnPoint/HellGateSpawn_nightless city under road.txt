@@ -1,0 +1,3 @@
+# HELLGATE Spawn — InsomniaTownUnderRoad (biscord POI from spawnpoint.log 2026-04-18)
+# Format: RANDOM,chance,X,Y,EnemyType,Count — chance 0.3 = 30% once per spawn pass
+RANDOM,1,802.75,-422.74,biscord,1

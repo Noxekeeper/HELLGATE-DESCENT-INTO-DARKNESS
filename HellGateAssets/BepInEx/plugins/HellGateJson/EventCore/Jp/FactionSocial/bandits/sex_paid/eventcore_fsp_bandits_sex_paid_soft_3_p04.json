@@ -1,0 +1,8 @@
+{
+  "speakerLabel": "野盗",
+  "stepId": "fsp_sex_soft_3_p04",
+  "stepKind": "continue",
+  "continueOutcomeId": "noop",
+  "continueNextStepId": "fsp_sex_paid_grant_h",
+  "npcLine": "男は壁に押し付けるが、手は息苦しくはしない——支えるような力だ。「見たか？ 行くぞ——金は払う。」"
+}

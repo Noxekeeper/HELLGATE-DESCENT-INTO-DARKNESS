@@ -1,0 +1,7 @@
+{
+  "stepId": "broker_rage_defiant",
+  "stepKind": "continue",
+  "speakerLabel": "Stranger",
+  "npcLinePoolId": "broker_broker_rage_defiant_t",
+  "choiceLabels": []
+}

@@ -1,0 +1,51 @@
+# HellGate scene decor catalog (corpses, static props)
+# Spawn line: OBJECT,Key,X,Y,Count[,flip]  or  DECOR,Key,X,Y,Count[,flip]
+
+[DECOR_CORPSES]
+mob_death1 | female corpse variant 1 | scapegoatEntrance
+mob_death1 (1) | mob_death1 duplicate | scapegoatEntrance
+mob_death2 | female corpse variant 2 with cross | InundergroundChurch, InsomniaTownUnder
+mob_death2 (1) | mob_death2 duplicate | InundergroundChurch, InsomniaTownUnder
+mob_sister | dorei fucking sister / nun | InundergroundChurch
+mob_sister (1) | mob_sister duplicate | InundergroundChurch
+gob_look | goblin corpse decor (inactive) | village_main, scapegoatEntrance
+gob_look2 | goblin corpse variant 2 | village_main
+Look_mutude | mutude decor (broken spawn) | scapegoatEntrance
+Look_Dorei | dorei decor (active mob) | InundergroundChurch, VillageOne
+
+[DECOR_PROPS]
+Arrow | arrow prop | scapegoatEntrance
+Arrow (1) | arrow prop duplicate | scapegoatEntrance
+scapegoat_Slave | bridge slave decor | scapegoatEntrance
+VillageSlave | village slave decor (broken spawn) | village_main
+NpcSlave | ranch slave decor (broken spawn) | Ranch
+InchchurchSlave | underground church slave decor | InundergroundChurch
+
+[SCENES_FOR_CACHE]
+scapegoatEntrance | mob_death1, gob_look, Look_mutude, Arrow, scapegoat_Slave
+village_main | gob_look, gob_look2, VillageSlave
+InundergroundChurch | mob_death2, mob_sister, InchurchSlave, Look_Dorei
+InsomniaTownUnder | mob_death2
+VillageOne | Look_Dorei
+Ranch | NpcSlave
+
+[NOT_ROOT_OBJECTS]
+mob_sister_ero
+mob_sister_ero_Atlas
+mob_sister_ero_Material
+mob_sister_ero_SkeletonData
+gob_ero_spine
+gob_ero_start
+Look_Atlas
+Look_Material
+Look_SkeletonData
+taitu
+taitu_body
+taitu_body_non
+taitu_panties
+gob_body
+gob_face
+gob_Larm
+gob_R_arm
+gob_tits
+gob_tinko

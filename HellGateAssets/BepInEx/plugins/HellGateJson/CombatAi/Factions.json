@@ -1,0 +1,316 @@
+{
+  "Enable": true,
+  "DebugLogging": false,
+  "BanditsIgnorePlayer": true,
+  "BanditsVsDemonsRange": 5.5,
+  "ActivationDistanceFromPlayer": 25.0,
+  "ActivationDistanceHorizontalOnly": true,
+  "ActivationMaxVerticalDelta": 6.0,
+  "EnablePlayerProvocation": true,
+  "PlayerProvocationRadius": 15.0,
+  "PlayerProvocationSameFactionOnly": true,
+  "PlayerProvocationFromMagic": true,
+  "PlayerProvocationBanditsOnly": false,
+  "PlayerProvocationDurationSeconds": 15.0,
+  "RequireAttackAnimationForFactionDamage": true,
+  "DisableFactionDamageDuringHScene": true,
+  "FreezeFactionAiDuringHScene": true,
+  "EnableFriendlyFire": false,
+  "BanditsDamagePerHit": 8.0,
+  "DemonsDamagePerHit": 12.0,
+  "HitCooldownSeconds": 0.65,
+  "FactionDamagePopupScale": 0.75,
+  "FactionDamageMaxVerticalDelta": 0.0,
+  "FactionDamageHorizontalRangeOnly": true,
+  "FactionInterTargetMaxHorizontalDistance": 20.0,
+  "FactionInterTargetMaxVerticalDelta": 5.0,
+  "FactionMeleeReachOverrides": [
+    { "EnemyType": "Wolf", "Reach": 3.0 },
+    { "EnemyType": "MummyDog", "Reach": 3.0 }
+  ],
+  "FactionTargetRangeOverrides": [
+    { "EnemyType": "SinnerslaveCrossbow", "Range": 12.0 },
+    { "EnemyType": "Dorei", "Range": 12.0 }
+  ],
+  "ReputationHostileThreshold": -50.0,
+  "ReputationFriendlyThreshold": 65.0,
+  "HostileAutoProvokeInRadius": true,
+  "HostileBreaksBanditIgnore": true,
+  "FriendlyDisablesVanillaAggro": true,
+  "FriendlyBlocksProvocation": true,
+  "ProvocationIgnoredReputationThreshold": 96.0,
+  "HSceneCompletedReputationDelta": 3.0,
+  "HandoffReputationDelta": 5.0,
+  "PlayerAttackReputationDelta": -1.0,
+  "EnableRelationSpeedScaling": true,
+  "SpeedMultiplierAtMinus100": 1.1,
+  "SpeedMultiplierAtPlus100": 0.9,
+  "MinSpeedMultiplierClamp": 0.9,
+  "MaxSpeedMultiplierClamp": 1.1,
+  "EnableRelationVisionOverride": true,
+  "VisionDistanceAtMinus100": 10.0,
+  "VisionDistanceAtPlus100": 1.0,
+  "EnableSignBasedPlayerAggro": true,
+  "PlayerAggroPeaceThreshold": 65.0,
+  "EnableDeescalationRollEvent": true,
+  "DeescalationRadius": 7.5,
+  "DeescalationDurationSeconds": 7.0,
+  "DeescalationLateAttackPenaltyStartSeconds": 4.0,
+  "DeescalationRewardRelationDelta": 5.0,
+  "DeescalationLateAttackPenaltyDelta": -5.0,
+  "DeescalationTickSeconds": 0.2,
+  "BanditTypes": [
+    "TouzokuNormal",
+    "TouzokuAxe",
+    "Vagrant",
+    "VagrantGuard",
+    "VagrantThrow",
+    "BossTouzoku"
+  ],
+  "DemonTypes": [
+    "Mutude",
+    "MobMutude",
+    "Mutudeero",
+    "Bigoni",
+    "BigoniBrother",
+    "goblin",
+    "Goblin",
+    "GobBigAlter",
+    "GobRider",
+    "Gorotuki",
+    "Sheepheaddemon",
+    "Minotaurosu",
+    "Slaughterer",
+    "CrawlingDead",
+    "CrawlingSisterKnight",
+    "CrawlingCreatures",
+    "Arulaune",
+    "Kakash",
+    "Kakasi",
+    "DarkPixie",
+    "Candore",
+    "SuccubusSpine",
+    "Tentacle",
+    "DemonRequiemKnight",
+    "IvyRoadStop",
+    "OriginIbaranoMajyo",
+    "LastIbaranoMajyo",
+    "BossScapegoatentrance",
+    "BOSS_Village",
+    "BossInsomniaUnder",
+    "BossLeftinsomniaUnder",
+    "BossRightinsomniaUnder"
+  ],
+  "ChurchTypes": [
+    "Inquisition",
+    "InquisitionRED",
+    "InquisitionWhite",
+    "CrowInquisition",
+    "HighInquisition_famale",
+    "HighInquisitionFemale",
+    "Pilgrim",
+    "RequiemKnight",
+    "Sisterknight",
+    "PrisonOfficer",
+    "SinnerslaveCrossbow",
+    "Dorei",
+    "SlaveBigAxe",
+    "OtherSlavebigAxe",
+    "Librarian",
+    "AngelStatue",
+    "Praymaiden"
+  ],
+  "MafiaTypes": [
+    "Mafia",
+    "Mafiamuscle",
+    "MafiaBossCustom",
+    "BlackMafia",
+    "Tyoukyoushi",
+    "Tyoukyousi",
+    "TyoukyoushiRed",
+    "TyoukyousiRed",
+    "Boss_Ranch"
+  ],
+  "UndeadTypes": [
+    "Undead",
+    "MummyDog",
+    "MummyMan",
+    "Cocoonman",
+    "Sisiruirui"
+  ],
+  "MonsterTypes": [
+    "Kinoko",
+    "Snailshell",
+    "NormalSnailshell",
+    "BlackOoze_Monster",
+    "BlackOoze",
+    "SkeltonOoze",
+    "BigMerman",
+    "DifferentBigMerman",
+    "Coolmaiden",
+    "Mimick"
+  ],
+  "NeutralTypes": [
+    "DPScheckWood"
+  ],
+  "BossTypes": [
+    "Bigoni"
+  ],
+  "BossExcludeTypes": [
+    "MafiaBossCustom"
+  ],
+  "FactionRelations": [
+    {
+      "Left": "bandits_inquisition",
+      "Right": "church",
+      "Relation": "friendly"
+    },
+    {
+      "Left": "bandits_mafia",
+      "Right": "mafia",
+      "Relation": "friendly"
+    },
+    {
+      "Left": "bandits_demons",
+      "Right": "demons",
+      "Relation": "friendly"
+    },
+    {
+      "Left": "bandits",
+      "Right": "demons",
+      "Relation": "hostile"
+    },
+    {
+      "Left": "bandits",
+      "Right": "undead",
+      "Relation": "hostile"
+    },
+    {
+      "Left": "bandits",
+      "Right": "monsters",
+      "Relation": "hostile"
+    },
+    {
+      "Left": "church",
+      "Right": "demons",
+      "Relation": "hostile"
+    },
+    {
+      "Left": "church",
+      "Right": "undead",
+      "Relation": "hostile"
+    },
+    {
+      "Left": "church",
+      "Right": "monsters",
+      "Relation": "hostile"
+    },
+    {
+      "Left": "mafia",
+      "Right": "demons",
+      "Relation": "hostile"
+    },
+    {
+      "Left": "mafia",
+      "Right": "undead",
+      "Relation": "hostile"
+    },
+    {
+      "Left": "mafia",
+      "Right": "monsters",
+      "Relation": "hostile"
+    },
+    {
+      "Left": "demons",
+      "Right": "undead",
+      "Relation": "hostile"
+    },
+    {
+      "Left": "demons",
+      "Right": "monsters",
+      "Relation": "hostile"
+    },
+    {
+      "Left": "undead",
+      "Right": "monsters",
+      "Relation": "hostile"
+    },
+    {
+      "Left": "church",
+      "Right": "mafia",
+      "Relation": "hostile"
+    },
+    {
+      "Left": "witch",
+      "Right": "bandits",
+      "Relation": "hostile"
+    },
+    {
+      "Left": "witch",
+      "Right": "church",
+      "Relation": "hostile"
+    },
+    {
+      "Left": "witch",
+      "Right": "demons",
+      "Relation": "hostile"
+    },
+    {
+      "Left": "witch",
+      "Right": "mafia",
+      "Relation": "hostile"
+    },
+    {
+      "Left": "witch",
+      "Right": "undead",
+      "Relation": "hostile"
+    },
+    {
+      "Left": "witch",
+      "Right": "monsters",
+      "Relation": "hostile"
+    }
+  ],
+  "FactionColors": [
+    {
+      "Faction": "bandits",
+      "Color": "#FF8F1F"
+    },
+    {
+      "Faction": "bandits_inquisition",
+      "Color": "#4FC3F7"
+    },
+    {
+      "Faction": "bandits_mafia",
+      "Color": "#FFC107"
+    },
+    {
+      "Faction": "bandits_demons",
+      "Color": "#E53935"
+    },
+    {
+      "Faction": "church",
+      "Color": "#ECEFF1"
+    },
+    {
+      "Faction": "demons",
+      "Color": "#7B1FA2"
+    },
+    {
+      "Faction": "mafia",
+      "Color": "#283593"
+    },
+    {
+      "Faction": "undead",
+      "Color": "#76FF03"
+    },
+    {
+      "Faction": "monsters",
+      "Color": "#6D4C41"
+    },
+    {
+      "Faction": "witch",
+      "Color": "#AB47BC"
+    }
+  ]
+}

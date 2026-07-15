@@ -1,0 +1,8 @@
+{
+  "stepId": "broker_body_ok",
+  "stepKind": "continue",
+  "speakerLabel": "Stranger",
+  "npcLinePoolId": "broker_broker_body_ok_k",
+  "npcLine": "",
+  "choiceLabels": []
+}

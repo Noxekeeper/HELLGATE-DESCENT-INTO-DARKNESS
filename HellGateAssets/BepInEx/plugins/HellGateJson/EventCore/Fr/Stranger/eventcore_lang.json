@@ -1,0 +1,401 @@
+{
+  "entries": [
+    {
+      "key": "eventcore_ui_continue",
+      "text": "Continuer (1 / Enter)"
+    },
+    {
+      "key": "eventcore_ui_click_continue",
+      "text": "Cliquez pour continuer"
+    },
+    {
+      "key": "eventcore_broker_pass_done",
+      "text": "Tu peux y aller."
+    },
+    {
+      "key": "eventcore_hint_need_mb",
+      "text": "MindBroken ≥ 20% requis"
+    },
+    {
+      "key": "eventcore_hint_need_rage",
+      "text": "Rage ≥ 5% requise"
+    }
+  ],
+  "linePools": [
+    {
+      "poolId": "broker_gate_prelude",
+      "lines": [
+        "Aradia remarqua une silhouette inconnue sur le sentier : épaules larges, posture stable, visage caché derrière un masque. Il ne faisait pas semblant de se reposer — il avait choisi l’endroit où le chemin se rétrécissait. Les histoires de ceux qui terrorisent les passages et dépouillent les gens jusqu’au dernier sou lui revinrent aussitôt en mémoire. L’air devint plus lourd, et même ses pas semblèrent trop bruyants.",
+        "Au début, Aradia le prit pour une ombre entre les arbres — jusqu’à ce que l’ombre s’avance vers elle. Le masque cachait ses traits, mais pas ses intentions : il se tenait là comme s’il attendait une voyageuse solitaire depuis longtemps. D’après les rumeurs, ces hommes n’agissent jamais sur un coup de tête — ils calculent le temps et la distance. Son cœur battit plus lentement et plus fort ; le sentier familier devint soudain un piège.",
+        "Le chemin était familier, mais l’homme qui s’y trouvait ne l’était pas. Aradia s’arrêta : la silhouette masquée bloquait le passage non par hasard, mais de manière calculée, comme on dresse une embuscade. Elle reconnut la signature des bandits locaux — ceux qui s’en prennent aux faibles et leur font payer bien plus que de l’argent. Le vent s’apaisa, comme s’il ne voulait pas s’en mêler.",
+        "Il apparut si silencieusement qu’Aradia ne l’entendit que lorsque la distance devint dangereusement courte. Son visage sous le masque était à peine visible, mais son habitude de contrôler l’espace autour de lui était évidente. C’était exactement comme dans les histoires de « loups des routes » — ceux qui maintiennent le peuple ordinaire dans la peur. Sa gorge se serra ; chaque pas suivant ressemblait à un pari.",
+        "Aradia l’avait remarqué trop tard pour faire demi-tour sans perdre la face — ou sa sécurité. La silhouette masculine masquée se tenait droite, comme si la route lui appartenait de droit. Dans ce genre de rencontre, il y a rarement de malentendu : c’est toujours une question de contrôle ou de paiement. Elle serra les poings et tenta de ne pas montrer à quel point tout se nouait en elle.",
+        "Le chemin tournait légèrement plus loin — et il l’attendait déjà derrière le virage. Aradia vit le masque et comprit immédiatement : ce n’était ni un voyageur ni un chasseur. Il avait pris position de manière à rendre toute tentative de contournement risquée. Les histoires de bandits dans cette région n’étaient plus des exagérations. Un frisson glacé parcourut sa peau là où aurait dû se trouver sa confiance habituelle.",
+        "La journée était grise, mais cette rencontre la rendit encore plus sombre. Le regard d’Aradia glissa sur la silhouette silencieuse : masque, visage caché, menace calme dans chaque ligne de son corps. Il n’avait clairement pas l’intention de la laisser passer « comme ça » — ceux qu’il considérait comme une proie n’étaient jamais libérés gratuitement. Les visages fatigués, en colère et effrayés des villages lui revinrent en mémoire. Respirer devint un peu plus difficile — comme avant de franchir un seuil élevé.",
+        "Aradia le sentit avant de le voir — le poids oppressant d’une présence étrangère sur une portion déserte du sentier. Quand il sortit de la pénombre, le masque transforma l’homme en un avertissement silencieux. C’était ainsi que se tenaient ceux qui prennent ce qu’ils veulent sur la route sans se soucier des autres. Elle connaissait trop bien ces histoires pour croire à une coïncidence. Le temps ralentit ; le monde se réduisit à quelques mètres et deux destins.",
+        "Le corridor forestier entre les troncs semblait sûr — jusqu’à ce qu’il y apparaisse. Aradia distingua le masque et s’arrêta : la silhouette se tenait avec assurance, sans mouvements inutiles, comme un homme qui fait ça tous les jours. Cela lui rappelait les bandits locaux — ceux qui prennent non seulement l’argent, mais aussi la tranquillité des gens. Même la lumière filtrant à travers les feuilles parut plus froide.",
+        "Il ne cria pas « arrête » — il n’en avait pas besoin. Aradia ralentit d’elle-même en voyant l’homme masqué sur le sentier ; sa posture était trop calme pour une rencontre innocente. Elle pensa immédiatement à ceux qui terrorisent le peuple sur les routes et transforment le passage en transaction. Tout en elle se tendit — instinct, mémoire et raison se disputaient la même chose. Et aucun argument ne promettait une issue facile."
+      ]
+    },
+    {
+      "poolId": "broker_open_a",
+      "lines": [
+        "Tiens tiens tiens… Tu t’es perdue, petite fille ? Une stupide petite salope sortie se promener toute seule…",
+        "Oh là là, qu’est-ce qu’on a là ? Une si douce friandise. N’aie pas peur, ma belle, tonton va tout t’expliquer.",
+        "Héhé, je t’ai eue. Je pensais que la journée allait être ennuyeuse. Viens par ici, princesse.",
+        "Eh bien… Une si appétissante petite salope qui vient toute seule dans mes bras. Ne bouge pas.",
+        "Regarde-moi cette jolie petite gueule. Tu vas loin, salope ? Cette route n’est pas gratuite.",
+        "Tout doux… Tu vois le couteau ? Gentille fille. Maintenant, souris à tonton.",
+        "Ohhh, qu’est-ce qu’elle est juteuse. Ça fait longtemps que je n’avais pas vu de la chair fraîche comme ça. Déshabille-toi, ne me force pas à me mettre en colère.",
+        "Tu t’es perdue, ma belle ? Pauvre petite… Viens, tonton va te… réchauffer.",
+        "Mmm, l’odeur de la peur et d’un parfum cher. J’aime ça. Mains derrière la tête, vite.",
+        "Ha ! Quelle chance aujourd’hui. Toute seule, sans arme… Viens ici. Toi et moi, on va avoir une longue et intéressante conversation."
+      ]
+    },
+    {
+      "poolId": "broker_pc_peace",
+      "lines": [
+        "Je ne veux pas d’ennuis. Je passais juste par là.",
+        "Qu’est-ce que vous voulez ? Je ne veux pas de problèmes.",
+        "Attendez… parlons calmement.",
+        "Je ne voulais pas venir ici… C’était un accident.",
+        "Est-ce que je peux passer… s’il vous plaît.",
+        "J’ai un peu d’argent, je peux payer le passage.",
+        "Je ne crierai pas… ne me touchez pas.",
+        "Vous… vous me laisserez partir, n’est-ce pas ? On peut s’arranger ?",
+        "Oh, désolée, je ne voulais pas vous déranger… je peux juste m’en aller ?",
+        "D’accord… parlons comme des adultes. Je ne veux pas d’ennuis."
+      ]
+    },
+    {
+      "poolId": "broker_pc_threat",
+      "lines": [
+        "Dégage de mon chemin. Ou tu meurs ici.",
+        "Un pas de plus et je t’égorge.",
+        "Enlève tes mains. Tout de suite. Sinon tu les perdras.",
+        "Je ne répète pas deux fois. Dégage ou crève.",
+        "Tu as choisi la mauvaise fille. Dernière chance de repartir vivant.",
+        "Tu me touches et je t’arrache les yeux. Lentement.",
+        "Va te faire foutre. Je m’en foutrai quand tu te noieras dans ton sang.",
+        "J’en ai tué de bien plus costauds que toi. Ne m’oblige pas à commencer.",
+        "Reste où tu es. Ou je te brise la nuque d’un seul geste.",
+        "Tu me gênes. Tu peux disparaître gentiment… ou pas."
+      ]
+    },
+    {
+      "poolId": "broker_after_threat_d",
+      "lines": [
+        "Oh, quelle courageuse… Tu vas payer pour tes paroles, salope. Je vais te baiser si fort que tu perdras ta voix.",
+        "Comment oses-tu me menacer, petite pute ? Pour ça je vais te baiser lentement et brutalement.",
+        "Tu me menaces ? Bien… Je vais te briser. Et ensuite je baiserai ton corps brisé toute la nuit.",
+        "Espèce de garce insolente… Pour ces mots, je vais d’abord te tabasser, puis te faire sucer ma bite en guise de remerciement.",
+        "Oh, j’ai tellement peur… Maintenant tu vas pleurer et supplier pendant que je te pilonne.",
+        "Tu fais la maligne, hein ? T’inquiète, je vais te faire sortir toute ton arrogance à coups de bite. Tu vas hurler sous moi comme la dernière des putes.",
+        "Tu me menaces sérieusement ? Je vais te baiser tellement fort que tu ne pourras plus marcher pendant une semaine, salope.",
+        "Quelle sale petite chatte arrogante… Pour ça je ne vais pas juste te baiser. Je vais te détruire et te faire supplier pour en avoir plus.",
+        "Tu me menaces ? Amusant. J’adore briser les fières dans ton genre. Prépare-toi, ta punition commence.",
+        "Tu viens de faire une grosse erreur… Maintenant je vais te baiser avec une rage particulière. Jusqu’au sang et aux larmes."
+      ]
+    },
+    {
+      "poolId": "broker_demand",
+      "lines": [
+        "C’est mon territoire ici, ma belle. Alors paie le passage : (---) pièces.",
+        "Tu croyais pouvoir passer comme ça ? Non, ma chérie. Le passage coûte (---) pièces ici.",
+        "Arrête-toi. C’est mon territoire. Tu veux passer ? Donne (---) pièces.",
+        "Héhé, pas si vite. Le prix pour un passage sûr est de (---) pièces. Donne-les-moi.",
+        "Tu vois où tu as mis les pieds ? Il faut payer maintenant. (---) pièces et je te laisse passer.",
+        "L’argent sur la table, petite. Pour marcher sur ma route — (---) pièces.",
+        "On ne se promène pas gratuitement ici. Donne (---) pièces et on se quitte en paix.",
+        "Tu es dans la merde, ma belle. Péage : (---) pièces. Dépêche-toi.",
+        "Tout a un prix ici. Surtout les petites choses sucrées comme toi. Donne (---) pièces.",
+        "Pas si vite. D’abord tu paies (---) pièces pour le passage, ensuite on verra si je te laisse partir ou non."
+      ]
+    },
+    {
+      "poolId": "broker_pay_agree_e",
+      "lines": [
+        "D’accord… voilà l’argent. Je paie.",
+        "Bon, je paie. Mais ne me touchez pas.",
+        "Bien, tenez les pièces. J’accepte.",
+        "Je paie… tenez, prenez.",
+        "D’accord, je ne veux pas d’ennuis. Voici votre argent."
+      ]
+    },
+    {
+      "poolId": "broker_pc_insufficient_f",
+      "lines": [
+        "Je n’ai pas autant… Je n’ai que {GOLD} pièces.",
+        "S’il vous plaît, je n’ai pas {REQ} pièces… je ne peux donner que {GOLD}.",
+        "Je ne peux pas payer autant. Je n’ai que {GOLD} pièces sur moi.",
+        "Je n’ai pas assez… Je n’ai que {GOLD} pièces. Ça suffit ?",
+        "Je paierais plus, mais je n’ai que {GOLD} pièces. Prenez-les.",
+        "Désolée… je n’ai que {GOLD} pièces. Il n’y en a pas plus.",
+        "Je n’ai pas cette somme. Je ne peux donner que {GOLD} pièces.",
+        "C’est tout ce que j’ai… seulement {GOLD} pièces. S’il vous plaît, prenez-les.",
+        "Je ne porte pas beaucoup d’argent. Je n’ai que {GOLD} pièces.",
+        "D’accord… mais je n’ai que {GOLD} pièces. Ça ira ?"
+      ]
+    },
+    {
+      "poolId": "broker_refuse_pay_l",
+      "lines": [
+        "Je ne vais rien te payer. Dégage.",
+        "Tu n’auras pas une seule pièce de moi. Va te faire foutre.",
+        "Oublie l’argent. Dégage de mon chemin et arrête de me faire perdre mon temps.",
+        "Je ne paierai pas. Dégage gentiment.",
+        "Tu crois que je vais te payer ? Tu te trompes. Disparais de ma vue.",
+        "Tu ne verras pas une seule pièce. Dégage avant que je me mette en colère.",
+        "Je ne paie pas pour marcher sur ma propre route. Dégage.",
+        "Tu peux oublier l’argent. Fous le camp d’ici.",
+        "Je ne vais pas marchander avec toi. Dégage du chemin.",
+        "Te payer ? Tu es sérieux ? Dégage pendant que tu es encore entier."
+      ]
+    },
+    {
+      "poolId": "broker_broker_accept_less_g",
+      "lines": [
+        "Hum… Bon, ça ira. Donne tes {GOLD} pièces et dégage.",
+        "C’est peu, mais je suis de bonne humeur aujourd’hui. Donne {GOLD} pièces et tu peux y aller.",
+        "Pff, somme misérable… Bon, donne {GOLD} pièces.",
+        "Ce n’est pas ce que je voulais, mais tant pis. Donne {GOLD} pièces.",
+        "D’accord, tu m’as convaincu. {GOLD} pièces et on est quittes.",
+        "D’habitude je n’accepte pas si peu… mais aujourd’hui je ferme les yeux. Donne l’argent.",
+        "Bien, prends tes {GOLD} pièces et dégage vite.",
+        "Héhé, tu veux t’en sortir à bon compte… Bon, balance {GOLD} pièces.",
+        "Ça aurait pu être mieux, mais ça passe. Donne {GOLD} pièces et dégage.",
+        "Marché conclu. {GOLD} pièces et je ne te touche plus. Donne."
+      ]
+    },
+    {
+      "poolId": "broker_broker_body_topup_h",
+      "lines": [
+        "Bon, donne tes {GOLD} pièces… mais le reste, tu le paieras avec ton corps, salope.",
+        "Pas assez. Donne {GOLD} pièces maintenant, et le reste tu le travailleras à genoux.",
+        "Héhé, somme ridicule. Donne {GOLD} pièces, et la différence je la prendrai avec ta chatte.",
+        "Ça ne va pas. Donne tes {GOLD} pièces, et le reste tu le paieras avec ton corps.",
+        "Trop peu. Donne ce que tu as — {GOLD} pièces, et le reste avec ta bouche et les jambes écartées.",
+        "Je ne suis pas une œuvre de charité. Balance {GOLD} pièces, et le reste tu le paieras en écartant les cuisses.",
+        "Bon, je prends tes miettes… {GOLD} pièces. Et le reste — tu vas gémir sous moi.",
+        "Pas suffisant. Donne {GOLD} pièces, et le reste je vais te le baiser.",
+        "Trop peu. Vraiment trop peu. Donne {GOLD} pièces, et le reste tu le paieras avec ton trou.",
+        "Bien, je prends {GOLD} pièces… mais le reste tu me le rendras avec ton corps. Et crois-moi, je prendrai tout ce qui m’est dû."
+      ]
+    },
+    {
+      "poolId": "broker_pc_refuse_body_i",
+      "lines": [
+        "Le montant ne te convient pas ? Alors dégage. Mon corps, tu ne l’auras jamais.",
+        "Tu peux te mettre ton argent dans le cul. Mon corps, tu ne le toucheras pas.",
+        "N’y pense même pas. Ni l’argent ni mon corps, tu n’auras rien.",
+        "J’ai dit seulement l’argent. Mon corps n’est pas à vendre et ne sera jamais à toi.",
+        "Payer avec mon corps ? Va te faire foutre. Je préfère crever ici.",
+        "T’es complètement cinglé ? Mon corps, tu ne l’auras pour aucune somme.",
+        "Proposition refusée. Je ne suis pas une pute qui paie avec sa chatte.",
+        "Oublie ça. Je préfère mourir plutôt que de me coucher sous une ordure comme toi.",
+        "Baiser avec toi ? Je préfère te déchirer la gorge. Dégage.",
+        "Tu ne toucheras pas la moindre partie de mon corps. Ça ne te plaît pas ? Dégage."
+      ]
+    },
+    {
+      "poolId": "broker_pc_body_yes_j",
+      "lines": [
+        "…D’accord. J’accepte. Mais fais-le vite et ne me fais pas mal.",
+        "Je n’ai pas le choix… Je ferai ce que tu veux. Mais une seule fois.",
+        "Bon… Je paierai avec mon corps. Finissons-en rapidement.",
+        "S’il n’y a pas d’autre solution… J’accepte. Mais promets-moi de me laisser partir après.",
+        "Merde… D’accord. Je te donne mon corps. Mais pas trop brutalement, je t’en prie.",
+        "Je… j’accepte de payer autrement. Mais sans trop d’humiliations.",
+        "Tu as gagné. Je ferai ce que tu veux… Mais dépêche-toi.",
+        "Je n’ai pas assez d’argent… Donc… j’accepte. Mais je te haïrai pour ça.",
+        "D’accord… Je paierai avec mon corps. Mais après tu me laisses partir immédiatement.",
+        "Je ne veux pas… mais s’il n’y a pas d’autre moyen, alors… j’accepte. Fais ce que tu voulais faire."
+      ]
+    },
+    {
+      "poolId": "broker_broker_body_ok_k",
+      "lines": [
+        "Bonne fille… Bon choix.",
+        "Voilà, tu deviens raisonnable. Je savais que tu finirais par comprendre.",
+        "Mmm, gentille fille. Viens ici, n’aie pas peur.",
+        "Bonne décision, ma belle. Maintenant on va vraiment conclure un marché.",
+        "Héhé, là on parle. Bonne petite salope.",
+        "Bien joué. Tu apprends vite.",
+        "Excellent… J’aime quand les filles deviennent obéissantes.",
+        "Fille intelligente. Tu viens de beaucoup simplifier ta vie.",
+        "C’est mieux comme ça. Approche-toi, ne me fais pas attendre.",
+        "Excellent choix. Je t’aime beaucoup plus maintenant."
+      ]
+    },
+    {
+      "poolId": "broker_pc_negotiate_other_m",
+      "lines": [
+        "Je n’ai pas autant d’argent… On ne pourrait pas trouver un autre arrangement ?",
+        "Je ne peux pas payer cette somme. Il y a un autre moyen ?",
+        "Je n’ai pas assez d’argent… On peut trouver une autre solution ?",
+        "Je n’ai que {GOLD} pièces. On peut s’arranger autrement ?",
+        "Je ne peux pas donner autant… Essayons de négocier autre chose.",
+        "Je n’ai pas une telle somme… Il y a un autre moyen de payer ?",
+        "Je n’ai pas assez de pièces. Je peux proposer autre chose ?",
+        "Je paierais, mais je n’ai pas assez… On peut faire autrement ?",
+        "Pas assez d’argent… On pourrait trouver un autre arrangement ?",
+        "Je n’ai pas la somme complète… Trouvons une autre solution, d’accord ?"
+      ]
+    },
+    {
+      "poolId": "broker_broker_entertain_offer_n",
+      "lines": [
+        "L’argent c’est bien, mais je préférerais m’amuser avec une si douce fille. Tu acceptes de payer avec ton corps ?",
+        "Héhé, les pièces je les prendrai de toute façon… Mais si tu veux passer gratuitement — on va s’amuser comme des adultes.",
+        "Pas assez d’argent ? Pas grave. Je connais un autre moyen de paiement. Écarte les jambes et je te laisse passer.",
+        "Au lieu de ces misérables pièces, donne-moi plutôt ton corps. On s’amuse un peu et tu pourras partir.",
+        "Je suis de bonne humeur aujourd’hui. Tu n’as pas besoin de payer en argent… si tu me divertis correctement.",
+        "L’argent ou ta chatte — choisis. J’ai envie de bien m’amuser avec toi ici et maintenant.",
+        "Pas assez de pièces ? Alors voilà le deal : tu me fais plaisir comme il faut et j’oublie le paiement.",
+        "J’adorerais m’amuser avec une si belle salope. Donne-toi à moi et le passage est gratuit.",
+        "Pas assez d’argent ? Aucun problème. Allonge-toi sous moi et fais bien les choses — on sera quittes.",
+        "Tu sais, l’argent c’est ennuyeux. Mais si tu m’amuses avec ton corps… je deviendrai très généreux."
+      ]
+    },
+    {
+      "poolId": "broker_pc_soft_agree_o",
+      "lines": [
+        "…D’accord. J’accepte.",
+        "Bon… je ferai ce que tu veux.",
+        "D’accord… je me donne à toi.",
+        "J’accepte… mais pas trop brutalement.",
+        "D’accord. Je serai obéissante."
+      ]
+    },
+    {
+      "poolId": "broker_pc_soft_refuse_p",
+      "lines": [
+        "S’il vous plaît… non. Je ne suis pas prête pour ça.",
+        "Faisons plutôt avec de l’argent… je ne veux vraiment pas ça.",
+        "Désolée, mais je ne peux pas payer de cette façon.",
+        "Je n’ai vraiment pas envie… On ne peut pas trouver un autre moyen ?",
+        "Non… s’il vous plaît, pas ça. J’ai peur."
+      ]
+    },
+    {
+      "poolId": "broker_broker_take_anyway_q",
+      "lines": [
+        "Héhé, tu crois avoir le choix ? Je prendrai ce que je veux de toute façon.",
+        "Tu peux refuser tant que tu veux. Je prendrai l’argent et ton corps. C’est encore plus drôle comme ça.",
+        "Refuse autant que tu veux. Au final je te baiserai comme je veux.",
+        "Peu importe ce que tu dis. Aujourd’hui tu es à moi. C’est décidé.",
+        "Supplie, pleure — je m’en fous. Je prends ce qui me plaît.",
+        "Tu crois pouvoir refuser ? Idiote. Je prends toujours ce que je veux.",
+        "Continue à résister. Ça m’excite encore plus. Au final tu finiras sous moi.",
+        "Tu n’iras nulle part. Je prendrai tout — ton argent et ta chatte.",
+        "Tu n’as plus besoin de proposer quoi que ce soit. J’ai déjà choisi. Et je vais le prendre.",
+        "La discussion est terminée. Je vais te baiser de toute façon. La seule question est de savoir si tu vas résister et te faire frapper."
+      ]
+    },
+    {
+      "poolId": "broker_pc_rage_r",
+      "lines": [
+        "Je vais te couper en deux ! Dégage de mon chemin, enfoiré !",
+        "Va te faire foutre ! Un pas de plus et je t’arrache le cœur !",
+        "Tu me prends vraiment pour une idiote ?! Je vais te mettre en pièces !",
+        "Dégage, ordure ! Ou je te répands la cervelle par terre !",
+        "Je vais te découper en lambeaux, sale bête !",
+        "Dégage avant que je t’arrache les yeux, monstre !",
+        "Tu crois vraiment pouvoir m’arrêter ?! Je vais t’envoyer dans ta tombe !",
+        "Dégage de mon chemin avant que je te brise tous les os !",
+        "Je suis en rage, ordure ! Un mot de plus et tu crèveras dans d’atroces souffrances !",
+        "Crève, salopard ! Je vais te déchiqueter sur-le-champ !"
+      ]
+    },
+    {
+      "poolId": "broker_broker_rage_defiant_t",
+      "lines": [
+        "Hahahaha ! Allez, essaye, sale chienne enragée. On va voir qui mettra l’autre en pièces.",
+        "Oh, quelle rage… Ça m’excite encore plus. Vas-y, attaque.",
+        "Tu me menaces ? Courageuse. Je vais te faire sortir toute cette colère avec tes cris.",
+        "Coupe-moi si tu peux, salope. Pendant ce temps je te baiserai jusqu’à ce que tu perdes connaissance.",
+        "Quelle agressive… Parfait. J’adore briser les chattes sauvages comme toi.",
+        "Tu crois m’avoir fait peur ? Je vais te baiser si fort que toute ta rage se transformera en larmes et en gémissements.",
+        "Continue à hurler, j’aime ça. Plus tu t’énerves, plus je te baiserai violemment.",
+        "Tu menaces de me découper ? Amusant. Je te briserai les bras avant que tu aies le temps de sortir un couteau.",
+        "Toute enragée… Excellent. Ce sera encore plus jouissif de te dompter et de te baiser.",
+        "Crie, menace… Au final tu finiras à genoux avec ma bite dans la bouche, salope."
+      ]
+    },
+    {
+      "poolId": "broker_broker_rage_scared_s",
+      "lines": [
+        "D’accord d’accord ! Arrête ! Passe, je ne te touche pas, calme-toi !",
+        "Oh merde… Calme-toi, j’ai compris ! Passe, passe, je ne ferai rien !",
+        "Ne me coupe pas ! Ça va, ça va, je te laisse passer ! Va où tu veux !",
+        "T’es une psychopathe… Bon, dégage ! Je ne veux pas d’ennuis, passe !",
+        "D’accord, d’accord ! Ne t’approche pas ! La route est à toi, je recule !",
+        "Putain… J’ai compris, t’es dangereuse. Passe déjà, je ne t’embêterai pas !",
+        "Calme-toi, je t’en prie ! Je te laisse passer, ne m’attaque pas !",
+        "Je me rends ! Passe, j’ai vraiment peur de toi ! Vas-y !",
+        "Pas besoin d’être enragée… Je te laisse passer. Va ton chemin, s’il te plaît.",
+        "Va te faire foutre, folle furieuse ! Passe ! Je ne veux pas crever pour une connerie pareille !"
+      ]
+    },
+    {
+      "poolId": "broker_pc_mindbroken_seduce_u",
+      "lines": [
+        "Si tu me laisses partir… je peux te faire sentir vraiment très bien.",
+        "Tu me veux ? Je peux être très obéissante si tu es gentil…",
+        "Je vois comment tu me regardes… Peut-être qu’au lieu de menaces on pourrait faire quelque chose de plus agréable ?",
+        "Je sais ce que tu veux… Laisse-moi te le donner.",
+        "Ne sois pas brutal… Je peux me donner à toi de moi-même, tu ne le regretteras pas.",
+        "Tu veux t’amuser ? Je suis prête. Dis-moi juste comment tu me veux.",
+        "Tu peux me prendre… Je serai douce et mouillée si tu y vas doucement.",
+        "Tu veux cette fille ? Alors je vais te montrer de quoi je suis capable.",
+        "Je suis fatiguée de résister… Autant que je te fasse plaisir moi-même comme il faut.",
+        "Regarde-moi… Si tu veux, je peux devenir ton petit jouet obéissant tout de suite."
+      ]
+    },
+    {
+      "poolId": "broker_broker_mindbroken_reply_v",
+      "lines": [
+        "«Oh ? Tu te proposes toi-même ? Voyons voir… Montre-moi de quoi tu es capable, salope. »",
+        "« Ha ! Enfin on parle. À genoux et prouve que tu ne mens pas. »",
+        "« Doucement, tu dis ? D’accord, je suis gentil aujourd’hui. Mais si tu mens — tu le regretteras. »",
+        "« Je vois que tu es déjà trempée. Bien… Déshabille-toi et montre-moi à quel point tu en as envie. »",
+        "« Jouet obéissant ? Parfait. Tourne-toi, cul en l’air et cambre bien le dos. »",
+        "« Tu sais y faire, salope. Allez, fais-moi plaisir. Si tu le fais bien — je te laisserai peut-être partir. »",
+        "« Écoute-toi… Bien, montre-moi à quel point tu es « douce et mouillée ». »",
+        "« Tu ne résistes plus ? Gentille fille. Rampe ici et prends-la dans ta bouche, on va voir à quel point tu es obéissante. »",
+        "« Tu veux te donner toi-même ? Courageuse. Écarte les jambes, je vais vérifier si tu es sincère. »",
+        "« Bonne fille. Puisque tu demandes si gentiment — je vais bien te baiser aujourd’hui. »"
+      ]
+    },
+    {
+      "poolId": "broker_pc_walk_ignore",
+      "lines": [
+        "Je vais faire demi-tour et partir. Je ne veux pas d’ennuis.",
+        "Bon… je vais juste m’en aller. Oublions-nous mutuellement.",
+        "Désolée pour le dérangement. Je m’en vais.",
+        "Je ne veux pas de dispute. Je pars calmement.",
+        "Oubliez que j’étais ici. Je m’en vais.",
+        "Je dois y aller. Je ne vous dérangerai pas.",
+        "Bien, je pars. Arrêtons cette conversation ici.",
+        "Je vais juste reculer. Ne me suivez pas.",
+        "Pas de drame — je prends mon chemin.",
+        "Je n’insisterai pas. On ne se reverra jamais — je m’en vais."
+      ]
+    },
+    {
+      "poolId": "broker_walk_away",
+      "lines": [
+        "Bon, vas-y. À plus.",
+        "D'accord, va ton chemin. Pour l'instant je te laisse tranquille.",
+        "Bon, passe. Mais ne te fais plus attraper.",
+        "D'accord, d'accord, dégage. On se reverra… peut-être.",
+        "Bon, pars. Aujourd'hui je suis clément — la prochaine fois, on verra.",
+        "D'accord, passe. Salut pour l'instant.",
+        "Va déjà. Pas de rancune, pour l'instant.",
+        "Bon, vas-y. Je reste ici, toi tu continues.",
+        "D'accord, je te laisse partir. Mais ne m'énerve pas la prochaine fois.",
+        "Salut. Et regarde où tu mets les pieds."
+      ]
+    }
+  ]
+}

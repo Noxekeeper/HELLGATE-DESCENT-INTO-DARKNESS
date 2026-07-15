@@ -1,0 +1,5 @@
+# HELLGATE Spawn — Valley (biscord POI from spawnpoint.log 2026-04-18)
+# Format: RANDOM,chance,X,Y,EnemyType,Count — chance 0.3 = 30% once per spawn pass
+RANDOM,0.3,1144.07,-495.80,biscord,1
+
+

@@ -1,0 +1,27 @@
+{
+  "speakerLabel": "Bandit",
+  "stepId": "fsp_sex_money_c02",
+  "stepKind": "choice",
+  "choiceLabels": [
+    "Name the amount.",
+    "Say what you want first.",
+    "Quick — and no extra eyes.",
+    "Somewhere private only.",
+    "Show me the coin first."
+  ],
+  "choiceOutcomeIds": [
+    "noop",
+    "noop",
+    "noop",
+    "noop",
+    "noop"
+  ],
+  "choiceJumpStepIds": [
+    "fsp_sex_money_price",
+    "fsp_sex_money_2_p03",
+    "fsp_sex_money_3_p03",
+    "fsp_sex_money_4_p03",
+    "fsp_sex_money_5_p03"
+  ],
+  "npcLine": "Well? State your terms — or get lost."
+}

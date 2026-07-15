@@ -1,0 +1,8 @@
+{
+  "speakerLabel": "도적",
+  "stepId": "fsp_sex_rough_2_p03",
+  "stepKind": "continue",
+  "continueOutcomeId": "noop",
+  "continueNextStepId": "fsp_sex_rough_2_p04",
+  "npcLine": "벗어. 내일까지 다리 후들거릴 때까지 박아줄게."
+}

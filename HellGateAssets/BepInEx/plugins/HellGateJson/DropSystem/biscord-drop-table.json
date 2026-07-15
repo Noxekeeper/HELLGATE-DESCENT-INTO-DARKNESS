@@ -1,0 +1,567 @@
+﻿{
+    "settings":  {
+                     "rollCount":  1,
+                     "autoPickup":  false,
+                     "noDropWeight":  0
+                 },
+    "drops":  [
+                  {
+                      "type":  "ring",
+                      "key":  "non_frame",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "ring",
+                      "key":  "ring_old",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "ring",
+                      "key":  "ring_recovery",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "ring",
+                      "key":  "ring_hp",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "ring",
+                      "key":  "ring_mp",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "ring",
+                      "key":  "ring_sp",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "ring",
+                      "key":  "ring_str",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "ring",
+                      "key":  "ring_dex",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "ring",
+                      "key":  "ring_int",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "ring",
+                      "key":  "ring_luck",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "ring",
+                      "key":  "ring_tough",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "ring",
+                      "key":  "ring_toughcut",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "ring",
+                      "key":  "ring_wiseman",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "ring",
+                      "key":  "ring_spcut",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "ring",
+                      "key":  "ring_atkspd",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "ring",
+                      "key":  "ring_movespd",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "ring",
+                      "key":  "ring_spellspd",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "ring",
+                      "key":  "ring_spellcancel",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "ring",
+                      "key":  "ring_spellcancel_ec015ae1731d48ac9aadad0b3ee10e19",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "ring",
+                      "key":  "ring_spellcancel_ec015ae1731d48ac9aadad0b3ee10e19_e0849a693068424aa6b244b864f04514",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "ring",
+                      "key":  "ring_fool",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "ring",
+                      "key":  "ring_saints",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "ring",
+                      "key":  "ring_heavyguard",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "ring",
+                      "key":  "ring_revheal",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "ring",
+                      "key":  "ring_saints_53c94adf99c746e09a0059764a61ea46_7acc712cc0c94e049ee17514cdf424c6_98d092ad0c5b481b82eefde8d32535aa",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item_1",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item_2",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item_3",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item_sewing",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item_picking",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item_fire",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item_lightning",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item_sacred",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item_Darkness",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item_ideamini",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item_idea",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item_ideamidi",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item_ideaCondensation",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item_ideaDignity",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item_ideaDignityCon",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item_bossidea1",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item__39057b1fb6a649a68a4754cf136da129_a835c4af979744dbb51f205ce9ac7b57",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item__39057b1fb6a649a68a4754cf136da129_ead4a6f1e24a4c8bb7f6bd329424a172",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item__39057b1fb6a649a68a4754cf136da129_a2c6b4d3f5454ab0814b48350c57104e",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item__39057b1fb6a649a68a4754cf136da129_37fced1b30f24e88982660aaf8baeb75",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item_20",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item__39057b1fb6a649a68a4754cf136da129_c018c39ff9104b82a178139abdc3a25d",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item__39057b1fb6a649a68a4754cf136da129_0f2e18a549f242b797b75757fbdcfa6c",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item__39057b1fb6a649a68a4754cf136da129_44d1b92373ac428e948bdd9b2fa12a62",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item__39057b1fb6a649a68a4754cf136da129_f61f30191a8c4f259e66dafb3fc3fd94",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item_25",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item_bossidea12",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item_ReSex",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item_ReKarma",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item_latent",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item_latentbig",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item_latentCondensation",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item_latentbigshine",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item_latentCondensationshine",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item__39057b1fb6a649a68a4754cf136da129_7fe3bd9e0aef42ff976046f0610f68ed_d670f65df8334a5f9d20783a84617ae2",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item_35",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item__39057b1fb6a649a68a4754cf136da129_7fe3bd9e0aef42ff976046f0610f68ed_cb50b2c96d2d48dfb515558c496c96d5",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item__39057b1fb6a649a68a4754cf136da129_7fe3bd9e0aef42ff976046f0610f68ed_0ffa2a561e514542a13d6e7a2c21f568",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item__39057b1fb6a649a68a4754cf136da129_7fe3bd9e0aef42ff976046f0610f68ed_c65aa29c9b504f9a8a0236dba98c8a27",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item__39057b1fb6a649a68a4754cf136da129_7fe3bd9e0aef42ff976046f0610f68ed_86fd41a4a7d041debe0bcace624123e0",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item_40",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item__39057b1fb6a649a68a4754cf136da129_7fe3bd9e0aef42ff976046f0610f68ed_fe66b384248447bba8c2679d3f0ed001",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item__39057b1fb6a649a68a4754cf136da129_7fe3bd9e0aef42ff976046f0610f68ed_6d273254a16446a69de0e1c01604857c",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item__39057b1fb6a649a68a4754cf136da129_7fe3bd9e0aef42ff976046f0610f68ed_faff24a393364265951974481efa332b",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item__39057b1fb6a649a68a4754cf136da129_7fe3bd9e0aef42ff976046f0610f68ed_e7ca892e2de543ee9284429722b1b151",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item_45",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item__39057b1fb6a649a68a4754cf136da129_7fe3bd9e0aef42ff976046f0610f68ed_2b087dc6a31f4f4599cc7f78a918bb45",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item__39057b1fb6a649a68a4754cf136da129_7fe3bd9e0aef42ff976046f0610f68ed_4f05628221614ff8b11adcea423763df",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item__39057b1fb6a649a68a4754cf136da129_7fe3bd9e0aef42ff976046f0610f68ed_034eb04e28d84d8fadf1bf8f525433eb",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item__39057b1fb6a649a68a4754cf136da129_7fe3bd9e0aef42ff976046f0610f68ed_92c35e29a32f4ace8dc2966d8036189f",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item_50",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item__39057b1fb6a649a68a4754cf136da129_7fe3bd9e0aef42ff976046f0610f68ed_fd126e4d02e64a5c8a380398493e1c56",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item__39057b1fb6a649a68a4754cf136da129_7fe3bd9e0aef42ff976046f0610f68ed_6ef1457d8c564a5d85ae3e70d5c5d27f",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item__39057b1fb6a649a68a4754cf136da129_7fe3bd9e0aef42ff976046f0610f68ed_224392b692574d08b11562824049adb9",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item__39057b1fb6a649a68a4754cf136da129_7fe3bd9e0aef42ff976046f0610f68ed_5260e30f34164093b52a56bc8fe9ecd7",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item_55",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item__39057b1fb6a649a68a4754cf136da129_7fe3bd9e0aef42ff976046f0610f68ed_bab8fd795fa942e9a779dcfffc0a0a05",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item_oldkey",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item_key1",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item_key2",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item_labkey",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item_key4",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item_key5",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item_key6",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item_potion",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item_potionmp",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item_retrun",
+                      "id":  -1,
+                      "weight":  1
+                  },
+                  {
+                      "type":  "use",
+                      "key":  "Item_retrunlost",
+                      "id":  -1,
+                      "weight":  1
+                  }
+              ]
+}

@@ -1,0 +1,8 @@
+{
+  "speakerLabel": "Bandido",
+  "stepId": "fsp_sex_refuse_a_p03",
+  "stepKind": "continue",
+  "continueOutcomeId": "noop",
+  "continueNextStepId": "fsp_sex_refuse_a_p04",
+  "npcLine": "Je. Ojalá cambies de idea. Me acuerdo de esa cara."
+}

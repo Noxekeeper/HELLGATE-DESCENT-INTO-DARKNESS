@@ -1,0 +1,21 @@
+{
+  "speakerLabel": "匪徒",
+  "stepId": "fsp_sex_money_after_price",
+  "stepKind": "choice",
+  "choiceLabels": [
+    "行。{SEX_PRICE} 金币我可以接受。",
+    "太少。我不干。",
+    "把手拿开。现在。"
+  ],
+  "choiceOutcomeIds": [
+    "pay_confirm",
+    "noop",
+    "threaten"
+  ],
+  "choiceJumpStepIds": [
+    "fsp_sex_paid_grant_h",
+    "fsp_sex_refuse_d_p03",
+    "fsp_sex_paid_rage_win"
+  ],
+  "npcLine": "怎么样，小女巫？干还是不干？"
+}

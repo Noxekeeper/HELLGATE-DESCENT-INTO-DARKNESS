@@ -1,0 +1,91 @@
+{
+  "default": {
+    "zoomLevel": 2.0,
+    "centerOffset": {
+      "x": 0.0,
+      "y": 0.0
+    },
+    "followSmoothness": 0.15,
+    "centerSmoothness": 0.15,
+    "panSpeed": 1.6,
+    "startSlowmoScale": 0.3,
+    "startSlowmoDuration": 0.0,
+    "qteCorrect": {
+      "shakeIntensity": 0.0,
+      "shakeDuration": 0.0
+    },
+    "qteWrong": {
+      "shakeIntensity": 0.0,
+      "shakeDuration": 0.0,
+      "slowmo": false,
+      "slowmoScale": 0.5,
+      "slowmoDuration": 0.0
+    },
+    "combo": {
+      "shakeIntensity": 0.0,
+      "shakeDuration": 0.0
+    },
+    "mindBroken": {
+      "shakeIntensity": 0.0
+    },
+    "climax": {
+      "slowmo": false,
+      "slowmoScale": 0.8,
+      "slowmoDuration": 0.0,
+      "zoom": 2.0,
+      "pulse": true
+    }
+  },
+  "enemySpecific": {
+    "Mutude": {
+      "zoomLevel": 2.0,
+      "centerOffset": {
+        "x": 0.0,
+        "y": 0.0
+      }
+    },
+    "Touzoku": {
+      "zoomLevel": 2.0,
+      "centerOffset": {
+        "x": 0.0,
+        "y": 0.0
+      }
+    },
+    "TouzokuAxe": {
+      "zoomLevel": 2.0,
+      "centerOffset": {
+        "x": 0.0,
+        "y": 0.0
+      }
+    },
+    "SinnerslaveCrossbow": {
+      "zoomLevel": 2.0,
+      "centerOffset": {
+        "x": 0.0,
+        "y": 0.0
+      }
+    },
+    "Kakasi": {
+      "zoomLevel": 2.0,
+      "centerOffset": {
+        "x": 0.0,
+        "y": 0.0
+      }
+    },
+    "Goblin": {
+      "zoomLevel": 2.0,
+      "centerOffset": {
+        "x": 0.0,
+        "y": 0.0
+      }
+    },
+    "BlackInquisitor": {
+      "zoomLevel": 2.0,
+      "centerOffset": {
+        "x": 0.0,
+        "y": 0.0
+      }
+    }
+  }
+}
+

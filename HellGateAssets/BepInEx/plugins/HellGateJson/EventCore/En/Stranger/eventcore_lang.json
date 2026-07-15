@@ -1,0 +1,401 @@
+{
+  "entries": [
+    {
+      "key": "eventcore_ui_continue",
+      "text": "Continue (1 / Enter)"
+    },
+    {
+      "key": "eventcore_ui_click_continue",
+      "text": "Click to continue"
+    },
+    {
+      "key": "eventcore_broker_pass_done",
+      "text": "You may go."
+    },
+    {
+      "key": "eventcore_hint_need_mb",
+      "text": "Requires MindBroken ≥ 20%"
+    },
+    {
+      "key": "eventcore_hint_need_rage",
+      "text": "Requires Rage ≥ 5%"
+    }
+  ],
+  "linePools": [
+    {
+      "poolId": "broker_gate_prelude",
+      "lines": [
+        "Aradia noticed a strange figure on the path: broad shoulders, steady stance, face hidden behind a mask. He wasn’t pretending to rest — he was deliberately choosing the narrowest part of the road. Stories of those who terrorize the passes and rob people of everything immediately came to mind. The air grew heavier, and even her own footsteps sounded too loud.",
+        "At first Aradia mistook him for a shadow among the trees — until the shadow stepped forward. The mask hid his features but not his intentions: he stood as if he had been waiting for a lone traveler for a long time. Such men, according to rumors, don’t act on impulse — they calculate time and distance. Her heart beat slower and deeper; the familiar road suddenly felt like a trap.",
+        "The path was familiar, but the man on it was not. Aradia stopped: the masked figure was blocking the way not by chance, but deliberately, like setting up an ambush. She recognized the signature of local robbers — those who prey on the weak and make them pay with more than just coins. The wind died down, as if even it didn’t want to interfere.",
+        "He appeared so quietly that Aradia only heard him when the distance had already become dangerously small. His face under the mask was barely visible, but his habit of controlling the space around him was unmistakable. It was exactly like the stories about road wolves — men who keep ordinary folk in constant fear. Her throat went dry; every next step felt like a gamble.",
+        "Aradia noticed him too late to turn back without losing face — or safety. The masked man stood firmly, as if the road belonged to him by right. In such encounters there is rarely a misunderstanding: it’s always about control or payment. She clenched her fingers and tried not to show how everything inside her tightened into a knot.",
+        "The road curved slightly ahead — and he was already waiting behind the bend. Aradia saw the mask and immediately understood: this was no wanderer or hunter. He had positioned himself so that any attempt to go around looked risky. The stories about bandits in these parts no longer seemed exaggerated. A chill ran across her skin where confidence should have been.",
+        "The day was gray, but the meeting made it darker. Aradia’s gaze slid over the silent figure: mask, hidden face, calm threat in every line of his body. He clearly wasn’t going to let her pass “just like that” — people he had already marked as prey were never released for free. Faces from the villages flashed in her mind: tired, angry, frightened by the same names. It became a little harder to breathe — like before crossing a high threshold.",
+        "Aradia felt him before she saw him — the oppressive weight of a stranger’s presence on an empty stretch of path. When he stepped out of the gloom, the mask turned the man into a silent warning. This was how those who take what they want from the road and ignore other people’s haste stood. She knew these stories too well to mistake it for coincidence. Time slowed down; the world narrowed to a few meters and two fates.",
+        "The forest corridor between the trees seemed safe until he appeared in it. Aradia made out the mask and stopped: the figure held himself confidently, with no unnecessary movements, like a man who did this every day. It reminded her of the local bandits — those who take not only money but peace of mind from people. Even the light filtering through the canopy felt colder.",
+        "He didn’t shout “stop” — he didn’t need to. Aradia slowed down herself when she saw the masked man on the path; his posture was too calm for an honest coincidence. She immediately thought of those who terrorize ordinary folk on the roads and turn passage into a transaction. Everything inside her sharpened — instinct, memory, and common sense argued about the same thing. And none of the arguments promised an easy outcome."
+      ]
+    },
+    {
+      "poolId": "broker_open_a",
+      "lines": [
+        "Well, well, well… Lost, little girl? Stupid little bitch went for a walk all alone…",
+        "Oho, what do we have here? Such a sweet treat. Don’t be afraid, beautiful, uncle will explain everything.",
+        "Heh, gotcha. And I thought today would be boring. Come here, princess.",
+        "Well, would you look at that… Such a tasty little bitch walked right into my hands. Don’t twitch.",
+        "Look at that pretty face. Going far, slut? This road isn’t free.",
+        "Quiet, quiet… See the knife? Good girl. Now smile for uncle.",
+        "Ohhh, what a juicy one. Haven’t had fresh meat like this in a while. Strip, don’t make me angry.",
+        "Lost, beautiful? Poor little girl… Let me warm you up.",
+        "Mmm, the smell of fear and expensive perfume. I like it. Hands behind your head, quickly.",
+        "Ha! What a lucky day. Alone and unarmed… Come here. You and I are going to have a long, interesting conversation."
+      ]
+    },
+    {
+      "poolId": "broker_pc_peace",
+      "lines": [
+        "I don’t want any trouble. I was just passing through.",
+        "What do you want? I don’t want any problems.",
+        "Wait… let’s talk calmly.",
+        "I didn’t mean to come here… It was an accident.",
+        "Can I pass… please.",
+        "I have some money, I can pay for passage.",
+        "I won’t scream… just don’t touch me.",
+        "You… you’ll let me go, right? We can come to an agreement?",
+        "Oh, I’m sorry, I didn’t mean to bother you… can I just leave?",
+        "Alright… let’s talk like adults. I don’t want any trouble."
+      ]
+    },
+    {
+      "poolId": "broker_pc_threat",
+      "lines": [
+        "Get out of my way. Or you die here.",
+        "One more step and I’ll slit your throat.",
+        "Take your hands off. Right now. Or you’ll lose them.",
+        "I don’t repeat myself. Move or die.",
+        "You picked the wrong girl. Last chance to walk away alive.",
+        "Touch me and I’ll carve your eyes out. Slowly.",
+        "Fuck off. I won’t care when you’re choking on your own blood.",
+        "I’ve killed worse than you. Don’t make me start.",
+        "Stay right there. Or I’ll snap your neck with one move.",
+        "You’re in my way. You can disappear nicely… or not."
+      ]
+    },
+    {
+      "poolId": "broker_after_threat_d",
+      "lines": [
+        "Oh, so brave… You’ll pay for those words, whore. I’m going to fuck you so hard you’ll lose your voice.",
+        "How dare you threaten me, bitch? For that I’ll fuck you slowly and brutally.",
+        "Threatening me? Good… I’ll break you. Then I’ll fuck your broken body all night.",
+        "Cheeky little cunt… For those words I’m going to beat you first, then make you suck my cock in gratitude.",
+        "Oh, I’m so scared… Now you’re going to cry and beg for mercy while I pound you.",
+        "Feisty, huh? Don’t worry, I’ll knock all that arrogance out of you. You’ll be squealing under me like the cheapest whore.",
+        "You seriously threatening me? I’ll fuck you so hard you won’t be able to walk for a week, slut.",
+        "What a nasty cunt… For that I’m not just going to fuck you. I’m going to break you and make you beg for more.",
+        "Threatening me? Cute. I love breaking proud ones. Get ready, your punishment is about to begin.",
+        "You just made a big mistake… Now I’m going to fuck you with extra anger. Until there’s blood and tears."
+      ]
+    },
+    {
+      "poolId": "broker_demand",
+      "lines": [
+        "This is private territory, beautiful. So pay for passage (---) coins.",
+        "You think you can just walk through? No, sweetie. Passage here costs (---) coins.",
+        "Stop. This is my territory. Want to pass — hand over (---) coins.",
+        "Heh, not so fast. Payment for safe passage — (---) coins. Give them here.",
+        "See where you’ve wandered? Now you need to pay. (---) coins and I’ll let you through.",
+        "Money on the table, girl. For walking down my street — (---) coins.",
+        "We don’t walk here for free. Fork over (---) coins and we’ll part peacefully.",
+        "You’re in trouble, beautiful. Toll for passage — (---) coins. Quickly.",
+        "Everything here has a price. Especially sweet things like you. Give me (---) coins.",
+        "Not so fast. First you’ll pay (---) coins for passage, then we’ll talk about whether I let you go or not."
+      ]
+    },
+    {
+      "poolId": "broker_pay_agree_e",
+      "lines": [
+        "Fine… here’s the money. I’ll pay.",
+        "Okay, I’ll pay. Just don’t touch me.",
+        "Alright, here are the coins. I agree.",
+        "I’ll pay… here, take it.",
+        "Fine, I don’t want trouble. Here’s your money."
+      ]
+    },
+    {
+      "poolId": "broker_pc_insufficient_f",
+      "lines": [
+        "I don’t have that much… I only have {GOLD} coins.",
+        "Please, I don’t have {REQ} coins… I can only give {GOLD}.",
+        "I can’t pay that much. I only have {GOLD} coins with me.",
+        "I don’t have enough… I only have {GOLD} coins. Is that enough?",
+        "I would pay more, but I only have {GOLD} coins. Take them.",
+        "I’m sorry… I only have {GOLD} coins. That’s all.",
+        "I don’t have that amount. I can only give {GOLD} coins.",
+        "This is everything I have… just {GOLD} coins. Please, take them.",
+        "I don’t carry much with me. I only have {GOLD} coins.",
+        "Alright… but I only have {GOLD} coins. Is that enough?"
+      ]
+    },
+    {
+      "poolId": "broker_refuse_pay_l",
+      "lines": [
+        "I’m not going to pay you anything. Fuck off.",
+        "You won’t get a single coin from me. Get lost.",
+        "Forget about money. Move aside and stop wasting my time.",
+        "I’m not paying. Fuck off nicely.",
+        "You think I’ll pay you? You’re wrong. Get out of my sight.",
+        "You won’t see a single coin. Move before I get angry.",
+        "I don’t pay to walk on my own road. Fuck off.",
+        "You can forget about money. Get the hell out of here.",
+        "I’m not going to bargain with you. Get off the road.",
+        "Pay you? Are you serious? Fuck off while you still can."
+      ]
+    },
+    {
+      "poolId": "broker_broker_accept_less_g",
+      "lines": [
+        "Hm… Fine, it’ll do. Give me your {GOLD} coins and fuck off.",
+        "Not much, but I’m feeling generous today. Hand over {GOLD} coins and you can go.",
+        "Tch, pathetic amount… Fine, give me {GOLD} coins.",
+        "Not exactly what I wanted, but whatever. Hand over {GOLD} coins.",
+        "Alright, you talked me into it. {GOLD} coins and we’re even.",
+        "I don’t usually agree to such pennies… but I’ll turn a blind eye today. Give me the money.",
+        "Fine, hand over your {GOLD} coins and get out of here quickly.",
+        "Heh, trying to get off cheap… Alright, toss {GOLD} coins.",
+        "Could’ve been better, but it’ll do. Hand over {GOLD} coins and fuck off.",
+        "Deal. {GOLD} coins and I won’t touch you anymore. Give them here."
+      ]
+    },
+    {
+      "poolId": "broker_broker_body_topup_h",
+      "lines": [
+        "Fine, give me your {GOLD} coins… but you’ll pay the rest with your body, bitch.",
+        "Not enough. Give me {GOLD} coins now, and you’ll work off the rest on your knees.",
+        "Heh, pathetic sum. Hand over {GOLD} coins, and I’ll take the difference with your cunt.",
+        "No deal. Give me your {GOLD} coins, and you’ll work off the rest with your body.",
+        "Too little. Give me what you have — {GOLD} coins, and you’ll pay the rest with your mouth and legs spread.",
+        "I’m not a charity. Toss {GOLD} coins, and you’ll pay the rest by spreading your legs.",
+        "Fine, give me your pennies… {GOLD} coins. And the rest — you’ll be moaning under me.",
+        "Not good enough. Give me your {GOLD} coins, and I’ll fuck the rest out of you.",
+        "Too little. Way too little. Hand over {GOLD} coins, and you’ll pay the rest with your hole.",
+        "Alright, I’ll take {GOLD} coins… but you’ll repay the rest with your body. And believe me, I’ll take my full due."
+      ]
+    },
+    {
+      "poolId": "broker_pc_refuse_body_i",
+      "lines": [
+        "Not satisfied with the amount? Then fuck off. You’re definitely not getting my body.",
+        "You can shove your money up your ass. You’re not touching my body.",
+        "Don’t even dream about it. You’re getting neither money nor my body.",
+        "I said money only. My body is not for sale and never will be yours.",
+        "Pay with my body? Go to hell. I’d rather die right here.",
+        "Are you fucking insane? You’re not getting my body for any amount of money.",
+        "Offer rejected. I’m not a whore who pays with her cunt.",
+        "Forget it. I’d rather die than lie under scum like you.",
+        "Sleep with you? I'd rather rip your throat out. Fuck off.",
+        "You won’t touch a single part of my body. Not satisfied — then get lost."
+      ]
+    },
+    {
+      "poolId": "broker_pc_body_yes_j",
+      "lines": [
+        "…Fine. I agree. Just do it quickly and don’t hurt me.",
+        "I don’t have a choice… I’ll do what you want. But only once.",
+        "Alright… I’ll pay with my body. Just let’s get it over with quickly.",
+        "If there’s no other way… I agree. But promise you’ll let me go after.",
+        "Damn it… Fine. I’ll give you my body. Just not too rough, please.",
+        "I… I agree to pay another way. But without too much humiliation.",
+        "Fine, you win. I’ll do what you want… Just make it quick.",
+        "I don’t have enough money… So… I agree. But I’ll hate you for this.",
+        "Alright… I’ll pay with my body. But after that you let me go immediately.",
+        "I don’t want this… but if there’s no other way, then… I agree. Do what you were going to do."
+      ]
+    },
+    {
+      "poolId": "broker_broker_body_ok_k",
+      "lines": [
+        "Good girl… Smart choice.",
+        "There we go. I knew you’d get smarter.",
+        "Mmm, good girl. Come here, don’t be afraid.",
+        "Right decision, beautiful. Now we’re really going to make a deal.",
+        "Heh, now we’re talking. Good little slut.",
+        "Good. I see you learn fast.",
+        "Excellent… I love it when girls become obedient.",
+        "Smart girl. You just made your life a lot easier.",
+        "That’s better. Come closer, don’t make me wait.",
+        "Good choice. I like you much more now."
+      ]
+    },
+    {
+      "poolId": "broker_pc_negotiate_other_m",
+      "lines": [
+        "I don’t have that much money… Maybe we can work something else out?",
+        "I can’t pay that amount. Is there another way?",
+        "I don’t have enough money… Can we find another option?",
+        "I only have {GOLD} coins. Maybe we can make another deal?",
+        "I can’t give that much… Let’s try to negotiate something else.",
+        "I don’t have that kind of money… Is there another way to pay?",
+        "I don’t have enough coins. Maybe I can offer something else?",
+        "I would pay, but I don’t have enough… Can we do it another way?",
+        "Not enough money… Maybe we can come to some other arrangement?",
+        "I don’t have the full amount… Let’s find another way, yeah?"
+      ]
+    },
+    {
+      "poolId": "broker_broker_entertain_offer_n",
+      "lines": [
+        "Money is good, but I’d rather have fun with such a sweet girl. Willing to work it off with your body?",
+        "Heh, I’ll take the coins anyway… But if you want to pass for free — let’s have some adult fun.",
+        "Not enough money? No problem. I know another way to pay. Spread your legs and I’ll let you through.",
+        "Instead of those pathetic coins, better give me your body. We’ll have some fun and you can go.",
+        "I’m in a good mood today. You don’t have to pay with money… if you entertain me properly.",
+        "Money or your pussy — choose. I want to have some real fun with you right here.",
+        "Low on coins? Then here’s the deal: you please me properly and I’ll forget about the payment.",
+        "I’d love to have fun with such a beautiful slut. Give yourself to me and passage is free.",
+        "Not enough money? No problem. Lie down under me and try hard — then we’re even.",
+        "You know, money is boring. But if you entertain me with your body… I can be very generous."
+      ]
+    },
+    {
+      "poolId": "broker_pc_soft_agree_o",
+      "lines": [
+        "…Fine. I agree.",
+        "Alright… I’ll do what you want.",
+        "Fine… I’ll give myself to you.",
+        "I agree… just not too rough.",
+        "Alright. I’ll be obedient."
+      ]
+    },
+    {
+      "poolId": "broker_pc_soft_refuse_p",
+      "lines": [
+        "Please… don’t. I’m not ready for that.",
+        "Let’s do money instead… I really don’t want this.",
+        "I’m sorry, but I can’t pay like that.",
+        "I really don’t want to do this… Can we find another way?",
+        "No… please, not this. I’m scared."
+      ]
+    },
+    {
+      "poolId": "broker_broker_take_anyway_q",
+      "lines": [
+        "Heh, you think you have a choice? I’ll take what I want anyway.",
+        "You can refuse all you want. I’ll take both the money and your body. It’s even more fun this way.",
+        "Refuse as much as you like. In the end I’m still going to fuck you however I want.",
+        "Doesn’t matter what you say. Today you’re mine. I’ve already decided.",
+        "Beg and plead — I don’t give a shit. I take what I like.",
+        "You think you can say no? Stupid girl. I always take what I want.",
+        "Keep resisting. It only turns me on more. In the end you’ll still end up under me.",
+        "You’re not going anywhere. I’ll take everything — your money and your cunt.",
+        "You don’t need to offer anything. I’ve already chosen. And I will take it.",
+        "Conversation over. I’m going to fuck you anyway. The only question is whether you’ll resist and get slapped around."
+      ]
+    },
+    {
+      "poolId": "broker_pc_rage_r",
+      "lines": [
+        "I’ll cut you in half! Get out of my way, you bastard!",
+        "Fuck off! One more step and I’ll rip your heart out!",
+        "You think I’m stupid?! I’ll tear you to pieces!",
+        "Out of my way, scum! Or I’ll smear your brains on the ground!",
+        "I’ll slice you into ribbons, you piece of shit!",
+        "Fuck off before I gouge your eyes out, you freak!",
+        "You really think you can stop me?! I’ll send you to your grave!",
+        "Get off my road before I break every bone in your body!",
+        "I’m furious, you bastard! One more word and you die screaming!",
+        "Die, you fuck! I’ll rip you apart right now!"
+      ]
+    },
+    {
+      "poolId": "broker_broker_rage_defiant_t",
+      "lines": [
+        "Hahaha! Come on then, try it, you crazy bitch. Let’s see who cuts who to pieces.",
+        "Whoa, such rage… That only makes me harder. Go ahead, attack.",
+        "Threatening me? Brave. I’ll beat that anger out of you along with your screams.",
+        "Cut me if you can, cunt. Meanwhile I’ll be fucking you unconscious.",
+        "So aggressive… Good. I love breaking wild cats like you.",
+        "Think you scared me? I’m going to fuck you so hard all that rage turns into tears and moans.",
+        "Keep screaming, I like it. The angrier you get, the harder I’ll pound you.",
+        "Threatening to cut me? Cute. I’ll break your arms before you can even draw a knife.",
+        "All furious… Perfect. It’ll be even more satisfying to tame and fuck you.",
+        "Scream and threaten all you want… In the end you’ll still be on your knees with my cock in your mouth, whore."
+      ]
+    },
+    {
+      "poolId": "broker_broker_rage_scared_s",
+      "lines": [
+        "Okay-okay! No need! Go through, I won’t touch you, just calm down!",
+        "Oh shit… Calm down, I get it! Go, go, I won’t do anything!",
+        "Don’t cut me! Fine, fine, I’m letting you through! Go wherever you want!",
+        "You’re a psycho… Fine, get out of here! I don’t want trouble, go!",
+        "Alright, alright! Just don’t come closer! The road is yours, I’m backing off!",
+        "Fuck… I get it, you’re dangerous. Go already, I won’t bother you!",
+        "Calm down, please! I’m letting you through, just don’t attack!",
+        "Fine, I surrender! Go through, I’m scared of you, honestly! Go!",
+        "No need for rage… I’m letting you pass. Go your way, please.",
+        "Fuck it, you crazy bitch! Go! I don’t want to die over this shit!"
+      ]
+    },
+    {
+      "poolId": "broker_pc_mindbroken_seduce_u",
+      "lines": [
+        "If you let me go… I can make you feel really good.",
+        "You want me? I can be very obedient if you’re nice…",
+        "I see how you’re looking at me… Maybe instead of threats we can do something more pleasant?",
+        "I know what you want… Let me give it to you.",
+        "Don’t be rough… I can give myself to you willingly so you won’t regret it.",
+        "You want to have fun? I’m ready. Just tell me how you want me.",
+        "You can take me… I’ll be gentle and wet if you’re a little softer.",
+        "You want this girl? Then I’ll show you what I can do.",
+        "I’m tired of resisting… Better if I please you properly myself.",
+        "Look at me… If you want, I can be your obedient little toy right now."
+      ]
+    },
+    {
+      "poolId": "broker_broker_mindbroken_reply_v",
+      "lines": [
+        "“Oh? Offering yourself? Well, well… Show me what you can do, slut.”",
+        "“Ha! Now we’re talking. On your knees and prove you’re not lying.”",
+        "“Softer, you say? Alright, I’m feeling generous today. But if you’re faking it — you’ll regret it.”",
+        "“I see you’re already wet. Good… Strip and show me how badly you want it.”",
+        "“Obedient toy? Perfect. Turn around, ass up, and arch your back properly.”",
+        "“You know how to beg, whore. Go on, please me. If you do it well — maybe I’ll let you go.”",
+        "“Listen to you… Fine, show me how \"wet and gentle\" you are.”",
+        "“Not resisting? Good. Crawl over here and take it in your mouth. Let’s see how obedient you are.”",
+        "“You want to give yourself willingly? Bold. Spread your legs, I’ll check how honest you are.”",
+        "“Good girl. Since you’re asking so nicely — I’m going to fuck you real good today.”"
+      ]
+    },
+    {
+      "poolId": "broker_pc_walk_ignore",
+      "lines": [
+        "I’ll turn around and leave. I don’t need trouble.",
+        "Fine… I’ll just walk away. Let’s forget about each other.",
+        "Sorry for the disturbance. I’m leaving.",
+        "I don’t want a fight. I’m calmly walking away.",
+        "Forget I was ever here. I’m leaving.",
+        "I have to go. I won’t bother you.",
+        "Alright, I’m leaving. Let’s not continue this conversation.",
+        "I’ll just step back. Don’t follow me.",
+        "Let’s skip the drama — I’m going my own way.",
+        "I won’t insist. We’ll never see each other again — I’m leaving."
+      ]
+    },
+    {
+      "poolId": "broker_walk_away",
+      "lines": [
+        "Fine, go on. See you around.",
+        "Alright, go your way. I'll leave you alone for now.",
+        "Okay, pass by. Just don't get caught again.",
+        "Alright, alright, beat it. See you… maybe.",
+        "Okay, leave. I'm feeling generous today — next time, who knows.",
+        "Fine, pass through. Bye for now.",
+        "Go already. No hard feelings for now.",
+        "Okay, go on. I'll stand here, you head ahead.",
+        "Alright, I'll let you go. Just don't anger me next time.",
+        "Bye. And watch your step."
+      ]
+    }
+  ]
+}

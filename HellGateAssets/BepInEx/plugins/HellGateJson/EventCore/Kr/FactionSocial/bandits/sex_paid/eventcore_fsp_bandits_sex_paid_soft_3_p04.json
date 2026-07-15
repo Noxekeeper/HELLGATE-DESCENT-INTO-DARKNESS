@@ -1,0 +1,8 @@
+{
+  "speakerLabel": "도적",
+  "stepId": "fsp_sex_soft_3_p04",
+  "stepKind": "continue",
+  "continueOutcomeId": "noop",
+  "continueNextStepId": "fsp_sex_paid_grant_h",
+  "npcLine": "그가 벽에 밀어 붙이지만, 손은 숨막히게 하지 않는다——받쳐 주듯 힘을 준다. 「봤지? 가자——돈은 낼 거야.」"
+}

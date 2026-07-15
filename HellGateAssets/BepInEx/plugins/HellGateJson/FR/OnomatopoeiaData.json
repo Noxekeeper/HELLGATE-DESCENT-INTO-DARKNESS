@@ -1,0 +1,739 @@
+{
+  "soundMapping": {
+    "dame_kuhuu": [
+      "Ouf !",
+      "Ah !"
+    ],
+    "dame_kuu": [
+      "Ghi",
+      "Aghi",
+      "Ouf !",
+      "Ah !",
+      "Hhh..."
+    ],
+    "dame_ahaa": [
+      "Ahaa !",
+      "Ahaa",
+      "Ah !",
+      "Ouf !"
+    ],
+    "ero_piston1": [
+      "Glk...",
+      "Glkhh...",
+      "Smack !",
+      "Paf !",
+      "Boum !"
+    ],
+    "ero_piston5": [
+      "Glk...",
+      "Glkhh...",
+      "Smack !",
+      "Paf !",
+      "Boum !"
+    ],
+    "snd_drink": [
+      "Gloup !",
+      "Glp !",
+      "Glpf !",
+      "Gloup..."
+    ],
+    "ero_nameru": [
+      "Mmm...",
+      "Lèche...",
+      "Slurp..."
+    ],
+    "ero_enemy_syasei1": [
+      "Splatch !",
+      "Pchitt !",
+      "Jouit !",
+      "Splash !"
+    ],
+    "snd_down": [
+      "Boum !",
+      "Ding !",
+      "Boum...",
+      "Ding..."
+    ],
+    "snd_nuno": [
+      "*froufrou*",
+      "*déchire*",
+      "*vêtements*"
+    ],
+    "ero_iya1": [
+      "Iyaa !",
+      "Yaa !",
+      "Aaa !",
+      "Aaaa !"
+    ],
+    "kakasi_iku": [
+      "Mm...",
+      "Mgyha...",
+      "Khaa...",
+      "Aaa...",
+      "Mfhts...",
+      "Mhu...",
+      "Mgh...",
+      "Mguhu"
+    ],
+    "sura_nomikomi2": [
+      "Mm...",
+      "Mmm...",
+      "Gloup...",
+      "Mh...",
+      "Mmmh..."
+    ],
+    "kakasi_ero": [
+      "Mm...",
+      "Am...",
+      "Mmm...",
+      "Muu...",
+      "Mhuuu...",
+      "Mhuguhh...",
+      "Muuugkh...",
+      "Ghkuk..."
+    ],
+    "ero_geho": [
+      "Ghuy...",
+      "Khaky...",
+      "Yhy...",
+      "Yh...",
+      "Kof...",
+      "Han..."
+    ],
+    "ero_now_iya3": [
+      "Mghu...",
+      "Mm...",
+      "Yyk...",
+      "Thynghyaa...",
+      "Aikh...",
+      "Ihii...",
+      "Khea...",
+      "Akhaa...",
+      "Oigyu...",
+      "Mgh..."
+    ],
+    "ero_now_iya4": [
+      "Aah...",
+      "Aah...",
+      "Aakhaaa...",
+      "Ha...",
+      "Aaa...",
+      "Khaau...",
+      "Nghkyaa...",
+      "Akgha...",
+      "Aha,aha...",
+      "Yu....",
+      "Akgha..."
+    ],
+    "kakasi_ero2": [
+      "Kghu...",
+      "Mha...",
+      "Ghhuu...",
+      "Khuuu...",
+      "Gulk...",
+      "Gulk...",
+      "Mhaay...",
+      "Mm...",
+      "Mha...",
+      "Yha...",
+      "Yha...",
+      "Mh...",
+      "Mshghy..."
+    ],
+    "dame_itaa": [
+      "Itaa !",
+      "Aïe !",
+      "Ouf !",
+      "Ah !",
+      "Aïe !",
+      "Aïe !"
+    ],
+    "snd_yabuer": [
+      "*déchire*",
+      "*arrache*",
+      "*casse*",
+      "*brise*"
+    ],
+    "ero_gutyugutyu2": [
+      "Boum !",
+      "Ding !",
+      "Pound !",
+      "Thrust !",
+      "Paf !",
+      "Squish...",
+      "Squelch..."
+    ],
+    "ero_pistn2": [
+      "Boum !",
+      "Ding !",
+      "Paf !",
+      "Boum...",
+      "Ding !"
+    ],
+    "ero_start1": [
+      "Ah !",
+      "Aaa !",
+      "Ouf !",
+      "Ah...",
+      "Aaa..."
+    ],
+    "rape_mouth_end": [
+      "Han...",
+      "Kof...",
+      "Hah...",
+      "Hahh...",
+      "Han !"
+    ],
+    "dame_ugu": [
+      "Ouf !",
+      "Ouf !",
+      "Ouf !",
+      "Ah !",
+      "Aïe !"
+    ],
+    "dame_hguu": [
+      "Ouf !",
+      "Ouf !",
+      "Ah !",
+      "Ouf !"
+    ],
+    "ero_gutyugutyu": [
+      "Boum !",
+      "Ding !",
+      "Pound !",
+      "Thrust !",
+      "Paf !",
+      "Squish...",
+      "Squelch..."
+    ],
+    "mouth_gutyu2": [
+      "Squish...",
+      "Squelch...",
+      "Gloup...",
+      "Squish..."
+    ],
+    "ero_piston3": [
+      "Glk...",
+      "Glkhh...",
+      "Smack !",
+      "Paf !",
+      "Boum !"
+    ],
+    "ero_kutyu": [
+      "Squish...",
+      "Squelch...",
+      "Gloup...",
+      "Squish..."
+    ],
+    "ero_kutyu1": [
+      "Squish...",
+      "Squelch...",
+      "Gloup...",
+      "Squish..."
+    ],
+    "ero_enemy_syase2": [
+      "Splatch !",
+      "Pchitt !",
+      "Jouit !",
+      "Splash !"
+    ],
+    "ero_Unconscious": [
+      "Mmm...",
+      "Hmm...",
+      "Mgh...",
+      "Inconsciente..."
+    ],
+    "snd_step": [
+      "*pas*",
+      "*pas*",
+      "*marche*"
+    ],
+    "ero_vo_aegi": [
+      "Aïe !",
+      "Aïe !",
+      "Ouf !",
+      "Ah !",
+      "Ouf !"
+    ],
+    "ero_now4": [
+      "Ah !",
+      "Aaa !",
+      "Ouf !",
+      "Ah...",
+      "Aaa..."
+    ],
+    "ero_now14": [
+      "Ah !",
+      "Aaa !",
+      "Ouf !",
+      "Ah...",
+      "Aaa..."
+    ],
+    "ero_ikisou1": [
+      "Iki...",
+      "Iki...",
+      "Ah...",
+      "Ouf...",
+      "Aaa..."
+    ],
+    "vo_obieru": [
+      "Non !",
+      "Non !",
+      "Arrête !",
+      "Ah !",
+      "Ouf !"
+    ],
+    "rape_mouth_start": [
+      "Mmm...",
+      "Mmm...",
+      "Gloup...",
+      "Mh...",
+      "Mmmh..."
+    ],
+    "1sword": [
+      "*épée*",
+      "*choc*",
+      "*métal*"
+    ]
+  },
+  "categories": {
+    "StaminaEffort": [
+      "Ghi",
+      "Aghi",
+      "Ouf !",
+      "Ahaa !",
+      "Ouf !",
+      "Ah !",
+      "Hhh...",
+      "Haa...",
+      "Aaa...",
+      "N-non !",
+      "Non !"
+    ],
+    "ThrustSFX": [
+      "Glk...",
+      "Glkhh...",
+      "Smack !",
+      "Gloup !",
+      "Glp !",
+      "Glpf !"
+    ],
+    "SlimeWet": [
+      "schlk...",
+      "splrch...",
+      "plop...",
+      "Mmm...",
+      "mmm.mm"
+    ],
+    "ClimaxBurst": [
+      "Splatch !",
+      "Pchitt !",
+      "Jouit !",
+      "AAAaaah !!!",
+      "Aaahhh !!",
+      "Khh— !",
+      "Uuuaaah",
+      "Aaah",
+      "AAAh !"
+    ]
+  },
+  "mutudeSpecific": {
+    "START": {
+      "se_count_1": [
+        "Ouf !",
+        "Ah !"
+      ],
+      "se_count_2": [
+        "Iyaa...",
+        "Yaa...",
+        "Aaa...",
+        "Aaaa..."
+      ],
+      "se_count_2_segments": {
+        "1": ["Iyaa..."],
+        "2": ["Yaa..."],
+        "3": ["Aaa..."],
+        "4": ["Aaaa..."]
+      },
+      "se_count_3": [
+        "Mm...",
+        "Mgyha...",
+        "Khaa...",
+        "Aaa...",
+        "Mfhts...",
+        "Mhu...",
+        "Mgh...",
+        "Mguhu"
+      ],
+      "se_count_3_segments": {
+        "1": ["Mm..."],
+        "2": ["Mgyha..."],
+        "3": ["Khaa..."],
+        "4": ["Aaa..."],
+        "5": ["Mfhts...", "Mhu...", "Mgh...", "Mguhu"]
+      }
+    },
+    "ERO1": {
+      "any": [
+        "Mghu...",
+        "Mm...",
+        "Yyk...",
+        "Thynghyaa...",
+        "Aikh...",
+        "Ihii...",
+        "Khea...",
+        "Akhaa...",
+        "Oigyu...",
+        "Mgh...",
+        "Glk...",
+        "Glkhh...",
+        "Smack !"
+      ],
+      "any_segments": {
+        "1": ["Mghu..."],
+        "2": ["Mm..."],
+        "3": ["Yyk..."],
+        "4": ["Thynghyaa..."],
+        "5": ["Aikh..."],
+        "6": ["Ihii..."],
+        "7": ["Khea..."],
+        "8": ["Akhaa..."],
+        "9": ["Oigyu...", "Mgh...", "Glk...", "Glkhh...", "Smack !"]
+      }
+    },
+    "ERO1_2": {
+      "any": [
+        "Glk...",
+        "Glkhh...",
+        "Smack !"
+      ]
+    },
+    "ERO2": {
+      "se_count_1": [
+        "Mghu...",
+        "Mm...",
+        "Yyk...",
+        "Thynghyaa...",
+        "Aikh...",
+        "Ihii...",
+        "Khea...",
+        "Akhaa...",
+        "Oigyu...",
+        "Mgh...",
+        "Ghi",
+        "Aghi",
+        "Ouf !",
+        "Ah !",
+        "Hhh...",
+        "Ahaa !",
+        "Glk...",
+        "Glkhh...",
+        "Smack !"
+      ],
+      "se_count_2": [
+        "Glk...",
+        "Glkhh...",
+        "Smack !",
+        "Ghi",
+        "Aghi",
+        "Ouf !",
+        "Ah !",
+        "Hhh...",
+        "Ouf !"
+      ]
+    },
+    "ERO2_2": {
+      "se_count_1": [
+        "Mghu...",
+        "Mm...",
+        "Yyk...",
+        "Thynghyaa...",
+        "Aikh...",
+        "Ihii...",
+        "Khea...",
+        "Akhaa...",
+        "Oigyu...",
+        "Mgh...",
+        "Ghi",
+        "Aghi",
+        "Ouf !",
+        "Ah !",
+        "Hhh...",
+        "Ahaa !",
+        "Glk...",
+        "Glkhh...",
+        "Smack !"
+      ],
+      "se_count_2": [
+        "Glk...",
+        "Glkhh...",
+        "Smack !",
+        "Ghi",
+        "Aghi",
+        "Ouf !",
+        "Ah !",
+        "Hhh...",
+        "Ahaa !"
+      ]
+    },
+    "ERO3": {
+      "se_count_1": [
+        "Glk...",
+        "Glkhh...",
+        "Smack !",
+        "Mm...",
+        "Mmm...",
+        "Gloup...",
+        "Gloup...",
+        "Gloup..."
+      ],
+      "se_count_1_segments": {
+        "1": ["Glk...", "Glkhh...", "Smack !"],
+        "2": ["Mm..."],
+        "3": ["Mmm..."],
+        "4": ["Gloup..."],
+        "5": ["Gloup..."],
+        "6": ["Gloup..."],
+        "7": ["Mmm..."],
+        "8": ["Gloup..."],
+        "9": ["Gloup..."],
+        "10": ["Gloup..."]
+      },
+      "se_count_2": [
+        "Gloup !",
+        "Glp !",
+        "Glpf !",
+        "Gloup..."
+      ],
+      "se_count_3": [
+        "Glk...",
+        "Glkhh...",
+        "Smack !"
+      ],
+      "se_count_4": [
+        "Mmm...",
+        "Lèche...",
+        "Slurp..."
+      ]
+    },
+    "ERO4": {
+      "se_count_1": [
+        "Glk...",
+        "Glkhh...",
+        "Smack !",
+        "Mm...",
+        "Mgyha...",
+        "Khaa...",
+        "Aaa...",
+        "Mfhts...",
+        "Mhu...",
+        "Mgh...",
+        "Mguhu",
+        "Mmm...",
+        "Mh..."
+      ],
+      "se_count_2": [
+        "Gloup !",
+        "Glp !",
+        "Glpf !",
+        "Gloup..."
+      ],
+      "se_count_3": [
+        "Glk...",
+        "Glkhh...",
+        "Smack !"
+      ],
+      "se_count_4": [
+        "Mmm...",
+        "Lèche...",
+        "Slurp..."
+      ]
+    },
+    "ERO5": {
+      "se_count_1": [
+        "Glk...",
+        "Glkhh...",
+        "Smack !",
+        "Mm...",
+        "Am...",
+        "Mmm...",
+        "Muu...",
+        "Mhuuu...",
+        "Mhuguhh...",
+        "Muuugkh...",
+        "Ghkuk..."
+      ],
+      "se_count_1_segments": {
+        "1": ["Glk...", "Glkhh...", "Smack !"],
+        "2": ["Mm...", "Am..."],
+        "3": ["Mmm..."],
+        "4": ["Muu..."],
+        "5": ["Mhuuu..."],
+        "6": ["Mhuguhh..."],
+        "7": ["Mm...", "Mm..."],
+        "8": ["Muuugkh...", "Ghkuk...", "Mm..."]
+      },
+      "se_count_2": [
+        "Gloup !",
+        "Glp !",
+        "Glpf !",
+        "Gloup..."
+      ],
+      "se_count_3": [
+        "Glk...",
+        "Glkhh...",
+        "Smack !"
+      ],
+      "se_count_4": [
+        "Mmm...",
+        "Lèche...",
+        "Slurp..."
+      ]
+    },
+    "FIN": {
+      "se_count_1": [
+        "Glk...",
+        "Glkhh...",
+        "Smack !",
+        "Mm...",
+        "Mgyha...",
+        "Khaa...",
+        "Aaa...",
+        "Mfhts...",
+        "Mhu...",
+        "Mgh...",
+        "Mguhu",
+        "Mmm...",
+        "Mh..."
+      ],
+      "se_count_2": [
+        "Splatch !",
+        "Pchitt !",
+        "Jouit !",
+        "Splash !"
+      ]
+    },
+    "FIN2": {
+      "se_count_1": [
+        "Glk...",
+        "Glkhh...",
+        "Smack !",
+        "Splatch !",
+        "Pchitt !",
+        "Jouit !",
+        "Splash !"
+      ],
+      "se_count_2": [
+        "Ghuy...",
+        "Khaky...",
+        "Yhy...",
+        "Yh...",
+        "Kof...",
+        "Han..."
+      ],
+      "se_count_2_segments": {
+        "1": ["Ghuy..."],
+        "2": ["Khaky..."],
+        "3": ["Yhy...", "Yh...", "Kof...", "Han..."]
+      },
+      "se_count_3": [
+        "Boum !",
+        "Ding !",
+        "Boum...",
+        "Ding..."
+      ],
+      "se_count_4": [
+        "Ghuy...",
+        "Khaky...",
+        "Yhy...",
+        "Yh...",
+        "Kof...",
+        "Han..."
+      ],
+      "se_count_4_segments": {
+        "1": ["Ghuy..."],
+        "2": ["Khaky..."],
+        "3": ["Yhy...", "Yh...", "Kof...", "Han..."]
+      }
+    },
+    "START_JIGO": {
+      "se_count_1": [
+        "Aah...",
+        "Aah...",
+        "Aakhaaa...",
+        "Ha...",
+        "Aaa...",
+        "Aaa...",
+        "Aaa...",
+        "Khaau...",
+        "Nghkyaa...",
+        "Akgha...",
+        "Aha,aha...",
+        "Yu....",
+        "Akgha..."
+      ],
+      "se_count_1_segments": {
+        "1": ["Aah..."],
+        "2": ["Aah..."],
+        "3": ["Aakhaaa..."],
+        "4": ["Ha..."],
+        "5": ["Aaa..."],
+        "6": ["Aaa..."],
+        "7": ["Aaa..."],
+        "8": ["Khaau..."],
+        "9": ["Nghkyaa..."],
+        "10": ["Akgha...", "Aha,aha...", "Yu....", "Akgha..."]
+      },
+      "se_count_2": [
+        "Ahaa !",
+        "Ahaa",
+        "Ah !",
+        "Ouf !",
+        "Glk...",
+        "Glkhh...",
+        "Smack !",
+        "Splatch !",
+        "Pchitt !",
+        "Jouit !",
+        "Splash !"
+      ]
+    },
+    "DRINK": {
+      "se_count_1": [
+        "Gloup !",
+        "Glp !",
+        "Glpf !",
+        "Gloup..."
+      ]
+    },
+    "DRINK_END": {
+      "se_count_1": [
+        "Gloup !",
+        "Glp !",
+        "Glpf !",
+        "Gloup..."
+      ],
+      "se_count_2": [
+        "Ghuy...",
+        "Khaky...",
+        "Yhy...",
+        "Yh...",
+        "Kof...",
+        "Han..."
+      ],
+      "se_count_2_segments": {
+        "1": ["Ghuy..."],
+        "2": ["Khaky..."],
+        "3": ["Yhy...", "Yh...", "Kof...", "Han..."]
+      },
+      "se_count_3": [
+        "Ahaa !",
+        "Glk...",
+        "Glkhh...",
+        "Splatch !",
+        "Jouis !"
+      ]
+    }
+  }
+}
+

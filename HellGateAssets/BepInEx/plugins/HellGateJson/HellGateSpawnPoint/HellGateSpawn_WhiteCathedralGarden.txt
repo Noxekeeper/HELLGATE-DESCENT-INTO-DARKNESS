@@ -1,0 +1,137 @@
+# White Cathedral Garden spawn (~30% reduced)
+# Every 4th point = Mutude, every 5th = Librarian, every 6th = CrowInquisition
+# Others = POOL[TouzokuNormal,TouzokuAxe,MafiaBossCustom,Dorei,Kakasi]
+
+# Point 1-2: POOL
+1191.98,-320.55,POOL[TouzokuNormal,TouzokuAxe,MafiaBossCustom,Dorei,Kakasi],1
+1179.90,-323.32,POOL[TouzokuNormal,TouzokuAxe,MafiaBossCustom,Dorei,Kakasi],1
+
+# Point 4: Mutude
+1177.21,-323.32,Mutude,1
+
+# Point 5: Librarian
+1169.64,-323.32,Librarian,1
+
+# Point 6: CrowInquisition
+1164.43,-313.29,CrowInquisition,1
+
+# Point 8: Mutude
+1154.43,-312.33,Mutude,1
+
+# Point 9: POOL
+1156.15,-319.58,POOL[TouzokuNormal,TouzokuAxe,MafiaBossCustom,Dorei,Kakasi],1
+
+# Point 10: Librarian
+1150.97,-319.58,Librarian,1
+
+# Point 12: Mutude + CrowInquisition
+1138.48,-318.19,Mutude,1
+1138.48,-318.19,CrowInquisition,1
+
+# Point 13: POOL
+1132.24,-318.04,POOL[TouzokuNormal,TouzokuAxe,MafiaBossCustom,Dorei,Kakasi],1
+
+# Point 15: Librarian
+1119.70,-319.42,Librarian,1
+
+# Point 16: Mutude
+1114.72,-319.42,Mutude,1
+
+# Point 18: CrowInquisition
+1105.49,-321.62,CrowInquisition,1
+
+# Point 19: POOL
+1095.64,-323.32,POOL[TouzokuNormal,TouzokuAxe,MafiaBossCustom,Dorei,Kakasi],1
+
+# Point 20: Mutude + Librarian
+1086.89,-323.32,Mutude,1
+1086.89,-323.32,Librarian,1
+
+# Point 21-22: POOL
+1076.62,-323.32,POOL[TouzokuNormal,TouzokuAxe,MafiaBossCustom,Dorei,Wolf],1
+1066.22,-323.32,POOL[TouzokuNormal,TouzokuAxe,MafiaBossCustom,Dorei,Kakasi],1
+
+# Point 24: Mutude + CrowInquisition
+1050.45,-323.32,Mutude,1
+1050.45,-323.32,CrowInquisition,1
+
+# Point 25: Librarian
+1044.09,-323.32,Librarian,1
+
+# Point 26: POOL
+1035.61,-323.32,POOL[TouzokuNormal,TouzokuAxe,MafiaBossCustom,Dorei,Kakasi],1
+
+# Point 28: Mutude
+1048.09,-316.52,Mutude,1
+
+# Point 30: Librarian + CrowInquisition
+1093.88,-316.52,Librarian,1
+1093.88,-316.52,CrowInquisition,1
+
+# Point 32: Mutude
+1093.83,-308.79,Mutude,1
+
+# Point 33: POOL
+1117.60,-312.33,POOL[TouzokuNormal,TouzokuAxe,MafiaBossCustom,Dorei,Kakasi],1
+
+# Point 35: Librarian
+1133.83,-291.08,Librarian,1
+
+# Point 36: Mutude + CrowInquisition
+1121.46,-291.13,Mutude,1
+1121.46,-291.13,CrowInquisition,1
+
+# Point 37-38: POOL
+1116.63,-291.13,POOL[TouzokuNormal,Wolf,MafiaBossCustom,Dorei,Kakasi],1
+1110.85,-291.13,POOL[TouzokuNormal,TouzokuAxe,MafiaBossCustom,Dorei,Kakasi],1
+
+# Point 40: Mutude + Librarian
+1086.20,-300.85,Mutude,1
+1086.20,-300.85,Librarian,1
+
+# Point 42: Mutude + CrowInquisition
+1077.71,-297.98,Mutude,1
+1077.71,-297.98,CrowInquisition,1
+
+# Point 44: Mutude
+1067.82,-297.98,Mutude,1
+
+# Point 45: Librarian
+1062.38,-297.98,Librarian,1
+
+# Point 46: POOL
+1160.51,-302.83,POOL[TouzokuNormal,Wolf,MafiaBossCustom,Dorei,Kakasi],1
+
+# Point 48: Mutude + CrowInquisition
+1153.84,-296.45,Mutude,1
+1153.84,-296.45,CrowInquisition,1
+
+# Point 49: POOL
+1144.62,-295.25,POOL[TouzokuNormal,Wolf,MafiaBossCustom,Dorei,Kakasi],1
+
+# Point 50: Librarian
+1139.69,-295.25,Librarian,1
+
+# Point 51: POOL
+1194.11,-306.95,POOL[TouzokuNormal,TouzokuAxe,MafiaBossCustom,Dorei,Kakasi],1
+
+# Point 52: Mutude
+1190.89,-306.95,Mutude,1
+
+# Point 54: CrowInquisition
+1203.74,-296.44,CrowInquisition,1
+
+# Point 55: Librarian
+1198.83,-296.44,Librarian,1
+
+# Point 56: Mutude
+1197.85,-296.44,Mutude,1
+
+# Point 57-58: POOL
+1192.92,-294.27,POOL[TouzokuNormal,TouzokuAxe,MafiaBossCustom,Dorei,Kakasi],1
+1175.22,-296.44,POOL[TouzokuNormal,Wolf,MafiaBossCustom,Dorei,Kakasi],1
+
+# Point 60: Mutude + Librarian + CrowInquisition
+1184.28,-296.44,Mutude,1
+1184.28,-296.44,Librarian,1
+1184.28,-296.44,CrowInquisition,1

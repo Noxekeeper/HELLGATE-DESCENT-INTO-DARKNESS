@@ -1,0 +1,401 @@
+{
+  "entries": [
+    {
+      "key": "eventcore_ui_continue",
+      "text": "Continuar (1 / Enter)"
+    },
+    {
+      "key": "eventcore_ui_click_continue",
+      "text": "Clique para continuar"
+    },
+    {
+      "key": "eventcore_broker_pass_done",
+      "text": "Pode ir."
+    },
+    {
+      "key": "eventcore_hint_need_mb",
+      "text": "MindBroken ≥ 20% necessário"
+    },
+    {
+      "key": "eventcore_hint_need_rage",
+      "text": "Raiva ≥ 5% necessária"
+    }
+  ],
+  "linePools": [
+    {
+      "poolId": "broker_gate_prelude",
+      "lines": [
+        "Aradia notou uma figura estranha no caminho: ombros largos, postura firme, rosto escondido atrás de uma máscara. Ele não fingia estar descansando — escolheu deliberadamente o ponto onde a trilha estreitava. Logo vieram à mente as histórias de quem domina as passagens e rouba dos viajantes até o último centavo. O ar ficou mais pesado, e até os passos de Aradia soaram altos demais.",
+        "No início, Aradia pensou que fosse uma sombra entre as árvores — até a sombra dar um passo à frente. A máscara escondia os traços, mas não as intenções: ele estava parado como se esperasse uma viajante solitária há muito tempo. Segundo os rumores, homens assim não agem por impulso — eles calculam tempo e distância. Seu coração bateu mais devagar e mais forte; o caminho familiar de repente pareceu uma armadilha.",
+        "A trilha era conhecida, mas o homem nela não. Aradia parou: a figura mascarada bloqueava o caminho não por acaso, mas de forma calculada, como quem arma uma emboscada. Ela reconheceu o estilo dos bandidos locais — aqueles que escolhem os fracos e fazem pagar não só com moedas. O vento parou, como se nem ele quisesse se envolver.",
+        "Ele apareceu tão silenciosamente que Aradia só percebeu quando a distância já era perigosamente curta. O rosto sob a máscara era pouco visível, mas o hábito de controlar o espaço ao redor era evidente. Era exatamente como nas histórias dos \"lobos da estrada\" — aqueles que mantêm o povo comum em constante medo. Sua garganta secou; cada passo seguinte parecia uma aposta.",
+        "Aradia o notou tarde demais para voltar sem perder a dignidade — ou a segurança. A figura masculina mascarada estava firme, como se o caminho lhe pertencesse por direito. Nesse tipo de encontro raramente há mal-entendido: é sempre sobre controle ou pagamento. Ela cerrou os dedos e tentou não demonstrar o quanto tudo se apertava dentro dela.",
+        "O caminho fazia uma leve curva à frente — e ele já estava esperando logo depois. Aradia viu a máscara e entendeu imediatamente: não era um viajante nem um caçador. Ele ocupara uma posição que tornava qualquer desvio arriscado. As histórias sobre bandidos nessa região não eram exagero. Um calafrio percorreu sua pele onde antes havia confiança.",
+        "O dia estava cinzento, mas o encontro o deixou ainda mais escuro. O olhar de Aradia deslizou pela figura silenciosa: máscara, rosto oculto, ameaça calma em cada linha do corpo. Ele claramente não pretendia deixá-la passar \"de graça\" — quem ele marcava como presa nunca era solto sem custo. Os rostos cansados, raivosos e assustados das vilas vieram à sua mente. Respirar ficou um pouco mais difícil — como antes de cruzar um limiar alto.",
+        "Aradia o sentiu antes de vê-lo — o peso opressivo de uma presença estranha em um trecho deserto da trilha. Quando ele saiu da penumbra, a máscara o transformou em um aviso silencioso. Era assim que ficavam aqueles que tomavam o que queriam na estrada sem se importar com os outros. Ela conhecia bem demais essas histórias para acreditar em coincidência. O tempo desacelerou; o mundo se reduziu a poucos metros e dois destinos.",
+        "O corredor entre as árvores parecia seguro — até ele aparecer. Aradia distinguiu a máscara e parou: a figura mantinha-se confiante, sem movimentos desnecessários, como alguém que faz isso todos os dias. Isso a lembrou dos bandidos locais — aqueles que tiram não só o dinheiro, mas também a paz das pessoas. Até a luz que atravessava as copas pareceu mais fria.",
+        "Ele não gritou \"pare\" — não precisava. Aradia diminuiu o passo sozinha ao ver o homem mascarado no caminho; sua postura era calma demais para ser uma coincidência inocente. Ela pensou imediatamente naqueles que aterrorizam o povo nas estradas e transformam a passagem em negociação. Tudo dentro dela se aguçou — instinto, memória e razão discutiam a mesma coisa. E nenhuma das respostas prometia um desfecho fácil."
+      ]
+    },
+    {
+      "poolId": "broker_open_a",
+      "lines": [
+        "Vejam só… Se perdeu, garotinha? Uma vadiazinha burra saiu pra passear sozinha…",
+        "Oho, o que temos aqui? Uma coisinha tão doce. Não tenha medo, linda, o tio vai explicar tudo.",
+        "Hehe, te peguei. Achei que hoje ia ser chato. Vem cá, princesinha.",
+        "Ora, ora… Uma vadiazinha tão apetitosinha veio parar nos meus braços sozinha. Não se debate.",
+        "Olha que carinha bonita. Vai pra longe, sua puta? Essa estrada não é de graça.",
+        "Quietinha… Tá vendo a faca? Boa menina. Agora sorri pro tio.",
+        "Nossa, que suculenta. Faz tempo que não pego uma carne fresquinha assim. Tira a roupa, não me irrita.",
+        "Se perdeu, lindinha? Coitadinha… Agora o tio vai te… esquentar.",
+        "Mmm, cheiro de medo e perfume caro. Gostei. Mãos atrás da cabeça, rápido.",
+        "Ha! Que dia sortudo. Sozinha e desarmada… Vem cá. Vamos ter uma conversa longa e interessante."
+      ]
+    },
+    {
+      "poolId": "broker_pc_peace",
+      "lines": [
+        "Não quero problemas. Eu só estava passando.",
+        "O que você quer? Eu não quero problemas.",
+        "Espere… vamos conversar com calma.",
+        "Eu não pretendia vir aqui… Foi um acidente.",
+        "Posso passar… por favor.",
+        "Tenho um pouco de dinheiro, posso pagar pela passagem.",
+        "Não vou gritar… só não me toque.",
+        "Você… vai me deixar ir, né? A gente pode chegar a um acordo?",
+        "Ah, desculpe, não quis incomodar… posso ir embora?",
+        "Tudo bem… vamos conversar como adultos. Não quero problemas."
+      ]
+    },
+    {
+      "poolId": "broker_pc_threat",
+      "lines": [
+        "Sai da frente. Ou você morre aqui.",
+        "Mais um passo e eu corto sua garganta.",
+        "Tira as mãos. Agora. Senão vai ficar sem elas.",
+        "Não repito duas vezes. Sai ou morre.",
+        "Você escolheu a garota errada. Última chance de sair vivo.",
+        "Se me tocar, eu arranco seus olhos. Devagar.",
+        "Some. Não vou me importar quando você estiver se afogando no próprio sangue.",
+        "Já matei piores que você. Não me force a começar.",
+        "Fica parado aí. Ou eu quebro seu pescoço com um movimento só.",
+        "Você está no meu caminho. Pode desaparecer bonitinho… ou feio."
+      ]
+    },
+    {
+      "poolId": "broker_after_threat_d",
+      "lines": [
+        "Olha só, que corajosa… Vai pagar caro por essas palavras, vadia. Vou te foder tão forte que você vai perder a voz.",
+        "Como ousa me ameaçar, sua puta? Por isso vou te foder devagar e com crueldade.",
+        "Me ameaçando? Ótimo… Vou te quebrar. E depois vou foder seu corpo destruído a noite toda.",
+        "Garota insolente… Por causa dessas palavras, primeiro vou te espancar e depois te fazer chupar meu pau em agradecimento.",
+        "Ai, que medo… Agora você vai chorar e implorar por misericórdia enquanto eu te meto.",
+        "Valente, é? Fica tranquila, vou tirar toda essa arrogância no pau. Você vai gritar embaixo de mim como a puta mais barata.",
+        "Tá me ameaçando sério? Vou te foder tão forte que não vai conseguir andar por uma semana, vadia.",
+        "Que boceta atrevida… Por isso não vou só te foder. Vou te destruir e fazer você implorar por mais.",
+        "Me ameaçando? Que graça. Adoro quebrar as orgulhosas. Prepara, sua punição vai começar.",
+        "Você acabou de cometer um grande erro… Agora vou te foder com raiva especial. Até sangrar e chorar."
+      ]
+    },
+    {
+      "poolId": "broker_demand",
+      "lines": [
+        "Aqui é território particular, lindinha. Então paga pela passagem (---) moedas.",
+        "Achou que podia passar de graça? Não, querida. Aqui o pedágio é (---) moedas.",
+        "Parada aí. Esse é meu território. Quer passar? Desembolsa (---) moedas.",
+        "Hehe, não tão rápido. Taxa de passagem segura: (---) moedas. Dá pra cá.",
+        "Viu onde foi se meter? Agora tem que pagar. (---) moedas e eu te deixo passar.",
+        "Bota o dinheiro na mesa, garota. Pra andar na minha rua são (---) moedas.",
+        "Aqui não se anda de graça. Solta (---) moedas e nos despedimos em paz.",
+        "Deu azar, lindinha. Pedágio: (---) moedas. Rápido.",
+        "Tudo aqui tem preço. Principalmente coisas doces como você. Dá (---) moedas.",
+        "Sem pressa. Primeiro paga (---) moedas pela passagem, depois conversamos se te deixo ir ou não."
+      ]
+    },
+    {
+      "poolId": "broker_pay_agree_e",
+      "lines": [
+        "Tá bom… aqui está o dinheiro. Eu pago.",
+        "Certo, eu pago. Só não me toca.",
+        "Aqui, as moedas. Eu concordo.",
+        "Eu pago… toma, pega.",
+        "Tudo bem, não quero problemas. Aqui está seu dinheiro."
+      ]
+    },
+    {
+      "poolId": "broker_pc_insufficient_f",
+      "lines": [
+        "Não tenho tudo isso… Só tenho {GOLD} moedas.",
+        "Por favor, não tenho {REQ} moedas… só posso dar {GOLD}.",
+        "Não consigo pagar tanto. Só tenho {GOLD} moedas comigo.",
+        "Não dá… Só tenho {GOLD} moedas. Serve?",
+        "Eu pagaria mais, mas só tenho {GOLD} moedas. Pega.",
+        "Desculpa… só tenho {GOLD} moedas. Não tem mais.",
+        "Não tenho essa quantia. Só posso dar {GOLD} moedas.",
+        "É tudo o que tenho… só {GOLD} moedas. Por favor, aceita.",
+        "Não costumo carregar muito. Só tenho {GOLD} moedas.",
+        "Tá bom… mas só tenho {GOLD} moedas. Dá pra resolver?"
+      ]
+    },
+    {
+      "poolId": "broker_refuse_pay_l",
+      "lines": [
+        "Não vou te pagar nada. Cai fora.",
+        "Nem uma moeda você vai tirar de mim. Some.",
+        "Esquece o dinheiro. Sai da frente e para de me atrasar.",
+        "Não vou pagar. Cai fora por bem.",
+        "Acha que vou te pagar? Tá enganado. Desaparece da minha frente.",
+        "Não vai ver nem uma moeda. Sai antes que eu fique brava.",
+        "Não pago pra andar no meu próprio caminho. Some.",
+        "Dinheiro pode esperar sentado. Sai daqui.",
+        "Não vou negociar com você. Sai da frente.",
+        "Pagar? Tá falando sério? Cai fora enquanto ainda tá inteiro."
+      ]
+    },
+    {
+      "poolId": "broker_broker_accept_less_g",
+      "lines": [
+        "Hm… Tá bom, serve. Dá tuas {GOLD} moedas e cai fora.",
+        "Pouco, mas hoje tô de bom humor. Solta {GOLD} moedas e pode ir.",
+        "Tsc, quantia ridícula… Tá, dá {GOLD} moedas aqui.",
+        "Não é o que eu queria, mas tudo bem. Entrega {GOLD} moedas.",
+        "Bom, você me convenceu. {GOLD} moedas e estamos quites.",
+        "Normalmente não aceito tão pouco… mas hoje vou relevar. Dá o dinheiro.",
+        "Certo, me dá tuas {GOLD} moedas e vaza logo.",
+        "Hehe, querendo sair barato… Tá, joga {GOLD} moedas.",
+        "Podia ser melhor, mas serve. Dá {GOLD} moedas e some.",
+        "Fechado. {GOLD} moedas e não te toco mais. Entrega."
+      ]
+    },
+    {
+      "poolId": "broker_broker_body_topup_h",
+      "lines": [
+        "Tá, dá tuas {GOLD} moedas… mas o resto você paga com o corpo, vadia.",
+        "Pouco. Dá {GOLD} moedas agora, o restante você trabalha de joelhos.",
+        "Hehe, quantia patética. Solta {GOLD} moedas, a diferença eu cobro na tua buceta.",
+        "Não rola. Dá tuas {GOLD} moedas, o resto você paga com o corpo.",
+        "Muito pouco. Dá o que tem — {GOLD} moedas, o resto com a boca e pernas abertas.",
+        "Não sou filantropo. Joga {GOLD} moedas, o resto você paga abrindo as pernas.",
+        "Tá, pego tuas migalhas… {GOLD} moedas. O resto vai ser gemendo embaixo de mim.",
+        "Não tá bom. Dá {GOLD} moedas, o resto eu fodo pra tirar de você.",
+        "Pouco. Muito pouco. Dá {GOLD} moedas, o resto você paga com o teu buraquinho.",
+        "Certo, pego {GOLD} moedas… mas o resto você me devolve com o corpo. E pode acreditar, vou cobrar tudo."
+      ]
+    },
+    {
+      "poolId": "broker_pc_refuse_body_i",
+      "lines": [
+        "Não gostou do valor? Então cai fora. Meu corpo você não vai ter de jeito nenhum.",
+        "Enfia esse dinheiro no cu. Meu corpo você não encosta.",
+        "Nem sonha. Nem dinheiro nem meu corpo você vai conseguir.",
+        "Eu disse só dinheiro. Meu corpo não está à venda e nunca vai ser seu.",
+        "Pagar com o corpo? Vai se foder. Prefiro morrer aqui.",
+        "Você tá louco? Por dinheiro nenhum você vai ter meu corpo.",
+        "Proposta recusada. Não sou puta que paga com a buceta.",
+        "Esquece. Prefiro morrer a me deitar embaixo de um lixo como você.",
+        "Transar com você? Prefiro morder tua garganta. Cai fora.",
+        "Nenhuma parte do meu corpo você vai tocar. Não gostou? Então vaza."
+      ]
+    },
+    {
+      "poolId": "broker_pc_body_yes_j",
+      "lines": [
+        "…Tá bom. Eu aceito. Só faz rápido e não me machuca.",
+        "Não tenho escolha… Vou fazer o que você quer. Mas só uma vez.",
+        "Certo… Vou pagar com o corpo. Vamos acabar logo com isso.",
+        "Se não tem outro jeito… Eu aceito. Mas promete que depois me solta.",
+        "Merda… Tá bom. Te dou meu corpo. Só não seja bruto, por favor.",
+        "Eu… aceito pagar de outro jeito. Mas sem humilhação demais.",
+        "Você ganhou. Vou fazer o que você quer… Só vai logo.",
+        "Não tenho dinheiro suficiente… Então… eu aceito. Mas vou te odiar por isso.",
+        "Tá bom… Vou pagar com o corpo. Mas depois você me solta imediatamente.",
+        "Não quero isso… mas se não tem outro jeito, então… eu aceito. Faz o que ia fazer."
+      ]
+    },
+    {
+      "poolId": "broker_broker_body_ok_k",
+      "lines": [
+        "Boa garota… Escolha inteligente.",
+        "Isso aí. Sabia que você ia ficar esperta.",
+        "Mmm, garota boazinha. Vem cá, não precisa ter medo.",
+        "Decisão certa, lindinha. Agora vamos fazer um acordo de verdade.",
+        "Hehe, agora sim estamos falando a mesma língua. Boa putinha.",
+        "Muito bem. Você aprende rápido.",
+        "Excelente… Adoro quando as garotas ficam obedientes.",
+        "Garota esperta. Você acabou de facilitar muito a sua vida.",
+        "Assim está melhor. Chega mais perto, não me faz esperar.",
+        "Ótima escolha. Agora gostei muito mais de você."
+      ]
+    },
+    {
+      "poolId": "broker_pc_negotiate_other_m",
+      "lines": [
+        "Não tenho tanto dinheiro… Será que não podemos combinar de outro jeito?",
+        "Não consigo pagar essa quantia. Tem outro jeito?",
+        "Não tenho dinheiro suficiente… Podemos encontrar outra opção?",
+        "Só tenho {GOLD} moedas. Podemos negociar outra coisa?",
+        "Não consigo dar tanto… Vamos tentar outro acordo.",
+        "Não tenho esse dinheiro todo… Tem outra forma de pagar?",
+        "Não tenho moedas suficientes. Posso oferecer outra coisa?",
+        "Eu pagaria, mas não tenho o suficiente… Podemos fazer diferente?",
+        "Pouco dinheiro… Podemos combinar de outro jeito?",
+        "Não tenho o valor completo… Vamos achar outra solução?"
+      ]
+    },
+    {
+      "poolId": "broker_broker_entertain_offer_n",
+      "lines": [
+        "Dinheiro é bom, mas eu preferia me divertir com uma garota tão doce. Topa pagar com o corpo?",
+        "Hehe, as moedas eu vou pegar mesmo… Mas se quiser passar de graça — vamos brincar de adulto.",
+        "Pouco dinheiro? Sem problema. Conheço outro jeito de pagar. Abre as pernas que eu te deixo passar.",
+        "Em vez dessas moedas miseráveis, me dá teu corpo. A gente se diverte um pouco e você pode ir.",
+        "Hoje tô de bom humor. Não precisa pagar com dinheiro… se me entreter direitinho.",
+        "Dinheiro ou tua buceta — escolhe. Quero me divertir pra valer com você aqui.",
+        "Poucas moedas? Então faz o seguinte: você me satisfaz bem e eu esqueço a taxa.",
+        "Eu adoraria me divertir com uma puta tão bonita. Se entregar pra mim, a passagem é de graça.",
+        "Não tem dinheiro suficiente? Sem problema. Deita aqui embaixo e se esforça bastante — aí estamos quites.",
+        "Sabe, dinheiro é chato. Mas se você me entreter com esse corpo… posso ficar bem generoso."
+      ]
+    },
+    {
+      "poolId": "broker_pc_soft_agree_o",
+      "lines": [
+        "…Tá bom. Eu aceito.",
+        "Certo… vou fazer o que você quer.",
+        "Tá bom… eu me entrego.",
+        "Eu aceito… só não seja bruto.",
+        "Certo. Vou ser obediente."
+      ]
+    },
+    {
+      "poolId": "broker_pc_soft_refuse_p",
+      "lines": [
+        "Por favor… não. Não estou pronta pra isso.",
+        "Vamos melhor com dinheiro… eu realmente não quero isso.",
+        "Desculpa, mas não consigo pagar assim.",
+        "Eu não quero mesmo isso… Não tem outro jeito?",
+        "Não… por favor, não faz isso. Estou com medo."
+      ]
+    },
+    {
+      "poolId": "broker_broker_take_anyway_q",
+      "lines": [
+        "Hehe, acha que tem escolha? Vou pegar o que eu quero de qualquer jeito.",
+        "Pode recusar o quanto quiser. Vou levar o dinheiro e teu corpo. Assim fica até mais divertido.",
+        "Recusa o quanto quiser. No final vou te foder do jeito que eu quiser.",
+        "Não importa o que você diga. Hoje você é minha. Já decidi.",
+        "Pede, implora — tô me fodendo. O que eu quero eu pego.",
+        "Acha que pode recusar? Burra. Eu sempre pego o que eu quero.",
+        "Continua resistindo. Isso só me deixa mais excitado. No final você vai acabar embaixo de mim.",
+        "Não tem pra onde correr. Vou levar tudo — teu dinheiro e tua buceta.",
+        "Não precisa mais propor nada. Já escolhi. E vou pegar.",
+        "Conversa encerrada. Vou te foder de qualquer jeito. A única dúvida é se você vai resistir e apanhar."
+      ]
+    },
+    {
+      "poolId": "broker_pc_rage_r",
+      "lines": [
+        "Vou te cortar ao meio! Sai da frente, seu filho da puta!",
+        "Vai se foder! Mais um passo e eu arranco teu coração!",
+        "Tá me achando burra?! Vou te fazer em pedacinhos!",
+        "Sai da frente, lixo! Ou espalho teus miolos no chão!",
+        "Vou te picar em tiras, seu animal!",
+        "Some antes que eu arranque teus olhos, seu monstro!",
+        "Você acha mesmo que pode me parar?! Vou te mandar pro inferno!",
+        "Sai do meu caminho antes que eu quebre todos os teus ossos!",
+        "Tô com muita raiva, seu lixo! Mais uma palavra e você morre gritando!",
+        "Morre, seu filho da puta! Vou te rasgar agora!"
+      ]
+    },
+    {
+      "poolId": "broker_broker_rage_defiant_t",
+      "lines": [
+        "Hahahaha! Vem então, sua vadia louca. Vamos ver quem corta quem em pedaços.",
+        "Nossa, quanta raiva… Isso só me deixa mais duro. Vai, ataca.",
+        "Me ameaçando? Corajosa. Vou te tirar essa raiva toda junto com os gritos.",
+        "Corta se for capaz, sua puta. Enquanto isso eu te fodo até você desmaiar.",
+        "Tão agressiva… Ótimo. Adoro quebrar gatas selvagens como você.",
+        "Achou que me assustou? Vou te foder tão forte que toda essa raiva vira lágrimas e gemidos.",
+        "Continua gritando, tô gostando. Quanto mais você se irrita, mais forte eu te meto.",
+        "Ameaçando me cortar? Engraçado. Vou quebrar teus braços antes de você conseguir puxar a faca.",
+        "Toda raivosa… Perfeito. Vai ser ainda mais gostoso te domar e te foder.",
+        "Grita e ameaça à vontade… No final você vai acabar de joelhos com meu pau na boca, vadia."
+      ]
+    },
+    {
+      "poolId": "broker_broker_rage_scared_s",
+      "lines": [
+        "Tá bom, tá bom! Para! Passa, eu não te toco, só se acalma!",
+        "Puta merda… Calma, entendi! Passa, passa, não vou fazer nada!",
+        "Não me corta! Tá, tá, pode passar! Vai pra onde quiser!",
+        "Você é louca… Tá bom, cai fora! Não quero problema, passa!",
+        "Tá bom, tá bom! Só não chega perto! O caminho é teu, eu tô saindo!",
+        "Caralho… Entendi, você é perigosa. Vai logo, não vou te incomodar!",
+        "Se acalma, por favor! Te deixo passar, só não me ataca!",
+        "Eu me rendo! Passa, tô com medo de verdade! Vai!",
+        "Sem raiva… Te deixo passar. Segue teu caminho, por favor.",
+        "Vai se foder, sua louca! Passa! Não quero morrer por causa dessa merda!"
+      ]
+    },
+    {
+      "poolId": "broker_pc_mindbroken_seduce_u",
+      "lines": [
+        "Se você me soltar… posso fazer você se sentir muito bem.",
+        "Você me quer? Posso ser bem obediente se você for carinhoso…",
+        "Vejo como você está me olhando… Que tal fazermos algo mais prazeroso em vez de ameaças?",
+        "Eu sei o que você quer… Deixa eu te dar.",
+        "Não precisa ser bruto… Posso me entregar pra você de boa vontade, não vai se arrepender.",
+        "Quer se divertir? Estou pronta. Só me diz como você me quer.",
+        "Pode me pegar… Se for mais suave, vou ficar carinhosa e molhada pra você.",
+        "Quer essa garota? Então vou te mostrar do que sou capaz.",
+        "Já cansei de resistir… Melhor eu mesma te satisfazer direitinho.",
+        "Olha pra mim… Se quiser, posso ser seu brinquedinho obediente agora mesmo."
+      ]
+    },
+    {
+      "poolId": "broker_broker_mindbroken_reply_v",
+      "lines": [
+        "«Oh? Tá se oferecendo sozinha? Olha só… Me mostra do que é capaz, vadia.»",
+        "«Ha! Agora sim estamos conversando. De joelhos e prova que não tá mentindo.»",
+        "«Mais suave, é? Tá bom, hoje tô legal. Mas se mentir — vai se arrepender.»",
+        "«Já vi que tá molhada. Ótimo… Tira a roupa e me mostra o quanto você quer.»",
+        "«Brinquedinho obediente? Perfeito. Vira de costas, empina essa bunda e arqueia bem.»",
+        "«Sabe convencer, hein, vadia. Vai, me satisfaz. Se fizer direitinho — talvez eu te solte.»",
+        "«Olha como fala… Tá, me mostra o quanto você tá \"carinhosa e molhada\". »",
+        "«Não tá resistindo? Boa garota. Vem engatinhando e bota na boca, vamos ver o quanto você é obediente.»",
+        "«Quer se entregar sozinha? Corajosa. Abre as pernas, vou verificar se tá sendo sincera.»",
+        "«Boa garota. Já que tá pedindo tão bonito — hoje vou te foder bem gostoso.»"
+      ]
+    },
+    {
+      "poolId": "broker_pc_walk_ignore",
+      "lines": [
+        "Vou dar a volta e ir embora. Não quero problemas.",
+        "Tá bom… eu só vou embora. Esquece que nos vimos.",
+        "Desculpe o incômodo. Estou indo embora.",
+        "Não quero briga. Vou embora em paz.",
+        "Esquece que eu estive aqui. Estou indo.",
+        "Já vou indo. Não vou te incomodar.",
+        "Certo, estou indo. Vamos encerrar essa conversa.",
+        "Só vou me afastar. Não me siga.",
+        "Sem drama — vou seguir meu caminho.",
+        "Não vou insistir. Nunca mais vamos nos ver — estou indo."
+      ]
+    },
+    {
+      "poolId": "broker_walk_away",
+      "lines": [
+        "Tá bom, vai. Até mais.",
+        "Certo, segue teu caminho. Por agora te deixo em paz.",
+        "Beleza, passa. Só não se deixa pegar de novo.",
+        "Tá bom, tá bom, some. Até mais… talvez.",
+        "Ok, vai. Hoje tô de bom humor — da próxima vez não sei não.",
+        "Certo, passa. Falou por agora.",
+        "Vai logo. Sem rancor, por enquanto.",
+        "Ok, vai. Eu fico aqui, você segue.",
+        "Tá bom, te deixo ir. Só não me irrita da próxima vez.",
+        "Vai. Olha por onde pisa."
+      ]
+    }
+  ]
+}

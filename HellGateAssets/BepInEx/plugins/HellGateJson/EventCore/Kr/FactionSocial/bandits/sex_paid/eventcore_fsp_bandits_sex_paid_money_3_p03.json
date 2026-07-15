@@ -1,0 +1,8 @@
+{
+  "speakerLabel": "도적",
+  "stepId": "fsp_sex_money_3_p03",
+  "stepKind": "continue",
+  "continueOutcomeId": "noop",
+  "continueNextStepId": "fsp_sex_money_3_p04",
+  "npcLine": "빨리? 약속은 못 해——넌 너무 맛있어."
+}

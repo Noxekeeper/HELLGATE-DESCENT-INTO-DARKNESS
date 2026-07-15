@@ -1,0 +1,15 @@
+{
+  "anchorX": 0,
+  "anchorY": 0,
+  "triggerRadiusFromAnchor": 8,
+  "enemyTypesCsv": "TouzokuNormal,TouzokuAxe",
+  "horizontalSpawnDistancesCsv": "4,5,6",
+  "spawnRightOnly": false,
+  "spawnCountMin": 1,
+  "spawnCountMax": 1,
+  "spawnFactionIdRaw": "bandits",
+  "maxKnockdownSpawns": 5,
+  "spawnDelaySeconds": 0,
+  "verticalJitter": 0,
+  "phrasesFromEventFolder": ""
+}

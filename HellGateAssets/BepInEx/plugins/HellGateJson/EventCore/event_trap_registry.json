@@ -1,0 +1,20 @@
+{
+  "enabled": true,
+  "checkIntervalSeconds": 0.25,
+  "discoverAnchorsFromSpawnPoint": true,
+  "eventFoldersAllowed": [
+    "etrap_touzoku_touzokuaxe",
+    "etrap_undead",
+    "etrap_dorei",
+    "etrap_goblin",
+    "etrap_kakasi",
+    "etrap_mafiabosscustom",
+    "etrap_mafia",
+    "etrap_mutude",
+    "etrap_prisonofficer",
+    "etrap_slaughterer",
+    "etrap_vagrant",
+    "etrap_bigonibrother"
+  ],
+  "eventSceneContains": ""
+}

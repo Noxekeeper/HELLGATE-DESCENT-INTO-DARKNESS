@@ -1,0 +1,463 @@
+{
+  "settings": {
+    "commentCooldownSeconds": 2.0,
+    "maxSimultaneousComments": 1,
+    "commentDisplayDuration": 4.0,
+    "fontSize": 30.0,
+    "verticalOffset": 15.0,
+    "streamingSpeed": 0.03,
+    "goblinColor": {
+      "r": 1.0,
+      "g": 1.0,
+      "b": 1.0,
+      "a": 1.0
+    },
+    "goblinOutlineColor": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 1.0
+    }
+  },
+  "animations": {
+    "start": {
+      "description": "Pega GG e joga seu corpo na cruz, amarrando as mãos na cruz, braços crucificados na cruz",
+      "events": {
+        "start": [
+          "Então, o que temos aqui? Que encontro, bruxa!",
+          "Agora vou te transformar em escrava para homens, fazer de você uma puta!",
+          "Vou te crucificar como a última vadia, e fazer o que eu quiser!",
+          "Seu poder acabou, agora você é minha propriedade!",
+          "Vou te transformar em um buraco obediente para foder!",
+          "Seu corpo me pertence agora, vadia!",
+          "Agora vou te transformar em uma coisa para prazer masculino!",
+          "Como você é bonita quando crucificada, puta!"
+        ],
+        "SE1": [
+          "Lute o quanto quiser, ainda não vai se libertar!",
+          "Sua luta só me excita!",
+          "Continue resistindo, eu gosto!"
+        ]
+      }
+    },
+    "start2": {
+      "description": "Com uma mão cobre a boca de GG, e na segunda mão de palha aparece uma luva de borracha, encharcada com afrodisíaco",
+      "events": {
+        "start2": [
+          "Esta impregnação vai penetrar em cada uma das suas fendas, vadia!",
+          "Logo este líquido estará dentro da sua boceta!",
+          "Vou esfregar sua boceta com esta poção, e você vai implorar por mais!",
+          "Você vai sentir como seu corpo queima de desejo, puta!",
+          "Cada célula do seu corpo vai gritar para ser fodida!",
+          "Agora vou transformar sua boceta em uma lareira ardente de luxúria!",
+          "Este lubrificante vai fazer você esquecer da sua vontade, caramba!",
+          "Sua boceta vai ser encharcada com esta poção até o fundo!"
+        ],
+        "SE1": [
+          "Lute, lute, eu gosto!",
+          "Sua luta é inútil!",
+          "Continue, vadia, eu gosto!"
+        ]
+      }
+    },
+    "ero1": {
+      "description": "Começa a esfregar com luva encharcada, a boceta de GG, movendo a calcinha para o lado, entra levemente dentro",
+      "events": {
+        "ero1": [
+          "Sente como estou preparando seu buraco, puta?",
+          "Agora vou deixar sua boceta molhada e pronta!",
+          "Vou te esticar até você começar a pingar!",
+          "Sua boceta já está molhada? Espera, isso é só o começo!",
+          "Vou enfiar meus dedos tão fundo que você vai uivar!",
+          "Seu corpo já está respondendo, mesmo que você não queira!",
+          "Vou te trabalhar tanto que você vai implorar por pênis!",
+          "Cada movimento vai te deixar louca, vadia!"
+        ],
+        "SE1": [
+          "Sua luta só me excita mais!",
+          "Continue lutando até eu te quebrar completamente!",
+          "Lute o quanto quiser, não pode mais escapar!"
+        ]
+      }
+    },
+    "ero2": {
+      "description": "Entra mais fundo sem parar, já fodendo com a mão, seus dedos empurram mais fundo aplicando afrodisíaco nas suas paredes",
+      "events": {
+        "ero2": [
+          "Meus dedos já estão dentro, puta, e não vão parar!",
+          "Estou te fodendo com minha mão, esfregando as paredes da sua boceta!",
+          "Mais fundo, mais fundo... quero chegar até o fundo!",
+          "Sente como te possuo por dentro, vadia?",
+          "Sua boceta é minha agora, faço o que quiser com ela!",
+          "Cada enfiada de mão injeta desejo em você!",
+          "Estou te rasgando por dentro, e você gosta!",
+          "Sua boceta engole meus dedos, vadia gananciosa!"
+        ],
+        "SE1": [
+          "Seus gemidos são tão excitantes, continue!",
+          "Grite, grite mais alto, vadia, eu gosto!",
+          "Logo você não vai conseguir gritar, puta!"
+        ]
+      }
+    },
+    "ero3": {
+      "description": "Continua fodendo ritmicamente e esfregando afrodisíaco em GG",
+      "events": {
+        "ero3": [
+          "Nenhum lugar vai ficar sem processar!",
+          "Cada buraco vai ser encharcado!",
+          "Seu cu é o próximo, vadia!",
+          "Agora vou esfregar sua boca também!",
+          "Tudo vai estar pronto para foder!",
+          "Você vai ser encharcada até os ossos!",
+          "Cada buraco vai queimar!",
+          "Nada vai ficar intocado!"
+        ],
+        "SE1": [
+          "Sua luta me agrada, vadia!",
+          "Só não morra, puta, antes que eu termine!",
+          "Resista o quanto quiser, não vou parar!"
+        ]
+      }
+    },
+    "finish1": {
+      "description": "Várias vezes empurra profundamente vários dedos em GG, por GG é visível que muito fundo, GG percebe com horror que está gozando",
+      "events": {
+        "finish1": [
+          "Ahahaha! Te fiz gozar, puta!",
+          "Assim, goze! Goze da minha mão!",
+          "Que vadia você é, gozando contra sua vontade!",
+          "Orgismo forçado! Seu corpo te traiu!",
+          "Olha como você goza, crucificada na cruz!",
+          "Sua boceta se contraiu de prazer, e você está com horror!",
+          "Te fiz sentir o que você não queria!",
+          "Agora você é minha, puta gozando!"
+        ],
+        "SE1": [
+          "Pegue minha porra, vadia, você mereceu!",
+          "Aaa.. Caramba, estou gozando, pegue tudo!",
+          "Vou encher seu útero, e você vai lembrar disso sempre!"
+        ]
+      }
+    },
+    "finish2": {
+      "description": "Remove as mãos de GG, largando a luva, ri e diz algo para GG",
+      "events": {
+        "finish2": [
+          "Descanse um pouco, bruxa. Logo vai ter foda de verdade!",
+          "Achou que era só isso? Isso foi só um aquecimento!",
+          "Seu corpo já está pronto para meu pênis!",
+          "Olhe para si mesma, crucificada e gozando, vadia!",
+          "Agora você está pronta para pegar meu pênis preto!",
+          "Respire forte enquanto tem força. Você vai precisar!",
+          "Você não é mais uma bruxa, é só um buraco para sexo!",
+          "Te quebrei. Agora vou te fazer meu brinquedo!"
+        ],
+        "SE1": [
+          "Sua boceta está chupando meu pênis, como uma puta!",
+          "Aaa, como estou gozando forte, pegue tudo!",
+          "Pegue, vadia, você mereceu!"
+        ]
+      }
+    },
+    "finish_end": {
+      "description": "GG abre os olhos e olha para ele, claramente entendendo que isso está longe do fim",
+      "events": {
+        "finish_end": [
+          "Ahahah! Você entende tudo corretamente, bruxa!",
+          "E agora vou te foder com meu pênis preto!",
+          "Achou que isso era humilhante? Espera!",
+          "Agora vou entrar em você como você nunca sentiu!",
+          "Prepare-se para dominação de verdade, vadia!",
+          "Seus olhos falam a verdade: você está com medo e quer!",
+          "Meu pênis vai te rasgar!",
+          "Vai doer, ser sujo e você vai implorar por mais!"
+        ],
+        "SE1": [
+          "Chupe minha porra, puta, esse é seu trabalho!",
+          "Aqui, pegue tudo, vadia, você mereceu!",
+          "Sim, sim, sim, estou gozando, pegue tudo!"
+        ]
+      }
+    },
+    "finish_end2": {
+      "description": "Pega pelo rosto e joga no chão",
+      "events": {
+        "finish_end2": [
+          "Assim, no chão, puta!",
+          "Agora você vai deitar como deve!",
+          "Da cruz para o chão - esse é seu destino, caramba!",
+          "Te joguei como lixo, vadia!",
+          "Agora você está no chão, onde deve estar!",
+          "Da cruz para a sujeira - queda perfeita, bruxa!",
+          "Você caiu como uma estrela cadente, puta!",
+          "Agora você está no chão, pronta para a próxima fase!"
+        ],
+        "SE1": [
+          "Caia, caia, vadia!",
+          "Sua luta acabou!",
+          "Agora você é completamente minha!"
+        ]
+      }
+    },
+    "START": {
+      "description": "Tira troncos de madeira para mãos e pés, mãos presas em grilhões entre pernas presas, GG deita de peito e rosto",
+      "events": {
+        "START": [
+          "Fique quieta, puta. Agora você é meu brinquedo sexual!",
+          "Sua posição é perfeita para eu te quebrar!",
+          "Olhe como você está indefesa, vadia imobilizada!",
+          "Agora vou te fazer uma boa garota para foder!",
+          "Sua boceta está levantada e espera meu pênis preto!",
+          "Você vai me servir como uma coisa obediente!",
+          "Estes troncos são sua nova realidade, caramba!",
+          "Prepare-se, vou entrar o mais fundo possível!"
+        ],
+        "SE1": [
+          "Lute o quanto quiser, ainda não vai se libertar!",
+          "Sua luta só me excita!",
+          "Continue resistindo, eu gosto!"
+        ],
+        "SE2": [
+          "Você não vai se libertar, puta!",
+          "Sua luta é inútil!",
+          "Continue, vadia, eu gosto!"
+        ]
+      }
+    },
+    "ERO2": {
+      "description": "Foda profunda acentuada",
+      "events": {
+        "ERO2": [
+          "Sente como estou esticando seu buraco, vadia?",
+          "Estou te fodendo como você merece!",
+          "Sua boceta foi feita para meu pênis preto!",
+          "Cada enfiada te torna minha!",
+          "Cavalga mais fundo, caramba!",
+          "Seus grilhões batem no ritmo das minhas palmadas!",
+          "Seu corpo treme de prazer e dor!",
+          "Te possuo completamente, puta!"
+        ],
+        "ERO3": [
+          "Mais fundo, ainda mais fundo, puta!",
+          "Quero que você sinta cada centímetro!",
+          "Sua boceta me engole cada vez mais fundo, caramba!",
+          "Estou te empalando até o fundo, vadia!",
+          "Sente como estou te esticando por dentro!",
+          "Suas paredes me envolvem tão perfeitamente!",
+          "Estou te batendo até o limite, vadia gananciosa!",
+          "Mais fundo, mais fundo, até você chegar ao fim!"
+        ],
+        "SE1": [
+          "Sua luta só me excita mais!",
+          "Continue lutando até eu te quebrar completamente!",
+          "Lute o quanto quiser, não pode mais escapar!"
+        ]
+      }
+    },
+    "ERO3": {
+      "description": "Fodendo mais fundo para GG sentir",
+      "events": {
+        "ERO3": [
+          "Quero que você sinta cada centímetro do meu pênis!",
+          "Sente como meu pênis preto te enche!",
+          "Estou te empalando em mim até o limite, vadia!",
+          "Sua boceta me engole, vadia gananciosa!",
+          "Mais fundo, ainda mais fundo, puta!",
+          "Suas paredes me envolvem tão perfeitamente!",
+          "Seu corpo foi feito para essa foda!",
+          "Estou te batendo até o fundo, caramba!"
+        ],
+        "SE1": [
+          "Seus gemidos são tão excitantes, continue!",
+          "Grite, grite mais alto, vadia, eu gosto!",
+          "Logo você não vai conseguir gritar, puta!"
+        ]
+      }
+    },
+    "ERO4": {
+      "description": "Fodendo mais fundo e mais duro",
+      "events": {
+        "ERO4": [
+          "Vou te foder mais duro e mais grosso, vadia!",
+          "Seu cu está vermelho das minhas palmadas!",
+          "Logo você vai me implorar por misericórdia!",
+          "Cada golpe é meu domínio sobre você!",
+          "Sua boceta já é minha, rasgada e molhada!",
+          "Vou te transformar em ruínas, caramba!",
+          "Sofra e aproveite, puta!",
+          "Vou te quebrar com meu pênis!"
+        ],
+        "SE1": [
+          "Sua luta me agrada, vadia!",
+          "Só não morra, puta, antes que eu termine!",
+          "Resista o quanto quiser, não vou parar!"
+        ]
+      }
+    },
+    "ERO5": {
+      "description": "Fodendo profundamente e suculentamente, se preparando para gozar dentro",
+      "events": {
+        "ERO5": [
+          "Vou te encher até a borda agora, vadia!",
+          "Você vai amar minha porra, puta!",
+          "Prepare-se para pegar todo meu suco!",
+          "Vou gozar bem fundo em você, caramba!",
+          "Sua boceta vai transbordar de mim!",
+          "Cada gota da minha porra será sua!",
+          "Você vai se tornar minha boneca de borracha pessoal!",
+          "Agora vou te fazer minha para sempre, vadia!"
+        ],
+        "FIN": [
+          "A-a-ah! Estou gozando! Pegue tudo, vadia!",
+          "Siiim! Te enchendo, caramba!",
+          "Aqui está! Minha porra dentro de você!",
+          "Estou te enchendo até a borda, puta!",
+          "Sente como explodo em você!",
+          "Tudo meu! Toda minha porra para você!",
+          "Sim! Sim! Sim! Estou gozando, vadia!",
+          "Sua boceta agora é minha propriedade!"
+        ],
+        "SE1": [
+          "Sua boceta está chupando meu pênis, como uma puta!",
+          "Aaa, como estou gozando forte, pegue tudo!",
+          "Pegue, vadia, você mereceu!"
+        ]
+      }
+    },
+    "FIN": {
+      "description": "Goza com enorme quantidade de porra",
+      "events": {
+        "FIN": [
+          "A-a-ah! Estou gozando! Pegue tudo, vadia!",
+          "Siiim! Te enchendo, caramba!",
+          "Aqui está! Minha porra dentro de você!",
+          "Estou te enchendo até a borda, puta!",
+          "Sente como explodo em você!",
+          "Tudo meu! Toda minha porra para você!",
+          "Sim! Sim! Sim! Estou gozando, vadia!",
+          "Sua boceta agora é minha propriedade!"
+        ],
+        "JIGO1": [
+          "Olhe como minha semente flui de você, vadia!",
+          "Você está tremendo de prazer, e eu estou assistindo!",
+          "Você está encharcada de mim agora, bruxa!",
+          "Minha porra flui de você, e você não pode fazer nada!",
+          "Você parece uma puta usada!",
+          "Olhar perfeito para uma vadia dessas!",
+          "Seu corpo ainda treme da minha foda!",
+          "Agora você é verdadeiramente minha, vadia!"
+        ],
+        "SE": {
+          "se_count_1": [
+            "Estou gozando, gozando! Pegue tudo, vadia!",
+            "Sua boceta está enchendo até a borda, sente?",
+            "Estou enchendo seu útero, sente enchendo?",
+            "Sente eu te fertilizando, puta?",
+            "Seu útero é meu agora, e eu o enchi com porra!"
+          ],
+          "se_count_2": [
+            "Como é bom gozar em você, vadia!",
+            "Caramba, mame minha porra, puta!",
+            "Sua boceta está transbordando, sente?",
+            "Ainda mais porra para você, vadia!"
+          ]
+        },
+        "SE1": [
+          "Pegue minha porra, vadia, você mereceu!",
+          "Aaa.. Caramba, estou gozando, pegue tudo!",
+          "Vou encher seu útero, e você vai lembrar disso sempre!"
+        ]
+      }
+    },
+    "JIGO1": {
+      "description": "Puxa o pênis e fica de pé, olhando para GG, como sua porra flui dela",
+      "events": {
+        "JIGO1": [
+          "Olhe como minha semente flui de você, vadia!",
+          "Você está tremendo de prazer, e eu estou assistindo!",
+          "Você está encharcada de mim agora, bruxa!",
+          "Minha porra flui de você, e você não pode fazer nada!",
+          "Você parece uma puta usada!",
+          "Olhar perfeito para uma vadia dessas!",
+          "Seu corpo ainda treme da minha foda!",
+          "Agora você é verdadeiramente minha, vadia!"
+        ],
+        "SE1": [
+          "Chupe minha porra, puta, esse é seu trabalho!",
+          "Aqui, pegue tudo, vadia, você mereceu!",
+          "Sim, sim, sim, estou gozando, pegue tudo!"
+        ]
+      }
+    },
+    "JIGO2": {
+      "description": "GG fecha os olhos, respira tentando recuperar os sentidos, ele olha para GG",
+      "events": {
+        "JIGO2": [
+          "Agora você vai em círculo, agora você é uma puta de verdade!",
+          "Você vai sempre servir meu pênis, vadia!",
+          "Vou te dar para uso de outros, caramba!",
+          "Ótimo brinquedo sexual, não é?",
+          "Seu propósito é ser um buraco para todos!",
+          "Você não é mais uma bruxa, é só uma coisa!",
+          "Agora você vai servir todos que eu comandar!",
+          "Sua nova vida é foda constante, puta!"
+        ],
+        "START2": [
+          "Sem pensar muito, vou pegar o que é meu de novo, vadia!",
+          "Achou que era só isso? Acabamos de começar!",
+          "Descanso acabou, puta. Meu pênis tem sede de você de novo!",
+          "Sua boceta ainda não está saciada, posso sentir!",
+          "Vou entrar em você de novo, e desta vez ainda mais grosso!",
+          "O círculo se fecha. Você será minha de novo, caramba!",
+          "Seu corpo está pronto para uso de novo!",
+          "Vou te foder até exaustão completa, vadia!"
+        ],
+        "SE": {
+          "se_count_1": [
+            "Olhe para si mesma, você parece uma puta, e está certo!",
+            "Você está coberta da minha porra, e vai lembrar disso sempre!",
+            "Sua boceta ainda está pingando, que lindo!",
+            "Você sabe dar prazer, vadia, continue!"
+          ],
+          "se_count_2": [
+            "Outra porção de porra para você, vadia!",
+            "Sua boceta está transbordando, sente?",
+            "Seu útero está cheio da minha porra, e você vai lembrar disso sempre!"
+          ]
+        },
+        "SE1": [
+          "Olhe o que você está fazendo comigo, oooouu eeee!",
+          "Vou te engravidar, vadia, e você vai lembrar disso sempre!",
+          "Você está produzindo minha porra, como uma puta!"
+        ]
+      }
+    },
+    "START2": {
+      "description": "Sem pensar muito tira seu pênis e insere de novo repetindo ciclos",
+      "events": {
+        "START2": [
+          "Sem pensar muito, vou pegar o que é meu de novo, vadia!",
+          "Achou que era só isso? Acabamos de começar!",
+          "Descanso acabou, puta. Meu pênis tem sede de você de novo!",
+          "Sua boceta ainda não está saciada, posso sentir!",
+          "Vou entrar em você de novo, e desta vez ainda mais grosso!",
+          "O círculo se fecha. Você será minha de novo, caramba!",
+          "Seu corpo está pronto para uso de novo!",
+          "Vou te foder até exaustão completa, vadia!"
+        ],
+        "SE1": [
+          "Lute, lute, eu gosto!",
+          "Sua luta é inútil!",
+          "Continue, vadia, eu gosto!"
+        ],
+        "SE2": [
+          "Você não vai se libertar, puta!",
+          "Sua luta é inútil!",
+          "Continue, vadia, eu gosto!"
+        ]
+      }
+    }
+  }
+}
+

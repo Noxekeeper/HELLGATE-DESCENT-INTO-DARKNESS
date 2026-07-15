@@ -1,0 +1,9 @@
+{
+  "stepId": "broker_insufficient_accept_less",
+  "stepKind": "continue",
+  "speakerLabel": "Stranger",
+  "npcLinePoolId": "broker_broker_accept_less_g",
+  "continueOutcomeId": "pay_all_player_gold",
+  "continueNextStepId": "broker_pass_done",
+  "choiceLabels": []
+}

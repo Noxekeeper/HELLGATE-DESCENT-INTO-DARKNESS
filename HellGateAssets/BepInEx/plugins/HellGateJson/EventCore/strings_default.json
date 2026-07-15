@@ -1,0 +1,8 @@
+{
+  "entries": [
+    {
+      "key": "eventcore.smoke.open",
+      "text": "Smoke test — 1 Peace (pay toll if you have gold), 2 Threat (no gold), 3 Ignore (skip broker line → straight to close). Watch BepInEx log."
+    }
+  ]
+}

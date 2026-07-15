@@ -1,0 +1,909 @@
+{
+  "settings": {
+    "responseDelayMin": 1.5,
+    "responseDelayMax": 2.5,
+    "commentCooldownSeconds": 4.0,
+    "maxSimultaneousComments": 1,
+    "commentDisplayDuration": 5.0,
+    "fontSize": 22.0,
+    "verticalOffset": 20.0,
+    "boneName": "face",
+    "responseColor": {
+      "r": 0.8,
+      "g": 0.4,
+      "b": 1.0,
+      "a": 1.0
+    },
+    "responseOutlineColor": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 0.0
+    },
+    "thoughtColor": {
+      "r": 1.0,
+      "g": 0.6,
+      "b": 0.8,
+      "a": 1.0
+    },
+    "thoughtOutlineColor": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 0.0
+    }
+  },
+  "mindBrokenThresholds": [0.3, 0.7],
+  "animations": {
+    "START": {
+      "description": "De pie detrás, captura y ata las manos de GG detrás de su cabeza, mostrando sus pechos",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "¡No! ¡Suéltame! ¡No me toques!",
+            "¡Que alguien me ayude! ¡Este monstruo me está agarrando!",
+            "¡Quítame las manos de encima! ¡No te lo permitiré!",
+            "¡Para! ¡Me estás haciendo daño! ¡Suéltame!",
+            "¡No! ¡No quiero esto! ¡Ayuda!",
+            "Tus manos son tan ásperas... ¡Deja de tocarme!",
+            "¡Suéltame! ¡Te lo ruego! ¡No hagas esto!",
+            "Esto no puede estar pasando... ¡No!",
+            "¡Que alguien me salve de esta bestia!",
+            "¡No me someteré a ti! ¡Suelta mis manos!",
+            "Tu agarre es demasiado fuerte... ¡No puedo escapar!",
+            "¡No! ¡No muestres mi cuerpo así!",
+            "Me siento tan expuesta... ¡Por favor, para!",
+            "Esta humillación... ¡No puedo soportarla!",
+            "Tus manos en mi piel... ¡Tan mal!"
+          ],
+          "medium": [
+            "Yo... No sé qué hacer...",
+            "Sus manos están por todas partes... Me siento tan indefensa...",
+            "Este agarre... Es tan firme... No puedo moverme...",
+            "Mi cuerpo está expuesto... Todos pueden verme...",
+            "Intento resistir... Pero es inútil...",
+            "Su fuerza... Es abrumadora...",
+            "Siento su aliento en mi cuello... Tan cerca...",
+            "Mis manos están atadas... No puedo defenderme...",
+            "Esta posición... Tan vulnerable...",
+            "Su tacto... Me hace sentir extraño...",
+            "No puedo ocultar mi cuerpo... Está todo expuesto...",
+            "Esta humillación... Me está destrozando...",
+            "Sus manos en mis pechos... Me siento dividida...",
+            "Quiero resistir... Pero mi cuerpo...",
+            "Esta captura... Es tan completa..."
+          ],
+          "high": [
+            "Sus manos se sienten tan fuertes... Me gusta...",
+            "Ser capturada así... Excitante...",
+            "Mi cuerpo es suyo... Puede hacer lo que quiera...",
+            "Quiero que me toque más... Por todas partes...",
+            "Esta impotencia... Es excitante...",
+            "Su agarre en mis manos... Control perfecto...",
+            "Mis pechos están expuestos... Para él...",
+            "Me encanta cómo me exhibe...",
+            "Su fuerza... Me moja...",
+            "Quiero ser su prisionera... Para siempre...",
+            "Tócame... Por favor, tócame...",
+            "Mi cuerpo le pertenece... Completamente...",
+            "Esta exposición... Es liberadora...",
+            "Anhelo sus manos ásperas...",
+            "Soy suya... Tómame..."
+          ]
+        }
+      }
+    },
+    "START2": {
+      "description": "Saca su espada de acero de la vaina y la clava con la empuñadura hacia arriba frente a GG",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "¿¡Una espada?! ¿Qué vas a hacer con eso?!",
+            "¡No! ¡No acerques esa cosa!",
+            "¿Vas a cortarme? ¡Por favor, no!",
+            "Esa espada se ve tan peligrosa... ¡Aléjate!",
+            "¡No la lameré! ¡Es asqueroso!",
+            "Tu espada... Está cubierta de quién sabe qué...",
+            "Por favor, guárdala... ¡Te lo ruego!",
+            "Esto es demasiado... Incluso para ti...",
+            "No puedo hacer eso... ¡Es humillante!",
+            "¿Tu espada en mi boca? ¡Nunca!",
+            "Esto es bárbaro... Incluso para monstruos...",
+            "¡Me niego! ¡No me degradaré!",
+            "Esa empuñadura... ¡Está sucia!",
+            "¡No! ¡Mantén tu arma lejos de mí!",
+            "Esto es tortura... Tortura psicológica..."
+          ],
+          "medium": [
+            "Su espada... Tan cerca de mi rostro...",
+            "El acero... Frío e inflexible...",
+            "Quiere que... Con la empuñadura...",
+            "Esto es tan degradante... Pero siento curiosidad...",
+            "El metal... Duro e implacable...",
+            "Debería resistir... Pero qué tal si...",
+            "Su arma... Símbolo de su poder...",
+            "La empuñadura... Qué sabor tendría...",
+            "Esta humillación... Me hace sentir...",
+            "Quiero decir que no... Pero mis ojos...",
+            "La espada... Tan intimidante...",
+            "Su orden... Servir su hoja...",
+            "Esto está mal... Muy mal...",
+            "Pero el acero... Es hipnótico...",
+            "Me siento dividida... Por todo..."
+          ],
+          "high": [
+            "Su espada... Tan hermosa... Tan poderosa...",
+            "Quiero probarla... Por favor, déjame...",
+            "La empuñadura de acero... La necesito en mi boca...",
+            "Hazme servir tu arma... Amo...",
+            "La limpiaré con la lengua... Para ti...",
+            "Tu espada... Mi nueva obsesión...",
+            "El metal frío... Me excita...",
+            "Déjame venerar tu hoja...",
+            "La chuparé... Como si fuera tu polla...",
+            "Esto es tan caliente... Tu espada...",
+            "Me encanta el sabor del acero... Tu acero...",
+            "Hazme tu sierva de la espada...",
+            "La empuñadura... Tan perfecta para mi boca...",
+            "Anhelo el metal frío...",
+            "Tu arma... Mi amante..."
+          ]
+        }
+      }
+    },
+    "START3": {
+      "description": "Sin soltar, levanta a GG desde atrás por los brazos y la empala con la empuñadura de la espada profundamente, las piernas tocan el suelo",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "¡No! ¡No me levantes! ¿Qué estás haciendo?!",
+            "La empuñadura... Contra mi... ¡No!",
+            "¡Por favor! ¡No así! ¡Es demasiado!",
+            "¡La siento presionando... Contra mi lugar más íntimo!",
+            "Esta posición... Tan expuesta... ¡Tan mal!",
+            "El acero frío... Tocándome ahí...",
+            "¡No! ¡No me bajes sobre eso!",
+            "Duele... ¡El metal es tan duro!",
+            "Mi cuerpo... Me traiciona... ¡Está entrando!",
+            "Esta violación... Con un arma...",
+            "No puedo creer que esto esté pasando...",
+            "El acero... Dentro de mí... Tan frío...",
+            "Mis piernas... Tocando el suelo... Pero...",
+            "Esto es tortura... Tortura pura...",
+            "¡Para! ¡Sácala! ¡Duele demasiado!"
+          ],
+          "medium": [
+            "Ser levantada así... Tan indefensa...",
+            "La empuñadura... Presionándome...",
+            "La siento... Empezando a entrar...",
+            "Este metal frío... Dentro de mi calor...",
+            "Mi peso corporal... Empujándolo más profundo...",
+            "Duele... Pero hay algo más...",
+            "Esta invasión... Tan completa...",
+            "El acero... Llenándome... Estirándome...",
+            "No puedo detenerlo... Es demasiado tarde...",
+            "Esta sensación... Confusa...",
+            "Mis piernas... Apenas tocando... Pero profundo...",
+            "El dolor... Mezclado con... Algo...",
+            "Me siento tan llena... Con metal frío...",
+            "Esto está mal... Pero mi cuerpo...",
+            "La profundidad... Abrumadora..."
+          ],
+          "high": [
+            "Sí... Levántame... Empálame...",
+            "La empuñadura... Perfecta para mi coño...",
+            "Más profundo... Quiero que entre todo...",
+            "Acero frío... Llenando mi agujero caliente...",
+            "Monta la espada... Hazme tu vaina...",
+            "Duele tan bien... No pares...",
+            "Mi coño... Codicioso de metal...",
+            "Fóllame con tu espada... Por favor...",
+            "La profundidad... Perfecta... Tan profundo...",
+            "Me encanta esta invasión fría...",
+            "Acero dentro de mí... Tu arma...",
+            "Hazme correrme en tu hoja...",
+            "Más profundo... Hasta la empuñadura...",
+            "Esto es éxtasis... Éxtasis de metal...",
+            "Tu espada... Mi nueva favorita..."
+          ]
+        }
+      }
+    },
+    "START4": {
+      "description": "Mueve ligeramente a GG sobre la empuñadura imitando que está en una polla, GG está conmocionada",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "¡No! ¡No me muevas! ¡Para!",
+            "Se está moviendo dentro de mí... ¡Por favor, para!",
+            "Esta fricción... El metal... ¡Duele!",
+            "Mi cuerpo... Deslizándose sobre la espada...",
+            "¡Deja de mover! ¡No puedo soportarlo!",
+            "El acero... Frotando... ¡Por todas partes!",
+            "Esto es demasiado... ¡Demasiado intenso!",
+            "Siento cada relieve... Cada detalle...",
+            "¡Para! ¡Me estás destrozando!",
+            "Mis entrañas... Ardiendo por el metal...",
+            "Este movimiento... Cruel imitación...",
+            "No puedo... ¡No puedo con esto!",
+            "El dolor... Aumentando... ¡Para!",
+            "Mi cuerpo... Respondiendo... Contra mi voluntad...",
+            "Esta tortura... No tiene fin..."
+          ],
+          "medium": [
+            "El movimiento... Lento... Deliberado...",
+            "El acero... Deslizándose dentro de mí...",
+            "Esta fricción... No del todo desagradable...",
+            "Mi cuerpo... Adaptándose... Ajustándose...",
+            "El metal frío... Calentándose...",
+            "Siento... Cada centímetro... Cada movimiento...",
+            "Esta imitación... De otra cosa...",
+            "Los relieves... Frotando... Estimulando...",
+            "Mis caderas... Moviéndose involuntariamente...",
+            "Esta sensación... Confusa... Intensa...",
+            "La profundidad... Constante... Inalterable...",
+            "No puedo negar... Se siente... Algo...",
+            "Mi resistencia... Debilitándose...",
+            "El metal... Tan inflexible...",
+            "Esto está... Despertando algo..."
+          ],
+          "high": [
+            "Sí... Muéveme... Fóllame con acero...",
+            "La fricción... Perfecta... Tan buena...",
+            "Monta la espada... Más fuerte...",
+            "Metal frío... Frotando mis paredes...",
+            "Me encanta esto... Follar con acero...",
+            "Más profundo... Más rápido... Sí...",
+            "Mi coño... Ama tu arma...",
+            "Los relieves... Golpeando todos los puntos...",
+            "Corre por la espada... Por favor...",
+            "Esta polla de metal... Increíble...",
+            "Fóllame hasta perder el sentido... Con acero...",
+            "Necesito esto... Dureza fría...",
+            "El movimiento... Éxtasis...",
+            "Tu espada... Me moja...",
+            "Más... No pares..."
+          ]
+        }
+      }
+    },
+    "START5": {
+      "description": "GG se corre en la espada, luego TouzokuAxe se sienta en posición de loto y empala a GG con su polla (reverse cowgirl)",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "¡No! Me estoy... ¡Me estoy corriendo! ¡Para!",
+            "¡Esto es imposible... De una espada?!",
+            "Mi cuerpo... Me traicionó... ¡Completamente!",
+            "Me corrí... De metal frío... ¿Cómo?!",
+            "Esta humillación... La derrota definitiva...",
+            "Ahora... Su polla... La de verdad...",
+            "No más juegos... Ahora es en serio...",
+            "Su polla... Mucho más grande...",
+            "La siento... Presionándome...",
+            "Esto es todo... La violación real...",
+            "De espada a polla... Qué contraste...",
+            "Mi cuerpo... Todavía temblando...",
+            "No puedo resistir... Ya no...",
+            "Su polla... Entrando en mí...",
+            "Este es... El principio del infierno..."
+          ],
+          "medium": [
+            "Yo... Me corrí... Por la espada...",
+            "Mi orgasmo... Inesperado... Intenso...",
+            "El metal... Me llevó al clímax...",
+            "Ahora... Su polla real... Esperando...",
+            "La siento... Caliente... Palpitante...",
+            "Tan diferente... Del acero frío...",
+            "Mi cuerpo... Todavía sensible...",
+            "Esta transición... Suave... Natural...",
+            "Su polla... Llenando el vacío...",
+            "De arma a carne... Interesante...",
+            "Me siento... Más excitada que antes...",
+            "Sus manos... Guiándome hacia abajo...",
+            "Esta posición... Tan íntima...",
+            "Su polla... Tan viva dentro de mí...",
+            "Esto podría no ser... Tan malo..."
+          ],
+          "high": [
+            "¡Sí! ¡Me corrí en tu espada!",
+            "¡El acero me hizo correr... Increíble!",
+            "¡Ahora tu polla real... La necesito!",
+            "Fóllame... Después de ese orgasmo...",
+            "Tu polla... Mucho mejor...",
+            "Lléname... Con carne de verdad...",
+            "Me encanta esta transición...",
+            "¡De metal a carne... Perfecto!",
+            "Tu polla... Palpitando dentro...",
+            "Fóllame duro... Me lo gané...",
+            "Corre dentro de mí... Por favor...",
+            "Tu espada me calentó perfectamente...",
+            "Ahora dame lo de verdad...",
+            "Necesito tu semen caliente...",
+            "Fóllame como la zorra que soy..."
+          ]
+        }
+      }
+    },
+    "ERO": {
+      "description": "Empala bien y levanta casi hasta el final, vuelve a empalar",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "¡Ah! ¡Demasiado profundo! ¡Me estás haciendo daño!",
+            "Su polla... Tan grande... Llenándome...",
+            "¡Esta embestida... Demasiado violenta!",
+            "Me siento... Hecha pedazos...",
+            "Su polla... Golpeando mis profundidades...",
+            "¡Para! ¡Estás yendo demasiado lejos!",
+            "Mis entrañas... Ardiendo...",
+            "Este ritmo... Despiadado...",
+            "No puedo soportar esto... ¡Demasiado!",
+            "Su polla... Implacable...",
+            "Cada embestida... Dolorosa...",
+            "Mi cuerpo... Temblando...",
+            "Esta penetración... Brutal...",
+            "Me siento... Rota...",
+            "Piedad... Por favor, ten piedad..."
+          ],
+          "medium": [
+            "Su polla... Tan profunda... Tan llena...",
+            "Cada embestida... Construyendo sensación...",
+            "Me siento... Estirada... Completamente...",
+            "Su ritmo... Constante... Intenso...",
+            "Mi cuerpo... Adaptándose... Lentamente...",
+            "Esta plenitud... Abrumadora...",
+            "Su polla... Palpitando dentro...",
+            "La profundidad... Perfecta... Casi...",
+            "No puedo evitar... Sentirla...",
+            "Esta fricción... Estimulante...",
+            "Mis paredes... Apretándose alrededor de él...",
+            "Sus manos... Guiándome...",
+            "Esta posición... Poderosa...",
+            "Siento... Cada vena... Cada relieve...",
+            "Esto está... Volviéndose soportable..."
+          ],
+          "high": [
+            "¡Sí! Tu polla... ¡Profundidad perfecta!",
+            "Fóllame más profundo... ¡Hasta el fondo!",
+            "¡Me encanta cómo me llenas completamente!",
+            "¡Tu polla golpea todos los puntos correctos!",
+            "Más fuerte... ¡No te contengas!",
+            "¡Necesito esta plenitud... Siempre!",
+            "Tu polla... Tan gruesa... ¡Tan buena!",
+            "Empújame... ¡Hazme tuya!",
+            "Más profundo... ¡Hasta el útero!",
+            "¡Te siento palpitar dentro!",
+            "Corre por mí... ¡Lléname!",
+            "Tu polla... ¡Mi todo!",
+            "Fóllame hasta perder el sentido... ¡Sí!",
+            "Me encanta este ritmo... ¡Perfecto!",
+            "Más... ¡Dame todo!"
+          ]
+        }
+      }
+    },
+    "ERO2": {
+      "description": "Empieza a follar rítmicamente a GG, saca la lengua",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Su ritmo... Tan constante... Interminable...",
+            "...Siento cada embestida... Muy dentro...",
+            "...Su lengua... Colgando... Animalístico...",
+            "...Esto es solo sexo... Nada más...",
+            "...Mi cuerpo... Moviéndose con él...",
+            "...Tengo que aguantar... Hasta que termine...",
+            "...Su polla... Llenándome... Completamente...",
+            "...El placer... No deseado... Intrusivo...",
+            "...No puedo parar... Las sensaciones...",
+            "...Su aliento... Caliente en mi espalda...",
+            "...Esta posición... Tan expuesta...",
+            "...Su lengua... Vista repugnante...",
+            "...Me siento... Sucia... Usada...",
+            "...Este ritmo... Hipnótico...",
+            "...Tengo que... Disociarme..."
+          ],
+          "medium": [
+            "...Su ritmo... Perfecto... Sincronizado...",
+            "...Siento... Cada movimiento... Cada embestida...",
+            "...Su lengua... Fuera... En éxtasis...",
+            "...Esta sensación... No del todo mala...",
+            "...Mi cuerpo... Respondiendo... Naturalmente...",
+            "...Su polla... Tan viva dentro de mí...",
+            "...La profundidad... Constante... Satisfactoria...",
+            "...No puedo negar... Se siente bien...",
+            "...Sus manos... En mis caderas... Guiando...",
+            "...Esta posición... Permite penetración profunda...",
+            "...Su lengua... Muestra su placer...",
+            "...Me siento... Deseada... Querida...",
+            "...El ritmo... Construyendo algo...",
+            "...Mi resistencia... Desvaneciéndose...",
+            "...Esto podría ser... Agradable..."
+          ],
+          "high": [
+            "...Su polla... Perfecta... Tan profunda...",
+            "...Este ritmo... Me vuelve loca...",
+            "...Su lengua... Fuera... De placer...",
+            "...Me encanta esto... Follar profundo...",
+            "...Su polla... Golpea mi punto G...",
+            "...Fóllame más fuerte... Sí...",
+            "...Necesito esto... Todos los días...",
+            "...Su polla... Tan gruesa... Tan buena...",
+            "...Corre dentro de mí... Por favor...",
+            "...Esta posición... Perfecta para embestidas profundas...",
+            "...Su lengua... Muestra que está cerca...",
+            "...Quiero su semen... Caliente... Profundo...",
+            "...Fóllame... Como tu puta...",
+            "...Su ritmo... Perfecto... Éxtasis...",
+            "...Me encanta estar llena... Completamente..."
+          ]
+        }
+      }
+    },
+    "2ERO": {
+      "description": "Toma uno de los pechos de GG con la mano",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Su mano... En mi pecho...",
+            "...Apretando... Bruscamente...",
+            "...Mi pezón... Entre sus dedos...",
+            "...Este tacto... No deseado... Intrusivo...",
+            "...Me siento... Expuesta... Vulnerable...",
+            "...Su mano... Tan grande... Cubriéndome...",
+            "...El apretón... Doloroso...",
+            "...Mi pecho... En su posesión...",
+            "...Esta intimidad... Forzada...",
+            "...Desearía... Que parara...",
+            "...Sus dedos... Pellizcando... Fuerte...",
+            "...La sensación... Abrumadora...",
+            "...No puedo... Apartarlo...",
+            "...Este tacto... Persiste...",
+            "...Mi cuerpo... Reaccionando... Contra mi voluntad..."
+          ],
+          "medium": [
+            "...Su mano... Acariciando mi pecho...",
+            "...El calor... De su palma...",
+            "...Sus dedos... Tentando mi pezón...",
+            "...Este tacto... No del todo desagradable...",
+            "...Mi pecho... Encaja perfectamente...",
+            "...El apretón... Firme... Seguro...",
+            "...Siento... Una chispa... De placer...",
+            "...Su pulgar... Círculos... Lentamente...",
+            "...Esta estimulación... Construyendo...",
+            "...Mi pezón... Endureciéndose... Respondiendo...",
+            "...Su mano... posesiva...",
+            "...El tacto... Experto... Hábil...",
+            "...No puedo evitar... Disfrutar esto...",
+            "...Mi cuerpo... Arqueándose hacia él...",
+            "...Este placer... Inesperado..."
+          ],
+          "high": [
+            "...Su mano... En mi teta... Perfecta...",
+            "...Apretando... Justo bien... Tan buena...",
+            "...Mi pezón... Palpitando... Queriendo más...",
+            "...Tócame... Por todas partes...",
+            "...Sus dedos... Mágicos... Éxtasis...",
+            "...Me encanta cómo me manosea...",
+            "...Mi pecho... Su juguete...",
+            "...Pellizca más fuerte... Sí...",
+            "...El placer... Construyendo... Tan rápido...",
+            "...Su mano... Sabe lo que necesito...",
+            "...Correrme solo de esto... Solo esto...",
+            "...Su tacto... Me moja más...",
+            "...Aprétame... Poseeme...",
+            "...Mi pezón... Suyo para tentar...",
+            "...Necesito esto... Para siempre..."
+          ]
+        }
+      }
+    },
+    "2ERO2": {
+      "description": "Continúa apretando la teta, acaricia el pezón",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Sus dedos... En mi pezón... Constantes...",
+            "...Pellizcando... Retorciendo... Suavemente...",
+            "...El dolor... Agudo... Persistente...",
+            "...Mi pezón... Tan sensible... Ahora...",
+            "...Esta estimulación... Insoportable...",
+            "...Quiero que pare... Por favor...",
+            "...Su tacto... Demasiado íntimo...",
+            "...Mi pecho... Ardiendo por la atención...",
+            "...Las caricias... Burlonas...",
+            "...Siento... Llegar las lágrimas...",
+            "...Este placer-dolor... Confuso...",
+            "...Sus dedos... Implacables...",
+            "...Mi cuerpo... Traicionándome...",
+            "...El pezón... Palpitando...",
+            "...Para... No puedo soportar esto..."
+          ],
+          "medium": [
+            "...Sus dedos... Tan suaves ahora...",
+            "...Acariciando... Mi pezón... Suavemente...",
+            "...La sensación... Olas de placer...",
+            "...Mi pezón... Duro... Responsivo...",
+            "...Este tacto... Experto... Perfecto...",
+            "...Siento... Calor construyendo...",
+            "...Su pulgar... Círculos... Tentando...",
+            "...El juego del pezón... Intenso...",
+            "...Mi pecho... Pesado... Lleno...",
+            "...Esta estimulación... Abrumadora...",
+            "...No puedo... Dejar de gemir...",
+            "...Su tacto... Me conoce...",
+            "...El placer... Construyendo...",
+            "...Mi pezón... Su enfoque...",
+            "...Esto es... Demasiado bueno..."
+          ],
+          "high": [
+            "...Sus dedos... En mi pezón... Mágicos...",
+            "...Pellízcame... Retorcéme... Sí...",
+            "...El placer... Eléctrico... Intenso...",
+            "...Mi pezón... Palpitando... Deseando...",
+            "...Tócame más fuerte... Por favor...",
+            "...Sus caricias... Me vuelven loca...",
+            "...Correrme solo del pezón... Solo...",
+            "...La estimulación... Perfecta...",
+            "...Sus dedos... Mi perdición...",
+            "...Pellizca más fuerte... Hazme gritar...",
+            "...El pezón... Tan sensible...",
+            "...Su tacto... Éxtasis...",
+            "...Necesito esto... Siempre...",
+            "...Mi pecho... Su patio de juegos...",
+            "...Corre... Por tus dedos..."
+          ]
+        }
+      }
+    },
+    "2ERO3": {
+      "description": "Quita la mano, empieza a empalar acentuadamente a GG, GG tiene cara ahegao",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Su mano... Fuera... Pero embiste más fuerte...",
+            "...Las embestidas... Violentas... Profundas...",
+            "...Su polla... Estrellándose contra mí...",
+            "...Este ritmo... Castigador...",
+            "...Mi cuerpo... Temblando... Violentamente...",
+            "...La profundidad... Demasiado... Duele...",
+            "...Su polla... Golpeando mis límites...",
+            "...Me siento... Rota... Destrozada...",
+            "...Las embestidas... Despiadadas...",
+            "...Mis entrañas... Ardiendo...",
+            "...Esto es... Tortura...",
+            "...Su polla... Implacable...",
+            "...Las embestidas... Interminables...",
+            "...No puedo... Soportar esto...",
+            "...Piedad... Por favor..."
+          ],
+          "medium": [
+            "...Su mano se va... Pero las embestidas se intensifican...",
+            "...El ritmo... Más potente... Más profundo...",
+            "...Su polla... Llegando a nuevas profundidades...",
+            "...Esta sensación... Intensa... Mixta...",
+            "...Mi cuerpo... Respondiendo... A pesar de mí...",
+            "...Las embestidas... Perfectas... Ritmo...",
+            "...Su polla... Llenándome... Completamente...",
+            "...Siento... El borde... Acercándose...",
+            "...Este placer... Construyendo... Rápido...",
+            "...Sus movimientos... Seguros... Hábiles...",
+            "...La profundidad... Abrumadora... Perfecta...",
+            "...No puedo evitar... Disfrutar esto...",
+            "...Su polla... Golpeando todos los puntos...",
+            "...Esto está... Volviéndose éxtasis...",
+            "...Las embestidas... Momento perfecto..."
+          ],
+          "high": [
+            "...Su mano fuera... Pero su polla más profunda...",
+            "...Fóllame... Empújame... Sí...",
+            "...Su polla... Golpeando mi útero...",
+            "...Las embestidas... Perfectas... Fuertes...",
+            "...Me encanta esto... Follar profundo...",
+            "...Corre dentro de mí... Ahora...",
+            "...Su polla... Tan profunda... Tan buena...",
+            "...Empuja más fuerte... Destrúyeme...",
+            "...El ritmo... Éxtasis...",
+            "...Lléname... Con tu semen...",
+            "...Su polla... Mi todo...",
+            "...Corre... Muy dentro...",
+            "...Fóllame a través del orgasmo...",
+            "...Sus embestidas... Perfectas...",
+            "...Necesito esto... Siempre..."
+          ]
+        }
+      }
+    },
+    "2ERO4": {
+      "description": "Follando a GG presionando, rebotando con las caderas y presionando hacia atrás con manos en caderas, GG tiene cara ahegao, tempo más rápido",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Su cuerpo... Presionándome...",
+            "...Sus manos... En mis caderas... Sosteniendo...",
+            "...Las embestidas... Más rápidas... Más fuertes...",
+            "...Sus caderas... Rebotando... Violentamente...",
+            "...Mi cuerpo... Siendo usado... Completamente...",
+            "...Esta posición... Tan indefensa...",
+            "...Su polla... Profunda... Implacable...",
+            "...La velocidad... Abrumadora...",
+            "...Siento... El final... Llegando...",
+            "...Su aliento... Pesado... Excitado...",
+            "...Las embestidas... Despiadadas...",
+            "...Mi cuerpo... Temblando... Incontrolablemente...",
+            "...Este es... El clímax... De la violación...",
+            "...Su polla... Lista para explotar...",
+            "...Corre... Dentro de mí... Por favor para..."
+          ],
+          "medium": [
+            "...Su cuerpo... Cerca... Presionando...",
+            "...Sus manos... Guiando mis caderas...",
+            "...El ritmo... Más rápido... Urgente...",
+            "...Sus caderas... Encontrándose con las mías... Perfectamente...",
+            "...Esta sincronización... Intensa...",
+            "...Su polla... Palpitando... Dentro...",
+            "...La velocidad... Construyendo placer...",
+            "...Siento... Que se hincha...",
+            "...Su aliento... Caliente... En mi cuello...",
+            "...Las embestidas... Más profundas... Más fuertes...",
+            "...Esta posición... Permite todo...",
+            "...Sus manos... Jalándome hacia abajo...",
+            "...El clímax... Acercándose...",
+            "...Su polla... Lista...",
+            "...Corre... Juntos..."
+          ],
+          "high": [
+            "...Su cuerpo... Contra el mío... Perfecto...",
+            "...Sus manos... En mis caderas... Jalando...",
+            "...Fóllame... Más rápido... Más fuerte...",
+            "...Sus caderas... Rebotando... Éxtasis...",
+            "...Su polla... Tan profunda... Tan gruesa...",
+            "...Corre dentro de mí... Por favor...",
+            "...La velocidad... Perfecta... Intensa...",
+            "...Su aliento... Caliente... Excitado...",
+            "...Empújame... Destruye mi coño...",
+            "...Su polla... Palpitando... Lista...",
+            "...Lléname... Con semen caliente...",
+            "...Corre juntos... Sí...",
+            "...Sus embestidas... Divinas...",
+            "...Necesito su semen... Ahora...",
+            "...Corre... Profundo... Lléname..."
+          ]
+        }
+      }
+    },
+    "FIN": {
+      "description": "Se corre dentro de GG, antes de correrse saca ligeramente la polla y embiste hasta el fondo",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Se está hinchando... Dentro de mí...",
+            "...Su polla... Palpitando... Lista...",
+            "...Va a correrse... Dentro...",
+            "...Su semilla caliente... Llenándome...",
+            "...La siento... Viniendo... No...",
+            "...Su polla... Palpitando... Violentamente...",
+            "...El semen... Caliente... Quemando...",
+            "...Me está llenando... Completamente...",
+            "...Su semilla... Muy dentro...",
+            "...Este calor... No deseado...",
+            "...Su polla... Vacándose... En mí...",
+            "...Me siento... Llena... De su semen...",
+            "...Esta es... La violación definitiva...",
+            "...Su semen... Marcándome...",
+            "...Soy suya... Cubo de semen..."
+          ],
+          "medium": [
+            "...Su polla... Hinchándose... Dentro...",
+            "...Está cerca... Muy cerca...",
+            "...Sus embestidas... erráticas... Urgentes...",
+            "...Lo siento... Construyendo presión...",
+            "...Su polla... Palpitando... Fuerte...",
+            "...El semen... Llegando... Pronto...",
+            "...Su aliento... Pesado... Excitado...",
+            "...Va a llenarme...",
+            "...Su semilla... Caliente... Espesa...",
+            "...Siento... Anticipación...",
+            "...Su polla... Palpitando... Lista...",
+            "...Corre... Dentro de mí...",
+            "...El calor... Expandiéndose...",
+            "...Su clímax... Poderoso...",
+            "...Lléname... Completamente..."
+          ],
+          "high": [
+            "...Su polla... Tan hinchada... Lista...",
+            "...Corre dentro de mí... Por favor...",
+            "...Lléname con tu semen caliente...",
+            "...Su polla... Palpitando... Perfecta...",
+            "...Corre profundo... En mi útero...",
+            "...Su semilla... Mi recompensa...",
+            "...Corre ahora... Lo necesito...",
+            "...Su semen... Caliente... Espeso...",
+            "...Lléname completamente...",
+            "...Su clímax... Éxtasis...",
+            "...Corre... Más... Dame todo...",
+            "...Su polla... Explotando...",
+            "...Semen caliente... Dentro de mí...",
+            "...Perfecto... Lléname...",
+            "...Su semilla... Mía..."
+          ]
+        }
+      }
+    },
+    "FIN2": {
+      "description": "GG parece haberse corrido junto con él, polla dentro, GG ha perdido la cara ahegao",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Se corrió... Dentro de mí...",
+            "...Su semen... Caliente... Pegajoso...",
+            "...Lo siento... Goteando... Fuera...",
+            "...Su polla... Todavía dentro... Ablandándose...",
+            "...Este desastre... Su semilla... Por todas partes...",
+            "...Mi cuerpo... Temblando... Réplicas...",
+            "...Yo también me corrí... Cómo... De esto...",
+            "...Esta humillación... Completa...",
+            "...Su semen... Filtrándose...",
+            "...Me siento... Tan sucia... Usada...",
+            "...Su polla... Saliendo...",
+            "...El vacío... Repentino...",
+            "...Este es... El fin... De la violación...",
+            "...Estoy marcada... Por su semilla...",
+            "...Esta vergüenza... Permanecerá..."
+          ],
+          "medium": [
+            "...Nos corrimos... Juntos...",
+            "...Su semen... Llenándome... Caliente...",
+            "...Mi orgasmo... Intenso... Inesperado...",
+            "...Su polla... Todavía palpitando... Dentro...",
+            "...El resplandor posterior... Sentimientos mezclados...",
+            "...Su semilla... Muy dentro de mí...",
+            "...Me siento... Satisfecha... Culpable...",
+            "...Su semen... Filtrándose... Lentamente...",
+            "...Este calor... Persistiendo...",
+            "...Su polla... Ablandándose... Suavemente...",
+            "...La conexión... Todavía ahí...",
+            "...Este momento... Íntimo...",
+            "...Su aliento... Pesado... En mi espalda...",
+            "...El semen... Nuestro clímax compartido...",
+            "...Esto no fue... Del todo malo..."
+          ],
+          "high": [
+            "...Nos corrimos juntos... Perfecto...",
+            "...Su semen... Tan caliente... Llenándome...",
+            "...Mi orgasmo... Con el suyo... Éxtasis...",
+            "...Su polla... Todavía dura... Dentro...",
+            "...Corre más... Dame todo...",
+            "...Su semilla... Profunda en mi útero...",
+            "...Me encanta esto... Sentimiento de plenitud...",
+            "...Su semen... Filtrándose... Desordenado...",
+            "...El calor... Perfecto...",
+            "...Su polla... Todavía palpitando...",
+            "...Corre de nuevo... Por favor...",
+            "...Su semilla... Mi favorita...",
+            "...Lléname... Siempre...",
+            "...Este clímax... Divino...",
+            "...Su semen... Mío..."
+          ]
+        }
+      }
+    },
+    "JIGO": {
+      "description": "La polla está flácida, el semen gotea de GG, cara ahegao, el cuerpo se estremece en éxtasis",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Está sacando... Por fin...",
+            "...Su semen... Goteando por mis muslos...",
+            "...Mi cuerpo... Estremeciéndose... Incontrolablemente...",
+            "...Este éxtasis... No deseado... Forzado...",
+            "...Quiere pasarme... A otros...",
+            "...La pandilla... Esperándome...",
+            "...Esta pesadilla... Continúa...",
+            "...Su semen... Filtrándose...",
+            "...Mi cuerpo... Todavía sensible...",
+            "...Los estremecimientos... Réplicas...",
+            "...No puedo moverme... Demasiado agotada...",
+            "...Vienen... Por mí...",
+            "...Más monstruos... Más violación...",
+            "...Este es... Infierno sin fin...",
+            "...No puedo... Soportar más..."
+          ],
+          "medium": [
+            "...Su polla... Fuera... Sensación de vacío...",
+            "...Semen goteando... Por mis piernas...",
+            "...Mi cuerpo... Todavía temblando...",
+            "...El orgasmo... Intenso... Confuso...",
+            "...Está llamando a otros... La pandilla...",
+            "...Me quieren... También...",
+            "...Esto se está... Volviendo normal...",
+            "...El semen... Su marca...",
+            "...Mi cuerpo... Listo para más...",
+            "...La pandilla... Emocionada...",
+            "...Siento... Anticipación...",
+            "...Más pollas... Viniendo...",
+            "...Esto podría ser... Interesante...",
+            "...El gangbang... Comenzando...",
+            "...Estoy lista... Para ellos..."
+          ],
+          "high": [
+            "...Su semen... Goteando... Tan caliente...",
+            "...Mi cuerpo... Estremeciéndose... De placer...",
+            "...El orgasmo... Increíble... Perfecto...",
+            "...Pásame a la pandilla... Sí...",
+            "...Quiero más pollas... Todas...",
+            "...Semen goteando... Su regalo...",
+            "...La pandilla... Lista para mí...",
+            "...Fóllame... Todos ustedes...",
+            "...Su semen... Lubricante...",
+            "...Más monstruos... Más semen...",
+            "...Necesito la pandilla... Ahora...",
+            "...Lléname... Por todos lados...",
+            "...Corre por todas partes... Sobre mí...",
+            "...El gangbang... Mi sueño...",
+            "...Usadme... Todos ustedes..."
+          ]
+        }
+      }
+    },
+    "JIGO2": {
+      "description": "La polla se endurece de nuevo y el ciclo cerrado comienza desde ERO (PERO DEBERÍAMOS TENER ENTREGA DE GG AL CICLO GANGBANG AQUÍ)",
+      "events": {
+        "ARADIA_THOUGHT": {
+          "low": [
+            "...Está duro de nuevo... Sin descanso...",
+            "...Ronda dos... Más tortura...",
+            "...Su polla... Lista de nuevo...",
+            "...No puedo... Soportar más...",
+            "...Este ciclo... Interminable...",
+            "...Su polla... Presionando de nuevo...",
+            "...La pandilla... Esperando...",
+            "...Pero él me quiere... Primero...",
+            "...Ronda dos... Más fuerte...",
+            "...Mi cuerpo... Todavía sensible...",
+            "...Esto es... Demasiado...",
+            "...Su polla... Entrando de nuevo...",
+            "...El dolor... Regresando...",
+            "...Sin piedad... Sin descanso...",
+            "...Este infierno... Continúa..."
+          ],
+          "medium": [
+            "...Está listo de nuevo... Tan pronto...",
+            "...Ronda dos... Interesante...",
+            "...Su polla... Dura... De nuevo...",
+            "...Mi cuerpo... Respondiendo...",
+            "...La pandilla... Puede esperar...",
+            "...Me quiere... Más...",
+            "...Esta resistencia... Impresionante...",
+            "...Su polla... Entrando... Familiar...",
+            "...La sensación... Diferente ahora...",
+            "...Más placer... Construyendo...",
+            "...Ronda dos... Podría ser mejor...",
+            "...Su polla... Me conoce ahora...",
+            "...El ritmo... Empezando de nuevo...",
+            "...Esto podría ser... Agradable...",
+            "...La pandilla... Después de él..."
+          ],
+          "high": [
+            "...Está duro de nuevo... Perfecto...",
+            "...Ronda dos... Sí por favor...",
+            "...Su polla... Lista para más...",
+            "...Fóllame de nuevo... Más fuerte...",
+            "...La pandilla puede esperar... Te quiero a ti...",
+            "...Corre dentro de mí... De nuevo...",
+            "...Su polla... Tan buena... Segunda vez...",
+            "...Empújame... No pares...",
+            "...Lléname de nuevo... Con semen...",
+            "...Ronda dos... Aún mejor...",
+            "...Su resistencia... Increíble...",
+            "...Corre conmigo... De nuevo...",
+            "...Su polla... Mi favorita...",
+            "...Más... Dame más...",
+            "...Fóllame hasta perder el sentido... Ronda dos..."
+          ]
+        }
+      }
+    }
+  }
+}

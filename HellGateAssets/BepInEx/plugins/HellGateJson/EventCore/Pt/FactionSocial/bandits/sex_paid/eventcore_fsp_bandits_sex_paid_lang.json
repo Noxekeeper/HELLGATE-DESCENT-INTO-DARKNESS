@@ -1,0 +1,134 @@
+{
+  "entries": [],
+  "linePools": [
+    {
+      "poolId": "fsp_sex_paid_prelude",
+      "lines": [
+        "Um homem pára-te. Não quer briga, mas olha-te com tanta confiança que seguir sem parar já é estranho.",
+        "Um bandido põe-se à tua frente. Sem gritos nem ameaças — só a confiança descarada de quem está habituado a levar a melhor.",
+        "Um homem aproxima-se de lado. Não se atira a ti, mas está demasiado perto e demasiado calmo para um encontro ao acaso.",
+        "O olhar dele agarra-te. Não está zangado — comporta-se como se a conversa já tivesse começado sem o teu consentimento.",
+        "Um homem bloqueia o caminho. Calmo, quase profissional, mas cada gesto cheira a descaramento.",
+        "Não te param à força. Ele está tão seguro de si que falar parece inevitável."
+      ]
+    },
+    {
+      "poolId": "fsp_bandits_sex_paid_open",
+      "lines": [
+        "Oh, oh… Estás do caraças, querida. Apetece-te ganhar umas moedas? Pago generosamente.",
+        "Que sorte. Bruquinha ardente — não sei onde olhar. Queres ganhar? Pago bem.",
+        "Caralho… Hoje estás especialmente tentadora. Queres ouro? Sei como tornar isto agradável.",
+        "Oh, querida… Por tua causa apertam-me as calças. Queres moedas depressa? Serei suave… ou não.",
+        "Merda, que boa estás. Não queres moedas? Pago-te bem.",
+        "Olha quem cá veio. Gaja suculenta. Queres ganhar? Sou generoso se te esforçares.",
+        "Oh, caramba… Hoje estás especialmente apetecível. Moedas por um bom momento — interessa-te?",
+        "Epá, bonita. Contigo qualquer bandido fica duro. Queres ganhar algo?",
+        "Caralho… Doce bruxa. Queres ganhar um pouco? Trato-te como deve ser.",
+        "Uau… Não consigo desviar o olhar. Queres moedas? Pago tudo, prometo."
+      ]
+    },
+    {
+      "poolId": "fsp_sex_refuse_react",
+      "lines": [
+        "Ah, que pena… Já estava aquecido e dizes que não.",
+        "Vá lá… Não, espera — falas a sério.",
+        "Uf. Tão boa — e um não logo?",
+        "Não queres? Chateia, mas percebi.",
+        "Tch… Havia-de gostar."
+      ]
+    },
+    {
+      "poolId": "fsp_sex_hesitate_react",
+      "lines": [
+        "Heh, coraste? Significa que não estás contra — só envergonhada.",
+        "Oh, envergonhada. Gosto.",
+        "Hm? Deixa de fingir. Vê-se que te interessa.",
+        "Sim, desconcertada? Bem — aqueço-te já.",
+        "Que gracioso corares. Anda, não te vais arrepender."
+      ]
+    },
+    {
+      "poolId": "fsp_sex_money_react",
+      "lines": [
+        "Assim gosto. Dinheiro à vista — o resto vê-se.",
+        "Rapariga esperta. Diz condições — não sou avarento.",
+        "Está bem, escuto. Quanto queres — e o que estás disposta a fazer?",
+        "Queres ganhar? Pago bem se não fores preguiçosa.",
+        "Combinamos. Sabes o que quero — diz o que queres tu."
+      ]
+    },
+    {
+      "poolId": "fsp_sex_soft_react",
+      "lines": [
+        "Não vou, não vou… bem, quase. Prometo ser quase suave.",
+        "Está bem, mais suave. És bruxa — aguentas.",
+        "Serei carinhoso. Embora a mão vá ao teu cabelo…",
+        "Combinado: não muito duro — mas também não finjas santa.",
+        "Heh, está bem. Vou tentar. Mas se gemeres alto, posso esquecer a promessa."
+      ]
+    },
+    {
+      "poolId": "fsp_sex_rough_react",
+      "lines": [
+        "Oooh, assim gosto! Então não paro até gozares.",
+        "Finalmente uma a sério! Vai ser duro.",
+        "Caralho, és fogo! Adoro quando pedem à bruta.",
+        "Boa puta. Sem ternura — direto ao grosso.",
+        "Agora sim! Fodo-te até gritares."
+      ]
+    },
+    {
+      "poolId": "fsp_bandits_sex_paid_after_yes",
+      "lines": [
+        "Toma, as tuas {SEX_PRICE} moedas. Pega — e vamos.",
+        "Como prometi. {SEX_PRICE} moedas são tuas. Não demores.",
+        "O ouro é teu. Já ardo.",
+        "Paguei {SEX_PRICE} moedas. Finalmente.",
+        "O dinheiro é teu. Mostra do que vale o pagamento.",
+        "Aqui estão as moedas. Agora abre as pernas.",
+        "{SEX_PRICE} moedas — tuas. De joelhos.",
+        "Não esperes suavidade — gosto à bruta.",
+        "Boa puta. O ouro é teu — vem cá."
+      ]
+    },
+    {
+      "poolId": "fsp_bandits_sex_paid_rage_win",
+      "lines": [
+        "Espera… espera! Vejo como olhas. Mãos quietas — não toco.",
+        "Merda… está bem. Fomos longe. Guarda a lâmina — recuo.",
+        "Ei… calma. Não brincas — sinto. Passa.",
+        "Caralho… percebi. Acalma-te.",
+        "Calma… Esse olhar — não quero ver quem ganha.",
+        "A brincadeira acabou. Vamos separar-nos em silêncio.",
+        "Está bem, bruxa… tens razão. Juro.",
+        "Sem rancor. Só… não olhes assim.",
+        "Conversa terminada. Era brincadeira.",
+        "Percebi. Cada um para o seu lado."
+      ]
+    },
+    {
+      "poolId": "fsp_bandits_sex_paid_rage_fail",
+      "lines": [
+        "Ei, vê a quem ameaças — fodo-te por isso!",
+        "Não fales tanto — vai doer-te a garganta.",
+        "A sério? Vais-te dar mal, bruxa.",
+        "Bravata fraca. Fodo-te até rebentares.",
+        "Palavras não mudam nada. Posso tomar à força.",
+        "Tremem-te as mãos e a boca é insolente. Usa essa língua, puta."
+      ]
+    },
+    {
+      "poolId": "fsp_bandits_close_peaceful",
+      "lines": [
+        "Está bem, vai. Não te seguramos.",
+        "Até outra noite.",
+        "Cuida-te.",
+        "Está bem, passa.",
+        "Na próxima vez já sabes onde me encontrar.",
+        "Boa sorte. Não esqueço.",
+        "Na próxima não serei tão simpático.",
+        "Anda. Pensa no que disse."
+      ]
+    }
+  ]
+}

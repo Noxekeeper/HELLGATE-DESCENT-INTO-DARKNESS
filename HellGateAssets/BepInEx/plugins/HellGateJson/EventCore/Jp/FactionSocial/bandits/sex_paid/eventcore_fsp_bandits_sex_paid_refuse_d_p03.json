@@ -1,0 +1,8 @@
+{
+  "speakerLabel": "野盗",
+  "stepId": "fsp_sex_refuse_d_p03",
+  "stepKind": "continue",
+  "continueOutcomeId": "walk_away",
+  "continueNextStepId": "fsp_sex_paid_close",
+  "npcLine": "残念だ。幸運を。"
+}
