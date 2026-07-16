@@ -16,7 +16,9 @@ in plugin `Awake`, before patch registration.
 - `PregnancySourceResolver` identifies the father enemy type;
   `PregnancyConceptionApplier` commits conception into `WitchPregnancyState`.
 - `WombMeterHud` (+ shared `WombMeterHudLayout`) renders the meter and
-  suppresses the vanilla creampie value UI.
+  suppresses the vanilla creampie value UI. `WombMeterHudBootstrapPatch` and
+  `WombMeterHudBadstatusBootstrapPatch` restore it across the relevant UI
+  initialization paths.
 
 ## Progression
 
@@ -67,4 +69,8 @@ rest, vengeance respawn, and H-scene escape while pregnant.
 ## Persistence
 
 `PregnancySlotStore` + `PregnancyPersistenceHooks` save and load per-slot
-pregnancy state alongside the game's save slots.
+pregnancy state alongside the game's save slots:
+
+- `Pregnancy/PlayerPregnancy_Slot{NN}.json` — offspring/lineage state;
+- `Pregnancy/PlayerCurrentPregnancy_Slot{NN}.json` — current gestation;
+- `Pregnancy/ShelterAttack_Slot{NN}.json` — shelter-attack state.

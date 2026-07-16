@@ -113,33 +113,48 @@ Entry: `[BepInPlugin]` + `[BepInProcess("NightofRevenge.exe")]`.
 
 ### 5.1 `Awake()` order
 
-Order matters; later stages depend on earlier ones:
+Order matters; later stages depend on earlier ones. The authoritative
+sequence is `Plugin.Awake()`:
 
-1. `SetUpConfigs()` — binds `NoREroMod_HellGate.cfg`.
-2. Early module configs — `PregnancyConfig.Initialize`,
-   `SpawnTemplateCatalog.Initialize`.
-3. HellTraps preload — trap template registration and death-asset preload
-   (must precede spawn execution).
-4. `SetUpPatches()` — explicit Harmony registration; the authoritative list
-   is in `Plugin.cs`.
-5. EventCore bootstrap; then EventTrap and Reinforcement bootstraps, each
-   behind its own flag.
-6. Frameworks and UX — struggle indicators, dialogue framework, QTE
-   reactions, H-scene camera, start zoom.
-7. MindBroken, Rage, and UI systems (per-flag).
-8. Diagnostics (JSON-gated, off by default).
-9. Economy initialization and, when enabled, gold systems.
-10. Audio and rage core; `SceneManager.sceneLoaded` handlers (cache resets,
-    EventCore session reload).
-11. `HellGateApi.Initialize()` — publishes the external API only after all
+1. `SetUpConfigs()` binds `NoREroMod_HellGate.cfg`.
+2. `PregnancyConfig.Initialize()`.
+3. `NoREroModScaffoldConfigPush.Apply()` synchronizes required companion
+   settings.
+4. `SpawnTemplateCatalog.Initialize()`.
+5. `SetUpPatches()` performs isolated Harmony registration and also
+   initializes patch-owned services (including attack audio and Rage core).
+6. HellTraps register their templates and preload death displays/audio.
+   This is **after** patch registration but before any scene spawn execution.
+7. `LocationTransitionSpawnController` is attached to the plugin object.
+8. EventCore installs; struggle/dialogue/QTE and H-scene camera frameworks
+   initialize.
+9. EventTrap and Reinforcement bootstraps install unconditionally; their
+   enable flags gate runtime behavior inside their drivers.
+10. MindBroken presentation/recovery, splash, Rage presentation, portrait,
+    and scene load/unload handlers initialize in their code order.
+11. Diagnostics initialize (always compiled; JSON-gated and disabled by
+    default).
+12. Economy config initializes; when enabled, gold assets, wallet, and lost
+    pile loader initialize.
+13. The NoREroMod compatibility probe runs.
+14. `HellGateApi.Initialize()` publishes the external API only after all
     subsystem initialization completes.
 
 ### 5.2 Per-frame hub
 
 `Patches/Player/PlayerConUpdateDispatcher` is the single postfix on
-`playercon.Update`. It currently drives the H-scene start zoom check,
-QTE/struggle bridges, faction H-scene reputation and Mercy de-escalation,
-and gold H-scene earnings.
+`playercon.Update`. Every handler is isolated so one failure does not stop
+the remaining handlers. In execution order, it coordinates:
+
+- downed-death, Rage-immunity, timescale, combat-control, black-background,
+  enemy-grab, and renderer recovery guards;
+- Rage reset, combat camera, H-scene start zoom, and QTE 3.0;
+- MindBroken H-scene growth and faction H-scene reputation;
+- pregnancy polling, queued conception, trimester progression, bloodline
+  Rage, and trimester visuals;
+- H-scene/knockdown gold processing;
+- Kakasi/MummyMan handoff visibility, faction de-escalation, and Mercy UI;
+- spawn-point analyzer and portrait processing.
 
 ## 6. Harmony model
 
@@ -186,7 +201,7 @@ Cross-cutting infrastructure:
 - `Patches/Performance/` — vanilla hot-path rewrites onto the caches.
 - `Systems/Compatibility/` — NoREroMod config push.
 - `Systems/Diagnostics/` — opt-in, JSON-gated investigation kits (Tentacle,
-  TrapBody, Kinoko); off by default, excluded from release configuration.
+  TrapBody, Kinoko); compiled in all builds, disabled by JSON by default.
 - `Api/` — immutable read-only snapshots and isolated events for external
   plugins. Contract: [`docs/development/API.md`](docs/development/API.md).
 

@@ -59,7 +59,8 @@ Code: `Systems/UI/`
   `SplashScreenUILabels`, `HellGateTitleMenuBackdrop`.
 - Portrait: `PortraitModSystem` + `PortraitAssetLoader` +
   `PortraitStateResolver` replace the vanilla `UIface` Spine portrait with
-  PNG cycles. State priority: Sex → Rage → Brainwash → Normal.
+  PNG cycles. State priority: Sex → Rage/NakedRage → Brainwash →
+  Normal/NakedNormal.
   Config `[PortraitMod]`; frames from the external `Portrait_mod/` tree.
 
 ## Audio

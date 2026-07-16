@@ -50,7 +50,8 @@ external asset tree.
 
 ## EventTrap and Reinforcement
 
-Both are separate, individually gated bootstraps installed after EventCore:
+Both bootstraps install unconditionally after EventCore. Their independent
+enable flags gate runtime/reload behavior inside the drivers:
 
 - **EventTrap** (`Systems/EventCore/EventTrap/`) — knockout-zone encounters
   defined by `etrap_*` packs; anchors placed via `EVENTTRAP` spawn lines.

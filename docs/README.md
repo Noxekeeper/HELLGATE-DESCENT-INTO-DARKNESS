@@ -3,6 +3,11 @@
 Developer documentation for the HellGate plugin. All documents target mod
 developers and contributors; there is no end-user documentation in this tree.
 
+Only this index plus `docs/modules/` and `docs/development/` are canonical
+public documentation. Other local files/directories under `docs/` are
+gitignored historical research or design notes; do not update or cite them as
+the current implementation.
+
 Start with [`../ARCHITECTURE.md`](../ARCHITECTURE.md) for the plugin's layers,
 startup order, patching model, and subsystem boundaries. The documents below
 describe individual subsystems and development procedures in depth.

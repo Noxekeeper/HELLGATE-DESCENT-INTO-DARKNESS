@@ -52,10 +52,14 @@ written through the game's save/load hooks:
 
 | File | Module |
 |------|--------|
-| `PlayerReputation_Slot0N.json` | faction reputation |
-| `Economic/PlayerGold_Slot0N.json` | gold wallet |
-| `PlayerState/PlayerRageMindBroken_Slot0N.json` | rage + MindBroken |
-| pregnancy slot store JSON | pregnancy |
+| `CombatAi/PlayerReputation_Slot{NN}.json` | faction reputation |
+| `Economic/PlayerGold_Slot{NN}.json` | gold wallet |
+| `PlayerState/PlayerRageMindBroken_Slot{NN}.json` | rage + MindBroken |
+| `Pregnancy/PlayerPregnancy_Slot{NN}.json` | offspring / pregnancy lineage state |
+| `Pregnancy/PlayerCurrentPregnancy_Slot{NN}.json` | current gestation state |
+| `Pregnancy/ShelterAttack_Slot{NN}.json` | shelter-attack state |
+
+`{NN}` is the one-based save slot padded to two digits (`01`..`03`).
 
 Rules:
 

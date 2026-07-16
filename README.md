@@ -89,7 +89,10 @@ Patches/
   HellTraps/                 lethal trap integration
   Performance/               hot-path compatibility and cache patches
   Spawn/                     developer spawn tooling
-  Trap/, UI/, Effects/       game-facing integration patches
+  Trap/, UI/                 game-facing integration patches
+
+Systems/Effects/             H-scene black background and effect hooks
+Patches/Effects/             pregnancy clip trigger
 
 HellGateAssets/
   BepInEx/plugins/HellGateJson/

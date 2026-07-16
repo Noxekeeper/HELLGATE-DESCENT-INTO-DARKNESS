@@ -26,15 +26,19 @@ The economy is gated and tuned by JSON, not by cfg:
 ## Loss mechanics
 
 - Combat loss: chance to scatter gold on taking damage
-  (`CombatGoldLossRuntime`, `PlayerCombatGoldLossPatch`).
+  (`PlayerCombatGoldLossLegacyPatch`,
+  `PlayerCombatGoldLossImprovedPatch`); knockdown loss is processed by
+  `CombatGoldLossRuntime` from `PlayerConUpdateDispatcher`.
 - Death drop: a configured percentage drops on death
   (`PlayerDeathGoldDropPatch`) into a Souls-style **lost pile**
   (`GoldLostPileSceneLoader` restores it in the scene where the player died).
+  `PlayerRespawnGoldArmPatch` arms the post-respawn restoration path.
 
 ## Presentation
 
 - `GoldHud` (anchored via `Economy.json → Hud.*`), bootstrapped by
-  `GoldHudBootstrapPatch` and gated by `HudVisibilityGate`.
+  `GoldHudBootstrapPatch` and `GoldHudBadstatusBootstrapPatch`, and gated by
+  `HudVisibilityGate`.
 - `GoldPopupSystem` — floating gain/loss popups.
 - `GoldAudioPlayer` + `GoldAssetLoader` — coin art and sounds from the
   external asset tree (`Economic/` art).

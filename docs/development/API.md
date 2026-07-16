@@ -42,7 +42,7 @@ Always check `ApiMajorVersion` before consuming a future stable API.
 
 | Method | Snapshot |
 |--------|----------|
-| `GetRageState()` | enabled, percent (0..100+), active tier, Tier-3 readiness |
+| `GetRageState()` | enabled, percent (0..100+), active flag, active tier, Tier-3 readiness |
 | `GetMindBrokenState()` | enabled, fraction (0..1), bad-end countdown, scripted sequence flag |
 | `GetFactionReputation(HellGateFaction)` | faction ID, score (-100..100), relation (`hostile` / `neutral` / `friendly` / `native`) |
 | `GetFactionReputation(int)` | same, for data-defined/custom faction IDs |

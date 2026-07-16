@@ -2,7 +2,7 @@
 
 Enemy-vs-enemy combat, faction identity, and player reputation.
 
-Code: `Systems/CombatAi/` (+ `Factions/`) · Data: `HellGateJson/CombatAi/` · Save: `PlayerReputation_Slot0N.json`
+Code: `Systems/CombatAi/` (+ `Factions/`) · Data: `HellGateJson/CombatAi/` · Save: `CombatAi/PlayerReputation_Slot{NN}.json`
 
 ## Combat AI
 

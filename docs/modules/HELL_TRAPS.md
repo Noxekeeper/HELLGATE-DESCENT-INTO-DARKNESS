@@ -18,8 +18,8 @@ tuning, death display:
   `HellGateLethalCocoonTrapTracker`.
 
 Trap templates are registered into the spawn template catalog during plugin
-`Awake` (before patch registration) and placed through `TRAP` /
-template lines in spawn packs (see `SPAWN.md`).
+`Awake`, after `SetUpPatches()` and before scene spawn execution. They are
+placed through `TRAP` / template lines in spawn packs (see `SPAWN.md`).
 
 ## Shared death infrastructure
 
@@ -46,4 +46,5 @@ After a lethal trap death, the vengeance respawn plays a shock sequence:
 To add a trap family, mirror the family structure (paths → loader → registry
 → runtime → patches → death context/tuning/display) and reuse the shared
 `LethalTrap*` death kit rather than duplicating it. Register templates in
-`Awake` before `SetUpPatches()` so spawn packs can reference them.
+`Awake` after the spawn template catalog initializes and before any scene
+spawn pack executes. Follow the current order in `Plugin.Awake()`.

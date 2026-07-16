@@ -41,5 +41,6 @@ cleanup path (`TimeScaleResetOnEscapePatch`).
 ## Persistence
 
 `RageMindBrokenSlotStore` stores rage and MindBroken state per save slot;
-`RageMindBrokenPersistenceHooks` binds it to the game's save/load. MindBroken
-shares this store deliberately — both values travel together with the slot.
+`RageMindBrokenSaveHookPatch` and `RageMindBrokenLoadHookPatch` bind it to the
+game's save/load. MindBroken shares this store deliberately — both values
+travel together with the slot.

@@ -54,7 +54,7 @@ The full procedure is in `../development/ADDING_ENEMIES.md`.
 
 ## Historical note
 
-`BigoniBrotherERO` (a custom ERO component approach) was removed in 1.2.4.
-The live implementation patches the vanilla `StartBigoniERO` and identifies
-BigoniBrother by object naming and `BigoniBrotherIdentity`. Do not
-reintroduce the component path.
+`BigoniBrotherERO` (a custom ERO component approach) was removed. The live
+implementation patches the vanilla `StartBigoniERO` and identifies
+BigoniBrother by object naming and `BigoniBrotherIdentity`. Do not reintroduce
+the component path.
