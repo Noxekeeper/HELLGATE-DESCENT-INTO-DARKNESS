@@ -28,7 +28,7 @@ tree.
 | `CombatAi/*.json` | enemy reaction tuning | Combat AI |
 | `CombatAi/Factions.json` | faction definitions (language-agnostic, hot-reloaded ~2 s) | Factions |
 | `HellGateSpawnPoint/HellGateSpawn_*.txt` | per-zone spawn packs + authoring cheatsheets | Spawn |
-| `EventCore/**` | manifest, definitions, 10-language string packs, `event_trap_registry.json`, `reinforcement_registry.json` | EventCore |
+| `EventCore/**` | manifest, definitions, 10-language string packs, `event_trap_registry.json`, `reinforcement_registry.json` — schemas in [EVENTCORE_DATA.md](EVENTCORE_DATA.md) | EventCore |
 | `Economic/Economy.json`, `Economic/GoldDropTable.json` | economy gate/tuning, gold drop tables | Economy |
 | `DropSystem/*.json` | weighted item drop tables | Rewards |
 | `Diagnostics/*.json` | opt-in investigation toggles (`Enable: false` by default) | Diagnostics |

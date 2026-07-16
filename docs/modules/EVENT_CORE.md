@@ -40,6 +40,9 @@ UI        modal canvas, portrait pair, frame art, input
   (`Ru En Cn Jp Kr De Pt Br Es Fr`);
 - `event_trap_registry.json` and `reinforcement_registry.json`.
 
+Full file-by-file schemas:
+[`docs/development/EVENTCORE_DATA.md`](../development/EVENTCORE_DATA.md).
+
 String pools **fail closed**: a missing key is an error, not a silent
 fallback to another language. This is stricter than most other HellGate
 loaders (see `DATA_FORMATS.md`).
