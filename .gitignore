@@ -16,8 +16,16 @@ build.log
 
 # Private / local-only (not part of public source repo)
 dev/
-docs/
 .cursor/
+
+# docs/: root content is private maintainer notes; only the public
+# developer documentation subtrees below are tracked.
+docs/*
+!docs/README.md
+!docs/modules/
+!docs/modules/**
+!docs/development/
+!docs/development/**
 
 # Heavy art/audio/fonts — external hosting (MEGA etc.), not git
 HellGateAssets/sources/
