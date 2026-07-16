@@ -65,7 +65,8 @@ recovery path, that is the bug.
 
 ## Guarded vanilla flows
 
-The guards in `Patches/Player/` encode fixes for real soft locks. After
+The guards in `Patches/Player/` encode fixes for real soft locks
+(guard-by-guard map: [PLAYER_GUARDS.md](PLAYER_GUARDS.md)). After
 touching them (or player state logic broadly), verify each affected flow —
 and repeat the pregnancy-related ones while pregnant:
 

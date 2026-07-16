@@ -42,7 +42,7 @@ disabled. Never run both implementations of QTE/struggle at once.
 - Vanilla flow guards in `Patches/Player/` (altar, cutscene, story-event
   input, knockdown recovery, downed-death) encode fixes for real soft locks —
   changing them requires regression-testing those flows, including while
-  pregnant.
+  pregnant. Guard-by-guard map: [PLAYER_GUARDS.md](PLAYER_GUARDS.md).
 
 ## Incident-derived rules (do not reintroduce)
 
