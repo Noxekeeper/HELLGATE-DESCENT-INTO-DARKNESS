@@ -297,13 +297,18 @@ Current entry points:
 
 ## Compatibility status
 
-HellGate currently targets the game and companion assemblies available through
-the configured local development installation. The exact supported game build
-and NoREroMod commit/version are not yet recorded in this repository.
+Current development targets:
 
-Before accepting compatibility claims, record both identifiers and validate the
-startup probe plus affected runtime paths. Compatibility with unrelated
-NoREroMod releases or forks must not be assumed.
+| Component | Version |
+|-----------|---------|
+| *Night of Revenge* | 1.07 (Unity 5.6.7) |
+| BepInEx | 5.4.18 |
+| NoREroMod (HellGate fork) | 0.11.3 |
+
+Compatibility with other game builds, unrelated NoREroMod releases, or other
+forks must not be assumed. The startup compatibility probe validates the
+NoREroMod integration surface; treat probe warnings as integration failures.
+Update this table whenever a target component changes.
 
 ## License
 
