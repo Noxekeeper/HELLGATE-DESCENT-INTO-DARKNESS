@@ -298,6 +298,12 @@ Current entry points:
 - [`docs/development/API.md`](docs/development/API.md) — public API for
   integration from other BepInEx plugins.
 
+Process documents: [`CONTRIBUTING.md`](CONTRIBUTING.md) (rules and
+validation expectations for changes), [`CHANGELOG.md`](CHANGELOG.md)
+(per-release history), and
+[`docs/development/RELEASE_PROCESS.md`](docs/development/RELEASE_PROCESS.md)
+(shipping checklist).
+
 ## Compatibility status
 
 Current development targets:
