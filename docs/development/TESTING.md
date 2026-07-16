@@ -141,6 +141,6 @@ Record this when filing or fixing a regression:
 - result (scene invisible, player invisible, no movement, stuck timescale);
 - relevant `BepInEx/LogOutput.log` excerpt.
 
-If a bug persists, enable the diagnostic kits (JSON-gated, see the
-Diagnostics note in [../../ARCHITECTURE.md](../../ARCHITECTURE.md)) for the
-affected area, capture logs, and disable them after verification.
+If a bug persists, enable the diagnostic kits for the affected area, capture
+logs, and disable them after verification — see
+[DIAGNOSTICS.md](DIAGNOSTICS.md).

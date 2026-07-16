@@ -202,6 +202,7 @@ Cross-cutting infrastructure:
 - `Systems/Compatibility/` — NoREroMod config push.
 - `Systems/Diagnostics/` — opt-in, JSON-gated investigation kits (Tentacle,
   TrapBody, Kinoko); compiled in all builds, disabled by JSON by default.
+  See [`docs/development/DIAGNOSTICS.md`](docs/development/DIAGNOSTICS.md).
 - `Api/` — immutable read-only snapshots and isolated events for external
   plugins. Contract: [`docs/development/API.md`](docs/development/API.md).
 
