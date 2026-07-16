@@ -34,6 +34,7 @@ describe individual subsystems and development procedures in depth.
 | Document | Topic |
 |----------|-------|
 | [BUILDING.md](development/BUILDING.md) | Environment, build, deploy, runtime verification |
+| [CONFIGURATION.md](development/CONFIGURATION.md) | Generated reference of every cfg section and setting |
 | [ADDING_FEATURES.md](development/ADDING_FEATURES.md) | Feature module conventions and checklist |
 | [ADDING_ENEMIES.md](development/ADDING_ENEMIES.md) | Adding spawnable and custom enemies |
 | [DATA_FORMATS.md](development/DATA_FORMATS.md) | JSON/text data roots, localization, per-slot saves |
