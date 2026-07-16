@@ -734,6 +734,9 @@ public class Plugin : BaseUnityPlugin {
 
         // Startup compatibility probe for reflection-heavy integration points.
         RunNoREroModCompatibilityProbe();
+
+        // Publish the stable integration surface only after all subsystems initialized.
+        NoREroMod.HellGate.Api.HellGateApi.Initialize(PluginInfo.PLUGIN_VERSION, Log);
     }
 
     private static void RunNoREroModCompatibilityProbe()
@@ -3687,6 +3690,7 @@ public class Plugin : BaseUnityPlugin {
     }
 
     private void OnDestroy() {
+        NoREroMod.HellGate.Api.HellGateApi.Shutdown();
         SceneManager.sceneLoaded -= OnSceneLoaded_ResetCaches;
         SceneManager.sceneUnloaded -= OnSceneUnloaded_ResetHideoutSpawn;
         // Cleanup visual indicators

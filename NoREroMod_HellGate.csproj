@@ -84,6 +84,8 @@
     <Compile Include="Core\Plugin.cs" />
     <Compile Include="Core\HellGateTypeResolver.cs" />
     <Compile Include="Core\PluginInfo.cs" />
+    <Compile Include="Api\HellGateApiModels.cs" />
+    <Compile Include="Api\HellGateApi.cs" />
     <Compile Include="Systems\Compatibility\NoREroModScaffoldConfigPush.cs" />
     
     <!-- Patches/Base -->

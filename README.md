@@ -76,6 +76,10 @@ Core/
   PluginInfo.cs              plugin identity and version
   HellGateTypeResolver.cs    safe runtime type/member resolution
 
+Api/
+  HellGateApi.cs             public read-only queries and events
+  HellGateApiModels.cs       immutable snapshots and stable enums
+
 Systems/
   <Feature>/                 runtime services and feature-owned patches
 
@@ -218,6 +222,18 @@ from developer setup instructions.
 
 Never add machine-specific absolute paths to asset loaders or committed data.
 
+## Public API
+
+Other BepInEx plugins can integrate through
+`NoREroMod.HellGate.Api.HellGateApi`. API `0.1.0` currently provides
+read-only immutable snapshots for Rage, MindBroken, faction reputation,
+Gold, and Pregnancy, plus lifecycle/state-change events.
+
+The API is versioned independently from the plugin. API 0.x is experimental;
+consumers must check `ApiVersion` / `ApiMajorVersion` and must not reflect
+into internal systems. Contract and examples:
+[`docs/development/API.md`](docs/development/API.md).
+
 ## Engineering rules
 
 - Keep game-facing Harmony hooks thin; place feature behavior in `Systems/`.
@@ -276,6 +292,8 @@ Current entry points:
 - [`docs/modules/`](docs/modules/) — per-subsystem technical references;
 - [`docs/development/`](docs/development/) — build, extension, data-format,
   and compatibility guides.
+- [`docs/development/API.md`](docs/development/API.md) — public API for
+  integration from other BepInEx plugins.
 
 ## Compatibility status
 
@@ -289,10 +307,15 @@ NoREroMod releases or forks must not be assumed.
 
 ## License
 
-HellGate is open source and will always be free. The source code is licensed
-under the **GNU General Public License v3.0** (see [`LICENSE`](LICENSE)).
-Copyleft is deliberate: any derivative of HellGate must remain open source and
-free, and no fork may be relicensed into a paid or closed product.
+HellGate is open source, and its official releases will always be available
+free of charge. The source code is licensed under the **GNU General Public
+License v3.0** (see [`LICENSE`](LICENSE)). Copyleft is deliberate: a
+distributed derivative must remain under the GPL, provide its corresponding
+source, and preserve recipients' freedom to modify and redistribute it.
+
+GPL-3.0 permits charging for distribution; it does not permit converting
+HellGate into a proprietary closed-source product. Recipients can always
+redistribute a GPL-covered fork, including free of charge.
 
 The license covers HellGate source code and HellGate-authored data files only.
 It does not cover:

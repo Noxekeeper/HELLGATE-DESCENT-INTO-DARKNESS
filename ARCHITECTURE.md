@@ -66,7 +66,7 @@ Referenced assemblies: `Assembly-CSharp` (+ firstpass), `UnityEngine`,
 │   Core/     config · init     │  │   base scaffold, enemy    │
 │   Patches/  game hooks        │◄─┤   stat scaling; HellGate  │
 │   Systems/  runtime services  │  │   disables overlapping    │
-│                               │  │   QTE/struggle paths      │
+│   Api/      public snapshots  │  │   QTE/struggle paths      │
 └───────────────┬───────────────┘  └───────────────────────────┘
                 │ reads
 ┌───────────────▼──────────────────────────────────────────────┐
@@ -93,6 +93,7 @@ Referenced assemblies: `Assembly-CSharp` (+ firstpass), `UnityEngine`,
 | `Core/Plugin.cs` | entry point: config binding, `Awake`, patch registration, subsystem init |
 | `Core/PluginInfo.cs` | GUID / name / version |
 | `Core/HellGateTypeResolver.cs` | safe type/member resolution helpers |
+| `Api/` | public read-only integration surface for other BepInEx plugins |
 | `Systems/` | feature modules |
 | `Patches/` | game-facing Harmony types |
 | `HellGateAssets/BepInEx/plugins/HellGateJson/` | shipped data mirror |
@@ -130,6 +131,8 @@ Order matters; later stages depend on earlier ones:
 9. Economy initialization and, when enabled, gold systems.
 10. Audio and rage core; `SceneManager.sceneLoaded` handlers (cache resets,
     EventCore session reload).
+11. `HellGateApi.Initialize()` — publishes the external API only after all
+    subsystem initialization completes.
 
 ### 5.2 Per-frame hub
 
@@ -184,6 +187,8 @@ Cross-cutting infrastructure:
 - `Systems/Compatibility/` — NoREroMod config push.
 - `Systems/Diagnostics/` — opt-in, JSON-gated investigation kits (Tentacle,
   TrapBody, Kinoko); off by default, excluded from release configuration.
+- `Api/` — immutable read-only snapshots and isolated events for external
+  plugins. Contract: [`docs/development/API.md`](docs/development/API.md).
 
 ## 8. Configuration and data
 

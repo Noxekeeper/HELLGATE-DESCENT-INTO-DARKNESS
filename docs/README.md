@@ -33,6 +33,7 @@ describe individual subsystems and development procedures in depth.
 | [ADDING_ENEMIES.md](development/ADDING_ENEMIES.md) | Adding spawnable and custom enemies |
 | [DATA_FORMATS.md](development/DATA_FORMATS.md) | JSON/text data roots, localization, per-slot saves |
 | [COMPATIBILITY.md](development/COMPATIBILITY.md) | NoREroMod boundary and known hazards |
+| [API.md](development/API.md) | Public API contract for other BepInEx plugins |
 
 ## Conventions
 
