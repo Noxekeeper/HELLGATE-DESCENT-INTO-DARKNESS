@@ -1,0 +1,6 @@
+# ConfigKey|Scene|Component|ObjectName
+BossTouzoku|BOSS_Touzoku|BossTouzoku|BossTouzoku
+BossTouzokuCustom|BOSS_Touzoku|BossTouzoku|BossTouzoku
+Slaughterer|UndergroundChurch|Slaughterer|Slaughterer
+Butcher|UndergroundChurch|Slaughterer|Slaughterer
+Sisterknight|InundergroundChurch|Sisterknight|Sisterknight
