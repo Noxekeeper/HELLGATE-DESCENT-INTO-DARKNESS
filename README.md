@@ -218,10 +218,25 @@ expect the external asset tree under:
 This tree includes PNG, WAV, Spine, portrait, UI, trap, custom enemy, and effect
 assets. It is distributed separately from the source repository.
 
-The canonical download location and asset-pack version are not currently
-declared in this repository. When an external package is published, document
-its immutable version/checksum and compatibility range before referencing it
-from developer setup instructions.
+Current asset pack:
+
+| Field | Value |
+|-------|-------|
+| Pack | `HELLGATE_sources.7z` (contains `sources/HellGate_sources/`) |
+| Compatible with | HellGate 1.2.4 |
+| Download | [MEGA](https://mega.nz/file/X9Z1SYJC#qeu62JkDmU10ewKVnZeBT-u_zHp-JYeGELcVSfwfsSw) |
+| Size | 244,344,030 bytes (233 MB) |
+| SHA-256 | `B7BB3A2482C51FF7D85B643E723F2AA1A7D03B0994EFD251AF6A7CB4A4C8350A` |
+
+Verify the checksum after download
+(`Get-FileHash HELLGATE_sources.7z -Algorithm SHA256` in PowerShell) and
+extract the archive so that `HellGate_sources/` ends up under
+`<NorGameRoot>/sources/`. The `BepInEx/` runtime tree (plugin DLLs and
+`HellGateJson/` data) is not part of this pack — it is tracked in this
+repository under `HellGateAssets/BepInEx/`.
+
+When publishing a new pack version, update this table (link, size, SHA-256,
+compatibility) in the same commit.
 
 Never add machine-specific absolute paths to asset loaders or committed data.
 
