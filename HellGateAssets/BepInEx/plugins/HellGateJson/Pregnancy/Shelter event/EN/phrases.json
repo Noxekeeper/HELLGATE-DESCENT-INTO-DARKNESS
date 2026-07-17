@@ -1,0 +1,40 @@
+{
+  "shelterAttackThoughts": [
+    "…I feel something is wrong, I need to return to the shelter…",
+    "…The shelter seems to be in danger, I need to go back…",
+    "…Something is wrong, I must return to the shelter immediately…",
+    "…Someone has breached the magical barrier, I must return to the shelter urgently…",
+    "…The magical trap was destroyed, I need to return to the shelter…",
+    "…A sense of alarm… Something is happening at the shelter, I need to check…",
+    "…Strangers in the hideout! I must hurry back…",
+    "…The shelter's protective barrier is fading… I must make it back…",
+    "…The link to the shelter has been severed… Something happened there, I must return!",
+    "…Everything inside me tightened… Something is suppressing my magic at the shelter, I must hurry back…",
+    "…This chill on my skin… Our hideout is under attack, I must return!…"
+  ],
+  "victoryThoughts": [
+    "…It's over… They withdrew. It's safe here again…"
+  ],
+  "defeatThoughts": [
+    "…It's over. The barriers fell—they will take the shelter…"
+  ],
+  "timeoutThoughts": [
+    "…I'm too late… The shelter couldn't hold without me…",
+    "…Too late… While I was away, they reached the children…"
+  ],
+  "attackCountdownFormat": "Shelter raid in {0} seconds",
+  "timeoutLabel": "TIME OUT",
+  "timeoutSummary": "You failed to return to the shelter in time. The Witch faction suffered losses: ",
+  "waveBreakFormat": "Next wave in {0} seconds",
+  "wave1Text": "WAVE 1",
+  "wave2Text": "WAVE 2",
+  "wave3Text": "WAVE 3",
+  "finalWaveText": "FINAL",
+  "victorySummary": "Witch faction experience grows; all members have advanced one level.",
+  "defeatSummaryPrefix": "Raid ended in defeat. The Witch faction suffered losses: ",
+  "defeatSummaryOne": "{0} member kidnapped from the shelter.",
+  "defeatSummaryMany": "{0} members kidnapped from the shelter.",
+  "threatLow": "Medium threat",
+  "threatMid": "High threat",
+  "threatHigh": "Very high threat"
+}

@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "fallbackArchetype": "Mafiamuscle",
+  "defaultWeight": 1,
+  "factions": {
+    "bandits": {
+      "weights": {
+        "TouzokuNormal": 1,
+        "TouzokuAxe": 1
+      }
+    },
+    "mafia": {
+      "weights": {
+        "MafiaBossCustom": 1,
+        "Mafia": 1
+      }
+    },
+    "church": {
+      "weights": {
+        "Sisterknight": 1,
+        "PrisonOfficer": 1
+      }
+    },
+    "demons": {
+      "weights": {
+        "Mutude": 1,
+        "Goblin": 1
+      }
+    },
+    "undead": {
+      "weights": {
+        "Undead": 1
+      }
+    },
+    "monsters": {
+      "weights": {
+        "BlackOoze": 1
+      }
+    }
+  }
+}

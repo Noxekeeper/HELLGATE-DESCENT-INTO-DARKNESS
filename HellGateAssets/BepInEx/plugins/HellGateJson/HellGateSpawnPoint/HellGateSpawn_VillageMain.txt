@@ -6,12 +6,12 @@
 6.59,-47.77,gold=1-2,1
 7.41,-45.00,gold=1-2,1
 
-random,0.8,8.08,-10.60,Kakasi,1
-random,0.8,9.71,-15.42,Kakasi,1
+random,0.5,8.08,-10.60,Kakasi,1
+random,0.5,9.71,-15.42,Kakasi,1
 10.76,-11.66,gold=1-3,1
 11.26,-16.73,gold=1-3,1
 14.09,-15.44,gold=1-3,1
-random,0.8,23.97,-5.00,Kakasi,1
+random,0.5,23.97,-5.00,Kakasi,1
 31.82,-40.40,gold=1-2,1
 37.93,-20.70,gold=1-3,1
 45.69,-19.46,taruro_exp,1
@@ -58,23 +58,22 @@ random,0.8,177.00,-31.00,goblin,1
 178.00,-23.00,trap,1,rot260
 
 # Enemies goblins
-random,0.8,55.06,-19.48,goblin,1,
-random,0.8,56.08,-11.61,goblin,1
-random,0.8,65.65,-14.16,goblin,1
-random,0.8,71.99,-18.88,goblin,1
+random,0.5,55.06,-19.48,goblin,1,
+random,0.5,56.08,-11.61,goblin,1
+random,0.5,65.65,-14.16,goblin,1
+random,0.5,71.99,-18.88,goblin,1
 
 126.70,-29.02,Rosewarm,1,left
 131.70,-29.02,MobRosewarm,1
-random,0.8,134.26,-29.02,goblin,1
-random,0.8,136.37,-29.02,goblin,1
-170.05,-45.02,Wolf,1
-178.97,-46.29,Wolf,1
+random,0.5,134.26,-29.02,goblin,1
+random,0.5,136.37,-29.02,goblin,1
+
 
 # Enemies goblins on tree
-random,0.8,94.28,-21.11,goblin,1
+random,0.5,94.28,-21.11,goblin,1
 98.07,-32.25,
-random,0.8,100.23,-23.72,goblin,1
-random,0.8,100.89,-13.43,goblin,1
+random,0.5,100.23,-23.72,goblin,1
+random,0.5,100.89,-13.43,goblin,1
 # event core trap goblin anchor
 Eventtrap,etrap_kakasi,111.12,-19.38
 157.49,-44.01,BigoniBrother,1
@@ -210,10 +209,10 @@ random,0.8,228.01,-3.74,goblin,1
 228.35,-12.51,blackoozetrap,1
 228.35,-12.51,gold=1-3,1
 228.35,-12.51,Ivy_trap,1
-231.01,-3.74,MobMutude,1
+random,0.5,231.01,-3.74,MobMutude,1
 
 
-random,0.8,233.01,-3.74,kakasi,1
+random,0.5,233.01,-3.74,kakasi,1
 235.19,-29.39,gold=1-2,1
 235.61,-29.59,gold=1-2,1
 

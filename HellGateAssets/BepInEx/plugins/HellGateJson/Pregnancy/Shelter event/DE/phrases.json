@@ -1,0 +1,40 @@
+{
+  "shelterAttackThoughts": [
+    "…Irgendetwas stimmt nicht. Ich muss zurück zum Unterschlupf…",
+    "…Der Unterschlupf scheint in Gefahr. Ich muss zurück…",
+    "…Etwas ist falsch. Ich muss sofort zum Unterschlupf zurück…",
+    "…Jemand hat die magische Barriere durchbrochen. Ich muss dringend zurück…",
+    "…Die magische Falle wurde zerstört. Ich muss zum Unterschlupf zurück…",
+    "…Diese Unruhe… Am Unterschlupf passiert etwas. Ich muss nachsehen…",
+    "…Fremde im Versteck! Ich muss mich beeilen…",
+    "…Die Schutzbarriere des Unterschlupfs schwindet… Ich muss es zurückschaffen…",
+    "…Die Verbindung zum Unterschlupf ist abgerissen… Dort ist etwas geschehen, ich muss zurück!",
+    "…Alles in mir zieht sich zusammen… Etwas unterdrückt meine Magie am Unterschlupf, ich muss eilen…",
+    "…Dieser Schauer auf der Haut… Unser Versteck wird angegriffen, ich muss zurück!…"
+  ],
+  "victoryThoughts": [
+    "…Es ist vorbei… Sie haben sich zurückgezogen. Hier ist es wieder sicher…"
+  ],
+  "defeatThoughts": [
+    "…Es ist vorbei. Die Barrieren sind gefallen — sie werden den Unterschlupf nehmen…"
+  ],
+  "timeoutThoughts": [
+    "…Zu spät… Ohne mich hat der Unterschlupf nicht standgehalten…",
+    "…Zu spät… Während ich fort war, sind sie an die Kinder herangekommen…"
+  ],
+  "attackCountdownFormat": "Überfall auf den Unterschlupf in {0} Sekunden",
+  "timeoutLabel": "ZEIT ABGELAUFEN",
+  "timeoutSummary": "Du bist nicht rechtzeitig zum Unterschlupf zurückgekehrt. Die Hexenfraktion erleidet Verluste: ",
+  "waveBreakFormat": "Nächste Welle in {0} Sekunden",
+  "wave1Text": "WELLE 1",
+  "wave2Text": "WELLE 2",
+  "wave3Text": "WELLE 3",
+  "finalWaveText": "FINALE",
+  "victorySummary": "Die Erfahrung der Hexenfraktion wächst; alle Mitglieder steigen um eine Stufe auf.",
+  "defeatSummaryPrefix": "Der Überfall endete in einer Niederlage. Die Hexenfraktion erleidet Verluste: ",
+  "defeatSummaryOne": "{0} Mitglied aus dem Unterschlupf entführt.",
+  "defeatSummaryMany": "{0} Mitglieder aus dem Unterschlupf entführt.",
+  "threatLow": "Mittlere Bedrohung",
+  "threatMid": "Hohe Bedrohung",
+  "threatHigh": "Sehr hohe Bedrohung"
+}

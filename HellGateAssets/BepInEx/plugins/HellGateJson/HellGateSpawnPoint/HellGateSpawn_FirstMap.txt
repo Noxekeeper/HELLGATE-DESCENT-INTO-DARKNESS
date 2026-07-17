@@ -42,7 +42,8 @@ EVENTTRAP,etrap_touzoku_touzokuaxe,-85.92,-112.05
 REINFORCEMENT,boss_reinf_touzoku,1.57,-123.50
 
 # enemies
-RANDOM,0.5,-118.73,-119.60,TouzokuAxe|faction=bandits,1
+
+-125.73,-119.60,SlaveBigAxe|faction=church,1
 RANDOM,0.5,-116.92,-135.44,TouzokuNormal|faction=bandits,1
 RANDOM,0.5,-107.10,-137.00,TouzokuAxe|faction=bandits,1
 RANDOM,0.5,-95.16,-128.28,TouzokuAxe|faction=bandits,1

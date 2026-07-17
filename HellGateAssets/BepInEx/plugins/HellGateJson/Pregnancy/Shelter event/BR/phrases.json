@@ -1,0 +1,40 @@
+{
+  "shelterAttackThoughts": [
+    "…Sinto que algo está errado… Preciso voltar pro abrigo…",
+    "…O abrigo parece estar em perigo… Tenho que voltar…",
+    "…Algo não tá certo… Preciso voltar pro abrigo agora…",
+    "…Alguém rompeu a barreira mágica… Preciso voltar urgente…",
+    "…A armadilha mágica foi destruída… Tenho que voltar pro abrigo…",
+    "…Essa inquietação… Algo tá acontecendo no abrigo, preciso checar…",
+    "…Estranhos no esconderijo! Preciso me apressar…",
+    "…A barreira protetora do abrigo tá enfraquecendo… Tenho que chegar a tempo…",
+    "…O vínculo com o abrigo se cortou… Algo aconteceu lá, preciso voltar!",
+    "…Tudo apertou dentro de mim… Algo tá sufocando minha magia no abrigo, preciso correr…",
+    "…Esse frio na pele… Nosso esconderijo tá sob ataque, preciso voltar!…"
+  ],
+  "victoryThoughts": [
+    "…Acabou… Eles recuaram. Aqui ficou seguro de novo…"
+  ],
+  "defeatThoughts": [
+    "…Acabou. As barreiras caíram — eles vão tomar o abrigo…"
+  ],
+  "timeoutThoughts": [
+    "…Cheguei tarde… Sem mim, o abrigo não aguentou…",
+    "…Tarde demais… Enquanto eu estava longe, eles chegaram nas crianças…"
+  ],
+  "attackCountdownFormat": "Ataque ao abrigo em {0} segundos",
+  "timeoutLabel": "TEMPO ESGOTADO",
+  "timeoutSummary": "Você não voltou ao abrigo a tempo. A facção da Bruxa sofreu perdas: ",
+  "waveBreakFormat": "Próxima onda em {0} segundos",
+  "wave1Text": "ONDA 1",
+  "wave2Text": "ONDA 2",
+  "wave3Text": "ONDA 3",
+  "finalWaveText": "FINAL",
+  "victorySummary": "A experiência da facção da Bruxa aumenta; todos os membros sobem um nível.",
+  "defeatSummaryPrefix": "O ataque terminou em derrota. A facção da Bruxa sofreu perdas: ",
+  "defeatSummaryOne": "{0} membro sequestrado do abrigo.",
+  "defeatSummaryMany": "{0} membros sequestrados do abrigo.",
+  "threatLow": "Ameaça média",
+  "threatMid": "Ameaça alta",
+  "threatHigh": "Ameaça muito alta"
+}

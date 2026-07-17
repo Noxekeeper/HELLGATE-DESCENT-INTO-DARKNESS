@@ -2,6 +2,3 @@
 # Format: X,Y,EnemyType,Count | TRAP,... (шипы) | EVENTTRAP,event_folder,x,y (только якорь EventTrap — без шипов)
 #
 # Event anchors (short format — see EVENT_TRAP_SPAWN_CHEATSHEET.txt)
-EVENTTRAP,etrap_undead,1195.55,-285.69
-EVENTTRAP,etrap_undead,1222.69,-288.06
-EVENTTRAP,etrap_undead,1246.08,-292.58

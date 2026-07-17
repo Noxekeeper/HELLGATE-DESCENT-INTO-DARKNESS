@@ -1,3 +1,0 @@
-# ConfigKey|Scene|Component|ObjectName
-BossTouzoku|BOSS_Touzoku|BossTouzoku|BossTouzoku
-BossTouzokuCustom|BOSS_Touzoku|BossTouzoku|BossTouzoku

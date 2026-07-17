@@ -1,0 +1,40 @@
+{
+  "shelterAttackThoughts": [
+    "…Quelque chose ne va pas… Je dois retourner au refuge…",
+    "…Le refuge semble en danger… Je dois y retourner…",
+    "…Il y a un problème… Je dois rentrer immédiatement au refuge…",
+    "…Quelqu'un a brisé la barrière magique… Je dois rentrer d'urgence…",
+    "…Le piège magique a été détruit… Je dois retourner au refuge…",
+    "…Cette inquiétude… Quelque chose se passe au refuge, je dois vérifier…",
+    "…Des inconnus dans la cachette ! Je dois me dépêcher…",
+    "…La barrière protectrice du refuge s'affaiblit… Je dois y arriver à temps…",
+    "…Le lien avec le refuge s'est rompu… Quelque chose s'y est passé, je dois rentrer !",
+    "…Tout se serre en moi… Quelque chose étouffe ma magie au refuge, je dois me hâter…",
+    "…Ce frisson sur ma peau… Notre cachette est attaquée, je dois rentrer !…"
+  ],
+  "victoryThoughts": [
+    "…C'est fini… Ils se sont retirés. Ici, c'est de nouveau sûr…"
+  ],
+  "defeatThoughts": [
+    "…C'est fini. Les barrières sont tombées — ils vont prendre le refuge…"
+  ],
+  "timeoutThoughts": [
+    "…Je suis arrivée trop tard… Sans moi, le refuge n'a pas tenu…",
+    "…Trop tard… Pendant mon absence, ils ont atteint les enfants…"
+  ],
+  "attackCountdownFormat": "Raid sur le refuge dans {0} secondes",
+  "timeoutLabel": "TEMPS ÉCOULÉ",
+  "timeoutSummary": "Vous n'êtes pas rentrée à temps au refuge. La faction de la Sorcière subit des pertes : ",
+  "waveBreakFormat": "Prochaine vague dans {0} secondes",
+  "wave1Text": "VAGUE 1",
+  "wave2Text": "VAGUE 2",
+  "wave3Text": "VAGUE 3",
+  "finalWaveText": "FINALE",
+  "victorySummary": "L'expérience de la faction de la Sorcière augmente ; tous les membres gagnent un niveau.",
+  "defeatSummaryPrefix": "Le raid s'est terminé par une défaite. La faction de la Sorcière subit des pertes : ",
+  "defeatSummaryOne": "{0} membre enlevé du refuge.",
+  "defeatSummaryMany": "{0} membres enlevés du refuge.",
+  "threatLow": "Menace moyenne",
+  "threatMid": "Menace élevée",
+  "threatHigh": "Menace très élevée"
+}

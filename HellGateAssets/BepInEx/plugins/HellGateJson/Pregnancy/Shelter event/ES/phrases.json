@@ -1,0 +1,40 @@
+{
+  "shelterAttackThoughts": [
+    "…Siento que algo va mal… Debo volver al refugio…",
+    "…El refugio parece estar en peligro… Tengo que regresar…",
+    "…Algo no está bien… Debo volver al refugio de inmediato…",
+    "…Alguien ha roto la barrera mágica… Debo volver con urgencia…",
+    "…La trampa mágica fue destruida… Debo regresar al refugio…",
+    "…Esta inquietud… Algo ocurre en el refugio, debo comprobarlo…",
+    "…¡Extraños en el escondite! Debo apresurarme…",
+    "…La barrera protectora del refugio se desvanece… Debo llegar a tiempo…",
+    "…El vínculo con el refugio se ha cortado… Allí pasó algo, ¡debo volver!",
+    "…Todo se me oprime por dentro… Algo sofoca mi magia en el refugio, debo darme prisa…",
+    "…Este escalofrío en la piel… Nuestro escondite está bajo ataque, ¡debo volver!…"
+  ],
+  "victoryThoughts": [
+    "…Se acabó… Se retiraron. Aquí vuelve a ser seguro…"
+  ],
+  "defeatThoughts": [
+    "…Se acabó. Las barreras cayeron: se apoderarán del refugio…"
+  ],
+  "timeoutThoughts": [
+    "…Llegué tarde… Sin mí, el refugio no aguantó…",
+    "…Demasiado tarde… Mientras estuve lejos, llegaron hasta los niños…"
+  ],
+  "attackCountdownFormat": "Asalto al refugio en {0} segundos",
+  "timeoutLabel": "TIEMPO AGOTADO",
+  "timeoutSummary": "No lograste volver al refugio a tiempo. La facción de la Bruja sufre pérdidas: ",
+  "waveBreakFormat": "Siguiente oleada en {0} segundos",
+  "wave1Text": "OLEADA 1",
+  "wave2Text": "OLEADA 2",
+  "wave3Text": "OLEADA 3",
+  "finalWaveText": "FINAL",
+  "victorySummary": "La experiencia de la facción de la Bruja aumenta; todos los miembros suben un nivel.",
+  "defeatSummaryPrefix": "La incursión terminó en derrota. La facción de la Bruja sufre pérdidas: ",
+  "defeatSummaryOne": "{0} miembro secuestrado del refugio.",
+  "defeatSummaryMany": "{0} miembros secuestrados del refugio.",
+  "threatLow": "Amenaza media",
+  "threatMid": "Amenaza alta",
+  "threatHigh": "Amenaza muy alta"
+}

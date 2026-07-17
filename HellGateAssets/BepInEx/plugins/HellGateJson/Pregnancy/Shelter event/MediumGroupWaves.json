@@ -1,0 +1,268 @@
+{
+  "version": 1,
+  "bandits": {
+    "waves": [
+      {
+        "entries": [
+          { "enemy": "TouzokuAxe", "count": 2 },
+          { "enemy": "TouzokuNormal", "count": 4 }
+        ]
+      },
+      {
+        "entries": [
+          { "enemy": "TouzokuAxe", "count": 2 },
+          { "enemy": "TouzokuNormal", "count": 4 },
+          { "enemy": "Wolf", "count": 1 },
+          { "enemy": "Vagrant", "count": 2 }
+        ]
+      },
+      {
+        "entries": [
+          { "enemy": "TouzokuAxe", "count": 2 },
+          { "enemy": "TouzokuNormal", "count": 5 },
+          { "enemy": "Wolf", "count": 1 },
+          { "enemy": "Vagrant", "count": 1 },
+          { "enemy": "VagrantGuard", "count": 1 }
+        ]
+      }
+    ],
+    "finalRandomPacks": [
+      {
+        "entries": [
+          { "enemy": "BossTouzokuCustom", "count": 4 }
+        ]
+      }
+    ]
+  },
+  "church": {
+    "waves": [
+      {
+        "entries": [
+          { "enemy": "Dorei", "count": 2 },
+          { "enemy": "TouzokuNormal", "count": 3 },
+          { "enemy": "Inquisition", "count": 1 }
+        ]
+      },
+      {
+        "entries": [
+          { "enemy": "Dorei", "count": 2 },
+          { "enemy": "Inquisition", "count": 1 },
+          { "enemy": "Sisterknight", "count": 1 },
+          { "enemy": "Wolf", "count": 1, "chance": 0.5 },
+          { "enemy": "TouzokuNormal", "count": 2 }
+        ]
+      },
+      {
+        "entries": [
+          { "enemy": "Sisterknight", "count": 1 },
+          { "enemy": "PrisonOfficer", "count": 1 },
+          { "enemy": "Pilgrim", "count": 1 },
+          { "enemy": "InquisitionWhite", "count": 1 },
+          { "enemy": "Dorei", "count": 2 },
+          { "enemy": "TouzokuNormal", "count": 2 },
+          { "enemy": "SlaveBigAxe", "count": 1 }
+        ]
+      }
+    ],
+    "finalRandomPacks": [
+      {
+        "entries": [
+          { "enemy": "RequiemKnight", "count": 1 }
+        ]
+      },
+      {
+        "entries": [
+          { "enemy": "HighInquisitionFemale", "count": 3 }
+        ]
+      }
+    ]
+  },
+  "demons": {
+    "waves": [
+      {
+        "entries": [
+          { "enemy": "Goblin", "count": 1 },
+          { "enemy": "Kakasi", "count": 2 },
+          { "enemy": "CrawlingCreatures", "count": 1 },
+          { "enemy": "AngelStatue", "count": 1 }
+        ]
+      },
+      {
+        "entries": [
+          { "enemy": "CrawlingCreatures", "count": 3 },
+          { "enemy": "CrawlingSisterKnight", "count": 1 },
+          { "enemy": "Mutude", "count": 2 },
+          { "enemy": "Kakasi", "count": 3 },
+          { "enemy": "AngelStatue", "count": 1 }
+        ]
+      },
+      {
+        "entries": [
+          { "enemy": "CrawlingCreatures", "count": 3 },
+          { "enemy": "SkeltonOoze", "count": 1 },
+          { "enemy": "Mutude", "count": 2 },
+          { "enemy": "CrawlingCreatures", "count": 1 },
+          { "enemy": "Kakasi", "count": 3 },
+          { "enemy": "Goblin", "count": 1 },
+          { "enemy": "AngelStatue", "count": 1 }
+        ]
+      }
+    ],
+    "finalRandomPacks": [
+      {
+        "entries": [
+          { "enemy": "Butcher", "count": 1 }
+        ]
+      },
+      {
+        "entries": [
+          { "enemy": "Slaughterer", "count": 1 }
+        ]
+      },
+      {
+        "entries": [
+          { "enemy": "BigoniBrother", "count": 1 }
+        ]
+      }
+    ]
+  },
+  "undead": {
+    "waves": [
+      {
+        "entries": [
+          { "enemy": "Undead", "count": 5 },
+          { "enemy": "MummyDog", "count": 1 },
+          { "enemy": "MummyMan", "count": 1 }
+        ]
+      },
+      {
+        "entries": [
+          { "enemy": "Undead", "count": 8 },
+          { "enemy": "MummyMan", "count": 2 },
+          { "enemy": "MummyDog", "count": 2 }
+        ]
+      },
+      {
+        "entries": [
+          { "enemy": "Undead", "count": 10 },
+          { "enemy": "MummyMan", "count": 2 },
+          { "enemy": "MummyDog", "count": 2 },
+          { "enemy": "Pilgrim", "count": 1 },
+          { "enemy": "Librarian", "count": 1 },
+          { "enemy": "SkeltonOoze", "count": 1 }
+        ]
+      }
+    ],
+    "finalRandomPacks": [
+      {
+        "entries": [
+          { "enemy": "Undead", "count": 30 }
+        ]
+      },
+      {
+        "entries": [
+          { "enemy": "MummyMan", "count": 5 }
+        ]
+      },
+      {
+        "entries": [
+          { "enemy": "MummyDog", "count": 5 }
+        ]
+      },
+      {
+        "entries": [
+          { "enemy": "CrowInquisition", "count": 2 }
+        ]
+      }
+    ]
+  },
+  "monsters": {
+    "waves": [
+      {
+        "entries": [
+          { "enemy": "Kinoko", "count": 5 },
+          { "enemy": "NormalSnailshell", "count": 1 },
+          { "enemy": "Snailshell", "count": 1 }
+        ]
+      },
+      {
+        "entries": [
+          { "enemy": "Kinoko", "count": 8 },
+          { "enemy": "NormalSnailshell", "count": 1 },
+          { "enemy": "Snailshell", "count": 1 },
+          { "enemy": "Arulaune", "count": 1 },
+          { "enemy": "Coolmaiden", "count": 1 }
+        ]
+      },
+      {
+        "entries": [
+          { "enemy": "Kinoko", "count": 10 },
+          { "enemy": "NormalSnailshell", "count": 2 },
+          { "enemy": "Snailshell", "count": 1 },
+          { "enemy": "Minotaurosu", "count": 1 }
+        ]
+      }
+    ],
+    "finalRandomPacks": [
+      {
+        "entries": [
+          { "enemy": "Arulaune", "count": 5 }
+        ]
+      },
+      {
+        "entries": [
+          { "enemy": "Minotaurosu", "count": 3 }
+        ]
+      },
+      {
+        "entries": [
+          { "enemy": "BigMerman", "count": 3 }
+        ]
+      }
+    ]
+  },
+  "mafia": {
+    "waves": [
+      {
+        "entries": [
+          { "enemy": "Vagrant", "count": 2 },
+          { "enemy": "TouzokuNormal", "count": 2 },
+          { "enemy": "VagrantGuard", "count": 2 }
+        ]
+      },
+      {
+        "entries": [
+          { "enemy": "Vagrant", "count": 3 },
+          { "enemy": "TouzokuNormal", "count": 3 },
+          { "enemy": "Tyoukyousi", "count": 1 },
+          { "enemy": "MafiaBossCustom", "count": 2 },
+          { "enemy": "TyoukyousiRed", "count": 1 },
+          { "enemy": "VagrantGuard", "count": 2 }
+        ]
+      },
+      {
+        "entries": [
+          { "enemy": "Vagrant", "count": 3 },
+          { "enemy": "TouzokuNormal", "count": 3 },
+          { "enemy": "Tyoukyousi", "count": 1 },
+          { "enemy": "MafiaBossCustom", "count": 2 },
+          { "enemy": "Mafia", "count": 1 },
+          { "enemy": "TyoukyousiRed", "count": 1 },
+          { "enemy": "VagrantGuard", "count": 2 }
+        ]
+      }
+    ],
+    "finalRandomPacks": [
+      {
+        "entries": [
+          { "enemy": "Mafiamuscle", "count": 1 }
+        ]
+      },
+      {
+        "entries": [
+          { "enemy": "Gorotuki", "count": 1 }
+        ]
+      }
+    ]
+  }
+}
