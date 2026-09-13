@@ -1,0 +1,1241 @@
+{
+  "settings": {
+    "responseDelayMin": 1.5,
+    "responseDelayMax": 2.5,
+    "commentCooldownSeconds": 4.0,
+    "maxSimultaneousComments": 1,
+    "commentDisplayDuration": 5.0,
+    "fontSize": 22.0,
+    "verticalOffset": 20.0,
+    "boneName": "face",
+    "responseColor": {
+      "r": 0.8,
+      "g": 0.4,
+      "b": 1.0,
+      "a": 1.0
+    },
+    "responseOutlineColor": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 0.0
+    },
+    "thoughtColor": {
+      "r": 1.0,
+      "g": 0.6,
+      "b": 0.8,
+      "a": 1.0
+    },
+    "thoughtOutlineColor": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 0.0
+    }
+  },
+  "mindBrokenThresholds": [
+    0.3,
+    0.7
+  ],
+  "animations": {
+    "START": {
+      "description": "Standing in front, captures and binds GG, rips her clothes",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "No! Wait! Ngh! D-don't hurt me...",
+            "Agh! I got caught... N-no...",
+            "Ngh! W-wait, let me go!",
+            "No! He's too strong...",
+            "Ha?! No, please...!",
+            "Dammit! He's too strong...",
+            "Fuck... He can lift me up with one hand?!",
+            "Get away from me! You'll pay for this!",
+            "My clothes! No, I'm exposed!",
+            "Shit... What... what will you do to me?"
+          ],
+          "medium": [
+            "You're so... strong...",
+            "Your body... so close to me...",
+            "I'm doomed... I can't move!",
+            "You grab me... as if I'm nothing...",
+            "Ah! Y-you threw me... with such strength...",
+            "My skirt! AH! I'm so... vulnerable...",
+            "You're on top of me... I'm helpless...",
+            "W-wait... If I don't resist... you could be gentler?",
+            "You're so rough... what are you after?",
+            "Anngh! What is this? You're so close...",
+            "You caught me... interesting...",
+            "You're all talk...",
+            "Ah! Mmmm? Such authority...",
+            "You threw me... like a doll...",
+            "Why am I getting chills... when you touch me...?"
+          ],
+          "high": [
+            "Damn! Ugh... I can't resist you...",
+            "What will you do now that I'm trapped... under those muscles...",
+            "Mmmm... touch me...",
+            "Haah... this isn't so horrible...",
+            "Mm... You want this? Take it...",
+            "Yes! Throw me down like a toy!",
+            "I'm your toy... you can play with me...",
+            "Mmmm... this position is so intimate...",
+            "Do it... take me right here... Now!",
+            "Your strength... it's exciting..."
+          ]
+        }
+      }
+    },
+    "ERO": {
+      "description": "Thrown on her back, penetration begins",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "No! Get out!!!",
+            "It hurts! It's too big!",
+            "I can't take it! Please stop!",
+            "Please! Don't hurt me!",
+            "Your body... it's crushing me...!",
+            "It hurts so much! Stop!",
+            "Agh! Ngh! No!",
+            "Wait! Don't do this, please!",
+            "No, I hate you! NGH!",
+            "No! Not like this, please! Have mercy!"
+          ],
+          "medium": [
+            "How could I... get used to this?!",
+            "It's inside me... it burns...!",
+            "You...? You put it in...!",
+            "Why...? Why do this to me? It's too big!",
+            "I'll survive this...",
+            "Ooh... It's stretching my pussy...",
+            "You're... so deep... already?",
+            "Missionary...? I don't... mmm... like this!",
+            "N-ngh! It's inside me...",
+            "Your cock... you put it inside me...",
+            "MMGH, uuuh... what is this...?",
+            "Agh! You're holding me down... with your body...",
+            "It's... so... haaa... big!",
+            "You're... fucking me... without mercy...",
+            "Fuuck...! It's hitting every spot..."
+          ],
+          "high": [
+            "Yes! F-faster...",
+            "Aaah... your cock is so big...",
+            "Hold me down...",
+            "Oooh... so deep... don't pull out!",
+            "Fuck... H-harder...!",
+            "YES! Use my pussy!",
+            "MMMGH! Faster! Use me as your toy!",
+            "Missionary... my favorite... look at me please!",
+            "I love your cock! I need it deeper, please!",
+            "Mmmgh, I love how you crush me with your hips!"
+          ]
+        }
+      }
+    },
+    "ERO1": {
+      "description": "Pinned under his weight, hard slow thrusts",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "No! It hurts! Please!",
+            "You're crushing me! H-help!",
+            "I can't... breathe...! Get off!",
+            "I can't! I can't! It's too much!",
+            "Oh fuck, oh fuck, oh fuck!!!",
+            "Aah... Aah... stop... nooo...",
+            "I have to follow... or die...!",
+            "You're scaring me... slow down!",
+            "No! I won't submit... to you!",
+            "No! End this! Stop!"
+          ],
+          "medium": [
+            "I'll... get my revenge!",
+            "You'll... regret this!",
+            "Don't look at me! I'll... get out of your grip!",
+            "Screw you! Y-you... just want to torture me!",
+            "I don't... ggh... like this!",
+            "This is my life now... pain...",
+            "This torture... endless...",
+            "This humiliation... never ending...",
+            "I have to... obey?",
+            "Become your toy... forever?",
+            "Slow... but so hard...",
+            "Your cock... twitching inside me...",
+            "I want you to thrust harder...",
+            "You're... playing with me...",
+            "Wait... don't pull away..."
+          ],
+          "high": [
+            "You're teasing me...",
+            "You're having fun with my pussy...",
+            "I'm your toy...",
+            "Harder... look at me...",
+            "You rub my nipples... each time you thrust into me...",
+            "You're teasing me! Fuck me please!",
+            "I'll obey, just use me now!",
+            "I can't move, please just start thrusting!",
+            "You own me! I'm your toy! Now cum inside of me!",
+            "It feels so good! Don't pull out! It's driving me crazy!"
+          ]
+        }
+      }
+    },
+    "ERO2": {
+      "description": "Faster missionary, feet pointing up",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Ah! Ah! Ah!",
+            "It's too much! Help!!!",
+            "NO! Don't! I don't want it fast!",
+            "No, no, no! It's too fast! I can't take it!",
+            "Someone... save me! Make it stop!",
+            "I have to take it... but it's too big!",
+            "I'm not... your toy...!",
+            "No... I have to survive this!",
+            "Your grunts... make me... sick...",
+            "This position... so humiliating!"
+          ],
+          "medium": [
+            "You'll pay... for every thrust!",
+            "Oooh... aaah ah ah ah... fuck... Mmmghhh aaah",
+            "Mmm... no...! What am I thinking?!",
+            "You're... slamming into me!",
+            "This rhythm... painful... and intense...",
+            "My pussy... is getting wet...",
+            "Haaa... It's... good...",
+            "Your cock... deep inside of me... it still hurts...",
+            "Your cock... hitting all the right spots... shaping my pussy...",
+            "Your rhythm... makes me wet...",
+            "Harder? Yes... just like that...",
+            "You're amazing... It feels good...",
+            "Go deeper... please...",
+            "It's hard to breathe... so intense... so good...",
+            "This position feels... more intimate..."
+          ],
+          "high": [
+            "Mmmgh... yes... slam into me!",
+            "That cock is making me crazy... aaah...",
+            "Deeper! Faster! Yes!",
+            "I need your cock!",
+            "Make me scream! Drill into me!",
+            "Yes! Thank you! I need it rough!",
+            "Fuck me! I need it! I'll cum on your cock!",
+            "Harder! Grab my hips, my tits, my ass! Use your toy!",
+            "Yes! Yes! Yes! Crush me! Beat me up with your hips!",
+            "I'm your toy! I'm your toy! I'll keep saying it until you cum!"
+          ]
+        }
+      }
+    },
+    "ERO3": {
+      "description": "Harder thrusts, legs closing from force",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Agh! AAAH! Slow down!",
+            "No! NO! It's too hard!",
+            "I can feel it in my stomach! I can't take it!",
+            "I can't stop him... HELP!",
+            "Wait! I'm sorry! Please!",
+            "Wait! I give up! Stop!",
+            "Your cock... is going deeper?!",
+            "No! I'll do anything, please stop it!",
+            "W-wait, I'm begging you!",
+            "No! It's so big! I'm sorry!"
+          ],
+          "medium": [
+            "N-no... I take it back! Please stop!",
+            "It's so intense!",
+            "Ah! Ah! Fuck!",
+            "Let me breathe! Please!",
+            "You're doing it harder... it hurts too much now!",
+            "My pussy... is gonna be red...",
+            "Your cock... shaping my pussy... to your liking...",
+            "I can take it... even if it's harder now...",
+            "I'm wet... it's making sounds...",
+            "Fuck... It's so good... with your cock...",
+            "Mmm, I love your touch... rough... and passionate...",
+            "I can feel your veins... burning into my memory...",
+            "Show me... intimacy...",
+            "I'll obey you... it feels so good...",
+            "My thighs twitch with every thrust..."
+          ],
+          "high": [
+            "AH! I'll hug you with my legs!",
+            "I love your big cock! Give it to me! Ah!",
+            "You like when I close my legs? I wanna make it tight for you...",
+            "Fuck your toy like she's worthless!",
+            "Use my pussy until it's creamy with your cum!",
+            "YES! HARDER! Don't make me forget you!",
+            "FASTER! I WANT YOUR CHILDREN!",
+            "Fuck my tight pussy until it fits your big, hard cock!",
+            "Stretch it further inside me! Please!",
+            "Your fat cock needs a good toy... Take it!"
+          ]
+        }
+      }
+    },
+    "ERO4": {
+      "description": "Fast hard thrusts, feet bouncing",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "AH AH AH AH!",
+            "It's so fast! I'm gonna die!",
+            "I s-squeeze and it still goes in!",
+            "I'm not a whore! You can't...!",
+            "I'm getting... stabbed to death!",
+            "I can't... do this... anymore!!!",
+            "How is it so deep?? Guuuh!!!",
+            "You monster! Merciless! Aah!",
+            "NO! I'm sorry, I'm sorry, I'm sorry!!!",
+            "Help! NO! Get off! Get OFF!"
+          ],
+          "medium": [
+            "I... I'm... I'm your toy!!! I said it! Now stop!",
+            "I'm your cum-rag! Pull out now!",
+            "I... I'm your slut! Make it stop, please!",
+            "I-I'm yours! Your p-property... can I go now?? AH!",
+            "I'm... I-I'm your bitch! Enough already!",
+            "It feels so good!",
+            "Your cock loves my pussy!",
+            "My pussy is like a fountain...! Fuck!",
+            "Just keep fucking me!",
+            "Haaa Haaaa Haaaa Fuuuck! Yes!",
+            "Yes! Make love to me...!",
+            "Haaa! Ahh! Fuck me master!",
+            "I love your cock!",
+            "Yes! So much passion...!",
+            "I'm horny for your cum!"
+          ],
+          "high": [
+            "YES! Fuck my tight pussy! Fuck me!",
+            "MMMgh! Beat my pussy up, just like that! I'm your whore!",
+            "FUCK! I love it deep in my pussy!",
+            "Take me like the slut I am!",
+            "I'm gonna cum all over that big cock!!!",
+            "YES! YES! YES! I'm your hole, I'm your hole!!!",
+            "I'm your dirty bitch! I'll make you cum everyday!",
+            "Release it inside me! I'm your personal fuck-toy!",
+            "Master! YES! I'm here to stroke your big cock with my pussy forever!",
+            "Pour all your hatred inside me, Master! I'm your sex doll!"
+          ]
+        }
+      }
+    },
+    "FIN": {
+      "description": "Creampie while she hugs him",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "No! Don't do it inside...!",
+            "*cries* I-I c-c-can feel i-it...",
+            "You're...! You're filling me?!",
+            "NO! Disgusting!",
+            "N-noOoOo... s-stop...",
+            "I'm sorry!!! No!",
+            "Aaah! Aah!... AAgh!... S-stoaaahp...",
+            "I can feel it inside me! No...",
+            "You're finishing inside??!",
+            "What?? AAaagh! What are you doing?!"
+          ],
+          "medium": [
+            "NO! You lied to me!",
+            "AAH! NGH... you liar!",
+            "NoOoO! B-but I s-said it...",
+            "Aaaagh! No... NO! You have to let me go!",
+            "You promised?! You bastard!!!",
+            "Oo-Oooooh... ngh...",
+            "It's twitching! Fuck! You're cumming!",
+            "I'm cumminnnngggggg!!!",
+            "Fuckkkk! Yes...",
+            "I'm gonna cum...!",
+            "Release it inside, pleaseeee!",
+            "I'll make it tight for youuuu NGH!",
+            "Hug me! I want to be close to you!",
+            "I'll pull you in NGH! AH!",
+            "Master pleaseee...! Make me cum with you!"
+          ],
+          "high": [
+            "Fill my pussy with your cum!",
+            "Yeeees... dump it all in...",
+            "I love squeezing your cock while you pulse inside of me!",
+            "I want your cum inside of me!",
+            "Shoot it inside your doll!",
+            "I'M YOUR TOY! I'M YOUR TOY! I'M YOUR TOYYY!",
+            "YES! Don't stop! Give me more cum!",
+            "Give me children! Fill my womb!",
+            "Cum for me! I'm worthless without it!",
+            "Keep thrusting! Please! I want it overflowing my tight pussy!"
+          ]
+        }
+      }
+    },
+    "FIN2": {
+      "description": "Pulls out, cum-covered afterglow",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Kill me... please...",
+            "I can't... do this...",
+            "I... I was raped... there's... c-cum inside of me...",
+            "N-no... no... why...",
+            "I want... to die...",
+            "I can breathe again...",
+            "I... can't believe this...",
+            "You... you u-used me...",
+            "You... with your filth...",
+            "Is... is it over?"
+          ],
+          "medium": [
+            "You lied to me...",
+            "I won't forgive you for this...",
+            "You have no honor...",
+            "You broke your promise...",
+            "I... said those things... in vain...",
+            "I'm twitching...",
+            "I did it...",
+            "It's over...",
+            "Felt good...",
+            "Did it work...?",
+            "It can't be over...",
+            "I emptied you...",
+            "That popping sound... down there...",
+            "Intimacy... Feels good...",
+            "Are you satisfied...?"
+          ],
+          "high": [
+            "Aaaaah... amazing...",
+            "How was your toy...?",
+            "That was incredible...",
+            "Mmm this feels right...",
+            "Perfect...",
+            "Mmmnoo... don't pull out...",
+            "Wait... I need more...",
+            "Your toy won't break that easily...",
+            "Please put it back where it belongs...",
+            "I want you to see me dripping with your cum... please..."
+          ]
+        }
+      }
+    },
+    "JIGO": {
+      "description": "Resting / twitching between rounds",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Let me go... please...",
+            "Please, no more...",
+            "You have to let me go... You finished...",
+            "Let me die...",
+            "Don't... make me do this... again...",
+            "Please let me breathe...",
+            "I thought I was gonna die...",
+            "It HAS to be over...",
+            "I'm so tired... I can't move...",
+            "I have to... get up..."
+          ],
+          "medium": [
+            "You... ogre...",
+            "I... hate you...",
+            "I'll have... my revenge...",
+            "I feel so humiliated...",
+            "I can't believe how cruel you are...",
+            "I'm... dozing off...",
+            "I'm... sleepy...",
+            "This is... comfortable...",
+            "I came... so hard...",
+            "Fuck...",
+            "Shame it's over...",
+            "I'll miss this feeling...",
+            "I'll never forget your passion...",
+            "I-Intense...",
+            "The wind is caressing my body..."
+          ],
+          "high": [
+            "Amazing... thank you...",
+            "My body... used to your liking... until you emptied your balls...",
+            "That was incredible...",
+            "I'm dripping with your cum...",
+            "You're so kind... Master...",
+            "This hole is ready for you Master...",
+            "You'll put it back in, right?",
+            "Toys don't need rest...",
+            "I don't need to breathe... I need your cock...",
+            "Keep using me all you want, Master..."
+          ]
+        }
+      }
+    },
+    "JIGO2": {
+      "description": "He leans over her face, about to continue",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "No... not again...",
+            "Stay back... please...",
+            "I can't survive another round...",
+            "Don't cover me... I need air...",
+            "Please... just leave me here...",
+            "My body won't move... but I still refuse...",
+            "If you come closer... I'll... I'll...",
+            "Don't look at me like that...",
+            "I'm not ready... I'm not...",
+            "Someone... anyone..."
+          ],
+          "medium": [
+            "You're coming back... already?",
+            "That shadow over me... again...",
+            "I hate how calm you are...",
+            "My legs... won't close...",
+            "If I stay quiet... maybe gentler?",
+            "Why does my chest tighten when you lean in...",
+            "I'm still dripping... and you're already hard...",
+            "Don't smile at me like you own me...",
+            "One more time... and I might break...",
+            "I should crawl away... why can't I?"
+          ],
+          "high": [
+            "Yes... come back to me...",
+            "Cover me again... make me disappear under you...",
+            "I'm still open... waiting...",
+            "Don't make me wait, Master...",
+            "Look at me while you take me again...",
+            "My face is yours to smother...",
+            "I want round two... now...",
+            "Please... put that weight on me again...",
+            "I'm not broken enough yet...",
+            "Use me until I can't think..."
+          ]
+        }
+      }
+    },
+    "JIGOERO": {
+      "description": "Round two starts, cum still inside / on her",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "What?? NO!",
+            "Please! You can't!",
+            "This isn't fair!",
+            "Wait, wait!",
+            "Don't... make me do this... again...",
+            "Impossible...!",
+            "How can you...?!",
+            "No... not again...",
+            "What? Fuck, I can't move!",
+            "I can't... fight it!"
+          ],
+          "medium": [
+            "This was your plan all along...?",
+            "I... hate you...",
+            "I'll have... my revenge...",
+            "You piece of-",
+            "I can't believe how cruel you are...",
+            "Again...?",
+            "You're still hard...?",
+            "Unbelievable...",
+            "I'm still sore...",
+            "No way...",
+            "Really? Mmmm...",
+            "Mmm... alright...",
+            "Such passion...",
+            "Let's do it...",
+            "Come here..."
+          ],
+          "high": [
+            "Mmmm, round two?",
+            "You want more of this pussy?",
+            "You like fucking my pussy?",
+            "I'll take it as many times as you want...",
+            "So generous...",
+            "This hole is ready for you Master...",
+            "Yes! Give me your big cock...",
+            "Toys don't need rest...",
+            "I don't need to breathe... I need your cock...",
+            "Keep using me all you want, Master..."
+          ]
+        }
+      }
+    },
+    "JIGOERO2": {
+      "description": "She feels him moving faster again, the cum making each thrust slick and humiliating.",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "No... it's so slippery... stop...",
+            "Get off me... you're using your own... ugh...",
+            "This is disgusting... I can't...",
+            "It hurts less but it's worse...",
+            "Don't... don't go faster... please...",
+            "I can feel it moving inside me... no...",
+            "You're sick... doing this with your own...",
+            "Someone help... anyone...",
+            "My body is so dirty now...",
+            "Stop pushing it deeper..."
+          ],
+          "medium": [
+            "It's... sliding so easily now...",
+            "Your cum is... oh gods...",
+            "Why does it feel different now...",
+            "I'm so messy... covered in...",
+            "The soreness... and the heat...",
+            "I said no but my body...",
+            "This shouldn't feel like this...",
+            "You're using it as... oh...",
+            "I hate that it hurts less...",
+            "What's wrong with me..."
+          ],
+          "high": [
+            "Your cum makes me so slick, Master...",
+            "It slides in easier now, doesn't it, Master...",
+            "I'm all messy for you...",
+            "Push your old cum deeper please...",
+            "This slave is so slick for you...",
+            "Use your mess to fuck me harder...",
+            "I love feeling it squish inside...",
+            "Make me dirtier Master...",
+            "Your seed belongs inside me...",
+            "Thank you for filling me first, Master..."
+          ]
+        }
+      }
+    },
+    "JIGOERO3": {
+      "description": "Harder thrusts force her legs to twitch and try to close from the overwhelming intensity.",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "My legs... they won't stop shaking...",
+            "Too hard... you're hitting too deep...",
+            "Close my legs... I can't...",
+            "It keeps twitching... make it stop...",
+            "You're breaking something inside...",
+            "I can't keep them open...",
+            "The force... I can't breathe...",
+            "Stop hitting that spot... please...",
+            "My body is betraying me...",
+            "It hurts... it hurts so much..."
+          ],
+          "medium": [
+            "Why are my legs closing...",
+            "I can't control my body...",
+            "It's too much but...",
+            "The twitching won't stop...",
+            "You're forcing them open...",
+            "I should hate this but...",
+            "My legs keep trying to squeeze...",
+            "The pressure is... oh gods...",
+            "I'm so confused...",
+            "My body wants to resist but..."
+          ],
+          "high": [
+            "Force my legs open Master...",
+            "My body tries to close but I want it...",
+            "The twitching means I love it...",
+            "Break through my resistance Master...",
+            "My legs shake for you...",
+            "Push them wider please...",
+            "I can't control myself around your cock...",
+            "Make my legs stop closing Master...",
+            "I need to be forced open...",
+            "Your power makes me twitch..."
+          ]
+        }
+      }
+    },
+    "JIGOERO4": {
+      "description": "Brutal relentless pounding at peak pace leaves her overwhelmed and unable to process.",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "You're going to break me... stop...",
+            "I can't take this pace...",
+            "You're ruining me forever...",
+            "Please... I'm begging... finish...",
+            "It's too much... too fast...",
+            "I'm going to pass out...",
+            "Mercy... have mercy...",
+            "My insides can't handle...",
+            "You're destroying me...",
+            "No more... no more..."
+          ],
+          "medium": [
+            "So fast... I can't think...",
+            "Something's building... no...",
+            "Don't make me... I don't want to...",
+            "The rhythm... it's overwhelming...",
+            "I'm losing myself...",
+            "Why does this feel...",
+            "I can't... I can't...",
+            "The pressure is too much...",
+            "I'm going to... no...",
+            "Make it end..."
+          ],
+          "high": [
+            "Break me completely Master...",
+            "So fast... I'm going to...",
+            "Ruin this hole forever...",
+            "Make me your broken toy...",
+            "I can take it Master... use me...",
+            "Fuck me until I can't walk...",
+            "I'm yours to destroy...",
+            "Harder... please harder...",
+            "Make me cum on your cock Master...",
+            "I need your cum so bad..."
+          ]
+        }
+      }
+    },
+    "JIGOFIN": {
+      "description": "He releases inside her for the second time and she feels the hot flood filling her again.",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Not again... not inside...",
+            "You're filling me again... no...",
+            "So much... it's too much...",
+            "I can feel it... hot... no...",
+            "Please pull out... please...",
+            "My womb... it's flooding again...",
+            "You're marking me inside...",
+            "I hate you... I hate you...",
+            "It's never going to end...",
+            "So full... it hurts..."
+          ],
+          "medium": [
+            "Again... you're cumming again...",
+            "So warm... I shouldn't feel...",
+            "It's filling me up...",
+            "I can feel every pulse...",
+            "Why does it feel so...",
+            "My body is so full of you...",
+            "The heat... everywhere...",
+            "I said no but you...",
+            "It's too much cum...",
+            "I'm drowning in it..."
+          ],
+          "high": [
+            "Yes... fill me again Master...",
+            "Breed me full... please...",
+            "I want every drop Master...",
+            "Flood my womb with your seed...",
+            "Thank you for cumming inside...",
+            "I'm your cum dump...",
+            "More... give me more...",
+            "Mark me inside forever...",
+            "I love feeling you release...",
+            "This slave is grateful..."
+          ]
+        }
+      }
+    },
+    "JIGOFIN2": {
+      "description": "He withdraws leaving her gaping and leaking, displaying her thoroughly used state.",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Don't look at me... please...",
+            "I'm leaking... everywhere...",
+            "Cover me up... someone...",
+            "This isn't me... this can't be me...",
+            "So much is coming out...",
+            "I'm ruined... completely ruined...",
+            "The shame... I want to die...",
+            "Two loads inside me...",
+            "Don't leave me like this...",
+            "I'm just... leaking..."
+          ],
+          "medium": [
+            "You can see everything...",
+            "It's dripping out of me...",
+            "I'm such a mess...",
+            "Don't stare at me like that...",
+            "My body looks... used...",
+            "I can feel it leaking... warm...",
+            "This is what I've become...",
+            "So exposed... so open...",
+            "The cum won't stop...",
+            "I'm disgusting..."
+          ],
+          "high": [
+            "Admire what you own Master...",
+            "I'm leaking your seed...",
+            "Does it look pretty Master...",
+            "Your cum is dripping out...",
+            "I'm so open for you...",
+            "Thank you for filling me twice...",
+            "I love being your mess...",
+            "Look how used I am...",
+            "I'm your perfect cum dump...",
+            "Ready for round three Master..."
+          ]
+        }
+      }
+    },
+    "JIGOPOST3": {
+      "description": "She lies with legs spread, displaying her ruined state as round three begins.",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Don't look at me... I'm disgusting...",
+            "My legs won't close... why won't they close...",
+            "You already came twice... isn't that enough...",
+            "I'm gaping... you ruined me...",
+            "Stop staring at your mess...",
+            "I can't hide anything from you...",
+            "This isn't happening... this can't be real...",
+            "I'm leaking everywhere... oh gods...",
+            "Please... no more... I'm destroyed...",
+            "My body is broken..."
+          ],
+          "medium": [
+            "My legs are open... I can't stop them...",
+            "You can see everything I've become...",
+            "Two loads inside and I still hold them open...",
+            "I'm so exposed like this...",
+            "The air hits my ruined cunt...",
+            "You made me into this display...",
+            "I'm flushed and messy...",
+            "My body betrays me even now...",
+            "I can't even cover myself...",
+            "I should close them but..."
+          ],
+          "high": [
+            "Admire what you own Master...",
+            "My legs stay open for you...",
+            "I'm properly displayed Master...",
+            "See how ruined I am for you...",
+            "This is your work Master...",
+            "I'm gaping and ready...",
+            "My cunt stays open for your use...",
+            "I leak your seed proudly...",
+            "Round three please Master...",
+            "I'm your displayed property..."
+          ]
+        }
+      }
+    },
+    "JIGOPOST4": {
+      "description": "He mounts her again, trapping her exhausted body under his weight.",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Not again... I can't breathe...",
+            "You're crushing me... get off...",
+            "I have nothing left... please...",
+            "The weight... it's too much...",
+            "I can't move under you...",
+            "Stop... I'm too tired...",
+            "You're going to break me...",
+            "I can't take this again...",
+            "Mercy... have mercy...",
+            "My body is giving out..."
+          ],
+          "medium": [
+            "Under you again...",
+            "The weight feels... familiar...",
+            "I should hate this heaviness...",
+            "I'm trapped... I can't move...",
+            "My body remembers this...",
+            "So heavy... pressing down...",
+            "I can't push you off...",
+            "I'm too weak to resist...",
+            "The heat of you...",
+            "I'm pinned completely..."
+          ],
+          "high": [
+            "Cover me Master...",
+            "Trap me under your weight...",
+            "I love being beneath you...",
+            "Crush me with your body...",
+            "I'm your mattress...",
+            "Keep me pinned forever...",
+            "Your weight is my comfort...",
+            "I belong under you...",
+            "Mount me anytime Master...",
+            "I'm your resting place..."
+          ]
+        }
+      }
+    },
+    "JIGOPOSTERO": {
+      "description": "Third round thrusting starts, using prior cum as lube on her messy, tired body.",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Third time... you're insane...",
+            "It's so slippery... stop...",
+            "You're using your cum to... no...",
+            "I can't feel anything properly...",
+            "My body is numb... please...",
+            "There's so much inside me...",
+            "You're sliding through your own mess...",
+            "I hate this... I hate you...",
+            "Round three... I'll die...",
+            "No more... no more..."
+          ],
+          "medium": [
+            "So slick... from your cum...",
+            "Third round... how do you keep...",
+            "It slides in so easy now...",
+            "I'm so messy inside...",
+            "The cum makes it... different...",
+            "I should be disgusted but...",
+            "My tired body accepts you...",
+            "So much seed inside...",
+            "The wet sounds...",
+            "I'm too tired to fight..."
+          ],
+          "high": [
+            "Use your cum to fuck me Master...",
+            "Third time... I'm so lucky...",
+            "Slide through your mess...",
+            "I'm slick for you always...",
+            "My cum-filled cunt welcomes you...",
+            "So wet and ready Master...",
+            "Your seed makes perfect lube...",
+            "Round three please... harder...",
+            "I'm a sloppy mess for you...",
+            "Thank you for using me again..."
+          ]
+        }
+      }
+    },
+    "JIGOPOSTERO2": {
+      "description": "Faster thrusting, cum-lube allowing deeper use of her exhausted body.",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Too fast... I can't... breathe...",
+            "You're breaking something... stop...",
+            "Deep... too deep... it hurts...",
+            "I feel nothing... everything hurts...",
+            "My body is shutting down...",
+            "Please... slower... mercy...",
+            "You're using me up...",
+            "I can't take deep strokes...",
+            "Everything is sore...",
+            "Make it stop..."
+          ],
+          "medium": [
+            "So fast... I can't think...",
+            "Deep... it's hitting... oh...",
+            "My body is responding... no...",
+            "The speed... overwhelming...",
+            "I feel every inch...",
+            "My tired cunt... is tingling...",
+            "Why does it feel...",
+            "The cum makes it slide...",
+            "I'm losing myself...",
+            "Can't control... anything..."
+          ],
+          "high": [
+            "Faster Master... use me hard...",
+            "Deep strokes please... ruin me...",
+            "I'm your sleeve... fuck me...",
+            "Speed up... break me more...",
+            "Hit my cervix... hurt me...",
+            "I'm a sloppy hole... use it...",
+            "My tired body is yours...",
+            "Make me feel every thrust...",
+            "Faster... deeper... please...",
+            "I'm just a receptacle..."
+          ]
+        }
+      }
+    },
+    "JIGOPOSTERO3": {
+      "description": "Hardest pounding before third climax, she is almost gone, barely conscious.",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "You're... killing me...",
+            "I can't... feel my legs...",
+            "Everything is... black...",
+            "Stop... please... dying...",
+            "No more... consciousness... fading...",
+            "This is... the end...",
+            "I can't... survive this...",
+            "Breaking... completely...",
+            "Help... someone...",
+            "Final... moments..."
+          ],
+          "medium": [
+            "So hard... I'm... losing...",
+            "Can't... think... anymore...",
+            "My body... giving... in...",
+            "Almost... gone...",
+            "The pounding... destroying... me...",
+            "Feel... nothing... but...",
+            "Mind... blank...",
+            "Breaking... apart...",
+            "No... resistance... left...",
+            "Just... sensations..."
+          ],
+          "high": [
+            "Break me completely Master...",
+            "I'm almost gone... finish me...",
+            "Destroy what's left...",
+            "Make me nothing but yours...",
+            "Harder... I'm fading...",
+            "Final breaking... thank you...",
+            "I'm yours... completely...",
+            "End me as your toy...",
+            "So close to perfect slavery...",
+            "Finish the breaking..."
+          ]
+        }
+      }
+    },
+    "JIGOPOSTFIN": {
+      "description": "Third orgasm inside her, flooding her with the final hot load.",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Not... a third time...",
+            "You're... filling me... again...",
+            "So much... cum... drowning...",
+            "I feel... every pulse... no...",
+            "My womb... is flooded...",
+            "Three loads... I'm ruined...",
+            "It's... never ending...",
+            "Hot... inside... too much...",
+            "I'm... just a... vessel...",
+            "Finished... completely..."
+          ],
+          "medium": [
+            "Third... load...",
+            "So warm... filling... me...",
+            "I feel it... everywhere...",
+            "My body... accepts it...",
+            "Three times... inside...",
+            "The heat... spreading...",
+            "I'm... full... beyond full...",
+            "Every pulse... I feel...",
+            "My tired body... takes it...",
+            "So much... seed..."
+          ],
+          "high": [
+            "Yes... third load Master...",
+            "Fill me... flood me...",
+            "Thank you... for breeding me...",
+            "I'm... your cum dump...",
+            "Three loads... I'm complete...",
+            "Breed me... permanently...",
+            "I want... every drop...",
+            "My womb... is yours...",
+            "Fill me... until I overflow...",
+            "Grateful... for your seed..."
+          ]
+        }
+      }
+    },
+    "JIGOPOSTFIN2": {
+      "description": "Afterglow and pull-out, legs still open, leaking heavily from three loads.",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Don't... look... at the mess...",
+            "Three loads... leaking out...",
+            "I'm... destroyed...",
+            "So... empty... but full...",
+            "The shame... is endless...",
+            "I'm... just... dripping...",
+            "Finished... as a person...",
+            "My body... is waste...",
+            "No... dignity... left...",
+            "Completely... ruined..."
+          ],
+          "medium": [
+            "So... much... leaking...",
+            "I can... feel it... flowing...",
+            "Three loads... inside... out...",
+            "I'm... so open...",
+            "The warmth... leaving...",
+            "I'm... displayed... again...",
+            "My body... betrays... me...",
+            "So... messy...",
+            "I should... feel... ashamed...",
+            "But I'm... just... tired..."
+          ],
+          "high": [
+            "Admire... your work... Master...",
+            "Three loads... leaking...",
+            "I'm... your fountain...",
+            "Stay... open... for you...",
+            "Your... cum... flows... from me...",
+            "I'm... perfectly... ruined...",
+            "Thank you... for the mess...",
+            "I... leak... proudly...",
+            "Your... property... displayed...",
+            "Forever... open... for you..."
+          ]
+        }
+      }
+    },
+    "JIGOTOFADE": {
+      "description": "Screen fades to black, scene ending as she accepts final ownership.",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Fading... into darkness...",
+            "The end... finally...",
+            "Darkness... takes me...",
+            "No... more... light...",
+            "I'm... disappearing...",
+            "Lost... to the black...",
+            "Freedom... in darkness...",
+            "The final... fade...",
+            "Gone... forever...",
+            "Into... nothing..."
+          ],
+          "medium": [
+            "Fading... away...",
+            "Into the... dark...",
+            "My story... ends...",
+            "Darkness... welcomes... me...",
+            "I... disappear...",
+            "The light... dies...",
+            "Slipping... away...",
+            "Becoming... nothing...",
+            "Final... moments...",
+            "Gone..."
+          ],
+          "high": [
+            "Fade... into your ownership...",
+            "Darkness... as your toy...",
+            "I... disappear... as yours...",
+            "Into... eternal... service...",
+            "Fading... as property...",
+            "The dark... is my home...",
+            "Forever... in your... shadow...",
+            "I... vanish... as your slave...",
+            "Owned... into... the dark...",
+            "Your slave... fades... happily..."
+          ]
+        }
+      }
+    },
+    "ZGAMEOVER": {
+      "description": "Bad end visual, fully broken, semen-stained, claimed as permanent property.",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "I lost... everything...",
+            "Fully broken... no recovery...",
+            "My life... is over...",
+            "The witch... is dead...",
+            "Forever... stained...",
+            "No... second chance...",
+            "Captured... forever...",
+            "My ending... is shame...",
+            "Completely... defeated...",
+            "No... hope... remains..."
+          ],
+          "medium": [
+            "It's over... for me...",
+            "Broken... completely...",
+            "My story... ends here...",
+            "Stained... and finished...",
+            "No more... freedom...",
+            "I'm... his... now...",
+            "The end... of me...",
+            "Forever... marked...",
+            "My fate... sealed...",
+            "Gone... from the world..."
+          ],
+          "high": [
+            "I won... slavery...",
+            "Fully broken... fully his...",
+            "My happy... ending...",
+            "Stained... and grateful...",
+            "Forever... owned...",
+            "I'm... Master's... forever...",
+            "The end... of freedom...",
+            "My purpose... fulfilled...",
+            "Eternal... service...",
+            "Claimed... completely..."
+          ]
+        }
+      }
+    },
+    "ZGAMEOVER2LOOP": {
+      "description": "Looping bad-end hold, quiet confirmation of her permanent broken state.",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Forever... like this...",
+            "No escape... ever...",
+            "Permanent... prison...",
+            "Eternal... shame...",
+            "Always... broken...",
+            "Never... free... again...",
+            "Trapped... forever...",
+            "This... is... forever..."
+          ],
+          "medium": [
+            "Forever... his...",
+            "Looping... endlessly...",
+            "No change... coming...",
+            "Permanent... state...",
+            "Always... this way...",
+            "Eternal... servitude...",
+            "Stuck... like this...",
+            "No... end... to this..."
+          ],
+          "high": [
+            "Forever... Master's...",
+            "Eternal... happiness...",
+            "Always... useful...",
+            "Permanent... joy...",
+            "Never... leaving...",
+            "Forever... owned...",
+            "Loop... as yours...",
+            "Always... Master's toy..."
+          ]
+        }
+      }
+    },
+    "4ERO": {
+      "description": "Optional coda after fade, continued use of the finished toy.",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Even now... you use me...",
+            "The end... wasn't the end...",
+            "More... degradation...",
+            "I'm... not even... human...",
+            "Just... a thing... to use...",
+            "No... rest... ever...",
+            "Forever... your... object...",
+            "Still... more... shame..."
+          ],
+          "medium": [
+            "Still... useful...",
+            "Even broken... I serve...",
+            "The toy... keeps giving...",
+            "My purpose... continues...",
+            "Even now... use me...",
+            "I... accept... this...",
+            "Still... yours...",
+            "More... even now..."
+          ],
+          "high": [
+            "Use me... after...",
+            "I'm... never... done...",
+            "The toy... keeps serving...",
+            "Always... useful... Master...",
+            "More pleasure... Master...",
+            "Grateful... for more...",
+            "Forever... your outlet...",
+            "Use... my mouth... Master..."
+          ]
+        }
+      }
+    }
+  }
+}

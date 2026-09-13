@@ -36,6 +36,10 @@ internal static class EnemyDateFactionUpdateSustainPatch
         if (__instance == null || __instance.gameObject == null)
             return;
 
+        if ((__instance is SlaveBigAxe || __instance is OtherSlavebigAxe) &&
+            NoREroMod.Patches.Enemy.SlaveBigAxeIllusiveEventGate.ShouldSkipHellGateLogic())
+            return;
+
         try
         {
             EnemyFactionRuntime.SustainFactionCombatApproach(__instance);

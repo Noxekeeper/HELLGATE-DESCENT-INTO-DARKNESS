@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.IO;
+using NoREroMod.Systems.Spawn;
 using UnityEngine;
 
 namespace NoREroMod.Patches.HellTraps;
@@ -20,8 +21,7 @@ internal static class LethalCocoonTrapPaths
         if (string.IsNullOrEmpty(key))
             return false;
 
-        string normalized = key.Replace("(Clone)", string.Empty).Trim().ToLowerInvariant();
-        return normalized == TemplateKey || normalized == LegacyTemplateKeyAlias.ToLowerInvariant();
+        return SpawnTemplateCatalog.TemplateKeysMatch(key, TemplateKey);
     }
 
     internal static string ResolveDeathClipDirectory(string configuredRelativePath)

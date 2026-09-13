@@ -7,7 +7,7 @@ for *Night of Revenge*.
 |---|---|
 | Assembly | `NoR_HellGate.dll` |
 | GUID | `NoREroMod_HellGate` |
-| Version | `1.2.4` (`Core/PluginInfo.cs`) |
+| Version | `1.2.6` (`Core/PluginInfo.cs`) |
 | Companion | `NoREroMod.dll` (HellGate fork) — required, loaded side by side |
 | License | GPL-3.0 (`LICENSE`) |
 
@@ -26,8 +26,9 @@ directly:
 - it patches vanilla game types (`EnemyDate`, `playercon`, `UImng`,
   `Bigoni`, `suraimu`, …) with Harmony;
 - it runs its own gameplay services: spawn pipeline, EventCore, factions,
-  pregnancy, economy, QTE 3.0, rage, handoff, HellTraps, MindBroken, and the
-  presentation stack;
+   pregnancy, economy, QTE 3.0, rage, handoff, HellTraps, DeadArmor,
+   Costumes, EnemyFatality,
+  MindBroken, and the presentation stack;
 - features are config- and JSON-driven so content can change without
   recompiling wherever possible.
 
@@ -117,27 +118,33 @@ Order matters; later stages depend on earlier ones. The authoritative
 sequence is `Plugin.Awake()`:
 
 1. `SetUpConfigs()` binds `NoREroMod_HellGate.cfg`.
-2. `PregnancyConfig.Initialize()`.
+2. `PregnancyConfig.Initialize()`, `DeadArmorConfig.Initialize()`,
+   `LostSoundsConfig.Initialize()`, `CostumesConfig.Initialize()`, and
+   `EnemyFatalityConfig` / `WhiteInquisitorFatalityConfig` /
+   `EnemyFatalityProfileCatalog` init.
 3. `NoREroModScaffoldConfigPush.Apply()` synchronizes required companion
    settings.
 4. `SpawnTemplateCatalog.Initialize()`.
 5. `SetUpPatches()` performs isolated Harmony registration and also
-   initializes patch-owned services (including attack audio and Rage core).
+   initializes patch-owned services (including attack audio, Rage core, and
+   `DeadArmorPatches.Apply`, `CostumesPatches.Apply`).
 6. HellTraps register their templates and preload death displays/audio.
    This is **after** patch registration but before any scene spawn execution.
-7. `LocationTransitionSpawnController` is attached to the plugin object.
-8. EventCore installs; struggle/dialogue/QTE and H-scene camera frameworks
+7. `DeadArmorBootstrap.Initialize()`, `LostSoundsBootstrap.Initialize()`, and
+   `EnemyFatalityBootstrap.Initialize()` preload assets (isolated loaders).
+8. `LocationTransitionSpawnController` is attached to the plugin object.
+9. EventCore installs; struggle/dialogue/QTE and H-scene camera frameworks
    initialize.
-9. EventTrap and Reinforcement bootstraps install unconditionally; their
-   enable flags gate runtime behavior inside their drivers.
-10. MindBroken presentation/recovery, splash, Rage presentation, portrait,
+10. EventTrap and Reinforcement bootstraps install unconditionally; their
+    enable flags gate runtime behavior inside their drivers.
+11. MindBroken presentation/recovery, splash, Rage presentation, portrait,
     and scene load/unload handlers initialize in their code order.
-11. Diagnostics initialize (always compiled; JSON-gated and disabled by
+12. Diagnostics initialize (always compiled; JSON-gated and disabled by
     default).
-12. Economy config initializes; when enabled, gold assets, wallet, and lost
+13. Economy config initializes; when enabled, gold assets, wallet, and lost
     pile loader initialize.
-13. The NoREroMod compatibility probe runs.
-14. `HellGateApi.Initialize()` publishes the external API only after all
+14. The NoREroMod compatibility probe runs.
+15. `HellGateApi.Initialize()` publishes the external API only after all
     subsystem initialization completes.
 
 ### 5.2 Per-frame hub
@@ -178,7 +185,7 @@ Detailed references live in [`docs/modules/`](docs/modules/).
 
 | Subsystem | Code | Reference |
 |-----------|------|-----------|
-| Spawn pipeline | `Systems/Spawn/` | [SPAWN.md](docs/modules/SPAWN.md) |
+| Spawn pipeline + F11 Spawn System Editor V2.0 | `Systems/Spawn/` | [SPAWN.md](docs/modules/SPAWN.md) |
 | EventCore + EventTrap + Reinforcement | `Systems/EventCore/` | [EVENT_CORE.md](docs/modules/EVENT_CORE.md) |
 | Factions, reputation, combat AI | `Systems/CombatAi/` | [FACTIONS_AND_COMBAT_AI.md](docs/modules/FACTIONS_AND_COMBAT_AI.md) |
 | Pregnancy | `Systems/Pregnancy/` | [PREGNANCY.md](docs/modules/PREGNANCY.md) |
@@ -186,10 +193,17 @@ Detailed references live in [`docs/modules/`](docs/modules/).
 | QTE, struggle, weapon mechanics | `Systems/Gameplay/` | [QTE_STRUGGLE_AND_GAMEPLAY.md](docs/modules/QTE_STRUGGLE_AND_GAMEPLAY.md) |
 | Rage | `Systems/Rage/` | [RAGE.md](docs/modules/RAGE.md) |
 | Grab + handoff | `Systems/GrabSystem/`, `Systems/Handoff/` | [GRAB_AND_HANDOFF.md](docs/modules/GRAB_AND_HANDOFF.md) |
-| MindBroken | `Patches/UI/MindBroken/` | [MIND_BROKEN.md](docs/modules/MIND_BROKEN.md) |
-| HellTraps | `Patches/HellTraps/` | [HELL_TRAPS.md](docs/modules/HELL_TRAPS.md) |
+| MindBroken | `Patches/UI/MindBroken/` (`MindBrokenRealtimeGate`) | [MIND_BROKEN.md](docs/modules/MIND_BROKEN.md) |
+| HellTraps | `Patches/HellTraps/` | [HELL_TRAPS.md](docs/modules/HELL_TRAPS.md) — death clip + combat AI freeze |
+| DeadArmor | `Systems/DeadArmor/` | [DEAD_ARMOR.md](docs/modules/DEAD_ARMOR.md) |
+| Illusive / Rodenia SlaveBigAxe event | `Patches/Enemy/SlaveBigAxe/SlaveBigAxeIllusive*.cs` | [ILLUSIVE_RODENIA_EVENT.md](docs/modules/ILLUSIVE_RODENIA_EVENT.md) |
+| LostSounds | `Systems/LostSounds/` | [LOST_SOUNDS.md](docs/modules/LOST_SOUNDS.md) |
+| Costumes | `Systems/Costumes/` | [COSTUMES.md](docs/modules/COSTUMES.md) |
+| EnemyFatality | `Systems/EnemyFatality/` | [ENEMY_FATALITY.md](docs/modules/ENEMY_FATALITY.md) — session lock + AI freeze |
 | Enemy integration + custom packs | `Patches/Enemy/` | [CUSTOM_ENEMIES.md](docs/modules/CUSTOM_ENEMIES.md) |
 | Dialogue, camera, UI, audio, effects | `Systems/Dialogue/`, `Systems/Camera/`, `Systems/UI/`, `Systems/Audio/`, `Systems/Effects/`, `Systems/BadEndPlayer/` | [PRESENTATION.md](docs/modules/PRESENTATION.md) |
+| Boot tips + tutorial guide | `Systems/UI/HellGateBootTips.cs`, early-boot in `LoadingScreenSystem` | [BOOT_TIPS_AND_GUIDE.md](docs/modules/BOOT_TIPS_AND_GUIDE.md) |
+| Splash Options + difficulty presets | `Systems/UI/HellGateSplashOptionsMenu.cs`, `Systems/Difficulty/HellGateDifficultyPresetModule.cs` | [SPLASH_OPTIONS_AND_DIFFICULTY.md](docs/modules/SPLASH_OPTIONS_AND_DIFFICULTY.md) |
 
 Cross-cutting infrastructure:
 
@@ -231,7 +245,9 @@ only. Roots, formats, and save files:
 - H-scene escape flows through the existing cleanup patch set; no parallel
   escape paths.
 - `Time.timeScale` changes are restored via the escape/cleanup path; grab
-  slow-mo defers to the start-zoom effect when enabled.
+  slow-mo defers to the start-zoom effect when enabled. DeadArmor's armored
+  grab-throw slow-mo is independent (no zoom) and restores `timeScale` when
+  its real-time window ends.
 - Persistence only via save/load hooks; per-slot files; gameplay code never
   flushes to disk.
 - Boss classification is centralized in `FactionBossDetection`.

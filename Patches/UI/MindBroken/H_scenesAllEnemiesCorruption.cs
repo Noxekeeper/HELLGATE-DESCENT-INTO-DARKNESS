@@ -20,18 +20,22 @@ internal static class H_scenesAllEnemiesCorruption
 
         if (__instance.erodown != 0 && __instance.eroflag && ___playerstatus.Hp > 0f)
         {
+            float dt = MindBrokenRealtimeGate.GetClampedDeltaTime();
+            if (dt <= 0f)
+                return;
+
             float perSecondPercent = Mathf.Max(0f, Plugin.mindBrokenHScenePercentPerSecond?.Value ?? 0.1f);
             if (perSecondPercent > 0f)
             {
                 // Config is display-% per second (0.1 = +0.1%/sec), same convention as HighRagePassivePercentPerSecond.
-                MindBrokenSystem.AddPercent((perSecondPercent / 100f) * Time.deltaTime, "global-hscene");
+                MindBrokenSystem.AddPercent((perSecondPercent / 100f) * dt, "global-hscene");
             }
 
             float mbPercent = MindBrokenSystem.Percent; // 0..1
             if (mbPercent > 0f)
             {
                 float pleasureGainPerSec = PleasurePerSecondPerMbPercent * (mbPercent * 100f);
-                ___playerstatus.BadstatusValPlus(pleasureGainPerSec * Time.deltaTime);
+                ___playerstatus.BadstatusValPlus(pleasureGainPerSec * dt);
             }
         }
     }

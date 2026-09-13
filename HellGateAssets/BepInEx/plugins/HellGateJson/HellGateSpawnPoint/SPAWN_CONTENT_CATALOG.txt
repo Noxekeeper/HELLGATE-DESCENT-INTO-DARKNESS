@@ -44,7 +44,7 @@ HellGateSpawn_VillageMain.txt
 HellGateSpawn_ScapegoatEntrance.txt
 HellGateSpawn_ParishChurch.txt
 HellGateSpawn_UndergroundChurch.txt
-HellGateSpawn__inunderground church.txt
+HellGateSpawn_inunderground church.txt
 HellGateSpawn_Prison.txt
 HellGateSpawn_nightless city C.txt
 HellGateSpawn_nightless city ragdum b.txt
@@ -81,7 +81,7 @@ Tyoukyousi           TyoukyousiRed        Undead               Vagrant
 VagrantGuard         VagrantThrow         WaveSpike            WaveSpikeGuard
 Wolf                 WoodWana             (и др. из EnemyPrefabRegistry.cs)
 
-HellGate-кастом: biscord, MafiaBossCustom, BigoniBrother, HellishTouzokuBoss, HellishTouzokuAxe, HellishTouzokuSword, Wolf.
+HellGate-кастом: biscord, MafiaBossCustom, BigoniBrother, HellishTouzokuBoss, HellishTouzokuAxe, HellishTouzokuSword, Wolf, Demon_gorotuki.
 
 
 ## 4. Фракции (pipe |faction=)
@@ -135,7 +135,8 @@ EventCore-NPC (пассив до резолва события):
   etrap_touzoku_touzokuaxe          — TouzokuNormal/Axe, спавн справа, до 3 волн
   etrap_undead                      — Undead, радиус 12, задержка засады 1 с
   etrap_dorei, etrap_goblin, etrap_kakasi, etrap_mafiabosscustom, etrap_mafia,
-  etrap_mutude, etrap_prisonofficer, etrap_slaughterer, etrap_vagrant, etrap_bigonibrother
+  etrap_mutude, etrap_prisonofficer, etrap_slaughterer, etrap_vagrant, etrap_bigonibrother,
+  etrap_angelstatue (AngelStatue ×1, радиус 7, demons)
 
 Пример:
   EVENTTRAP,etrap_touzoku_touzokuaxe,-111.86,-124.50

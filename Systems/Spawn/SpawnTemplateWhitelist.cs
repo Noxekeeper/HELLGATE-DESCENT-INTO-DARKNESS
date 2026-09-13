@@ -78,4 +78,22 @@ internal static class SpawnTemplateWhitelist
             Plugin.Log?.LogWarning($"[SPAWN WHITELIST] Failed to read whitelist: {ex.Message}");
         }
     }
+
+    /// <summary>Map scenes declared as <c>key@SceneName</c> for disk-cache hydrate fallback.</summary>
+    internal static void CollectScenesForKey(string key, HashSet<string> scenes)
+    {
+        if (scenes == null || string.IsNullOrEmpty(key) || entries.Count == 0)
+            return;
+
+        string normalized = SpawnTemplateCatalog.NormalizeTemplateKey(key);
+        for (int i = 0; i < entries.Count; i++)
+        {
+            Entry entry = entries[i];
+            if (string.IsNullOrEmpty(entry.SceneName))
+                continue;
+            if (!string.Equals(SpawnTemplateCatalog.NormalizeTemplateKey(entry.Key), normalized, StringComparison.Ordinal))
+                continue;
+            scenes.Add(entry.SceneName);
+        }
+    }
 }

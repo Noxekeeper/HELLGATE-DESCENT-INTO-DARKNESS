@@ -1,0 +1,114 @@
+{
+  "intervalSeconds": 10,
+  "ui": {
+    "cachingMessage": "Caching HellGate content — please wait…",
+    "doneButton": "Done",
+    "tutorialTitle": "TUTORIAL"
+  },
+  "tips": [
+    {
+      "phase": "loading",
+      "id": "manifesto",
+      "text": "HellGate lets you tune every module to your taste.\n\nFor a full walkthrough, open the <b>Manifesto</b> guide in the <b>HELLGATE_README</b> folder."
+    },
+    {
+      "phase": "loading",
+      "id": "menu_note",
+      "text": "<b>NOTE</b>\n\nTo leave a menu, press <b>[Space]</b> (Jump).\n<b>[Space]</b> is also the <b>Cancel</b> button.\n\nTo confirm an action, press <b>[E]</b>."
+    },
+    {
+      "phase": "loading",
+      "id": "rage_meter",
+      "text": "<b>RAGE</b>\n\nThe Rage meter fills when you:\n• deal damage\n• block or parry\n• kill enemies\n\nRage drains passively during struggles.\nIf Rage is above <b>50%</b>, the MindBroken meter will rise."
+    },
+    {
+      "phase": "loading",
+      "id": "mindbroken",
+      "text": "<b>MindBroken</b>\n\nMind Break directly affects how hard struggles feel.\nThe higher it is, the harder it is to mash stamina while grabbed.\n\nMindBroken rises from:\n• H-struggles (passive)\n• some animations (faster growth)\n• passive growth when Rage is above <b>50%</b>\n• missing up/down QTE arrows during a struggle"
+    },
+    {
+      "phase": "loading",
+      "id": "rage_tiers",
+      "text": "<b>Rage Mode [G]</b> — three tiers\n\n<b>Tier 1</b> (~5s) — a strong combo up to 9 hits.\n\n<b>Tier 2</b> (~10s) — same combo plus an instant grab escape. Idle ~5s and your mind starts to break.\n\n<b>Tier 3</b> (~15s) — demon wings and the same advantages.\n\nWhile Rage is active you can't be knocked down or grabbed.\nIf you're grabbed before activating it, the Rage bar drains very fast."
+    },
+    {
+      "phase": "loading",
+      "id": "controls",
+      "holdUntilDone": true,
+      "text": "<b>Basic controls</b>\n\n<b>[LMB]</b> — attack (3-hit combo)\n<b>[RMB]</b> — block (works mid-air). On EASY, holding it fully blocks grabs\n<b>[RMB]+[W]</b> — parry\n<b>[E]</b> after a parry — Vengeance Strike (15 Rage, max 100)\n<b>[F]</b> — dodge (i-frames). On EASY costs 20 stamina\n<b>[T]</b> — Bullet-Time\n<b>[G]</b> — Rage Mode (3 tiers)\n<b>[V]</b> — combat camera (3 modes)\n<b>[H]</b> — faction relations\n\nHold <b>[E]</b> 3s — lie down / surrender\nHold <b>[E]</b> 6s — game over\n<b>[ESC]+[Enter]</b> — instant death\n<b>[F1]</b> — cheat menu (at your own risk)\n<b>[F11]</b> + RMB — hot-respawn enemies, traps, and events\n<b>[Space]</b> — back / exit"
+    },
+
+    {
+      "phase": "guide",
+      "id": "parry",
+      "text": "<b>Parry:</b>\n\nHold block and tap <b>[W]</b> just before the hit lands to stun the enemy.\n\nPress <b>[E]</b> nearby for Vengeance Strike — slows time and deals heavy damage. Costs <b>15 Rage</b>.\n\nArrows and axes are reflected; magic is absorbed. Miss the timing and the attack or grab goes through.",
+      "video": "Tutorial Guide source/Parry.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "rage",
+      "text": "<b>Rage Mode:</b>\n\nPress <b>[G]</b> for 9-hit sword combos with no fatigue.\n\nWhile Rage is active you can't be knocked down or grabbed, and you deal more damage.\n\nKeep fighting — idle too long and your mind starts to break.",
+      "video": "Tutorial Guide source/Rage.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "timeslomo",
+      "text": "<b>Bullet-Time:</b>\n\nSpend Rage with <b>[T]</b> to slow time.\n\nEvery second drains Rage — and chips away at your mind.",
+      "video": "Tutorial Guide source/TimeSloMo.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "healthpotion",
+      "text": "<b>Health Potion:</b>\n\nUse a Health Potion to break free from a grab instantly.",
+      "video": "Tutorial Guide source/HealthPotion.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "ambushthoughts",
+      "text": "<b>Witch sense:</b>\n\nNear traps, Aradia's witch sense can warn of an ambush.\n\nShe also senses lethal traps nearby.",
+      "video": "Tutorial Guide source/AmbushThoughts.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "block",
+      "text": "<b>Block:</b>\n\nHold <b>[RMB]</b> to cut incoming damage and stop knockdowns and grabs.\n\nWorks in mid-air too.",
+      "video": "Tutorial Guide source/Block.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "rageescape",
+      "text": "<b>Rage escape:</b>\n\nWith Rage tier <b>2</b> or <b>3</b>, press <b>[G]</b> while grabbed to break free.\n\nWatch the meter — Rage drains during a grab, and you may not have enough left.",
+      "video": "Tutorial Guide source/RageEscape.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "qte",
+      "text": "<b>Struggle Out:</b>\n\nFill your stamina to break free.\n\n1) When you see Struggle Out — mash <b>[LMB]</b>. You can also mash <b>[E]</b>.\n\n2) When left/right arrows <b>[←]</b> <b>[→]</b> appear — spam <b>[A]</b> / <b>[D]</b>. Each press builds stamina.\n\nDon't press anything if the prompt and arrows are gone — you'll lose stamina.",
+      "video": "Tutorial Guide source/QTE.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "qte2",
+      "text": "<b>Risky escape:</b>\n\nWhen <color=#E8C84A>yellow</color> and <color=#E05050>red</color> up/down arrows <b>[↑]</b> <b>[↓]</b> appear, they swap colors with each other.\n\nHit the <color=#E8C84A>yellow</color> arrow several times while the indicator is visible.\nHits give more stamina, and a clean streak adds a bonus.\n\nHitting <color=#E05050>red</color> — or pressing when no arrows are shown — empties your stamina.",
+      "video": "Tutorial Guide source/QTE2.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "dash",
+      "text": "<b>Dodge & Mercy:</b>\n\nDodge with <b>[F]</b> to avoid damage and trigger Mercy.\n\nIf you stay near the enemy and don't attack during Mercy, faction standing rises by <b>+5%</b>.\n\nStanding at <b>+68%</b> or higher is friendly-neutral: that faction stops attacking on its own.\n\nTo check faction standing, press <b>[H]</b>.",
+      "video": "Tutorial Guide source/Dash.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "combatcamera",
+      "text": "<b>Combat camera:</b>\n\nPress <b>[V]</b> to cycle three modes: default → farther → even farther.",
+      "video": "Tutorial Guide source/CombatCamera.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "hcameracontrol",
+      "text": "<b>H-scene camera:</b>\n\nIn HellGate you can steer the camera during H-scenes.\n\nArrow keys <b>[↑]</b> <b>[↓]</b> <b>[←]</b> <b>[→]</b> — smooth pan.\n<b>[Space]</b> — cycle zoom (several levels).\n\nThe game doesn't always center on the animation — adjust the view by hand whenever you need.",
+      "video": "Tutorial Guide source/H-CameraControl.mp4"
+    }
+  ]
+}

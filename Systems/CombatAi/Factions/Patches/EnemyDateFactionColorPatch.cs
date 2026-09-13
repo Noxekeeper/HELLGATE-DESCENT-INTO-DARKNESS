@@ -22,6 +22,12 @@ internal static class EnemyDateFactionColorBootstrapPatch
             return;
         if (!EnemyFactionsConfig.Enable)
             return;
+        if ((enemy is SlaveBigAxe || enemy is OtherSlavebigAxe) &&
+            NoREroMod.Patches.Enemy.SlaveBigAxeIllusiveEventGate.ShouldSkipHellGateLogic())
+        {
+            FactionBoneMarkerAttachment.Remove(enemy);
+            return;
+        }
         if (FactionMarkerVisibility.ShouldSuppress(enemy))
         {
             FactionBoneMarkerAttachment.Remove(enemy);

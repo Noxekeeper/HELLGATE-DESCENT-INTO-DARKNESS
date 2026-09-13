@@ -9,7 +9,8 @@ using NoREroMod.Systems.Cache;
 namespace NoREroMod.Systems.Camera;
 
 /// <summary>
-/// Cycles combat camera zoom presets via V key: Standard -> Far -> UltraFar -> Standard.
+/// Cycles combat camera zoom presets via <see cref="Plugin.combatCameraHotkey"/> (default V):
+/// Standard -> Far -> UltraFar -> Standard.
 /// Only active outside H-scenes. Resets on H-scene entry and fun_cameraReset.
 /// </summary>
 internal class CombatCameraPresetSystem
@@ -180,10 +181,15 @@ internal class CombatCameraPresetSystem
 
             if (isHScene) return;
 
+            // F11 spawn authoring owns camera navigation (WASD / scroll).
+            if (global::NoREroMod.SpawnPointAnalyzer.IsRecordingModeActive)
+                return;
+
             if (_currentPreset != ZoomPreset.Standard && _activeTargetHalfSize > 0f)
                 SyncAllBaselines(_activeTargetHalfSize);
 
-            if (!Input.GetKeyDown(KeyCode.V)) return;
+            KeyCode toggleKey = Plugin.combatCameraHotkey?.Value ?? KeyCode.V;
+            if (toggleKey == KeyCode.None || !Input.GetKeyDown(toggleKey)) return;
 
             FindComponents(__instance);
             CaptureBaseSize();

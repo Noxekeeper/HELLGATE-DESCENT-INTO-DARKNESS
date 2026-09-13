@@ -1,9 +1,10 @@
 {
   "Enable": true,
   "DebugLogging": false,
+  "ActivationDiag": true,
   "BanditsIgnorePlayer": true,
   "BanditsVsDemonsRange": 5.5,
-  "ActivationDistanceFromPlayer": 25.0,
+  "ActivationDistanceFromPlayer": 15.0,
   "ActivationDistanceHorizontalOnly": true,
   "ActivationMaxVerticalDelta": 6.0,
   "EnablePlayerProvocation": true,
@@ -77,7 +78,6 @@
     "Goblin",
     "GobBigAlter",
     "GobRider",
-    "Gorotuki",
     "Sheepheaddemon",
     "Minotaurosu",
     "Slaughterer",
@@ -90,7 +90,6 @@
     "DarkPixie",
     "Candore",
     "SuccubusSpine",
-    "Tentacle",
     "DemonRequiemKnight",
     "IvyRoadStop",
     "OriginIbaranoMajyo",
@@ -118,7 +117,8 @@
     "OtherSlavebigAxe",
     "Librarian",
     "AngelStatue",
-    "Praymaiden"
+    "Praymaiden",
+    "Tentacle"
   ],
   "MafiaTypes": [
     "Mafia",
@@ -129,22 +129,23 @@
     "Tyoukyousi",
     "TyoukyoushiRed",
     "TyoukyousiRed",
-    "Boss_Ranch"
+    "Boss_Ranch",
+    "Gorotuki"
   ],
   "UndeadTypes": [
     "Undead",
     "MummyDog",
     "MummyMan",
     "Cocoonman",
-    "Sisiruirui"
+    "Sisiruirui",
+    "BlackOoze_Monster",
+    "BlackOoze",
+    "SkeltonOoze"
   ],
   "MonsterTypes": [
     "Kinoko",
     "Snailshell",
     "NormalSnailshell",
-    "BlackOoze_Monster",
-    "BlackOoze",
-    "SkeltonOoze",
     "BigMerman",
     "DifferentBigMerman",
     "Coolmaiden",
@@ -168,6 +169,16 @@
     {
       "Left": "bandits_mafia",
       "Right": "mafia",
+      "Relation": "friendly"
+    },
+    {
+      "Left": "bandits",
+      "Right": "mafia",
+      "Relation": "friendly"
+    },
+    {
+      "Left": "bandits",
+      "Right": "bandits_mafia",
       "Relation": "friendly"
     },
     {

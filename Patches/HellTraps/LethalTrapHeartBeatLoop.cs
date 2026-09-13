@@ -20,7 +20,7 @@ internal static class LethalTrapHeartBeatLoop
 
     internal static void Initialize(MonoBehaviour host)
     {
-        if ((!Plugin.enableLethalMagicTrap.Value && !Plugin.enableLethalCocoonTrap.Value) ||
+        if ((!Plugin.IsLethalMagicTrapActive && !Plugin.IsLethalCocoonTrapActive) ||
             host == null ||
             _loadStarted)
             return;

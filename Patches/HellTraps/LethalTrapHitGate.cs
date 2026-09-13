@@ -1,11 +1,11 @@
 namespace NoREroMod.Patches.HellTraps;
 
-/// <summary>Prevents lethal_magictrap and lethal_cocoontrap fun_damage hooks from fighting each other.</summary>
+/// <summary>Prevents lethal trap fun_damage hooks from fighting each other.</summary>
 internal static class LethalTrapHitGate
 {
     internal static bool IsCocoonLethalHitActive()
     {
-        if (!Plugin.enableLethalCocoonTrap.Value)
+        if (!Plugin.IsLethalCocoonTrapActive)
             return false;
 
         return LethalCocoonTrapDeathContext.IsLethalDamageInFlight ||
@@ -17,7 +17,7 @@ internal static class LethalTrapHitGate
 
     internal static bool IsMagicLethalHitActive()
     {
-        if (!Plugin.enableLethalMagicTrap.Value)
+        if (!Plugin.IsLethalMagicTrapActive)
             return false;
 
         return LethalMagicTrapDeathContext.IsLethalDamageInFlight ||
@@ -26,5 +26,17 @@ internal static class LethalTrapHitGate
                LethalMagicTrapDeathContext.IsLethalTrapDamageArmed ||
                LethalMagicTrapDeathContext.IsCustomDeathActive ||
                LethalMagicTrapDeathContext.IsEroSuppressionActive;
+    }
+
+    internal static bool IsLightningLethalHitActive()
+    {
+        if (!Plugin.IsLethalLightningTrapActive)
+            return false;
+
+        return LethalLightningTrapDeathContext.IsLethalDamageInFlight ||
+               LethalLightningTrapDeathContext.HasPending ||
+               LethalLightningTrapDeathContext.HitDealtDamage ||
+               LethalLightningTrapDeathContext.IsCustomDeathActive ||
+               LethalLightningTrapDeathContext.IsEroSuppressionActive;
     }
 }

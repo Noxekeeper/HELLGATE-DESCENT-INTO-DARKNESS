@@ -43,7 +43,7 @@ internal static class LethalCocoonTrapRuntime
 
     internal static void TryEnsureTemplateRegistered()
     {
-        if (!Plugin.enableLethalCocoonTrap.Value)
+        if (!Plugin.IsLethalCocoonTrapActive)
             return;
 
         if (SpawnTemplateCatalog.HasTemplate(LethalCocoonTrapPaths.TemplateKey) && _registerAttempted)
@@ -104,7 +104,7 @@ internal static class LethalCocoonTrapRuntime
 
     internal static void ConfigureSpawnedTrap(GameObject spawnedTrap, bool logSpawn = false)
     {
-        if (spawnedTrap == null || !Plugin.enableLethalCocoonTrap.Value)
+        if (spawnedTrap == null || !Plugin.IsLethalCocoonTrapActive)
             return;
 
         Cocoontrap trapComponent = ResolveCocoontrapComponent(spawnedTrap);
@@ -152,7 +152,7 @@ internal static class LethalCocoonTrapRuntime
     /// <summary>Intercept playerDamage before ExecuteEvents (parent may not be Cocoontrap).</summary>
     internal static bool TryHandleLethalPlayerDamage(playerDamage source, Collider2D col)
     {
-        if (!Plugin.enableLethalCocoonTrap.Value || source == null || col == null)
+        if (!Plugin.IsLethalCocoonTrapActive || source == null || col == null)
             return false;
 
         if (!LethalCocoonTrapRegistry.IsLethalCocoonTrap(source))
@@ -171,7 +171,7 @@ internal static class LethalCocoonTrapRuntime
     /// <summary>Handles Cocoontrap.OndamageSend for lethal variant; returns true if vanilla should be skipped.</summary>
     internal static bool TryHandleLethalDamageSend(Cocoontrap trap, string tag)
     {
-        if (!Plugin.enableLethalCocoonTrap.Value || trap == null)
+        if (!Plugin.IsLethalCocoonTrapActive || trap == null)
             return false;
 
         if (!IsLethalTrap(trap))
@@ -188,6 +188,10 @@ internal static class LethalCocoonTrapRuntime
     {
         if (anchor == null || player == null)
             return false;
+
+        // Combat fatality clip owns the body — do not start WebSpike / cocoon death on top.
+        if (NoREroMod.Systems.EnemyFatality.EnemyFatalitySession.IsActive)
+            return true;
 
         if (player.stepfrag)
             return true;
@@ -231,7 +235,7 @@ internal static class LethalCocoonTrapRuntime
 
     internal static void FinalizeLethalHit(playercon player)
     {
-        if (!Plugin.enableLethalCocoonTrap.Value || player == null)
+        if (!Plugin.IsLethalCocoonTrapActive || player == null)
             return;
 
         if (_finalizeConsumedThisHit)

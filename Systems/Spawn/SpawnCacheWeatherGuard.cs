@@ -7,7 +7,7 @@ using Object = UnityEngine.Object;
 namespace NoREroMod.Systems.Spawn;
 
 /// <summary>
-/// Additive scene loads for spawn template cache leak rain/VFX onto MainCamera.
+/// Additive scene loads for spawn template cache leak rain/VFX/H-audio onto title/menu.
 /// Snapshot gameplay weather, suppress loaded scene effects, restore after hydrate.
 /// </summary>
 internal static class SpawnCacheWeatherGuard
@@ -20,24 +20,212 @@ internal static class SpawnCacheWeatherGuard
     internal static void BeginHydrateBatch()
     {
         SnapshotMainCameraRain();
+        SilenceEroAudioBuses();
     }
 
     internal static void EndHydrateBatch()
     {
         RestoreMainCameraRain();
         CleanupLeakedRainEffects();
+        SilenceEroAudioBuses();
+        MuteLeakedHydrateAudioSources();
     }
 
     internal static void OnAdditiveSceneLoaded(Scene scene)
     {
         SuppressWeatherInScene(scene);
+        SuppressAudioInScene(scene);
         RestoreMainCameraRain();
+        SilenceEroAudioBuses();
     }
 
     internal static void OnAdditiveSceneUnloaded()
     {
         RestoreMainCameraRain();
         CleanupLeakedRainEffects();
+        SilenceEroAudioBuses();
+    }
+
+    /// <summary>Call when entering title menu — stop H moans left over from RanchEro2 hydrate.</summary>
+    internal static void SilenceTitleMenuEroAudio()
+    {
+        SilenceEroAudioBuses();
+        MuteLeakedHydrateAudioSources();
+        DisableLingeringEroBehaviours();
+    }
+
+    private static void SilenceEroAudioBuses()
+    {
+        try
+        {
+            DarkTonic.MasterAudio.MasterAudio.StopBus("EroVoice");
+        }
+        catch { }
+
+        try
+        {
+            DarkTonic.MasterAudio.MasterAudio.StopBus("EroSE");
+        }
+        catch { }
+
+        try
+        {
+            Type masterAudio = Type.GetType("DarkTonic.MasterAudio.MasterAudio, Assembly-CSharp-firstpass")
+                               ?? Type.GetType("DarkTonic.MasterAudio.MasterAudio, Assembly-CSharp");
+            if (masterAudio == null)
+                return;
+
+            System.Reflection.MethodInfo stopBus = masterAudio.GetMethod(
+                "StopBus",
+                System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static,
+                null,
+                new[] { typeof(string) },
+                null);
+            if (stopBus == null)
+                return;
+
+            stopBus.Invoke(null, new object[] { "EroVoice" });
+            stopBus.Invoke(null, new object[] { "EroSE" });
+        }
+        catch { }
+    }
+
+    private static void SuppressAudioInScene(Scene scene)
+    {
+        if (!scene.IsValid() || !scene.isLoaded)
+            return;
+
+        GameObject[] roots = scene.GetRootGameObjects();
+        for (int i = 0; i < roots.Length; i++)
+        {
+            GameObject root = roots[i];
+            if (root == null)
+                continue;
+
+            AudioSource[] sources = root.GetComponentsInChildren<AudioSource>(true);
+            for (int a = 0; a < sources.Length; a++)
+            {
+                AudioSource src = sources[a];
+                if (src == null)
+                    continue;
+                src.playOnAwake = false;
+                src.Stop();
+                // Do NOT mute — that would leave the AudioSource permanently muted if it is later reused
+                // by a real H-scene. Stopping and disabling playOnAwake is enough to keep it silent during
+                // the additive scene load.
+            }
+
+            MonoBehaviour[] behaviours = root.GetComponentsInChildren<MonoBehaviour>(true);
+            for (int b = 0; b < behaviours.Length; b++)
+            {
+                MonoBehaviour mb = behaviours[b];
+                if (mb == null)
+                    continue;
+                string typeName = mb.GetType().Name ?? "";
+                if (typeName.IndexOf("ERO", StringComparison.OrdinalIgnoreCase) >= 0
+                    || typeName.IndexOf("Ero", StringComparison.OrdinalIgnoreCase) >= 0)
+                    mb.enabled = false;
+            }
+        }
+    }
+
+    private static void MuteLeakedHydrateAudioSources(Scene additiveScene)
+    {
+        try
+        {
+            if (!additiveScene.IsValid() || !additiveScene.isLoaded)
+                return;
+
+            GameObject[] roots = additiveScene.GetRootGameObjects();
+            for (int r = 0; r < roots.Length; r++)
+            {
+                GameObject root = roots[r];
+                if (root == null)
+                    continue;
+
+                AudioSource[] sources = root.GetComponentsInChildren<AudioSource>(true);
+                for (int i = 0; i < sources.Length; i++)
+                {
+                    AudioSource src = sources[i];
+                    if (src == null || src.gameObject == null)
+                        continue;
+
+                    string goName = src.gameObject.name ?? "";
+                    bool looksEro =
+                        goName.IndexOf("ERO", StringComparison.OrdinalIgnoreCase) >= 0
+                        || goName.IndexOf("Ero", StringComparison.OrdinalIgnoreCase) >= 0
+                        || goName.IndexOf("tyoukyou", StringComparison.OrdinalIgnoreCase) >= 0
+                        || goName.IndexOf("slave", StringComparison.OrdinalIgnoreCase) >= 0
+                        || IsHellGateTemplateObject(src.gameObject);
+
+                    if (!looksEro)
+                        continue;
+
+                    src.playOnAwake = false;
+                    src.Stop();
+                }
+            }
+        }
+        catch { }
+    }
+
+    /// <summary>
+    /// Back-compat overload for call sites that do not have a scene handle (title menu cleanup).
+    /// Only acts on the additive Ero scene if one is currently loaded; otherwise no-ops.
+    /// </summary>
+    private static void MuteLeakedHydrateAudioSources()
+    {
+        try
+        {
+            Scene additiveScene = GetLoadedHydrateScene();
+            if (!additiveScene.IsValid() || !additiveScene.isLoaded)
+                return;
+
+            MuteLeakedHydrateAudioSources(additiveScene);
+        }
+        catch { }
+    }
+
+    private static Scene GetLoadedHydrateScene()
+    {
+        for (int i = 0; i < SceneManager.sceneCount; i++)
+        {
+            Scene scene = SceneManager.GetSceneAt(i);
+            if (scene.IsValid() && scene.isLoaded &&
+                scene.name.IndexOf("Ero", StringComparison.OrdinalIgnoreCase) >= 0)
+                return scene;
+        }
+        return new Scene();
+    }
+
+    private static void DisableLingeringEroBehaviours()
+    {
+        try
+        {
+            MonoBehaviour[] all = Object.FindObjectsOfType<MonoBehaviour>();
+            for (int i = 0; i < all.Length; i++)
+            {
+                MonoBehaviour mb = all[i];
+                if (mb == null)
+                    continue;
+                string typeName = mb.GetType().Name ?? "";
+                if (typeName.IndexOf("ERO", StringComparison.OrdinalIgnoreCase) < 0
+                    && typeName.IndexOf("Ero", StringComparison.OrdinalIgnoreCase) < 0)
+                    continue;
+
+                GameObject go = mb.gameObject;
+                if (go == null)
+                    continue;
+                if (!IsHellGateTemplateObject(go)
+                    && go.scene.IsValid()
+                    && !string.Equals(go.scene.name, "DontDestroyOnLoad", StringComparison.OrdinalIgnoreCase)
+                    && go.scene.name.IndexOf("Ero", StringComparison.OrdinalIgnoreCase) < 0)
+                    continue;
+
+                mb.enabled = false;
+            }
+        }
+        catch { }
     }
 
     private static void SnapshotMainCameraRain()

@@ -73,6 +73,18 @@ internal class DialogueEventProcessor
             }
         }
 
+        // Process SlaveBigAxe H-scene phrases + Aradia responses
+        if (enemyName == "SlaveBigAxe")
+        {
+            try
+            {
+                SlaveBigAxeHSceneDialogues.ProcessHSceneEvent(enemyInstance, animationName, eventName, seCount);
+            }
+            catch (Exception)
+            {
+            }
+        }
+
         // Process Aradia thoughts for InquisitionBlack — all events
         if (enemyName == "BlackInquisitor")
         {
@@ -134,6 +146,12 @@ internal class DialogueEventProcessor
 
         BonePosition bonePos = GetBonePosition(animationName, seCount, enemyInstance);
         DialogueStyle style = GetDialogueStyle(eventType, animationName);
+        // SlaveBigAxe — lift onomatopoeia 25px above bone (UI + world so CanvasScaler doesn't eat it)
+        if (enemyName == "SlaveBigAxe")
+        {
+            style.VerticalOffset = 25f;
+            bonePos.WorldOffsetY = 0.15f;
+        }
         display.ShowOnomatopoeia(enemyInstance, onomatopoeia, bonePos, style);
     }
 
@@ -286,6 +304,16 @@ internal class DialogueEventProcessor
                 UseScreenCenter = false
             };
         }
+
+        // SlaveBigAxe — onomatopoeia on bone65
+        if (enemyName == "SlaveBigAxe")
+        {
+            return new BonePosition
+            {
+                BoneName = "bone65",
+                UseScreenCenter = false
+            };
+        }
         
         // Kakasi (kakashi_ero2 and EroAnimation) — GG bone: hair_front for cross, face for ground
         if (enemyName == "Kakasi")
@@ -365,6 +393,8 @@ internal class DialogueEventProcessor
             return "Goblin";
         else if (typeName == "InquiBlackEro" || typeName.Contains("InquisitionBlack"))
             return "BlackInquisitor";
+        else if (typeName == "SlaveBigAxeEro")
+            return "SlaveBigAxe";
         else if (typeName == "Mutudeero" || typeName == "Mutude" || typeName.Contains("Mutude"))
             return "Mutude";
         

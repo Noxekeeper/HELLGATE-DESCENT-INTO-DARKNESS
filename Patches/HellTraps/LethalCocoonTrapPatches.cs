@@ -41,7 +41,7 @@ internal static class LethalCocoonTrapPatches
         [HarmonyPriority(Priority.First)]
         private static bool Prefix(playerDamage __instance, Collider2D attack)
         {
-            if (!Plugin.enableLethalCocoonTrap.Value || __instance == null || attack == null)
+            if (!Plugin.IsLethalCocoonTrapActive || __instance == null || attack == null)
                 return true;
 
             if (attack.tag != "playerDAMAGEcol")
@@ -69,7 +69,7 @@ internal static class LethalCocoonTrapPatches
         [HarmonyPriority(Priority.First)]
         private static void Prefix(Cocoontrap __instance)
         {
-            if (!Plugin.enableLethalCocoonTrap.Value || __instance == null)
+            if (!Plugin.IsLethalCocoonTrapActive || __instance == null)
                 return;
 
             if (!LethalCocoonTrapRuntime.IsLethalTrap(__instance))
@@ -88,7 +88,7 @@ internal static class LethalCocoonTrapPatches
     {
         internal static bool Prefix(Cocoontrap __instance, string tag)
         {
-            if (!Plugin.enableLethalCocoonTrap.Value || __instance == null)
+            if (!Plugin.IsLethalCocoonTrapActive || __instance == null)
                 return true;
 
             if (!LethalCocoonTrapRuntime.IsLethalTrap(__instance))
@@ -118,7 +118,7 @@ internal static class LethalCocoonTrapPatches
         [HarmonyPriority(Priority.Last)]
         private static void OverrideLethalDamage(ref float getatk, ref float gettoughcut, ref int kickbackkind)
         {
-            if (!Plugin.enableLethalCocoonTrap.Value || LethalTrapHitGate.IsMagicLethalHitActive())
+            if (!Plugin.IsLethalCocoonTrapActive || LethalTrapHitGate.IsMagicLethalHitActive())
                 return;
 
             if (!LethalCocoonTrapDeathContext.IsLethalDamageInFlight &&

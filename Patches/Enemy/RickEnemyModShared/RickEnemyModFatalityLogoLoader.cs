@@ -114,6 +114,76 @@ internal static class RickEnemyModFatalityLogoLoader
             renderer.enabled = true;
     }
 
+    /// <summary>
+    /// Spawn a fresh FatalityDeath logo at a world point (combat fatalities / non-grab).
+    /// Does not reuse the parked template instance lifecycle.
+    /// </summary>
+    internal static GameObject SpawnLogoAt(
+        Vector3 worldPosition,
+        GameObject materialSource = null,
+        string sortingLayerName = null,
+        int sortingOrder = 200)
+    {
+        try
+        {
+            SkeletonDataAsset asset = GetLogoSkeleton(ResolveMaterialSource(materialSource));
+            if (asset == null)
+            {
+                Plugin.Log?.LogWarning("[RickEnemyMod] Fatality Logo skeleton not loaded — cannot spawn");
+                return null;
+            }
+
+            var go = new GameObject("HellGate_FatalityLogo");
+            go.transform.position = worldPosition;
+            go.AddComponent<RickEnemyModFatalityLogoMarker>();
+            go.AddComponent<RickEnemyModFatalityLogoPlayer>();
+
+            var spine = go.AddComponent<SkeletonAnimation>();
+            spine.skeletonDataAsset = asset;
+            spine.Initialize(true);
+
+            var renderer = go.GetComponent<MeshRenderer>();
+            if (renderer != null)
+            {
+                renderer.enabled = true;
+                if (!string.IsNullOrEmpty(sortingLayerName))
+                    renderer.sortingLayerName = sortingLayerName;
+                renderer.sortingOrder = sortingOrder;
+            }
+
+            ActivateSpawnedIcon(go);
+            Plugin.Log?.LogInfo(
+                "[RickEnemyMod] Fatality Logo spawned at "
+                + worldPosition.x.ToString("0.##")
+                + ","
+                + worldPosition.y.ToString("0.##")
+                + " layer="
+                + (sortingLayerName ?? "(default)")
+                + " order="
+                + sortingOrder);
+            return go;
+        }
+        catch (Exception ex)
+        {
+            Plugin.Log?.LogWarning("[RickEnemyMod] Fatality Logo spawn failed: " + ex.Message);
+            return null;
+        }
+    }
+
+    private static GameObject ResolveMaterialSource(GameObject preferred)
+    {
+        if (preferred != null)
+        {
+            if (preferred.GetComponent<SkeletonAnimation>() != null ||
+                preferred.GetComponentInChildren<SkeletonAnimation>(true) != null)
+                return preferred;
+        }
+
+        // Fall back to any live Spine on scene (player / enemies) for a valid Spine shader.
+        SkeletonAnimation any = UnityEngine.Object.FindObjectOfType<SkeletonAnimation>();
+        return any != null ? any.gameObject : preferred;
+    }
+
     private static void ParkTemplateOffscreen(GameObject go)
     {
         go.SetActive(true);
@@ -221,7 +291,13 @@ internal sealed class RickEnemyModFatalityLogoPlayer : MonoBehaviour
 
     private void OnSpineEvent(Spine.AnimationState state, int trackIndex, Spine.Event e)
     {
-        if (e?.Data != null && e.Data.Name == "END")
-            UnityEngine.Object.Destroy(gameObject);
+        if (e?.Data == null || e.Data.Name != "END")
+            return;
+
+        // Shared template must survive; only spawned clones self-destruct.
+        if (gameObject.name.IndexOf("Template", System.StringComparison.OrdinalIgnoreCase) >= 0)
+            return;
+
+        UnityEngine.Object.Destroy(gameObject);
     }
 }

@@ -52,6 +52,7 @@ internal static class EnemyPrefabRegistry
         { "Slaughterer", new[] { "Slaughterer" } },
         { "Butcher", new[] { "Slaughterer" } }, // RickEnemyMod: vanilla Slaughterer combat, custom fatality spine on erodata
         { "Sisterknight", new[] { "Sisterknight" } },
+        { "SisterKnight", new[] { "Sisterknight" } },
         { "CrawlingCreatures", new[] { "CrawlingCreatures" } },
         { "CrawlingDead", new[] { "CrawlingDead_spine" } },
         { "CrawlingSisterKnight", new[] { "CrawlingSisterKnight" } },
@@ -71,7 +72,9 @@ internal static class EnemyPrefabRegistry
         { "Tyoukyousi", new[] { "Tyoukyousi_spine" } },
         { "TyoukyousiRed", new[] { "Tyoukyousi_Red" } },
         { "Gorotuki", new[] { "Gorotuki" } },
+        { "Demon_gorotuki", new[] { "Gorotuki" } }, // Demon Gorotuki: same prefab; skeleton replaced with Demon_gorotuki / Demon_gorotuki_ERO
         { "Cocoonman", new[] { "CocoonmanStart" } },
+        { "CocoonmanStart", new[] { "CocoonmanStart" } },
         { "NormalSnailshell", new[] { "NormalSnailshell" } },
         { "Snailshell", new[] { "Snailshell" } },
         { "BigMerman", new[] { "BigMerman" } },

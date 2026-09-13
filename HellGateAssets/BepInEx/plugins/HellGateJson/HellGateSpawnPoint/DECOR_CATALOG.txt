@@ -1,5 +1,7 @@
 # HellGate scene decor catalog (corpses, static props)
 # Spawn line: OBJECT,Key,X,Y,Count[,flip]  or  DECOR,Key,X,Y,Count[,flip]
+# F11: boxes/barrels/static corpses stay in Decorations.
+# Spine look scenes (gob_look, Look_Dorei, mob_sister, …) are listed under Hostage & OtherScenes.
 
 [DECOR_CORPSES]
 mob_death1 | female corpse variant 1 | scapegoatEntrance
@@ -16,18 +18,20 @@ Look_Dorei | dorei decor (active mob) | InundergroundChurch, VillageOne
 [DECOR_PROPS]
 Arrow | arrow prop | scapegoatEntrance
 Arrow (1) | arrow prop duplicate | scapegoatEntrance
-scapegoat_Slave | bridge slave decor | scapegoatEntrance
-VillageSlave | village slave decor (broken spawn) | village_main
-NpcSlave | ranch slave decor (broken spawn) | Ranch
-InchchurchSlave | underground church slave decor | InundergroundChurch
+box_brk | crate | UndergroundLaboratory
+movebox_brk | movable crate | Forest1
+taru_brk | barrel +10 XP | WhiteCathedralRooftop
+taru_exp | small explosive barrel | WhiteCathedralRooftop
+taruro_exp | huge explosive barrel | WhiteCathedralRooftop
+wall_stone1 | stone wall prop
+cow1 | ranch cow prop
 
 [SCENES_FOR_CACHE]
-scapegoatEntrance | mob_death1, gob_look, Look_mutude, Arrow, scapegoat_Slave
-village_main | gob_look, gob_look2, VillageSlave
-InundergroundChurch | mob_death2, mob_sister, InchurchSlave, Look_Dorei
+scapegoatEntrance | mob_death1, gob_look, Look_mutude, Arrow
+village_main | gob_look, gob_look2
+InundergroundChurch | mob_death2, mob_sister, Look_Dorei
 InsomniaTownUnder | mob_death2
 VillageOne | Look_Dorei
-Ranch | NpcSlave
 
 [NOT_ROOT_OBJECTS]
 mob_sister_ero

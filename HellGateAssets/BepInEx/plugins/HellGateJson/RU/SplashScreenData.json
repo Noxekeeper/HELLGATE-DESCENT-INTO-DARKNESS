@@ -1,7 +1,8 @@
-﻿{
+{
     "modTitle":  "HELL GATE",
     "title":  "Descent Into Darkness",
     "warning":  "ПРЕДУПРЕЖДЕНИЕ О ВЗРОСЛОМ КОНТЕНТЕ\n\nЭтот мод содержит откровенный взрослый контент.\nТолько для лиц старше 18 лет. Рекомендуется соблюдать осторожность.",
     "info":  "",
-    "startButton":  "НАЧАТЬ"
+    "startButton":  "НАЧАТЬ",
+    "goreContentLabel":  "HellGate Gore-контент"
 }

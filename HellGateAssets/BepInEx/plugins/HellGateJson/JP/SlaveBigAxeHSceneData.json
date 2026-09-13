@@ -1,0 +1,519 @@
+{
+  "settings": {
+    "commentCooldownSeconds": 2.0,
+    "maxSimultaneousComments": 1,
+    "commentDisplayDuration": 4.0,
+    "fontSize": 22.0,
+    "verticalOffset": 15,
+    "streamingSpeed": 0.03,
+    "goblinColor": {
+      "r": 1.0,
+      "g": 1.0,
+      "b": 1.0,
+      "a": 1.0
+    },
+    "goblinOutlineColor": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 1.0
+    }
+  },
+  "animations": {
+    "START": {
+      "description": "Standing in front, captures and binds GG's hands and feet behind her head with his left hand, showing her tits, and rips her clothes off with his right.",
+      "events": {
+        "START": [
+          "おとなしくしろ。力を無駄にするだけだ。",
+          "また逃げた雌か。あるべき場所に戻した。",
+          "もっと牙のあるのも見た。結局は全員折れた。",
+          "動くな。その方が楽になる。",
+          "俺を見ろ。この顔、覚えろ。",
+          "俺に抗ったのはお前が初めてじゃない。",
+          "いいぞ。もっと力を浪費しろ。",
+          "鎖はどれも、たった一つの過ちから始まる。",
+          "お前の旅はここで終わりだ。",
+          "そのプライド、どれだけ持つか見せろ。"
+        ],
+        "SE": [
+          "もがけ。何も変わらん。",
+          "暴れるのは、まだ折る精神が残ってる証拠だ。",
+          "抵抗しろ。最初は生々しい方がいい。",
+          "この手からは逃げられんぞ、逃亡者。"
+        ]
+      }
+    },
+    "ERO": {
+      "description": "Throws GG to the ground, on her back, he starts rubbing himself on GG and inserts himself",
+      "events": {
+        "ERO": [
+          "恐れは消える。習慣は残る。俺の玩具だと言え。",
+          "覚えが早いな。敗北を認めれば止めてやる。",
+          "お前は小さな玩具だ。できることは何もない。",
+          "いつか逃げようとするのをやめて、自分から差し出すようになる。",
+          "プライドは高い。従順は安い。肉便器だと言え。痛みは止まる。",
+          "まだ誰かが来ると思ってるのか。人形に希望はない。",
+          "まず希望を奪う。次は体だ。俺の所有物として。",
+          "すぐこれが普通になる。精液便所になればいい。"
+        ]
+      }
+    },
+    "ERO1": {
+      "description": "Traps GG with his body weight, while thrusting hard and slow, missionary",
+      "events": {
+        "ERO1": [
+          "いい。言え。",
+          "もう一度。叫ぶまで止めん。",
+          "その方がいい。始めろ。",
+          "動くな。",
+          "覚えろ。",
+          "体が先に裏切る。",
+          "息をしろ。",
+          "聞け。",
+          "従え。",
+          "忘れるな。"
+        ]
+      }
+    },
+    "ERO2": {
+      "description": "Speeds up, fucks GG missionary while she has her feet pointing towards the sky",
+      "events": {
+        "ERO2": [
+          "それだけか？",
+          "もっと期待してたが。",
+          "楽すぎるな。",
+          "まだ逃げられるつもりか？",
+          "抗え。その努力は楽しい。",
+          "度胸はある。惜しいが無駄だ。",
+          "危うく感心するところだった。",
+          "お前の方が俺を長く覚えているさ。"
+        ]
+      }
+    },
+    "ERO3": {
+      "description": "Same speed, but harder, which makes GG slightly close her legs from the force, with each thrust",
+      "events": {
+        "ERO3": [
+          "そうだ。それが賢い選択だ。",
+          "いい。やっと頭が回ってきた。",
+          "見ろ。そう難しくなかっただろ。",
+          "いずれ分かると思ってた。",
+          "ようやく聞いている目つきだ。",
+          "いい。やっと状況を理解したな。",
+          "その調子ならうまくやっていける。",
+          "頭のない肉穴だ。鎖を付ける準備はできたな。"
+        ]
+      }
+    },
+    "ERO4": {
+      "description": "Speeds up, and thrusts harder, making GG's feet bounce off his body",
+      "events": {
+        "ERO4": [
+          "受け取れ、メス豚！お前は何でもない！",
+          "俺を見ろ、ビッチ！慈悲を乞え！",
+          "お前は虐げられるだけの空っぽの穴だ！",
+          "俺がイくまで引き裂いてやる、雌め。",
+          "脚を閉じろ、玩具。失望させたら頭を潰す。",
+          "本物の痛みを教えてやる。お前にできることはない。",
+          "お前は汚れた精液雑巾に過ぎん。",
+          "残りはラグダムの路地に売り飛ばす！"
+        ],
+        "SE": [
+          "そのキツい穴じゃ助からん。",
+          "売るものがなくなるまで使ってやる。",
+          "もう所有物だ。そう振る舞え。"
+        ]
+      }
+    },
+    "FIN": {
+      "description": "Cums hard inside GG, while she hugs his body",
+      "events": {
+        "FIN": [
+          "受け取れ！深く受け取れ！",
+          "あっ！死ぬまで使ってやる！",
+          "ぐあっ！脚を閉じろ、今から注ぎ込む！",
+          "いい！良い玩具だ。うぐっ！あぁぁ…",
+          "潰してやる！",
+          "このクソ…ビッチ!!!",
+          "もう俺がお前の主人だ！",
+          "締まるのが分かるぞ、小魔女！"
+        ],
+        "SE": [
+          "もがけ。余計に奥まで搾り出すだけだ。",
+          "種付けが終わるまで暴れろ。",
+          "好きに抗え。もう俺のものだ。"
+        ]
+      }
+    },
+    "FIN2": {
+      "description": "Cums one time, pulls out, revealing GG's blushing face, tits and covered pussy",
+      "events": {
+        "FIN2": [
+          "変わったな。認めなくてもな。",
+          "今夜も思い出すことになる。",
+          "ここから毎日が楽になる。",
+          "仕組みが分かり始めてきたな。",
+          "脚を開け、メス豚。",
+          "しっかり広がった。俺のチンポに最適な玩具だ。",
+          "今度は自分から乞うようになる。",
+          "一生忘れられなくしてやる。",
+          "死ぬまで俺の精液便所だ。"
+        ]
+      }
+    },
+    "JIGO": {
+      "description": "GG twitches while he prepares for another round",
+      "events": {
+        "JIGO": [
+          "息を整えろ。",
+          "急ぐな。",
+          "少し休め。",
+          "終わったと思うな。俺は捕まえて放さない。",
+          "覚悟しろ、頭のない穴め。",
+          "短い休息はやった。",
+          "俺は我慢強い男だ。"
+        ]
+      }
+    },
+    "JIGO2": {
+      "description": "Goes forward, covering GG's face",
+      "events": {
+        "JIGO2": [
+          "何を覚えたか見せろ。",
+          "どこへ行く？お前は玩具だ。",
+          "死ぬまで止めん。",
+          "まだ気骨があるな。",
+          "また殴ってやる番だ、雌め！",
+          "まだ折れてない。",
+          "まだだ。"
+        ]
+      }
+    },
+    "JIGOERO": {
+      "description": "Round two, repeating the chain, but with GG's pussy covered in cum",
+      "events": {
+        "JIGOERO": [
+          "まだ終わらん。",
+          "覚えたことを見せろ。",
+          "失望させるな。",
+          "準備はいいか？もう耐えられる。",
+          "お前のまんこには飽きない。",
+          "すねるな。目が白くなるまで押し潰す。",
+          "今度は俺の精液がチンポの潤滑だ。感謝しろ、魔女。",
+          "お前から俺の精液を絞り出してやる。止めようとするな。"
+        ]
+      }
+    },
+    "JIGOERO2": {
+      "description": "Faster thrusting resumes, using previous cum as lube, her body slick and messy beneath him.",
+      "events": {
+        "JIGOERO2": [
+          "俺の種でぬるぬるだな。今の入りやすさを感じろ。",
+          "抗っても無駄だ。体は誰のものか覚えてる。",
+          "もう俺の精液で濡れてる。生まれつきの受け皿だ。",
+          "それが今のお前の役目だ。文句なしで受け取れ。",
+          "痛いか？いい。痛みを俺と結びつけるようになる。",
+          "痛いほどまんこが締まる。よく調教できたな。",
+          "俺が作った惨状を見ろ。もっと汚くしてやる。",
+          "突くたび精液が奥へ押し込まれてる。中に印をつけてる。",
+          "締めるな。自分を苦しめてるだけだ。",
+          "すぐ俺以前の感覚は思い出せなくなる。"
+        ],
+        "SE": [
+          "受け取れ。",
+          "濡れビッチ。",
+          "逃げ場なし。",
+          "俺のもの。"
+        ]
+      }
+    },
+    "JIGOERO3": {
+      "description": "Harder thrusts with force causing her legs to twitch and try to close involuntarily.",
+      "events": {
+        "JIGOERO3": [
+          "もう脚が震えてる？まだ始まりだ。",
+          "閉じてみろ。抵抗を砕くのが好きだ。",
+          "体が裏切ってる。その震えは感じてる証拠だ。",
+          "無理にでも開け。所有物を全部見せろ。",
+          "突くたび誰が支配してるか思い出させる。",
+          "暴れるほど硬くなる。震え続けろ。",
+          "まんこの負け戦だ。力を抜け、受け入れろ。",
+          "一晩中できる。お前はそれだけ耐えられるか？",
+          "その喘ぎは音楽だ。もっと大きく、魔女。",
+          "脚は閉じたいが、まんこはもっと欲しがってる。"
+        ],
+        "SE": [
+          "大きく開け。",
+          "感じるか？",
+          "折ってる。",
+          "キツいな。"
+        ]
+      }
+    },
+    "JIGOERO4": {
+      "description": "Brutal peak pace before second climax, relentless pounding as she lies exhausted beneath him.",
+      "events": {
+        "JIGOERO4": [
+          "ぐあっ！ここで自分の場所を覚えろ！",
+          "また種を満タンにしてやる！受け取れ！",
+          "主人が近い！注いでくれと乞え！",
+          "好きに叫べ。誰も助けに来ん！",
+          "この穴をまた奪う！ぐあっ！",
+          "一寸たりとも俺のものだ！言え！",
+          "何日も垂れ流すほど押し込んでやる！",
+          "お前はそのためにある！俺の精液ゴミ箱だ！",
+          "ぐあっ！まんこが俺を搾り尽くしてる、魔女！",
+          "所有物だ。そう振る舞い、チンポを受け取れ！"
+        ],
+        "SE": [
+          "全部受け取れ！",
+          "この速度を感じろ！",
+          "お前は俺のもの！",
+          "こじ開けてやる！"
+        ]
+      }
+    },
+    "JIGOFIN": {
+      "description": "He cums inside her for the second time, flooding her already filled womb with more seed.",
+      "events": {
+        "JIGOFIN": [
+          "ぐあっ！また注ぐ！一滴残らず！",
+          "まだまだこんなもんじゃない！",
+          "子宮が俺を飲んでる。良い雌だ。",
+          "二発目が最初より深い。",
+          "まともな玩具はこう印をつける。中も外も。",
+          "ぐあっ！疲れたまんこでチンポを搾り尽くせ！",
+          "また中を白く塗ってやる。礼を言え。",
+          "折れた小魔女に精液が多すぎるな。",
+          "受け取れ。全部だ。ぐあっ！",
+          "もうお前は俺の種の器に過ぎん。"
+        ],
+        "SE": [
+          "奥まで注ぐ！",
+          "ぐあっ！受け取れ！",
+          "もっと奥！",
+          "お前は俺のもの！"
+        ]
+      }
+    },
+    "JIGOFIN2": {
+      "description": "He pulls out showing her used body covered in cum, sore and thoroughly broken.",
+      "events": {
+        "JIGOFIN2": [
+          "俺が作った惨状を見ろ。美しい。",
+          "二発入れてほとんど動けない。完璧だ。",
+          "精液がまんこから垂れてる。それが俺の印だ。",
+          "そこで垂れ流せ。作品を眺めていたい。",
+          "痛み、充満、印。やっとまともな所有物だ。",
+          "逃げた雌の末路だ。この光景を覚えろ。",
+          "まんこが開き、垂れてる。そうあるべきだ。",
+          "休めるうちに休め。三回目はまた硬くなった時だ。",
+          "自分を見ろ。もう魔女にも見えん。",
+          "俺の折れた玩具。精液まみれの奴隷だ。"
+        ]
+      }
+    },
+    "JIGOPOST3": {
+      "description": "Act 3 begins with her legs already spread wide, displaying her ruined, gaping, cum-leaking state.",
+      "events": {
+        "JIGOPOST3": [
+          "見ろ。調教されたみたいに脚が開いてる。",
+          "三回目だ。もう俺用にほぐれてる。",
+          "まんこが開いてる。俺の仕事の跡だ。",
+          "二発入れてもまだ開けてるな。",
+          "抵抗はもうない。まともな展示だ。",
+          "疲れ果て、赤くなり、垂れてる。完璧な状態だ。",
+          "俺のために脚を開いてた。良い本能だ。",
+          "残りを使う番だ。",
+          "その壊れた穴はもっと調教が要る。",
+          "役目をどれだけ素直に受け入れてるか見ろ。"
+        ]
+      }
+    },
+    "JIGOPOST4": {
+      "description": "He covers her again, mounting her exhausted body and trapping her beneath his weight.",
+      "events": {
+        "JIGOPOST4": [
+          "動くな。所有物に跨がる。",
+          "また俺の下だ。お前の居場所だ。",
+          "この重みを感じるか？それが所有だ。",
+          "今度は逃げられん。疲れすぎてる。",
+          "震えが止まるまで使ってやる。",
+          "体がこの体勢を覚えてる。",
+          "主人の下にいる。言え。",
+          "もっと開け。全部使いたい。",
+          "ここがお前の定住所だ。",
+          "力を抜け。抗うほど苦しくなる。"
+        ]
+      }
+    },
+    "JIGOPOSTERO": {
+      "description": "Third round thrusting begins, using prior cum as lube on her already messy, tired body.",
+      "events": {
+        "JIGOPOSTERO": [
+          "すんなり入る。俺の精液が滑らせてる。",
+          "三度目の正直だ。緩んで準備万端だ。",
+          "抵抗はない。濡れた穴だけだ。",
+          "俺自身の惨状を押し分けてるのが分かるか？",
+          "疲れたまんこの締めが弱くなった。いいぞ。",
+          "折れた玩具で三回目。贅沢だな。",
+          "直せんほど壊してやる。",
+          "押し返してもいい。もうどうでもいい。",
+          "もう中は精液だらけだ。まだ入る。",
+          "体はそのためにある。"
+        ],
+        "SE": [
+          "受け取れ。",
+          "濡れた穴。",
+          "抵抗なし。",
+          "俺のもの。"
+        ]
+      }
+    },
+    "JIGOPOSTERO2": {
+      "description": "Faster thrusting, cum-lube allowing deeper use of her exhausted, barely responsive body.",
+      "events": {
+        "JIGOPOSTERO2": [
+          "もっと速く。どうせほとんど感じない。",
+          "チンポの鞘に過ぎん。それ以上でも以下でもない。",
+          "まんこがぐちゃぐちゃだ。完璧だ。",
+          "奥まで突く。子宮口を殴ってる。",
+          "震えたいなら震えろ。ほとんど気にならん。",
+          "俺の精液でより激しく犯す。",
+          "この時点でお前は受け皿だ。",
+          "泣き言は終わりだ。ただ打ち付けを受け止めろ。",
+          "疲れた体でも役目は果たす。",
+          "三回やってやっと役に立つな。"
+        ],
+        "SE": [
+          "もっと速く。",
+          "奥。",
+          "ぐちゃぐちゃ。",
+          "役立たず。"
+        ]
+      }
+    },
+    "JIGOPOSTERO3": {
+      "description": "Hardest pounding before third climax, she is almost gone, body barely responding.",
+      "events": {
+        "JIGOPOSTERO3": [
+          "ぐあっ！もう少しだ！打ち付けを受け止めろ！",
+          "終わりだ！最後の破壊だ！",
+          "残りを終わらせてやる！",
+          "ぐあっ！もう魔女じゃない！俺の所有物だ！",
+          "もっと強く！耐えられる！ぐあっ！",
+          "まんこが俺を搾り尽くしてる！ぐあっ！",
+          "こうして終わるんだ！俺のチンポの下で！",
+          "ぐあっ！完全に折ってやる！",
+          "抵抗は終わりだ！俺の精液だけだ！",
+          "ぐあっ！最後の一発が来る！"
+        ],
+        "SE": [
+          "ぐあっ！受け取れ！",
+          "俺のために折れ！",
+          "お前は俺のもの！",
+          "終わらせろ！"
+        ]
+      }
+    },
+    "JIGOPOSTFIN": {
+      "description": "Third orgasm inside her, flooding her already overfilled womb with another hot load.",
+      "events": {
+        "JIGOPOSTFIN": [
+          "ぐあっ！三発目！注ぎ込む！",
+          "受け取れ！ぐあっ！子宮を溺れさせろ！",
+          "種を満タンにしてやる！ぐあっ！",
+          "三発奥まで！印をつけた！",
+          "ぐあっ！一滴も中へ！俺のものだ！",
+          "注ぎ込んでる！ぐあっ！全部受け取れ！",
+          "それがお前の役目だ！ぐあっ！満タンだ！",
+          "三度目の正直！ぐあっ！終わりだ！",
+          "俺の種の中を泳いでる！ぐあっ！",
+          "終わった！ぐあっ！俺の折れた玩具だ！"
+        ],
+        "SE": [
+          "ぐあっ！受け取れ！",
+          "注ぎ込む！",
+          "三発目！",
+          "終わりだ！"
+        ]
+      }
+    },
+    "JIGOPOSTFIN2": {
+      "description": "Afterglow and pull-out display, legs still open, leaking heavily from three loads.",
+      "events": {
+        "JIGOPOSTFIN2": [
+          "見ろ。三発が垂れてる。",
+          "開けたままにしろ。ダメージを見たい。",
+          "俺の精液の噴水だ。美しい。",
+          "開き、滴ってる。完全に壊れた。",
+          "一番いい姿だ。空っぽで印をつけられた。",
+          "脚を開き、まんこを開き、精液が流れる。",
+          "俺の傑作だ。折れた魔女。",
+          "休め。しっかり種付けされた。",
+          "その穴は二度と同じようには閉まらん。",
+          "俺が作ったお前を眺めろ。"
+        ]
+      }
+    },
+    "JIGOTOFADE": {
+      "description": "Screen begins to fade to black, scene ending with final ownership declarations.",
+      "events": {
+        "JIGOTOFADE": [
+          "闇の中へ。だがお前はまだ俺のものだ。",
+          "世界には終わりだ。お前には違う。",
+          "闇に消える。俺の所有物。",
+          "光はない。俺の所有だけだ。",
+          "消える。だが永遠に印をつけられた。",
+          "自由よさらば。奉仕よこんにちは。",
+          "闇の中へ。俺の玩具として。",
+          "終わりが始まる。お前の新しい人生だ。"
+        ]
+      }
+    },
+    "ZGAMEOVER": {
+      "description": "Bad end visual, she is fully broken, semen-stained, claimed as permanent property.",
+      "events": {
+        "ZGAMEOVER": [
+          "お前の負けだ。俺の勝ちだ。終わりだ。",
+          "完全に折れ、完全に印をつけられ、完全に俺のものだ。",
+          "逃げ場も、二度目のチャンスもない。所有だけだ。",
+          "精液まみれで終わった。俺の所有物だ。",
+          "魔女は死んだ。玩具が残った。",
+          "お前の物語は俺の奴隷で終わる。",
+          "捕らわれ、折れ、留め置かれた。",
+          "永遠に俺のもの。永遠に使われる。"
+        ]
+      }
+    },
+    "ZGAMEOVER2LOOP": {
+      "description": "Looping bad-end hold, quiet gloating about her permanent state.",
+      "events": {
+        "ZGAMEOVER2LOOP": [
+          "ずっとこうしていろ。永遠に。",
+          "俺の永久所有物。",
+          "変化はない。使うだけだ。",
+          "俺の玩具としてループする。",
+          "永遠の奉仕。",
+          "自由はない。常に俺のもの。",
+          "お前の永遠だ。"
+        ]
+      }
+    },
+    "4ERO": {
+      "description": "Optional coda after fade, mouth or continued use of the finished toy.",
+      "events": {
+        "4ERO": [
+          "終わりの後でも役に立つ。",
+          "口を開け。まだ役に立つ。",
+          "玩具はまだ差し出す。",
+          "まだお前で終わってない。",
+          "掃除だ。まだ役に立つ。",
+          "折れた所有物の最後の使用だ。",
+          "残りを絞り出してやる。",
+          "廃墟にも役目はある。"
+        ]
+      }
+    }
+  }
+}

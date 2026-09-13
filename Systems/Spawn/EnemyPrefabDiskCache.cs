@@ -31,6 +31,18 @@ internal static class EnemyPrefabDiskCache
         new HashSet<string>(StringComparer.OrdinalIgnoreCase);
 
     private static ConfigEntry<bool> enabledConfig;
+    private static bool splashPreloadStarted;
+    private static bool splashPreloadComplete;
+    private static int splashPreloadTotalScenes;
+    private static int splashPreloadCompletedScenes;
+    private static string splashPreloadCurrentScene = string.Empty;
+
+    internal static bool IsSplashPreloadFinished =>
+        !splashPreloadStarted || splashPreloadComplete;
+
+    internal static int SplashPreloadTotalScenes => splashPreloadTotalScenes;
+    internal static int SplashPreloadCompletedScenes => splashPreloadCompletedScenes;
+    internal static string SplashPreloadCurrentScene => splashPreloadCurrentScene ?? string.Empty;
 
     internal static void BindConfig(Plugin plugin)
     {
@@ -77,20 +89,31 @@ internal static class EnemyPrefabDiskCache
         }
     }
 
-    internal static void SchedulePreload(Plugin plugin)
+    /// <summary>Start boss-scene hydrate while HellGate splash Loading gate is visible.</summary>
+    internal static void ScheduleSplashPreload(Plugin plugin)
     {
-        if (plugin == null || entries.Count == 0)
-            return;
-        if (enabledConfig != null && !enabledConfig.Value)
+        if (plugin == null || splashPreloadStarted)
             return;
 
+        splashPreloadStarted = true;
         plugin.StartCoroutine(PreloadBossScenesCoroutine());
+    }
+
+    /// <summary>Fallback when splash UI is disabled — same hydrate, no splash gate.</summary>
+    internal static void SchedulePreload(Plugin plugin)
+    {
+        ScheduleSplashPreload(plugin);
     }
 
     private static IEnumerator PreloadBossScenesCoroutine()
     {
         yield return null;
-        yield return null;
+
+        if (enabledConfig != null && !enabledConfig.Value)
+        {
+            splashPreloadComplete = true;
+            yield break;
+        }
 
         var scenes = new List<string>();
         var sceneSet = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
@@ -104,8 +127,15 @@ internal static class EnemyPrefabDiskCache
                 scenes.Add(entry.Scene);
         }
 
+        splashPreloadTotalScenes = scenes.Count;
+        splashPreloadCompletedScenes = 0;
+        splashPreloadCurrentScene = string.Empty;
+
         if (scenes.Count == 0)
+        {
+            splashPreloadComplete = true;
             yield break;
+        }
 
         Plugin.Log?.LogInfo(
             $"[ENEMY DISK CACHE] Splash preload: {scenes.Count} scene(s), {entries.Count} boss key(s).");
@@ -116,16 +146,38 @@ internal static class EnemyPrefabDiskCache
             for (int i = 0; i < scenes.Count; i++)
             {
                 string sceneName = scenes[i];
+                splashPreloadCurrentScene = sceneName;
                 if (hydratedScenes.Contains(sceneName))
+                {
+                    splashPreloadCompletedScenes++;
                     continue;
+                }
 
                 yield return LoadSceneCaptureAndMaybeUnload(sceneName, string.Empty);
                 hydratedScenes.Add(sceneName);
+                splashPreloadCompletedScenes++;
             }
         }
         finally
         {
             SpawnCacheWeatherGuard.EndHydrateBatch();
+            splashPreloadCurrentScene = string.Empty;
+        }
+
+        splashPreloadComplete = true;
+        Plugin.Log?.LogInfo("[ENEMY DISK CACHE] Splash preload complete.");
+    }
+
+    /// <summary>Adds all disk-cache config keys into <paramref name="sink"/> (authoring UI catalogs).</summary>
+    internal static void CollectKeys(ICollection<string> sink)
+    {
+        if (sink == null || entries.Count == 0)
+            return;
+
+        foreach (KeyValuePair<string, Entry> pair in entries)
+        {
+            if (!string.IsNullOrEmpty(pair.Key))
+                sink.Add(pair.Key);
         }
     }
 
@@ -278,11 +330,11 @@ internal static class EnemyPrefabDiskCache
         Scene scene = SceneManager.GetSceneByName(sceneName);
         if (!scene.IsValid() || !scene.isLoaded)
         {
+            Plugin.Log?.LogInfo($"[ENEMY DISK CACHE] On-demand load: {sceneName}");
+            AsyncOperation? op = null;
             try
             {
-                Plugin.Log?.LogInfo($"[ENEMY DISK CACHE] On-demand load: {sceneName}");
-                SceneManager.LoadScene(sceneName, LoadSceneMode.Additive);
-                loadedHere = true;
+                op = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
             }
             catch (Exception ex)
             {
@@ -290,13 +342,23 @@ internal static class EnemyPrefabDiskCache
                 yield break;
             }
 
-            for (int wait = 0; wait < 120; wait++)
+            if (op == null)
+                yield break;
+
+            op.allowSceneActivation = true;
+            float started = Time.realtimeSinceStartup;
+            while (!op.isDone)
             {
-                scene = SceneManager.GetSceneByName(sceneName);
-                if (scene.IsValid() && scene.isLoaded)
-                    break;
+                if (Time.realtimeSinceStartup - started > 60f)
+                {
+                    Plugin.Log?.LogWarning($"[ENEMY DISK CACHE] Timed out loading \"{sceneName}\" — skipping.");
+                    yield break;
+                }
                 yield return null;
             }
+
+            loadedHere = true;
+            scene = SceneManager.GetSceneByName(sceneName);
         }
 
         if (!scene.IsValid() || !scene.isLoaded)

@@ -16,18 +16,28 @@ describe individual subsystems and development procedures in depth.
 
 | Document | Subsystem |
 |----------|-----------|
-| [SPAWN.md](modules/SPAWN.md) | JSON/text-driven world spawn pipeline |
-| [EVENT_CORE.md](modules/EVENT_CORE.md) | Modal encounters, event traps, reinforcements |
+| [SPAWN.md](modules/SPAWN.md) | Zone pack pipeline + F11 Spawn System Editor V2.0 (not trap gameplay) |
+| [SPAWN_KEY_ALIASES.md](modules/SPAWN_KEY_ALIASES.md) | Canonical F11 spawn keys vs txt aliases |
+| [EVENT_CORE.md](modules/EVENT_CORE.md) | Modal encounters (`|ec_event=` / F11 **C**), event traps, reinforcements |
 | [FACTIONS_AND_COMBAT_AI.md](modules/FACTIONS_AND_COMBAT_AI.md) | Enemy factions, reputation, combat AI |
 | [PREGNANCY.md](modules/PREGNANCY.md) | Pregnancy, offspring, bloodlines, shelter attacks |
 | [ECONOMY_AND_REWARDS.md](modules/ECONOMY_AND_REWARDS.md) | Gold economy, drops, reward tables |
 | [QTE_STRUGGLE_AND_GAMEPLAY.md](modules/QTE_STRUGGLE_AND_GAMEPLAY.md) | QTE 3.0, struggle, weapon animations, VengeanceStrike |
 | [RAGE.md](modules/RAGE.md) | Rage tiers, combos, slow motion, persistence |
-| [GRAB_AND_HANDOFF.md](modules/GRAB_AND_HANDOFF.md) | Grab-via-attack and enemy handoff chains |
-| [MIND_BROKEN.md](modules/MIND_BROKEN.md) | MindBroken state, recovery, presentation |
-| [HELL_TRAPS.md](modules/HELL_TRAPS.md) | Lethal trap families and death sequences |
+| [GRAB_AND_HANDOFF.md](modules/GRAB_AND_HANDOFF.md) | Grab-via-attack, death-session grab blocks, handoff |
+| [MIND_BROKEN.md](modules/MIND_BROKEN.md) | MindBroken state, recovery, Bad End countdown gate, presentation |
+| [HELL_TRAPS.md](modules/HELL_TRAPS.md) | Lethal traps, death clips, combat freeze during clip |
+| [DEAD_ARMOR.md](modules/DEAD_ARMOR.md) | SlaveBigAxe NikuArmor break clips + armored grab-throw |
+| [LOST_SOUNDS.md](modules/LOST_SOUNDS.md) | Scaffold for custom / restored SFX (load + Play by name) |
+| [COSTUMES.md](modules/COSTUMES.md) | Unlock alt costumes in change menu without Trade |
+| [ENEMY_FATALITY.md](modules/ENEMY_FATALITY.md) | Combat fatality system (shared profiles; White + catalog) |
+| [ENEMY_FATALITY_DOSSIERS.md](modules/ENEMY_FATALITY_DOSSIERS.md) | Per-enemy fatality dossiers (types, cfg, caveats) |
+| [MEAT_ARMOR.md](modules/MEAT_ARMOR.md) | SlaveBigAxe post-fade Aradia_armor swap + EROWALK patrol |
+| [ILLUSIVE_RODENIA_EVENT.md](modules/ILLUSIVE_RODENIA_EVENT.md) | Illusive / Rodenia SlaveBigAxe event: HellGate isolation + lose→SP handoff |
 | [CUSTOM_ENEMIES.md](modules/CUSTOM_ENEMIES.md) | Custom enemy packs and pass/handoff integration |
 | [PRESENTATION.md](modules/PRESENTATION.md) | Dialogue, camera, UI, audio, effects |
+| [BOOT_TIPS_AND_GUIDE.md](modules/BOOT_TIPS_AND_GUIDE.md) | Early-boot loading tips + illustrated tutorial guide |
+| [SPLASH_OPTIONS_AND_DIFFICULTY.md](modules/SPLASH_OPTIONS_AND_DIFFICULTY.md) | Splash Options: Gore, Easy/Medium/Hard presets, Language submenu |
 
 ## Development guides (`docs/development/`)
 

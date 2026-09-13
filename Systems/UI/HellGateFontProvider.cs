@@ -27,7 +27,7 @@ internal static class HellGateFontProvider
         _resolvedWestern = true;
         _cachedWestern = ResolveConfiguredFont(
             Plugin.fontFamilyWestern != null ? Plugin.fontFamilyWestern.Value : null,
-            new[] { "Georgia", "Constantia", "Segoe UI", "Arial", "Calibri", "Tahoma" });
+            new[] { "Georgia", "Palatino Linotype", "Constantia", "Cambria", "Segoe UI", "Arial", "Calibri", "Tahoma" });
 
         return _cachedWestern;
     }

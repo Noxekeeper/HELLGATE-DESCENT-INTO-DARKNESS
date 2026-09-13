@@ -60,6 +60,11 @@ internal static class VanillaAltarCatalog
         new AltarEntry("savepoint_Ranchover", "Ranch", 37.35f, -161.98f),
         new AltarEntry("savepoint_Lake", "Lake", -85.23f, -102.36f),
         new AltarEntry("savepoint_Last", "LastBoss", -106.92f, -132.11f),
+        // DeepForest mod (stolen vanilla token savepoint_Under — see DeepForestAltarIdFix).
+        new AltarEntry("savepoint_WoodsHouse", "WoodsHouse", -146.88f, -127.86f),
+        new AltarEntry("savepoint_DeepForest", "Forest1", 242.9f, -175.56f),
+        new AltarEntry("savepoint_CastleDung2", "CastleDung2", 165.5007f, -454.158f),
+        new AltarEntry("savepoint_FortLow", "FortLow", 55.11f, -125.93f),
     };
 
     private static readonly Dictionary<string, string> SavepointToScene =
@@ -132,19 +137,31 @@ internal static class VanillaAltarCatalog
 
     /// <summary>
     /// True altar home for respawn: savepoint token → coords → claimed scene (if it hosts an altar).
+    /// When token and <c>_re_Scenename</c> disagree (DeepForest reuses <c>savepoint_Under</c>),
+    /// prefer the claimed scene if it hosts a known altar — avoids church+forest-coords void.
     /// </summary>
     internal static string ResolveAltarHomeScene(game_fragmng frag)
     {
         if (frag == null)
             return null;
 
-        if (TryGetSceneForSavepoint(frag._re_savepoint, out string fromSavepoint))
+        string claimed = frag._re_Scenename;
+        bool hasTokenScene = TryGetSceneForSavepoint(frag._re_savepoint, out string fromSavepoint);
+
+        if (hasTokenScene
+            && !string.IsNullOrEmpty(claimed)
+            && !claimed.Equals(fromSavepoint, StringComparison.OrdinalIgnoreCase)
+            && SceneHasVanillaAltar(claimed))
+        {
+            return claimed;
+        }
+
+        if (hasTokenScene)
             return fromSavepoint;
 
         if (TryGetSceneForCheckpointCoords(frag._checkpoint, out string fromCoords, out _))
             return fromCoords;
 
-        string claimed = frag._re_Scenename;
         if (SceneHasVanillaAltar(claimed))
             return claimed;
 

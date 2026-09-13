@@ -422,6 +422,8 @@ internal static class EventTrapEncounterLoader
             return false;
 
         ApplyAnchorToConfig(cfg, entry, folder);
+        if (entry != null && EventTrapLineExtras.TryParse(entry.lineExtrasRaw, out EventTrapLineExtras extras))
+            extras.ApplyTo(cfg);
 
         if (isSharedConfig && !string.Equals(configPathUsed, configPath, StringComparison.OrdinalIgnoreCase))
         {

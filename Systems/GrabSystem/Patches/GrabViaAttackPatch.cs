@@ -65,12 +65,53 @@ internal static class GrabViaAttackPatch
         {
             _eliteGrabPlayerMethod?.Invoke(null, new object[] { enemy, pStatus });
             SetEnemyStateToEROWALK(enemy);
+            // Sisterknight / CrawlingSisterKnight start H only from OnTriggerStay when
+            // player.state == "DOWN". EliteGrabPlayer uses ImmediatelyERO (erodown) +
+            // simulated=false but never sets DOWN or eroflag — next frame physics
+            // re-enables and it looks like grab→release→walk-to-downed-H.
+            // Force DOWN + re-enable simulation so their Stay intro can fire. Other
+            // enemies are untouched (same pattern as goblin vanilla-only exception).
+            FinalizeSisterFamilyGrabIntro(enemy);
             TriggerGrabFlash();
             StartGrabSlowmoIfEnabled(enemy);
         }
         catch (Exception ex)
         {
             Plugin.Log?.LogWarning($"[GrabViaAttack] EliteGrabPlayer failed: {ex.Message}");
+        }
+    }
+
+    private static bool IsSisterFamilyAttacker(EnemyDate attacker)
+    {
+        return attacker is Sisterknight || attacker is CrawlingSisterKnight;
+    }
+
+    /// <summary>
+    /// Sisterknight-family only: bridge GrabViaAttack → vanilla EROWALK+DOWN H intro.
+    /// </summary>
+    private static void FinalizeSisterFamilyGrabIntro(EnemyDate enemy)
+    {
+        if (!IsSisterFamilyAttacker(enemy))
+            return;
+
+        playercon player = enemy.com_player;
+        if (player == null)
+            return;
+
+        try
+        {
+            if (player.erodown == 0)
+                player.erodown = 1;
+            player.state = "DOWN";
+            if (player.rigi2d != null)
+            {
+                player.rigi2d.velocity = Vector2.zero;
+                player.rigi2d.simulated = true;
+            }
+        }
+        catch (Exception ex)
+        {
+            Plugin.Log?.LogWarning($"[GrabViaAttack] Sister family grab intro finalize failed: {ex.Message}");
         }
     }
 
@@ -92,11 +133,23 @@ internal static class GrabViaAttackPatch
         if (RageSystem.IsGrabKnockdownImmuneWhileRageActive)
             return false;
 
+        if (NoREroMod.Patches.HellTraps.LethalMagicTrapEroSuppression.ShouldSuppress)
+            return false;
+
+        if (NoREroMod.Systems.EnemyFatality.EnemyFatalitySession.IsActive)
+            return false;
+
         if ((Plugin.enableVengeanceStrikeBlockGrabDuringStab?.Value ?? true) && player._stabnow)
             return false;
 
         if (StruggleSystem.isGrabInvul())
             return false;
+
+        if (NoREroMod.Systems.DeadArmor.SlaveBigAxeArmoredThrow.TryThrowInsteadOfGrab(attacker, player))
+        {
+            NoREroMod.Systems.Economy.CombatGoldLossRuntime.TryProcessPlayerHit(player, wasDodged: false);
+            return true;
+        }
 
         InvokeEliteGrabPlayer(attacker, playerStatus);
         if (attacker is BossTouzoku customBoss)
@@ -221,6 +274,18 @@ internal static class GrabViaAttackPatch
                 return true;
             }
 
+            if (NoREroMod.Patches.HellTraps.LethalMagicTrapEroSuppression.ShouldSuppress)
+            {
+                GrabViaAttackContext.Reset();
+                return true;
+            }
+
+            if (NoREroMod.Systems.EnemyFatality.EnemyFatalitySession.IsActive)
+            {
+                GrabViaAttackContext.Reset();
+                return true;
+            }
+
             var jpName = Traverse.Create(attacker).Field("JPname").GetValue() as string ?? "";
             bool isElite = jpName.Contains("<SUPER>");
 
@@ -228,6 +293,13 @@ internal static class GrabViaAttackPatch
             {
                 GrabViaAttackContext.Reset();
                 return true;
+            }
+
+            if (NoREroMod.Systems.DeadArmor.SlaveBigAxeArmoredThrow.TryThrowInsteadOfGrab(attacker, __instance))
+            {
+                NoREroMod.Systems.Economy.CombatGoldLossRuntime.TryProcessPlayerHit(__instance, wasDodged: false);
+                GrabViaAttackContext.Reset();
+                return false;
             }
 
             InvokeEliteGrabPlayer(attacker, ___playerstatus);
@@ -297,6 +369,18 @@ internal static class GrabViaAttackPatch
                 return true;
             }
 
+            if (NoREroMod.Patches.HellTraps.LethalMagicTrapEroSuppression.ShouldSuppress)
+            {
+                GrabViaAttackContext.Reset();
+                return true;
+            }
+
+            if (NoREroMod.Systems.EnemyFatality.EnemyFatalitySession.IsActive)
+            {
+                GrabViaAttackContext.Reset();
+                return true;
+            }
+
             var jpName = Traverse.Create(attacker).Field("JPname").GetValue() as string ?? "";
             bool isElite = jpName.Contains("<SUPER>");
 
@@ -304,6 +388,13 @@ internal static class GrabViaAttackPatch
             {
                 GrabViaAttackContext.Reset();
                 return true;
+            }
+
+            if (NoREroMod.Systems.DeadArmor.SlaveBigAxeArmoredThrow.TryThrowInsteadOfGrab(attacker, __instance))
+            {
+                NoREroMod.Systems.Economy.CombatGoldLossRuntime.TryProcessPlayerHit(__instance, wasDodged: false);
+                GrabViaAttackContext.Reset();
+                return false;
             }
 
             InvokeEliteGrabPlayer(attacker, ___playerstatus);

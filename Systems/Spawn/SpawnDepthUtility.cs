@@ -186,18 +186,21 @@ internal static class SpawnDepthUtility
         }
     }
 
-    /// <summary>Floor Trap_hari from another scene: match player depth plane + sorting layer.</summary>
+    /// <summary>
+    /// Trap_hari from another scene: put on the player Z plane.
+    /// Floor/ceiling (0°/180°) also match the player sorting layer so floor tiles do not eat the sprite.
+    /// Wall angles keep the prefab's native sorting — rewriting player+2 hid the mesh/collider behind rock.
+    /// </summary>
     internal static void ApplyTrapHariFloorDefaults(string key, float rotationZ, ref float spawnWorldZ, ref SpawnDepthSettings depth)
     {
         if (!SpawnSpikeKeys.IsTrapHariKey(key))
             return;
 
-        float normalized = SpawnRotationUtility.NormalizeAngle(rotationZ);
-        if (Mathf.Abs(normalized) > 0.001f && Mathf.Abs(normalized - 180f) > 0.001f)
-            return;
-
         if (TryGetPlayerWorldZ(out float playerZ))
             spawnWorldZ = playerZ;
+
+        if (SpawnRotationUtility.IsWallMountAngle(rotationZ))
+            return;
 
         depth.MatchPlayerSortingLayer = true;
         if (depth.SortingOrderOffset == 0)

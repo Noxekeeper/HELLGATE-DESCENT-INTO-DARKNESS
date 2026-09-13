@@ -1,4 +1,6 @@
 using System;
+using System.Globalization;
+using System.Text;
 
 namespace NoREroMod.Systems.Spawn;
 
@@ -202,8 +204,10 @@ internal static class HellGateSpawnLineFormat
     }
 
     /// <summary>
-    /// <c>COMMAND,anchorId,packFolder,x,y</c> (preferred) or legacy <c>COMMAND,packFolder,x,y</c> (auto anchor id).
+    /// <c>COMMAND,anchorId,packFolder,x,y[,extras…]</c> (preferred) or
+    /// <c>COMMAND,packFolder,x,y[,extras…]</c> (auto anchor id).
     /// <paramref name="expectedCommand"/> is <c>REINFORCEMENT</c> or <c>EVENTTRAP</c>.
+    /// Extra tokens after XY are optional EventTrap overrides (<c>count=</c>, <c>dist=</c>, …).
     /// </summary>
     internal static bool TryParseEventAnchorLine(
         string expectedCommand,
@@ -211,12 +215,14 @@ internal static class HellGateSpawnLineFormat
         out string anchorId,
         out string packFolder,
         out float anchorX,
-        out float anchorY)
+        out float anchorY,
+        out string extrasRaw)
     {
         anchorId = string.Empty;
         packFolder = string.Empty;
         anchorX = 0f;
         anchorY = 0f;
+        extrasRaw = string.Empty;
 
         if (string.IsNullOrEmpty(trimmed) || string.IsNullOrEmpty(expectedCommand))
             return false;
@@ -228,29 +234,45 @@ internal static class HellGateSpawnLineFormat
         if (!string.Equals(parts[0].Trim(), expectedCommand, StringComparison.OrdinalIgnoreCase))
             return false;
 
-        if (parts.Length >= 5)
+        if (parts.Length >= 5 &&
+            IsValidEventFolderToken(parts[1].Trim()) &&
+            IsValidEventFolderToken(parts[2].Trim()) &&
+            float.TryParse(parts[3].Trim(), NumberStyles.Float, CultureInfo.InvariantCulture, out anchorX) &&
+            float.TryParse(parts[4].Trim(), NumberStyles.Float, CultureInfo.InvariantCulture, out anchorY))
         {
             anchorId = parts[1].Trim();
             packFolder = parts[2].Trim();
-            if (!IsValidEventFolderToken(anchorId) || !IsValidEventFolderToken(packFolder))
-                return false;
-            if (!float.TryParse(parts[3].Trim(), out anchorX))
-                return false;
-            if (!float.TryParse(parts[4].Trim(), out anchorY))
-                return false;
+            extrasRaw = JoinCsvTail(parts, 5);
             return true;
         }
 
         packFolder = parts[1].Trim();
         if (!IsValidEventFolderToken(packFolder))
             return false;
-        if (!float.TryParse(parts[2].Trim(), out anchorX))
+        if (!float.TryParse(parts[2].Trim(), NumberStyles.Float, CultureInfo.InvariantCulture, out anchorX))
             return false;
-        if (!float.TryParse(parts[3].Trim(), out anchorY))
+        if (!float.TryParse(parts[3].Trim(), NumberStyles.Float, CultureInfo.InvariantCulture, out anchorY))
             return false;
 
         anchorId = BuildLegacyAnchorId(packFolder, anchorX, anchorY);
+        extrasRaw = JoinCsvTail(parts, 4);
         return true;
+    }
+
+    private static string JoinCsvTail(string[] parts, int startIndex)
+    {
+        if (parts == null || startIndex >= parts.Length)
+            return string.Empty;
+
+        var sb = new StringBuilder();
+        for (int i = startIndex; i < parts.Length; i++)
+        {
+            if (sb.Length > 0)
+                sb.Append(',');
+            sb.Append(parts[i] != null ? parts[i].Trim() : string.Empty);
+        }
+
+        return sb.ToString();
     }
 
     internal static string BuildLegacyAnchorId(string packFolder, float anchorX, float anchorY)

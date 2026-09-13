@@ -26,6 +26,8 @@ docs/*
 !docs/modules/**
 !docs/development/
 !docs/development/**
+# Explicit: personal spawn guides / trap cheatsheets stay local (never push).
+docs/SpawnSystem/
 
 # Heavy art/audio/fonts — external hosting (MEGA etc.), not git
 HellGateAssets/sources/

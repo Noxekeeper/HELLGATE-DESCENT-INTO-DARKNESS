@@ -1,0 +1,114 @@
+{
+  "intervalSeconds": 10,
+  "ui": {
+    "cachingMessage": "HellGate-Inhalte werden zwischengespeichert — bitte warten…",
+    "doneButton": "Fertig",
+    "tutorialTitle": "ANLEITUNG"
+  },
+  "tips": [
+    {
+      "phase": "loading",
+      "id": "manifesto",
+      "text": "Mit HellGate kannst du jedes Modul nach deinem Geschmack anpassen.\n\nEine vollständige Anleitung findest du im <b>Manifesto</b>-Guide im Ordner <b>HELLGATE_README</b>."
+    },
+    {
+      "phase": "loading",
+      "id": "menu_note",
+      "text": "<b>HINWEIS</b>\n\nUm ein Menü zu verlassen, drücke <b>[Space]</b> (Sprung).\n<b>[Space]</b> ist auch die <b>Abbrechen</b>-Taste.\n\nUm eine Aktion zu bestätigen, drücke <b>[E]</b>."
+    },
+    {
+      "phase": "loading",
+      "id": "rage_meter",
+      "text": "<b>RAGE</b>\n\nDie Rage-Leiste füllt sich, wenn du:\n• Schaden zufügst\n• blockst oder parierst\n• Feinde tötest\n\nRage sinkt passiv während Griffkämpfen.\nIst die Rage über <b>50%</b>, steigt die MindBroken-Leiste."
+    },
+    {
+      "phase": "loading",
+      "id": "mindbroken",
+      "text": "<b>MindBroken</b>\n\nGeistesbruch beeinflusst direkt die Schwierigkeit des Befreiens.\nJe höher der Wert, desto schwerer ist es, Ausdauer zu hämmern, während du gegriffen wirst.\n\nMindBroken steigt durch:\n• H-Griffkämpfe (passiv)\n• bestimmte Animationen (beschleunigt)\n• passives Wachstum bei Rage über <b>50%</b>\n• verfehlte Hoch/Runter-QTE-Pfeile während eines Griffs"
+    },
+    {
+      "phase": "loading",
+      "id": "rage_tiers",
+      "text": "<b>Rage-Modus [G]</b> — drei Stufen\n\n<b>Stufe 1</b> (~5s) — ein starkes Combo mit bis zu 9 Treffern.\n\n<b>Stufe 2</b> (~10s) — gleiches Combo plus sofortige Befreiung aus Griffen. Stehe ~5s still und dein Geist beginnt zu brechen.\n\n<b>Stufe 3</b> (~15s) — Dämonenflügel und dieselben Vorteile.\n\nWährend Rage aktiv ist, kannst du weder umgeworfen noch gegriffen werden.\nWirst du vor der Aktivierung gegriffen, leert sich die Rage-Leiste sehr schnell."
+    },
+    {
+      "phase": "loading",
+      "id": "controls",
+      "holdUntilDone": true,
+      "text": "<b>Grundsteuerung</b>\n\n<b>[LMB]</b> — Angriff (3-Treffer-Combo)\n<b>[RMB]</b> — Block (funktioniert in der Luft). Auf EASY blockt Halten auch Griffe vollständig\n<b>[RMB]+[W]</b> — Parade\n<b>[E]</b> nach einer Parade — Vengeance Strike (15 Rage, max. 100)\n<b>[F]</b> — Ausweichen (Unverwundbarkeitsframes). Auf EASY kostet es 20 Ausdauer\n<b>[T]</b> — Bullet-Time\n<b>[G]</b> — Rage-Modus (3 Stufen)\n<b>[V]</b> — Kampfkamera (3 Modi)\n<b>[H]</b> — Fraktionsbeziehungen\n\n<b>[E]</b> 3s halten — hinlegen / ergeben\n<b>[E]</b> 6s halten — Spielende\n<b>[ESC]+[Enter]</b> — sofortiger Tod\n<b>[F1]</b> — Cheat-Menü (auf eigene Gefahr)\n<b>[F11]</b> + RMB — Sofort-Respawn von Feinden, Fallen und Events\n<b>[Space]</b> — zurück / verlassen"
+    },
+
+    {
+      "phase": "guide",
+      "id": "parry",
+      "text": "<b>Parade:</b>\n\nHalte Block und drücke <b>[W]</b> kurz vor dem Treffer, um den Feind zu betäuben.\n\nDrücke <b>[E]</b> in der Nähe für Vengeance Strike — verlangsamt die Zeit und verursacht hohen Schaden. Kostet <b>15 Rage</b>.\n\nPfeile und Äxte werden reflektiert; Magie wird absorbiert. Verfehlst du das Timing, geht der Angriff oder Griff durch.",
+      "video": "Tutorial Guide source/Parry.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "rage",
+      "text": "<b>Rage-Modus:</b>\n\nDrücke <b>[G]</b> für 9-Treffer-Schwert-Combos ohne Ermüdung.\n\nWährend Rage aktiv ist, kannst du nicht umgeworfen oder gegriffen werden und verursachst mehr Schaden.\n\nKämpfe weiter — stehst du zu lange still, beginnt dein Geist zu brechen.",
+      "video": "Tutorial Guide source/Rage.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "timeslomo",
+      "text": "<b>Bullet-Time:</b>\n\nVerbrauche Rage mit <b>[T]</b>, um die Zeit zu verlangsamen.\n\nJede Sekunde kostet Rage — und nagt an deinem Geist.",
+      "video": "Tutorial Guide source/TimeSloMo.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "healthpotion",
+      "text": "<b>Heiltrank:</b>\n\nSetze einen Heiltrank ein, um dich sofort aus einem Griff zu befreien.",
+      "video": "Tutorial Guide source/HealthPotion.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "ambushthoughts",
+      "text": "<b>Hexensinn:</b>\n\nIn der Nähe von Fallen kann Aradias Hexensinn vor einem Hinterhalt warnen.\n\nSie spürt auch tödliche Fallen in der Nähe.",
+      "video": "Tutorial Guide source/AmbushThoughts.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "block",
+      "text": "<b>Block:</b>\n\nHalte <b>[RMB]</b>, um eingehenden Schaden zu reduzieren und Umwerfen sowie Griffe zu verhindern.\n\nFunktioniert auch in der Luft.",
+      "video": "Tutorial Guide source/Block.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "rageescape",
+      "text": "<b>Rage-Befreiung:</b>\n\nMit Rage-Stufe <b>2</b> oder <b>3</b> drücke <b>[G]</b> während eines Griffs, um dich zu befreien.\n\nAchte auf die Leiste — Rage schwindet während eines Griffs, und es könnte nicht genug übrig sein.",
+      "video": "Tutorial Guide source/RageEscape.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "qte",
+      "text": "<b>Struggle Out:</b>\n\nFülle deine Ausdauer, um dich zu befreien.\n\n1) Wenn die Anzeige Struggle Out erscheint — hämmere auf <b>[LMB]</b>. Du kannst auch <b>[E]</b> hämmern.\n\n2) Wenn Links/Rechts-Pfeile <b>[←]</b> <b>[→]</b> erscheinen — hämmere auf <b>[A]</b> / <b>[D]</b>. Jeder Druck baut Ausdauer auf.\n\nDrücke nichts, wenn Anzeige und Pfeile verschwunden sind — du verlierst sonst Ausdauer.",
+      "video": "Tutorial Guide source/QTE.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "qte2",
+      "text": "<b>Riskante Befreiung:</b>\n\nWenn <color=#E8C84A>gelbe</color> und <color=#E05050>rote</color> Hoch/Runter-Pfeile <b>[↑]</b> <b>[↓]</b> erscheinen, tauschen sie ihre Farben.\n\nDrücke mehrmals den <color=#E8C84A>gelben</color> Pfeil, solange der Indikator sichtbar ist.\nTreffer geben mehr Ausdauer, und eine fehlerfreie Serie bringt einen Bonus.\n\n<color=#E05050>Rot</color> drücken — oder drücken, wenn keine Pfeile angezeigt werden — leert deine Ausdauer.",
+      "video": "Tutorial Guide source/QTE2.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "dash",
+      "text": "<b>Ausweichen & Schonung:</b>\n\nWeiche mit <b>[F]</b> aus, um Schaden zu vermeiden und Schonung (Mercy) auszulösen.\n\nBleibst du während der Schonung in der Nähe des Feindes, ohne anzugreifen, steigt die Fraktionsreputation um <b>+5%</b>.\n\nBei <b>+68%</b> oder höher ist es freundlich-neutral: Die Fraktion greift nicht mehr von sich aus an.\n\nUm die Fraktionsbeziehungen zu sehen, drücke <b>[H]</b>.",
+      "video": "Tutorial Guide source/Dash.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "combatcamera",
+      "text": "<b>Kampfkamera:</b>\n\nDrücke <b>[V]</b>, um drei Modi zu wechseln: Standard → weiter → noch weiter.",
+      "video": "Tutorial Guide source/CombatCamera.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "hcameracontrol",
+      "text": "<b>H-Szenen-Kamera:</b>\n\nIn HellGate kannst du die Kamera während H-Szenen steuern.\n\nPfeiltasten <b>[↑]</b> <b>[↓]</b> <b>[←]</b> <b>[→]</b> — sanftes Verschieben.\n<b>[Space]</b> — Zoom umschalten (mehrere Stufen).\n\nDas Spiel zentriert die Animation nicht immer korrekt — stell die Kamera jederzeit selbst ein.",
+      "video": "Tutorial Guide source/H-CameraControl.mp4"
+    }
+  ]
+}

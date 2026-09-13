@@ -11,11 +11,12 @@ Modular BepInEx/Harmony overhaul framework for *Night of Revenge*.
 |----------|-------|
 | Plugin | NoREroMod HellGate |
 | Plugin GUID | `NoREroMod_HellGate` |
-| Current version | `1.2.4` |
+| Current version | `1.2.6` |
 | Output assembly | `NoR_HellGate.dll` |
 | Target framework | .NET Framework 3.5 |
 | Runtime | Unity / BepInEx |
 | Patching | Harmony |
+| Player release | [F95zone thread (v1.2.6)](https://f95zone.to/threads/night-of-revenge-hellgate-descent-into-darkness-v1-2-6-noxekeeper.302025/) |
 
 HellGate extends *Night of Revenge* by patching the game's managed types
 directly and by running independent gameplay services alongside them.
@@ -60,9 +61,11 @@ HellGate is divided into independently initialized modules:
 - rage, combo, slow-motion, and vengeance systems;
 - MindBroken state, recovery, and visual presentation;
 - lethal HellTraps and their death sequences;
+- DeadArmor NikuArmor break clips and armored grab-throw (SlaveBigAxe);
 - enemy handoff/pass chains;
 - custom enemy variants and visual replacement packs;
 - dialogue, camera, audio, HUD, portrait, and effect systems;
+- early-boot loading tips and illustrated tutorial guide (locale JSON + MP4);
 - opt-in diagnostic modules for reverse-engineering game behavior.
 
 Subsystem details belong in architecture and module documents rather than in
@@ -200,7 +203,8 @@ For runtime testing, synchronize that tree to:
 
 The data tree includes localized dialogue, QTE reactions, EventCore content,
 spawn packs, faction definitions, combat AI, economy configuration, drop
-tables, and opt-in diagnostic configuration.
+tables, boot loading tips / tutorial guide copy (`{LANG}/BootLoadingTips.json`),
+and opt-in diagnostic configuration.
 
 Some modules write per-save-slot state into the runtime data tree. Generated
 slot state is local runtime data and must not be copied back into the shipped
@@ -215,15 +219,16 @@ expect the external asset tree under:
 <NorGameRoot>/sources/HellGate_sources/
 ```
 
-This tree includes PNG, WAV, Spine, portrait, UI, trap, custom enemy, and effect
-assets. It is distributed separately from the source repository.
+This tree includes PNG, WAV, Spine, portrait, UI, trap, custom enemy, effect,
+and tutorial-guide MP4 assets (`Tutorial Guide source/`). It is distributed
+separately from the source repository.
 
 Current asset pack:
 
 | Field | Value |
 |-------|-------|
 | Pack | `HELLGATE_sources.7z` (contains `sources/HellGate_sources/`) |
-| Compatible with | HellGate 1.2.4 |
+| Compatible with | HellGate 1.2.6 |
 | Download | [MEGA](https://mega.nz/file/X9Z1SYJC#qeu62JkDmU10ewKVnZeBT-u_zHp-JYeGELcVSfwfsSw) |
 | Size | 244,344,030 bytes (233 MB) |
 | SHA-256 | `B7BB3A2482C51FF7D85B643E723F2AA1A7D03B0994EFD251AF6A7CB4A4C8350A` |
@@ -308,6 +313,10 @@ Current entry points:
 - [`ARCHITECTURE.md`](ARCHITECTURE.md) — architectural source of truth;
 - [`docs/README.md`](docs/README.md) — documentation index;
 - [`docs/modules/`](docs/modules/) — per-subsystem technical references;
+- [`docs/modules/BOOT_TIPS_AND_GUIDE.md`](docs/modules/BOOT_TIPS_AND_GUIDE.md)
+  — early-boot tips + illustrated guide (JSON schema, media, code map);
+- [`docs/modules/SPLASH_OPTIONS_AND_DIFFICULTY.md`](docs/modules/SPLASH_OPTIONS_AND_DIFFICULTY.md)
+  — splash Options, Gore toggle, Easy/Medium/Hard cfg presets;
 - [`docs/development/`](docs/development/) — build, extension, data-format,
   and compatibility guides.
 - [`docs/development/API.md`](docs/development/API.md) — public API for

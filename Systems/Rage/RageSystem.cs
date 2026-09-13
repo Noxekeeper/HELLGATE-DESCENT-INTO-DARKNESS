@@ -196,8 +196,21 @@ internal static class RageSystem
     }
 
     /// <summary>
+    /// True when manual G must not activate Rage: H-scene / active QTE own G for Tier2+ escape.
+    /// Prevents Update-order races where Toggle spends Rage before QTE can force the exit.
+    /// </summary>
+    internal static bool ShouldDeferManualActivationToQte()
+    {
+        if (QTESystem.IsQTEActive())
+            return true;
+
+        var player = UnifiedPlayerCacheManager.GetPlayer();
+        return player != null && player.eroflag;
+    }
+
+    /// <summary>
     /// Attempts to activate Rage Mode (G key) - activation only, manual deactivation disabled
-    /// Activation disabled during grab or knockdown
+    /// Activation disabled during grab, H-scene, active QTE, or knockdown
     /// </summary>
     internal static bool Toggle()
     {
@@ -209,6 +222,10 @@ internal static class RageSystem
             return false;
         else
         {
+            // H / QTE: G is handled by QTESystem.TryActivateRageDuringQTE (activate + escape).
+            if (ShouldDeferManualActivationToQte())
+                return false;
+
             var playerconInstance = UnifiedPlayerCacheManager.GetPlayer();
             if (playerconInstance != null && playerconInstance.erodown != 0)
                 return false;
@@ -503,7 +520,7 @@ internal static class RageSystem
         // During active Rage: drain (Outburst Fury only), MindBroken growth, timer
         if (_isActive)
         {
-            float deltaTime = Time.unscaledDeltaTime;
+            float deltaTime = MindBrokenRealtimeGate.GetClampedUnscaledDelta();
             
             // Tier model: activation cost is paid upfront (30/60/100).
             // Active window duration is controlled by timer per tier (5/10/15s), not by Rage drain.
@@ -512,12 +529,13 @@ internal static class RageSystem
             float timeSinceLastKill = Time.unscaledTime - _lastKillTime;
             bool isInOverdrive = timeSinceLastKill > KILL_TIMEOUT_THRESHOLD;
             
-            if (MindBrokenSystem.Enabled)
+            if (deltaTime > 0f && MindBrokenSystem.Enabled)
             {
                 float hcBaseGain = HC_BASE_GAIN_PER_SECOND * deltaTime;
                 MindBrokenSystem.AddPercent(hcBaseGain, "rage_active");
             }
-            if (isInOverdrive && MindBrokenSystem.Enabled && _currentTier != RageTier.Tier1)
+            if (deltaTime > 0f && isInOverdrive && MindBrokenSystem.Enabled
+                && _currentTier != RageTier.Tier1)
             {
                 float hcOverdriveGain = HC_OVERDRIVE_GAIN_PER_SECOND * deltaTime;
                 MindBrokenSystem.AddPercent(hcOverdriveGain, "rage_overdrive");
@@ -542,8 +560,12 @@ internal static class RageSystem
                     float perSecPct = Mathf.Max(0f, Plugin.mindBrokenHighRagePassivePercentPerSecond?.Value ?? 0.1f);
                     if (perSecPct > 0f)
                     {
-                        float perSecFrac = perSecPct / 100f;
-                        MindBrokenSystem.AddPercent(perSecFrac * Time.unscaledDeltaTime, "high_rage_passive_mb");
+                        float dt = MindBrokenRealtimeGate.GetClampedUnscaledDelta();
+                        if (dt > 0f)
+                        {
+                            float perSecFrac = perSecPct / 100f;
+                            MindBrokenSystem.AddPercent(perSecFrac * dt, "high_rage_passive_mb");
+                        }
                     }
                 }
             }

@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using NoREroMod.Patches.Player;
 using NoREroMod.Patches.UI.MindBroken;
+using NoREroMod.Systems.Gameplay.QTE;
 using DarkTonic.MasterAudio;
 
 namespace NoREroMod;
@@ -90,6 +91,11 @@ public static class QTESystem {
     /// Button size in pixels (reduced by 30% from original 80px).
     /// </summary>
     private const float BUTTON_SIZE = 56f; // 80 * 0.7 = 56
+
+    /// <summary>
+    /// Compact d-pad button size for Free Struggle / Simple QTE (fits above Struggle Out!).
+    /// </summary>
+    private const float FreeStruggleButtonSize = 36f;
     
     /// <summary>
     /// CanvasScaler reference height — cfg positions are expressed in this space.
@@ -101,9 +107,108 @@ public static class QTESystem {
     /// </summary>
     private static float ButtonSpacing => Plugin.qteButtonSpacing?.Value ?? 100f;
 
+    /// <summary>
+    /// Tiny inset so Free Struggle arrow outlines do not fully stack on one pixel.
+    /// </summary>
+    private const float FreeStruggleCrossInset = 1f;
+
     private static float ButtonPositionX => Plugin.qteButtonPositionX?.Value ?? 0f;
 
-    private static float ButtonPositionYFromTop => Plugin.qteButtonPositionY?.Value ?? 200f;
+    private static float ButtonPositionYFromTop => Plugin.qteButtonPositionY?.Value ?? 70f;
+
+    /// <summary>
+    /// Invisible probe on the QTE canvas — same anchors as WASD buttons — for true UI→world mapping.
+    /// </summary>
+    private static RectTransform _layoutProbe;
+    /// <summary>Last layout applied: true = Free Struggle d-pad cross, false = horizontal row.</summary>
+    private static bool _buttonsLaidOutAsCross;
+
+    /// <summary>Creates QTE canvas (and scaler) if missing so layout probes work outside active QTE.</summary>
+    public static void EnsureUiInitialized()
+    {
+        if (qteCanvas == null)
+            InitializeUI();
+    }
+
+    private static RectTransform EnsureLayoutProbe()
+    {
+        EnsureUiInitialized();
+        if (qteCanvasRect == null)
+            return null;
+
+        if (_layoutProbe != null && _layoutProbe.parent != qteCanvasRect)
+            _layoutProbe = null;
+
+        if (_layoutProbe != null)
+            return _layoutProbe;
+
+        GameObject go = new GameObject("QTE_LayoutProbe");
+        go.transform.SetParent(qteCanvasRect, false);
+        go.hideFlags = HideFlags.HideAndDontSave;
+
+        RectTransform rt = go.AddComponent<RectTransform>();
+        rt.sizeDelta = Vector2.zero;
+        // Same anchors/pivot as CreateButton (bottom-center).
+        rt.anchorMin = new Vector2(0.5f, 0f);
+        rt.anchorMax = new Vector2(0.5f, 0f);
+        rt.pivot = new Vector2(0.5f, 0.5f);
+        rt.anchoredPosition = Vector2.zero;
+
+        _layoutProbe = rt;
+        return _layoutProbe;
+    }
+
+    /// <summary>
+    /// Canvas-local anchor position of the WASD row center (1080p reference, bottom-center anchor).
+    /// </summary>
+    public static Vector2 GetButtonRowCenterAnchorPositionPublic()
+    {
+        return GetButtonRowCenterAnchorPosition();
+    }
+
+    /// <summary>
+    /// Extra screen-Y nudge (pixels) after QTE row mapping. Negative = lower on screen.
+    /// </summary>
+    private const float FatalityIconScreenYNudgePx = -70f;
+
+    /// <summary>
+    /// World position that sits under the QTE button-row center on screen.
+    /// QTE itself is Screen Space Overlay (UI), not world — we convert the real
+    /// RectTransform through the gameplay camera so Spine MeshRenderer lines up.
+    /// </summary>
+    public static Vector3 GetButtonRowCenterWorldPosition(playercon player)
+    {
+        RectTransform probe = EnsureLayoutProbe();
+        UnityEngine.Camera gameCam = mainCamera != null ? mainCamera : UnityEngine.Camera.main;
+        if (gameCam == null)
+            gameCam = UnityEngine.Object.FindObjectOfType<UnityEngine.Camera>();
+
+        if (probe != null)
+        {
+            probe.anchoredPosition = GetButtonRowCenterAnchorPosition();
+            Canvas.ForceUpdateCanvases();
+
+            // Overlay canvas: WorldToScreenPoint(null, …) → screen pixels (bottom-left origin).
+            Vector2 screen = RectTransformUtility.WorldToScreenPoint(null, probe.position);
+            screen.y += FatalityIconScreenYNudgePx;
+
+            if (gameCam != null)
+            {
+                Vector3 depthRef = player != null
+                    ? player.transform.position
+                    : gameCam.transform.position;
+                float z = gameCam.WorldToScreenPoint(depthRef).z;
+                Vector3 world = gameCam.ScreenToWorldPoint(new Vector3(screen.x, screen.y, z));
+                if (player != null)
+                    world.z = player.transform.position.z;
+                return world;
+            }
+        }
+
+        Vector3 fallback = player != null ? player.transform.position : Vector3.zero;
+        fallback.y += 3.6f;
+        return fallback;
+    }
     
     /// <summary>
     /// Left button (A).
@@ -392,30 +497,35 @@ public static class QTESystem {
     
     /// <summary>
     /// Checks if label should be visible "Struggle Out!"
-    /// Uses same conditions as UImngPatch.ShowStruggleWindowMessage
-    /// FIX: Ignores _easyESC when QTE already active (for fade effects white inquisitor)
+    /// Matches NoREroMod <c>UImngPatch.ShowStruggleWindowMessage</c>: respect vanilla
+    /// <c>_easyESC</c> (NOTESCAPE / fade lockouts) and NoREroMod struggle level 10 lockouts.
+    /// Birth recovery is the only intentional exception for <c>_easyESC</c>.
     /// </summary>
     private static bool CheckStruggleOutVisibility(playercon playerCon, PlayerStatus playerStatus) {
         if (playerCon == null || playerStatus == null) {
             return false;
         }
-        
-        // FIX: If QTE already active, ignore _easyESC (temporary fade effects should not stop QTE)
-        // Birth recovery re-locks _easyESC after JIGO but still needs QTE struggle.
-        // But check base conditions (erodown, eroflag, _SOUSA) for actual closing struggle window
+
         bool birthRecovery = BirthRecoveryStruggleState.IsActive
             && PlayerEroContextUtility.IsActivePregnancyBirth(playerCon);
-        bool ignoreEasyESC = isQTEActive || birthRecovery;
-        
-        // Conditions from UImngPatch.cs line 59-61
-        bool shouldBeVisible = 
-            playerCon.erodown != 0 && 
+
+        // Vanilla NOTESCAPE / fatality fade: struggle intentionally closed. Do not keep QTE alive.
+        if (playerCon._easyESC && !birthRecovery) {
+            return false;
+        }
+
+        // Same gate as NoREroMod UI, with level -1/10 fixes from QTEStruggleWindowManager.
+        bool windowOpen = QTEStruggleWindowManager.IsWindowOpen()
+            || playerStatus.Sp >= playerStatus.AllMaxSP()
+            || birthRecovery;
+
+        bool shouldBeVisible =
+            playerCon.erodown != 0 &&
             (
-                (playerCon.eroflag && (ignoreEasyESC || !playerCon._easyESC || playerStatus.Sp >= playerStatus.AllMaxSP()) && playerStatus._SOUSA &&
-                 (StruggleSystem.isValidStruggleWindow() || playerStatus.Sp >= playerStatus.AllMaxSP() || birthRecovery)) ||
+                (playerCon.eroflag && playerStatus._SOUSA && windowOpen) ||
                 IsInPraymaidenStruggle()
             );
-        
+
         return shouldBeVisible;
     }
     
@@ -586,12 +696,14 @@ public static class QTESystem {
             
             // STAGE 4: Update window logic QTE (separately for A/D and W/S)
             UpdateQTEWindow();
+
+            RefreshButtonLayoutIfModeChanged();
             
             // Update status bar color based on window state
             UpdateStatusBarColor();
             
-            // STAGE 8: Update alternation button colors up/down (always if buttons visible)
-            if (isWindowActiveUpDown) {
+            // STAGE 8: Update alternation button colors up/down (skipped in Free Struggle — all keys equal)
+            if (isWindowActiveUpDown && !QTEFreeStruggleMode.IsEnabled) {
                 UpdateUpDownColorCycle();
             }
             
@@ -606,8 +718,12 @@ public static class QTESystem {
             // If SP is full but vanilla did not auto-release this frame, force the same release path.
             // This prevents soft-lock grabs on specific enemies (e.g., Cocoonman variants).
             // Skip solo pleasure/orgasm (FEEL / BadstatusEro) — not an enemy grab struggle.
+            // Never force during vanilla _easyESC lockouts (NOTESCAPE / fatality fade).
+            bool birthRecoveryForce = BirthRecoveryStruggleState.IsActive
+                && PlayerEroContextUtility.IsActivePregnancyBirth(playerCon);
             if (playerStatus.Sp >= playerStatus.AllMaxSP() &&
                 playerCon.erodown != 0 &&
+                (!playerCon._easyESC || birthRecoveryForce) &&
                 !PlayerEroContextUtility.ShouldBlockEnemyStruggleAutomation(playerCon) &&
                 BirthRecoveryStruggleState.CanForceStruggleEscape(playerCon, playerStatus) &&
                 !IsBlackOozeTrapHSceneActive() &&
@@ -620,9 +736,10 @@ public static class QTESystem {
                 }
             }
             
-            // STAGE 6: Process wrong press during cooldowns
-            if ((!isWindowActiveLeftRight && cooldownTimerLeftRight > 0f) || 
-                (!isWindowActiveUpDown && cooldownTimerUpDown > 0f)) {
+            // STAGE 6: Process wrong press during cooldowns (no cooldowns in Free Struggle)
+            if (!QTEFreeStruggleMode.IsEnabled &&
+                ((!isWindowActiveLeftRight && cooldownTimerLeftRight > 0f) ||
+                 (!isWindowActiveUpDown && cooldownTimerUpDown > 0f))) {
                 ProcessWrongInput();
             }
             
@@ -1102,47 +1219,91 @@ public static class QTESystem {
     }
 
     /// <summary>
-    /// Updates button positions in horizontal row: left, up, down, right (close together).
-    /// Row center from <see cref="Plugin.qteButtonPositionX"/> / <see cref="Plugin.qteButtonPositionY"/>.
+    /// Updates button positions.
+    /// Default QTE: horizontal row left, up, down, right.
+    /// Free Struggle (Simple QTE): d-pad cross — W up, A left, S down, D right.
+    /// Row/cross center from <see cref="Plugin.qteButtonPositionX"/> / <see cref="Plugin.qteButtonPositionY"/>.
     /// </summary>
     private static void UpdateButtonPositions() {
         if (qteCanvasRect == null) {
             return;
         }
         
-        Vector2 centerTopPos = GetButtonRowCenterAnchorPosition();
-        float spacing = ButtonSpacing;
-        
-        // Horizontal row: left, up, down, right
-        // Left button: -1.5 * spacing (leftmost)
-        if (leftButton != null) {
-            RectTransform leftRect = leftButton.GetComponent<RectTransform>();
-            if (leftRect != null) {
-                leftRect.anchoredPosition = centerTopPos + new Vector2(-1.5f * spacing, 0f);
+        Vector2 centerPos = GetButtonRowCenterAnchorPosition();
+        bool cross = QTEFreeStruggleMode.IsEnabled;
+        _buttonsLaidOutAsCross = cross;
+
+        if (cross) {
+            // D-pad: smaller buttons + pivots on the inner edge so arrow bases meet.
+            float size = FreeStruggleButtonSize;
+            float inset = FreeStruggleCrossInset;
+            SetButtonSize(upButton, size);
+            SetButtonSize(downButton, size);
+            SetButtonSize(leftButton, size);
+            SetButtonSize(rightButton, size);
+            SetButtonCrossPivot(upButton, new Vector2(0.5f, 0f));       // bottom = toward center
+            SetButtonCrossPivot(downButton, new Vector2(0.5f, 1f));     // top
+            SetButtonCrossPivot(leftButton, new Vector2(1f, 0.5f));     // right
+            SetButtonCrossPivot(rightButton, new Vector2(0f, 0.5f));    // left
+
+            if (upButton != null) {
+                RectTransform upRect = upButton.GetComponent<RectTransform>();
+                if (upRect != null)
+                    upRect.anchoredPosition = centerPos + new Vector2(0f, inset);
             }
-        }
-        
-        // Up button: -0.5 * spacing (second from left)
-        if (upButton != null) {
-            RectTransform upRect = upButton.GetComponent<RectTransform>();
-            if (upRect != null) {
-                upRect.anchoredPosition = centerTopPos + new Vector2(-0.5f * spacing, 0f);
+
+            if (leftButton != null) {
+                RectTransform leftRect = leftButton.GetComponent<RectTransform>();
+                if (leftRect != null)
+                    leftRect.anchoredPosition = centerPos + new Vector2(-inset, 0f);
             }
-        }
-        
-        // Down button: +0.5 * spacing (second from right)
-        if (downButton != null) {
-            RectTransform downRect = downButton.GetComponent<RectTransform>();
-            if (downRect != null) {
-                downRect.anchoredPosition = centerTopPos + new Vector2(0.5f * spacing, 0f);
+
+            if (rightButton != null) {
+                RectTransform rightRect = rightButton.GetComponent<RectTransform>();
+                if (rightRect != null)
+                    rightRect.anchoredPosition = centerPos + new Vector2(inset, 0f);
             }
-        }
-        
-        // Right button: +1.5 * spacing (rightmost)
-        if (rightButton != null) {
-            RectTransform rightRect = rightButton.GetComponent<RectTransform>();
-            if (rightRect != null) {
-                rightRect.anchoredPosition = centerTopPos + new Vector2(1.5f * spacing, 0f);
+
+            if (downButton != null) {
+                RectTransform downRect = downButton.GetComponent<RectTransform>();
+                if (downRect != null)
+                    downRect.anchoredPosition = centerPos + new Vector2(0f, -inset);
+            }
+        } else {
+            // Row layout: restore default size + centered pivots, then place horizontally.
+            SetButtonSize(upButton, BUTTON_SIZE);
+            SetButtonSize(downButton, BUTTON_SIZE);
+            SetButtonSize(leftButton, BUTTON_SIZE);
+            SetButtonSize(rightButton, BUTTON_SIZE);
+            SetButtonCrossPivot(upButton, new Vector2(0.5f, 0.5f));
+            SetButtonCrossPivot(downButton, new Vector2(0.5f, 0.5f));
+            SetButtonCrossPivot(leftButton, new Vector2(0.5f, 0.5f));
+            SetButtonCrossPivot(rightButton, new Vector2(0.5f, 0.5f));
+
+            float spacing = ButtonSpacing;
+            // Horizontal row: left, up, down, right
+            if (leftButton != null) {
+                RectTransform leftRect = leftButton.GetComponent<RectTransform>();
+                if (leftRect != null)
+                    leftRect.anchoredPosition = centerPos + new Vector2(-1.5f * spacing, 0f);
+            }
+
+            if (upButton != null) {
+                RectTransform upRect = upButton.GetComponent<RectTransform>();
+                if (upRect != null)
+                    upRect.anchoredPosition = centerPos + new Vector2(-0.5f * spacing, 0f);
+            }
+
+            if (downButton != null) {
+                RectTransform downRect = downButton.GetComponent<RectTransform>();
+                if (downRect != null)
+                    downRect.anchoredPosition = centerPos + new Vector2(0.5f * spacing, 0f);
+            }
+
+            if (rightButton != null) {
+                RectTransform rightRect = rightButton.GetComponent<RectTransform>();
+                if (rightRect != null)
+                    rightRect.anchoredPosition = centerPos + new Vector2(1.5f * spacing, 0f);
             }
         }
         
@@ -1150,12 +1311,48 @@ public static class QTESystem {
         if (statusBar != null) {
             RectTransform barRect = statusBar.GetComponent<RectTransform>();
             if (barRect != null) {
-                // Position bar at top of screen (anchor 0.5, 1 = top center)
-                // Use screen height - small offset from top
-                float screenHeight = Screen.height;
                 barRect.anchoredPosition = new Vector2(0f, -20f); // 20px from top
             }
         }
+    }
+
+    /// <summary>Re-apply layout if Free Struggle / default mode flipped mid-session.</summary>
+    private static void RefreshButtonLayoutIfModeChanged()
+    {
+        if (leftButton == null && upButton == null)
+            return;
+
+        if (_buttonsLaidOutAsCross == QTEFreeStruggleMode.IsEnabled)
+            return;
+
+        UpdateButtonPositions();
+    }
+
+    private static void SetButtonCrossPivot(GameObject button, Vector2 pivot)
+    {
+        if (button == null)
+            return;
+
+        RectTransform rt = button.GetComponent<RectTransform>();
+        if (rt == null || rt.pivot == pivot)
+            return;
+
+        rt.pivot = pivot;
+    }
+
+    private static void SetButtonSize(GameObject button, float size)
+    {
+        if (button == null)
+            return;
+
+        RectTransform rt = button.GetComponent<RectTransform>();
+        if (rt == null)
+            return;
+
+        if (Mathf.Approximately(rt.sizeDelta.x, size) && Mathf.Approximately(rt.sizeDelta.y, size))
+            return;
+
+        rt.sizeDelta = new Vector2(size, size);
     }
     
     /// <summary>
@@ -1286,6 +1483,15 @@ public static class QTESystem {
     /// Updates window logic for A/D buttons.
     /// </summary>
     private static void UpdateWindowLeftRight() {
+        // Free Struggle: keep A/D window open for the whole Struggle session.
+        if (QTEFreeStruggleMode.IsEnabled) {
+            cooldownTimerLeftRight = 0f;
+            if (!isWindowActiveLeftRight) {
+                OpenWindowLeftRight();
+            }
+            return;
+        }
+
         if (isWindowActiveLeftRight) {
             // Window active → update timer
             windowTimerLeftRight += Time.unscaledDeltaTime;
@@ -1316,6 +1522,15 @@ public static class QTESystem {
     /// Updates window logic for W/S buttons.
     /// </summary>
     private static void UpdateWindowUpDown() {
+        // Free Struggle: keep W/S window open for the whole Struggle session.
+        if (QTEFreeStruggleMode.IsEnabled) {
+            cooldownTimerUpDown = 0f;
+            if (!isWindowActiveUpDown) {
+                OpenWindowUpDown();
+            }
+            return;
+        }
+
         if (isWindowActiveUpDown) {
             // Window active → update timer
             windowTimerUpDown += Time.unscaledDeltaTime;
@@ -1527,11 +1742,17 @@ public static class QTESystem {
             LogError("[QTE] downButton is null in OpenWindowUpDown!");
         }
         
-        // Reset color timer and start with alternation (up yellow, down red)
+        // Reset color timer and start with alternation (up yellow, down red).
+        // Free Struggle: all four keys are equal — keep W/S white like A/D.
         upDownColorTimer = 0f;
         isUpYellow = true;
         isDownYellow = false;
-        UpdateUpDownButtonColors();
+        if (QTEFreeStruggleMode.IsEnabled) {
+            SetButtonColor(upButton, Color.white);
+            SetButtonColor(downButton, Color.white);
+        } else {
+            UpdateUpDownButtonColors();
+        }
     }
     
     /// <summary>
@@ -1579,28 +1800,46 @@ public static class QTESystem {
             return;
         }
         
-        // G during QTE: Rage activation + vanilla H exit (tiered costs handled inside RageSystem).
-        if (isQTEActive && IsKeyDown(KeyCode.G)) {
+        // Rage hotkey during QTE: Rage activation + vanilla H exit (tiered costs handled inside RageSystem).
+        KeyCode rageKey = Plugin.rageActivationHotkey?.Value ?? KeyCode.G;
+        if (isQTEActive && rageKey != KeyCode.None && IsKeyDown(rageKey)) {
             TryActivateRageDuringQTE();
         }
-        
+
+        if (QTEFreeStruggleMode.IsEnabled) {
+            // Free Struggle: all four keys are equal — click SP parity.
+            if (IsKeyDown(KeyCode.A)) {
+                OnFreeStruggleKeyPress(KeyCode.A);
+            }
+            if (IsKeyDown(KeyCode.D)) {
+                OnFreeStruggleKeyPress(KeyCode.D);
+            }
+            if (IsKeyDown(KeyCode.W)) {
+                OnFreeStruggleKeyPress(KeyCode.W);
+            }
+            if (IsKeyDown(KeyCode.S)) {
+                OnFreeStruggleKeyPress(KeyCode.S);
+            }
+            return;
+        }
+
         // Process A/D presses only if A/D window is active
         if (isWindowActiveLeftRight) {
             if (IsKeyDown(KeyCode.A)) {
                 OnButtonPress(KeyCode.A);
             }
-            
+
             if (IsKeyDown(KeyCode.D)) {
                 OnButtonPress(KeyCode.D);
             }
         }
-        
+
         // Process W/S presses only if W/S window is active
         if (isWindowActiveUpDown) {
             if (IsKeyDown(KeyCode.W)) {
                 OnUpDownButtonPress(KeyCode.W, isUpYellow);
             }
-            
+
             if (IsKeyDown(KeyCode.S)) {
                 OnUpDownButtonPress(KeyCode.S, isDownYellow);
             }
@@ -1623,6 +1862,13 @@ public static class QTESystem {
         // Never force a struggle-escape (get up) while dead — EnableStruggleFlags would
         // otherwise re-assert _SOUSA after SpDeath cleared it.
         if (pc._Death || ps.Hp <= 0f)
+            return false;
+
+        bool birthRecovery = BirthRecoveryStruggleState.IsActive
+            && PlayerEroContextUtility.IsActivePregnancyBirth(pc);
+
+        // NOTESCAPE / fatality no-escape: do not clear _easyESC or force stand-up.
+        if (pc._easyESC && !birthRecovery)
             return false;
 
         PlayerEnemyGrabStruggleSupport.EnableStruggleFlags(pc, ps);
@@ -1658,12 +1904,10 @@ public static class QTESystem {
         Time.timeScale = 1f;
 
         try {
-            // In some downed-in-air capture races _easyESC can remain true and block vanilla release path.
-            // Force normal struggle-release flags before invoking fun_nowdamage.
-            if (BirthRecoveryStruggleState.IsActive)
+            // Birth recovery may still hold _easyESC; clear only on that path.
+            // Never clear vanilla NOTESCAPE lockouts from force-escape.
+            if (birthRecovery)
                 BirthRecoveryStruggleState.PermitStandAndReleaseEasyEsc(pc);
-            else
-                Traverse.Create(pc).Field("_easyESC").SetValue(false);
         } catch (Exception ex) {
             LogWarning($"[QTE RAGE] Failed to clear _easyESC before release: {ex.Message}");
         }
@@ -1698,9 +1942,12 @@ public static class QTESystem {
             return false;
         }
 
-        if (pc.erodown == 0 && pc.eroflag)
+        if (pc.erodown == 0 && (pc.eroflag || NoREroMod.Patches.Trap.TrapdataHSceneEscapePatch.IsAnyTrapHSceneVisualActive()))
         {
             NoREroMod.Patches.Enemy.HeckGateEnemy.SuraimuHSceneEscapePatch.AbortActiveSuraimuHSceneOnPlayerEscape(
+                pc,
+                requireErodownClear: true);
+            NoREroMod.Patches.Enemy.HeckGateEnemy.SuccubusHSceneEscapePatch.AbortActiveSuccubusHSceneOnPlayerEscape(
                 pc,
                 requireErodownClear: true);
             NoREroMod.Patches.Enemy.HellishTouzokuModCustom.HellishTouzokuHSceneEscapePatch
@@ -1866,10 +2113,16 @@ public static class QTESystem {
     /// Handles press QTE button
     /// </summary>
     private static void OnButtonPress(KeyCode key) {
-        if (currentPlayerStatus == null) {
+        if (currentPlayerStatus == null || currentPlayerCon == null) {
             return;
         }
-        
+
+        // Hard stop if vanilla/NoREroMod closed struggle this frame (NOTESCAPE / level 10).
+        if (!CheckStruggleOutVisibility(currentPlayerCon, currentPlayerStatus)) {
+            StopQTE();
+            return;
+        }
+
         // Calculate SP gain considering MindBroken (1.6% → 0.2%)
         float spGain = QTESPCalculator.CalculateSPGain();
         
@@ -1907,6 +2160,56 @@ public static class QTESystem {
         }
         
         // TODO STAGE 5: Success sound (from archive)
+    }
+
+    /// <summary>
+    /// Free Struggle: any WASD press grants mouse/E click SP and flashes the matching button green.
+    /// </summary>
+    private static void OnFreeStruggleKeyPress(KeyCode key) {
+        if (currentPlayerStatus == null || currentPlayerCon == null) {
+            return;
+        }
+
+        if (!CheckStruggleOutVisibility(currentPlayerCon, currentPlayerStatus)) {
+            StopQTE();
+            return;
+        }
+
+        float spGain = QTESPCalculator.CalculateSPGainClick();
+        float currentSP = currentPlayerStatus.Sp;
+        float maxSP = currentPlayerStatus.AllMaxSP();
+        float newSP = Mathf.Min(currentSP + (maxSP * spGain), maxSP);
+
+        try {
+            var spField = AccessTools.Field(typeof(PlayerStatus), "Sp");
+            if (spField != null) {
+                spField.SetValue(currentPlayerStatus, newSP);
+            } else {
+                var spProperty = AccessTools.Property(typeof(PlayerStatus), "Sp");
+                if (spProperty != null && spProperty.CanWrite) {
+                    spProperty.SetValue(currentPlayerStatus, newSP, null);
+                }
+            }
+        } catch (Exception ex) {
+            LogWarning($"Failed to set SP: {ex.Message}");
+        }
+
+        LogInfo($"[QTE FreeStruggle] {key} pressed, SP gain: +{spGain * 100f:F1}% (click parity) (new SP: {newSP:F1}/{maxSP:F1})");
+        BirthRecoveryStruggleState.NotifyStruggleInput();
+
+        if (key == KeyCode.A) {
+            SetButtonColor(leftButton, Color.green);
+            leftButtonColorTimer = pressIndicatorDuration;
+        } else if (key == KeyCode.D) {
+            SetButtonColor(rightButton, Color.green);
+            rightButtonColorTimer = pressIndicatorDuration;
+        } else if (key == KeyCode.W) {
+            SetButtonColor(upButton, Color.green);
+            upButtonColorTimer = pressIndicatorDuration;
+        } else if (key == KeyCode.S) {
+            SetButtonColor(downButton, Color.green);
+            downButtonColorTimer = pressIndicatorDuration;
+        }
     }
     
     /// <summary>
@@ -2213,10 +2516,15 @@ public static class QTESystem {
     /// Handles press on button up/down (W/S)
     /// </summary>
     private static void OnUpDownButtonPress(KeyCode key, bool isYellow) {
-        if (currentPlayerStatus == null) {
+        if (currentPlayerStatus == null || currentPlayerCon == null) {
             return;
         }
-        
+
+        if (!CheckStruggleOutVisibility(currentPlayerCon, currentPlayerStatus)) {
+            StopQTE();
+            return;
+        }
+
         if (isYellow) {
             // Yellow button -> SP bonus (5% -> 2.5% with MB).
             OnYellowButtonPress(key);
@@ -2411,6 +2719,15 @@ public static class QTESystem {
     /// Restores up/down button color to original state after visual indication.
     /// </summary>
     private static void ResetUpDownButtonColor(KeyCode key) {
+        if (QTEFreeStruggleMode.IsEnabled) {
+            if (key == KeyCode.W) {
+                SetButtonColor(upButton, Color.white);
+            } else if (key == KeyCode.S) {
+                SetButtonColor(downButton, Color.white);
+            }
+            return;
+        }
+
         if (key == KeyCode.W) {
             Color upColor = isUpYellow ? Color.yellow : Color.red;
             SetButtonColor(upButton, upColor);

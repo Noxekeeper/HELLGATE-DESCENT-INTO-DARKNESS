@@ -29,12 +29,13 @@
     },
     "undead": {
       "weights": {
-        "Undead": 1
+        "Undead": 1,
+        "BlackOoze": 1
       }
     },
     "monsters": {
       "weights": {
-        "BlackOoze": 1
+        "Kinoko": 1
       }
     }
   }

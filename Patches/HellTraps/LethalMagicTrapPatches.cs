@@ -69,7 +69,7 @@ internal static class LethalMagicTrapPatches
     {
         internal static bool Prefix(Magictrap __instance)
         {
-            if (!Plugin.enableLethalMagicTrap.Value || __instance == null)
+            if (!Plugin.IsLethalMagicTrapActive || __instance == null)
                 return true;
 
             if (!LethalMagicTrapRuntime.TryFireLethalTrapShot(__instance))
@@ -92,7 +92,7 @@ internal static class LethalMagicTrapPatches
 
         internal static void Postfix(SetupFireball __instance, Collider2D col)
         {
-            if (!Plugin.enableLethalMagicTrap.Value || __instance == null || col == null)
+            if (!Plugin.IsLethalMagicTrapActive || __instance == null || col == null)
                 return;
 
             if (col.gameObject == null || col.gameObject.tag != "playerDAMAGEcol")
@@ -122,7 +122,7 @@ internal static class LethalMagicTrapPatches
 
         internal static void Postfix(Fireball __instance, Collider2D col)
         {
-            if (!Plugin.enableLethalMagicTrap.Value || __instance == null || col == null)
+            if (!Plugin.IsLethalMagicTrapActive || __instance == null || col == null)
                 return;
 
             if (col.gameObject == null || col.gameObject.tag != "playerDAMAGEcol")
@@ -146,7 +146,7 @@ internal static class LethalMagicTrapPatches
         [HarmonyPriority(Priority.Last)]
         private static void OverrideLethalDamage(ref float getatk, ref float gettoughcut, ref int kickbackkind)
         {
-            if (!Plugin.enableLethalMagicTrap.Value || LethalTrapHitGate.IsCocoonLethalHitActive())
+            if (!Plugin.IsLethalMagicTrapActive || LethalTrapHitGate.IsCocoonLethalHitActive())
                 return;
 
             if (!LethalMagicTrapDeathContext.IsLethalDamageInFlight &&
@@ -164,7 +164,7 @@ internal static class LethalMagicTrapPatches
         [HarmonyPrefix]
         private static void Prefix(float getatk)
         {
-            if (!Plugin.enableLethalMagicTrap.Value || LethalTrapHitGate.IsCocoonLethalHitActive())
+            if (!Plugin.IsLethalMagicTrapActive || LethalTrapHitGate.IsCocoonLethalHitActive())
                 return;
 
             if (!LethalMagicTrapDeathContext.ShouldTreatAsLethalTrapHit(getatk))
@@ -181,7 +181,7 @@ internal static class LethalMagicTrapPatches
         [HarmonyPriority(Priority.Last)]
         private static void Postfix(playercon __instance)
         {
-            if (!Plugin.enableLethalMagicTrap.Value || __instance == null ||
+            if (!Plugin.IsLethalMagicTrapActive || __instance == null ||
                 LethalTrapHitGate.IsCocoonLethalHitActive())
             {
                 return;

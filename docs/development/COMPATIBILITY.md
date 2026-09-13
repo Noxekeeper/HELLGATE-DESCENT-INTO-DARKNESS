@@ -16,6 +16,7 @@ not a base layer. The deliberate contact surface is small:
 | Elite grab behavior | disabled via `NoREroModEliteGrabDisablerPatch` |
 | Required companion config values | pushed by `NoREroModScaffoldConfigPush` |
 | Base enemy stat scaling (HP/speed/poise) | stays in NoREroMod (`NoREroMod.cfg`) |
+| Splash Easy/Medium/Hard presets | HellGate copies **both** `NoREroMod.cfg` and `NoREroMod_HellGate.cfg` from `BepInEx/config/{EASY\|MEDIUM\|HARD}/`; preserves language/gore/splash prefs; restart required — see [SPLASH_OPTIONS_AND_DIFFICULTY.md](../modules/SPLASH_OPTIONS_AND_DIFFICULTY.md) and `BepInEx/config/DIFFICULTY_PRESETS_GUIDE.txt` |
 
 `RunNoREroModCompatibilityProbe()` verifies expected NoREroMod symbols at
 startup. A probe warning means the companion build does not match the
@@ -33,7 +34,8 @@ disabled. Never run both implementations of QTE/struggle at once.
   add parallel escape paths; extend the cleanup set instead.
 - **Timescale**: anything slowing time restores it via the escape/cleanup
   path. Grab slow-mo defers to `HSceneStartZoomEffect` when start zoom is
-  enabled.
+  enabled. DeadArmor armored-throw slow-mo is independent (no zoom) and
+  restores `timeScale` when its real-time window ends.
 - **Per-frame player logic** goes through `PlayerConUpdateDispatcher`.
 - **Persistence** goes through save/load hook patches; per-slot files only.
 - **Boss detection** is centralized in `FactionBossDetection`.

@@ -1,0 +1,519 @@
+{
+  "settings": {
+    "commentCooldownSeconds": 2.0,
+    "maxSimultaneousComments": 1,
+    "commentDisplayDuration": 4.0,
+    "fontSize": 22.0,
+    "verticalOffset": 15,
+    "streamingSpeed": 0.03,
+    "goblinColor": {
+      "r": 1.0,
+      "g": 1.0,
+      "b": 1.0,
+      "a": 1.0
+    },
+    "goblinOutlineColor": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 1.0
+    }
+  },
+  "animations": {
+    "START": {
+      "description": "Standing in front, captures and binds GG's hands and feet behind her head with his left hand, showing her tits, and rips her clothes off with his right.",
+      "events": {
+        "START": [
+          "别乱动。你只会把自己耗尽。",
+          "又一个逃奴。送回该待的地方。",
+          "更凶的我也见过。最后全碎了。",
+          "站住。这样对你更轻松。",
+          "看着我。记住这张脸。",
+          "跟我作对的，你不是第一个。",
+          "很好。继续浪费力气。",
+          "每条锁链都从一个错误开始。",
+          "你的路走到头了。",
+          "看看这点傲气能撑多久。"
+        ],
+        "SE": [
+          "挣扎吧。毫无用处。",
+          "你乱踢只证明还有精神可折。",
+          "继续反抗。开始我喜欢鲜活的。",
+          "逃不出这双手，逃奴。"
+        ]
+      }
+    },
+    "ERO": {
+      "description": "Throws GG to the ground, on her back, he starts rubbing himself on GG and inserts himself",
+      "events": {
+        "ERO": [
+          "恐惧会过去。习惯会留下。说你是我的玩具。",
+          "学得比大多数人快。认输我就停。",
+          "你只是个小玩具，什么也做不了。",
+          "总有一天你会放弃逃跑，自己把身子送上来。",
+          "傲气太贵。服从更便宜。说你是我的操娃娃——疼就会停。",
+          "还幻想有人来救？娃娃没有希望。",
+          "先夺走希望。然后是你的身体——我的财产。",
+          "很快这就成了日常。你只需变成我的精液桶。"
+        ]
+      }
+    },
+    "ERO1": {
+      "description": "Traps GG with his body weight, while thrusting hard and slow, missionary",
+      "events": {
+        "ERO1": [
+          "很好。说。",
+          "再说。你喊出来我才停。",
+          "好多了。开始。",
+          "别动。",
+          "学着点。",
+          "身体会先背叛你。",
+          "呼吸。",
+          "听着。",
+          "服从。",
+          "记住。"
+        ]
+      }
+    },
+    "ERO2": {
+      "description": "Speeds up, fucks GG missionary while she has her feet pointing towards the sky",
+      "events": {
+        "ERO2": [
+          "就这点本事？",
+          "我还指望你更能撑。",
+          "你把这事变得太轻松了。",
+          "还装得像能逃？",
+          "继续打。我喜欢你拼命的样子。",
+          "有胆量。可惜没用。",
+          "差点让我刮目相看。",
+          "你会记得我比我记得你更久。"
+        ]
+      }
+    },
+    "ERO3": {
+      "description": "Same speed, but harder, which makes GG slightly close her legs from the force, with each thrust",
+      "events": {
+        "ERO3": [
+          "就是这样。聪明的选择。",
+          "很好。终于想明白了。",
+          "看见没？没那么难。",
+          "我就知道你迟早会懂。",
+          "这才是认真听话的眼神。",
+          "很好。终于明白处境了。",
+          "继续这么选，我们会相处得很好。",
+          "没脑子的操洞，该上锁链了。"
+        ]
+      }
+    },
+    "ERO4": {
+      "description": "Speeds up, and thrusts harder, making GG's feet bounce off his body",
+      "events": {
+        "ERO4": [
+          "受着，贱货！你什么都不是！",
+          "看着我，婊子！求饶！",
+          "你就是该被折腾的空穴！",
+          "我会继续撕开你，直到你把我榨出来，贱人。",
+          "夹紧腿，玩具。让我失望就捏碎你的头。",
+          "教你什么叫真疼。你什么也做不了。",
+          "你不过是块脏精液抹布。",
+          "剩的部分我卖去拉格敦的街上！"
+        ],
+        "SE": [
+          "那点紧穴救不了你。",
+          "用到没什么可卖为止。",
+          "你现在是财产。给我像财产一样。"
+        ]
+      }
+    },
+    "FIN": {
+      "description": "Cums hard inside GG, while she hugs his body",
+      "events": {
+        "FIN": [
+          "受着！用力受着！",
+          "啊！用到你死为止！",
+          "哈啊！夹紧腿，我要灌满你！",
+          "很好！乖玩具。呃啊！啊啊……",
+          "捏碎你！",
+          "你这该死的……婊子！！！",
+          "现在我是你的主人！",
+          "感觉到你在夹，小女巫！"
+        ],
+        "SE": [
+          "挣扎吧。只会把我榨得更深。",
+          "继续扭，直到我把种灌完。",
+          "随便反抗。你已经是我的了。"
+        ]
+      }
+    },
+    "FIN2": {
+      "description": "Cums one time, pulls out, revealing GG's blushing face, tits and covered pussy",
+      "events": {
+        "FIN2": [
+          "你变了，就算不承认。",
+          "今晚你会想着这个。",
+          "往后每天都会更轻松。",
+          "你开始明白这是怎么运作的。",
+          "张开腿，贱货。",
+          "彻底撑开了。配我鸡巴的完美玩具。",
+          "这次你会自己求着要。",
+          "你会记一辈子。",
+          "到死你都是我的精液桶。"
+        ]
+      }
+    },
+    "JIGO": {
+      "description": "GG twitches while he prepares for another round",
+      "events": {
+        "JIGO": [
+          "缓口气。",
+          "不急。",
+          "歇一会儿。",
+          "以为完了？我抓了可不会放。",
+          "准备好，没脑子的洞。",
+          "给你短暂休息。",
+          "我有耐心。"
+        ]
+      }
+    },
+    "JIGO2": {
+      "description": "Goes forward, covering GG's face",
+      "events": {
+        "JIGO2": [
+          "看看你学到了什么。",
+          "想去哪？你只是个玩具。",
+          "你死了我才停。",
+          "还有点精神。",
+          "该再收拾你一顿了，贱人！",
+          "还没碎干净。",
+          "还没。"
+        ]
+      }
+    },
+    "JIGOERO": {
+      "description": "Round two, repeating the chain, but with GG's pussy covered in cum",
+      "events": {
+        "JIGOERO": [
+          "还没完。",
+          "给我看看你学到了什么。",
+          "别让我失望。",
+          "准备好了？现在你扛得住。",
+          "你的穴，我永远玩不腻。",
+          "别撇嘴——压到你眼睛翻白为止。",
+          "这次用我的精液润滑鸡巴。感恩吧，女巫。",
+          "我会把精液从你身体里挤出来——别拦。"
+        ]
+      }
+    },
+    "JIGOERO2": {
+      "description": "Faster thrusting resumes, using previous cum as lube, her body slick and messy beneath him.",
+      "events": {
+        "JIGOERO2": [
+          "我的种让你滑腻。感受现在多好进。",
+          "反抗没用。身体记得它属于谁。",
+          "已经浸满我的精液。天生的容器。",
+          "这就是你的用途。别抱怨，受着。",
+          "疼？很好。你会把疼和我绑在一起。",
+          "越疼穴夹得越紧。调教得不错。",
+          "看看我造的烂摊子。该弄得更脏。",
+          "每一下都把精液顶得更深。在里面打上标记。",
+          "别夹。只会让你自己更难受。",
+          "很快你就不记得遇见我之前的感觉了。"
+        ],
+        "SE": [
+          "受着。",
+          "湿婊子。",
+          "逃不掉。",
+          "我的。"
+        ]
+      }
+    },
+    "JIGOERO3": {
+      "description": "Harder thrusts with force causing her legs to twitch and try to close involuntarily.",
+      "events": {
+        "JIGOERO3": [
+          "腿已经在抖？才刚开始。",
+          "试试合上。我喜欢撞开抵抗。",
+          "身体在背叛你。这颤抖说明你有感觉。",
+          "硬掰开。我要看清我拥有的一切。",
+          "每一记都提醒你谁说了算。",
+          "越挣扎我越硬。继续抖。",
+          "你的穴在打一场必输的仗。放松，接受。",
+          "我能整晚干。你撑得住吗？",
+          "这呜咽像音乐。再大声点，女巫。",
+          "腿想合拢，穴却想要更多。"
+        ],
+        "SE": [
+          "张大。",
+          "感觉到了？",
+          "正在弄碎你。",
+          "真紧。"
+        ]
+      }
+    },
+    "JIGOERO4": {
+      "description": "Brutal peak pace before second climax, relentless pounding as she lies exhausted beneath him.",
+      "events": {
+        "JIGOERO4": [
+          "哈啊！在这儿认清你的位置！",
+          "再把你灌满种！受着！",
+          "主人快到了！求我灌满你！",
+          "随便叫。没人来救你！",
+          "再次占有这个洞！哈啊！",
+          "每一寸都是我的！说！",
+          "灌到你能漏好几天！",
+          "你生来就是干这个的！我的精液垃圾桶！",
+          "哈啊！你的穴在把我榨干，女巫！",
+          "你是财产。给我像财产一样，接住我的鸡巴！"
+        ],
+        "SE": [
+          "全部受着！",
+          "感受这节奏！",
+          "你是我的！",
+          "正在撑开你！"
+        ]
+      }
+    },
+    "JIGOFIN": {
+      "description": "He cums inside her for the second time, flooding her already filled womb with more seed.",
+      "events": {
+        "JIGOFIN": [
+          "哈啊！又在灌！一滴不剩！",
+          "这种货还多得很！",
+          "子宫在喝我。乖女孩。",
+          "第二发比第一发更深。",
+          "像样的玩具就该这么打标。里外都是。",
+          "哈啊！用你疲惫的穴把我鸡巴榨干！",
+          "又把你里面涂白了。谢我。",
+          "这么多精液，给个碎掉的小女巫。",
+          "受着。全部。哈啊！",
+          "现在你只是我的种的容器。"
+        ],
+        "SE": [
+          "灌到深处！",
+          "哈啊！受着！",
+          "更深！",
+          "你是我的！"
+        ]
+      }
+    },
+    "JIGOFIN2": {
+      "description": "He pulls out showing her used body covered in cum, sore and thoroughly broken.",
+      "events": {
+        "JIGOFIN2": [
+          "看看我把你弄成什么样。漂亮。",
+          "两发在里面，你几乎动不了。完美。",
+          "精液从你穴里往外流。那是我的印记。",
+          "躺着让它滴。我想欣赏我的作品。",
+          "又疼又满又带印。终于是像样的财产了。",
+          "逃奴就是这下场。记住这景象。",
+          "穴张开往外漏。就该这样。",
+          "能歇就歇。第三轮等我再硬起来。",
+          "看看你自己。已经不像女巫了。",
+          "我的碎玩具。精液糊满的奴隶。"
+        ]
+      }
+    },
+    "JIGOPOST3": {
+      "description": "Act 3 begins with her legs already spread wide, displaying her ruined, gaping, cum-leaking state.",
+      "events": {
+        "JIGOPOST3": [
+          "看看你。腿张开得像受过训。",
+          "第三轮。已经被我操开了。",
+          "穴张着。看得出我的手艺。",
+          "两发在里面还撑着开。",
+          "没反抗了。只剩像样的展示。",
+          "脱力、发红、往外漏。完美状态。",
+          "为我把腿撑开。好本能。",
+          "该用你剩下的部分了。",
+          "这毁了的洞还需要更多训练。",
+          "看你现在多轻易接受自己的用途。"
+        ]
+      }
+    },
+    "JIGOPOST4": {
+      "description": "He covers her again, mounting her exhausted body and trapping her beneath his weight.",
+      "events": {
+        "JIGOPOST4": [
+          "别动。我要骑上我的财产。",
+          "又在我身下，你该待的地方。",
+          "感觉到这重量？这就是占有。",
+          "这次逃不掉。你太累了。",
+          "用到你不再抽搐为止。",
+          "身体记得这个姿势。",
+          "困在主人身下。说。",
+          "再张开点。我要完全入口。",
+          "这里现在是你的永久住址。",
+          "放松。反抗只会更糟。"
+        ]
+      }
+    },
+    "JIGOPOSTERO": {
+      "description": "Third round thrusting begins, using prior cum as lube on her already messy, tired body.",
+      "events": {
+        "JIGOPOSTERO": [
+          "很容易滑进去。我的精液把你弄滑了。",
+          "第三次才是真章。又松又就绪。",
+          "没抵抗了。只剩湿洞。",
+          "感觉到我正穿过自己的烂摊子？",
+          "疲惫的穴夹得更弱了。很好。",
+          "对碎玩具的第三轮。奢侈。",
+          "把你毁到修不好为止。",
+          "你可以顶回来。或者不。我不在乎了。",
+          "里面已经满是精液。还有更多。",
+          "你的身体就是为这个造的。"
+        ],
+        "SE": [
+          "受着。",
+          "湿洞。",
+          "不反抗。",
+          "我的。"
+        ]
+      }
+    },
+    "JIGOPOSTERO2": {
+      "description": "Faster thrusting, cum-lube allowing deeper use of her exhausted, barely responsive body.",
+      "events": {
+        "JIGOPOSTERO2": [
+          "更快。反正你几乎感觉不到。",
+          "只是鸡巴套子。仅此而已。",
+          "你的穴已经烂软。完美。",
+          "深顶。撞到子宫口了。",
+          "想抖就抖。我几乎看不见。",
+          "用我自己的精液把你操得更狠。",
+          "到这地步你只是个容器。",
+          "别再哼唧。老实挨打。",
+          "这具疲惫的身体还在尽它的用途。",
+          "三轮了，终于有点用。"
+        ],
+        "SE": [
+          "更快。",
+          "深。",
+          "烂软。",
+          "没用。"
+        ]
+      }
+    },
+    "JIGOPOSTERO3": {
+      "description": "Hardest pounding before third climax, she is almost gone, body barely responding.",
+      "events": {
+        "JIGOPOSTERO3": [
+          "哈啊！快了！受着这顿打！",
+          "这是尽头！你的最后崩溃！",
+          "把你剩下的部分了结掉！",
+          "哈啊！再也不是女巫！只是我的财产！",
+          "更狠！你扛得住！哈啊！",
+          "你的穴在把我榨干！哈啊！",
+          "你就这样结束！在我鸡巴下面！",
+          "哈啊！彻底弄碎你！",
+          "没抵抗了！只剩我的精液！",
+          "哈啊！最后一发来了！"
+        ],
+        "SE": [
+          "哈啊！受着！",
+          "为我碎掉！",
+          "你是我的！",
+          "了结它！"
+        ]
+      }
+    },
+    "JIGOPOSTFIN": {
+      "description": "Third orgasm inside her, flooding her already overfilled womb with another hot load.",
+      "events": {
+        "JIGOPOSTFIN": [
+          "哈啊！第三发！灌满你！",
+          "受着！哈啊！淹没那子宫！",
+          "把种灌满你！哈啊！",
+          "三发到底！打上标记了！",
+          "哈啊！每一滴都在里面！我的！",
+          "灌进去！哈啊！全部受着！",
+          "这就是你的用途！哈啊！满了！",
+          "第三次才是真章！哈啊！完事！",
+          "你在我的种里游！哈啊！",
+          "完了！哈啊！我的碎玩具！"
+        ],
+        "SE": [
+          "哈啊！受着！",
+          "灌满你！",
+          "第三发！",
+          "完了！"
+        ]
+      }
+    },
+    "JIGOPOSTFIN2": {
+      "description": "Afterglow and pull-out display, legs still open, leaking heavily from three loads.",
+      "events": {
+        "JIGOPOSTFIN2": [
+          "看。三发往外漏。",
+          "保持张开。我要看损坏。",
+          "你是我精液的喷泉。漂亮。",
+          "张开往下滴。彻底毁了。",
+          "这是你最好看的样子。空的，带着印。",
+          "腿开、穴开、精液流。",
+          "我的杰作。一个碎女巫。",
+          "休息吧。你被好好灌种了。",
+          "那洞再也不会合回原来的样子。",
+          "欣赏我把你做成了什么。"
+        ]
+      }
+    },
+    "JIGOTOFADE": {
+      "description": "Screen begins to fade to black, scene ending with final ownership declarations.",
+      "events": {
+        "JIGOTOFADE": [
+          "进入黑暗。但你仍是我的。",
+          "对世界来说这是结束。对你不是。",
+          "消失在黑暗里。我的财产。",
+          "没有光了。只有我的占有。",
+          "消失。但永久打上了印。",
+          "自由再见。迎来服侍。",
+          "进入黑暗。作为我的玩具。",
+          "结束开始了。你的新人生。"
+        ]
+      }
+    },
+    "ZGAMEOVER": {
+      "description": "Bad end visual, she is fully broken, semen-stained, claimed as permanent property.",
+      "events": {
+        "ZGAMEOVER": [
+          "你输了。我赢了。完了。",
+          "彻底碎了。彻底打上印。彻底是我的。",
+          "逃不掉。没有第二次机会。只有占有。",
+          "精液糊身，结束了。我的财产。",
+          "女巫死了。玩具还在。",
+          "你的故事以我的奴隶收场。",
+          "抓住。弄碎。留下。",
+          "永远是我的。永远被用。"
+        ]
+      }
+    },
+    "ZGAMEOVER2LOOP": {
+      "description": "Looping bad-end hold, quiet gloating about her permanent state.",
+      "events": {
+        "ZGAMEOVER2LOOP": [
+          "就这样待着。永远。",
+          "我的永久所有物。",
+          "没有变化。只有使用。",
+          "作为我的玩具循环。",
+          "永恒的服侍。",
+          "永不自由。永远是我的。",
+          "你的永远。"
+        ]
+      }
+    },
+    "4ERO": {
+      "description": "Optional coda after fade, mouth or continued use of the finished toy.",
+      "events": {
+        "4ERO": [
+          "就算结束后你也有用。",
+          "张开嘴。还有用。",
+          "玩具还在给出。",
+          "跟你还没完。",
+          "清理。你还有用。",
+          "碎财产的最后使用。",
+          "把你剩下的榨干。",
+          "废墟也有用途。"
+        ]
+      }
+    }
+  }
+}

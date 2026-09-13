@@ -81,7 +81,7 @@ internal static class LethalMagicTrapRuntime
 
     internal static void TryEnsureTemplateRegistered()
     {
-        if (!Plugin.enableLethalMagicTrap.Value)
+        if (!Plugin.IsLethalMagicTrapActive)
             return;
 
         if (SpawnTemplateCatalog.HasTemplate(LethalMagicTrapPaths.TemplateKey))
@@ -146,7 +146,7 @@ internal static class LethalMagicTrapRuntime
 
     internal static void ConfigureSpawnedTrap(GameObject spawnedTrap, bool logSpawn = false)
     {
-        if (spawnedTrap == null || !Plugin.enableLethalMagicTrap.Value)
+        if (spawnedTrap == null || !Plugin.IsLethalMagicTrapActive)
             return;
 
         if (spawnedTrap.GetComponent<Magictrap>() == null)
@@ -225,7 +225,7 @@ internal static class LethalMagicTrapRuntime
     /// <summary>Marks pending custom death before vanilla OnTriggerEnter2D applies trap damage.</summary>
     internal static void TryMarkLethalHitPending(Component bulletComponent, Collider2D col)
     {
-        if (!Plugin.enableLethalMagicTrap.Value || bulletComponent == null || col == null)
+        if (!Plugin.IsLethalMagicTrapActive || bulletComponent == null || col == null)
             return;
 
         if (col.gameObject == null || col.gameObject.tag != "playerDAMAGEcol")
@@ -290,7 +290,7 @@ internal static class LethalMagicTrapRuntime
     /// </summary>
     internal static bool TryHandleLethalBulletHit(Component bulletComponent, Collider2D col)
     {
-        if (!Plugin.enableLethalMagicTrap.Value || bulletComponent == null)
+        if (!Plugin.IsLethalMagicTrapActive || bulletComponent == null)
             return false;
 
         if (!IsLethalBullet(bulletComponent))
@@ -307,6 +307,9 @@ internal static class LethalMagicTrapRuntime
             return false;
 
         if (player.stepfrag)
+            return true;
+
+        if (NoREroMod.Systems.EnemyFatality.EnemyFatalitySession.IsActive)
             return true;
 
         GameObject effectPrefab = ResolveBulletEffect(bulletComponent);
@@ -349,7 +352,7 @@ internal static class LethalMagicTrapRuntime
     /// <summary>After lethal bullet damage: force 0 HP + death menu, then play custom clip.</summary>
     internal static void FinalizeLethalBulletHit(playercon player)
     {
-        if (!Plugin.enableLethalMagicTrap.Value || player == null)
+        if (!Plugin.IsLethalMagicTrapActive || player == null)
             return;
 
         if (!LethalMagicTrapDeathContext.HasPending &&

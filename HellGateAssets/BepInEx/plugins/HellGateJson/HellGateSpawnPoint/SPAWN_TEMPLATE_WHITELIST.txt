@@ -8,7 +8,7 @@
 # После правок: перезапуск игры. Первый заход на карту восстанавливает кэш с диска.
 
 # ========== HOSTAGE (пленники) ==========
-MobSlumSlave
+MobSlumSlave@InsomniaTownC
 MobCrawlingSlave
 MobSpiderSlave
 MobRosewarm
@@ -18,7 +18,7 @@ witchslaveViolin
 witchslaveslime
 EnemyMobCrowSlaveBack
 EnemyMobCrowSlaveStandup
-mobslumslave
+mobslumslave@InsomniaTownC
 mobcrawlingslave
 mobspiderslave
 mobrosewarm
@@ -41,6 +41,8 @@ forest_long
 # ========== TRAP — кнопки / пушки / копья ==========
 trap_button
 trap_button_ironmaiden
+lightningTrap_button
+lightingTrap_button
 trapshot
 trapgun2
 trapgun3
@@ -108,9 +110,9 @@ Tent_Ironmaiden
 # ========== TRAP — машина / H ==========
 trapmachine
 trap_machine
-trap_mokubaenemy
-trap_rockinghorse
-Trap_mokubaEnemy
+trap_mokubaenemy@Prison
+trap_rockinghorse@Prison
+Trap_mokubaEnemy@Prison
 Trap_machine
 pictureeronon
 pictureero_non
@@ -154,6 +156,7 @@ Arrow@scapegoatEntrance
 scapegoat_Slave@scapegoatEntrance
 VillageSlave@village_main
 NpcSlave@Ranch
+InchurchSlave@InundergroundChurch
 InchchurchSlave@InundergroundChurch
 
 

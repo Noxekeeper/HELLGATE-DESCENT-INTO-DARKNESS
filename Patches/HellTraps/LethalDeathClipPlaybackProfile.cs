@@ -36,4 +36,23 @@ internal sealed class LethalDeathClipPlaybackProfile
             FastPhaseTrapContentYOffset = LethalCocoonTrapDeathTuning.FastPhaseTrapContentYOffset,
             UseBlackBackdropDuringClip = true,
         };
+
+    /// <summary>
+    /// Lightning button: same black/timing as cocoon, PNG fixed at trap world coords (no player bone).
+    /// </summary>
+    internal static readonly LethalDeathClipPlaybackProfile LightningTrapFixed =
+        new LethalDeathClipPlaybackProfile
+        {
+            FastPhaseFrameCountOneBased = LethalLightningTrapDeathTuning.FastPhaseFrameCountOneBased,
+            FastPhaseSpeedMultiplier = LethalLightningTrapDeathTuning.FastPhaseSpeedMultiplier,
+            SlowMoFlashAtFrameOneBased = LethalLightningTrapDeathTuning.SlowMoFlashAtFrameOneBased,
+            DeferSlowMoUntilClipTransition = true,
+            DeferFlashUntilClipTransition = true,
+            SlowMoScale = LethalLightningTrapDeathTuning.SlowMoScale,
+            SlowMoRealSeconds = LethalLightningTrapDeathTuning.SlowMoRealSeconds,
+            UseBoneEmptyFrameWithTrapContent = false,
+            TrapContentOffsetY = LethalLightningTrapDeathTuning.ClipOffsetY,
+            FastPhaseTrapContentYOffset = 0f,
+            UseBlackBackdropDuringClip = true,
+        };
 }

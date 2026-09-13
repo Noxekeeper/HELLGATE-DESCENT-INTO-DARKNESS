@@ -110,6 +110,9 @@ internal static class EventCoreRuntime
         if (_sessionOpen)
             return false;
 
+        if (SpawnPointAnalyzer.IsRecordingModeActive)
+            return false;
+
         EventCoreDefinitionRegistry.EnsureLoaded();
 
         if (!EventCoreDefinitionRegistry.TryGet(eventId, out var def))

@@ -46,7 +46,7 @@ internal static class LethalMagicTrapDeathAudio
 
     internal static void Initialize(MonoBehaviour host)
     {
-        if ((!Plugin.enableLethalMagicTrap.Value && !Plugin.enableLethalCocoonTrap.Value) ||
+        if ((!Plugin.IsLethalMagicTrapActive && !Plugin.IsLethalCocoonTrapActive) ||
             host == null ||
             _loadStarted)
             return;
@@ -68,7 +68,7 @@ internal static class LethalMagicTrapDeathAudio
         if (_startedThisDeath)
             return;
 
-        if (!Plugin.enableLethalMagicTrap.Value && !Plugin.enableLethalCocoonTrap.Value)
+        if (!Plugin.IsLethalMagicTrapActive && !Plugin.IsLethalCocoonTrapActive)
             return;
 
         _startedThisDeath = true;
@@ -81,7 +81,7 @@ internal static class LethalMagicTrapDeathAudio
         if (_playedMeatFallSound || _meatFallClip == null)
             return;
 
-        if (!Plugin.enableLethalMagicTrap.Value && !Plugin.enableLethalCocoonTrap.Value)
+        if (!Plugin.IsLethalMagicTrapActive && !Plugin.IsLethalCocoonTrapActive)
             return;
 
         GoldAudioPlayer.Play2D(_meatFallClip, LethalMagicTrapDeathTuning.MeatFallSoundVolume);
@@ -126,7 +126,7 @@ internal static class LethalMagicTrapDeathAudio
 
     private static bool ShouldSuppressPlayerMoans()
     {
-        if (!Plugin.enableLethalMagicTrap.Value && !Plugin.enableLethalCocoonTrap.Value)
+        if (!Plugin.IsLethalMagicTrapActive && !Plugin.IsLethalCocoonTrapActive)
             return false;
 
         if (!LethalMagicTrapDeathTuning.SuppressPlayerVoiceDuringDeath)

@@ -1,0 +1,7 @@
+# F11 Enemies list — one config key per line to hide from the picker.
+# Built-in excludes also hide trap-like registry keys (WaveSpike, TrapNormal, …).
+# Restart F11 (or wait ~2s) after edits; list rebuilds on invalidate.
+
+# Examples:
+# Kakasi
+# Pilgrim

@@ -87,6 +87,7 @@
     <Compile Include="Api\HellGateApiModels.cs" />
     <Compile Include="Api\HellGateApi.cs" />
     <Compile Include="Systems\Compatibility\NoREroModScaffoldConfigPush.cs" />
+    <Compile Include="Systems\Compatibility\DeepForest\DeepForestAltarIdFix.cs" />
     
     <!-- Patches/Base -->
     <Compile Include="Patches\Base\PreventHarmonyUnpatch.cs" />
@@ -160,6 +161,18 @@
     <Compile Include="Patches\HellTraps\LethalDeathClipPlaybackProfile.cs" />
     <Compile Include="Patches\HellTraps\LethalTrapDeathBlackScreen.cs" />
     <Compile Include="Patches\HellTraps\LethalCocoonTrapPatches.cs" />
+    <Compile Include="Patches\HellTraps\LethalLightningTrapPaths.cs" />
+    <Compile Include="Patches\HellTraps\LethalLightningTrapAssetLoader.cs" />
+    <Compile Include="Patches\HellTraps\HellGateLethalLightningTrapMarker.cs" />
+    <Compile Include="Patches\HellTraps\HellGateLethalLightningTrapTracker.cs" />
+    <Compile Include="Patches\HellTraps\HellGateLethalLightningTrapArmer.cs" />
+    <Compile Include="Patches\HellTraps\LethalLightningTrapRegistry.cs" />
+    <Compile Include="Patches\HellTraps\LethalLightningTrapDeathContext.cs" />
+    <Compile Include="Patches\HellTraps\LethalLightningTrapRuntime.cs" />
+    <Compile Include="Patches\HellTraps\LethalLightningTrapDeathDisplay.cs" />
+    <Compile Include="Patches\HellTraps\LethalLightningTrapDeathTuning.cs" />
+    <Compile Include="Patches\HellTraps\LethalLightningTrapVfx.cs" />
+    <Compile Include="Patches\HellTraps\LethalLightningTrapPatches.cs" />
     <!-- BossTouzokuCustom: field spawn variant, reduced HP, no boss intro -->
     <Compile Include="Patches\Enemy\BossTouzokuCustom\BossTouzokuCustomStats.cs" />
     <Compile Include="Patches\Enemy\BossTouzokuCustom\BossTouzokuCustomRuntime.cs" />
@@ -171,6 +184,12 @@
     <Compile Include="Patches\Enemy\BossTouzokuCustom\BossTouzokuCustomCombatPatches.cs" />
     <Compile Include="Patches\Enemy\BossTouzokuCustom\BossTouzokuCustomEroPatches.cs" />
     <Compile Include="Patches\Enemy\Dorei\DoreiPassLogic.cs" />
+    <Compile Include="Patches\Enemy\SlaveBigAxe\SlaveBigAxePassLogic.cs" />
+    <Compile Include="Patches\Enemy\SlaveBigAxe\SlaveBigAxeIllusiveEventGate.cs" />
+    <Compile Include="Patches\Enemy\SlaveBigAxe\SlaveBigAxeIllusiveLoseHandoffPatch.cs" />
+    <Compile Include="Patches\Enemy\SlaveBigAxe\MeatArmor\SlaveBigAxeMeatArmorTextureLoader.cs" />
+    <Compile Include="Patches\Enemy\SlaveBigAxe\MeatArmor\SlaveBigAxeMeatArmorSkeletonLoader.cs" />
+    <Compile Include="Patches\Enemy\SlaveBigAxe\MeatArmor\SlaveBigAxeMeatArmorRuntime.cs" />
     <Compile Include="Patches\Enemy\Kakash\KakasiPassLogic.cs" />
     <Compile Include="Patches\Enemy\Kakash\KakasiHandoffHide.cs" />
     <Compile Include="Patches\Enemy\Kakash\KakasiCrossPatch.cs" />
@@ -178,6 +197,7 @@
     <Compile Include="Patches\Enemy\Six_hand\MutudeEffects.cs" />
     <Compile Include="Patches\Enemy\Six_hand\MutudeVideoPositionTracker.cs" />
     <Compile Include="Patches\Enemy\NoREroModEliteGrabDisablerPatch.cs" />
+    <Compile Include="Patches\Enemy\BigSlaveAxeNorEroModPatch.cs" />
     <!-- Wolf Mod: Spine assets -->
     <Compile Include="Patches\Enemy\WolfModCustom\WolfTextureLoader.cs" />
     <Compile Include="Patches\Enemy\WolfModCustom\WolfSkeletonLoader.cs" />
@@ -192,12 +212,16 @@
     <Compile Include="Patches\Enemy\HellishTouzokuModCustom\HellishTouzokuTextureLoader.cs" />
     <Compile Include="Patches\Enemy\HellishTouzokuModCustom\HellishTouzokuSkeletonLoader.cs" />
     <Compile Include="Patches\Enemy\HellishTouzokuModCustom\HellishTouzokuHSceneEscapePatch.cs" />
+    <!-- Demon_gorotuki: Spine swap on Gorotuki -->
+    <Compile Include="Patches\Enemy\DemonGorotukiModCustom\DemonGorotukiTextureLoader.cs" />
+    <Compile Include="Patches\Enemy\DemonGorotukiModCustom\DemonGorotukiSkeletonLoader.cs" />
     <!-- Dorei Mod: fapping idle во время ожидания в H-сцене -->
     <Compile Include="Patches\Enemy\DoreiModCustom\DoreiTextureLoader.cs" />
     <Compile Include="Patches\Enemy\DoreiModCustom\DoreiSkeletonLoader.cs" />
     <Compile Include="Patches\Enemy\DoreiModCustom\DoreiSpectatorIdlePatch.cs" />
     <Compile Include="Patches\Enemy\HeckGateEnemy\HeckGateSlimeModule.cs" />
     <Compile Include="Patches\Enemy\HeckGateEnemy\SuraimuHSceneEscapePatch.cs" />
+    <Compile Include="Patches\Enemy\HeckGateEnemy\SuccubusHSceneEscapePatch.cs" />
     <Compile Include="Patches\Enemy\HeckGateEnemy\BiscodVisualProfile.cs" />
     <Compile Include="Patches\Enemy\HeckGateEnemy\BiscodEyesAttachment.cs" />
     <Compile Include="Patches\Player\TimeScaleResetOnEscapePatch.cs" />
@@ -216,7 +240,9 @@
     <Compile Include="Patches\Player\StruggleInvulnPatch.cs" />
     <Compile Include="Patches\Player\GuardParryMindBrokenPatch.cs" />
     <Compile Include="Patches\Trap\BlackOozeTrapDiagnosticsPatch.cs" />
+    <Compile Include="Patches\Trap\BlackOozeTypeBRearmGate.cs" />
     <Compile Include="Patches\Trap\TrapHSceneMosaicDisablePatch.cs" />
+    <Compile Include="Patches\Enemy\GorotukiHSceneMosaicDisablePatch.cs" />
     <Compile Include="Patches\Player\StruggleEscapeCombatRecoveryPatch.cs" />
     <Compile Include="Patches\Player\VanillaKnockdownRecoveryUtility.cs" />
     <Compile Include="Patches\Player\VanillaKnockdownRecoveryPatch.cs" />
@@ -239,6 +265,7 @@
     <!-- Patches/UI -->
     <Compile Include="Patches\UI\BadstatusUiPatch.cs" />
     <Compile Include="Patches\UI\MindBroken\MindBrokenSystem.cs" />
+    <Compile Include="Patches\UI\MindBroken\MindBrokenRealtimeGate.cs" />
     <Compile Include="Patches\UI\MindBroken\MindBrokenBadEndSystem.cs" />
     <Compile Include="Patches\UI\MindBroken\CorruptionCaptionsSystem.cs" />
     <Compile Include="Patches\UI\MindBroken\MindBrokenRecoverySystem.cs" />
@@ -266,6 +293,7 @@
     
     <!-- Systems/Gameplay -->
     <Compile Include="Systems\Gameplay\QTESystem.cs" />
+    <Compile Include="Systems\Gameplay\QTE\QTEFreeStruggleMode.cs" />
     <Compile Include="Systems\Gameplay\PlayerEroContextUtility.cs" />
     <Compile Include="Systems\Gameplay\VengeanceStrike\VengeanceStrikePaths.cs" />
     <Compile Include="Systems\Gameplay\VengeanceStrike\VengeanceStrikeContent.cs" />
@@ -322,6 +350,7 @@
     <Compile Include="Systems\EventCore\UI\EventCoreModalDriver.cs" />
     <Compile Include="Systems\EventCore\EventTrap\EventTrapEncounterBootstrap.cs" />
     <Compile Include="Systems\EventCore\EventTrap\EventTrapEncounterData.cs" />
+    <Compile Include="Systems\EventCore\EventTrap\EventTrapLineExtras.cs" />
     <Compile Include="Systems\EventCore\EventTrap\EventTrapEncounterDriver.cs" />
     <Compile Include="Systems\EventCore\EventTrap\EventTrapEncounterLoader.cs" />
     <Compile Include="Systems\EventCore\EventTrap\EventTrapSpawnDiscovery.cs" />
@@ -349,6 +378,7 @@
     <Compile Include="Systems\Dialogue\AradiaTouzokuNormalDialogues.cs" />
     <Compile Include="Systems\Dialogue\AradiaInquisitionBlackDialogues.cs" />
     <Compile Include="Systems\Dialogue\TouzokuAxeHSceneDialogues.cs" />
+    <Compile Include="Systems\Dialogue\SlaveBigAxeHSceneDialogues.cs" />
     <Compile Include="Systems\Dialogue\InquisitionBlackHSceneDialogues.cs" />
     <Compile Include="Systems\Dialogue\KakasiHSceneDialogues.cs" />
     <Compile Include="Systems\Dialogue\ColorParser.cs" />
@@ -464,6 +494,49 @@
     <Compile Include="Systems\CombatAi\Factions\Patches\PlayerFactionReputationSaveHook.cs" />
     
     <!-- Systems/Pregnancy - Phase 1: womb meter + Phase 2: trimesters / offspring -->
+    <!-- Costumes: unlock alt CosSkinflag entries for costume-change menu -->
+    <Compile Include="Systems\Costumes\CostumesConfig.cs" />
+    <Compile Include="Systems\Costumes\CostumesUnlock.cs" />
+    <Compile Include="Systems\Costumes\CostumesPatches.cs" />
+
+    <!-- DeadArmor: SlaveBigAxe girl-armor death PNG clips (isolated) -->
+    <Compile Include="Systems\DeadArmor\DeadArmorConfig.cs" />
+    <Compile Include="Systems\DeadArmor\DeadArmorPaths.cs" />
+    <Compile Include="Systems\DeadArmor\DeadArmorSpriteCache.cs" />
+    <Compile Include="Systems\DeadArmor\DeadArmorAudio.cs" />
+    <Compile Include="Systems\DeadArmor\DeadArmorClipPlayer.cs" />
+    <Compile Include="Systems\DeadArmor\DeadArmorPlayback.cs" />
+    <Compile Include="Systems\DeadArmor\DeadArmorPatches.cs" />
+    <Compile Include="Systems\DeadArmor\DeadArmorBootstrap.cs" />
+    <Compile Include="Systems\DeadArmor\SlaveBigAxeArmoredThrow.cs" />
+    <!-- LostSounds: scaffold for custom / restored SFX (isolated) -->
+    <Compile Include="Systems\LostSounds\LostSoundsConfig.cs" />
+    <Compile Include="Systems\LostSounds\LostSoundsPaths.cs" />
+    <Compile Include="Systems\LostSounds\LostSoundsAudio.cs" />
+    <Compile Include="Systems\LostSounds\LostSoundsBootstrap.cs" />
+    <!-- EnemyFatality: shared combat fatality system + per-enemy profiles -->
+    <Compile Include="Systems\EnemyFatality\EnemyFatalityConfig.cs" />
+    <Compile Include="Systems\EnemyFatality\IEnemyFatalityProfile.cs" />
+    <Compile Include="Systems\EnemyFatality\EnemyFatalityBoundProfile.cs" />
+    <Compile Include="Systems\EnemyFatality\EnemyFatalityRegistry.cs" />
+    <Compile Include="Systems\EnemyFatality\EnemyFatalitySession.cs" />
+    <Compile Include="Systems\EnemyFatality\EnemyFatalityEroSuppression.cs" />
+    <Compile Include="Systems\EnemyFatality\EnemyFatalityPaths.cs" />
+    <Compile Include="Systems\EnemyFatality\EnemyFatalityClipPicker.cs" />
+    <Compile Include="Systems\EnemyFatality\EnemyFatalityClipDefs.cs" />
+    <Compile Include="Systems\EnemyFatality\EnemyFatalityProjectileOwner.cs" />
+    <Compile Include="Systems\EnemyFatality\EnemyFatalityProjectilePatches.cs" />
+    <Compile Include="Systems\EnemyFatality\EnemyFatalitySpriteCache.cs" />
+    <Compile Include="Systems\EnemyFatality\EnemyFatalityAudio.cs" />
+    <Compile Include="Systems\EnemyFatality\EnemyFatalityVanillaDeathMute.cs" />
+    <Compile Include="Systems\EnemyFatality\EnemyFatalityTaunts.cs" />
+    <Compile Include="Systems\EnemyFatality\EnemyFatalityFlash.cs" />
+    <Compile Include="Systems\EnemyFatality\EnemyFatalityClipPlayer.cs" />
+    <Compile Include="Systems\EnemyFatality\EnemyFatalityPlayback.cs" />
+    <Compile Include="Systems\EnemyFatality\EnemyFatalityPatches.cs" />
+    <Compile Include="Systems\EnemyFatality\EnemyFatalityBootstrap.cs" />
+    <Compile Include="Systems\EnemyFatality\EnemyFatalityProfileCatalog.cs" />
+    <Compile Include="Systems\EnemyFatality\WhiteInquisitorFatality\WhiteInquisitorFatalityConfig.cs" />
     <Compile Include="Systems\Pregnancy\PregnancyConfig.cs" />
     <Compile Include="Systems\Pregnancy\PregnancySourceResolver.cs" />
     <Compile Include="Systems\Pregnancy\WitchWombMeter.cs" />
@@ -544,10 +617,15 @@
     <Compile Include="Systems\Effects\HSceneBlackBackgroundTriggerPatch.cs" />
     
     <!-- Systems/UI -->
+    <Compile Include="Systems\Difficulty\HellGateDifficultyPresetModule.cs" />
     <Compile Include="Systems\UI\HellGateFontProvider.cs" />
     <Compile Include="Systems\UI\HudVisibilityGate.cs" />
     <Compile Include="Systems\UI\LoadingScreenSystem.cs" />
+    <Compile Include="Systems\UI\ForestLoaderBootProgress.cs" />
+    <Compile Include="Systems\UI\HellGateBootTips.cs" />
+    <Compile Include="Systems\UI\ForestLoaderDeferral.cs" />
     <Compile Include="Systems\UI\SplashScreenUILabels.cs" />
+    <Compile Include="Systems\UI\HellGateSplashOptionsMenu.cs" />
     <Compile Include="Systems\UI\HellGateTitleMenuBackdrop.cs" />
     <Compile Include="Systems\UI\Portrait\PortraitAssetLoader.cs" />
     <Compile Include="Systems\UI\Portrait\PortraitModSystem.cs" />
@@ -577,6 +655,38 @@
     <Compile Include="Systems\Spawn\SpawnTrapAnchorLookup.cs" />
     <Compile Include="Systems\Spawn\EnemyPrefabRegistry.cs" />
     <Compile Include="Systems\Spawn\EnemyPrefabDiskCache.cs" />
+    <Compile Include="Systems\Spawn\Authoring\SpawnAuthoringConfig.cs" />
+    <Compile Include="Systems\Spawn\Authoring\SpawnAuthoringState.cs" />
+    <Compile Include="Systems\Spawn\Authoring\SpawnAuthoringEnemyCatalog.cs" />
+    <Compile Include="Systems\Spawn\Authoring\SpawnAuthoringTrapCatalog.cs" />
+    <Compile Include="Systems\Spawn\Authoring\SpawnAuthoringHostageCatalog.cs" />
+    <Compile Include="Systems\Spawn\Authoring\SpawnAuthoringGoldCatalog.cs" />
+    <Compile Include="Systems\Spawn\Authoring\SpawnAuthoringEventTrapCatalog.cs" />
+    <Compile Include="Systems\Spawn\Authoring\SpawnAuthoringUiSuppressor.cs" />
+    <Compile Include="Systems\Spawn\Authoring\SpawnAuthoringPause.cs" />
+    <Compile Include="Systems\Spawn\Authoring\SpawnAuthoringPackWriter.cs" />
+    <Compile Include="Systems\Spawn\Authoring\SpawnAuthoringPackEdit.cs" />
+    <Compile Include="Systems\Spawn\Authoring\SpawnAuthoringFactionUi.cs" />
+    <Compile Include="Systems\Spawn\Authoring\SpawnAuthoringEnemyPreview.cs" />
+    <Compile Include="Systems\Spawn\Authoring\SpawnAuthoringPreviewSpawn.cs" />
+    <Compile Include="Systems\Spawn\Authoring\SpawnAuthoringOutline.cs" />
+    <Compile Include="Systems\Spawn\Authoring\SpawnAuthoringWorldPick.cs" />
+    <Compile Include="Systems\Spawn\Authoring\SpawnAuthoringCamera.cs" />
+    <Compile Include="Systems\Spawn\Authoring\SpawnAuthoringFavorites.cs" />
+    <Compile Include="Systems\Spawn\Authoring\SpawnAuthoringLoc.cs" />
+    <Compile Include="Systems\Spawn\Authoring\SpawnAuthoringLoc.Langs.cs" />
+    <Compile Include="Systems\Spawn\Authoring\SpawnAuthoringLoc.West.cs" />
+    <Compile Include="Systems\Spawn\Authoring\SpawnAuthoringLoc.Status.cs" />
+    <Compile Include="Systems\Spawn\Authoring\SpawnAuthoringClickCue.cs" />
+    <Compile Include="Systems\Spawn\Authoring\SpawnAuthoringNudge.cs" />
+    <Compile Include="Systems\Spawn\Authoring\SpawnAuthoringDrag.cs" />
+    <Compile Include="Systems\Spawn\Authoring\SpawnAuthoringAnchorMarker.cs" />
+    <Compile Include="Systems\Spawn\Authoring\SpawnAuthoringScreenshot.cs" />
+    <Compile Include="Systems\Spawn\Authoring\SpawnAuthoringUndo.cs" />
+    <Compile Include="Systems\Spawn\Authoring\SpawnAuthoringClipboard.cs" />
+    <Compile Include="Systems\Spawn\Authoring\SpawnAuthoringRegion.cs" />
+    <Compile Include="Systems\Spawn\Authoring\SpawnAuthoringHotkeyGuard.cs" />
+    <Compile Include="Systems\Spawn\Authoring\SpawnAuthoringOverlayHost.cs" />
     <Compile Include="Systems\Spawn\HellGateBossSpawnRuntime.cs" />
     <Compile Include="Systems\Spawn\HellGateBossSpawnBootstrap.cs" />
     <Compile Include="Systems\Spawn\SpawnDecorCatalog.cs" />
@@ -593,6 +703,8 @@
     <Compile Include="Systems\Spawn\SpawnTemplateWhitelist.cs" />
     <Compile Include="Systems\Spawn\HellGateSpawnedHostageMarker.cs" />
     <Compile Include="Systems\Spawn\Patches\WitchSlaveSlimeHellGateRewardPatch.cs" />
+    <Compile Include="Systems\Spawn\Patches\HellGateForceElitePatch.cs" />
+    <Compile Include="Systems\Spawn\Patches\SlaveSideLookFactionInheritPatch.cs" />
     <Compile Include="Systems\Spawn\HellGateHostageRuntime.cs" />
     <Compile Include="Systems\Spawn\HellGateLocationSpawnRefresh.cs" />
     <Compile Include="Systems\Spawn\SceneMoveTransitionSpawnPatch.cs" />

@@ -28,6 +28,8 @@ path is the classic way to reintroduce every bug below at once.
 | `StruggleEscapeCombatRecoveryPatch` | Runs with `Priority.Last` after all type-specific escape postfixes on `StruggleSystem.startGrabInvul`, so combat recovery happens once, after every other cleanup — and never during a pregnancy-birth overlay. |
 | `StruggleInvulnPatch` | Two fixes on the same hook: extends post-escape invulnerability by 2 s (instant re-grab chains), and resets `EnemyHandoffSystem` global state so the next enemy starts its scene from the beginning instead of resuming mid-animation. |
 | `PlayerEnemyGrabStruggleSupport` | Unescapable grabs: vanilla struggle and HellGate QTE both require `_SOUSA` during a grab, but many ERO paths and field bosses leave it false, silently eating struggle input. Re-arms `_SOUSA` per frame during grabs, while respecting intentional locks (EventCore consent locks, birth recovery). |
+| `TrapdataHSceneEscapePatch` (`Patches/Trap/`) | `blackoozetypeb` (and similar trapdata) left `trapflag` set after struggle escape, so the trap never re-armed. Resets `trapflag` on escape. **Also:** max-SP force-escape on `fun_nowdamage` must skip `BlackOozetrap` / `BlackOozeTrapTypeB` — TypeB starts via `ImmediatelyERO` at full SP and was softlocking (grab abort flicker). QTE already skipped BlackOoze; Trapdata path must match. |
+| `BlackOozeTypeBRearmGate` + invul prefixes (`Patches/Trap/`) | TypeB is **reusable** (vanilla clears `trapflag` via `flagcount`). After struggle abort keep `trapflag` ~2.75s unscaled, then clear — not a permanent one-shot. Invul blocks only while `isGrabInvul`. Re-grab after rearm still needs leave+re-enter (`OnTriggerEnter`). |
 
 ## Vanilla flow guards (scene, cutscene, input)
 

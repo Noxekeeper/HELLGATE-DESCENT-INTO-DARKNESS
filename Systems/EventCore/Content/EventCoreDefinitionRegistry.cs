@@ -22,6 +22,54 @@ internal static class EventCoreDefinitionRegistry
     internal static bool TryGet(string id, out EventCoreEventDefinitionFile def) =>
         Events.TryGetValue(id, out def);
 
+    /// <summary>Sorted EventCore ids for the F11 EventCore catalog (C).</summary>
+    internal static string[] GetAuthoringEventIds()
+    {
+        EnsureLoaded();
+        if (Events.Count == 0)
+            return new string[0];
+
+        var list = new List<string>(Events.Count);
+        foreach (KeyValuePair<string, EventCoreEventDefinitionFile> pair in Events)
+        {
+            if (!string.IsNullOrEmpty(pair.Key))
+                list.Add(pair.Key);
+        }
+
+        list.Sort(StringComparer.OrdinalIgnoreCase);
+        return list.ToArray();
+    }
+
+    internal static string FormatEventIdForUi(string id)
+    {
+        if (string.IsNullOrEmpty(id))
+            return string.Empty;
+        const string prefix = "eventcore_";
+        string shortId = id.StartsWith(prefix, StringComparison.OrdinalIgnoreCase)
+            ? id.Substring(prefix.Length)
+            : id;
+        if (TryGetBoundEnemyKey(id, out string enemyKey) && !string.IsNullOrEmpty(enemyKey))
+            return shortId + " · " + enemyKey;
+        return shortId;
+    }
+
+    /// <summary>Broker / FSP bandit events are authored on TouzokuNormal only.</summary>
+    internal static bool TryGetBoundEnemyKey(string eventId, out string enemyKey)
+    {
+        enemyKey = null;
+        if (string.IsNullOrEmpty(eventId))
+            return false;
+
+        if (eventId.IndexOf("broker_gate", StringComparison.OrdinalIgnoreCase) >= 0 ||
+            eventId.IndexOf("fsp_bandits", StringComparison.OrdinalIgnoreCase) >= 0)
+        {
+            enemyKey = "TouzokuNormal";
+            return true;
+        }
+
+        return false;
+    }
+
     internal static void EnsureLoaded()
     {
         if (Events.Count > 0)

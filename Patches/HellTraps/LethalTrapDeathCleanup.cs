@@ -19,10 +19,13 @@ internal static class LethalTrapDeathCleanup
     {
         return LethalMagicTrapDeathDisplay.HasActiveClip ||
                LethalCocoonTrapDeathDisplay.HasActiveClip ||
+               LethalLightningTrapDeathDisplay.HasActiveClip ||
                LethalMagicTrapDeathContext.IsCustomDeathActive ||
                LethalCocoonTrapDeathContext.IsCustomDeathActive ||
+               LethalLightningTrapDeathContext.IsCustomDeathActive ||
                LethalMagicTrapDeathContext.IsEroSuppressionActive ||
-               LethalCocoonTrapDeathContext.IsEroSuppressionActive;
+               LethalCocoonTrapDeathContext.IsEroSuppressionActive ||
+               LethalLightningTrapDeathContext.IsEroSuppressionActive;
     }
 
     /// <summary>Restore player visuals, stop clips, clear trap death session flags.</summary>
@@ -41,6 +44,7 @@ internal static class LethalTrapDeathCleanup
                 player = playerObj.GetComponent<playercon>();
         }
 
+        LethalLightningTrapDeathDisplay.ForceCleanupForRespawn(player);
         LethalCocoonTrapDeathDisplay.ForceCleanupForRespawn(player);
         LethalMagicTrapDeathDisplay.ForceCleanupForRespawn(player);
 
@@ -55,7 +59,7 @@ internal static class LethalTrapDeathCleanup
         LethalMagicTrapDeathAudio.OnCustomDeathEnded();
         LethalTrapDeathBlackScreen.Hide();
 
-        Plugin.Log?.LogInfo("[LethalTrapDeathCleanup] Respawn cleanup complete (magic + cocoon).");
+        Plugin.Log?.LogInfo("[LethalTrapDeathCleanup] Respawn cleanup complete (magic + cocoon + lightning).");
     }
 
     private static void DestroyOrphanClipRoots()
@@ -155,7 +159,9 @@ internal static class LethalTrapDeathFlagCleanupPatch
         if (__instance == null)
             return;
 
-        if (!Plugin.enableLethalMagicTrap.Value && !Plugin.enableLethalCocoonTrap.Value)
+        if (!Plugin.IsLethalMagicTrapActive &&
+            !Plugin.IsLethalCocoonTrapActive &&
+            (!Plugin.IsLethalLightningTrapActive))
             return;
 
         if (!LethalTrapDeathCleanup.ShouldCleanupOnRespawn())

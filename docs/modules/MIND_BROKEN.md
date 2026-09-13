@@ -13,11 +13,33 @@ first-class feature, not a UI tweak.
 - `MindBrokenSystem` — the corruption state machine.
 - `H_scenesAllEnemiesCorruption` — universal corruption gain from H-scenes
   across all enemy types.
-- `MindBrokenBadEndSystem` — bad-end flow at full corruption.
+- `MindBrokenBadEndSystem` — bad-end flow at full corruption (countdown at
+  100%, then Bad End Player / YOU LOSE).
+- `MindBrokenRealtimeGate` — Windows focus + hitch gate for real-time ticks
+  (see below).
 - `GuardParryMindBrokenPatch` (`Patches/Player/`) — corruption interference
   with guard/parry.
 - Struggle difficulty interaction is configured through the struggle cfg
   sections (see `QTE_STRUGGLE_AND_GAMEPLAY.md`).
+
+## Bad End countdown and real-time ticks
+
+At 100% MindBroken a countdown starts (`BadEndCountdownDuration`, default
+180 s). The driver uses unscaled time so menu / SlowMo `timeScale` does not
+freeze it — but progress must not dump the wall-clock gap after minimize.
+
+`MindBrokenRealtimeGate`:
+
+- Advances only while the Unity player window (`UnityWndClass`) is
+  foreground and not iconic (BepInEx console focus does not count).
+- Drops hitch frames where `unscaledDeltaTime` / `deltaTime` &gt; 0.1 s
+  (Unity 5.6 often reports the full minimize pause as one delta on resume).
+- APIs: `GetClampedUnscaledDelta()` (countdown, black-bg, Rage MB ticks),
+  `GetClampedDeltaTime()` (H-scene continuous ticks).
+
+Wired consumers: Bad End countdown coroutine, global + per-enemy H-scene
+controllers, `HSceneBlackBackgroundSystem` MB tick, Rage active/overdrive /
+high-rage passive MB.
 
 ## Recovery
 
@@ -47,3 +69,4 @@ Mutude, CrowInquisition, InquisitionWhite, Pilgrim
   lethal trap death (`HELL_TRAPS.md`).
 - Persistence is shared with Rage through `RageMindBrokenSlotStore`
   (`RAGE.md`).
+- Rage-time MB gain also goes through `MindBrokenRealtimeGate` (`RAGE.md`).

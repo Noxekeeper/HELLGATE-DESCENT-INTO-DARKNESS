@@ -16,7 +16,7 @@ internal static class LethalTrapVengeanceShockAudio
     {
         LethalTrapHeartBeatLoop.Initialize(host);
 
-        if ((!Plugin.enableLethalMagicTrap.Value && !Plugin.enableLethalCocoonTrap.Value) ||
+        if ((!Plugin.IsLethalMagicTrapActive && !Plugin.IsLethalCocoonTrapActive) ||
             host == null ||
             _loadStarted)
             return;

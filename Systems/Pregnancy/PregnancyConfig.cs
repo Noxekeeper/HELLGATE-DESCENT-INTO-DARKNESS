@@ -343,7 +343,7 @@ internal static class PregnancyConfig
         ShelterAttackTriggerChance = cfg.Bind(
             SectionShelter,
             "TriggerChance",
-            0.20f,
+            0.05f,
             "Chance (0.0–1.0) that a shelter attack is rolled after ArmDelaySeconds following any zone transition (door, altar, teleport). 1.0 = always try, 0.0 = never.");
 
         ShelterAttackArmDelaySeconds = cfg.Bind(

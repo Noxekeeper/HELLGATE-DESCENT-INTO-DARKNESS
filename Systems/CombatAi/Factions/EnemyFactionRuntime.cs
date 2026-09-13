@@ -44,6 +44,8 @@ internal static class EnemyFactionRuntime
     private static readonly HashSet<int> _factionCombatCommitted = new HashSet<int>();
     private static readonly HashSet<int> _passiveWaitByEnemyId = new HashSet<int>();
     private static readonly HashSet<string> _seenTypeNames = new HashSet<string>();
+    private static readonly Dictionary<string, float> _activationDiagNextLogAt = new Dictionary<string, float>();
+    private const float ActivationDiagThrottleSec = 1.25f;
 
     public static bool IsFactionCombatCommitted(GameObject enemyObject)
     {
@@ -69,6 +71,13 @@ internal static class EnemyFactionRuntime
             Plugin.Log?.LogInfo("[EnemyFactions] Faction combat committed: " +
                                 self.GetType().Name + " vs " + target.GetType().Name);
         }
+
+        LogActivationDiag(
+            "commit",
+            self,
+            "COMMIT vs " + (target != null ? target.GetType().Name : "?") +
+            " bubbleSelf=" + IsPlayerWithinFactionActivationBubble(self) +
+            " bubbleTarget=" + IsPlayerWithinFactionActivationBubble(target));
     }
 
     public static void ClearFactionCombatCommitted(GameObject enemyObject)
@@ -103,6 +112,18 @@ internal static class EnemyFactionRuntime
         {
             _enemyFactionByInstanceId[id] = FactionIds.Neutral;
             _hostileToPlayerUntil.Remove(id);
+            return;
+        }
+
+        // Illusive / Rodenia church event SlaveBigAxe pair: Church auto-faction must not
+        // override vanilla event AI (markers, reputation, inter-faction targeting).
+        if ((enemy is SlaveBigAxe || enemy is OtherSlavebigAxe) &&
+            NoREroMod.Patches.Enemy.SlaveBigAxeIllusiveEventGate.ShouldSkipHellGateLogic())
+        {
+            _enemyFactionByInstanceId[id] = FactionIds.Neutral;
+            _hostileToPlayerUntil.Remove(id);
+            if (EnemyFactionsConfig.DebugLogging)
+                Plugin.Log?.LogInfo("[EnemyFactions] Illusive event '" + enemy.GetType().Name + "' → Neutral (vanilla)");
             return;
         }
 
@@ -273,6 +294,7 @@ internal static class EnemyFactionRuntime
         _attackPulseUntil.Clear();
         _factionCombatCommitted.Clear();
         _passiveWaitByEnemyId.Clear();
+        _activationDiagNextLogAt.Clear();
         _relationByPair.Clear();
         _lastRelationReloadAt = -999f;
         _colorByFaction.Clear();
@@ -403,7 +425,10 @@ internal static class EnemyFactionRuntime
             return;
         if (EnemyFactionsConfig.FreezeFactionAiDuringHScene &&
             self.com_player != null && self.com_player.eroflag)
+        {
+            EnterPassiveWaitState(self);
             return;
+        }
 
         if (IsFactionCombatCommitted(self.gameObject))
         {
@@ -443,6 +468,13 @@ internal static class EnemyFactionRuntime
             return;
         if (victim.Hp <= 0f || attacker.Hp <= 0f)
             return;
+
+        LogActivationDiag(
+            "dmg_commit",
+            victim,
+            "DMG→COMMIT from " + attacker.GetType().Name +
+            " (bubbleVictim=" + IsPlayerWithinFactionActivationBubble(victim) +
+            " bubbleAtk=" + IsPlayerWithinFactionActivationBubble(attacker) + ")");
 
         int victimId = victim.gameObject.GetInstanceID();
         int attackerId = attacker.gameObject.GetInstanceID();
@@ -870,13 +902,71 @@ internal static class EnemyFactionRuntime
             return false;
         if (ShouldRespectEventCorePassiveShell(self))
             return false;
-        if (!CanBeginOrSustainFactionBrawl(self))
+
+        EnemyDate nearest;
+        bool hasHostile = TryGetNearestHostile(self, out nearest);
+        bool inBubble = CanBeginOrSustainFactionBrawl(self);
+
+        if (hasHostile && !inBubble && !IsFactionCombatCommitted(self.gameObject))
+        {
+            float dxHostile = nearest != null
+                ? Mathf.Abs(nearest.transform.position.x - self.transform.position.x)
+                : -1f;
+            LogActivationDiag(
+                "see_outside",
+                self,
+                "SEES hostile " + (nearest != null ? nearest.GetType().Name : "?") +
+                " dxHostile=" + dxHostile.ToString("0.##") +
+                " but OUTSIDE player bubble (ActivationDistance=" +
+                EnemyFactionsConfig.ActivationDistanceFromPlayer.ToString("0.##") +
+                " interRange=" + EnemyFactionsConfig.FactionInterTargetMaxHorizontalDistance.ToString("0.##") +
+                ") — engage blocked");
+        }
+
+        if (!inBubble)
             return false;
         if (!TryRedirectToNearestHostileTarget(self))
             return false;
 
+        LogActivationDiag(
+            "engage",
+            self,
+            "ENGAGE " + (nearest != null ? nearest.GetType().Name : "retarget") +
+            " (player in bubble)");
+
         TryApplyPulseDamage(self);
         return true;
+    }
+
+    /// <summary>
+    /// Throttled BepInEx log for activation-bubble / hostile-awareness diagnosis.
+    /// Enable via Factions.json <c>ActivationDiag: true</c>. Filter: <c>[FactionAct]</c>.
+    /// </summary>
+    public static void LogActivationDiag(string tag, EnemyDate self, string detail)
+    {
+        if (!EnemyFactionsConfig.ActivationDiag || self == null || self.gameObject == null)
+            return;
+
+        int id = self.gameObject.GetInstanceID();
+        string key = id + ":" + (tag ?? "");
+        float now = Time.realtimeSinceStartup;
+        float next;
+        if (_activationDiagNextLogAt.TryGetValue(key, out next) && now < next)
+            return;
+        _activationDiagNextLogAt[key] = now + ActivationDiagThrottleSec;
+
+        float dxPlayer = 0f;
+        float dyPlayer = 0f;
+        TryGetRealPlayerOffset(self, out dxPlayer, out dyPlayer);
+
+        Plugin.Log?.LogInfo(
+            "[FactionAct] " + self.GetType().Name +
+            " @" + self.transform.position.x.ToString("0.##") + "," + self.transform.position.y.ToString("0.##") +
+            " dxP=" + Mathf.Abs(dxPlayer).ToString("0.##") +
+            " dyP=" + Mathf.Abs(dyPlayer).ToString("0.##") +
+            " fac=" + GetFaction(self.gameObject) +
+            " committed=" + IsFactionCombatCommitted(self.gameObject) +
+            " | " + detail);
     }
 
     /// <summary>

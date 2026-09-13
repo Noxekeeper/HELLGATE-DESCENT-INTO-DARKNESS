@@ -89,9 +89,9 @@ TRAP,woodwana,1.53,-120.50,1
 -73.93,-118.23,movebox_brk,1
 -68.45,-121.23,movebox_brk,1
 -68.45,-118.23,movebox_brk,1
--63.13,-127.08,breakobjct,1
--62.25,-127.08,breakobjct,1
--61.49,-127.08,breakobjct,1
+-63.13,-127.08,taru_exp,1
+-62.25,-127.08,taru_exp,1
+-61.49,-127.08,taru_exp,1
 -48.38,-136.00,rosewarm,1
 -35.50,-129.47,trap,1
 -33.55,-138.74,rosewarm,1,left

@@ -94,6 +94,9 @@ internal class MutudeMindbrokenTracker : MonoBehaviour
     {
         if (host == null || spine == null || spine.AnimationState == null) return;
 
+        float dt = MindBrokenRealtimeGate.GetClampedDeltaTime();
+        if (dt <= 0f) return;
+
         string anim = spine.AnimationName ?? string.Empty;
         if (string.IsNullOrEmpty(anim)) return;
 
@@ -104,7 +107,7 @@ internal class MutudeMindbrokenTracker : MonoBehaviour
             {
                 // Value is expressed in percent-per-second (e.g., 1 = +1% per second).
                 float perSecondPercent = Plugin.mutudeMindBrokenPerSecondPercent?.Value ?? 1f;
-                MindBrokenSystem.AddPercent((perSecondPercent / 100f) * Time.deltaTime, "mutude-ero");
+                MindBrokenSystem.AddPercent((perSecondPercent / 100f) * dt, "mutude-ero");
                 break;
             }
         }

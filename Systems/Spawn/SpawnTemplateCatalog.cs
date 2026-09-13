@@ -104,9 +104,13 @@ internal static class SpawnTemplateCatalog
         "ivy_trap",
         "firecharge",
         "magic2",
-        "impactdamagebox",
         "lightimpactnormal",
-        "wana_start"
+        "wana_start",
+        "forest_long",
+        "inchchurchslave",
+        "lethalcocoontrap",
+        "lethalmagictrap",
+        "lethallightningbutton"
     };
 
     private static readonly string[] trapKeyAliasCanonical =
@@ -126,8 +130,12 @@ internal static class SpawnTemplateCatalog
         "magictrap",
         "magictrapcreateobject",
         "impactdamage",
-        "impactdamage",
-        "woodwana"
+        "woodwana",
+        "woodwana",
+        "inchurchslave",
+        "lethal_cocoontrap",
+        "lethal_magictrap",
+        "lightningTrap_button"
     };
 
     private static ConfigEntry<bool> dumpCatalogConfig;
@@ -183,16 +191,13 @@ internal static class SpawnTemplateCatalog
 
     internal static bool HasTemplate(string key)
     {
-        return !string.IsNullOrEmpty(key) && trapTemplates.ContainsKey(NormalizeKey(key));
+        GameObject template;
+        return TryResolveTemplate(trapTemplates, key, out template);
     }
 
     internal static bool TryGetTrapTemplate(string key, out GameObject template)
     {
-        template = null;
-        if (string.IsNullOrEmpty(key))
-            return false;
-
-        return trapTemplates.TryGetValue(NormalizeKey(key), out template) && template != null;
+        return TryResolveTemplate(trapTemplates, key, out template);
     }
 
     internal static bool TryRegisterCustomTrapTemplate(string key, GameObject template)
@@ -201,8 +206,57 @@ internal static class SpawnTemplateCatalog
             return false;
 
         ForceCachePrefab(trapTemplates, key, template);
+        string spawnName = GetSpawnName(template.name);
+        if (!string.IsNullOrEmpty(spawnName))
+            CacheDirectPrefab(trapTemplates, spawnName, template);
         MaybeDumpCatalog();
         return HasTemplate(key);
+    }
+
+    /// <summary>
+    /// True if spawn keys match ignoring case, clone suffixes, and underscores
+    /// (lethal_cocoontrap == lethalcocoontrap).
+    /// </summary>
+    internal static bool TemplateKeysMatch(string left, string right)
+    {
+        if (string.IsNullOrEmpty(left) || string.IsNullOrEmpty(right))
+            return false;
+
+        return CompactKey(NormalizeKey(left)) == CompactKey(NormalizeKey(right));
+    }
+
+    /// <summary>F11 display / pack-write name: fold aliases onto one canonical key.</summary>
+    internal static string ResolveAuthoringCanonicalKey(string key)
+    {
+        if (string.IsNullOrEmpty(key))
+            return string.Empty;
+
+        string trimmed = key.Trim();
+        if (NoREroMod.Patches.HellTraps.LethalMagicTrapPaths.IsLethalMagicTrapKey(trimmed))
+            return NoREroMod.Patches.HellTraps.LethalMagicTrapPaths.TemplateKey;
+        if (NoREroMod.Patches.HellTraps.LethalCocoonTrapPaths.IsLethalCocoonTrapKey(trimmed))
+            return NoREroMod.Patches.HellTraps.LethalCocoonTrapPaths.TemplateKey;
+        if (NoREroMod.Patches.HellTraps.LethalLightningTrapPaths.IsLethalLightningTrapKey(trimmed))
+            return NoREroMod.Patches.HellTraps.LethalLightningTrapPaths.TemplateKey;
+
+        if (SpawnSpikeKeys.IsTrapHariKey(trimmed) || TemplateKeysMatch(trimmed, "traphari"))
+            return "trapnormal";
+
+        if (TemplateKeysMatch(trimmed, "spiketrap") || TemplateKeysMatch(trimmed, "spike trap"))
+            return "spiketrap";
+
+        int count = trapKeyAliasNames.Length;
+        if (trapKeyAliasCanonical.Length == count)
+        {
+            for (int i = 0; i < count; i++)
+            {
+                if (TemplateKeysMatch(trimmed, trapKeyAliasNames[i]) ||
+                    TemplateKeysMatch(trimmed, trapKeyAliasCanonical[i]))
+                    return trapKeyAliasCanonical[i];
+            }
+        }
+
+        return trimmed;
     }
 
     internal static Type ResolveMobScriptType(string typeName) => ResolveGameComponentType(typeName);
@@ -246,6 +300,7 @@ internal static class SpawnTemplateCatalog
         SpawnTemplateDiskCache.BindConfig(plugin);
         EnemyPrefabDiskCache.BindConfig(plugin);
         SpawnTemplateWhitelist.BindConfig(plugin);
+        NoREroMod.Systems.Spawn.SpawnAuthoringConfig.Bind(plugin);
 
         if (legacyPreload.Value)
             Plugin.Log?.LogWarning("[SPAWN CATALOG] EnablePreloadScenes is ignored — additive preload removed. Traps cache on scene visit only.");
@@ -254,14 +309,18 @@ internal static class SpawnTemplateCatalog
         EnemyPrefabDiskCache.LoadFromDisk();
         SceneManager.sceneLoaded += OnSceneLoaded;
         CacheFromLoadedScenes();
-        SpawnTemplateWhitelist.ReloadAndCache(plugin);
+        // Whitelist Resources scan + scene disk-cache hydrate run on HellGate splash
+        // (BootHydrate) so the user sees Loading... instead of a black gap after Unity logo.
         RegisterTrapKeyAliases();
         TryRegisterLethalMagicTrapTemplate();
         TryRegisterLethalCocoonTrapTemplate();
+        TryRegisterLethalLightningTrapTemplate();
+        RegisterTrapKeyAliases();
         SpawnDecorCatalog.EnsureLoaded();
         MaybeDumpCatalog();
         SpawnTemplateDiskCache.ScheduleRestore(plugin);
-        EnemyPrefabDiskCache.SchedulePreload(plugin);
+        // EnemyPrefabDiskCache.ScheduleSplashPreload is started from splash Loading gate
+        // (or SchedulePreload when splash is disabled).
     }
 
     public static bool TrySpawn(
@@ -273,8 +332,28 @@ internal static class SpawnTemplateCatalog
         string sceneName,
         bool flipX = false,
         float rotationZ = 0f,
-        SpawnDepthSettings depth = default)
+        SpawnDepthSettings depth = default,
+        string factionIdRaw = null)
     {
+        GameObject ignored;
+        return TrySpawn(category, key, position, count, logPrefix, sceneName, flipX, rotationZ, depth, factionIdRaw, out ignored);
+    }
+
+    /// <summary>Same as <see cref="TrySpawn"/> but returns the first spawned instance (F11 authoring link).</summary>
+    public static bool TrySpawn(
+        string category,
+        string key,
+        Vector2 position,
+        int count,
+        string logPrefix,
+        string sceneName,
+        bool flipX,
+        float rotationZ,
+        SpawnDepthSettings depth,
+        string factionIdRaw,
+        out GameObject firstSpawned)
+    {
+        firstSpawned = null;
         if (!initialized && Plugin.Instance != null)
             Initialize(Plugin.Instance);
 
@@ -285,12 +364,12 @@ internal static class SpawnTemplateCatalog
         {
             pendingRequests.Add(new SpawnTemplateRequest(
                 category, key, position, count, logPrefix, sceneName,
-                flipX, rotationZ, depth));
+                flipX, rotationZ, depth, factionIdRaw));
             Plugin.Log?.LogInfo($"{logPrefix} Queued template spawn (catalog not ready): {category}:{key}");
             return false;
         }
 
-        return SpawnNow(category, key, position, count, logPrefix, flipX, rotationZ, depth);
+        return SpawnNow(category, key, position, count, logPrefix, flipX, rotationZ, depth, factionIdRaw, out firstSpawned);
     }
 
     private static void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -359,6 +438,8 @@ internal static class SpawnTemplateCatalog
             RegisterTrapKeyAliases();
             TryRegisterLethalMagicTrapTemplate();
             TryRegisterLethalCocoonTrapTemplate();
+            TryRegisterLethalLightningTrapTemplate();
+            RegisterTrapKeyAliases();
             if (trapTemplates.Count > before)
                 MaybeDumpCatalog(force: true);
         }
@@ -573,8 +654,26 @@ internal static class SpawnTemplateCatalog
         string logPrefix,
         bool flipX = false,
         float rotationZ = 0f,
-        SpawnDepthSettings depth = default)
+        SpawnDepthSettings depth = default,
+        string factionIdRaw = null)
     {
+        GameObject ignored;
+        return SpawnNow(category, key, position, count, logPrefix, flipX, rotationZ, depth, factionIdRaw, out ignored);
+    }
+
+    private static bool SpawnNow(
+        string category,
+        string key,
+        Vector2 position,
+        int count,
+        string logPrefix,
+        bool flipX,
+        float rotationZ,
+        SpawnDepthSettings depth,
+        string factionIdRaw,
+        out GameObject firstSpawned)
+    {
+        firstSpawned = null;
         Dictionary<string, GameObject> templates = GetTemplates(category);
         if (templates == null)
         {
@@ -582,9 +681,18 @@ internal static class SpawnTemplateCatalog
             return false;
         }
 
-        if (!templates.TryGetValue(NormalizeKey(key), out GameObject template) || template == null)
+        if (!TryResolveTemplate(templates, key, out GameObject template) || template == null)
         {
             Plugin.Log?.LogWarning($"{logPrefix} Template not found: {category}:{key}");
+            return false;
+        }
+
+        if (!Plugin.IsGoreContentEnabled &&
+            (NoREroMod.Patches.HellTraps.LethalMagicTrapPaths.IsLethalMagicTrapKey(key) ||
+             NoREroMod.Patches.HellTraps.LethalCocoonTrapPaths.IsLethalCocoonTrapKey(key) ||
+             NoREroMod.Patches.HellTraps.LethalLightningTrapPaths.IsLethalLightningTrapKey(key)))
+        {
+            Plugin.Log?.LogInfo($"{logPrefix} Skipped lethal trap '{key}' (Gore Content disabled).");
             return false;
         }
 
@@ -599,12 +707,23 @@ internal static class SpawnTemplateCatalog
             GameObject spawned = Object.Instantiate(template, worldPos, Quaternion.identity);
             if (spawned != null)
             {
+                if (firstSpawned == null)
+                    firstSpawned = spawned;
                 spawned.name = GetSpawnName(template.name);
                 if (spawned.GetComponent<SpawnManagedInstance>() == null)
                     spawned.AddComponent<SpawnManagedInstance>();
                 SpawnConfigExecutor.MoveSpawnedToGameplayScene(spawned);
                 spawned.SetActive(true);
                 RewireTrapButtons(spawned);
+
+                if (!string.IsNullOrEmpty(factionIdRaw))
+                {
+                    NoREroMod.Systems.CombatAi.Factions.SpawnFactionOverride ov =
+                        spawned.GetComponent<NoREroMod.Systems.CombatAi.Factions.SpawnFactionOverride>();
+                    if (ov == null)
+                        ov = spawned.AddComponent<NoREroMod.Systems.CombatAi.Factions.SpawnFactionOverride>();
+                    ov.FactionIdRaw = factionIdRaw;
+                }
 
                 if (IsHostageCategory(category) || spawned.GetComponentInChildren<SpawnSlave>(true) != null)
                     HellGateHostageRuntime.ConfigureSpawnedHostage(spawned, spawnPos);
@@ -614,6 +733,9 @@ internal static class SpawnTemplateCatalog
 
                 if (NoREroMod.Patches.HellTraps.LethalCocoonTrapPaths.IsLethalCocoonTrapKey(key))
                     NoREroMod.Patches.HellTraps.LethalCocoonTrapRuntime.ConfigureSpawnedTrap(spawned);
+
+                if (NoREroMod.Patches.HellTraps.LethalLightningTrapPaths.IsLethalLightningTrapKey(key))
+                    NoREroMod.Patches.HellTraps.LethalLightningTrapRuntime.ConfigureSpawnedTrap(spawned);
 
                 if (Mathf.Abs(rotationZ) > 0.001f)
                 {
@@ -631,24 +753,25 @@ internal static class SpawnTemplateCatalog
                             + " Rotation ignored for lethal_cocoontrap (use cfg scale/acttime instead): "
                             + key);
                     }
+                    else if (NoREroMod.Patches.HellTraps.LethalLightningTrapPaths.IsLethalLightningTrapKey(key))
+                    {
+                        Plugin.Log?.LogWarning(
+                            logPrefix
+                            + " Rotation ignored for lightningTrap_button (use cfg scale/delay instead): "
+                            + key);
+                    }
                     else
                     {
-                        SpawnRotationUtility.ApplyRotation(spawned, rotationZ);
-                        if (SpawnSpikeKeys.IsSpikeLikeKey(key))
-                        {
-                            // Per-spawn verbose (disabled): rotation note on every spike trap spawn.
-                            // Plugin.Log?.LogInfo(
-                            //     logPrefix
-                            //     + " Spike trap rotated "
-                            //     + rotationZ.ToString("0.##")
-                            //     + "°: "
-                            //     + key);
-                        }
+                        // Rotate in place around the prefab pivot. Do not remount/shift XY —
+                        // AABB-based mount code moved the collider off the sprite (stub + no damage).
+                        SpawnRotationUtility.LockAuthoringRotation(spawned, rotationZ);
                     }
                 }
 
                 if (flipX)
                     SpawnFlipUtility.LockHorizontalFlipLeft(spawned);
+                else
+                    SpawnFlipUtility.ApplyAuthoringFlip(spawned, false);
 
                 SpawnDepthUtility.ApplyDepth(spawned, in spawnDepth);
 
@@ -714,7 +837,8 @@ internal static class SpawnTemplateCatalog
                 request.LogPrefix,
                 request.FlipX,
                 request.RotationZ,
-                request.Depth);
+                request.Depth,
+                request.FactionIdRaw);
         }
     }
 
@@ -728,6 +852,7 @@ internal static class SpawnTemplateCatalog
             return;
 
         map[normalized] = prefab;
+        RegisterCompactTrapAlias(map, normalized, prefab);
     }
 
     private static void CacheSceneTemplate(Dictionary<string, GameObject> map, string key, GameObject source, string prefix)
@@ -769,6 +894,7 @@ internal static class SpawnTemplateCatalog
         spawnSettings.SpawnWorldZ = source.transform.position.z;
         Object.DontDestroyOnLoad(template);
         map[normalized] = template;
+        RegisterCompactTrapAlias(map, normalized, template);
         SpawnTemplateDiskCache.RecordTemplate(normalized, source, prefix, cachingSceneName, spawnSettings.SpawnWorldZ);
     }
 
@@ -917,6 +1043,9 @@ internal static class SpawnTemplateCatalog
         "witchslaveslime",
         "enemymobcrowslaveback",
         "enemymobcrowslavestandup",
+        "evslavebigaxearadia",
+        "evslavebigaxemob",
+        "evbunnyero",
         "slave",
         "stand"
     };
@@ -950,6 +1079,45 @@ internal static class SpawnTemplateCatalog
         if (SpawnDecorCatalog.IsKnownDecorKey(key))
             return "Object";
         return "Trap";
+    }
+
+    /// <summary>F11 authoring: union of cached trap templates (excl. hostage/decor).</summary>
+    internal static void CollectAuthoringTrapKeys(HashSet<string> into)
+    {
+        if (into == null)
+            return;
+        if (!initialized && Plugin.Instance != null)
+            Initialize(Plugin.Instance);
+
+        foreach (var kv in trapTemplates)
+        {
+            if (string.IsNullOrEmpty(kv.Key) || kv.Value == null)
+                continue;
+            if (IsHostageTemplateKey(kv.Key))
+                continue;
+            if (SpawnAuthoringHostageCatalog.IsPickerKey(kv.Key))
+                continue;
+            if (SpawnDecorCatalog.IsKnownDecorKey(kv.Key))
+                continue;
+            into.Add(kv.Key);
+        }
+    }
+
+    /// <summary>F11 authoring: cached HOSTAGE / OtherScenes templates.</summary>
+    internal static void CollectAuthoringHostageKeys(HashSet<string> into)
+    {
+        if (into == null)
+            return;
+        if (!initialized && Plugin.Instance != null)
+            Initialize(Plugin.Instance);
+
+        foreach (var kv in trapTemplates)
+        {
+            if (string.IsNullOrEmpty(kv.Key) || kv.Value == null)
+                continue;
+            if (IsHostageTemplateKey(kv.Key) || SpawnAuthoringHostageCatalog.IsOtherSceneKey(kv.Key))
+                into.Add(kv.Key);
+        }
     }
 
     private static void WriteCatalogSection(
@@ -991,6 +1159,71 @@ internal static class SpawnTemplateCatalog
     private static string NormalizeKey(string key)
     {
         return CleanObjectName(key).Trim().ToLowerInvariant();
+    }
+
+    private static string CompactKey(string normalizedKey)
+    {
+        if (string.IsNullOrEmpty(normalizedKey))
+            return string.Empty;
+
+        return normalizedKey.Replace("_", string.Empty);
+    }
+
+    /// <summary>
+    /// Exact key first, then the same key with underscores removed
+    /// (lethalcocoontrap finds lethal_cocoontrap).
+    /// </summary>
+    private static bool TryResolveTemplate(Dictionary<string, GameObject> map, string key, out GameObject template)
+    {
+        template = null;
+        if (map == null || string.IsNullOrEmpty(key))
+            return false;
+
+        string normalized = NormalizeKey(key);
+        if (map.TryGetValue(normalized, out template) && template != null)
+            return true;
+
+        string compact = CompactKey(normalized);
+        if (!string.IsNullOrEmpty(compact) && compact != normalized &&
+            map.TryGetValue(compact, out template) && template != null)
+        {
+            return true;
+        }
+
+        if (string.IsNullOrEmpty(compact))
+        {
+            template = null;
+            return false;
+        }
+
+        foreach (KeyValuePair<string, GameObject> pair in map)
+        {
+            if (pair.Value == null)
+                continue;
+            if (CompactKey(pair.Key) != compact)
+                continue;
+
+            template = pair.Value;
+            return true;
+        }
+
+        template = null;
+        return false;
+    }
+
+    private static void RegisterCompactTrapAlias(Dictionary<string, GameObject> map, string normalizedKey, GameObject prefab)
+    {
+        if (map == null || prefab == null || string.IsNullOrEmpty(normalizedKey))
+            return;
+
+        string compact = CompactKey(normalizedKey);
+        if (string.IsNullOrEmpty(compact) || compact == normalizedKey)
+            return;
+
+        if (map.TryGetValue(compact, out GameObject existing) && existing != null && existing != prefab)
+            return;
+
+        map[compact] = prefab;
     }
 
     private static string CleanObjectName(string name)
@@ -1263,6 +1496,8 @@ internal static class SpawnTemplateCatalog
         RegisterTrapKeyAliases();
         TryRegisterLethalMagicTrapTemplate();
         TryRegisterLethalCocoonTrapTemplate();
+        TryRegisterLethalLightningTrapTemplate();
+        RegisterTrapKeyAliases();
         MaybeDumpCatalog(force: true);
     }
 
@@ -1287,6 +1522,18 @@ internal static class SpawnTemplateCatalog
         catch (Exception ex)
         {
             Plugin.Log?.LogWarning("[SPAWN CATALOG] Lethal cocoon trap template registration failed: " + ex.Message);
+        }
+    }
+
+    private static void TryRegisterLethalLightningTrapTemplate()
+    {
+        try
+        {
+            NoREroMod.Patches.HellTraps.LethalLightningTrapRuntime.TryEnsureTemplateRegistered();
+        }
+        catch (Exception ex)
+        {
+            Plugin.Log?.LogWarning("[SPAWN CATALOG] Lethal lightning trap template registration failed: " + ex.Message);
         }
     }
 
@@ -1435,6 +1682,7 @@ internal static class SpawnTemplateCatalog
             Object.Destroy(existing);
 
         map[normalized] = prefab;
+        RegisterCompactTrapAlias(map, normalized, prefab);
     }
 
     private static GameObject GetCommonAncestor(GameObject first, GameObject second)
@@ -1498,6 +1746,7 @@ internal static class SpawnTemplateCatalog
         public readonly bool FlipX;
         public readonly float RotationZ;
         public readonly SpawnDepthSettings Depth;
+        public readonly string FactionIdRaw;
 
         public SpawnTemplateRequest(
             string category,
@@ -1508,7 +1757,8 @@ internal static class SpawnTemplateCatalog
             string sceneName,
             bool flipX,
             float rotationZ,
-            SpawnDepthSettings depth)
+            SpawnDepthSettings depth,
+            string factionIdRaw = null)
         {
             Category = category;
             Key = key;
@@ -1519,6 +1769,7 @@ internal static class SpawnTemplateCatalog
             FlipX = flipX;
             RotationZ = rotationZ;
             Depth = depth;
+            FactionIdRaw = factionIdRaw;
         }
     }
 }

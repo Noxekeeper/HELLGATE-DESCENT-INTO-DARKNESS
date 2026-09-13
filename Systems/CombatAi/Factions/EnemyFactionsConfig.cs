@@ -17,6 +17,8 @@ internal static class EnemyFactionsConfig
 
     public static bool Enable => Get().Enable;
     public static bool DebugLogging => Get().DebugLogging;
+    /// <summary>Throttled logs for activation bubble / hostile awareness / engage-commit (InundergroundChurch diag).</summary>
+    public static bool ActivationDiag => Get().ActivationDiag;
     public static bool BanditsIgnorePlayer => Get().BanditsIgnorePlayer;
     public static float BanditsVsDemonsRange => Get().BanditsVsDemonsRange;
     public static float ActivationDistanceFromPlayer => Get().ActivationDistanceFromPlayer;
@@ -219,6 +221,7 @@ internal static class EnemyFactionsConfig
     {
         public bool Enable = false;
         public bool DebugLogging = false;
+        public bool ActivationDiag = false;
         public bool BanditsIgnorePlayer = true;
         public float BanditsVsDemonsRange = 1.6f;
         public float ActivationDistanceFromPlayer = 10f;
@@ -298,9 +301,9 @@ internal static class EnemyFactionsConfig
         public string[] DemonTypes = new string[]
         {
             "Mutude", "Bigoni", "BigoniBrother", "goblin", "Goblin", "GobBigAlter", "GobRider",
-            "Gorotuki", "Sheepheaddemon", "Minotaurosu", "Slaughterer",
+            "Sheepheaddemon", "Minotaurosu", "Slaughterer",
             "CrawlingDead", "CrawlingSisterKnight", "CrawlingCreatures", "Arulaune",
-            "Kakash", "Kakasi", "DarkPixie", "Candore", "SuccubusSpine", "Tentacle",
+            "Kakash", "Kakasi", "DarkPixie", "Candore", "SuccubusSpine",
             "DemonRequiemKnight", "IvyRoadStop", "OriginIbaranoMajyo", "LastIbaranoMajyo",
             "BossScapegoatentrance", "BOSS_Village", "BossInsomniaUnder",
             "BossLeftinsomniaUnder", "BossRightinsomniaUnder"
@@ -311,22 +314,23 @@ internal static class EnemyFactionsConfig
             "HighInquisition_famale", "HighInquisitionFemale",
             "Pilgrim", "RequiemKnight", "Sisterknight",
             "PrisonOfficer", "SinnerslaveCrossbow", "Dorei",
-            "SlaveBigAxe", "OtherSlavebigAxe", "Librarian", "AngelStatue", "Praymaiden"
+            "SlaveBigAxe", "OtherSlavebigAxe", "Librarian", "AngelStatue", "Praymaiden",
+            "Tentacle"
         };
         public string[] MafiaTypes = new string[]
         {
             "Mafia", "Mafiamuscle", "MafiaBossCustom", "BlackMafia",
             "Tyoukyoushi", "Tyoukyousi", "TyoukyoushiRed", "TyoukyousiRed",
-            "Boss_Ranch"
+            "Boss_Ranch", "Gorotuki"
         };
         public string[] UndeadTypes = new string[]
         {
-            "Undead", "MummyDog", "MummyMan", "Cocoonman", "Sisiruirui"
+            "Undead", "MummyDog", "MummyMan", "Cocoonman", "Sisiruirui",
+            "BlackOoze_Monster", "BlackOoze", "SkeltonOoze"
         };
         public string[] MonsterTypes = new string[]
         {
             "Kinoko", "Snailshell", "NormalSnailshell",
-            "BlackOoze_Monster", "BlackOoze", "SkeltonOoze",
             "BigMerman", "DifferentBigMerman", "Coolmaiden", "Mimick"
         };
         public string[] NeutralTypes = new string[] { "DPScheckWood" };
@@ -341,6 +345,8 @@ internal static class EnemyFactionsConfig
         {
             new FactionRelationEntry { Left = "bandits_inquisition", Right = "church", Relation = "friendly" },
             new FactionRelationEntry { Left = "bandits_mafia", Right = "mafia", Relation = "friendly" },
+            new FactionRelationEntry { Left = "bandits", Right = "mafia", Relation = "friendly" },
+            new FactionRelationEntry { Left = "bandits", Right = "bandits_mafia", Relation = "friendly" },
             new FactionRelationEntry { Left = "bandits_demons", Right = "demons", Relation = "friendly" }
         };
         public FactionColorEntry[] FactionColors = new FactionColorEntry[]

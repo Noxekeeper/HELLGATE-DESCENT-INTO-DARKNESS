@@ -184,6 +184,8 @@ public class Plugin : BaseUnityPlugin {
 
     // Wolf Mod - path to Wolf Mod Spine assets
     public static ConfigEntry<string> wolfModAssetsPath;
+    // SlaveBigAxe MeatArmor: disk Spine (Aradia_armor) for post-fade walk
+    public static ConfigEntry<string> slaveBigAxeMeatArmorAssetsPath;
     // RickEnemyMod - shared Rick fatality assets (Fatality Logo + per-enemy folders like Butcher)
     public static ConfigEntry<string> rickEnemyModAssetsPath;
     // Deprecated alias; falls back when RickEnemyMod AssetsPath is empty
@@ -191,6 +193,9 @@ public class Plugin : BaseUnityPlugin {
     // Hellish Touzoku - path to Hellish Touzoku Spine assets (Boss / Axe / Sword)
     public static ConfigEntry<string> hellishTouzokuAssetsPath;
     public static ConfigEntry<float> hellishTouzokuScaleMultiplier;
+
+    // Demon_gorotuki - Spine swap on Gorotuki prefab
+    public static ConfigEntry<string> demonGorotukiAssetsPath;
 
     // Dorei Mod - path to DoreiFapping (idle during H-scene spectator)
     public static ConfigEntry<string> doreiFappingAssetsPath;
@@ -217,6 +222,34 @@ public class Plugin : BaseUnityPlugin {
     public static ConfigEntry<bool> enableLethalCocoonTrap;
     public static ConfigEntry<string> lethalCocoonTrapDeathClipPath;
     public static ConfigEntry<float> lethalCocoonTrapDeathClipDisplayScale;
+    public static ConfigEntry<bool> enableLethalLightningTrap;
+    public static ConfigEntry<string> lethalLightningTrapDeathClipPath;
+    public static ConfigEntry<float> lethalLightningTrapDeathClipDisplayScale;
+    public static ConfigEntry<float> lethalLightningTrapWarningDelay;
+    public static ConfigEntry<bool> lethalLightningTrapUseWarningIcon;
+    public static ConfigEntry<bool> lethalLightningTrapUseLightningVfx;
+    public static ConfigEntry<bool> lethalLightningTrapUseStrikeShake;
+    public static ConfigEntry<float> lethalLightningTrapSpawnScale;
+    public static ConfigEntry<float> lethalLightningTrapCooldownSeconds;
+
+    /// <summary>
+    /// Master switch (splash checkbox): DeadArmor death clips + CustomDeath lethal traps.
+    /// Armored grab-throw and non-lethal traps stay independent.
+    /// </summary>
+    public static ConfigEntry<bool> enableGoreContent;
+
+    /// <summary>True when Gore Content is on (default true if unset).</summary>
+    public static bool IsGoreContentEnabled =>
+        enableGoreContent == null || enableGoreContent.Value;
+
+    public static bool IsLethalMagicTrapActive =>
+        IsGoreContentEnabled && (enableLethalMagicTrap?.Value ?? false);
+
+    public static bool IsLethalCocoonTrapActive =>
+        IsGoreContentEnabled && (enableLethalCocoonTrap?.Value ?? false);
+
+    public static bool IsLethalLightningTrapActive =>
+        IsGoreContentEnabled && (enableLethalLightningTrap?.Value ?? false);
 
     // New handoff system configs
     public static ConfigEntry<bool> enableEnemyHandoff;
@@ -345,6 +378,10 @@ public class Plugin : BaseUnityPlugin {
     public static ConfigEntry<float> rageResetHCPenaltyGrab;
     public static ConfigEntry<float> rageResetHCPenaltyKnockdown;
     public static ConfigEntry<float> rageKeyPressCooldown;
+    /// <summary>Keyboard key that toggles Rage (also used for QTE grab-escape).</summary>
+    public static ConfigEntry<KeyCode> rageActivationHotkey;
+    /// <summary>Keyboard key that toggles Time Slow-Mo.</summary>
+    public static ConfigEntry<KeyCode> timeSlowMoHotkey;
 
     // Rage Visual Effects (edge glow bars, hands glow)
     public static ConfigEntry<float> rageGlowColorR;
@@ -417,6 +454,8 @@ public class Plugin : BaseUnityPlugin {
     public static ConfigEntry<float> qteMaxPinkShadowIntensity;
     public static ConfigEntry<int> qteComboMilestone;
     public static ConfigEntry<bool> enableQTESystem;
+    /// <summary>QTE Free Struggle: always-open WASD windows; each WASD = click SP.</summary>
+    public static ConfigEntry<bool> qteFreeStruggleEnable;
     
     // H-Scene Effects configs
     public static ConfigEntry<bool> enableStartZoomEffect;
@@ -516,8 +555,10 @@ public class Plugin : BaseUnityPlugin {
     // DialogueEventProcessor configs
     public static ConfigEntry<float> dialogueEventMinCooldown;
     
-    // Combat Camera Preset configs (V key)
+    // Combat Camera Preset configs
     public static ConfigEntry<bool> enableCombatCameraPresets;
+    /// <summary>Keyboard key that cycles combat camera zoom presets.</summary>
+    public static ConfigEntry<KeyCode> combatCameraHotkey;
     public static ConfigEntry<float> combatCameraFarZoom;
     public static ConfigEntry<float> combatCameraUltraFarZoom;
 
@@ -557,27 +598,245 @@ public class Plugin : BaseUnityPlugin {
         Instance = this;
         Log = Logger;
         harmony = new Harmony(PluginInfo.PLUGIN_GUID);
+
+        // MUST be first: patch NoRSceneLoader before its Awake runs (AssemblyLoad).
+        try { NoREroMod.Systems.UI.ForestLoaderDeferral.Install(); }
+        catch (Exception ex) { Log?.LogWarning($"[BOOT] Forest deferral install failed: {ex.Message}"); }
+
+        // Black hold only — no tips/cache until language is known (first-run picker gates the rest).
+        try
+        {
+            NoREroMod.Systems.UI.ForestLoaderBootProgress.EnsureHooked();
+            NoREroMod.Systems.UI.HellGateSplashScreen.ShowEarlyBootLoading();
+            NoREroMod.Systems.UI.HellGateSplashScreen.SetEarlyBootContentSuppressed(true);
+            NoREroMod.Systems.UI.HellGateSplashScreen.SetEarlyBootStatus("Starting...", 0.02f);
+        }
+        catch (Exception ex) { Log?.LogWarning($"[BOOT] Early boot UI failed: {ex.Message}"); }
+
+        StartCoroutine(BootSequenceEntry());
+    }
+
+    private System.Collections.IEnumerator BootSequenceEntry()
+    {
+        // Let Unity paint Early Boot before sync config bind freezes the thread.
+        yield return null;
+        yield return null;
+
+        // Language ConfigEntry only — full SetUpConfigs waits until locale is chosen.
+        try { BindHellGateLanguageConfig(); }
+        catch (Exception ex) { Log?.LogWarning($"[BOOT] Language config bind failed: {ex.Message}"); }
+        try { BindGoreContentConfig(); }
+        catch (Exception ex) { Log?.LogWarning($"[BOOT] Gore config bind failed: {ex.Message}"); }
+
+        yield return NoREroMod.Systems.UI.HellGateSplashScreen.CoEarlyLanguageSelectionIfNeeded();
+
+        // After language is known: if player never picked a difficulty, seed active
+        // cfgs from EASY (preserves HellGateLanguage) so first bind is not code defaults.
+        try { NoREroMod.Systems.Difficulty.HellGateDifficultyPresetModule.EnsureDefaultEasyPresetBeforeBind(); }
+        catch (Exception ex) { Log?.LogWarning($"[BOOT] Default EASY preset failed: {ex.Message}"); }
+
+        float cfgT0 = Time.realtimeSinceStartup;
+        NoREroMod.Systems.UI.HellGateSplashScreen.SetEarlyBootContentSuppressed(false);
+        if (!NoREroMod.Systems.UI.HellGateSplashScreen.IsEarlyBootActive)
+            NoREroMod.Systems.UI.HellGateSplashScreen.ShowEarlyBootLoading();
+        NoREroMod.Systems.UI.HellGateSplashScreen.SetEarlyBootStatus("Loading config...", 0.03f);
+        yield return null;
         SetUpConfigs();
+        Log?.LogInfo($"[BOOT TIMING] SetUpConfigs: {(Time.realtimeSinceStartup - cfgT0) * 1000f:F0}ms");
+
+        try { NoREroMod.Systems.UI.HellGateBootTips.EnsureLoaded(); }
+        catch (Exception ex) { Log?.LogWarning($"[HellGate Tips] init failed: {ex.Message}"); }
+
         try { NoREroMod.Systems.Pregnancy.PregnancyConfig.Initialize(); }
         catch (Exception ex) { Log?.LogWarning($"[Pregnancy] Config init failed: {ex.Message}"); }
-        NoREroMod.Systems.Compatibility.NoREroModScaffoldConfigPush.Apply();
-        try {
-            NoREroMod.Systems.Spawn.SpawnTemplateCatalog.Initialize(this);
-        } catch (Exception ex) {
-            Log?.LogWarning($"[SPAWN CATALOG] Initialization failed: {ex.Message}");
+        try { NoREroMod.Systems.DeadArmor.DeadArmorConfig.Initialize(); }
+        catch (Exception ex) { Log?.LogWarning($"[DeadArmor] Config init failed: {ex.Message}"); }
+        try { NoREroMod.Systems.LostSounds.LostSoundsConfig.Initialize(); }
+        catch (Exception ex) { Log?.LogWarning($"[LostSounds] Config init failed: {ex.Message}"); }
+        try { NoREroMod.Systems.Costumes.CostumesConfig.Initialize(); }
+        catch (Exception ex) { Log?.LogWarning($"[Costumes] Config init failed: {ex.Message}"); }
+        try
+        {
+            NoREroMod.Systems.EnemyFatality.EnemyFatalityConfig.Initialize();
+            NoREroMod.Systems.EnemyFatality.EnemyFatalityClipDefs.Initialize();
+            NoREroMod.Systems.EnemyFatality.WhiteInquisitorFatality.WhiteInquisitorFatalityConfig.Initialize();
+            NoREroMod.Systems.EnemyFatality.EnemyFatalityProfileCatalog.Initialize();
         }
-        SetUpPatches();
-        try {
-            NoREroMod.Patches.HellTraps.LethalMagicTrapRuntime.TryEnsureTemplateRegistered();
-            NoREroMod.Patches.HellTraps.LethalMagicTrapDeathDisplay.Preload();
-            NoREroMod.Patches.HellTraps.LethalCocoonTrapRuntime.TryEnsureTemplateRegistered();
-            NoREroMod.Patches.HellTraps.LethalCocoonTrapDeathDisplay.Preload();
-            NoREroMod.Patches.HellTraps.LethalMagicTrapDeathAudio.Initialize(this);
-            NoREroMod.Patches.HellTraps.LethalTrapVengeanceShockAudio.Initialize(this);
-        } catch (Exception ex) {
-            Log?.LogWarning("[LethalMagicTrap] Template bootstrap failed: " + ex.Message);
+        catch (Exception ex) { Log?.LogWarning($"[EnemyFatality] Config init failed: {ex.Message}"); }
+        NoREroMod.Systems.Compatibility.NoREroModScaffoldConfigPush.Apply();
+
+        bool showSplash = showSplashScreenOnStartup?.Value ?? true;
+        if (showSplash)
+            yield return BootSequenceWithSplash();
+        else
+        {
+            NoREroMod.Systems.UI.HellGateSplashScreen.DismissEarlyBootLoading();
+            yield return BootSequenceWithoutSplash();
+        }
+    }
+
+    private System.Collections.IEnumerator BootSequenceWithSplash()
+    {
+        // Paint Early Boot BEFORE NoRSceneLoader forestlvl / scene harvest.
+        NoREroMod.Systems.UI.HellGateSplashScreen.SetEarlyBootStatus("Loading Forest content...", 0.05f);
+        yield return null;
+
+        // Status line before sync forestlvl so ticker is visible going into the freeze.
+        NoREroMod.Systems.UI.HellGateSplashScreen.PushEarlyBootItem("forestlvl");
+        yield return null;
+
+        float forestT0 = Time.realtimeSinceStartup;
+        NoREroMod.Systems.UI.ForestLoaderDeferral.RunDeferredLoads((msg, p) =>
+            NoREroMod.Systems.UI.HellGateSplashScreen.SetEarlyBootStatus(msg, p));
+
+        // LoadPrefabs starts async scene harvest — wait here so Forest N/11 is visible.
+        int lastForestCount = -1;
+        float lastForestChangeAt = Time.realtimeSinceStartup;
+        while (!NoREroMod.Systems.UI.ForestLoaderBootProgress.IsFinished
+               && (Time.realtimeSinceStartup - forestT0) < 120f)
+        {
+            int done = NoREroMod.Systems.UI.ForestLoaderBootProgress.CompletedScenes;
+            if (done != lastForestCount)
+            {
+                lastForestCount = done;
+                lastForestChangeAt = Time.realtimeSinceStartup;
+            }
+
+            // Scene/enemy names pushed from Forest hooks — only advance the bar here.
+            float p = 0.08f + NoREroMod.Systems.UI.ForestLoaderBootProgress.Progress01 * 0.28f;
+            NoREroMod.Systems.UI.HellGateSplashScreen.SetEarlyBootProgressOnly(p);
+
+            if (done >= NoREroMod.Systems.UI.ForestLoaderBootProgress.TotalScenes)
+            {
+                NoREroMod.Systems.UI.ForestLoaderBootProgress.MarkFinished();
+                break;
+            }
+
+            if (done > 0 && (Time.realtimeSinceStartup - lastForestChangeAt) >= 2.5f)
+            {
+                NoREroMod.Systems.UI.ForestLoaderBootProgress.MarkFinished();
+                break;
+            }
+
+            // No scenes after deferred kick — give real async loads time before giving up.
+            if (done == 0 && (Time.realtimeSinceStartup - forestT0) >= 45.0f)
+            {
+                NoREroMod.Systems.UI.ForestLoaderBootProgress.MarkFinished();
+                break;
+            }
+
+            yield return null;
         }
 
+        Log?.LogInfo(
+            $"[BOOT TIMING] Forest/NoRSceneLoader wait: {(Time.realtimeSinceStartup - forestT0) * 1000f:F0}ms " +
+            $"({NoREroMod.Systems.UI.ForestLoaderBootProgress.CompletedScenes}/{NoREroMod.Systems.UI.ForestLoaderBootProgress.TotalScenes})");
+
+        float t0 = Time.realtimeSinceStartup;
+        NoREroMod.Systems.UI.HellGateSplashScreen.SetEarlyBootStatus("Loading spawn catalog...", 0.38f);
+        yield return null;
+        try
+        {
+            NoREroMod.Systems.Spawn.SpawnTemplateCatalog.Initialize(this);
+        }
+        catch (Exception ex)
+        {
+            Log?.LogWarning($"[SPAWN CATALOG] Initialization failed: {ex.Message}");
+        }
+        Log?.LogInfo($"[BOOT TIMING] SpawnTemplateCatalog.Initialize: {(Time.realtimeSinceStartup - t0) * 1000f:F0}ms");
+
+        t0 = Time.realtimeSinceStartup;
+        NoREroMod.Systems.UI.HellGateSplashScreen.SetEarlyBootProgressOnly(0.45f);
+        yield return SetUpPatchesCoroutine();
+        Log?.LogInfo($"[BOOT TIMING] SetUpPatches: {(Time.realtimeSinceStartup - t0) * 1000f:F0}ms");
+        yield return null;
+
+        NoREroMod.Systems.UI.HellGateSplashScreen.SetEarlyBootProgressOnly(0.58f);
+        yield return null;
+        RunPostPatchBootstrap();
+        yield return null;
+
+        t0 = Time.realtimeSinceStartup;
+        NoREroMod.Systems.UI.HellGateSplashScreen.SetEarlyBootStatus("Loading trap assets...", 0.65f);
+        yield return null;
+        RunBootAssetPreloadImmediate();
+        Log?.LogInfo($"[BOOT TIMING] BootAssetPreload (HellTraps/DeadArmor): {(Time.realtimeSinceStartup - t0) * 1000f:F0}ms");
+        yield return null;
+
+        NoREroMod.Systems.UI.HellGateSplashScreen.SetEarlyBootStatus("Loading UI systems...", 0.75f);
+        yield return null;
+        RunLatePresentationInit();
+        RunNoREroModCompatibilityProbe();
+        NoREroMod.HellGate.Api.HellGateApi.Initialize(PluginInfo.PLUGIN_VERSION, Log);
+        yield return null;
+
+        t0 = Time.realtimeSinceStartup;
+        NoREroMod.Systems.UI.HellGateSplashScreen.SetEarlyBootStatus("Loading HellGate menu...", 0.85f);
+        yield return null;
+        try
+        {
+            NoREroMod.Systems.UI.HellGateSplashScreen.Initialize();
+        }
+        catch (Exception ex)
+        {
+            Log?.LogWarning($"[BOOT] Splash Initialize failed: {ex.Message}");
+        }
+        Log?.LogInfo($"[BOOT TIMING] HellGateSplashScreen.Initialize: {(Time.realtimeSinceStartup - t0) * 1000f:F0}ms");
+        Log?.LogInfo("[BOOT TIMING] BootSequenceWithSplash complete — splash Loading gate owns scene hydrate + menu hold.");
+    }
+
+    private System.Collections.IEnumerator BootSequenceWithoutSplash()
+    {
+        yield return null;
+        yield return null;
+        NoREroMod.Systems.UI.ForestLoaderDeferral.RunDeferredLoads(null);
+        float forestWait = Time.realtimeSinceStartup;
+        while (!NoREroMod.Systems.UI.ForestLoaderBootProgress.IsFinished
+               && (Time.realtimeSinceStartup - forestWait) < 120f)
+        {
+            if (NoREroMod.Systems.UI.ForestLoaderBootProgress.CompletedScenes
+                >= NoREroMod.Systems.UI.ForestLoaderBootProgress.TotalScenes)
+            {
+                NoREroMod.Systems.UI.ForestLoaderBootProgress.MarkFinished();
+                break;
+            }
+            if ((Time.realtimeSinceStartup - forestWait) >= 8f
+                && NoREroMod.Systems.UI.ForestLoaderBootProgress.CompletedScenes == 0)
+            {
+                NoREroMod.Systems.UI.ForestLoaderBootProgress.MarkFinished();
+                break;
+            }
+            yield return null;
+        }
+
+        try
+        {
+            NoREroMod.Systems.Spawn.SpawnTemplateCatalog.Initialize(this);
+        }
+        catch (Exception ex)
+        {
+            Log?.LogWarning($"[SPAWN CATALOG] Initialization failed: {ex.Message}");
+        }
+        yield return SetUpPatchesCoroutine();
+        RunPostPatchBootstrap();
+        RunBootAssetPreloadImmediate();
+        try
+        {
+            NoREroMod.Systems.Spawn.SpawnTemplateWhitelist.ReloadAndCache(this);
+            NoREroMod.Systems.Spawn.EnemyPrefabDiskCache.SchedulePreload(this);
+        }
+        catch (Exception ex)
+        {
+            Log?.LogWarning($"[BOOT] Non-splash hydrate failed: {ex.Message}");
+        }
+        RunLatePresentationInit();
+        RunNoREroModCompatibilityProbe();
+        NoREroMod.HellGate.Api.HellGateApi.Initialize(PluginInfo.PLUGIN_VERSION, Log);
+        yield break;
+    }
+
+    private void RunPostPatchBootstrap()
+    {
         try
         {
             gameObject.AddComponent<NoREroMod.Systems.Spawn.LocationTransitionSpawnController>();
@@ -589,12 +848,10 @@ public class Plugin : BaseUnityPlugin {
 
         EventCoreBootstrap.Install(this);
 
-        // Initialize visual indicators
         if (enableStruggleVisualIndicators.Value) {
             StruggleVisualIndicators.Initialize();
         }
-        
-        // Initialize dialogue system
+
         try {
             NoREroMod.Systems.Dialogue.DialogueFramework.Initialize();
             NoREroMod.Systems.Dialogue.QTEReactionFramework.Initialize();
@@ -617,55 +874,42 @@ public class Plugin : BaseUnityPlugin {
         {
             Log?.LogWarning($"[Reinforcement] Bootstrap failed: {ex.Message}");
         }
-        
-        // Initialize H-Scene camera system
+
         try {
             NoREroMod.Systems.Camera.HSceneCameraController.Initialize();
             NoREroMod.Systems.Camera.CameraCache.InitializeProCamera2DReflection();
             NoREroMod.Systems.Camera.CameraCache.InitializePlayerconReflection();
             NoREroMod.Systems.Camera.CameraCache.InitializeCameraTargetsReflection();
         } catch { }
-        
-        // Initialize H-Scene Effects
+
         try {
             NoREroMod.Systems.HSceneEffects.HSceneStartZoomEffect.Initialize();
         } catch { }
-        
-        // Initialize Corruption Captions system
+
         try {
             if (enableCorruptionCaptions?.Value ?? false) {
                 NoREroMod.Patches.UI.MindBroken.CorruptionCaptionsSystem.Initialize();
             }
         } catch { }
-        
-        // Initialize MindBroken Recovery system
+
         try {
             if (enableMindBrokenRecovery?.Value ?? false) {
                 NoREroMod.Patches.UI.MindBroken.MindBrokenRecoverySystem.Initialize();
             }
         } catch { }
-        
-        try {
-            if (showSplashScreenOnStartup?.Value ?? true)
-                StartCoroutine(ShowSplashScreenImmediately());
-        } catch { }
 
-        // Reset caches on scene change — prevents "click disable" during struggle due to stale player/camera refs
         SceneManager.sceneLoaded += OnSceneLoaded_ResetCaches;
-
-        // Reset hideout spawn flags when leaving the church so children respawn on return.
         SceneManager.sceneUnloaded += OnSceneUnloaded_ResetHideoutSpawn;
+    }
 
-        // BadEnd Player shows only when BadEnd triggers (MindBroken 100% + timer), not in main menu.
-        
-        // Initialize MindBroken Visual Effects system
+    private void RunLatePresentationInit()
+    {
         try {
             if (enableMindBroken?.Value ?? false) {
                 NoREroMod.Patches.UI.MindBroken.MindBrokenVisualEffectsSystem.Initialize();
             }
         } catch { }
-        
-        // Initialize Rage Mode system
+
         try {
             if (enableRageMode?.Value ?? false) {
                 NoREroMod.Systems.Rage.RageUISystem.InitializeFromPlugin();
@@ -673,9 +917,6 @@ public class Plugin : BaseUnityPlugin {
             }
         } catch { }
 
-        // GrabChance label lives on the Rage overlay canvas now; no separate init needed.
-
-        // Edge bars disabled for performance (particle effects on hands are sufficient)
         try {
             NoREroMod.Systems.Rage.RageHandsGlowSystem.Initialize();
         } catch { }
@@ -685,7 +926,6 @@ public class Plugin : BaseUnityPlugin {
         try {
             NoREroMod.Systems.Rage.RageWingsSystem.Initialize();
         } catch { }
-        // SlowMo edge bars disabled for performance
         try {
             NoREroMod.Systems.Rage.SlowMoBoneGlowSystem.Initialize();
         } catch { }
@@ -697,28 +937,24 @@ public class Plugin : BaseUnityPlugin {
             NoREroMod.Systems.UI.Portrait.PortraitModSystem.Initialize();
         } catch { }
 
-        // Initialize Tentacle H-scene diagnostics (off by default; toggle via JSON).
         try {
             NoREroMod.Systems.Diagnostics.Tentacle.TentacleDiagnostics.Initialize();
         } catch (Exception ex) {
             Log?.LogWarning($"[TentacleDiag] init failed: {ex.Message}");
         }
 
-        // Trap H-scene player-body diagnostics (off by default; toggle via JSON).
         try {
             NoREroMod.Systems.Diagnostics.TrapBody.TrapPlayerBodyDiagnostics.Initialize();
         } catch (Exception ex) {
             Log?.LogWarning($"[TrapBodyDiag] init failed: {ex.Message}");
         }
 
-        // Kinoko / MushroomERO H-scene event diagnostics (toggle via JSON).
         try {
             NoREroMod.Systems.Diagnostics.Kinoko.KinokoMushroomEroDiagnostics.Initialize();
         } catch (Exception ex) {
             Log?.LogWarning($"[KinokoEroDiag] init failed: {ex.Message}");
         }
 
-        // Initialize Economic / Gold module (assets, wallet, lost-pile scene loader).
         try {
             NoREroMod.Systems.Economy.EconomicConfig.Initialize();
         } catch { }
@@ -731,12 +967,6 @@ public class Plugin : BaseUnityPlugin {
         } catch (Exception ex) {
             Log?.LogWarning($"[Economic] Module init failed: {ex.Message}");
         }
-
-        // Startup compatibility probe for reflection-heavy integration points.
-        RunNoREroModCompatibilityProbe();
-
-        // Publish the stable integration surface only after all subsystems initialized.
-        NoREroMod.HellGate.Api.HellGateApi.Initialize(PluginInfo.PLUGIN_VERSION, Log);
     }
 
     private static void RunNoREroModCompatibilityProbe()
@@ -825,44 +1055,96 @@ public class Plugin : BaseUnityPlugin {
         return passed;
     }
 
-    private void SetUpPatches() {
+    private System.Collections.IEnumerator SetUpPatchesCoroutine() {
+        _bootPatchesApplied = 0;
         _harmonyForLatePatches = harmony;
-        PatchType(typeof(PreventHarmonyUnpatch));
+        BootPatch(typeof(PreventHarmonyUnpatch));
+        yield return null;
         
-        PatchType(typeof(QTEStruggleSystemDisabler));
-        PatchType(typeof(QTEStruggleHistoryDisabler));
-        PatchType(typeof(SoloPleasureAnimeFunPatch));
-        PatchType(typeof(SoloPleasureSpRecoveryPatch));
-        PatchType(typeof(SoloOrgasmStruggleSetupPatch));
-        PatchType(typeof(StruggleCameraShakeDisabler));
+        BootPatch(typeof(QTEStruggleSystemDisabler));
+        yield return null;
+        BootPatch(typeof(QTEStruggleHistoryDisabler));
+        yield return null;
+        BootPatch(typeof(SoloPleasureAnimeFunPatch));
+        yield return null;
+        BootPatch(typeof(SoloPleasureSpRecoveryPatch));
+        yield return null;
+        BootPatch(typeof(SoloOrgasmStruggleSetupPatch));
+        yield return null;
+        BootPatch(typeof(StruggleCameraShakeDisabler));
+        yield return null;
         
 
-        PatchType(typeof(StruggleVisualIndicators));
-        PatchType(typeof(TouzokuNormalPassPatch));
-        PatchType(typeof(TouzokuAxePassPatch));
-        PatchType(typeof(InquisitionBlackPassPatch));
-        PatchType(typeof(InquisitionWhitePassPatch));
-        PatchType(typeof(InquisitionRedPassPatch));
-        PatchType(typeof(VagrantPassPatch));
-        PatchType(typeof(PrisonOfficerPassPatch));
-        PatchType(typeof(LibrarianPassPatch));
-        PatchType(typeof(MummyDogPassPatch));
-        PatchType(typeof(PilgrimPassPatch));
-        PatchType(typeof(MummyManPassPatch));
-        PatchType(typeof(MummyManHandoffGrabBlockPatch));
-        PatchType(typeof(MummyManHandoffStatePatch));
-        PatchType(typeof(UndeadPassPatch));
-        PatchType(typeof(CrowInquisitionEROFix)); // Fix animation skipping from Hellachaz
-        PatchType(typeof(CrowInquisitionPassLogic)); // Handoff in gangbang
+        BootPatch(typeof(StruggleVisualIndicators));
+        yield return null;
+        BootPatch(typeof(TouzokuNormalPassPatch));
+        yield return null;
+        BootPatch(typeof(TouzokuAxePassPatch));
+        yield return null;
+        BootPatch(typeof(InquisitionBlackPassPatch));
+        yield return null;
+        BootPatch(typeof(InquisitionWhitePassPatch));
+        yield return null;
+        BootPatch(typeof(InquisitionRedPassPatch));
+        yield return null;
+        BootPatch(typeof(VagrantPassPatch));
+        yield return null;
+        BootPatch(typeof(PrisonOfficerPassPatch));
+        yield return null;
+        BootPatch(typeof(LibrarianPassPatch));
+        yield return null;
+        BootPatch(typeof(MummyDogPassPatch));
+        yield return null;
+        BootPatch(typeof(PilgrimPassPatch));
+        yield return null;
+        BootPatch(typeof(MummyManPassPatch));
+        yield return null;
+        BootPatch(typeof(MummyManHandoffGrabBlockPatch));
+        yield return null;
+        BootPatch(typeof(MummyManHandoffStatePatch));
+        yield return null;
+        BootPatch(typeof(UndeadPassPatch));
+        yield return null;
+        BootPatch(typeof(CrowInquisitionEROFix));
+        yield return null; // Fix animation skipping from Hellachaz
+        BootPatch(typeof(CrowInquisitionPassLogic));
+        yield return null; // Handoff in gangbang
         CrowInquisitionEROFix.UnpatchHellachaz(); // Remove Hellachaz patches immediately
-        PatchType(typeof(SpawnPointAnalyzer));
-        PatchType(typeof(SpawnRecorderAttackInputBlockPatch));
+        BootPatch(typeof(SpawnPointAnalyzer));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Systems.Spawn.SpawnAuthoringHotkeyGuard));
+        yield return null;
+        BootPatch(typeof(SpawnRecorderAttackInputBlockPatch));
+        yield return null;
         // Zone packs: HellGateSpawnSceneHints registry + HellGateLocationSpawnRefresh (no per-map Spawnenemy.Update hooks).
-        PatchType(typeof(NoREroMod.Systems.Spawn.Patches.WitchSlaveSlimeHellGateRewardPatch));
-        PatchType(typeof(NoREroMod.Systems.Spawn.SpawnRespawnAfterAltarPatch));
-        PatchType(typeof(NoREroMod.Systems.Spawn.SceneMoveTransitionSpawnPatch));
-        PatchTypeWithLog(typeof(NoREroMod.Patches.Player.VanillaEvSceneExitPatch), "VanillaEvSceneExitPatch");
-        PatchType(typeof(NoREroMod.Systems.Spawn.SceneLoadSpawnRefreshPatch));
+        BootPatch(typeof(NoREroMod.Systems.Spawn.Patches.WitchSlaveSlimeHellGateRewardPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Systems.Spawn.Patches.SlaveSideLookFactionInheritPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Systems.Spawn.Patches.EnemyMobCrowSlaveBackFactionInheritPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Systems.Spawn.Patches.EnemyMobCrowSlaveStandupFactionInheritPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Systems.Spawn.SpawnRespawnAfterAltarPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Systems.Spawn.SceneMoveTransitionSpawnPatch));
+        yield return null;
+        BootPatchLogged(typeof(NoREroMod.Patches.Player.VanillaEvSceneExitPatch), "VanillaEvSceneExitPatch");
+        yield return null;
+        try
+        {
+            NoREroMod.Systems.Compatibility.DeepForest.DeepForestAltarIdFix.Initialize(harmony);
+            NoREroMod.Systems.UI.HellGateSplashScreen.PushEarlyBootItem("DeepForestAltarIdFix");
+            _bootPatchesApplied++;
+        }
+        catch (Exception ex)
+        {
+            Log?.LogWarning($"[DeepForest] Altar ID fix install failed: {ex.Message}");
+        }
+        yield return null;
+        BootPatch(typeof(NoREroMod.Systems.Spawn.SceneLoadSpawnRefreshPatch));
+        yield return null;
+
         try
         {
             NoREroMod.Systems.Spawn.SpawnParentInitializeGate.Install(harmony);
@@ -871,35 +1153,69 @@ public class Plugin : BaseUnityPlugin {
         {
             Log?.LogWarning($"[LOCATION SPAWN] Initialize gate install failed: {ex.Message}");
         }
+
         try
         {
             harmony.PatchAll(typeof(NoREroMod.Patches.Enemy.HeckGateEnemy.HeckGateSlimeModule));
-            PatchType(typeof(NoREroMod.Patches.Enemy.HeckGateEnemy.SuraimuStruggleContextPatch));
-            PatchType(typeof(NoREroMod.Patches.Enemy.HeckGateEnemy.SuraimuStruggleMaxSpEscapePostfix));
-            PatchType(typeof(NoREroMod.Patches.Enemy.HeckGateEnemy.SuraimuEroAnimationStrugglePatch));
-            PatchType(typeof(NoREroMod.Patches.Enemy.HeckGateEnemy.SuraimuHannomiStrugglePatch));
-            PatchType(typeof(NoREroMod.Patches.Enemy.HeckGateEnemy.SuraimuActiveHSceneStrugglePatch));
-            PatchType(typeof(NoREroMod.Patches.Enemy.HeckGateEnemy.SuraimuHSceneEscapeFunNowDamagePatch));
-            PatchType(typeof(NoREroMod.Patches.Enemy.HeckGateEnemy.SuraimuHSceneEscapeGiveUpPatch));
+            NoREroMod.Systems.UI.HellGateSplashScreen.PushEarlyBootItem("HeckGateSlimeModule");
+            _bootPatchesApplied++;
             Log?.LogInfo("[biscord] HeckGateSlimeModule Harmony patches applied (Start/Update/OnDestroy).");
         }
         catch (Exception ex)
         {
             Log?.LogError($"[biscord] CRITICAL: HeckGateSlimeModule PatchAll failed — biscord rewards/drops will not run: {ex}");
         }
-        PatchType(typeof(SpawnResetPatch));
-        PatchType(typeof(KakasiPassLogic));
-        PatchType(typeof(KakasiCrossPatch));
-        PatchType(typeof(KakasiHandoffGrabBlockPatch));
-        PatchType(typeof(KakasiHandoffStatePatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.HeckGateEnemy.SuraimuStruggleContextPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.HeckGateEnemy.SuraimuStruggleMaxSpEscapePostfix));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.HeckGateEnemy.SuraimuEroAnimationStrugglePatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.HeckGateEnemy.SuraimuHannomiStrugglePatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.HeckGateEnemy.SuraimuActiveHSceneStrugglePatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.HeckGateEnemy.SuraimuHSceneEscapeFunNowDamagePatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.HeckGateEnemy.SuraimuHSceneEscapeGiveUpPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.HeckGateEnemy.SuccubusStruggleMaxSpEscapePostfix));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.HeckGateEnemy.SuccubusHSceneEscapeStrugglePatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.HeckGateEnemy.SuccubusHSceneEscapeFunNowDamagePatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.HeckGateEnemy.SuccubusHSceneEscapeGiveUpPatch));
+        yield return null;
+        BootPatch(typeof(SpawnResetPatch));
+        yield return null;
+        BootPatch(typeof(KakasiPassLogic));
+        yield return null;
+        BootPatch(typeof(KakasiCrossPatch));
+        yield return null;
+        BootPatch(typeof(KakasiHandoffGrabBlockPatch));
+        yield return null;
+        BootPatch(typeof(KakasiHandoffStatePatch));
+        yield return null;
         
-        try {
+
+        try
+        {
             harmony.PatchAll(typeof(NoREroMod.Patches.Enemy.Kakash.KakashGrabPatch));
-        } catch { }
-        
-        PatchType(typeof(GoblinPassLogic));
-        PatchType(typeof(GoblinStruggleSpawnPatch)); // HARDMODE: Spawn 2 goblins when escaping from START animation
-        PatchTypeWithLog(typeof(BigoniBrotherPatch), "BigoniBrotherPatch");
+            NoREroMod.Systems.UI.HellGateSplashScreen.PushEarlyBootItem("KakashGrabPatch");
+            _bootPatchesApplied++;
+        }
+        catch { }
+        yield return null;
+
+        BootPatch(typeof(GoblinPassLogic));
+        yield return null;
+        BootPatch(typeof(GoblinStruggleSpawnPatch));
+        yield return null; // HARDMODE: Spawn 2 goblins when escaping from START animation
+        BootPatchLogged(typeof(BigoniBrotherPatch), "BigoniBrotherPatch");
+        yield return null;
+
         try
         {
             BigoniBrotherGameOverBypass.Apply(harmony);
@@ -909,305 +1225,518 @@ public class Plugin : BaseUnityPlugin {
         {
             Log?.LogError("[PATCH] BigoniBrotherGameOverBypass FAILED: " + ex.Message);
         }
-        PatchTypeWithLog(typeof(BigoniBrotherPassLogic), "BigoniBrotherPassLogic");
-        PatchType(typeof(NoREroMod.Patches.Enemy.MafiaBossCustom.MafiaBossCustomStartPatch));
-        PatchType(typeof(NoREroMod.Patches.Enemy.MafiaBossCustom.MafiaBossCustomPassLogic));
-        PatchType(typeof(NoREroMod.Patches.Enemy.MafiaBossCustom.MafiaBossCustomEROPatches));
-        PatchType(typeof(NoREroMod.Patches.Enemy.MafiaBossCustom.MafiaBossCustomGrabPatch));
-        PatchType(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomStartPrefixPatch));
-        PatchType(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomStartPatch));
-        PatchType(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomStartHpScalePatch));
-        PatchType(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomUpdatePrefixPatch));
-        PatchType(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomUpdatePatch));
-        PatchType(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomDistanceCapPatch));
-        PatchType(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomRestePatch));
-        PatchType(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomDamagePatch));
-        PatchType(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomMagicDamagePatch));
-        PatchType(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomOnDestroyPatch));
-        PatchType(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomTreasurePatch));
-        PatchType(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomWallPatch));
-        PatchType(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomIntroPatches.BlockFlagCallPatch));
-        PatchType(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomIntroPatches.BlockFlagCallDialogPatch));
-        PatchType(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomIntroPatches.BlockFlagBossBattleStartPatch));
-        PatchType(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomIntroPatches.BlockNextPatch));
-        PatchType(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomIntroPatches.CustomDeathEventPatch));
-        PatchType(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomIntroPatches.BlockNoREroModSuperBossSpawnPatch));
-        PatchType(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomIntroPatches.BlockNoREroModBossHpMultiPatch));
-        PatchType(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomIntroPatches.BlockNoREroModSuperBossSpeedPatch));
-        PatchType(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomIntroPatches.BlockNoREroModSuperEnemySpeedPatch));
-        PatchType(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomIntroPatches.BlockNoREroModSuperResteColorPatch));
-        PatchType(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomCombatPatches.ForceDamageOnHitPatch));
-        PatchType(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomCombatPatches.ForceMagicDamageOnHitPatch));
-        PatchType(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomCombatPatches.BlockIntroAnimationPatch));
-        PatchType(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomCombatPatches.BlockAnimeKindDuringEroPatch));
-        PatchType(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomCombatPatches.GuardFieldMobStatePatch));
-        PatchType(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomCombatPatches.BlockBattleStartPatch));
-        PatchType(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomCombatPatches.BlockBossEnemyFovPatch));
-        PatchType(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomCombatPatches.BlockUpdateFovDirectPatch));
-        PatchType(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomCombatPatches.BlockDeathSlowMoPatch));
-        PatchType(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomEroStartSetPatch));
-        PatchType(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomEroAnimePatch));
-        PatchType(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomHSceneEscapeStrugglePatch));
-        PatchType(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomHSceneEscapeFunNowDamagePatch));
-        PatchType(typeof(DoreiPassLogic));
-        PatchType(typeof(MutudePassLogic));
-        PatchType(typeof(NoREroMod.Systems.GrabSystem.Patches.RangedDamageFlagPatches));
-        PatchType(typeof(NoREroMod.Systems.GrabSystem.Patches.MeleeAttackerContextPatches));
-        PatchType(typeof(NoREroMod.Systems.Audio.AttackSoundPatch));
-        PatchType(typeof(NoREroMod.Systems.Audio.DeathSoundPatch));
-        PatchType(typeof(NoREroMod.Systems.GrabSystem.Patches.GrabViaAttackPatch));
+        BootPatchLogged(typeof(BigoniBrotherPassLogic), "BigoniBrotherPassLogic");
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.MafiaBossCustom.MafiaBossCustomStartPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.MafiaBossCustom.MafiaBossCustomPassLogic));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.MafiaBossCustom.MafiaBossCustomEROPatches));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.MafiaBossCustom.MafiaBossCustomGrabPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomStartPrefixPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomStartPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomStartHpScalePatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomUpdatePrefixPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomUpdatePatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomDistanceCapPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomRestePatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomDamagePatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomMagicDamagePatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomOnDestroyPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomTreasurePatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomWallPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomIntroPatches.BlockFlagCallPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomIntroPatches.BlockFlagCallDialogPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomIntroPatches.BlockFlagBossBattleStartPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomIntroPatches.BlockNextPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomIntroPatches.CustomDeathEventPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomIntroPatches.BlockNoREroModSuperBossSpawnPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomIntroPatches.BlockNoREroModBossHpMultiPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomIntroPatches.BlockNoREroModSuperBossSpeedPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomIntroPatches.BlockNoREroModSuperEnemySpeedPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomIntroPatches.BlockNoREroModSuperResteColorPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomCombatPatches.ForceDamageOnHitPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomCombatPatches.ForceMagicDamageOnHitPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomCombatPatches.BlockIntroAnimationPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomCombatPatches.BlockAnimeKindDuringEroPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomCombatPatches.GuardFieldMobStatePatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomCombatPatches.BlockBattleStartPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomCombatPatches.BlockBossEnemyFovPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomCombatPatches.BlockUpdateFovDirectPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomCombatPatches.BlockDeathSlowMoPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomEroStartSetPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomEroAnimePatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomHSceneEscapeStrugglePatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.BossTouzokuCustom.BossTouzokuCustomHSceneEscapeFunNowDamagePatch));
+        yield return null;
+        BootPatch(typeof(DoreiPassLogic));
+        yield return null;
+        BootPatch(typeof(SlaveBigAxePassLogic));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.SlaveBigAxeMeatArmor.SlaveBigAxeMeatArmorRuntime));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.SlaveBigAxeMeatArmor.SlaveBigAxeMeatArmorSkeletonDataAssetPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.SlaveBigAxeIllusiveLoseHandoffPatch));
+        yield return null;
+        BootPatch(typeof(MutudePassLogic));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Systems.GrabSystem.Patches.RangedDamageFlagPatches));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Systems.GrabSystem.Patches.MeleeAttackerContextPatches));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Systems.Audio.AttackSoundPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Systems.Audio.DeathSoundPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Systems.GrabSystem.Patches.GrabViaAttackPatch));
+        yield return null;
         NoREroMod.Patches.Enemy.NoREroModEliteGrabDisablerPatch.Apply(harmony);
+        NoREroMod.Systems.Spawn.Patches.HellGateForceElitePatch.Apply(harmony);
+        NoREroMod.Patches.Enemy.BigSlaveAxeNorEroModPatch.Apply(harmony);
+        NoREroMod.Systems.DeadArmor.DeadArmorPatches.Apply(harmony);
+        NoREroMod.Systems.Costumes.CostumesPatches.Apply(harmony);
+        NoREroMod.Systems.EnemyFatality.EnemyFatalityPatches.Apply(harmony);
         NoREroMod.Systems.Gameplay.VengeanceStrikeNoGrabDuringStabPatch.Apply(harmony);
         NoREroMod.Systems.Rage.Patches.RageActiveImmunityPatch.ApplyCollisionGrabBlock(harmony);
-        PatchType(typeof(NoREroMod.Patches.Enemy.WolfModCustom.WolfSkeletonDataAssetPatch));
-        PatchType(typeof(NoREroMod.Patches.Enemy.RickEnemyModShared.RickEnemyModSkeletonDataAssetPatch));
-        PatchType(typeof(NoREroMod.Patches.Enemy.RickEnemyModShared.RickEnemyModFatalityIconInstantiatePatch));
-        PatchType(typeof(NoREroMod.Patches.Enemy.RickEnemyModShared.RickEnemyModSlaughtererFatalityIconPatch));
-        PatchType(typeof(NoREroMod.Patches.Enemy.HellishTouzokuModCustom.HellishTouzokuSkeletonDataAssetPatch));
-        PatchType(typeof(NoREroMod.Patches.Enemy.HellishTouzokuModCustom.HellishTouzokuHSceneEscapeStrugglePatch));
-        PatchType(typeof(NoREroMod.Patches.Enemy.HellishTouzokuModCustom.HellishTouzokuHSceneEscapeFunNowDamagePatch));
-        PatchType(typeof(NoREroMod.Patches.Enemy.HellishTouzokuModCustom.HellishTouzokuHSceneEscapeGiveUpPatch));
-        PatchType(typeof(NoREroMod.Patches.Enemy.DoreiModCustom.DoreiSkeletonDataAssetPatch));
-        PatchType(typeof(NoREroMod.Patches.Enemy.DoreiModCustom.DoreiSpectatorIdlePatch));
-        PatchType(typeof(TimeScaleResetOnEscapePatch));
-        PatchType(typeof(PlayerHitBloodCleanupPatch));
-        PatchType(typeof(StruggleInvulnPatch));
-        PatchType(typeof(StruggleEscapeCombatRecoveryPatch));
-        PatchType(typeof(EnemyLibraryEroStatusGuardPatches));
-        PatchType(typeof(VanillaKnockdownRecoveryPatch));
-        PatchType(typeof(PregnancyBirthGuardPatch.BirthPostfix));
-        PatchType(typeof(PregnancyBirthGuardPatch.BirthstartPostfix));
-        PatchType(typeof(PregnancyBirthGuardPatch.Birthstart2Postfix));
-        PatchType(typeof(PregnancyBirthGuardPatch.EroresetPrefix));
-        PatchType(typeof(PregnancyBirthGuardPatch.EroresetPostfix));
-        PatchType(typeof(PregnancyBirthGuardPatch.Eroreset2Prefix));
-        PatchType(typeof(PregnancyBirthGuardPatch.Eroreset2Postfix));
-        PatchType(typeof(BirthRecoveryJigoPatch.BirthMonsterJigoPostfix));
-        PatchType(typeof(BirthRecoveryJigoPatch.BirthMonsterSecondJigoPostfix));
-        PatchType(typeof(BirthRecoveryStandGuardPatch));
-        PatchType(typeof(NoREroMod.Patches.Trap.TrapdataHSceneEscapeFunNowDamagePatch));
-        PatchType(typeof(NoREroMod.Patches.Trap.TrapdataHSceneEscapeGiveUpPatch));
-        PatchType(typeof(GuardParryMindBrokenPatch));
-        PatchType(typeof(NoREroMod.Systems.Gameplay.AirGuardGuardFunPatch));
-        PatchType(typeof(NoREroMod.Systems.Gameplay.AirGuardAnimeFunPatch));
-        PatchType(typeof(NoREroMod.Systems.Gameplay.EnemyConstantVisibilityPatch));
-        PatchType(typeof(PlayerConQTE3RestartPatch));
-        PatchType(typeof(PlayerConQTE3GiveUpPatch));
-        PatchType(typeof(NoREroMod.Patches.Player.PlayerConUpdateDispatcher));
-        PatchTypeWithLog(typeof(NoREroMod.Patches.Player.StrugglePotionPrepareFunNowdamagePatch), "StrugglePotionNorCompat");
-        PatchTypeWithLog(typeof(NoREroMod.Patches.Player.StrugglePotionBlockVanillaItemUsePatch), "StrugglePotionBlockItemUse");
-        PatchType(typeof(NoREroMod.Systems.Gameplay.VengeanceStrikeStabSoundPatch));
-        PatchType(typeof(NoREroMod.Systems.Gameplay.VengeanceStrikeStabPresentationPatch));
-        PatchType(typeof(NoREroMod.Systems.Gameplay.VengeanceStrikePlayerUpdatePatch));
-        PatchType(typeof(NoREroMod.Systems.Gameplay.VengeanceStrikeHandsPatch));
-        PatchType(typeof(BadstatusUiPatch));
-        PatchType(typeof(MindBrokenSystem));
-        PatchType(typeof(MindBrokenUIPatch));
-        PatchType(typeof(NoREroMod.Patches.UI.MindBroken.CorruptionCaptionsSystem));
-        PatchType(typeof(NoREroMod.Patches.UI.MindBroken.MindBrokenRecoverySystem));
-        PatchType(typeof(NoREroMod.Patches.UI.MindBroken.MindBrokenVisualEffectsSystem));
-        PatchType(typeof(NoREroMod.Patches.UI.MindBroken.MutudeMindbrokenControl));
-        PatchType(typeof(NoREroMod.Patches.UI.MindBroken.InquisitionWhiteMindbrokenControl));
-        PatchType(typeof(NoREroMod.Patches.UI.MindBroken.CrowInquisitionMindbrokenControl));
-        PatchType(typeof(NoREroMod.Patches.UI.MindBroken.PilgrimMindbrokenControl));
+        BootPatch(typeof(NoREroMod.Patches.Enemy.WolfModCustom.WolfSkeletonDataAssetPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.RickEnemyModShared.RickEnemyModSkeletonDataAssetPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.RickEnemyModShared.RickEnemyModFatalityIconInstantiatePatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.RickEnemyModShared.RickEnemyModSlaughtererFatalityIconPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.HellishTouzokuModCustom.HellishTouzokuSkeletonDataAssetPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.HellishTouzokuModCustom.HellishTouzokuHSceneEscapeStrugglePatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.HellishTouzokuModCustom.HellishTouzokuHSceneEscapeFunNowDamagePatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.HellishTouzokuModCustom.HellishTouzokuHSceneEscapeGiveUpPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.DemonGorotukiModCustom.DemonGorotukiSkeletonDataAssetPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.DoreiModCustom.DoreiSkeletonDataAssetPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.DoreiModCustom.DoreiSpectatorIdlePatch));
+        yield return null;
+        BootPatch(typeof(TimeScaleResetOnEscapePatch));
+        yield return null;
+        BootPatch(typeof(PlayerHitBloodCleanupPatch));
+        yield return null;
+        BootPatch(typeof(StruggleInvulnPatch));
+        yield return null;
+        BootPatch(typeof(StruggleEscapeCombatRecoveryPatch));
+        yield return null;
+        BootPatch(typeof(EnemyLibraryEroStatusGuardPatches));
+        yield return null;
+        BootPatch(typeof(VanillaKnockdownRecoveryPatch));
+        yield return null;
+        BootPatch(typeof(PregnancyBirthGuardPatch.BirthPostfix));
+        yield return null;
+        BootPatch(typeof(PregnancyBirthGuardPatch.BirthstartPostfix));
+        yield return null;
+        BootPatch(typeof(PregnancyBirthGuardPatch.Birthstart2Postfix));
+        yield return null;
+        BootPatch(typeof(PregnancyBirthGuardPatch.EroresetPrefix));
+        yield return null;
+        BootPatch(typeof(PregnancyBirthGuardPatch.EroresetPostfix));
+        yield return null;
+        BootPatch(typeof(PregnancyBirthGuardPatch.Eroreset2Prefix));
+        yield return null;
+        BootPatch(typeof(PregnancyBirthGuardPatch.Eroreset2Postfix));
+        yield return null;
+        BootPatch(typeof(BirthRecoveryJigoPatch.BirthMonsterJigoPostfix));
+        yield return null;
+        BootPatch(typeof(BirthRecoveryJigoPatch.BirthMonsterSecondJigoPostfix));
+        yield return null;
+        BootPatch(typeof(BirthRecoveryStandGuardPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Trap.TrapdataStruggleMaxSpEscapePostfix));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Trap.TrapdataHSceneEscapeStrugglePatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Trap.TrapdataHSceneEscapeFunNowDamagePatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Trap.TrapdataHSceneEscapeGiveUpPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Trap.AngelStatueTrapGrabInvulPatch));
+        BootPatch(typeof(NoREroMod.Patches.Trap.BlackOozetrapGrabInvulPatch));
+        BootPatch(typeof(NoREroMod.Patches.Trap.BlackOozeTrapTypeBGrabInvulPatch));
+        yield return null;
+        BootPatch(typeof(GuardParryMindBrokenPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Systems.Gameplay.AirGuardGuardFunPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Systems.Gameplay.AirGuardAnimeFunPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Systems.Gameplay.EnemyConstantVisibilityPatch));
+        yield return null;
+        BootPatch(typeof(PlayerConQTE3RestartPatch));
+        yield return null;
+        BootPatch(typeof(PlayerConQTE3GiveUpPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Player.PlayerConUpdateDispatcher));
+        yield return null;
+        BootPatchLogged(typeof(NoREroMod.Patches.Player.StrugglePotionPrepareFunNowdamagePatch), "StrugglePotionNorCompat");
+        yield return null;
+        BootPatchLogged(typeof(NoREroMod.Patches.Player.StrugglePotionBlockVanillaItemUsePatch), "StrugglePotionBlockItemUse");
+        yield return null;
+        BootPatch(typeof(NoREroMod.Systems.Gameplay.VengeanceStrikeStabSoundPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Systems.Gameplay.VengeanceStrikeStabPresentationPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Systems.Gameplay.VengeanceStrikePlayerUpdatePatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Systems.Gameplay.VengeanceStrikeHandsPatch));
+        yield return null;
+        BootPatch(typeof(BadstatusUiPatch));
+        yield return null;
+        BootPatch(typeof(MindBrokenSystem));
+        yield return null;
+        BootPatch(typeof(MindBrokenUIPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.UI.MindBroken.CorruptionCaptionsSystem));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.UI.MindBroken.MindBrokenRecoverySystem));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.UI.MindBroken.MindBrokenVisualEffectsSystem));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.UI.MindBroken.MutudeMindbrokenControl));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.UI.MindBroken.InquisitionWhiteMindbrokenControl));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.UI.MindBroken.CrowInquisitionMindbrokenControl));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.UI.MindBroken.PilgrimMindbrokenControl));
+        yield return null;
         // H_scenesAllEnemiesCorruption is invoked from PlayerConUpdateDispatcher
-        PatchType(typeof(NoREroMod.Patches.UI.MindBroken.EnemyKillRecoveryPatch)); // Legacy patch for specific enemies
-        PatchType(typeof(NoREroMod.Patches.UI.MindBroken.MindBrokenUniversalKillRecoveryPatch)); // Universal patch for ALL enemies
-        PatchType(typeof(NoREroMod.Systems.Dialogue.GrabThreatIdlePatch)); // Animation-based: threat on IDLE transition
-        PatchType(typeof(NoREroMod.Systems.Rage.RageSystem));
-        PatchType(typeof(NoREroMod.Systems.Rage.RageUISystem));
+        BootPatch(typeof(NoREroMod.Patches.UI.MindBroken.EnemyKillRecoveryPatch));
+        yield return null; // Legacy patch for specific enemies
+        BootPatch(typeof(NoREroMod.Patches.UI.MindBroken.MindBrokenUniversalKillRecoveryPatch));
+        yield return null; // Universal patch for ALL enemies
+        BootPatch(typeof(NoREroMod.Systems.Dialogue.GrabThreatIdlePatch));
+        yield return null; // Animation-based: threat on IDLE transition
+        BootPatch(typeof(NoREroMod.Systems.Rage.RageSystem));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Systems.Rage.RageUISystem));
+        yield return null;
         // Use only the universal kill tracker to avoid duplicate kill registration.
-        PatchType(typeof(NoREroMod.Systems.Rage.Patches.RageUniversalKillTrackerPatch));
-        PatchType(typeof(NoREroMod.Systems.Rage.Patches.RageResetOnGrabDownPatch));
-        PatchType(typeof(NoREroMod.Systems.Rage.Patches.RageHitTrackerPatch));
-        PatchType(typeof(NoREroMod.Systems.Rage.Patches.RageActiveImmunityPatch));
-        PatchType(typeof(NoREroMod.Systems.Gameplay.WeaponAnimations.WitchFineGreatswordPatch));
-        PatchType(typeof(NoREroMod.Systems.Gameplay.WeaponAnimations.LightOneHand3HitExtendedComboEquipPatch));
-        PatchType(typeof(NoREroMod.Systems.Gameplay.WeaponAnimations.WitchExtendedGroundSwordComboPatch));
-        PatchType(typeof(NoREroMod.Systems.Rage.RageComboUISystemPatches));
-        PatchType(typeof(NoREroMod.Systems.Effects.HSceneBlackBackgroundTriggerPatch));
-        PatchType(typeof(NoREroMod.Patches.Effects.PregnancyClipTrigger));
-        PatchType(typeof(NoREroMod.Systems.PlayerRespawn.VengeanceRespawnEffectPatch));
-        PatchType(typeof(NoREroMod.Systems.PlayerRespawn.PlayerDeathSoulRestartMenuPatch));
-        PatchType(typeof(NoREroMod.Patches.Trap.BlackOozeTrapDiagnosticsPatch));
-        PatchType(typeof(NoREroMod.Patches.Trap.TrapHSceneMosaicDisablePatch));
+        BootPatch(typeof(NoREroMod.Systems.Rage.Patches.RageUniversalKillTrackerPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Systems.Rage.Patches.RageResetOnGrabDownPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Systems.Rage.Patches.RageHitTrackerPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Systems.Rage.Patches.RageActiveImmunityPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Systems.Gameplay.WeaponAnimations.WitchFineGreatswordPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Systems.Gameplay.WeaponAnimations.LightOneHand3HitExtendedComboEquipPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Systems.Gameplay.WeaponAnimations.WitchExtendedGroundSwordComboPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Systems.Rage.RageComboUISystemPatches));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Systems.Effects.HSceneBlackBackgroundTriggerPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Effects.PregnancyClipTrigger));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Systems.PlayerRespawn.VengeanceRespawnEffectPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Systems.PlayerRespawn.PlayerDeathSoulRestartMenuPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Trap.BlackOozeTrapDiagnosticsPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Trap.TrapHSceneMosaicDisablePatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.GorotukiHSceneMosaicDisablePatch));
+        yield return null;
+
         try
         {
             NoREroMod.Patches.HellTraps.LethalMagicTrapPatches.ApplyPatches(harmony);
             NoREroMod.Patches.HellTraps.LethalCocoonTrapPatches.ApplyPatches(harmony);
-            if (enableLethalMagicTrap.Value || enableLethalCocoonTrap.Value)
+            NoREroMod.Patches.HellTraps.LethalLightningTrapPatches.ApplyPatches(harmony);
+            if (enableLethalMagicTrap.Value || enableLethalCocoonTrap.Value || enableLethalLightningTrap.Value)
+            {
                 harmony.PatchAll(typeof(NoREroMod.Patches.HellTraps.LethalTrapDeathFlagCleanupPatch));
+                NoREroMod.Systems.UI.HellGateSplashScreen.PushEarlyBootItem("LethalTrapDeathFlagCleanupPatch");
+                _bootPatchesApplied++;
+            }
         }
         catch (Exception ex)
         {
             Log?.LogWarning("[LethalMagicTrap] Harmony patch setup failed: " + ex.Message);
         }
-        PatchType(typeof(NoREroMod.Systems.CombatAi.Patches.EnemyDateDistanceFunPatch)); // Combat AI: react when player close (HellGateJson/CombatAi)
-        PatchType(typeof(NoREroMod.Systems.CombatAi.Patches.EnemyDateOndamageSendPatch)); // Combat AI: react to combo — boost dodge chance (HellGateJson/CombatAi)
-        PatchType(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.EnemyDateFactionBootstrapPatch)); // Enemy Factions: isolated bootstrap (HellGateJson/CombatAi/Factions.json)
-        PatchType(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.EnemyDateFactionDistancePatch)); // Enemy Factions: retarget to hostile faction
-        PatchType(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.EnemyDateFactionUpdateSustainPatch)); // Enemy Factions: sustain approach after vanilla idle gate
-        PatchType(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.EnemyDateFactionVisionOverridePatch)); // Enemy Factions: relation-based player vision override
-        PatchType(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.EnemyDateFactionFovCompatPatch)); // Enemy Factions: keep NoREroMod FOV alpha off faked distance
-        PatchType(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.EnemyDateFactionIgnorePlayerDamageColPatch)); // Enemy Factions: bandits ignore player damage collider
-        PatchType(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.EnemyDateFactionPlayerProvocationPatch)); // Enemy Factions: become hostile to player after provocation
-        PatchType(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.PlayerAvoidedAttackTriggerImprovedPatch)); // Enemy Factions: trigger deescalation roll on dash-avoid
-        PatchType(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.PlayerAvoidedAttackTriggerLegacyPatch)); // Enemy Factions: trigger deescalation roll on legacy damage path
-        PatchType(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.FactionArrowOwnerPatch)); // Enemy Factions: tag Arrow projectiles with attacker EnemyDate
-        PatchType(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.FactionArrowHitPatch)); // Enemy Factions: Arrow damages hostile enemy hurtboxes
-        PatchType(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.FactionFallBulletOwnerPatch)); // Enemy Factions: tag fallBullet with attacker EnemyDate
-        PatchType(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.FactionFallBulletHitPatch)); // Enemy Factions: fallBullet damages hostile enemy hurtboxes
-        PatchType(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.FactionLightMagicOwnerPatch)); // Enemy Factions: tag LightMagic (Sister/CrawlingSister bolt) with attacker EnemyDate
-        PatchType(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.FactionLightMagicHitPatch)); // Enemy Factions: LightMagic damages hostile enemy hurtboxes
-        PatchType(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.EnemyDateFactionColorBootstrapPatch)); // Enemy Factions: apply faction marker visuals
-        PatchType(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.EnemyDateFactionColorAnimePatch)); // Enemy Factions: keep marker after animation state updates
-        PatchType(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.EnemyDateFactionColorResetPatch)); // Enemy Factions: keep marker after reset
-        PatchType(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.EnemyDateFactionCleanupPatch)); // Enemy Factions: runtime cleanup
-        PatchType(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.FactionReputationHudBootstrapPatch)); // Enemy Factions: create player reputation HUD on UI start
-        PatchType(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.FactionReputationHudBadstatusBootstrapPatch)); // Enemy Factions: keep reputation HUD across scenes
-        PatchType(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.PlayerFactionReputationSaveHookPatch)); // Enemy Factions: flush reputation JSON on save
-        PatchType(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.PlayerFactionReputationLoadHookPatch)); // Enemy Factions: reload reputation JSON on load
-        PatchType(typeof(NoREroMod.Systems.EventCore.Core.EventCorePlayerAttackInputBlockPatch)); // EventCore: suppress left-click attack input during modal freeze
-        PatchType(typeof(NoREroMod.Patches.Player.VanillaStoryEventCombatStatePrefixPatch));
-        PatchType(typeof(NoREroMod.Patches.Player.VanillaStoryEventCombatInputBlockPatch));
-        PatchType(typeof(NoREroMod.Patches.Player.VanillaStoryEventAtkFunBlockPatch));
-        PatchType(typeof(NoREroMod.Patches.Player.VanillaStoryEventAirAtkFunBlockPatch));
-        PatchType(typeof(NoREroMod.Patches.Player.VanillaStoryEventChargeAtkBlockPatch));
-        PatchType(typeof(NoREroMod.Systems.Rage.Patches.RageMindBrokenSaveHookPatch)); // Rage + MindBroken JSON on save
-        PatchType(typeof(NoREroMod.Systems.Rage.Patches.RageMindBrokenLoadHookPatch)); // Rage + MindBroken JSON on load
+        yield return null;
+        BootPatch(typeof(NoREroMod.Systems.CombatAi.Patches.EnemyDateDistanceFunPatch));
+        yield return null; // Combat AI: react when player close (HellGateJson/CombatAi)
+        BootPatch(typeof(NoREroMod.Systems.CombatAi.Patches.EnemyDateOndamageSendPatch));
+        yield return null; // Combat AI: react to combo — boost dodge chance (HellGateJson/CombatAi)
+        BootPatch(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.EnemyDateFactionBootstrapPatch));
+        yield return null; // Enemy Factions: isolated bootstrap (HellGateJson/CombatAi/Factions.json)
+        BootPatch(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.EnemyDateFactionDistancePatch));
+        yield return null; // Enemy Factions: retarget to hostile faction
+        BootPatch(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.EnemyDateFactionUpdateSustainPatch));
+        yield return null; // Enemy Factions: sustain approach after vanilla idle gate
+        BootPatch(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.EnemyDateFactionVisionOverridePatch));
+        yield return null; // Enemy Factions: relation-based player vision override
+        BootPatch(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.EnemyDateFactionFovCompatPatch));
+        yield return null; // Enemy Factions: keep NoREroMod FOV alpha off faked distance
+        BootPatch(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.EnemyDateFactionIgnorePlayerDamageColPatch));
+        yield return null; // Enemy Factions: bandits ignore player damage collider
+        BootPatch(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.EnemyDateFactionPlayerProvocationPatch));
+        yield return null; // Enemy Factions: become hostile to player after provocation
+        BootPatch(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.PlayerAvoidedAttackTriggerImprovedPatch));
+        yield return null; // Enemy Factions: trigger deescalation roll on dash-avoid
+        BootPatch(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.PlayerAvoidedAttackTriggerLegacyPatch));
+        yield return null; // Enemy Factions: trigger deescalation roll on legacy damage path
+        BootPatch(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.FactionArrowOwnerPatch));
+        yield return null; // Enemy Factions: tag Arrow projectiles with attacker EnemyDate
+        BootPatch(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.FactionArrowHitPatch));
+        yield return null; // Enemy Factions: Arrow damages hostile enemy hurtboxes
+        BootPatch(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.FactionFallBulletOwnerPatch));
+        yield return null; // Enemy Factions: tag fallBullet with attacker EnemyDate
+        BootPatch(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.FactionFallBulletHitPatch));
+        yield return null; // Enemy Factions: fallBullet damages hostile enemy hurtboxes
+        BootPatch(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.FactionLightMagicOwnerPatch));
+        yield return null; // Enemy Factions: tag LightMagic (Sister/CrawlingSister bolt) with attacker EnemyDate
+        BootPatch(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.FactionLightMagicHitPatch));
+        yield return null; // Enemy Factions: LightMagic damages hostile enemy hurtboxes
+        BootPatch(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.EnemyDateFactionColorBootstrapPatch));
+        yield return null; // Enemy Factions: apply faction marker visuals
+        BootPatch(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.EnemyDateFactionColorAnimePatch));
+        yield return null; // Enemy Factions: keep marker after animation state updates
+        BootPatch(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.EnemyDateFactionColorResetPatch));
+        yield return null; // Enemy Factions: keep marker after reset
+        BootPatch(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.EnemyDateFactionCleanupPatch));
+        yield return null; // Enemy Factions: runtime cleanup
+        BootPatch(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.FactionReputationHudBootstrapPatch));
+        yield return null; // Enemy Factions: create player reputation HUD on UI start
+        BootPatch(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.FactionReputationHudBadstatusBootstrapPatch));
+        yield return null; // Enemy Factions: keep reputation HUD across scenes
+        BootPatch(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.PlayerFactionReputationSaveHookPatch));
+        yield return null; // Enemy Factions: flush reputation JSON on save
+        BootPatch(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.PlayerFactionReputationLoadHookPatch));
+        yield return null; // Enemy Factions: reload reputation JSON on load
+        BootPatch(typeof(NoREroMod.Systems.EventCore.Core.EventCorePlayerAttackInputBlockPatch));
+        yield return null; // EventCore: suppress left-click attack input during modal freeze
+        BootPatch(typeof(NoREroMod.Patches.Player.VanillaStoryEventCombatStatePrefixPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Player.VanillaStoryEventCombatInputBlockPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Player.VanillaStoryEventAtkFunBlockPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Player.VanillaStoryEventAirAtkFunBlockPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Player.VanillaStoryEventChargeAtkBlockPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Systems.Rage.Patches.RageMindBrokenSaveHookPatch));
+        yield return null; // Rage + MindBroken JSON on save
+        BootPatch(typeof(NoREroMod.Systems.Rage.Patches.RageMindBrokenLoadHookPatch));
+        yield return null; // Rage + MindBroken JSON on load
 
         // Tentacle H-scene diagnostics (off by default; gated by JSON Enable inside each postfix).
-        PatchType(typeof(NoREroMod.Systems.Diagnostics.Tentacle.TentacleDiagnosticsLifecyclePatches));
+        BootPatch(typeof(NoREroMod.Systems.Diagnostics.Tentacle.TentacleDiagnosticsLifecyclePatches));
+        yield return null;
         // Trap player-body / camera diagnostics (off by default; JSON Enable).
-        PatchType(typeof(NoREroMod.Systems.Diagnostics.TrapBody.TrapPlayerBodyLifecyclePatches));
+        BootPatch(typeof(NoREroMod.Systems.Diagnostics.TrapBody.TrapPlayerBodyLifecyclePatches));
+        yield return null;
         // Kinoko / MushroomERO OnEvent diagnostics (JSON Enable).
-        PatchType(typeof(NoREroMod.Systems.Diagnostics.Kinoko.KinokoMushroomEroLifecyclePatches));
+        BootPatch(typeof(NoREroMod.Systems.Diagnostics.Kinoko.KinokoMushroomEroLifecyclePatches));
+        yield return null;
 
         // Economic / Gold module (HellGateJson/Economic/Economy.json + GoldDropTable.json)
         if (NoREroMod.Systems.Economy.EconomicConfig.Enable) {
-            PatchType(typeof(NoREroMod.Systems.Economy.Patches.EnemyDeathGoldDropPatch));   // gold drop on enemy death
-            PatchType(typeof(NoREroMod.Systems.Economy.Patches.PlayerDeathGoldDropPatch));  // souls-style on player death
-            PatchType(typeof(NoREroMod.Systems.Economy.Patches.PlayerCombatGoldLossLegacyPatch));
-            PatchType(typeof(NoREroMod.Systems.Economy.Patches.PlayerCombatGoldLossImprovedPatch));
-            PatchType(typeof(NoREroMod.Systems.Economy.Patches.PlayerRespawnGoldArmPatch)); // re-arm death idempotency on respawn
-            PatchType(typeof(NoREroMod.Systems.Economy.Patches.GoldWalletSaveHookPatch));   // flush wallet JSON on save
-            PatchType(typeof(NoREroMod.Systems.Economy.Patches.GoldWalletLoadHookPatch));   // reload wallet JSON on load
-            PatchType(typeof(NoREroMod.Systems.Economy.Patches.GoldHudBootstrapPatch));     // create HUD on UImng.Start
-            PatchType(typeof(NoREroMod.Systems.Economy.Patches.GoldHudBadstatusBootstrapPatch)); // re-create HUD on bad-status canvas reload
+            BootPatch(typeof(NoREroMod.Systems.Economy.Patches.EnemyDeathGoldDropPatch));
+            yield return null;   // gold drop on enemy death
+            BootPatch(typeof(NoREroMod.Systems.Economy.Patches.PlayerDeathGoldDropPatch));
+            yield return null;  // souls-style on player death
+            BootPatch(typeof(NoREroMod.Systems.Economy.Patches.PlayerCombatGoldLossLegacyPatch));
+            yield return null;
+            BootPatch(typeof(NoREroMod.Systems.Economy.Patches.PlayerCombatGoldLossImprovedPatch));
+            yield return null;
+            BootPatch(typeof(NoREroMod.Systems.Economy.Patches.PlayerRespawnGoldArmPatch));
+            yield return null; // re-arm death idempotency on respawn
+            BootPatch(typeof(NoREroMod.Systems.Economy.Patches.GoldWalletSaveHookPatch));
+            yield return null;   // flush wallet JSON on save
+            BootPatch(typeof(NoREroMod.Systems.Economy.Patches.GoldWalletLoadHookPatch));
+            yield return null;   // reload wallet JSON on load
+            BootPatch(typeof(NoREroMod.Systems.Economy.Patches.GoldHudBootstrapPatch));
+            yield return null;     // create HUD on UImng.Start
+            BootPatch(typeof(NoREroMod.Systems.Economy.Patches.GoldHudBadstatusBootstrapPatch));
+            yield return null; // re-create HUD on bad-status canvas reload
         }
         // Pregnancy module (Phase 1, Milestone 1): milliliter womb meter on EnemyDate.Nakadasi + HUD.
         if (NoREroMod.Systems.Pregnancy.PregnancyConfig.Enable != null &&
             NoREroMod.Systems.Pregnancy.PregnancyConfig.Enable.Value) {
-            try {
-                PatchType(typeof(NoREroMod.Systems.Pregnancy.Patches.PregnancyPartnerTrackerPatch));
+
+                BootPatch(typeof(NoREroMod.Systems.Pregnancy.Patches.PregnancyPartnerTrackerPatch));
+                yield return null;
                 Log?.LogInfo("[Pregnancy] Patched EnemyDate.Nakadasi (tracker)");
-            } catch (Exception ex) { Log?.LogWarning($"[Pregnancy] Tracker patch failed: {ex.Message}"); }
+            
 
-            try {
-                PatchType(typeof(NoREroMod.Systems.Pregnancy.Patches.EroTouzokuAxePregnancyPatch));
+                BootPatch(typeof(NoREroMod.Systems.Pregnancy.Patches.EroTouzokuAxePregnancyPatch));
+                yield return null;
                 Log?.LogInfo("[Pregnancy] Patched EroTouzokuAXE.OnEvent");
-            } catch (Exception ex) { Log?.LogWarning($"[Pregnancy] EroTouzokuAXE patch failed: {ex.Message}"); }
-            try {
-                PatchType(typeof(NoREroMod.Systems.Pregnancy.Patches.MushroomEroPregnancyPatch));
+            
+                BootPatch(typeof(NoREroMod.Systems.Pregnancy.Patches.MushroomEroPregnancyPatch));
+                yield return null;
                 Log?.LogInfo("[Pregnancy] Patched MushroomERO.OnEvent (Kinoko FIN Nakadasi recover)");
-            } catch (Exception ex) { Log?.LogWarning($"[Pregnancy] MushroomERO pregnancy patch failed: {ex.Message}"); }
-            try {
-                PatchType(typeof(NoREroMod.Systems.Pregnancy.Patches.WhiteFadeInNullSafePatch));
+            
+                BootPatch(typeof(NoREroMod.Systems.Pregnancy.Patches.WhiteFadeInNullSafePatch));
+                yield return null;
                 Log?.LogInfo("[Pregnancy] Patched UImngPatch.WhiteFadeIn (null-safe under black BG)");
-            } catch (Exception ex) { Log?.LogWarning($"[Pregnancy] WhiteFadeIn null-safe patch failed: {ex.Message}"); }
+            
 
-            try {
-                PatchType(typeof(NoREroMod.Systems.Pregnancy.Patches.WombMeterHudBootstrapPatch));
+                BootPatch(typeof(NoREroMod.Systems.Pregnancy.Patches.WombMeterHudBootstrapPatch));
+                yield return null;
                 Log?.LogInfo("[Pregnancy] Patched WombMeterHudBootstrap");
-            } catch (Exception ex) { Log?.LogWarning($"[Pregnancy] HUD bootstrap patch failed: {ex.Message}"); }
+            
 
-            try {
-                PatchType(typeof(NoREroMod.Systems.Pregnancy.Patches.WombMeterHudBadstatusBootstrapPatch));
+                BootPatch(typeof(NoREroMod.Systems.Pregnancy.Patches.WombMeterHudBadstatusBootstrapPatch));
+                yield return null;
                 Log?.LogInfo("[Pregnancy] Patched WombMeterHudBadstatusBootstrap");
-            } catch (Exception ex) { Log?.LogWarning($"[Pregnancy] HUD badstatus patch failed: {ex.Message}"); }
+            
 
-            try {
-                PatchType(typeof(NoREroMod.Systems.Pregnancy.Patches.SuppressVanillaCreampieValUiPatch));
+                BootPatch(typeof(NoREroMod.Systems.Pregnancy.Patches.SuppressVanillaCreampieValUiPatch));
+                yield return null;
                 Log?.LogInfo("[Pregnancy] Patched SuppressVanillaCreampieValUi");
-            } catch (Exception ex) { Log?.LogWarning($"[Pregnancy] Suppress creampie UI patch failed: {ex.Message}"); }
+            
 
-            try {
-                PatchType(typeof(NoREroMod.Systems.Pregnancy.Patches.SuppressVanillaCreampieTimePatch));
+                BootPatch(typeof(NoREroMod.Systems.Pregnancy.Patches.SuppressVanillaCreampieTimePatch));
+                yield return null;
                 Log?.LogInfo("[Pregnancy] Patched SuppressVanillaCreampieTime");
-            } catch (Exception ex) { Log?.LogWarning($"[Pregnancy] Suppress creampie time patch failed: {ex.Message}"); }
+            
 
-            try {
-                PatchType(typeof(NoREroMod.Systems.Pregnancy.Patches.SuppressVanillaPregnancyTimePatch));
+                BootPatch(typeof(NoREroMod.Systems.Pregnancy.Patches.SuppressVanillaPregnancyTimePatch));
+                yield return null;
                 Log?.LogInfo("[Pregnancy] Patched SuppressVanillaPregnancyTime (custom trimester timer)");
-            } catch (Exception ex) { Log?.LogWarning($"[Pregnancy] Suppress pregnancy time patch failed: {ex.Message}"); }
+            
 
-            try {
-                PatchType(typeof(NoREroMod.Systems.Pregnancy.Patches.TrimesterPhysicsPatch.BlockDashInThirdTrimesterPatch));
-                PatchType(typeof(NoREroMod.Systems.Pregnancy.Patches.TrimesterPhysicsPatch.ThirdTrimesterJumpHeightPatch));
-                PatchType(typeof(NoREroMod.Systems.Pregnancy.Patches.TrimesterPhysicsPatch.TrimesterMoveSpeedPatch));
+                BootPatch(typeof(NoREroMod.Systems.Pregnancy.Patches.TrimesterPhysicsPatch.BlockDashInThirdTrimesterPatch));
+                yield return null;
+                BootPatch(typeof(NoREroMod.Systems.Pregnancy.Patches.TrimesterPhysicsPatch.ThirdTrimesterJumpHeightPatch));
+                yield return null;
+                BootPatch(typeof(NoREroMod.Systems.Pregnancy.Patches.TrimesterPhysicsPatch.TrimesterMoveSpeedPatch));
+                yield return null;
                 Log?.LogInfo("[Pregnancy] Patched trimester physics (dash / jump / movespeed)");
-            } catch (Exception ex) { Log?.LogWarning($"[Pregnancy] Trimester physics patch failed: {ex.Message}"); }
+            
 
-            try {
-                PatchType(typeof(NoREroMod.Systems.Pregnancy.Patches.FactionModifierPatches.PlayerStatusAllStrPatch));
-                PatchType(typeof(NoREroMod.Systems.Pregnancy.Patches.FactionModifierPatches.PlayerStatusAllIntPatch));
-                PatchType(typeof(NoREroMod.Systems.Pregnancy.Patches.FactionModifierPatches.PlayerStatusAllDexPatch));
-                PatchType(typeof(NoREroMod.Systems.Pregnancy.Patches.FactionModifierPatches.PlayerStatusAllLuckPatch));
-                PatchType(typeof(NoREroMod.Systems.Pregnancy.Patches.FactionModifierPatches.PlayerStatusAllToughPatch));
+                BootPatch(typeof(NoREroMod.Systems.Pregnancy.Patches.FactionModifierPatches.PlayerStatusAllStrPatch));
+                yield return null;
+                BootPatch(typeof(NoREroMod.Systems.Pregnancy.Patches.FactionModifierPatches.PlayerStatusAllIntPatch));
+                yield return null;
+                BootPatch(typeof(NoREroMod.Systems.Pregnancy.Patches.FactionModifierPatches.PlayerStatusAllDexPatch));
+                yield return null;
+                BootPatch(typeof(NoREroMod.Systems.Pregnancy.Patches.FactionModifierPatches.PlayerStatusAllLuckPatch));
+                yield return null;
+                BootPatch(typeof(NoREroMod.Systems.Pregnancy.Patches.FactionModifierPatches.PlayerStatusAllToughPatch));
+                yield return null;
                 Log?.LogInfo("[Pregnancy] Patched bloodline + trimester stat modifiers (STR/INT/DEX/LUCK/STA)");
-            } catch (Exception ex) { Log?.LogWarning($"[Pregnancy] Faction stat modifier patch failed: {ex.Message}"); }
+            
 
-            try {
-                PatchType(typeof(NoREroMod.Systems.Pregnancy.SemenValueMultiplier.EnemyDateNakadasiMultiplierPatch));
-                PatchType(typeof(NoREroMod.Systems.Pregnancy.SemenValueMultiplier.TrapdataNakadasiMultiplierPatch));
+                BootPatch(typeof(NoREroMod.Systems.Pregnancy.SemenValueMultiplier.EnemyDateNakadasiMultiplierPatch));
+                yield return null;
+                BootPatch(typeof(NoREroMod.Systems.Pregnancy.SemenValueMultiplier.TrapdataNakadasiMultiplierPatch));
+                yield return null;
                 Log?.LogInfo("[Pregnancy] Patched Nakadasi semen value multiplier");
-            } catch (Exception ex) { Log?.LogWarning($"[Pregnancy] Semen value multiplier patch failed: {ex.Message}"); }
+            
 
-            try {
-                PatchType(typeof(NoREroMod.Systems.Pregnancy.Patches.PregnancySaveHookPatch));
+                BootPatch(typeof(NoREroMod.Systems.Pregnancy.Patches.PregnancySaveHookPatch));
+                yield return null;
                 Log?.LogInfo("[Pregnancy] Patched save hook (hideout persistence)");
-            } catch (Exception ex) { Log?.LogWarning($"[Pregnancy] Save hook patch failed: {ex.Message}"); }
+            
 
-            try {
-                PatchType(typeof(NoREroMod.Systems.Pregnancy.Patches.PregnancyLoadHookPatch));
+                BootPatch(typeof(NoREroMod.Systems.Pregnancy.Patches.PregnancyLoadHookPatch));
+                yield return null;
                 Log?.LogInfo("[Pregnancy] Patched load hook (hideout persistence)");
-            } catch (Exception ex) { Log?.LogWarning($"[Pregnancy] Load hook patch failed: {ex.Message}"); }
+            
 
-            try {
-                PatchType(typeof(NoREroMod.Systems.Pregnancy.PregnancyAltarCleanupPatch));
+                BootPatch(typeof(NoREroMod.Systems.Pregnancy.PregnancyAltarCleanupPatch));
+                yield return null;
                 Log?.LogInfo("[Pregnancy] Patched altar reset (womb / gestation cleanup)");
-            } catch (Exception ex) { Log?.LogWarning($"[Pregnancy] Altar cleanup patch failed: {ex.Message}"); }
+            
 
-            try {
                 NoREroMod.Systems.Pregnancy.ShelterAttack.ShelterAttackHooks.Initialize();
-                PatchType(typeof(NoREroMod.Systems.Pregnancy.ShelterAttack.ShelterAttackHooks.RefreshAfterAltarPostfix));
-                PatchType(typeof(NoREroMod.Systems.Pregnancy.ShelterAttack.ShelterAttackHooks.NotifyCrossZoneWalkTransitionPostfix));
-                PatchType(typeof(NoREroMod.Systems.Pregnancy.ShelterAttack.ShelterAttackHooks.SavepointMenuFastTravelPrefix));
+                BootPatch(typeof(NoREroMod.Systems.Pregnancy.ShelterAttack.ShelterAttackHooks.RefreshAfterAltarPostfix));
+                yield return null;
+                BootPatch(typeof(NoREroMod.Systems.Pregnancy.ShelterAttack.ShelterAttackHooks.NotifyCrossZoneWalkTransitionPostfix));
+                yield return null;
+                BootPatch(typeof(NoREroMod.Systems.Pregnancy.ShelterAttack.ShelterAttackHooks.SavepointMenuFastTravelPrefix));
+                yield return null;
                 Log?.LogInfo("[Pregnancy] Patched shelter attack hooks (scene load + altar reset + walk + fast-travel prefix)");
-            } catch (Exception ex) { Log?.LogWarning($"[Pregnancy] Shelter attack hook failed: {ex.Message}"); }
+            
 
-            try {
                 // FIRST: Unpatch NoREroMod birth patches to prevent it from replacing the slime with the father.
                 UnpatchNoREroModBirthPatches(harmony);
 
-                PatchType(typeof(NoREroMod.Systems.Pregnancy.Patches.BirthSpawnOverridePatch));
+                BootPatch(typeof(NoREroMod.Systems.Pregnancy.Patches.BirthSpawnOverridePatch));
+                yield return null;
                 Log?.LogInfo("[Pregnancy] Patched BadstatusBirthMonster.OnEvent (birth coordinator)");
 
-                PatchType(typeof(NoREroMod.Systems.Pregnancy.Patches.BirthSlimeCapturePatch));
+                BootPatch(typeof(NoREroMod.Systems.Pregnancy.Patches.BirthSlimeCapturePatch));
+                yield return null;
                 Log?.LogInfo("[Pregnancy] Patched suraimu.Start (slime capture)");
 
-                PatchType(typeof(NoREroMod.Systems.Pregnancy.Patches.WitchOffspringFriendlyFirePatch));
-                PatchType(typeof(NoREroMod.Systems.Pregnancy.Patches.WitchOffspringFriendlyFirePatch.BlockOffspringPlayerDamageTriggerPatch));
-                PatchType(typeof(NoREroMod.Systems.Pregnancy.Patches.WitchOffspringFriendlyFirePatch.BlockOffspringSlashDamageTriggerPatch));
-                PatchType(typeof(NoREroMod.Systems.Pregnancy.Patches.WitchOffspringFriendlyFirePatch.BlockOffspringImpactDamageTriggerPatch));
-                PatchType(typeof(NoREroMod.Systems.Pregnancy.Patches.WitchOffspringFriendlyFirePatch.BlockOffspringFunDamagePatch));
-                PatchType(typeof(NoREroMod.Systems.Pregnancy.Patches.WitchOffspringFriendlyFirePatch.BlockOffspringFunDamageImprovementPatch));
-                PatchType(typeof(NoREroMod.Systems.Pregnancy.Patches.WitchOffspringFriendlyFirePatch.BlockOffspringOndamageSendPatch));
-                PatchType(typeof(NoREroMod.Systems.Pregnancy.Patches.WitchOffspringFriendlyFirePatch.BlockOffspringMafiaMuscleDownedGrabPatch));
-                PatchType(typeof(NoREroMod.Systems.Pregnancy.Patches.WitchOffspringFriendlyFirePatch.BlockPlayerMagicHitOffspringPatch));
+                BootPatch(typeof(NoREroMod.Systems.Pregnancy.Patches.WitchOffspringFriendlyFirePatch));
+                yield return null;
+                BootPatch(typeof(NoREroMod.Systems.Pregnancy.Patches.WitchOffspringFriendlyFirePatch.BlockOffspringPlayerDamageTriggerPatch));
+                yield return null;
+                BootPatch(typeof(NoREroMod.Systems.Pregnancy.Patches.WitchOffspringFriendlyFirePatch.BlockOffspringSlashDamageTriggerPatch));
+                yield return null;
+                BootPatch(typeof(NoREroMod.Systems.Pregnancy.Patches.WitchOffspringFriendlyFirePatch.BlockOffspringImpactDamageTriggerPatch));
+                yield return null;
+                BootPatch(typeof(NoREroMod.Systems.Pregnancy.Patches.WitchOffspringFriendlyFirePatch.BlockOffspringFunDamagePatch));
+                yield return null;
+                BootPatch(typeof(NoREroMod.Systems.Pregnancy.Patches.WitchOffspringFriendlyFirePatch.BlockOffspringFunDamageImprovementPatch));
+                yield return null;
+                BootPatch(typeof(NoREroMod.Systems.Pregnancy.Patches.WitchOffspringFriendlyFirePatch.BlockOffspringOndamageSendPatch));
+                yield return null;
+                BootPatch(typeof(NoREroMod.Systems.Pregnancy.Patches.WitchOffspringFriendlyFirePatch.BlockOffspringMafiaMuscleDownedGrabPatch));
+                yield return null;
+                BootPatch(typeof(NoREroMod.Systems.Pregnancy.Patches.WitchOffspringFriendlyFirePatch.BlockPlayerMagicHitOffspringPatch));
+                yield return null;
                 NoREroMod.Systems.Pregnancy.Patches.WitchOffspringFriendlyFirePatch.Apply(harmony);
                 Log?.LogInfo("[Pregnancy] Patched offspring friendly-fire protection");
-            } catch (Exception ex) { Log?.LogWarning($"[Pregnancy] Birth spawn patch failed: {ex.Message}"); }
         } else {
             Log?.LogInfo($"[Pregnancy] Module disabled or config null (Enable={NoREroMod.Systems.Pregnancy.PregnancyConfig.Enable?.Value})");
         }
@@ -1251,28 +1780,44 @@ public class Plugin : BaseUnityPlugin {
                 harmony.Patch(gAmngUpdateMethod, postfix: new HarmonyMethod(gAmngUpdatePostfix));
             }
         } catch { }
-        PatchType(typeof(NoREroMod.Systems.Camera.HSceneCameraDirectPanPatch));
-        PatchType(typeof(NoREroMod.Systems.Camera.HSceneCameraPreventResetPatch));
-        PatchType(typeof(NoREroMod.Systems.Camera.HSceneCameraCenterPreventPatch));
-        PatchType(typeof(NoREroMod.Systems.Camera.HSceneCameraMoveOverridePatch));
-        PatchType(typeof(NoREroMod.Systems.Camera.HSceneCameraGetTargetsMidPointPatch));
-        PatchType(typeof(NoREroMod.Systems.Camera.HSceneCameraSmoothingDisablePatch));
-        PatchType(typeof(NoREroMod.Systems.Camera.HSceneCameraSmoothApproachPatch));
-        PatchType(typeof(NoREroMod.Systems.Camera.HSceneCameraArrowKeyBlockPatch1));
-        PatchType(typeof(NoREroMod.Systems.Camera.HSceneCameraArrowKeyBlockPatch2));
-        PatchType(typeof(NoREroMod.Systems.Camera.HSceneCameraZoomControlPatch));
-        PatchType(typeof(NoREroMod.Systems.Camera.HSceneCameraResetPatch));
-        PatchType(typeof(NoREroMod.Systems.Camera.CombatCameraPresetSystem));
+        BootPatch(typeof(NoREroMod.Systems.Camera.HSceneCameraDirectPanPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Systems.Camera.HSceneCameraPreventResetPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Systems.Camera.HSceneCameraCenterPreventPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Systems.Camera.HSceneCameraMoveOverridePatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Systems.Camera.HSceneCameraGetTargetsMidPointPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Systems.Camera.HSceneCameraSmoothingDisablePatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Systems.Camera.HSceneCameraSmoothApproachPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Systems.Camera.HSceneCameraArrowKeyBlockPatch1));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Systems.Camera.HSceneCameraArrowKeyBlockPatch2));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Systems.Camera.HSceneCameraZoomControlPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Systems.Camera.HSceneCameraResetPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Systems.Camera.CombatCameraPresetSystem));
+        yield return null;
         
         // Critical optimization: patches for camera_GetComponent() in EnemyDate/Trapdata/Slavehelp
         // Eliminates 2x FindWithTag("MainCamera") per grab (~5-10ms -> 0ms)
-        PatchType(typeof(NoREroMod.Patches.Performance.CameraGetComponentPatch));
-        PatchType(typeof(NoREroMod.Patches.Performance.TrapdataCameraGetComponentPatch));
-        PatchType(typeof(NoREroMod.Patches.Performance.SlavehelpCameraGetComponentPatch));
+        BootPatch(typeof(NoREroMod.Patches.Performance.CameraGetComponentPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Performance.TrapdataCameraGetComponentPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Performance.SlavehelpCameraGetComponentPatch));
+        yield return null;
         
         // Critical optimization: patch for EroMafiamuscle.Start()
         // Eliminates FindWithTag("Player") per Start/OnEnable (~3-5ms -> 0ms)
-        PatchType(typeof(NoREroMod.Patches.Performance.EroMafiamuscleStartPatch));
+        BootPatch(typeof(NoREroMod.Patches.Performance.EroMafiamuscleStartPatch));
+        yield return null;
         if (enableMindBroken.Value)
             MindBrokenUIPatch.InitializeFromPlugin();
         if (enableRageMode?.Value ?? false) {
@@ -1281,7 +1826,30 @@ public class Plugin : BaseUnityPlugin {
         }
     }
 
-    private void PatchType(Type type)
+    
+    private int _bootPatchesApplied;
+    private const int BootPatchesEstimated = 270;
+
+    private void BootPatch(Type type)
+    {
+        PatchType(type);
+        NoREroMod.Systems.UI.HellGateSplashScreen.PushEarlyBootItem(type.Name);
+        _bootPatchesApplied++;
+        NoREroMod.Systems.UI.HellGateSplashScreen.SetEarlyBootProgressOnly(
+            0.45f + 0.12f * Mathf.Clamp01(_bootPatchesApplied / (float)BootPatchesEstimated));
+    }
+
+    private void BootPatchLogged(Type type, string label)
+    {
+        PatchTypeWithLog(type, label);
+        NoREroMod.Systems.UI.HellGateSplashScreen.PushEarlyBootItem(
+            string.IsNullOrEmpty(label) ? type.Name : label);
+        _bootPatchesApplied++;
+        NoREroMod.Systems.UI.HellGateSplashScreen.SetEarlyBootProgressOnly(
+            0.45f + 0.12f * Mathf.Clamp01(_bootPatchesApplied / (float)BootPatchesEstimated));
+    }
+
+private void PatchType(Type type)
     {
         try
         {
@@ -1379,7 +1947,37 @@ public class Plugin : BaseUnityPlugin {
         }
     }
 
+    private void BindHellGateLanguageConfig()
+    {
+        if (hellGateLanguage != null)
+            return;
+
+        hellGateLanguage = Config.Bind(
+            "General",
+            "HellGateLanguage",
+            "",
+            "Selected language for HELLGATE mod. Available: RU, EN, JP, CN, KR, FR, DE, PT, BR, ES. Set automatically on first language selection."
+        );
+    }
+
+    private void BindGoreContentConfig()
+    {
+        if (enableGoreContent != null)
+            return;
+
+        enableGoreContent = Config.Bind(
+            "General",
+            "EnableGoreContent",
+            true,
+            "Enable HellGate gore presentation: DeadArmor death PNG clips and CustomDeath lethal traps. Also toggled on the splash screen. Armored grab-throw is separate ([DeadArmor] ArmoredGrabThrowEnable)."
+        );
+    }
+
     private void SetUpConfigs() {
+        // Ensure language entry exists (may already be bound before first-run picker).
+        BindHellGateLanguageConfig();
+        BindGoreContentConfig();
+
         // Enemy/boss HP-speed-poise scaling lives in NoREroMod.dll → edit BepInEx/config/NoREroMod.cfg ([Enemies], [Elites], [Bosses]).
 
         pleasureAfterOrgasm = Config.Bind(
@@ -1663,7 +2261,7 @@ public class Plugin : BaseUnityPlugin {
         allowStrugglePotion = Config.Bind(
             "Ero",
             "allowPotionEasyEscape",
-            false,
+            true,
             "Allows use of a potion to escape any struggle instantly"
         );
         enableImpossibleStruggles = Config.Bind(
@@ -2078,8 +2676,8 @@ public class Plugin : BaseUnityPlugin {
         fontFamilyWestern = Config.Bind(
             "Fonts",
             "FontFamilyWestern",
-            "",
-            "Windows-installed font family for En/Ru/De/Pt/Br/Es/Fr. Recommended: Georgia, Constantia, Cambria, Segoe UI. Empty = automatic fallback."
+            "Georgia",
+            "Windows-installed font family for En/Ru/De/Pt/Br/Es/Fr. Default Georgia (literary/gothic serif, present on virtually all Windows). Alternatives: Palatino Linotype, Constantia, Cambria, Segoe UI. Empty = automatic fallback chain."
         );
         fontFileAsian = Config.Bind(
             "Fonts",
@@ -2227,6 +2825,13 @@ public class Plugin : BaseUnityPlugin {
             "Path to Wolf Mod Spine folder (relative to game root). Empty = use default: sources/HellGate_sources/Wolf Mod Spine. MUST contain Enemy/WolfE.png and ERO/Wolf.png!"
         );
 
+        slaveBigAxeMeatArmorAssetsPath = Config.Bind(
+            "SlaveBigAxeMeatArmor",
+            "AssetsPath",
+            "",
+            "Path to SlaveBigAxe MeatArmor Spine folder (relative to game root). Empty = sources/HellGate_sources/SlaveBigAxeSource. Needs s_DOREIBIG_Aradia_armor.json/.atlas/.png"
+        );
+
         rickEnemyModAssetsPath = Config.Bind(
             "RickEnemyMod",
             "AssetsPath",
@@ -2253,6 +2858,13 @@ public class Plugin : BaseUnityPlugin {
             "SpawnScaleMultiplier",
             0.8f,
             "Visual scale multiplier applied to Hellish Touzoku on spawn (Boss / Axe / Sword). 1.0 = prefab size, 0.8 = 80%."
+        );
+
+        demonGorotukiAssetsPath = Config.Bind(
+            "DemonGorotuki",
+            "AssetsPath",
+            "",
+            "Path to Demon_gorotuki Spine folder (relative to game root). Empty = sources/HellGate_sources/Gorutoki. Expects Gorutoki/Demon_gorotuki.* and Gorutoki ERO/Demon_gorotuki_ERO.*"
         );
 
         doreiFappingAssetsPath = Config.Bind(
@@ -2343,6 +2955,51 @@ public class Plugin : BaseUnityPlugin {
             "LethalCocoonTrapDeathClipDisplayScale",
             1f,
             "Uniform world scale for lethal cocoon death PNG overlay (same bone playback as magic trap; 1 = native at 100 PPU; WebSpike_Death ~823x984 px vs Exp_Death ~1400x835).");
+        enableLethalLightningTrap = Config.Bind(
+            "HellTraps",
+            "EnableLethalLightningTrap",
+            true,
+            "Enable lethal lightning button spawn key 'lightningTrap_button' (alias: lightingTrap_button). Based on trap_button; warning icon → 1.2s → Lightningstrike VFX + lethal ATK; LightningFatalDead PNG clip (cocoon bone/black profile).");
+        lethalLightningTrapDeathClipPath = Config.Bind(
+            "HellTraps",
+            "LethalLightningTrapDeathClipPath",
+            "",
+            "Folder with numbered PNG frames for lethal lightning death (PPU 100). Empty = sources/HellGate_sources/CustomDeath/LightningFatalDead.");
+        lethalLightningTrapDeathClipDisplayScale = Config.Bind(
+            "HellTraps",
+            "LethalLightningTrapDeathClipDisplayScale",
+            1f,
+            "Uniform world scale for lethal lightning death PNG overlay (same cocoon bone/black playback profile).");
+        lethalLightningTrapWarningDelay = Config.Bind(
+            "HellTraps",
+            "LethalLightningTrapWarningDelay",
+            1.2f,
+            "Seconds after stepping on lightningTrap_button before the lightning strike (vanilla magictrap acttime default).");
+        lethalLightningTrapUseWarningIcon = Config.Bind(
+            "HellTraps",
+            "LethalLightningTrapUseWarningIcon",
+            true,
+            "Spawn vanilla TargetIcon_4 warning above the player when the lightning button arms.");
+        lethalLightningTrapUseLightningVfx = Config.Bind(
+            "HellTraps",
+            "LethalLightningTrapUseLightningVfx",
+            true,
+            "Spawn Lightningstrike bolt VFX at the player on strike (damage still applied by HellGate lethal ATK path).");
+        lethalLightningTrapUseStrikeShake = Config.Bind(
+            "HellTraps",
+            "LethalLightningTrapUseStrikeShake",
+            true,
+            "Play vanilla camera shake 'Gun' and SE atk_soko with the lightning strike.");
+        lethalLightningTrapSpawnScale = Config.Bind(
+            "HellTraps",
+            "LethalLightningTrapSpawnScale",
+            1f,
+            "Uniform scale on spawned lightningTrap_button instance.");
+        lethalLightningTrapCooldownSeconds = Config.Bind(
+            "HellTraps",
+            "LethalLightningTrapCooldownSeconds",
+            3f,
+            "Seconds after a lightning button cycle (hit or cancelled) before it can arm again.");
 
         portraitModDisplayScale = Config.Bind(
             "PortraitMod",
@@ -2745,7 +3402,7 @@ public class Plugin : BaseUnityPlugin {
             "EventCore",
             "Enable",
             true,
-            "Enable EventCore (modal dialogues / branches; spawn lines use |ec_event=). HellGateJson/EventCore content is inactive when false."
+            "Enable EventCore (modal dialogues / branches; spawn lines use |ec_event=; F11 catalog C). HellGateJson/EventCore content is inactive when false."
         );
         eventCoreDevHotkey = Config.Bind(
             "EventCore",
@@ -2757,7 +3414,7 @@ public class Plugin : BaseUnityPlugin {
             "EventCore",
             "DevEventId",
             "eventcore_broker_gate",
-            "Event id loaded from eventcore_manifest.json (e.g. eventcore_broker_gate, eventcore_smoke_test)"
+            "Event id loaded from eventcore_manifest.json (e.g. eventcore_broker_gate, eventcore_fsp_bandits_sex_paid)"
         );
         eventCoreModalDimAlpha = Config.Bind(
             "EventCore",
@@ -3099,6 +3756,18 @@ public class Plugin : BaseUnityPlugin {
             0.2f,
             "Cooldown between Rage key presses in seconds (0.2 = 200ms)"
         );
+        rageActivationHotkey = Config.Bind(
+            "RageMode",
+            "ActivationHotkey",
+            KeyCode.G,
+            "Keyboard key to toggle Rage Mode (also used for QTE grab-escape while Struggle is active)"
+        );
+        timeSlowMoHotkey = Config.Bind(
+            "RageMode",
+            "TimeSlowMoHotkey",
+            KeyCode.T,
+            "Keyboard key to toggle Time Slow-Mo / Bullet-Time"
+        );
 
         rageGlowColorR = Config.Bind("RageVisualEffects", "GlowColorR", 1.0f, "Rage edge glow red (0-1)");
         rageGlowColorG = Config.Bind("RageVisualEffects", "GlowColorG", 0.0f, "Rage edge glow green (0-1)");
@@ -3350,6 +4019,14 @@ public class Plugin : BaseUnityPlugin {
             true,
             "Enable or disable QTE System 3.0 (struggle system)"
         );
+
+        // QTE Free Struggle — alternate mode inside QTE (always-open windows, WASD = click SP)
+        qteFreeStruggleEnable = Config.Bind(
+            "QTEFreeStruggle",
+            "Enable",
+            false,
+            "Splash Options → Simple QTE. When true (and EnableQTESystem is on): during Struggle, A/D and W/S windows stay open permanently; each WASD press grants the same SP as a mouse/E click (ClickSPGainBase/Min). Yellow/red W/S and cooldown wrong-key penalties are disabled. HUD uses a compact 36px d-pad cross (default QTE stays the 56px row)."
+        );
         
         // H-Scene Effects
         enableStartZoomEffect = Config.Bind(
@@ -3534,26 +4211,32 @@ public class Plugin : BaseUnityPlugin {
             "Minimum cooldown in seconds between dialogue event processing"
         );
         
-        // Combat Camera Preset (V key)
+        // Combat Camera Preset
         enableCombatCameraPresets = Config.Bind(
             "CombatCamera",
             "EnableCombatCameraPresets",
             true,
-            "Enable V key to toggle between standard and far zoom during combat (outside H-scenes)"
+            "Enable combat camera zoom presets during combat (outside H-scenes). Toggle key: CombatCamera.ToggleHotkey"
+        );
+        combatCameraHotkey = Config.Bind(
+            "CombatCamera",
+            "ToggleHotkey",
+            KeyCode.V,
+            "Keyboard key to cycle combat camera zoom: Standard → Far → UltraFar → Standard"
         );
         
         combatCameraFarZoom = Config.Bind(
             "CombatCamera",
             "FarZoom",
             1.4f,
-            "Far zoom multiplier (1st V press). Camera zooms out by this factor. Values <= 1.1 are clamped to 1.4."
+            "Far zoom multiplier (1st ToggleHotkey press). Camera zooms out by this factor. Values <= 1.1 are clamped to 1.4."
         );
         
         combatCameraUltraFarZoom = Config.Bind(
             "CombatCamera",
             "UltraFarZoom",
             1.8f,
-            "Ultra-far zoom multiplier (2nd V press). Camera zooms out even further. Values <= 1.1 are clamped to 1.8."
+            "Ultra-far zoom multiplier (2nd ToggleHotkey press). Camera zooms out even further. Values <= 1.1 are clamped to 1.8."
         );
         
         // H-Scene Camera Zoom configs (spacebar cycle: ResetZoomValue → ZoomLevel3x → ZoomLevel5x → ResetZoomValue)
@@ -3614,13 +4297,10 @@ public class Plugin : BaseUnityPlugin {
             true,
             "Show HELLGATE splash screen on game startup. Set to false to skip splash screen."
         );
-        
-        hellGateLanguage = Config.Bind(
-            "General",
-            "HellGateLanguage",
-            "",
-            "Selected language for HELLGATE mod. Available: RU, EN, JP, CN, KR, FR, DE, PT, BR, ES. Set automatically on first language selection."
-        );
+
+        // Already bound before language picker — do not Config.Bind again (duplicate [General] lines).
+        BindHellGateLanguageConfig();
+        BindGoreContentConfig();
 
         enableBadEndPlayer = Config.Bind(
             "BadEndPlayer",
@@ -3690,6 +4370,8 @@ public class Plugin : BaseUnityPlugin {
     }
 
     private void OnDestroy() {
+        try { NoREroMod.Systems.Difficulty.HellGateDifficultyPresetModule.ReassertSelectedPresetOnExitIfNeeded(); }
+        catch { }
         NoREroMod.HellGate.Api.HellGateApi.Shutdown();
         SceneManager.sceneLoaded -= OnSceneLoaded_ResetCaches;
         SceneManager.sceneUnloaded -= OnSceneUnloaded_ResetHideoutSpawn;
@@ -3732,6 +4414,10 @@ public class Plugin : BaseUnityPlugin {
             UnifiedPlayerCacheManager.ResetCache();
             UnifiedCameraCacheManager.ResetCache();
             NoREroMod.Systems.Cache.UnifiedGameControllerCacheManager.ResetCache();
+            NoREroMod.Patches.Enemy.SlaveBigAxeMeatArmor.SlaveBigAxeMeatArmorRuntime.ResetAll();
+            NoREroMod.Patches.Enemy.SlaveBigAxeMeatArmor.SlaveBigAxeMeatArmorSkeletonLoader.ResetCache();
+            NoREroMod.Patches.Enemy.SlaveBigAxeIllusiveEventGate.Invalidate();
+            NoREroMod.Patches.Enemy.SlaveBigAxeIllusiveLoseHandoffPatch.ResetHandoffLatch();
             if (Instance != null && _harmonyForLatePatches != null)
                 Instance.ApplyDoreiCombatAiPatch(_harmonyForLatePatches);
         }
@@ -3855,15 +4541,35 @@ public class Plugin : BaseUnityPlugin {
         ps.LV -= 1;
     }
     
-    private System.Collections.IEnumerator ShowSplashScreenImmediately()
+    private void RunBootAssetPreloadImmediate()
     {
-        yield return null;
-        yield return null;
-        yield return null;
-        
         try {
-            NoREroMod.Systems.UI.HellGateSplashScreen.Initialize();
-        } catch { }
+            NoREroMod.Patches.HellTraps.LethalMagicTrapRuntime.TryEnsureTemplateRegistered();
+            NoREroMod.Patches.HellTraps.LethalMagicTrapDeathDisplay.Preload();
+            NoREroMod.Patches.HellTraps.LethalCocoonTrapRuntime.TryEnsureTemplateRegistered();
+            NoREroMod.Patches.HellTraps.LethalCocoonTrapDeathDisplay.Preload();
+            NoREroMod.Patches.HellTraps.LethalLightningTrapRuntime.TryEnsureTemplateRegistered();
+            NoREroMod.Patches.HellTraps.LethalLightningTrapDeathDisplay.Preload();
+            NoREroMod.Patches.HellTraps.LethalMagicTrapDeathAudio.Initialize(this);
+            NoREroMod.Patches.HellTraps.LethalTrapVengeanceShockAudio.Initialize(this);
+        } catch (Exception ex) {
+            Log?.LogWarning("[LethalMagicTrap] Template bootstrap failed: " + ex.Message);
+        }
+        try {
+            NoREroMod.Systems.DeadArmor.DeadArmorBootstrap.Initialize(this);
+        } catch (Exception ex) {
+            Log?.LogWarning("[DeadArmor] Bootstrap failed: " + ex.Message);
+        }
+        try {
+            NoREroMod.Systems.LostSounds.LostSoundsBootstrap.Initialize(this);
+        } catch (Exception ex) {
+            Log?.LogWarning("[LostSounds] Bootstrap failed: " + ex.Message);
+        }
+        try {
+            NoREroMod.Systems.EnemyFatality.EnemyFatalityBootstrap.Initialize(this);
+        } catch (Exception ex) {
+            Log?.LogWarning("[EnemyFatality] Bootstrap failed: " + ex.Message);
+        }
     }
 
     // Dialogue font helper methods

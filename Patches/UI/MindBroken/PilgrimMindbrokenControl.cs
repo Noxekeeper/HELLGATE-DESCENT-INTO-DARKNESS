@@ -51,13 +51,16 @@ internal class PilgrimMindbrokenTracker : MonoBehaviour
     {
         if (host == null || spine == null || spine.AnimationState == null) return;
 
+        float dt = MindBrokenRealtimeGate.GetClampedDeltaTime();
+        if (dt <= 0f) return;
+
         string anim = spine.AnimationName;
         if (string.IsNullOrEmpty(anim)) return;
 
         if (anim == "START2" || anim == "FERA1" || anim == "2EROFIN")
         {
             float rate = Plugin.pilgrimMindBrokenPerSecondBell?.Value ?? 2f;
-            MindBrokenSystem.AddPercent((rate / 100f) * Time.deltaTime, "pilgrim-bell-hypnosis");
+            MindBrokenSystem.AddPercent((rate / 100f) * dt, "pilgrim-bell-hypnosis");
         }
     }
 }

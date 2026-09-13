@@ -1,0 +1,114 @@
+{
+  "intervalSeconds": 10,
+  "ui": {
+    "cachingMessage": "正在缓存HellGate内容 — 请稍候…",
+    "doneButton": "完成",
+    "tutorialTitle": "教程"
+  },
+  "tips": [
+    {
+      "phase": "loading",
+      "id": "manifesto",
+      "text": "HellGate允许你按自己的喜好调整每个模块。\n\n详细教程请参阅<b>HELLGATE_README</b>文件夹中的<b>Manifesto</b>指南。"
+    },
+    {
+      "phase": "loading",
+      "id": "menu_note",
+      "text": "<b>提示</b>\n\n退出菜单请按<b>[Space]</b>（跳跃键）。\n<b>[Space]</b>同时也是<b>取消</b>按钮。\n\n确认操作请按<b>[E]</b>。"
+    },
+    {
+      "phase": "loading",
+      "id": "rage_meter",
+      "text": "<b>怒气</b>\n\n怒气槽在以下情况填充：\n• 造成伤害\n• 格挡或弹反\n• 击杀敌人\n\n怒气在挣扎时会被动消耗。\n若怒气高于<b>50%</b>，MindBroken槽会上升。"
+    },
+    {
+      "phase": "loading",
+      "id": "mindbroken",
+      "text": "<b>MindBroken</b>\n\n精神崩溃直接影响挣扎难度。\n数值越高，被抓时连按体力就越困难。\n\nMindBroken会因以下原因上升：\n• H挣扎（被动）\n• 某些动画（加速上升）\n• 怒气高于<b>50%</b>时被动上升\n• 挣扎期间上下QTE箭头判定失败"
+    },
+    {
+      "phase": "loading",
+      "id": "rage_tiers",
+      "text": "<b>怒气模式 [G]</b> — 三个阶段\n\n<b>阶段1</b>（约5秒）— 强力连招，最多9次攻击。\n\n<b>阶段2</b>（约10秒）— 相同连招加即时挣脱。待机约5秒精神开始崩溃。\n\n<b>阶段3</b>（约15秒）— 恶魔之翼及同样优势。\n\n怒气激活期间不会被击倒或抓取。\n若在激活前被抓，怒气槽消耗极快。"
+    },
+    {
+      "phase": "loading",
+      "id": "controls",
+      "holdUntilDone": true,
+      "text": "<b>基本操作</b>\n\n<b>[LMB]</b> — 攻击（3连击）\n<b>[RMB]</b> — 格挡（空中可用）。EASY难度下长按可完全挡住抓取\n<b>[RMB]+[W]</b> — 弹反\n<b>[E]</b> 弹反后 — 复仇一击（消耗15怒气，上限100）\n<b>[F]</b> — 闪避（无敌帧）。EASY下消耗20体力\n<b>[T]</b> — 子弹时间\n<b>[G]</b> — 怒气模式（3阶段）\n<b>[V]</b> — 战斗镜头（3种模式）\n<b>[H]</b> — 阵营关系\n\n长按<b>[E]</b> 3秒 — 躺下 / 投降\n长按<b>[E]</b> 6秒 — 游戏结束\n<b>[ESC]+[Enter]</b> — 即死\n<b>[F1]</b> — 作弊菜单（风险自担）\n<b>[F11]</b> + RMB — 热刷新敌人、陷阱和事件\n<b>[Space]</b> — 返回 / 退出"
+    },
+
+    {
+      "phase": "guide",
+      "id": "parry",
+      "text": "<b>弹反：</b>\n\n保持格挡并在攻击命中前按下<b>[W]</b>来眩晕敌人。\n\n在近处按<b>[E]</b>发动复仇一击 — 减慢时间并造成大量伤害。消耗<b>15怒气</b>。\n\n箭矢和斧头会被弹开；魔法会被吸收。时机错误则攻击或抓取会穿透。",
+      "video": "Tutorial Guide source/Parry.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "rage",
+      "text": "<b>怒气模式：</b>\n\n按<b>[G]</b>发动9连击剑技，不会疲劳。\n\n怒气激活时不会被击倒或抓取，并造成更多伤害。\n\n持续战斗 — 长时间待机会导致精神崩溃。",
+      "video": "Tutorial Guide source/Rage.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "timeslomo",
+      "text": "<b>子弹时间：</b>\n\n按<b>[T]</b>消耗怒气来减慢时间。\n\n每秒消耗怒气 — 并侵蚀精神。",
+      "video": "Tutorial Guide source/TimeSloMo.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "healthpotion",
+      "text": "<b>生命药水：</b>\n\n使用生命药水可以立即从抓取中挣脱。",
+      "video": "Tutorial Guide source/HealthPotion.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "ambushthoughts",
+      "text": "<b>女巫感知：</b>\n\n靠近陷阱时，Aradia的女巫感知可以警告伏击。\n\n她也能感应附近的致命陷阱。",
+      "video": "Tutorial Guide source/AmbushThoughts.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "block",
+      "text": "<b>格挡：</b>\n\n长按<b>[RMB]</b>减少受到的伤害并防止击倒和抓取。\n\n空中也有效。",
+      "video": "Tutorial Guide source/Block.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "rageescape",
+      "text": "<b>怒气挣脱：</b>\n\n怒气阶段<b>2</b>或<b>3</b>时，被抓期间按<b>[G]</b>可以挣脱。\n\n注意怒气槽 — 被抓时怒气持续流失，可能会不够用。",
+      "video": "Tutorial Guide source/RageEscape.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "qte",
+      "text": "<b>Struggle Out：</b>\n\n积攒体力来挣脱。\n\n1) 看到Struggle Out提示时 — 连按<b>[LMB]</b>。也可以连按<b>[E]</b>。\n\n2) 出现左右箭头<b>[←]</b> <b>[→]</b>时 — 连按<b>[A]</b> / <b>[D]</b>。每次按键积累体力。\n\n提示和箭头消失时不要按任何键 — 否则会失去体力。",
+      "video": "Tutorial Guide source/QTE.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "qte2",
+      "text": "<b>冒险挣脱：</b>\n\n当<color=#E8C84A>黄色</color>和<color=#E05050>红色</color>上下箭头<b>[↑]</b> <b>[↓]</b>出现时，它们会互相交换颜色。\n\n在指示器可见时多次按下<color=#E8C84A>黄色</color>箭头。\n命中可获得更多体力，连续命中还有额外奖励。\n\n按到<color=#E05050>红色</color> — 或在没有箭头时按键 — 会清空所有体力。",
+      "video": "Tutorial Guide source/QTE2.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "dash",
+      "text": "<b>闪避与Mercy：</b>\n\n按<b>[F]</b>闪避来规避伤害并触发Mercy。\n\nMercy期间留在敌人附近且不攻击，阵营好感度会提升<b>+5%</b>。\n\n好感度达到<b>+68%</b>及以上为友好中立：该阵营不再主动攻击。\n\n查看阵营关系请按<b>[H]</b>。",
+      "video": "Tutorial Guide source/Dash.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "combatcamera",
+      "text": "<b>战斗镜头：</b>\n\n按<b>[V]</b>切换三种模式：默认 → 远一些 → 更远。",
+      "video": "Tutorial Guide source/CombatCamera.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "hcameracontrol",
+      "text": "<b>H场景镜头：</b>\n\n在HellGate中，H场景期间可以手动控制镜头。\n\n方向键 <b>[↑]</b> <b>[↓]</b> <b>[←]</b> <b>[→]</b> — 平滑移动。\n<b>[Space]</b> — 切换缩放（多档）。\n\n游戏不一定总能对准动画中心 — 随时可以自己调整镜头。",
+      "video": "Tutorial Guide source/H-CameraControl.mp4"
+    }
+  ]
+}

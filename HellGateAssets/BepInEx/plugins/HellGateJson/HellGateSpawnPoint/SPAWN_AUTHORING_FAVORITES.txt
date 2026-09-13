@@ -1,0 +1,6 @@
+# F11 Favorites — one preset per line:
+# Label|EnemyKey|faction|elite
+# elite: 0 or 1. faction may be empty.
+# Example:
+# Church White Elite|InquisitionWhite|church|1
+# Bandit Axe|TouzokuAxe|bandits|0

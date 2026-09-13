@@ -39,7 +39,7 @@ internal enum EventCoreHandoffMode
 /// </summary>
 internal sealed class EventCoreHost : MonoBehaviour
 {
-    private const float TriggerDistance = 1.5f;
+    private const float TriggerDistance = 3.5f;
 
     /// <summary>After voluntary body-payment, guarantee grab-via-attack before returning to passive shell.</summary>
     private const float ConsentGrabWindowSeconds = 3f;
@@ -61,6 +61,8 @@ internal sealed class EventCoreHost : MonoBehaviour
     private bool _dismissAfterSexScene;
     private Image _passiveExclamation;
     private bool _passiveExclamationResolved;
+
+    internal string EventId => _eventId;
 
     internal static EventCoreHost ActiveHandoffHost { get; private set; }
 
@@ -464,6 +466,9 @@ internal sealed class EventCoreHost : MonoBehaviour
         EnsureEncounterSetup();
 
         if (Plugin.eventCoreEnable == null || !Plugin.eventCoreEnable.Value)
+            return;
+
+        if (SpawnPointAnalyzer.IsRecordingModeActive)
             return;
 
         if (EventCoreRuntime.IsSessionOpen)

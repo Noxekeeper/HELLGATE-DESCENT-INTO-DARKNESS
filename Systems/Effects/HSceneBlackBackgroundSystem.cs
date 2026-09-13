@@ -1048,14 +1048,16 @@ internal static class HSceneBlackBackgroundSystem
 
     private static IEnumerator MindBrokenTick()
     {
-        // MindBroken growth while black background is active (percent-per-second from config)
         while (_isActive)
         {
             if (MindBrokenSystem.Enabled)
             {
-                // Uses unscaledDeltaTime, so MindBroken growth is independent of SlowMo timeScale.
-                float perSecondPercent = Plugin.hsceneBlackBackgroundMindBrokenPerSecondPercent?.Value ?? 0.2f;
-                MindBrokenSystem.AddPercent((perSecondPercent / 100f) * Time.unscaledDeltaTime, "black-bg");
+                float dt = MindBrokenRealtimeGate.GetClampedUnscaledDelta();
+                if (dt > 0f)
+                {
+                    float perSecondPercent = Plugin.hsceneBlackBackgroundMindBrokenPerSecondPercent?.Value ?? 0.2f;
+                    MindBrokenSystem.AddPercent((perSecondPercent / 100f) * dt, "black-bg");
+                }
             }
             yield return null;
         }

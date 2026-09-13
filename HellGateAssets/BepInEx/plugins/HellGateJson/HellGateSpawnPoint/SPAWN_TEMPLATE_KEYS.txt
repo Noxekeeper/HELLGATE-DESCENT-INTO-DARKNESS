@@ -16,81 +16,67 @@ MobCrawlingSlave
 MobSpiderSlave
 MobRosewarm
 MobMutude
+MobMachineSlave
 witchslaveViolin
 witchslaveslime
+EnemyMobCrowSlaveBack
+EnemyMobCrowSlaveStandup
+slave
+stand
+
+[OTHER_SCENES]
+# Spine look / scene animations — F11 Hostage & OtherScenes (not Trap)
+gob_look
+gob_look2
+Look_Dorei
+Look_mutude
+mob_sister
+CowSlavespine
+ChainCowSlavespine
 
 # Same prefab, different cache keys — try both if one fails on a map
 # (mod also maps some pairs in SpawnTemplateCatalog.RegisterTrapKeyAliases)
 
 [TRAP]
-# spider
-trapspider
+# F11 shows these canonical keys only. Aliases: docs/modules/SPAWN_KEY_ALIASES.md
 trapthreadofspider
-# tree
-wana_start
 woodwana
-# buttons / guns
 trap_button
-trap_button_ironmaiden
 trapshot
-trapgun2
 spearthrowtrap
-spear
-# magic
 magictrap
 magictrapcreateobject
-# controllers
 picturetrap
-picture_trap
-ivytrap
 ivy_trap
 ivy_monster
 cocoontrap
 cocoontrapnot
-cocooncreat
-# slime
 blackoozetrap
 blackoozetraptypeb
-blackoozetypeb
-# spikes — rot90/rot180/rot270 on TRAP lines (not lethal_magictrap)
-# static Trap_hari
 trapnormal
-trap_hari
-# LightImpactNormal
+spiketrap
 impactdamage
-lightimpactnormal
 impactdamagebox
-# animated wave (cache from scene with WaveSpike)
-wavespike
-wavespikeguard
-# spear launcher (Valley)
-spearthrowtrap
-spear
-# iron maiden
 ironmaidendamage
-ironmaiden_damage
-trap_ironmaiden
 tent_ironmaiden
-trap_tentacleironmaiden
-# sex machine / H-trap
 trapmachine
-trap_machine
 trap_mokubaenemy
-trap_rockinghorse
 pictureeronon
-pictureero_non
 rosewarm
 wallhip
-# barrels / breakables
-breakobjct
+tubo2
+
+[DECOR]
+# boxes / barrels / static corpses — F11 Decorations tab (not Trap)
 taru_brk
 taru_exp
 taruro_exp
-taruRO_exp
-inpactbreakkobj
-tubo2
 box_brk
 movebox_brk
+mob_death1
+mob_death2
+wall_stone1
+cow1
 
 [TRAP_DO_NOT_USE]
 trap

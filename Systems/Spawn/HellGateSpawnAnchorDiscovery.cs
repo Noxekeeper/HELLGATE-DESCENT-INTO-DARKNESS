@@ -11,7 +11,8 @@ internal delegate TEntry SpawnAnchorEntryFactory<TEntry>(
     string eventFolder,
     string sceneJoined,
     float anchorX,
-    float anchorY);
+    float anchorY,
+    string extrasRaw);
 
 /// <summary>
 /// Scans spawn point text files for <c>REINFORCEMENT</c> / <c>EVENTTRAP</c> anchor lines.
@@ -82,13 +83,14 @@ internal static class HellGateSpawnAnchorDiscovery
                             out string anchorId,
                             out string eventFolder,
                             out float ax,
-                            out float ay))
+                            out float ay,
+                            out string extrasRaw))
                         continue;
 
                     if (!HellGateSpawnSceneHints.IsAllowedEventFolder(eventFolder, allowedFolders))
                         continue;
 
-                    results.Add(createEntry(anchorId, eventFolder, sceneJoined, ax, ay));
+                    results.Add(createEntry(anchorId, eventFolder, sceneJoined, ax, ay, extrasRaw));
                 }
             }
         }

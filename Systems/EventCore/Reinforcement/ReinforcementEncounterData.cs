@@ -42,7 +42,8 @@ internal sealed class ReinforcementRegistryEntry
         string eventFolder,
         string sceneHintsJoined,
         float ax,
-        float ay)
+        float ay,
+        string extrasRaw)
     {
         return new ReinforcementRegistryEntry
         {

@@ -19,15 +19,22 @@ internal static class EnemyDateFactionVisionOverridePatch
             return;
         if (!EnemyFactionsConfig.Enable || !EnemyFactionsConfig.EnableRelationVisionOverride)
             return;
+        if ((__instance is SlaveBigAxe || __instance is OtherSlavebigAxe) &&
+            NoREroMod.Patches.Enemy.SlaveBigAxeIllusiveEventGate.ShouldSkipHellGateLogic())
+            return;
         if (__instance.Hp <= 0f)
             return;
         if (EnemyFactionRuntime.IsBossEnemy(__instance.gameObject))
             return;
         if (__instance.com_player == null)
             return;
-        if (__instance.com_player.erodown != 0)
-            return;
+        // Trap H (WallHip etc.): erodown stays set for the whole scene — freeze, don't skip.
         if (EnemyFactionsConfig.FreezeFactionAiDuringHScene && __instance.com_player.eroflag)
+        {
+            EnemyFactionRuntime.EnterPassiveWaitState(__instance);
+            return;
+        }
+        if (__instance.com_player.erodown != 0)
             return;
         if (EnemyFactionRuntime.ShouldRespectEventCorePassiveShell(__instance))
         {

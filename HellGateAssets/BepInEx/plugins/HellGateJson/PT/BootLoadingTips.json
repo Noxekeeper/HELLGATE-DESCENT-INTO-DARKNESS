@@ -1,0 +1,114 @@
+{
+  "intervalSeconds": 10,
+  "ui": {
+    "cachingMessage": "A colocar em cache o conteúdo do HellGate — por favor aguarde…",
+    "doneButton": "Concluído",
+    "tutorialTitle": "GUIA"
+  },
+  "tips": [
+    {
+      "phase": "loading",
+      "id": "manifesto",
+      "text": "O HellGate permite-lhe ajustar cada módulo ao seu gosto.\n\nPara um guia completo, abra o <b>Manifesto</b> na pasta <b>HELLGATE_README</b>."
+    },
+    {
+      "phase": "loading",
+      "id": "menu_note",
+      "text": "<b>NOTA</b>\n\nPara sair de um menu, prima <b>[Space]</b> (Saltar).\n<b>[Space]</b> é também o botão <b>Cancelar</b>.\n\nPara confirmar uma ação, prima <b>[E]</b>."
+    },
+    {
+      "phase": "loading",
+      "id": "rage_meter",
+      "text": "<b>RAGE</b>\n\nA barra de Rage enche quando:\n• causa dano\n• bloqueia ou faz parry\n• mata inimigos\n\nA Rage diminui passivamente durante as lutas.\nSe a Rage estiver acima de <b>50%</b>, a barra MindBroken subirá."
+    },
+    {
+      "phase": "loading",
+      "id": "mindbroken",
+      "text": "<b>MindBroken</b>\n\nA quebra mental afeta diretamente a dificuldade das lutas.\nQuanto mais alta, mais difícil é acumular stamina ao ser agarrado.\n\nMindBroken sobe com:\n• lutas H (passivo)\n• certas animações (crescimento acelerado)\n• crescimento passivo quando Rage está acima de <b>50%</b>\n• falhar as setas QTE cima/baixo durante uma luta"
+    },
+    {
+      "phase": "loading",
+      "id": "rage_tiers",
+      "text": "<b>Modo Rage [G]</b> — três níveis\n\n<b>Nível 1</b> (~5s) — um combo forte com até 9 golpes.\n\n<b>Nível 2</b> (~10s) — mesmo combo mais escape instantâneo de agarrões. Fique parado ~5s e a sua mente começa a quebrar.\n\n<b>Nível 3</b> (~15s) — asas demoníacas e as mesmas vantagens.\n\nEnquanto a Rage estiver ativa, não pode ser derrubado nem agarrado.\nSe for agarrado antes de ativar, a barra de Rage esvazia-se muito rápido."
+    },
+    {
+      "phase": "loading",
+      "id": "controls",
+      "holdUntilDone": true,
+      "text": "<b>Controlos básicos</b>\n\n<b>[LMB]</b> — ataque (combo de 3 golpes)\n<b>[RMB]</b> — bloquear (funciona no ar). Em EASY, manter bloqueia totalmente agarrões\n<b>[RMB]+[W]</b> — parry\n<b>[E]</b> após parry — Vengeance Strike (15 Rage, máx 100)\n<b>[F]</b> — esquiva (frames de invulnerabilidade). Em EASY custa 20 de stamina\n<b>[T]</b> — Bullet-Time\n<b>[G]</b> — Modo Rage (3 níveis)\n<b>[V]</b> — câmara de combate (3 modos)\n<b>[H]</b> — relações de fação\n\nManter <b>[E]</b> 3s — deitar-se / render-se\nManter <b>[E]</b> 6s — fim de jogo\n<b>[ESC]+[Enter]</b> — morte instantânea\n<b>[F1]</b> — menu de batota (por sua conta e risco)\n<b>[F11]</b> + RMB — respawn rápido de inimigos, armadilhas e eventos\n<b>[Space]</b> — voltar / sair"
+    },
+
+    {
+      "phase": "guide",
+      "id": "parry",
+      "text": "<b>Parry:</b>\n\nMantenha o bloqueio e prima <b>[W]</b> antes do golpe atingir para atordoar o inimigo.\n\nPrima <b>[E]</b> perto para Vengeance Strike — abranda o tempo e causa grande dano. Custa <b>15 Rage</b>.\n\nFlechas e machados são refletidos; magia é absorvida. Erre o timing e o ataque ou agarrão passa.",
+      "video": "Tutorial Guide source/Parry.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "rage",
+      "text": "<b>Modo Rage:</b>\n\nPrima <b>[G]</b> para combos de 9 golpes com espada sem fadiga.\n\nEnquanto a Rage estiver ativa, não pode ser derrubado nem agarrado, e causa mais dano.\n\nContinue a lutar — ficar parado tempo demais quebra a sua mente.",
+      "video": "Tutorial Guide source/Rage.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "timeslomo",
+      "text": "<b>Bullet-Time:</b>\n\nGaste Rage com <b>[T]</b> para abrandar o tempo.\n\nCada segundo drena Rage — e corrói a sua mente.",
+      "video": "Tutorial Guide source/TimeSloMo.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "healthpotion",
+      "text": "<b>Poção de vida:</b>\n\nUse uma poção de vida para se libertar instantaneamente de um agarrão.",
+      "video": "Tutorial Guide source/HealthPotion.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "ambushthoughts",
+      "text": "<b>Sentido de bruxa:</b>\n\nPerto de armadilhas, o sentido de bruxa de Aradia pode alertar para uma emboscada.\n\nEla também sente armadilhas letais por perto.",
+      "video": "Tutorial Guide source/AmbushThoughts.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "block",
+      "text": "<b>Bloqueio:</b>\n\nMantenha <b>[RMB]</b> para reduzir dano recebido e impedir derrubamentos e agarrões.\n\nFunciona também no ar.",
+      "video": "Tutorial Guide source/Block.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "rageescape",
+      "text": "<b>Escape por Rage:</b>\n\nCom Rage nível <b>2</b> ou <b>3</b>, prima <b>[G]</b> enquanto agarrado para se libertar.\n\nVigie a barra — a Rage drena durante um agarrão, e pode não restar o suficiente.",
+      "video": "Tutorial Guide source/RageEscape.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "qte",
+      "text": "<b>Struggle Out:</b>\n\nEncha a stamina para se libertar.\n\n1) Quando vir Struggle Out — prima rapidamente <b>[LMB]</b>. Também pode premir rapidamente <b>[E]</b>.\n\n2) Quando setas esquerda/direita <b>[←]</b> <b>[→]</b> aparecerem — prima rapidamente <b>[A]</b> / <b>[D]</b>. Cada pressão acumula stamina.\n\nNão prima nada quando o indicador e as setas desaparecerem — perderá stamina.",
+      "video": "Tutorial Guide source/QTE.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "qte2",
+      "text": "<b>Escape arriscado:</b>\n\nQuando setas <color=#E8C84A>amarelas</color> e <color=#E05050>vermelhas</color> cima/baixo <b>[↑]</b> <b>[↓]</b> aparecem, elas trocam de cor entre si.\n\nPrima a seta <color=#E8C84A>amarela</color> várias vezes enquanto o indicador estiver visível.\nAcertos dão mais stamina, e uma série limpa concede um bónus.\n\nPremir <color=#E05050>vermelho</color> — ou premir quando não há setas — esvazia toda a stamina.",
+      "video": "Tutorial Guide source/QTE2.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "dash",
+      "text": "<b>Esquiva & Mercy:</b>\n\nEsquive com <b>[F]</b> para evitar dano e ativar Mercy.\n\nSe ficar perto do inimigo sem atacar durante Mercy, a reputação de fação sobe <b>+5%</b>.\n\nCom <b>+68%</b> ou mais é amigável-neutro: essa fação deixa de atacar por iniciativa.\n\nPara ver as relações de fação, prima <b>[H]</b>.",
+      "video": "Tutorial Guide source/Dash.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "combatcamera",
+      "text": "<b>Câmara de combate:</b>\n\nPrima <b>[V]</b> para alternar três modos: padrão → mais longe → ainda mais longe.",
+      "video": "Tutorial Guide source/CombatCamera.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "hcameracontrol",
+      "text": "<b>Câmara na cena H:</b>\n\nNo HellGate pode controlar a câmara durante cenas H.\n\nSetas <b>[↑]</b> <b>[↓]</b> <b>[←]</b> <b>[→]</b> — deslocamento suave.\n<b>[Space]</b> — zoom (vários níveis).\n\nO jogo nem sempre centra bem a animação — ajuste a câmara manualmente quando precisar.",
+      "video": "Tutorial Guide source/H-CameraControl.mp4"
+    }
+  ]
+}

@@ -52,6 +52,9 @@ internal static class TimeSlowMoSystem
             return false;
         }
 
+        if (global::NoREroMod.SpawnPointAnalyzer.IsRecordingModeActive)
+            return false;
+
         if (_isActive)
         {
             Deactivate();
@@ -196,6 +199,8 @@ internal static class TimeSlowMoSystem
     {
         if (!Enabled) return;
         if (!_isActive) return;
+        if (global::NoREroMod.SpawnPointAnalyzer.IsRecordingModeActive)
+            return;
 
         // If rage depleted - deactivate
         if (RageSystem.Percent <= 0f)

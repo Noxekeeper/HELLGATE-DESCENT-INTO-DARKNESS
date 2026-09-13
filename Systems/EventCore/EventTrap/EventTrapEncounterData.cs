@@ -58,12 +58,16 @@ internal sealed class EventTrapRegistryEntry
     internal float spawnBindingAnchorX;
     internal float spawnBindingAnchorY;
 
+    /// <summary>Optional <c>count=</c> / <c>dist=</c> / <c>faction=</c> tokens from the spawn line.</summary>
+    internal string lineExtrasRaw = string.Empty;
+
     internal static EventTrapRegistryEntry FromSpawnBinding(
         string anchorId,
         string eventFolder,
         string sceneHintsJoined,
         float ax,
-        float ay)
+        float ay,
+        string extrasRaw)
     {
         return new EventTrapRegistryEntry
         {
@@ -72,7 +76,8 @@ internal sealed class EventTrapRegistryEntry
             sceneNameContains = sceneHintsJoined ?? string.Empty,
             useSpawnBindingAnchor = true,
             spawnBindingAnchorX = ax,
-            spawnBindingAnchorY = ay
+            spawnBindingAnchorY = ay,
+            lineExtrasRaw = extrasRaw ?? string.Empty
         };
     }
 }

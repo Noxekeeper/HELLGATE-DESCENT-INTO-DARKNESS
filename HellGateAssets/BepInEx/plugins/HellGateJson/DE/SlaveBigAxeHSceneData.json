@@ -1,0 +1,519 @@
+{
+  "settings": {
+    "commentCooldownSeconds": 2.0,
+    "maxSimultaneousComments": 1,
+    "commentDisplayDuration": 4.0,
+    "fontSize": 22.0,
+    "verticalOffset": 15,
+    "streamingSpeed": 0.03,
+    "goblinColor": {
+      "r": 1.0,
+      "g": 1.0,
+      "b": 1.0,
+      "a": 1.0
+    },
+    "goblinOutlineColor": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 1.0
+    }
+  },
+  "animations": {
+    "START": {
+      "description": "Standing in front, captures and binds GG's hands and feet behind her head with his left hand, showing her tits, and rips her clothes off with his right.",
+      "events": {
+        "START": [
+          "Ruhig. Du erschöpfst dich nur.",
+          "Noch eine Ausreißerin. Zurück an ihren Platz.",
+          "Ich hab Wildere gesehen. Am Ende sind alle gebrochen.",
+          "Halt still. Dann wird's für dich leichter.",
+          "Sieh mich an. Merk dir mein Gesicht.",
+          "Du bist nicht die Erste, die gegen mich kämpft.",
+          "Gut. Verschwend weiter deine Kraft.",
+          "Jede Kette beginnt mit einem einzigen Fehler.",
+          "Deine Reise endet hier.",
+          "Mal sehen, wie lange dieser Stolz hält."
+        ],
+        "SE": [
+          "Strampel. Ändert nichts.",
+          "Dein Zappeln beweist nur: Da ist noch Geist zum Brechen.",
+          "Widersteh weiter. Am Anfang mag ich sie lebendig.",
+          "Aus diesen Händen kommst du nicht raus, Ausreißerin."
+        ]
+      }
+    },
+    "ERO": {
+      "description": "Throws GG to the ground, on her back, he starts rubbing himself on GG and inserts himself",
+      "events": {
+        "ERO": [
+          "Angst vergeht. Gewohnheit bleibt. Sag, du bist mein Spielzeug.",
+          "Du lernst schneller als die meisten. Gib dich geschlagen, dann hör ich auf.",
+          "Du bist ein kleines Spielzeug. Du kannst nichts tun.",
+          "Eines Tages hörst du auf zu fliehen. Dann gibst du es mir freiwillig.",
+          "Stolz ist teuer. Gehorsam ist leichter. Sag, du bist meine Fickpuppe — dann hört der Schmerz auf.",
+          "Du glaubst noch, jemand kommt. Puppen haben keine Hoffnung.",
+          "Hoffnung nehm ich zuerst. Dann deinen Körper, mein Eigentum.",
+          "Bald fühlt sich das normal an. Du musst nur mein Sperma-Gefäß werden."
+        ]
+      }
+    },
+    "ERO1": {
+      "description": "Traps GG with his body weight, while thrusting hard and slow, missionary",
+      "events": {
+        "ERO1": [
+          "Gut. Sag es.",
+          "Nochmal. Ich hör erst auf, wenn du es schreist.",
+          "Besser. Fang an.",
+          "Halt still.",
+          "Lern.",
+          "Dein Körper verrät dich zuerst.",
+          "Atme.",
+          "Hör zu.",
+          "Gehorch.",
+          "Merk dir das."
+        ]
+      }
+    },
+    "ERO2": {
+      "description": "Speeds up, fucks GG missionary while she has her feet pointing towards the sky",
+      "events": {
+        "ERO2": [
+          "Ist das alles, was du hast?",
+          "Ich hab mehr von dir erwartet.",
+          "Du machst mir das zu leicht.",
+          "Tust du immer noch so, als könntest du fliehen?",
+          "Kämpf weiter. Ich genieß die Mühe.",
+          "Du hast Mut. Schade, dass er nichts bringt.",
+          "Fast hättest du mich beeindruckt.",
+          "Du wirst mich länger erinnern als ich dich."
+        ]
+      }
+    },
+    "ERO3": {
+      "description": "Same speed, but harder, which makes GG slightly close her legs from the force, with each thrust",
+      "events": {
+        "ERO3": [
+          "Da bist du. Das ist die kluge Wahl.",
+          "Gut. Endlich denkst du klar.",
+          "Siehst du? War nicht so schwer.",
+          "Ich wusste, du kapierst es irgendwann.",
+          "Das ist der Blick von jemandem, der zuhört.",
+          "Gut. Endlich verstehst du die Lage.",
+          "Bleib bei solchen Entscheidungen, dann kommen wir klar.",
+          "Du bist ein hirnloses Fickloch, bereit für die Ketten."
+        ]
+      }
+    },
+    "ERO4": {
+      "description": "Speeds up, and thrusts harder, making GG's feet bounce off his body",
+      "events": {
+        "ERO4": [
+          "Nimm's, Schlampe! Du bist nichts!",
+          "Sieh mich an, Schlampe! Bettel um Gnade!",
+          "Du bist ein leeres Loch, das Missbrauch verdient!",
+          "Ich reiß dich weiter auf, bis du mich zum Kommen bringst, Miststück.",
+          "Schließ die Beine, Spielzeug. Enttäusch mich, und ich zerquetsch deinen Kopf.",
+          "Ich zeig dir echten Schmerz. Du kannst nichts tun.",
+          "Du bist nichts als ein dreckiger Spermalappen.",
+          "Was von dir übrig bleibt, verkauf ich auf den Straßen von Ragdum!"
+        ],
+        "SE": [
+          "Dieses enge Loch rettet dich nicht.",
+          "Ich nutz dich, bis nichts mehr zu verkaufen ist.",
+          "Du bist Eigentum. Benehm dich danach."
+        ]
+      }
+    },
+    "FIN": {
+      "description": "Cums hard inside GG, while she hugs his body",
+      "events": {
+        "FIN": [
+          "Nimm's! Nimm's hart!",
+          "Ah! Ich nutz dich, bis du stirbst!",
+          "RAH! Schließ die Beine, ich füll dich jetzt!",
+          "Gut! Du bist ein gutes Spielzeug. Arghh! Aaaah...",
+          "Ich zerquetsch dich!",
+          "Du verdammte... Hure!!!",
+          "Jetzt bin ich dein Meister!",
+          "Ich spür, wie du dich zusammenziehst, kleine Hexe!"
+        ],
+        "SE": [
+          "Strampel. Du melkst mich nur tiefer.",
+          "Zappel weiter, bis ich fertig mit dir bin.",
+          "Kämpf, so viel du willst. Du gehörst schon mir."
+        ]
+      }
+    },
+    "FIN2": {
+      "description": "Cums one time, pulls out, revealing GG's blushing face, tits and covered pussy",
+      "events": {
+        "FIN2": [
+          "Du hast dich verändert, auch wenn du's nicht zugibst.",
+          "Daran denkst du heute Nacht.",
+          "Ab hier wird jeder Tag leichter.",
+          "Du fängst an zu verstehen, wie das läuft.",
+          "Spreiz die Beine, Schlampe.",
+          "Jetzt bist du schön geweitet. Das perfekte Spielzeug für meinen Schwanz.",
+          "Diesmal bettelst du darum.",
+          "Das wirst du nie vergessen.",
+          "Du wirst mein Sperma-Gefäß sein, bis du stirbst."
+        ]
+      }
+    },
+    "JIGO": {
+      "description": "GG twitches while he prepares for another round",
+      "events": {
+        "JIGO": [
+          "Hol Luft.",
+          "Keine Eile.",
+          "Nimm dir einen Moment.",
+          "Glaubst du, das war's? Ich fang nicht, um loszulassen.",
+          "Mach dich bereit, hirnloses Loch.",
+          "Du hast eine kurze Pause verdient.",
+          "Ich bin ein geduldiger Mann."
+        ]
+      }
+    },
+    "JIGO2": {
+      "description": "Goes forward, covering GG's face",
+      "events": {
+        "JIGO2": [
+          "Mal sehen, ob du was gelernt hast.",
+          "Wohin willst du? Du bist nur ein Spielzeug.",
+          "Ich hör erst auf, wenn du tot bist.",
+          "Du hast noch Geist.",
+          "Zeit für die nächste Tracht Prügel, Miststück!",
+          "Du bist noch nicht gebrochen.",
+          "Noch nicht."
+        ]
+      }
+    },
+    "JIGOERO": {
+      "description": "Round two, repeating the chain, but with GG's pussy covered in cum",
+      "events": {
+        "JIGOERO": [
+          "Wir sind noch nicht fertig.",
+          "Zeig mir, was du gelernt hast.",
+          "Enttäusch mich nicht.",
+          "Bereit? Jetzt hältst du es aus.",
+          "Von deiner Muschi werd ich nie genug kriegen.",
+          "Schmolle nicht — ich drück dich, bis deine Augen leer sind.",
+          "Mein Sperma schmiert diesmal meinen Schwanz. Sei dankbar, Hexe.",
+          "Ich press mein Sperma aus dir raus — versuch nicht, es aufzuhalten."
+        ]
+      }
+    },
+    "JIGOERO2": {
+      "description": "Faster thrusting resumes, using previous cum as lube, her body slick and messy beneath him.",
+      "events": {
+        "JIGOERO2": [
+          "Mein Samen macht dich glitschig. Spür, wie leicht ich jetzt reingehe.",
+          "Kämpfen bringt nichts. Dein Körper weiß, wem er gehört.",
+          "Schon nass von meinem Sperma. Ein natürliches Gefäß.",
+          "Das ist jetzt dein Zweck. Nimm's ohne Klage.",
+          "Tut's weh? Gut. Du lernst, Schmerz mit mir zu verbinden.",
+          "Deine Muschi kneift fester, wenn's wehtut. Hab dich gut dressiert.",
+          "Sieh dir das Chaos an, das ich angerichtet hab. Zeit, es schlimmer zu machen.",
+          "Jeder Stoß treibt mein Sperma tiefer. Markiert dich von innen.",
+          "Hör auf zu kneifen. Du machst's nur schlimmer für dich.",
+          "Bald erinnerst du dich nicht mehr, wie's vor mir war."
+        ],
+        "SE": [
+          "Nimm's.",
+          "Nasse Schlampe.",
+          "Kein Entrinnen.",
+          "Meins."
+        ]
+      }
+    },
+    "JIGOERO3": {
+      "description": "Harder thrusts with force causing her legs to twitch and try to close involuntarily.",
+      "events": {
+        "JIGOERO3": [
+          "Beine zittern schon? Wir fangen erst an.",
+          "Versuch sie zu schließen. Ich mag's, Widerstand zu brechen.",
+          "Dein Körper verrät dich. Das Zittern heißt, du spürst es.",
+          "Reiß sie auf. Ich will alles sehen, was mir gehört.",
+          "Jeder Stoß erinnert dich, wer hier das Sagen hat.",
+          "Je mehr du dich wehrst, desto härter werd ich. Zitter weiter.",
+          "Deine Muschi verliert. Entspann dich und nimm's an.",
+          "Ich kann das die ganze Nacht. Hältst du so lange durch?",
+          "Diese Wimmerlaute sind Musik. Lauter, Hexe.",
+          "Deine Beine wollen zu, aber deine Muschi will mehr."
+        ],
+        "SE": [
+          "Weit auf.",
+          "Spürst du das?",
+          "Ich brech dich.",
+          "So eng."
+        ]
+      }
+    },
+    "JIGOERO4": {
+      "description": "Brutal peak pace before second climax, relentless pounding as she lies exhausted beneath him.",
+      "events": {
+        "JIGOERO4": [
+          "RAH! Hier lernst du deinen Platz!",
+          "Ich füll dich wieder voll! Nimm's!",
+          "Dein Meister ist nah! Bettel, dass ich dich fülle!",
+          "Schrei, wenn du willst. Niemand rettet dich!",
+          "Ich nehm mir dieses Loch wieder! RAH!",
+          "Jeder Zentimeter gehört mir! Sag's!",
+          "Ich pump dich so voll, dass du tagelang tropfst!",
+          "Dafür bist du gemacht! Mein Sperma-Müll!",
+          "RAH! Deine Muschi melkt mich leer, Hexe!",
+          "Du bist Eigentum. Benehm dich danach und nimm meinen Schwanz!"
+        ],
+        "SE": [
+          "Nimm alles!",
+          "Spür das Tempo!",
+          "Du gehörst mir!",
+          "Ich reiß dich auf!"
+        ]
+      }
+    },
+    "JIGOFIN": {
+      "description": "He cums inside her for the second time, flooding her already filled womb with more seed.",
+      "events": {
+        "JIGOFIN": [
+          "RAH! Füll dich wieder! Jeden Tropfen!",
+          "Da kommt noch viel mehr her!",
+          "Dein Schoß trinkt mich. Gutes Mädchen.",
+          "Zweite Ladung geht tiefer als die erste.",
+          "So markiert man richtiges Spielzeug. Innen und außen.",
+          "RAH! Melk meinen Schwanz leer mit deiner müden Muschi!",
+          "Ich streich dich innen wieder weiß an. Dank mir.",
+          "So viel Sperma für so eine gebrochene kleine Hexe.",
+          "Nimm's. Nimm alles. RAH!",
+          "Jetzt bist du nur noch ein Gefäß für meinen Samen."
+        ],
+        "SE": [
+          "Füll dich tief!",
+          "RAH! Nimm's!",
+          "Tiefer!",
+          "Du gehörst mir!"
+        ]
+      }
+    },
+    "JIGOFIN2": {
+      "description": "He pulls out showing her used body covered in cum, sore and thoroughly broken.",
+      "events": {
+        "JIGOFIN2": [
+          "Sieh dir das Chaos an, das ich aus dir gemacht hab. Schön.",
+          "Zwei Ladungen drin und du bewegst dich kaum. Perfekt.",
+          "Mein Sperma tropft aus deiner Muschi. Das ist meine Marke.",
+          "Bleib liegen und lass es tropfen. Ich will meine Arbeit bewundern.",
+          "Wund, voll und markiert. Endlich richtiges Eigentum.",
+          "Das passiert Ausreißern. Merk dir dieses Bild.",
+          "Deine Muschi klafft und tropft. Genau so soll's sein.",
+          "Ruh dich aus, solang du kannst. Runde drei kommt, wenn ich wieder hart bin.",
+          "Sieh dich an. Du siehst nicht mal mehr aus wie eine Hexe.",
+          "Mein gebrochenes Spielzeug. Meine spermaüberzogene Sklavin."
+        ]
+      }
+    },
+    "JIGOPOST3": {
+      "description": "Act 3 begins with her legs already spread wide, displaying her ruined, gaping, cum-leaking state.",
+      "events": {
+        "JIGOPOST3": [
+          "Sieh dich an. Beine offen, als wärst du dressiert.",
+          "Runde drei. Du bist schon für mich aufgeweicht.",
+          "Diese Muschi klafft. Man sieht meine Arbeit.",
+          "Zwei Ladungen drin und du hältst sie trotzdem offen.",
+          "Kein Kampf mehr. Nur eine ordentliche Ausstellung.",
+          "Erschöpft, errötet und tropfend. Perfekter Zustand.",
+          "Du hast die Beine für mich offen gehalten. Guter Instinkt.",
+          "Zeit, was von dir übrig ist zu nutzen.",
+          "Dieses zerstörte Loch braucht mehr Training.",
+          "Sieh, wie leicht du jetzt deinen Zweck annimmst."
+        ]
+      }
+    },
+    "JIGOPOST4": {
+      "description": "He covers her again, mounting her exhausted body and trapping her beneath his weight.",
+      "events": {
+        "JIGOPOST4": [
+          "Halt still. Ich besteig mein Eigentum.",
+          "Wieder unter mir, wo du hingehörst.",
+          "Spürst du dieses Gewicht? Das ist Besitz.",
+          "Diesmal kein Entrinnen. Du bist zu müde.",
+          "Ich nutz dich, bis du aufhörst zu zucken.",
+          "Dein Körper erinnert sich an diese Stellung.",
+          "Unter deinem Meister gefangen. Sag's.",
+          "Weiter spreizen. Ich will vollen Zugang.",
+          "Das ist jetzt deine dauerhafte Adresse.",
+          "Entspann dich. Kämpfen macht's nur schlimmer."
+        ]
+      }
+    },
+    "JIGOPOSTERO": {
+      "description": "Third round thrusting begins, using prior cum as lube on her already messy, tired body.",
+      "events": {
+        "JIGOPOSTERO": [
+          "Geht leicht rein. Mein Sperma macht dich glitschig.",
+          "Aller guten Dinge sind drei. Du bist locker und bereit.",
+          "Kein Widerstand mehr. Nur ein nasses Loch.",
+          "Spürst du, wie ich durch mein eigenes Chaos stoße?",
+          "Deine müde Muschi kneift schwächer. Gut.",
+          "Runde drei an gebrochenem Spielzeug. Luxus.",
+          "Ich ruinier dich irreparabel.",
+          "Stoß zurück. Oder nicht. Ist mir egal.",
+          "Schon so viel Sperma in dir. Es kommt mehr.",
+          "Dafür ist dein Körper gebaut."
+        ],
+        "SE": [
+          "Nimm's.",
+          "Nasses Loch.",
+          "Kein Kampf.",
+          "Meins."
+        ]
+      }
+    },
+    "JIGOPOSTERO2": {
+      "description": "Faster thrusting, cum-lube allowing deeper use of her exhausted, barely responsive body.",
+      "events": {
+        "JIGOPOSTERO2": [
+          "Schneller jetzt. Du spürst's sowieso kaum.",
+          "Nur eine Hülle für meinen Schwanz. Mehr nicht.",
+          "Deine Muschi ist so matschig. Perfekt.",
+          "Tiefe Stöße. Ich treff deinen Muttermund.",
+          "Zuck, wenn du willst. Merk ich kaum.",
+          "Mit meinem Sperma fick ich dich härter.",
+          "An dem Punkt bist du nur noch ein Gefäß.",
+          "Kein Gejammer mehr. Nimm einfach die Prügel.",
+          "Dieser müde Körper erfüllt immer noch seinen Zweck.",
+          "Drei Runden und endlich bist du nützlich."
+        ],
+        "SE": [
+          "Schneller.",
+          "Tief.",
+          "Matschig.",
+          "Nutzlos."
+        ]
+      }
+    },
+    "JIGOPOSTERO3": {
+      "description": "Hardest pounding before third climax, she is almost gone, body barely responding.",
+      "events": {
+        "JIGOPOSTERO3": [
+          "RAH! Fast! Nimm die Prügel!",
+          "Das ist das Ende! Dein letzter Bruch!",
+          "Ich mach mit dem Rest von dir Schluss!",
+          "RAH! Keine Hexe mehr! Nur mein Eigentum!",
+          "Härter! Du hältst das aus! RAH!",
+          "Deine Muschi melkt mich leer! RAH!",
+          "So endest du! Unter meinem Schwanz!",
+          "RAH! Ich brech dich komplett!",
+          "Kein Widerstand mehr! Nur mein Sperma!",
+          "RAH! Letzte Ladung kommt!"
+        ],
+        "SE": [
+          "RAH! Nimm's!",
+          "Brich für mich!",
+          "Du gehörst mir!",
+          "Beend's!"
+        ]
+      }
+    },
+    "JIGOPOSTFIN": {
+      "description": "Third orgasm inside her, flooding her already overfilled womb with another hot load.",
+      "events": {
+        "JIGOPOSTFIN": [
+          "RAH! Dritte Ladung! Füll dich!",
+          "Nimm's! RAH! Flut diesen Schoß!",
+          "Ich stopf dich voll! RAH!",
+          "Drei Ladungen tief! Du bist markiert!",
+          "RAH! Jeder Tropfen rein! Meins!",
+          "Ich flut dich! RAH! Nimm alles!",
+          "Das ist dein Zweck! RAH! Voll!",
+          "Aller guten Dinge sind drei! RAH! Fertig!",
+          "Du schwimmst in meinem Samen! RAH!",
+          "Fertig! RAH! Mein gebrochenes Spielzeug!"
+        ],
+        "SE": [
+          "RAH! Nimm's!",
+          "Füll dich!",
+          "Dritte Ladung!",
+          "Mit dir ist Schluss!"
+        ]
+      }
+    },
+    "JIGOPOSTFIN2": {
+      "description": "Afterglow and pull-out display, legs still open, leaking heavily from three loads.",
+      "events": {
+        "JIGOPOSTFIN2": [
+          "Sieh dir das an. Drei Ladungen tropfen raus.",
+          "Bleib offen. Ich will den Schaden sehen.",
+          "Du bist ein Brunnen meines Spermas. Schön.",
+          "Klaffend und tropfend. Völlig ruiniert.",
+          "Das ist dein bestes Aussehen. Leer und markiert.",
+          "Beine auf, Muschi offen, Sperma fließt.",
+          "Mein Meisterwerk. Eine gebrochene Hexe.",
+          "Ruh dich aus. Du bist gründlich besamt.",
+          "Dieses Loch schließt sich nie wieder gleich.",
+          "Bewunder, was ich aus dir gemacht hab."
+        ]
+      }
+    },
+    "JIGOTOFADE": {
+      "description": "Screen begins to fade to black, scene ending with final ownership declarations.",
+      "events": {
+        "JIGOTOFADE": [
+          "Ins Dunkle. Aber du gehörst immer noch mir.",
+          "Für die Welt endet das. Für dich nicht.",
+          "Verschwindest in der Dunkelheit. Mein Eigentum.",
+          "Kein Licht mehr. Nur mein Besitz.",
+          "Verschwindest. Aber für immer markiert.",
+          "Lebwohl, Freiheit. Hallo, Dienst.",
+          "Ins Dunkle. Als mein Spielzeug.",
+          "Das Ende beginnt. Dein neues Leben."
+        ]
+      }
+    },
+    "ZGAMEOVER": {
+      "description": "Bad end visual, she is fully broken, semen-stained, claimed as permanent property.",
+      "events": {
+        "ZGAMEOVER": [
+          "Du hast verloren. Ich hab gewonnen. Mit dir ist Schluss.",
+          "Völlig gebrochen. Völlig markiert. Völlig meins.",
+          "Kein Entrinnen. Keine zweite Chance. Nur Besitz.",
+          "Spermaverschmiert und fertig. Mein Eigentum.",
+          "Die Hexe ist tot. Das Spielzeug bleibt.",
+          "Deine Geschichte endet als meine Sklavin.",
+          "Gefangen. Gebrochen. Behalten.",
+          "Für immer meins. Für immer benutzt."
+        ]
+      }
+    },
+    "ZGAMEOVER2LOOP": {
+      "description": "Looping bad-end hold, quiet gloating about her permanent state.",
+      "events": {
+        "ZGAMEOVER2LOOP": [
+          "Bleib so. Für immer.",
+          "Mein dauerhafter Besitz.",
+          "Keine Änderung. Nur Nutzung.",
+          "In der Schleife als mein Spielzeug.",
+          "Ewiger Dienst.",
+          "Nie frei. Immer meins.",
+          "Dein Für-immer."
+        ]
+      }
+    },
+    "4ERO": {
+      "description": "Optional coda after fade, mouth or continued use of the finished toy.",
+      "events": {
+        "4ERO": [
+          "Selbst nach dem Ende bist du nützlich.",
+          "Mach den Mund auf. Immer noch nützlich.",
+          "Das Spielzeug gibt weiter.",
+          "Mit dir bin ich noch nicht fertig.",
+          "Aufräumen. Du bist noch nützlich.",
+          "Letzte Nutzung von gebrochenem Eigentum.",
+          "Ich press den Rest aus dir raus.",
+          "Selbst Ruinen haben einen Zweck."
+        ]
+      }
+    }
+  }
+}

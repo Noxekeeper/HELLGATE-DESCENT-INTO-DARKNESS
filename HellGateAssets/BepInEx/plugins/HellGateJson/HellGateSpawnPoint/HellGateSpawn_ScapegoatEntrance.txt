@@ -167,7 +167,7 @@ random,0.7,418.57,72.92,TouzokuNormal|ec_event=eventcore_broker_gate,1
 random,0.7,600.82,67.72,TouzokuNormal|ec_event=eventcore_broker_gate,1
 
 # Enemies group 4
-229.88,58.41,InchchurchSlave,1
+229.88,58.41,InchurchSlave,1
 random,0.8,331.18,51.15,TouzokuNormal|faction=bandits_inquisition,1
 random,0.8,341.57,48.14,goblin|faction=demons,1
 random,0.8,342.76,48.14,goblin|faction=demons,1

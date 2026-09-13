@@ -140,7 +140,9 @@ internal static class PlayerCombatControlRecovery
 
     private static void TryClearStaleTrapSuppression()
     {
-        if (LethalMagicTrapDeathDisplay.HasActiveClip || LethalCocoonTrapDeathDisplay.HasActiveClip)
+        if (LethalMagicTrapDeathDisplay.HasActiveClip ||
+            LethalCocoonTrapDeathDisplay.HasActiveClip ||
+            LethalLightningTrapDeathDisplay.HasActiveClip)
             return;
 
         if (LethalMagicTrapDeathContext.IsEroSuppressionActive &&
@@ -155,6 +157,13 @@ internal static class PlayerCombatControlRecovery
             !LethalCocoonTrapDeathContext.IsLethalHitInProgress)
         {
             LethalCocoonTrapDeathContext.ClearStaleEroSuppression();
+        }
+
+        if (LethalLightningTrapDeathContext.IsEroSuppressionActive &&
+            !LethalLightningTrapDeathContext.IsCustomDeathActive &&
+            !LethalLightningTrapDeathContext.IsLethalHitInProgress)
+        {
+            LethalLightningTrapDeathContext.ClearStaleEroSuppression();
         }
     }
 

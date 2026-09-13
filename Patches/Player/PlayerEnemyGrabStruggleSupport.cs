@@ -1,7 +1,6 @@
 using HarmonyLib;
 using NoREroMod.Systems.EventCore.Core;
 using NoREroMod.Systems.EventCore.Host;
-using UnityEngine;
 
 namespace NoREroMod.Patches.Player;
 
@@ -29,7 +28,6 @@ internal static class PlayerEnemyGrabStruggleSupport
         if (BirthRecoveryStruggleState.IsActive && PlayerEroContextUtility.IsActivePregnancyBirth(player))
         {
             EnableStruggleFlags(player, status);
-            UnlockImpossibleStruggleLevel();
             return;
         }
 
@@ -43,7 +41,6 @@ internal static class PlayerEnemyGrabStruggleSupport
             return;
 
         EnableStruggleFlags(player, status);
-        UnlockImpossibleStruggleLevel();
     }
 
     internal static void PrepareForGrab(playercon player, PlayerStatus status)
@@ -67,7 +64,8 @@ internal static class PlayerEnemyGrabStruggleSupport
         if (player._Death || status.Hp <= 0f)
             return;
 
-        // Pregnancy birth / badstatus overlays: _easyESC blocks mash escape until birth spine JIGO.
+        // Vanilla NOTESCAPE / fade lockouts and pregnancy birth overlays: leave _easyESC alone.
+        // Clearing it here re-opened Struggle Out / QTE during intentional no-escape phases.
         if (player._easyESC && !BirthRecoveryStruggleState.IsActive)
             return;
 
@@ -90,45 +88,5 @@ internal static class PlayerEnemyGrabStruggleSupport
             return false;
 
         return player.eroflag || player.erodown != 0;
-    }
-
-    // Anti-soft-lock only. NoREroMod uses struggle level 10 ("impossible") as the intended
-    // per-animation penetration/orgasm lockout, so we must NOT clear it every frame — that is what
-    // kept the Struggle Out window permanently open. We let NoREroMod's OnEvent phases drive the
-    // window and only force it open if level 10 is genuinely stuck far longer than any real phase.
-    private const float ImpossibleLevelMaxSeconds = 15f;
-    private static float _impossibleLevelSince = -1f;
-
-    private static void UnlockImpossibleStruggleLevel()
-    {
-        try
-        {
-            var levelField = AccessTools.Field(typeof(StruggleSystem), "struggleLevel");
-            if (levelField == null)
-                return;
-
-            if ((int)levelField.GetValue(null) != 10)
-            {
-                _impossibleLevelSince = -1f; // not locked — reset the stuck timer
-                return;
-            }
-
-            float now = Time.unscaledTime;
-            if (_impossibleLevelSince < 0f)
-            {
-                _impossibleLevelSince = now; // entered the lockout this frame; let NoREroMod run it
-                return;
-            }
-
-            if (now - _impossibleLevelSince >= ImpossibleLevelMaxSeconds)
-            {
-                // Stuck at 10 for an unreasonable time (animation never reached its open phase).
-                StruggleSystem.setStruggleLevel(-1);
-                _impossibleLevelSince = -1f;
-            }
-        }
-        catch
-        {
-        }
     }
 }

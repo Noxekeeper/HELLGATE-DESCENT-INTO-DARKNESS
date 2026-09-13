@@ -3,10 +3,10 @@
 Complete reference of `BepInEx/config/NoREroMod_HellGate.cfg`.
 
 This file is **generated** from the live cfg by
-`dev/tools/generate_configuration_md.py` (maintainer tooling). Do not edit the
-tables by hand: change `SetUpConfigs()` (or the owning module), run the game
-once so BepInEx regenerates the cfg, regenerate this document, and commit both
-together.
+`dev/tools/generate_configuration_md.py` (maintainer tooling). Prefer
+regenerating after cfg changes rather than hand-editing tables. When the
+generator is unavailable, keep new sections in sync with the owning module's
+`Bind(...)` descriptions (for example `[DeadArmor]` ↔ `DeadArmorConfig`).
 
 Notes:
 
@@ -16,7 +16,7 @@ Notes:
 - Values are read once at startup unless the owning module documents
   hot-reload behavior.
 
-Sections: **65** · Settings: **477**
+Sections: **69** · Settings: **517**
 
 ## Section index
 
@@ -28,17 +28,23 @@ Sections: **65** · Settings: **477**
 - [`[Combat]`](#combat) — 6 settings
 - [`[CombatCamera]`](#combatcamera) — 3 settings
 - [`[CorruptionCaptions]`](#corruptioncaptions) — 2 settings
+- [`[Costumes]`](#costumes) — 1 settings
 - [`[CrowInquisitionMindBroken]`](#crowinquisitionmindbroken) — 2 settings
 - [`[CumDisplay]`](#cumdisplay) — 8 settings
+- [`[DeadArmor]`](#deadarmor) — 22 settings
 - [`[DialogueEventProcessor]`](#dialogueeventprocessor) — 1 settings
 - [`[DialogueFonts]`](#dialoguefonts) — 16 settings
 - [`[DoreiMod]`](#doreimod) — 2 settings
+- [`[EnemyFatality]`](#enemyfatality) — 4 settings
+- [`[EnemyFatality]`](#enemyfatality) — master
+- [`[EnemyFatality.Clip.lost_leg|lost_head|StillAlive]`](#enemyfatalitycliplost_leg--lost_head--stillalive) — per-clip Enable / HP / Chance weight
+- [`[EnemyFatality.WhiteInquisitor]`](#enemyfatalitywhiteinquisitor) — per-enemy presentation (+ legacy HP/Chance fallback)
 - [`[EnemyPass]`](#enemypass) — 7 settings
 - [`[Ero]`](#ero) — 28 settings
 - [`[EventCore]`](#eventcore) — 10 settings
 - [`[FieldOfView]`](#fieldofview) — 3 settings
 - [`[Fonts]`](#fonts) — 4 settings
-- [`[General]`](#general) — 2 settings
+- [`[General]`](#general) — 3 settings
 - [`[GoblinHardcore]`](#goblinhardcore) — 1 settings
 - [`[GrabSystemNG]`](#grabsystemng) — 14 settings
 - [`[GrabThreats]`](#grabthreats) — 2 settings
@@ -77,7 +83,7 @@ Sections: **65** · Settings: **477**
 - [`[SavePoints]`](#savepoints) — 2 settings
 - [`[SlowMoVisualEffects]`](#slowmovisualeffects) — 10 settings
 - [`[SoundOnomatopoeia]`](#soundonomatopoeia) — 1 settings
-- [`[SpawnTemplates]`](#spawntemplates) — 8 settings
+- [`[SpawnTemplates]`](#spawntemplates) — 10 settings
 - [`[StruggleDifficulty]`](#struggledifficulty) — 2 settings
 - [`[TakeVengeance]`](#takevengeance) — 9 settings
 - [`[TouzokuAggression]`](#touzokuaggression) — 2 settings
@@ -85,6 +91,7 @@ Sections: **65** · Settings: **477**
 - [`[VisualIndicators]`](#visualindicators) — 5 settings
 - [`[WeaponAnimations]`](#weaponanimations) — 2 settings
 - [`[WolfMod]`](#wolfmod) — 1 settings
+- [`[DemonGorotuki]`](#demongorotuki) — 1 settings
 
 ## AirGuard
 
@@ -106,6 +113,20 @@ Sections: **65** · Settings: **477**
 | `DeathSoundsVolume` | Single | `1` | Volume for death sounds (0.0 - 1.0) |
 | `AttackSoundsGlobalInterval` | Single | `0.12` | Minimum seconds between attack sounds globally (reduces spam when fighting many enemies). |
 | `AttackSoundsPerAttackerInterval` | Single | `0.2` | Minimum seconds before same attacker can play another attack sound. |
+
+## LostSounds
+
+Scaffold for replacing / adding SFX. Loads `*.wav` from
+`sources/HellGate_sources/LostSounds/` and plays by file stem via
+`LostSoundsAudio.Play`. **No gameplay hooks by default** — enable when cues
+exist. Doc: [`docs/modules/LOST_SOUNDS.md`](../modules/LOST_SOUNDS.md).
+
+| Key | Type | Default | Description |
+|-----|------|---------|-------------|
+| `Enable` | Boolean | `false` | Master switch; loads WAVs when true. Off until cues are authored. |
+| `AssetsPath` | String | (empty) | Folder with WAVs relative to game root. Empty = `sources/HellGate_sources/LostSounds`. |
+| `MasterVolume` | Single | `1` | Global volume for all LostSounds plays (0 = mute, 1 = full). |
+| `DebugLogging` | Boolean | `false` | Detailed LostSounds logs. |
 
 ## BadEndPlayer
 
@@ -152,6 +173,14 @@ Sections: **65** · Settings: **477**
 | `Enable` | Boolean | `true` | Enable corruption caption system - red text messages when MindBroken increases |
 | `CaptionCooldown` | Single | `1.5` | Cooldown between captions in seconds (1.5 = 1.5 sec) |
 
+## Costumes
+
+| Key | Type | Default | Description |
+|-----|------|---------|-------------|
+| `Enable` | Boolean | `true` | Unlock alt costumes in the costume-change menu without Trade purchase (gunner + Vendetta illusory outfits). Does not unlock the Trade NPC or auto-complete Trade slots. |
+
+Module: [COSTUMES.md](../modules/COSTUMES.md).
+
 ## CrowInquisitionMindBroken
 
 | Key | Type | Default | Description |
@@ -171,6 +200,101 @@ Sections: **65** · Settings: **477**
 | `PregnantOffsetY` | Single | `0` | Pregnancy banner Y offset in normalized viewport coordinates |
 | `WorldDepth` | Single | `3` | Distance from camera for WorldSpace banner rendering |
 | `SizeMultiplier` | Single | `2.5` | Banner size multiplier (2.5 = 2.5x increase) |
+
+## DeadArmor
+
+| Key | Type | Default | Description |
+|-----|------|---------|-------------|
+| `Enable` | Boolean | `true` | Enable DeadArmor armor-break clips + sound preload. Independent of `ArmoredGrabThrowEnable`. Also requires `General.EnableGoreContent` (splash Gore checkbox) — when gore is off, clips do not play. When girl armor (NikuArmor) breaks on SlaveBigAxe / OtherSlavebigAxe, play a PNG death clip + sound. |
+| `PhysicalClipPath` | String | (empty) | Folder with physical/stab break frames named w1.png, w2.png, … Empty = sources/HellGate_sources/DeadArmor/PhisicDamage. |
+| `MagicClipPath` | String | (empty) | Folder with magic break frames named w1.png, w2.png, … Empty = sources/HellGate_sources/DeadArmor/MagicDamage. |
+| `DeathSoundsPath` | String | (empty) | Folder with .wav files; one is picked at random on armor break. Empty = sources/HellGate_sources/DeadArmor/DeathSounds. |
+| `BoneName` | String | `bone2` | Spine bone used as the clip spawn point on the enemy. |
+| `FallDistances` | String | `0,0.1` | How far the clip drops (world units). Comma-separated list = random pick each time. One number = always that distance. |
+| `FallSpeedMultiplier` | Single | `4.5` | Clip fall speed vs animation length. 1 = falls over the whole clip; 4.5 = reaches the bottom in ~1/4.5 of the clip. |
+| `FrameSeconds` | Single | `0.087` | Seconds per PNG frame. 0.087 ≈ 11.5 FPS. Lower = faster playback. |
+| `HoldLastFrameSeconds` | Single | `10` | After the last frame, keep it on screen this many seconds, then remove the clip. |
+| `DisplayScale` | Single | `1` | Clip size (world scale). Increase if the overlay looks too small; decrease if too large. |
+| `SoundVolume` | Single | `1` | Armor-break sound volume (0 = mute, 1 = full). |
+| `SortingOrder` | Int32 | `80` | Fallback draw order if the enemy has no MeshRenderer. Normally uses enemy mesh order + 20. |
+| `DebugLogging` | Boolean | `false` | Write detailed DeadArmor logs to BepInEx (spawn, load, throw). Keep off for normal play. |
+| `ArmoredGrabThrowEnable` | Boolean | `true` | SlaveBigAxe only, while NikuArmor is on: replace grab-via-attack (H snap) with a short hold then knockback. Independent of `Enable` (clips). After armor breaks, normal grab returns. |
+| `ArmoredGrabThrowAwayVelocity` | Single | `24` | Horizontal throw strength (vanilla nockbackspeed). Higher = farther slide. Vanilla knockout is around 16. |
+| `ArmoredGrabThrowUpVelocity` | Single | `0` | Upward throw impulse. 0 = flat horizontal throw (gravity briefly disabled during the slide). |
+| `ArmoredGrabThrowHoldSeconds` | Single | `0.7` | How long the failed-grab hold lasts before the throw (real seconds). |
+| `ArmoredGrabThrowHoldPull` | Single | `0.85` | During hold, pull the player this far beside the slave (world units). 0 = freeze without pulling. |
+| `ArmoredGrabThrowHoldLift` | Single | `0.5` | During hold, raise the player this many world units. |
+| `ArmoredGrabThrowSlowmo` | Boolean | `true` | Slow time during the armored throw. No camera zoom. Independent of GrabViaAttack / StartZoom slow-mo. |
+| `ArmoredGrabThrowSlowmoTimeScale` | Single | `0.7` | Time scale during armored-throw slow-mo. 1 = normal speed, 0.7 = 70% speed. |
+| `ArmoredGrabThrowSlowmoDuration` | Single | `0.7` | How long armored-throw slow-mo lasts (real seconds). |
+
+## EnemyFatality
+
+| Key | Type | Default | Description |
+|-----|------|---------|-------------|
+| `Enable` | Boolean | `true` | Master switch for HellGate enemy combat fatalities. Also requires `General.EnableGoreContent`. Per-enemy sections (e.g. `EnemyFatality.WhiteInquisitor`) have their own Enable. |
+| `DebugLogging` | Boolean | `false` | Write detailed EnemyFatality logs to BepInEx. Keep off for normal play. |
+| `TauntEnable` | Boolean | `true` | After a combat fatality clip finishes advancing, show a random killer taunt from `HellGateJson/EnemyFatality/<Lang>/phrases.json`. Mute list: `EnemyFatality/_shared/settings.json`. |
+| `TauntDelaySeconds` | Single | `2` | Realtime seconds to wait after the fatality clip reaches its last frame before showing the taunt. |
+
+## EnemyFatality.Clip.lost_leg / lost_head / StillAlive / HeavyCritical
+
+Per-clip gates (shared by every enemy that can play that clip):
+
+| Key | Type | Default | Description |
+|-----|------|---------|-------------|
+| `Enable` | Boolean | `true` | Off = this clip is never selected. |
+| `HpThresholdPercent` | Single | `0.2` | Clip eligible only if pre-hit HP ratio is below this (`0.2` = below 20%). `1` = any HP. |
+| `Chance` | Single | `1` | Relative weight vs other eligible clips (higher = more often). `0` = never picked. Not the fatality trigger %. |
+
+Example: `lost_leg` Chance `0.7`, `lost_head` Chance `0.3`, both HP ok → ~70% / ~30% **among clips**.  
+Overall fatality fire rate uses per-enemy `Chance` (default `0.5`).  
+`Enable = false` on `lost_head` → only `lost_leg` (if it passes HP).
+
+`HeavyCritical` is used only by magic-projectile profiles (Sisterknight, Pilgrim, …);
+it is not in the shared bisect pool.
+
+## EnemyFatality.WhiteInquisitor
+
+| Key | Type | Default | Description |
+|-----|------|---------|-------------|
+| `Enable` | Boolean | `true` | Enable White Inquisitor (`InquisitionWhite`) fatality on any damaging attack. Requires `[EnemyFatality] Enable` and `General.EnableGoreContent`. |
+| `HpThresholdPercent` | Single | `0.2` | Legacy fallback HP gate only for **unregistered** `ClipPath` folders. Registered clips use `[EnemyFatality.Clip.*]`. |
+| `Chance` | Single | `0.5` | Fatality **trigger chance** 0–1 after a clip passes Enable/HP/weight (`0.5` = 50%). Same key on every per-enemy section. |
+| `ClipPath` | String | (empty) | Force one PNG/SFX folder relative to game root. Empty = pool pick among enabled clips using `[EnemyFatality.Clip.*]`. |
+| `BoneName` | String | `body` | Aradia Spine bone used as the clip spawn point (world position sampled once; clip does not follow the bone). |
+| `ClipOffsetY` | Single | `0` | World Y offset added to the bone spawn (positive = higher). Default `1.5` for `[EnemyFatality.CrawlingCreatures]` / StillAlive; `0` for other profiles. |
+| `FallDistance` | Single | `0` | How far the clip drops downward in world units. `0` = stay at spawn (bone) position. |
+| `FallSpeedMultiplier` | Single | `4.5` | Clip fall speed vs animation length. `1` = falls over the whole clip; `4.5` = reaches bottom in ~1/4.5 of the clip. |
+| `FrameSeconds` | Single | `0.0625` | Seconds per PNG frame (scaled time). Default 0.0625 = 16 FPS. Last frame holds until Take Vengeance / respawn. |
+| `SortingOrder` | Int32 | `80` | Fallback draw order if the player has no MeshRenderer. Normally uses player mesh order + 20. |
+| `SlowMoEnable` | Boolean | `false` | Slow world time during the fatality clip. Off by default. |
+| `SlowMoTimeScale` | Single | `0.1` | `Time.timeScale` while slowed (`0.1` = 90% slowdown). Clamped to 0.05–1. |
+| `SlowMoDurationSeconds` | Single | `0.5` | How long slow-mo lasts in real (unscaled) seconds after `SlowMoStartFrame`. |
+| `SlowMoStartFrame` | Int32 | `1` | 1-based PNG frame index when slow-mo begins (`1` = immediately with the clip). Slow-mo is re-asserted every frame so vanilla death timescale cannot cancel it. |
+| `WhiteFlashEnable` | Boolean | `true` | Play a scarlet UI triple-blink at fatality start (module overlay). |
+| `SoundVolume` | Single | `1` | Volume for `Hit.wav` / `death sound.wav` / `Final.wav` / mid-clip WAV (`0` = mute, `1` = full). |
+| `MidClipSfxFile` | String | (empty) | Optional WAV file name inside the clip folder for a mid-clip cue. Default `bone-crack.wav` for `[EnemyFatality.CrawlingCreatures]`. Empty = none. |
+| `MidClipSfxAfterFrame` | Int32 | `0` | 1-based PNG frame that arms mid-clip SFX (`0` = disabled). Default `15` for CrawlingCreatures / StillAlive. |
+| `MidClipSfxDelaySeconds` | Single | `0` | Realtime seconds after `MidClipSfxAfterFrame` before playing the mid-clip WAV. Default `0` for CrawlingCreatures (plays on that frame). |
+
+Module reference (architecture + how to add enemies):
+[ENEMY_FATALITY.md](../modules/ENEMY_FATALITY.md).
+Dossiers: [ENEMY_FATALITY_DOSSIERS.md](../modules/ENEMY_FATALITY_DOSSIERS.md).
+
+Additional standard profile sections (same keys as WhiteInquisitor; defaults
+from `EnemyFatalityBoundProfile.Bind`):
+`[EnemyFatality.Bigoni]`, `[EnemyFatality.BigoniBrother]`,
+`[EnemyFatality.BlackOoze]`, `[EnemyFatality.Cocoonman]`,
+`[EnemyFatality.CrawlingCreatures]`, `[EnemyFatality.Gorotuki]`,
+`[EnemyFatality.HighInquisitionFemale]`, `[EnemyFatality.Minotaurosu]`,
+`[EnemyFatality.Slaughterer]`, `[EnemyFatality.SlaveBigAxe]`,
+`[EnemyFatality.TouzokuNormal]`, `[EnemyFatality.Goblin]`,
+`[EnemyFatality.GobBigAlter]`, `[EnemyFatality.GobRider]`,
+`[EnemyFatality.CrawlingSisterKnight]`, `[EnemyFatality.InquisitionRED]`,
+`[EnemyFatality.Snailshell]`, `[EnemyFatality.Pilgrim]`,
+`[EnemyFatality.Sisterknight]`, `[EnemyFatality.SkeltonOoze]`
+(HeavyCritical = magic projectile only; Tyoukyoushi excluded).
 
 ## DialogueEventProcessor
 
@@ -248,16 +372,16 @@ Sections: **65** · Settings: **477**
 | `playerMpEffectiveness` | Single | `0` | How strongly mp effects struggle difficulty (0-1) (0=Disabled) |
 | `playerPleasureEffectiveness` | Single | `1.5` | How strongly pleasure effects struggle difficulty (0-1) (0=Disabled) |
 | `enableCriticalStruggle` | Boolean | `false` | enables a certain chance to double your sp gain each time you struggle, but you could also lose that amount of progress (chances are based on your Aradia's Luck) Let's go gambling! |
-| `allowPotionEasyEscape` | Boolean | `false` | Allows use of a potion to escape any struggle instantly |
+| `allowPotionEasyEscape` | Boolean | `true` | Allows use of a potion to escape any struggle instantly. EASY/MEDIUM/HARD presets also ship `true`. |
 | `enableImpossibleStruggles` | Boolean | `true` | Enable to make some struggles impossible based on the animation (When disabled, struggles will simply be harder instead of impossible) |
 
 ## EventCore
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
-| `Enable` | Boolean | `true` | Enable EventCore (modal dialogues / branches; spawn lines use \|ec_event=). HellGateJson/EventCore content is inactive when false. |
+| `Enable` | Boolean | `true` | Enable EventCore (modal dialogues / branches; spawn lines use \|ec_event=; F11 catalog C). HellGateJson/EventCore content is inactive when false. |
 | `DevHotkey` | KeyCode | `F9` | In-game: open DevEventId modal when EventCore is enabled Range: None, Backspace, Tab, Clear, Return, Pause, Escape, Space, Exclaim, DoubleQuote, Hash, Dollar, Ampersand, Quote, LeftParen, RightParen, Asterisk, Plus, Comma, Minus, Period, Slash, Alpha0, Alpha1, Alpha2, Alpha3, Alpha4, Alpha5, Alpha6, Alpha7, Alpha8, Alpha9, Colon, Semicolon, Less, Equals, Greater, Question, At, LeftBracket, Backslash, RightBracket, Caret, Underscore, BackQuote, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z, Delete, Keypad0, Keypad1, Keypad2, Keypad3, Keypad4, Keypad5, Keypad6, Keypad7, Keypad8, Keypad9, KeypadPeriod, KeypadDivide, KeypadMultiply, KeypadMinus, KeypadPlus, KeypadEnter, KeypadEquals, UpArrow, DownArrow, RightArrow, LeftArrow, Insert, Home, End, PageUp, PageDown, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10, F11, F12, F13, F14, F15, Numlock, CapsLock, ScrollLock, RightShift, LeftShift, RightControl, LeftControl, RightAlt, LeftAlt, RightApple, RightCommand, LeftCommand, LeftApple, LeftWindows, RightWindows, AltGr, Help, Print, SysReq, Break, Menu, Mouse0, Mouse1, Mouse2, Mouse3, Mouse4, Mouse5, Mouse6, JoystickButton0, JoystickButton1, JoystickButton2, JoystickButton3, JoystickButton4, JoystickButton5, JoystickButton6, JoystickButton7, JoystickButton8, JoystickButton9, JoystickButton10, JoystickButton11, JoystickButton12, JoystickButton13, JoystickButton14, JoystickButton15, JoystickButton16, JoystickButton17, JoystickButton18, JoystickButton19, Joystick1Button0, Joystick1Button1, Joystick1Button2, Joystick1Button3, Joystick1Button4, Joystick1Button5, Joystick1Button6, Joystick1Button7, Joystick1Button8, Joystick1Button9, Joystick1Button10, Joystick1Button11, Joystick1Button12, Joystick1Button13, Joystick1Button14, Joystick1Button15, Joystick1Button16, Joystick1Button17, Joystick1Button18, Joystick1Button19, Joystick2Button0, Joystick2Button1, Joystick2Button2, Joystick2Button3, Joystick2Button4, Joystick2Button5, Joystick2Button6, Joystick2Button7, Joystick2Button8, Joystick2Button9, Joystick2Button10, Joystick2Button11, Joystick2Button12, Joystick2Button13, Joystick2Button14, Joystick2Button15, Joystick2Button16, Joystick2Button17, Joystick2Button18, Joystick2Button19, Joystick3Button0, Joystick3Button1, Joystick3Button2, Joystick3Button3, Joystick3Button4, Joystick3Button5, Joystick3Button6, Joystick3Button7, Joystick3Button8, Joystick3Button9, Joystick3Button10, Joystick3Button11, Joystick3Button12, Joystick3Button13, Joystick3Button14, Joystick3Button15, Joystick3Button16, Joystick3Button17, Joystick3Button18, Joystick3Button19, Joystick4Button0, Joystick4Button1, Joystick4Button2, Joystick4Button3, Joystick4Button4, Joystick4Button5, Joystick4Button6, Joystick4Button7, Joystick4Button8, Joystick4Button9, Joystick4Button10, Joystick4Button11, Joystick4Button12, Joystick4Button13, Joystick4Button14, Joystick4Button15, Joystick4Button16, Joystick4Button17, Joystick4Button18, Joystick4Button19, Joystick5Button0, Joystick5Button1, Joystick5Button2, Joystick5Button3, Joystick5Button4, Joystick5Button5, Joystick5Button6, Joystick5Button7, Joystick5Button8, Joystick5Button9, Joystick5Button10, Joystick5Button11, Joystick5Button12, Joystick5Button13, Joystick5Button14, Joystick5Button15, Joystick5Button16, Joystick5Button17, Joystick5Button18, Joystick5Button19, Joystick6Button0, Joystick6Button1, Joystick6Button2, Joystick6Button3, Joystick6Button4, Joystick6Button5, Joystick6Button6, Joystick6Button7, Joystick6Button8, Joystick6Button9, Joystick6Button10, Joystick6Button11, Joystick6Button12, Joystick6Button13, Joystick6Button14, Joystick6Button15, Joystick6Button16, Joystick6Button17, Joystick6Button18, Joystick6Button19, Joystick7Button0, Joystick7Button1, Joystick7Button2, Joystick7Button3, Joystick7Button4, Joystick7Button5, Joystick7Button6, Joystick7Button7, Joystick7Button8, Joystick7Button9, Joystick7Button10, Joystick7Button11, Joystick7Button12, Joystick7Button13, Joystick7Button14, Joystick7Button15, Joystick7Button16, Joystick7Button17, Joystick7Button18, Joystick7Button19, Joystick8Button0, Joystick8Button1, Joystick8Button2, Joystick8Button3, Joystick8Button4, Joystick8Button5, Joystick8Button6, Joystick8Button7, Joystick8Button8, Joystick8Button9, Joystick8Button10, Joystick8Button11, Joystick8Button12, Joystick8Button13, Joystick8Button14, Joystick8Button15, Joystick8Button16, Joystick8Button17, Joystick8Button18, Joystick8Button19. |
-| `DevEventId` | String | `eventcore_broker_gate` | Event id loaded from eventcore_manifest.json (e.g. eventcore_broker_gate, eventcore_smoke_test) |
+| `DevEventId` | String | `eventcore_broker_gate` | Event id loaded from eventcore_manifest.json (e.g. eventcore_broker_gate, eventcore_fsp_bandits_sex_paid) |
 | `ModalDimAlpha` | Single | `0` | Darkening behind the text/button panel only (not across the full decorative PNG width). 0 = off; higher values add subtle dimming under the UI. Range: From 0 to 1. |
 | `HideVanillaHudDuringModal` | Boolean | `true` | While the EventCore modal is open, disable the vanilla gameplay HUD (root Canvas). When false, the HUD stays visible under the modal. |
 | `BrokerPortraitAradiaScale` | Single | `1` | Display scale for Aradia (left) broker portraits. Lower if she looks larger than Touzoku despite smaller PNG width. Range: From 0.25 to 2. |
@@ -288,7 +412,8 @@ Sections: **65** · Settings: **477**
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | `ShowSplashScreenOnStartup` | Boolean | `true` | Show HELLGATE splash screen on game startup. Set to false to skip splash screen. |
-| `HellGateLanguage` | String | (empty) | Selected language for HELLGATE mod. Available: RU, EN, JP, CN, KR, FR, DE, PT, BR, ES. Set automatically on first language selection. |
+| `EnableGoreContent` | Boolean | `true` | Enable HellGate gore presentation: DeadArmor death PNG clips, CustomDeath lethal traps, and EnemyFatality combat fatalities (e.g. White Inquisitor). Toggled from splash **Options** (HellGate Gore Content). Armored grab-throw is separate (`[DeadArmor] ArmoredGrabThrowEnable`). |
+| `HellGateLanguage` | String | (empty) | Selected language for HELLGATE mod. Available: RU, EN, JP, CN, KR, FR, DE, PT, BR, ES. Set on first-boot flag picker or from splash **Options → Language** (saves + quits; relaunch required). |
 
 ## GoblinHardcore
 
@@ -345,18 +470,31 @@ Sections: **65** · Settings: **477**
 
 ## HellTraps
 
+During a lethal death clip, nearby combat AI is frozen and grabs / further
+enemy hits are blocked automatically (shared `LethalMagicTrapEroSuppression`;
+see [HELL_TRAPS.md](../modules/HELL_TRAPS.md)). No separate cfg toggle.
+
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
-| `EnableLethalMagicTrap` | Boolean | `true` | Enable lethal magic trap spawn key 'lethal_magictrap' (legacy alias: letal_magictrap; 100x bullet damage by default) and custom PNG death clip on kill. |
+| `EnableLethalMagicTrap` | Boolean | `true` | Enable lethal magic trap spawn key 'lethal_magictrap' (legacy alias: letal_magictrap; 100x bullet damage by default) and custom PNG death clip on kill. Also requires `General.EnableGoreContent`. |
 | `LethalMagicTrapDamageMultiplier` | Single | `100` | Damage multiplier vs vanilla SetupFireball enmATK (vanilla ~70). Lethal default: 100 (= ~7000 per hit). |
 | `DeathClipAssetsPath` | String | (empty) | Folder with numbered PNG frames (1.png..15.png), relative to game root. Empty = sources/HellGate_sources/CustomDeath/Exp_Death. |
 | `LethalMagicTrapDeathClipDisplayScale` | Single | `1` | Uniform world scale for lethal magic trap death PNG overlay (1 = native size at 100 pixels per unit; Exp_Death default frames are 1400x835 px). |
 | `LethalMagicTrapActTimeMultiplier` | Single | `1` | Delay before lethal trap fires (multiplier on vanilla acttime ~1.2s). Lower = faster shot, higher = longer warning icon. |
 | `LethalMagicTrapBulletSpeedMultiplier` | Single | `1` | SetupFireball/Fireball Xspd/Yspd/startYspd multiplier for lethal_magictrap bullets. |
 | `LethalMagicTrapSpawnScale` | Single | `1` | Uniform scale on spawned lethal trap instance (trigger collider + visuals). Use for wider/narrower activation area. |
-| `EnableLethalCocoonTrap` | Boolean | `true` | Enable lethal cocoon trap spawn key 'lethal_cocoontrap' (alias: Lethal_cocoontrap). Based on cocoontrap; uses LethalMagicTrapDamageMultiplier vs vanilla 10 ATK; WebSpike_Death PNG clip at trap position. |
+| `EnableLethalCocoonTrap` | Boolean | `true` | Enable lethal cocoon trap spawn key 'lethal_cocoontrap' (alias: Lethal_cocoontrap). Based on cocoontrap; uses LethalMagicTrapDamageMultiplier vs vanilla 10 ATK; WebSpike_Death PNG clip at trap position. Also requires `General.EnableGoreContent`. |
 | `LethalCocoonTrapDeathClipPath` | String | (empty) | Folder with numbered PNG frames for lethal cocoon death (PPU 100). Empty = sources/HellGate_sources/CustomDeath/WebSpike_Death. |
 | `LethalCocoonTrapDeathClipDisplayScale` | Single | `1` | Uniform world scale for lethal cocoon death PNG overlay (same bone playback as magic trap; 1 = native at 100 PPU; WebSpike_Death ~823x984 px vs Exp_Death ~1400x835). |
+| `EnableLethalLightningTrap` | Boolean | `true` | Enable lethal lightning button spawn key `lightningTrap_button` (alias `lightingTrap_button`). Based on `trap_button`; warning at trap → delay → Lightningstrike VFX always; lethal ATK + `LightningFatalDead` PNG only if player still on button (trap-anchored clip + black screen). Also requires `General.EnableGoreContent`. |
+| `LethalLightningTrapDeathClipPath` | String | (empty) | Folder with numbered PNG frames for lethal lightning death (PPU 100). Empty = sources/HellGate_sources/CustomDeath/LightningFatalDead. |
+| `LethalLightningTrapDeathClipDisplayScale` | Single | `1` | Uniform world scale for lethal lightning death PNG overlay (trap-anchored + black playback). |
+| `LethalLightningTrapWarningDelay` | Single | `1.2` | Seconds after stepping on the button before the lightning strike. |
+| `LethalLightningTrapUseWarningIcon` | Boolean | `true` | Spawn vanilla TargetIcon_4 at the button world position when the trap arms. |
+| `LethalLightningTrapUseLightningVfx` | Boolean | `true` | Spawn Lightningstrike bolt VFX at the trap on strike (always; kill is separate). |
+| `LethalLightningTrapUseStrikeShake` | Boolean | `true` | Camera shake `Gun` + SE `atk_soko` with the strike. |
+| `LethalLightningTrapSpawnScale` | Single | `1` | Uniform scale on spawned `lightningTrap_button` instance. |
+| `LethalLightningTrapCooldownSeconds` | Single | `3` | Seconds after a cycle (hit or miss) before the button can arm again. |
 
 ## HSceneBlackBackground
 
@@ -408,7 +546,7 @@ Sections: **65** · Settings: **477**
 | `HScenePercentPerSecond` | Single | `0.1` | Passive MindBroken gain per second while in H-scene (eroflag + erodown). 0.1 = +0.1%/sec. 0 = disable. Stacks with enemy-specific ticks (Mutude, Pilgrim, etc.). |
 | `StruggleBonusPerStep` | Single | `0.3` | Additional struggle difficulty per Mind Broken step (0.30 = +30%) |
 | `MaxPercent` | Single | `1` | Maximum Mind Broken value (1.0 = 100%) |
-| `BadEndCountdownDuration` | Single | `180` | Countdown duration in seconds before Bad End triggers at 100% MindBroken (default: 180.0 = 3 minutes) |
+| `BadEndCountdownDuration` | Single | `180` | Countdown duration in seconds before Bad End triggers at 100% MindBroken (default: 180.0 = 3 minutes). Uses unscaled time; `MindBrokenRealtimeGate` pauses while the Unity window is not foreground and discards post-minimize hitch frames (see MIND_BROKEN.md). |
 | `BadEndResetThreshold` | Single | `0.9` | MindBroken percentage threshold for countdown reset (default: 0.9 = 90%, timer resets if MB drops below this) |
 | `HighRagePassiveEnable` | Boolean | `true` | While Rage bar is above HighRageThresholdPercent, apply passive MindBroken gain (encourages spending Rage). |
 | `HighRageThresholdPercent` | Single | `60` | Rage percent (0-103) above which passive MindBroken applies (e.g. 60 = Tier-2 gate and above). |
@@ -609,7 +747,7 @@ Sections: **65** · Settings: **477**
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | `Enable` | Boolean | `true` | Enable dynamic hideout shelter attack events (children in ParishChurch are attacked while Aradia is away). |
-| `TriggerChance` | Single | `0.2` | Chance (0.0–1.0) that a shelter attack is rolled after ArmDelaySeconds following any zone transition (door, altar, teleport). 1.0 = always try, 0.0 = never. |
+| `TriggerChance` | Single | `0.05` | Chance (0.0–1.0) that a shelter attack is rolled after ArmDelaySeconds following any zone transition (door, altar, teleport). 1.0 = always try, 0.0 = never. |
 | `ArmDelaySeconds` | Single | `2` | Real-time seconds after a zone transition before the trigger chance is rolled once. Avoids hitches right after loads. |
 | `TimerSeconds` | Single | `60` | Real-time seconds after a successful arm roll before the assault can begin in ParishChurch. |
 | `AlertSeconds` | Single | `15` | How many seconds before the assault deadline the warning phrases start appearing above Aradia (clamped to TimerSeconds). |
@@ -674,8 +812,8 @@ Sections: **65** · Settings: **477**
 | `WindowDurationMax` | Single | `3.5` | Maximum QTE window duration in seconds |
 | `CooldownDurationMin` | Single | `2` | Minimum cooldown between windows in seconds |
 | `CooldownDurationMax` | Single | `4` | Maximum cooldown between windows in seconds |
-| `ButtonPositionX` | Single | `0` | Shift the whole QTE button row left/right from screen center (NOT spacing). Pixels at 1080p ref: negative = left, positive = right. Example: -150 left, +150 right. ButtonSpacing is separate. |
-| `ButtonPositionY` | Single | `70` | Distance from top of screen to the button row center, in pixels (1080p reference). Default 70 matches pre-1.2.1 HUD height. |
+| `ButtonPositionX` | Single | `0` | Shift the whole QTE button row left/right from screen center (NOT spacing). Pixels at 1080p ref: negative = left, positive = right. Example: -150 left, +150 right. ButtonSpacing is separate. **Also** the horizontal screen target for combat `FatalityDeathIcon` (see EnemyFatality). |
+| `ButtonPositionY` | Single | `70` | Distance from top of screen to the button row center, in pixels (1080p reference). Default 70 matches pre-1.2.1 HUD height. **Also** the vertical screen target for combat `FatalityDeathIcon` before the fixed −70px nudge. |
 | `ButtonSpacing` | Single | `100` | Gap between adjacent QTE buttons in the row (does NOT move the row left/right — use ButtonPositionX for that) |
 | `ColorChangeInterval` | Single | `1` | Color change interval for W/S buttons in seconds |
 | `PressIndicatorDuration` | Single | `0.15` | Visual press indicator duration (green/red flash) in seconds |
@@ -683,6 +821,17 @@ Sections: **65** · Settings: **477**
 | `MaxPinkShadowIntensity` | Single | `1` | Maximum pink neon shadow brightness at 100% MindBroken (1.0 = 100%, 0.0 = no shadow) |
 | `ComboMilestone` | Int32 | `10` | Combo threshold for bonus activation (counter of correct yellow button presses) |
 | `EnableQTESystem` | Boolean | `true` | Enable or disable QTE System 3.0 (struggle system) |
+
+## QTEFreeStruggle
+
+Alternate Struggle input mode **inside** QTE 3.0 (not a separate QTE stack).
+Requires `[QTE] EnableQTESystem`. Full behavior:
+[QTE_STRUGGLE_AND_GAMEPLAY.md](../modules/QTE_STRUGGLE_AND_GAMEPLAY.md)
+§ Free Struggle.
+
+| Key | Type | Default | Description |
+|-----|------|---------|-------------|
+| `Enable` | Boolean | `false` | Splash **Options → Simple QTE**. When true (and `EnableQTESystem` on): during Struggle, A/D and W/S windows stay open permanently; each WASD press grants the same SP as a mouse/E click (`ClickSPGainBase` / `ClickSPGainMin`). Yellow/red W/S bonuses and cooldown wrong-key penalties are disabled. HUD uses a compact **36px** d-pad cross (default QTE stays the 56px row). Live toggle — no restart. Preserved across Easy/Medium/Hard preset copy. |
 
 ## RageMode
 
@@ -798,10 +947,12 @@ Sections: **65** · Settings: **477**
 | `PreloadScenes` | String | (empty) | Deprecated — ignored. Leave empty. |
 | `DumpAvailableCatalog` | Boolean | `true` | Write cached trap template keys to HellGateSpawnPoint/AVAILABLE_SPAWN_TEMPLATES_RUNTIME.txt when the catalog grows. |
 | `EnablePersistentCache` | Boolean | `true` | Save discovered spawn keys to SPAWN_TEMPLATE_DISK_CACHE.txt and restore them on next launch (after leaving title menu). |
-| `PreloadDiskCacheDuringSplash` | Boolean | `true` | While the HELLGATE disclaimer/splash is visible, preload spawn template scenes in the background so gameplay entry does not hitch. |
+| `PreloadDiskCacheDuringSplash` | Boolean | `true` | While the HELLGATE disclaimer/splash Loading gate is visible, hydrate spawn template scenes (and boss disk-cache scenes) so Start unlocks only after cache is ready. Progress shows scene counts. |
 | `WhitelistSceneLoad` | Boolean | `false` | Deprecated — use persistent disk cache instead. Additive whitelist scene load breaks Gametitle and is off by default. |
 | `EnableEnemyPrefabDiskCache` | Boolean | `true` | Save discovered boss/scene-locked enemy keys to ENEMY_PREFAB_DISK_CACHE.txt and restore them on demand. |
 | `EnableWhitelist` | Boolean | `true` | Pre-cache keys from SPAWN_TEMPLATE_WHITELIST.txt via Resources scan (scene keys are saved to disk cache when visited). |
+| `AuthoringUiEnable` | Boolean | `true` | F11 Spawn System Editor V2.0: Point, catalogs (Enemies / Hostage / Trap / Lethal / Decor / Gold / EventTrap / EventCore), Place / Edit / Delete. |
+| `AuthoringPauseGameplay` | Boolean | `true` | While F11 authoring is ON, set timeScale=0 and lock player control (IMGUI still works). Cuts FPS hit from live combat/AI. |
 
 ## StruggleDifficulty
 
@@ -887,4 +1038,10 @@ Sections: **65** · Settings: **477**
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | `AssetsPath` | String | (empty) | Path to Wolf Mod Spine folder (relative to game root). Empty = use default: sources/HellGate_sources/Wolf Mod Spine. MUST contain Enemy/WolfE.png and ERO/Wolf.png! |
+
+## DemonGorotuki
+
+| Key | Type | Default | Description |
+|-----|------|---------|-------------|
+| `AssetsPath` | String | (empty) | Path to Demon_gorotuki Spine folder (relative to game root). Empty = sources/HellGate_sources/Gorutoki. Expects Gorutoki/Demon_gorotuki.* and Gorutoki ERO/Demon_gorotuki_ERO.* |
 

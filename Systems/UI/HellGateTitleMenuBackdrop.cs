@@ -9,6 +9,7 @@ namespace NoREroMod.Systems.UI;
 
 /// <summary>
 /// Suppresses vanilla Gametitle background layers while HellGate title-menu art is active.
+/// Restored to match FOR_CHEK_OLD_VERSION working title-menu behavior.
 /// </summary>
 internal static class HellGateTitleMenuBackdrop
 {
@@ -36,11 +37,10 @@ internal static class HellGateTitleMenuBackdrop
         if (!IsGametitleActive())
             return;
 
-        if (_applied)
-            return;
-
         try
         {
+            // Always re-scan: returning from Config/Gallery re-enables vanilla layers.
+            Reset();
             HideVanillaSceneBackgrounds();
             HideMenuCanvasBackgrounds();
             SetCamerasBlack();
@@ -76,7 +76,7 @@ internal static class HellGateTitleMenuBackdrop
             return;
         }
 
-        if (HellGateSplashScreen.IsTitleMenuBackdropActive)
+        if (HellGateSplashScreen.IsTitleMenuModeLatched)
             Apply();
     }
 

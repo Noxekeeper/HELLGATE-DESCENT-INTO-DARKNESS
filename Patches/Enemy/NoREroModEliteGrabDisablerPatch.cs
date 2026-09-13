@@ -159,6 +159,9 @@ namespace NoREroMod.Patches.Enemy
             if (!(Plugin.disableOriginalEliteGrab?.Value ?? true) || enemy == null) return;
             var jpName = Traverse.Create(enemy).Field("JPname").GetValue() as string;
             if (string.IsNullOrEmpty(jpName) || !jpName.Contains("<SUPER>")) return;
+            // Pack-forced elites keep NoREroMod elite tint so authoring |elite=1 is visible.
+            if (NoREroMod.Systems.Spawn.Patches.HellGateForceElitePatch.HasForceElite(enemy))
+                return;
             try
             {
                 foreach (var spine in enemy.GetComponentsInChildren<SkeletonAnimation>())

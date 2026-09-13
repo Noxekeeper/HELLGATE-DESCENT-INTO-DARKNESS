@@ -131,8 +131,8 @@ internal static class OffspringArchetypeCatalog
         SetPool("mafia", "MafiaBossCustom", "Mafia");
         SetPool("church", "Sisterknight", "PrisonOfficer");
         SetPool("demons", "Mutude", "Goblin");
-        SetPool("undead", "Undead");
-        SetPool("monsters", "BlackOoze");
+        SetPool("undead", "Undead", "BlackOoze");
+        SetPool("monsters", "Kinoko");
     }
 
     private static void SetPool(string factionKey, params string[] archetypes)

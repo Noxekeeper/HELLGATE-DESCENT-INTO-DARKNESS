@@ -1,0 +1,114 @@
+{
+  "intervalSeconds": 10,
+  "ui": {
+    "cachingMessage": "HellGate 콘텐츠 캐싱 중 — 잠시 기다려 주세요…",
+    "doneButton": "완료",
+    "tutorialTitle": "튜토리얼"
+  },
+  "tips": [
+    {
+      "phase": "loading",
+      "id": "manifesto",
+      "text": "HellGate에서는 모든 모듈을 취향에 맞게 조정할 수 있습니다.\n\n자세한 안내는 <b>HELLGATE_README</b> 폴더의 <b>Manifesto</b> 가이드를 참고하세요."
+    },
+    {
+      "phase": "loading",
+      "id": "menu_note",
+      "text": "<b>참고</b>\n\n메뉴를 닫으려면 <b>[Space]</b>(점프)를 누르세요.\n<b>[Space]</b>는 <b>취소</b> 버튼이기도 합니다.\n\n확인하려면 <b>[E]</b>를 누르세요."
+    },
+    {
+      "phase": "loading",
+      "id": "rage_meter",
+      "text": "<b>분노</b>\n\n분노 게이지는 다음 상황에서 채워집니다:\n• 데미지를 줄 때\n• 막기 또는 패리 시\n• 적 처치 시\n\n분노는 몸부림 중 수동으로 소모됩니다.\n분노가 <b>50%</b> 이상이면 MindBroken 게이지가 상승합니다."
+    },
+    {
+      "phase": "loading",
+      "id": "mindbroken",
+      "text": "<b>MindBroken</b>\n\n정신 붕괴는 몸부림 난이도에 직접 영향을 줍니다.\n수치가 높을수록 붙잡힌 상태에서 스태미나 연타가 어려워집니다.\n\nMindBroken은 다음으로 상승합니다:\n• H몸부림(수동)\n• 일부 애니메이션(가속 상승)\n• 분노 <b>50%</b> 이상일 때 수동 상승\n• 몸부림 중 상하 QTE 화살표 미스"
+    },
+    {
+      "phase": "loading",
+      "id": "rage_tiers",
+      "text": "<b>분노 모드 [G]</b> — 3단계\n\n<b>1단계</b>(약 5초) — 최대 9타 강력 콤보.\n\n<b>2단계</b>(약 10초) — 같은 콤보에 즉시 탈출 추가. 약 5초 대기 시 정신이 무너지기 시작합니다.\n\n<b>3단계</b>(약 15초) — 악마의 날개와 동일한 이점.\n\n분노 활성화 중에는 넘어지거나 붙잡히지 않습니다.\n활성화 전에 붙잡히면 분노 게이지가 매우 빠르게 줄어듭니다."
+    },
+    {
+      "phase": "loading",
+      "id": "controls",
+      "holdUntilDone": true,
+      "text": "<b>기본 조작</b>\n\n<b>[LMB]</b> — 공격(3타 콤보)\n<b>[RMB]</b> — 막기(공중 가능). EASY에서는 길게 누르면 잡기도 완전 차단\n<b>[RMB]+[W]</b> — 패리\n<b>[E]</b> 패리 후 — 복수 일격(분노 15 소모, 최대 100)\n<b>[F]</b> — 회피(무적 프레임). EASY에서는 스태미나 20 소모\n<b>[T]</b> — 불릿타임\n<b>[G]</b> — 분노 모드(3단계)\n<b>[V]</b> — 전투 카메라(3가지 모드)\n<b>[H]</b> — 세력 관계\n\n<b>[E]</b> 3초 길게 — 눕기 / 항복\n<b>[E]</b> 6초 길게 — 게임 오버\n<b>[ESC]+[Enter]</b> — 즉사\n<b>[F1]</b> — 치트 메뉴(자기 책임)\n<b>[F11]</b> + RMB — 적, 함정, 이벤트 즉시 리스폰\n<b>[Space]</b> — 뒤로 / 나가기"
+    },
+
+    {
+      "phase": "guide",
+      "id": "parry",
+      "text": "<b>패리:</b>\n\n막기를 유지하고 공격 직전에 <b>[W]</b>를 눌러 적을 스턴시킵니다.\n\n가까이에서 <b>[E]</b>를 누르면 복수 일격 — 시간이 느려지며 큰 데미지를 줍니다. <b>분노 15</b> 소모.\n\n화살과 도끼는 반사되고, 마법은 흡수됩니다. 타이밍을 놓치면 공격이나 잡기가 그대로 들어옵니다.",
+      "video": "Tutorial Guide source/Parry.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "rage",
+      "text": "<b>분노 모드:</b>\n\n<b>[G]</b>를 누르면 피로 없이 9타 검 콤보를 사용합니다.\n\n분노 활성 중에는 넘어지거나 붙잡히지 않으며, 더 높은 데미지를 줍니다.\n\n계속 싸우세요 — 오래 대기하면 정신이 무너지기 시작합니다.",
+      "video": "Tutorial Guide source/Rage.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "timeslomo",
+      "text": "<b>불릿타임:</b>\n\n<b>[T]</b>로 분노를 소모하여 시간을 늦춥니다.\n\n매초 분노가 소모되며 — 정신도 깎여 나갑니다.",
+      "video": "Tutorial Guide source/TimeSloMo.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "healthpotion",
+      "text": "<b>체력 물약:</b>\n\n체력 물약을 사용하면 잡기에서 즉시 탈출할 수 있습니다.",
+      "video": "Tutorial Guide source/HealthPotion.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "ambushthoughts",
+      "text": "<b>마녀 감지:</b>\n\n함정 근처에서 Aradia의 마녀 감지가 매복을 경고할 수 있습니다.\n\n치명적인 함정도 감지합니다.",
+      "video": "Tutorial Guide source/AmbushThoughts.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "block",
+      "text": "<b>막기:</b>\n\n<b>[RMB]</b>를 길게 눌러 받는 데미지를 줄이고 넘어짐과 잡기를 방지합니다.\n\n공중에서도 작동합니다.",
+      "video": "Tutorial Guide source/Block.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "rageescape",
+      "text": "<b>분노 탈출:</b>\n\n분노 <b>2</b>단계 또는 <b>3</b>단계일 때, 붙잡힌 상태에서 <b>[G]</b>를 눌러 탈출합니다.\n\n게이지를 주시하세요 — 잡기 중 분노가 소모되어 부족할 수 있습니다.",
+      "video": "Tutorial Guide source/RageEscape.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "qte",
+      "text": "<b>Struggle Out:</b>\n\n스태미나를 채워서 탈출합니다.\n\n1) Struggle Out이 보이면 — <b>[LMB]</b>를 연타하세요. <b>[E]</b> 연타도 가능합니다.\n\n2) 좌우 화살표 <b>[←]</b> <b>[→]</b>가 보이면 — <b>[A]</b> / <b>[D]</b>를 연타합니다. 누를 때마다 스태미나가 쌓입니다.\n\n표시와 화살표가 사라졌을 때 아무것도 누르지 마세요 — 스태미나를 잃습니다.",
+      "video": "Tutorial Guide source/QTE.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "qte2",
+      "text": "<b>위험한 탈출:</b>\n\n<color=#E8C84A>노란색</color>과 <color=#E05050>빨간색</color> 상하 화살표 <b>[↑]</b> <b>[↓]</b>가 나타나면 서로 색이 바뀝니다.\n\n표시기가 보이는 동안 <color=#E8C84A>노란색</color> 화살표를 여러 번 누르세요.\n적중 시 스태미나를 더 얻으며, 연속 적중 시 보너스가 붙습니다.\n\n<color=#E05050>빨간색</color>을 누르거나 — 화살표가 없을 때 누르면 — 스태미나가 전부 사라집니다.",
+      "video": "Tutorial Guide source/QTE2.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "dash",
+      "text": "<b>회피와 Mercy:</b>\n\n<b>[F]</b>로 회피하면 데미지를 피하고 Mercy가 발동됩니다.\n\nMercy 동안 적 근처에서 공격하지 않으면 세력 호감도가 <b>+5%</b> 상승합니다.\n\n호감도 <b>+68%</b> 이상이면 우호적 중립: 해당 세력이 먼저 공격하지 않습니다.\n\n세력 관계를 확인하려면 <b>[H]</b>를 누르세요.",
+      "video": "Tutorial Guide source/Dash.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "combatcamera",
+      "text": "<b>전투 카메라:</b>\n\n<b>[V]</b>를 눌러 세 가지 모드를 전환합니다: 기본 → 멀리 → 더 멀리.",
+      "video": "Tutorial Guide source/CombatCamera.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "hcameracontrol",
+      "text": "<b>H씬 카메라:</b>\n\nHellGate에서는 H씬 중 카메라를 직접 조작할 수 있습니다.\n\n방향키 <b>[↑]</b> <b>[↓]</b> <b>[←]</b> <b>[→]</b> — 부드러운 이동.\n<b>[Space]</b> — 줌 전환(여러 단계).\n\n게임이 애니메이션 중심을 항상 맞추지는 않으니, 필요할 때 직접 조정하세요.",
+      "video": "Tutorial Guide source/H-CameraControl.mp4"
+    }
+  ]
+}

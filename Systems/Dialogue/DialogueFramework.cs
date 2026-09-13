@@ -68,9 +68,9 @@ internal static class DialogueFramework
         GoblinHSceneDialogues.Initialize();
         GoblinHSceneDialogues.SetDisplay(_display);
 
-        // Initialize Goblin custom phrases system during H-scenes
-        GoblinHSceneDialogues.Initialize();
-        GoblinHSceneDialogues.SetDisplay(_display);
+        // Initialize SlaveBigAxe custom phrases + Aradia responses
+        SlaveBigAxeHSceneDialogues.Initialize();
+        SlaveBigAxeHSceneDialogues.SetDisplay(_display);
 
         // Initialize PC (Aradia) response system to TouzokuNormal lines
         AradiaTouzokuNormalDialogues.Initialize();
@@ -146,6 +146,7 @@ internal static class DialogueFramework
         TouzokuAxeHSceneDialogues.Reset();
         InquisitionBlackHSceneDialogues.Reset();
         KakasiHSceneDialogues.Reset();
+        SlaveBigAxeHSceneDialogues.Reset();
         AradiaTouzokuNormalDialogues.Reset();
         AradiaInquisitionBlackDialogues.Reset();
         BiscordDialogues.Reset();
@@ -231,10 +232,12 @@ internal static class DialogueFramework
         // Determine bone for onomatopoeia based on enemy type
         string boneName = GetOnomatopoeiaBoneForEnemy(enemyInstance);
 
+        bool isSlaveBigAxe = enemyInstance?.GetType().Name == "SlaveBigAxeEro";
         BonePosition bonePos = new BonePosition
         {
             BoneName = boneName,
-            UseScreenCenter = false
+            UseScreenCenter = false,
+            WorldOffsetY = isSlaveBigAxe ? 0.15f : 0f
         };
 
             DialogueStyle style = new DialogueStyle
@@ -243,7 +246,8 @@ internal static class DialogueFramework
                 IsBold = (Plugin.GetFontStyle(Plugin.enemyFontStyle.Value) & FontStyle.Bold) != 0,
                 IsItalic = (Plugin.GetFontStyle(Plugin.enemyFontStyle.Value) & FontStyle.Italic) != 0,
                 Color = new Color(1f, 0.4f, 0.8f), // Pink color (RGB: 255, 102, 204)
-                VerticalOffset = -50f, // 50px below bone
+                // SlaveBigAxe: +25px above bone; others: 50px below
+                VerticalOffset = isSlaveBigAxe ? 25f : -50f,
                 HorizontalOffset = 0f
             };
 
@@ -259,6 +263,12 @@ internal static class DialogueFramework
         if (enemyInstance?.GetType().Name == "goblinero")
         {
             return "bone37";
+        }
+
+        // SlaveBigAxeEro — onomatopoeia on bone65
+        if (enemyInstance?.GetType().Name == "SlaveBigAxeEro")
+        {
+            return "bone65";
         }
 
         // Use bone13 for other enemies

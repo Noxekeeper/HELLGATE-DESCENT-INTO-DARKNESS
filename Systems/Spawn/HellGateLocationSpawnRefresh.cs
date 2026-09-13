@@ -565,7 +565,7 @@ internal static class HellGateLocationSpawnRefresh
             if (enemy.GetComponent<NoREroMod.Systems.Pregnancy.ShelterAttack.ShelterAttackEnemyMarker>() != null)
                 continue;
 
-            Object.Destroy(enemy);
+            Object.DestroyImmediate(enemy);
         }
     }
 

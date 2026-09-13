@@ -1,0 +1,1241 @@
+{
+  "settings": {
+    "responseDelayMin": 1.5,
+    "responseDelayMax": 2.5,
+    "commentCooldownSeconds": 4.0,
+    "maxSimultaneousComments": 1,
+    "commentDisplayDuration": 5.0,
+    "fontSize": 22.0,
+    "verticalOffset": 20.0,
+    "boneName": "face",
+    "responseColor": {
+      "r": 0.8,
+      "g": 0.4,
+      "b": 1.0,
+      "a": 1.0
+    },
+    "responseOutlineColor": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 0.0
+    },
+    "thoughtColor": {
+      "r": 1.0,
+      "g": 0.6,
+      "b": 0.8,
+      "a": 1.0
+    },
+    "thoughtOutlineColor": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 0.0
+    }
+  },
+  "mindBrokenThresholds": [
+    0.3,
+    0.7
+  ],
+  "animations": {
+    "START": {
+      "description": "Standing in front, captures and binds GG, rips her clothes",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "¡No! ¡Espera! Ngh! N-no me hagas daño...",
+            "¡Agh! Me atraparon... N-no...",
+            "¡Ngh! E-espera, ¡suéltame!",
+            "¡No! Es demasiado fuerte...",
+            "¡Ha?! ¡No, por favor...!",
+            "¡Maldita sea! Es demasiado fuerte...",
+            "Joder... ¿¡Me levanta con una mano!?",
+            "¡Aléjate de mí! ¡Lo pagarás!",
+            "¡Mi ropa! ¡No, estoy expuesta!",
+            "Mierda... ¿Qué... qué me vas a hacer?"
+          ],
+          "medium": [
+            "Eres tan... fuerte...",
+            "Tu cuerpo... tan cerca de mí...",
+            "Estoy acabada... ¡No puedo moverme!",
+            "Me agarras... como si no fuera nada...",
+            "¡Ah! M-me lanzaste... con tanta fuerza...",
+            "¡Mi falda! ¡AH! Estoy tan... vulnerable...",
+            "Estás encima de mí... Estoy indefensa...",
+            "E-espera... Si no resisto... ¿podrías ser más suave?",
+            "Eres tan brusco... ¿qué buscas?",
+            "¡Anngh! ¿Qué es esto? Estás tan cerca...",
+            "Me atrapaste... interesante...",
+            "Solo hablas...",
+            "¡Ah! ¿Mmmm? Tanta autoridad...",
+            "Me lanzaste... como una muñeca...",
+            "¿Por qué me dan escalofríos... cuando me tocas...?"
+          ],
+          "high": [
+            "¡Maldita sea! Ugh... No puedo resistirte...",
+            "¿Qué harás ahora que estoy atrapada... bajo esos músculos...",
+            "Mmmm... tócame...",
+            "Haah... esto no es tan horrible...",
+            "Mm... ¿Quieres esto? Tómalo...",
+            "¡Sí! ¡Lánzame como un juguete!",
+            "Soy tu juguete... puedes jugar conmigo...",
+            "Mmmm... esta posición es tan íntima...",
+            "Hazlo... tómame aquí mismo... ¡Ahora!",
+            "Tu fuerza... es excitante..."
+          ]
+        }
+      }
+    },
+    "ERO": {
+      "description": "Thrown on her back, penetration begins",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "¡No! ¡Sácalo!!!",
+            "¡Duele! ¡Es demasiado grande!",
+            "¡No puedo! ¡Por favor para!",
+            "¡Por favor! ¡No me hagas daño!",
+            "Tu cuerpo... ¡me está aplastando...!",
+            "¡Duele tanto! ¡Para!",
+            "¡Agh! ¡Ngh! ¡No!",
+            "¡Espera! ¡No hagas esto, por favor!",
+            "¡No, te odio! ¡NGH!",
+            "¡No! ¡Así no, por favor! ¡Ten piedad!"
+          ],
+          "medium": [
+            "¿Cómo... voy a acostumbrarme a esto?!",
+            "Está dentro... ¡quema...!",
+            "¿Tú...? ¡Lo metiste...!",
+            "¿Por qué...? ¿Por qué hacerme esto? ¡Es demasiado grande!",
+            "Voy a sobrevivir a esto...",
+            "Ooh... Está estirando mi coño...",
+            "Estás... tan profundo... ¿ya?",
+            "¿Misionero...? ¡No... mmm... me gusta!",
+            "N-ngh! Está dentro de mí...",
+            "Tu polla... la metiste dentro de mí...",
+            "MMGH, uuuh... ¿qué es esto...?",
+            "¡Agh! Me estás sujetando... con tu cuerpo...",
+            "Es... tan... haaa... ¡grande!",
+            "Me estás... follando... sin piedad...",
+            "¡Jodeeer...! Está golpeando todos los puntos..."
+          ],
+          "high": [
+            "¡Sí! M-más rápido...",
+            "Aaah... tu polla es tan grande...",
+            "Sujétame...",
+            "Oooh... tan profundo... ¡no la saques!",
+            "Joder... M-más fuerte...!",
+            "¡SÍ! ¡Usa mi coño!",
+            "¡MMMGH! ¡Más rápido! ¡Úsame como tu juguete!",
+            "Misionero... mi favorito... ¡mírame por favor!",
+            "¡Amo tu polla! ¡Más profundo, por favor!",
+            "Mmmgh, ¡me encanta cómo me aplastas con las caderas!"
+          ]
+        }
+      }
+    },
+    "ERO1": {
+      "description": "Pinned under his weight, hard slow thrusts",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "¡No! ¡Duele! ¡Por favor!",
+            "¡Me estás aplastando! ¡A-ayuda!",
+            "No puedo... respirar...! ¡Bájate!",
+            "¡No puedo! ¡No puedo! ¡Es demasiado!",
+            "¡Oh joder, oh joder, oh joder!!!",
+            "Aah... Aah... para... nooo...",
+            "Tengo que obedecer... ¡o morir...!",
+            "Me das miedo... ¡más despacio!",
+            "¡No! ¡No me someto... a ti!",
+            "¡No! ¡Termina esto! ¡Para!"
+          ],
+          "medium": [
+            "¡Voy a... vengarme!",
+            "¡Vas a... arrepentirte de esto!",
+            "¡No me mires! ¡Voy a... salir de tu agarre!",
+            "¡Que te jodan! S-solo... ¡quieres torturarme!",
+            "No... ggh... me gusta esto!",
+            "Esta es mi vida ahora... dolor...",
+            "Esta tortura... sin fin...",
+            "Esta humillación... que no termina...",
+            "¿Tengo que... obedecer?",
+            "¿Convertirme en tu juguete... para siempre?",
+            "Lento... pero tan fuerte...",
+            "Tu polla... palpitando dentro de mí...",
+            "Quiero que embistas más fuerte...",
+            "Estás... jugando conmigo...",
+            "Espera... no la saques..."
+          ],
+          "high": [
+            "Me estás provocando...",
+            "Te estás divirtiendo con mi coño...",
+            "Soy tu juguete...",
+            "Más fuerte... mírame...",
+            "Frotas mis pezones... cada vez que embistes...",
+            "¡Me provocas! ¡Fóllame por favor!",
+            "¡Obedeceré, solo úsame ahora!",
+            "No puedo moverme, ¡por favor empieza a embestir!",
+            "¡Me posees! ¡Soy tu juguete! ¡Ahora córrete dentro!",
+            "¡Se siente tan bien! ¡No la saques! ¡Me vuelve loca!"
+          ]
+        }
+      }
+    },
+    "ERO2": {
+      "description": "Faster missionary, feet pointing up",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "¡Ah! ¡Ah! ¡Ah!",
+            "¡Es demasiado! ¡Ayuda!!!",
+            "¡NO! ¡No! ¡No quiero que sea rápido!",
+            "¡No, no, no! ¡Es demasiado rápido! ¡No puedo!",
+            "Alguien... ¡sálvame! ¡Haz que pare!",
+            "Tengo que aguantarlo... ¡pero es demasiado grande!",
+            "No soy... ¡tu juguete...!",
+            "No... ¡Tengo que sobrevivir a esto!",
+            "Tus gruñidos... me... enferman...",
+            "¡Esta posición... tan humillante!"
+          ],
+          "medium": [
+            "Pagarás... ¡por cada embestida!",
+            "Oooh... aaah ah ah ah... joder... Mmmghhh aaah",
+            "Mmm... ¡no...! ¿¡En qué estoy pensando!?",
+            "Estás... ¡embistiendo en mí!",
+            "Este ritmo... doloroso... e intenso...",
+            "Mi coño... se está mojando...",
+            "Haaa... Está... bien...",
+            "Tu polla... profundo dentro... todavía duele...",
+            "Tu polla... golpeando los puntos correctos... moldeando mi coño...",
+            "Tu ritmo... me moja...",
+            "¿Más fuerte? Sí... justo así...",
+            "Eres increíble... Se siente bien...",
+            "Más profundo... por favor...",
+            "Cuesta respirar... tan intenso... tan bueno...",
+            "Esta posición se siente... más íntima..."
+          ],
+          "high": [
+            "Mmmgh... sí... ¡embiste en mí!",
+            "Esa polla me vuelve loca... aaah...",
+            "¡Más profundo! ¡Más rápido! ¡Sí!",
+            "¡Necesito tu polla!",
+            "¡Hazme gritar! ¡Pérforame!",
+            "¡Sí! ¡Gracias! ¡Lo necesito bruto!",
+            "¡Fóllame! ¡Lo necesito! ¡Me correré en tu polla!",
+            "¡Más fuerte! ¡Agarra mis caderas, mis tetas, mi culo! ¡Usa tu juguete!",
+            "¡Sí! ¡Sí! ¡Sí! ¡Aplástame! ¡Golpéame con las caderas!",
+            "¡Soy tu juguete! ¡Soy tu juguete! ¡Lo seguiré diciendo hasta que te corras!"
+          ]
+        }
+      }
+    },
+    "ERO3": {
+      "description": "Harder thrusts, legs closing from force",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "¡Agh! ¡AAAH! ¡Más despacio!",
+            "¡No! ¡NO! ¡Es demasiado fuerte!",
+            "¡Lo siento en el estómago! ¡No puedo!",
+            "No puedo detenerlo... ¡AYUDA!",
+            "¡Espera! ¡Lo siento! ¡Por favor!",
+            "¡Espera! ¡Me rindo! ¡Para!",
+            "¿Tu polla... está yendo más profundo?!",
+            "¡No! ¡Haré lo que sea, por favor para!",
+            "E-espera, ¡te lo ruego!",
+            "¡No! ¡Es tan grande! ¡Lo siento!"
+          ],
+          "medium": [
+            "N-no... ¡Lo retiro! ¡Por favor para!",
+            "¡Es tan intenso!",
+            "¡Ah! ¡Ah! ¡Joder!",
+            "¡Déjame respirar! ¡Por favor!",
+            "Lo estás haciendo más fuerte... ¡ahora duele demasiado!",
+            "Mi coño... va a estar rojo...",
+            "Tu polla... moldeando mi coño... a tu gusto...",
+            "Puedo aguantarlo... aunque ahora sea más fuerte...",
+            "Estoy mojada... está haciendo sonidos...",
+            "Joder... Es tan bueno... con tu polla...",
+            "Mmm, me encanta tu toque... bruto... y apasionado...",
+            "Siento tus venas... grabándose en mi memoria...",
+            "Muéstrame... intimidad...",
+            "Te obedeceré... se siente tan bien...",
+            "Mis muslos tiemblan con cada embestida..."
+          ],
+          "high": [
+            "¡AH! ¡Te abrazaré con las piernas!",
+            "¡Amo tu polla grande! ¡Dámela! ¡Ah!",
+            "¿Te gusta cuando cierro las piernas? Quiero apretártela...",
+            "¡Folla a tu juguete como si no valiera nada!",
+            "¡Usa mi coño hasta que esté cremoso con tu semen!",
+            "¡SÍ! ¡MÁS FUERTE! ¡No dejes que te olvide!",
+            "¡MÁS RÁPIDO! ¡QUIERO TUS HIJOS!",
+            "¡Folla mi coño apretado hasta que encaje tu polla grande y dura!",
+            "¡Estíralo más dentro de mí! ¡Por favor!",
+            "Tu polla gruesa necesita un buen juguete... ¡Tómalo!"
+          ]
+        }
+      }
+    },
+    "ERO4": {
+      "description": "Fast hard thrusts, feet bouncing",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "¡AH AH AH AH!",
+            "¡Es tan rápido! ¡Voy a morir!",
+            "¡A-aprieto y aún así entra!",
+            "¡No soy una puta! ¡No puedes...!",
+            "Me están... ¡apuñalando hasta la muerte!",
+            "Ya no... puedo... ¡más!!!",
+            "¿Cómo está tan profundo?? ¡Guuuh!!!",
+            "¡Monstruo! ¡Sin piedad! ¡Aah!",
+            "¡NO! ¡Lo siento, lo siento, lo siento!!!",
+            "¡Ayuda! ¡NO! ¡Bájate! ¡BÁJATE!"
+          ],
+          "medium": [
+            "Yo... yo... ¡soy tu juguete!!! ¡Lo dije! ¡Ahora para!",
+            "¡Soy tu trapo de semen! ¡Sácala ahora!",
+            "Yo... ¡soy tu puta! ¡Haz que pare, por favor!",
+            "¡S-soy tuya! Tu p-propiedad... ¿puedo irme ahora?? ¡AH!",
+            "Yo... ¡s-soy tu zorra! ¡Ya basta!",
+            "¡Se siente tan bien!",
+            "¡Tu polla ama mi coño!",
+            "¡Mi coño es como una fuente...! ¡Joder!",
+            "¡Solo sigue follándome!",
+            "¡Haaa Haaaa Haaaa Jodeeer! ¡Sí!",
+            "¡Sí! ¡Hazme el amor...!",
+            "¡Haaa! ¡Ahh! ¡Fóllame amo!",
+            "¡Amo tu polla!",
+            "¡Sí! ¡Tanta pasión...!",
+            "¡Estoy loca por tu semen!"
+          ],
+          "high": [
+            "¡SÍ! ¡Folla mi coño apretado! ¡Fóllame!",
+            "¡MMMgh! ¡Machaca mi coño así! ¡Soy tu puta!",
+            "¡JODER! ¡Me encanta profundo en mi coño!",
+            "¡Tómame como la puta que soy!",
+            "¡Me voy a correr encima de esa polla grande!!!",
+            "¡SÍ! ¡SÍ! ¡SÍ! ¡Soy tu agujero, soy tu agujero!!!",
+            "¡Soy tu zorra sucia! ¡Te haré correrte todos los días!",
+            "¡Derrámalo dentro! ¡Soy tu juguete de follar personal!",
+            "¡Amo! ¡SÍ! ¡Estoy aquí para masturbar tu polla grande con mi coño para siempre!",
+            "¡Vierte todo tu odio dentro de mí, Amo! ¡Soy tu muñeca sexual!"
+          ]
+        }
+      }
+    },
+    "FIN": {
+      "description": "Creampie while she hugs him",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "¡No! ¡No lo hagas dentro...!",
+            "*llora* P-p-puedo s-sentirlo...",
+            "¡Tú...! ¡¿Me estás llenando?!",
+            "¡NO! ¡Asqueroso!",
+            "N-nooo... p-para...",
+            "¡Lo siento!!! ¡No!",
+            "¡Aaah! ¡Aah!... ¡AAgh!... P-paraaaa...",
+            "¡Lo siento dentro! No...",
+            "¿¡Estás terminando dentro??!",
+            "¿¡Qué?? ¡AAaagh! ¿¡Qué estás haciendo?!"
+          ],
+          "medium": [
+            "¡NO! ¡Me mentiste!",
+            "¡AAH! NGH... ¡mentiroso!",
+            "¡Nooo! P-pero yo l-lo dije...",
+            "¡Aaaagh! No... ¡NO! ¡Tienes que soltarme!",
+            "¿¡Lo prometiste!? ¡Bastardo!!!",
+            "Oo-Oooooh... ngh...",
+            "¡Está palpitando! ¡Joder! ¡Te estás corriendo!",
+            "¡Me estoy corrieeeendo!!!",
+            "¡Jodeeer! Sí...",
+            "¡Me voy a correr...!",
+            "¡Derrámalo dentro, por favooor!",
+            "¡Te lo apretarééé NGH!",
+            "¡Abrázame! ¡Quiero estar cerca de ti!",
+            "¡Te atraeré NGH! ¡AH!",
+            "¡Amo por favooor...! ¡Hazme correrme contigo!"
+          ],
+          "high": [
+            "¡Llena mi coño con tu semen!",
+            "Sííí... derrámalo todo dentro...",
+            "¡Amo apretar tu polla mientras pulsas dentro de mí!",
+            "¡Quiero tu semen dentro de mí!",
+            "¡Dispárale a tu muñeca!",
+            "¡SOY TU JUGUETE! ¡SOY TU JUGUETE! ¡SOY TU JUGUETEEE!",
+            "¡SÍ! ¡No pares! ¡Dame más semen!",
+            "¡Dame hijos! ¡Llena mi útero!",
+            "¡Córrete por mí! ¡Sin esto no valgo nada!",
+            "¡Sigue embistiendo! ¡Por favor! ¡Quiero que se desborde de mi coño apretado!"
+          ]
+        }
+      }
+    },
+    "FIN2": {
+      "description": "Pulls out, cum-covered afterglow",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Mátame... por favor...",
+            "No puedo... hacer esto...",
+            "Me... me violaron... hay... s-semen dentro de mí...",
+            "N-no... no... por qué...",
+            "Quiero... morir...",
+            "Puedo respirar otra vez...",
+            "No... puedo creerlo...",
+            "Tú... me u-usaste...",
+            "Tú... con tu suciedad...",
+            "¿Ya... ya terminó?"
+          ],
+          "medium": [
+            "Me mentiste...",
+            "No te perdonaré por esto...",
+            "No tienes honor...",
+            "Rompiste tu promesa...",
+            "Yo... dije esas cosas... en vano...",
+            "Estoy temblando...",
+            "Lo hice...",
+            "Se acabó...",
+            "Se sintió bien...",
+            "¿Funcionó...?",
+            "No puede haber terminado...",
+            "Te vacié...",
+            "Ese sonido de pop... ahí abajo...",
+            "Intimidad... Se siente bien...",
+            "¿Estás satisfecho...?"
+          ],
+          "high": [
+            "Aaaaah... increíble...",
+            "¿Cómo estuvo tu juguete...?",
+            "Fue increíble...",
+            "Mmm esto se siente bien...",
+            "Perfecto...",
+            "Mmmnoo... no la saques...",
+            "Espera... necesito más...",
+            "Tu juguete no se rompe tan fácil...",
+            "Por favor ponla donde pertenece...",
+            "Quiero que me veas goteando tu semen... por favor..."
+          ]
+        }
+      }
+    },
+    "JIGO": {
+      "description": "Resting / twitching between rounds",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Suéltame... por favor...",
+            "Por favor, no más...",
+            "Tienes que soltarme... Terminaste...",
+            "Déjame morir...",
+            "No... me hagas esto... otra vez...",
+            "Por favor déjame respirar...",
+            "Pensé que iba a morir...",
+            "TIENE que haber terminado...",
+            "Estoy tan cansada... No puedo moverme...",
+            "Tengo que... levantarme..."
+          ],
+          "medium": [
+            "Tú... ogro...",
+            "Te... odio...",
+            "Voy a... vengarme...",
+            "Me siento tan humillada...",
+            "No puedo creer lo cruel que eres...",
+            "Me... estoy dormitando...",
+            "Tengo... sueño...",
+            "Esto es... cómodo...",
+            "Me corrí... tan fuerte...",
+            "Joder...",
+            "Lástima que se acabara...",
+            "Echaré de menos esta sensación...",
+            "Nunca olvidaré tu pasión...",
+            "I-Intenso...",
+            "El viento acaricia mi cuerpo..."
+          ],
+          "high": [
+            "Increíble... gracias...",
+            "Mi cuerpo... a tu gusto... hasta que vaciaste tus bolas...",
+            "Fue increíble...",
+            "Estoy goteando tu semen...",
+            "Eres tan amable... Amo...",
+            "Este agujero está listo para ti Amo...",
+            "La vas a meter otra vez, ¿verdad?",
+            "Los juguetes no necesitan descanso...",
+            "No necesito respirar... necesito tu polla...",
+            "Sigue usándome todo lo que quieras, Amo..."
+          ]
+        }
+      }
+    },
+    "JIGO2": {
+      "description": "He leans over her face, about to continue",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "No... otra vez no...",
+            "Aléjate... por favor...",
+            "No sobreviviré a otra ronda...",
+            "No me cubras... necesito aire...",
+            "Por favor... déjame aquí...",
+            "Mi cuerpo no se mueve... pero aún me niego...",
+            "Si te acercas... yo... yo...",
+            "No me mires así...",
+            "No estoy lista... no estoy...",
+            "Alguien... cualquiera..."
+          ],
+          "medium": [
+            "¿Ya... estás volviendo?",
+            "Esa sombra sobre mí... otra vez...",
+            "Odio lo calmado que estás...",
+            "Mis piernas... no se cierran...",
+            "Si me quedo callada... ¿quizá más suave?",
+            "Por qué se me aprieta el pecho cuando te inclinas...",
+            "Todavía estoy goteando... y ya estás duro...",
+            "No sonrías como si me poseyeras...",
+            "Una vez más... y podría romperme...",
+            "Debería arrastrarme... ¿por qué no puedo?"
+          ],
+          "high": [
+            "Sí... vuelve a mí...",
+            "Cúbreme otra vez... hazme desaparecer bajo ti...",
+            "Todavía estoy abierta... esperando...",
+            "No me hagas esperar, Amo...",
+            "Mírame mientras me tomas otra vez...",
+            "Mi cara es tuya para sofocar...",
+            "Quiero la segunda ronda... ahora...",
+            "Por favor... pon ese peso sobre mí otra vez...",
+            "Aún no estoy lo bastante rota...",
+            "Úsame hasta que no pueda pensar..."
+          ]
+        }
+      }
+    },
+    "JIGOERO": {
+      "description": "Round two starts, cum still inside / on her",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "¿¡Qué?? ¡NO!",
+            "¡Por favor! ¡No puedes!",
+            "¡Esto no es justo!",
+            "¡Espera, espera!",
+            "No... me hagas esto... otra vez...",
+            "¡Imposible...!",
+            "¿¡Cómo puedes...?!",
+            "No... otra vez no...",
+            "¿Qué? ¡Joder, no puedo moverme!",
+            "¡No puedo... pelear!"
+          ],
+          "medium": [
+            "¿Este era tu plan desde el principio...?",
+            "Te... odio...",
+            "Voy a... vengarme...",
+            "Pedazo de-",
+            "No puedo creer lo cruel que eres...",
+            "¿Otra vez...?",
+            "¿Todavía estás duro...?",
+            "Increíble...",
+            "Todavía me duele...",
+            "Ni de broma...",
+            "¿En serio? Mmmm...",
+            "Mmm... está bien...",
+            "Tanta pasión...",
+            "Hagámoslo...",
+            "Ven aquí..."
+          ],
+          "high": [
+            "Mmmm, ¿segunda ronda?",
+            "¿Quieres más de este coño?",
+            "¿Te gusta follar mi coño?",
+            "Lo tomaré todas las veces que quieras...",
+            "Tan generoso...",
+            "Este agujero está listo para ti Amo...",
+            "¡Sí! Dame tu polla grande...",
+            "Los juguetes no necesitan descanso...",
+            "No necesito respirar... necesito tu polla...",
+            "Sigue usándome todo lo que quieras, Amo..."
+          ]
+        }
+      }
+    },
+    "JIGOERO2": {
+      "description": "She feels him moving faster again, the cum making each thrust slick and humiliating.",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "No... está tan resbaladizo... para...",
+            "Bájate... estás usando tu propio... ugh...",
+            "Esto es asqueroso... no puedo...",
+            "Duele menos pero es peor...",
+            "No... no aceleres... por favor...",
+            "Lo siento moverse dentro... no...",
+            "Estás enfermo... haciendo esto con tu propio...",
+            "Que alguien ayude... cualquiera...",
+            "Mi cuerpo está tan sucio ahora...",
+            "Para de empujar más profundo..."
+          ],
+          "medium": [
+            "Está... deslizando tan fácil ahora...",
+            "Tu semen es... oh dioses...",
+            "Por qué se siente diferente ahora...",
+            "Estoy tan hecha un desastre... cubierta de...",
+            "El dolor... y el calor...",
+            "Dije que no pero mi cuerpo...",
+            "No debería sentirse así...",
+            "Lo estás usando como... oh...",
+            "Odio que duela menos...",
+            "Qué me pasa..."
+          ],
+          "high": [
+            "Tu semen me deja tan resbaladiza, Amo...",
+            "Entra más fácil ahora, ¿verdad, Amo...?",
+            "Estoy toda hecha un desastre por ti...",
+            "Empuja tu semen viejo más profundo por favor...",
+            "Esta esclava está tan resbaladiza para ti...",
+            "Usa tu desastre para follarme más fuerte...",
+            "Me encanta sentirlo aplastar dentro...",
+            "Hazme más sucia Amo...",
+            "Tu semilla pertenece dentro de mí...",
+            "Gracias por llenarme primero, Amo..."
+          ]
+        }
+      }
+    },
+    "JIGOERO3": {
+      "description": "Harder thrusts force her legs to twitch and try to close from the overwhelming intensity.",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Mis piernas... no dejan de temblar...",
+            "Demasiado fuerte... estás golpeando demasiado profundo...",
+            "Cerrar las piernas... no puedo...",
+            "Sigue temblando... haz que pare...",
+            "Estás rompiendo algo dentro...",
+            "No puedo mantenerlas abiertas...",
+            "La fuerza... no puedo respirar...",
+            "Para de golpear ahí... por favor...",
+            "Mi cuerpo me está traicionando...",
+            "Duele... duele tanto..."
+          ],
+          "medium": [
+            "Por qué se cierran mis piernas...",
+            "No controlo mi cuerpo...",
+            "Es demasiado pero...",
+            "El temblor no para...",
+            "Las estás forzando a abrirse...",
+            "Debería odiar esto pero...",
+            "Mis piernas siguen intentando apretar...",
+            "La presión es... oh dioses...",
+            "Estoy tan confundida...",
+            "Mi cuerpo quiere resistir pero..."
+          ],
+          "high": [
+            "Fuerza mis piernas a abrirse Amo...",
+            "Mi cuerpo intenta cerrar pero yo quiero...",
+            "El temblor significa que me encanta...",
+            "Rompe mi resistencia Amo...",
+            "Mis piernas tiemblan por ti...",
+            "Ábrelas más por favor...",
+            "No me controlo alrededor de tu polla...",
+            "Haz que mis piernas dejen de cerrarse Amo...",
+            "Necesito que me fuercen a abrirme...",
+            "Tu poder me hace temblar..."
+          ]
+        }
+      }
+    },
+    "JIGOERO4": {
+      "description": "Brutal relentless pounding at peak pace leaves her overwhelmed and unable to process.",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Vas a romperme... para...",
+            "No puedo aguantar este ritmo...",
+            "Me estás arruinando para siempre...",
+            "Por favor... te lo ruego... termina...",
+            "Es demasiado... demasiado rápido...",
+            "Voy a desmayarme...",
+            "Piedad... ten piedad...",
+            "Mi interior no aguanta...",
+            "Me estás destruyendo...",
+            "No más... no más..."
+          ],
+          "medium": [
+            "Tan rápido... no puedo pensar...",
+            "Algo está subiendo... no...",
+            "No me hagas... no quiero...",
+            "El ritmo... es abrumador...",
+            "Me estoy perdiendo...",
+            "Por qué se siente...",
+            "No puedo... no puedo...",
+            "La presión es demasiada...",
+            "Voy a... no...",
+            "Haz que termine..."
+          ],
+          "high": [
+            "Rómpeme por completo Amo...",
+            "Tan rápido... voy a...",
+            "Arruina este agujero para siempre...",
+            "Hazme tu juguete roto...",
+            "Puedo aguantarlo Amo... úsame...",
+            "Fóllame hasta que no pueda caminar...",
+            "Soy tuya para destruir...",
+            "Más fuerte... por favor más fuerte...",
+            "Hazme correrme en tu polla Amo...",
+            "Necesito tanto tu semen..."
+          ]
+        }
+      }
+    },
+    "JIGOFIN": {
+      "description": "He releases inside her for the second time and she feels the hot flood filling her again.",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Otra vez no... no dentro...",
+            "Me estás llenando otra vez... no...",
+            "Tanto... es demasiado...",
+            "Lo siento... caliente... no...",
+            "Sácala... por favor...",
+            "Mi útero... se inunda otra vez...",
+            "Me estás marcando por dentro...",
+            "Te odio... te odio...",
+            "Esto nunca va a terminar...",
+            "Tan llena... duele..."
+          ],
+          "medium": [
+            "Otra vez... te estás corriendo otra vez...",
+            "Tan cálido... no debería sentir...",
+            "Me está llenando...",
+            "Siento cada pulso...",
+            "Por qué se siente tan...",
+            "Mi cuerpo está tan lleno de ti...",
+            "El calor... por todas partes...",
+            "Dije que no pero tú...",
+            "Es demasiado semen...",
+            "Me estoy ahogando en esto..."
+          ],
+          "high": [
+            "Sí... lléname otra vez Amo...",
+            "Preñame a tope... por favor...",
+            "Quiero cada gota Amo...",
+            "Inunda mi útero con tu semilla...",
+            "Gracias por correrte dentro...",
+            "Soy tu depósito de semen...",
+            "Más... dame más...",
+            "Márcame por dentro para siempre...",
+            "Me encanta sentirte soltar...",
+            "Esta esclava está agradecida..."
+          ]
+        }
+      }
+    },
+    "JIGOFIN2": {
+      "description": "He withdraws leaving her gaping and leaking, displaying her thoroughly used state.",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "No me mires... por favor...",
+            "Estoy goteando... por todas partes...",
+            "Cúbreme... alguien...",
+            "Esto no soy yo... no puede ser yo...",
+            "Está saliendo tanto...",
+            "Estoy arruinada... completamente arruinada...",
+            "La vergüenza... quiero morir...",
+            "Dos cargas dentro de mí...",
+            "No me dejes así...",
+            "Solo... estoy goteando..."
+          ],
+          "medium": [
+            "Puedes verlo todo...",
+            "Está goteando de mí...",
+            "Estoy hecha un desastre...",
+            "No me mires así...",
+            "Mi cuerpo se ve... usado...",
+            "Siento que gotea... cálido...",
+            "En esto me he convertido...",
+            "Tan expuesta... tan abierta...",
+            "El semen no para...",
+            "Soy asquerosa..."
+          ],
+          "high": [
+            "Admira lo que posees Amo...",
+            "Estoy goteando tu semilla...",
+            "¿Se ve bonito Amo...?",
+            "Tu semen está goteando...",
+            "Estoy tan abierta para ti...",
+            "Gracias por llenarme dos veces...",
+            "Me encanta ser tu desastre...",
+            "Mira qué usada estoy...",
+            "Soy tu depósito de semen perfecto...",
+            "Lista para la tercera ronda Amo..."
+          ]
+        }
+      }
+    },
+    "JIGOPOST3": {
+      "description": "She lies with legs spread, displaying her ruined state as round three begins.",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "No me mires... soy asquerosa...",
+            "Mis piernas no se cierran... por qué no se cierran...",
+            "Ya te corriste dos veces... ¿no basta...",
+            "Estoy abierta... me arruinaste...",
+            "Deja de mirar tu desastre...",
+            "No puedo ocultarte nada...",
+            "Esto no está pasando... no puede ser real...",
+            "Estoy goteando por todas partes... oh dioses...",
+            "Por favor... no más... estoy destruida...",
+            "Mi cuerpo está roto..."
+          ],
+          "medium": [
+            "Mis piernas están abiertas... no puedo detenerlas...",
+            "Puedes ver todo en lo que me he convertido...",
+            "Dos cargas dentro y aún las mantengo abiertas...",
+            "Estoy tan expuesta así...",
+            "El aire golpea mi coño arruinado...",
+            "Me convertiste en esta exhibición...",
+            "Estoy sonrojada y hecha un desastre...",
+            "Mi cuerpo me traiciona incluso ahora...",
+            "Ni siquiera puedo cubrirme...",
+            "Debería cerrarlas pero..."
+          ],
+          "high": [
+            "Admira lo que posees Amo...",
+            "Mis piernas se quedan abiertas para ti...",
+            "Estoy correctamente exhibida Amo...",
+            "Mira qué arruinada estoy por ti...",
+            "Este es tu trabajo Amo...",
+            "Estoy abierta y lista...",
+            "Mi coño se queda abierto para tu uso...",
+            "Goteo tu semilla con orgullo...",
+            "Tercera ronda por favor Amo...",
+            "Soy tu propiedad exhibida..."
+          ]
+        }
+      }
+    },
+    "JIGOPOST4": {
+      "description": "He mounts her again, trapping her exhausted body under his weight.",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Otra vez no... no puedo respirar...",
+            "Me estás aplastando... bájate...",
+            "No me queda nada... por favor...",
+            "El peso... es demasiado...",
+            "No puedo moverme bajo ti...",
+            "Para... estoy demasiado cansada...",
+            "Vas a romperme...",
+            "No puedo aguantar esto otra vez...",
+            "Piedad... ten piedad...",
+            "Mi cuerpo se está rindiendo..."
+          ],
+          "medium": [
+            "Bajo ti otra vez...",
+            "El peso se siente... familiar...",
+            "Debería odiar esta pesadez...",
+            "Estoy atrapada... no puedo moverme...",
+            "Mi cuerpo recuerda esto...",
+            "Tan pesado... presionando...",
+            "No puedo empujarte...",
+            "Estoy demasiado débil para resistir...",
+            "Tu calor...",
+            "Estoy completamente clavada..."
+          ],
+          "high": [
+            "Cúbreme Amo...",
+            "Atrápame bajo tu peso...",
+            "Me encanta estar debajo de ti...",
+            "Aplástame con tu cuerpo...",
+            "Soy tu colchón...",
+            "Manténme clavada para siempre...",
+            "Tu peso es mi consuelo...",
+            "Pertenezco debajo de ti...",
+            "Móntame cuando quieras Amo...",
+            "Soy tu lugar de descanso..."
+          ]
+        }
+      }
+    },
+    "JIGOPOSTERO": {
+      "description": "Third round thrusting starts, using prior cum as lube on her messy, tired body.",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Tercera vez... estás loco...",
+            "Está tan resbaladizo... para...",
+            "Estás usando tu semen para... no...",
+            "No siento nada bien...",
+            "Mi cuerpo está entumecido... por favor...",
+            "Hay tanto dentro de mí...",
+            "Estás deslizando por tu propio desastre...",
+            "Odio esto... te odio...",
+            "Tercera ronda... voy a morir...",
+            "No más... no más..."
+          ],
+          "medium": [
+            "Tan resbaladiza... por tu semen...",
+            "Tercera ronda... cómo sigues...",
+            "Entra tan fácil ahora...",
+            "Estoy hecha un desastre por dentro...",
+            "El semen lo hace... diferente...",
+            "Debería sentir asco pero...",
+            "Mi cuerpo cansado te acepta...",
+            "Tanta semilla dentro...",
+            "Los sonidos mojados...",
+            "Estoy demasiado cansada para pelear..."
+          ],
+          "high": [
+            "Usa tu semen para follarme Amo...",
+            "Tercera vez... tengo tanta suerte...",
+            "Deslízate por tu desastre...",
+            "Estoy resbaladiza para ti siempre...",
+            "Mi coño lleno de semen te da la bienvenida...",
+            "Tan mojada y lista Amo...",
+            "Tu semilla es el lubricante perfecto...",
+            "Tercera ronda por favor... más fuerte...",
+            "Soy un desastre destrozado para ti...",
+            "Gracias por usarme otra vez..."
+          ]
+        }
+      }
+    },
+    "JIGOPOSTERO2": {
+      "description": "Faster thrusting, cum-lube allowing deeper use of her exhausted body.",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Demasiado rápido... no puedo... respirar...",
+            "Estás rompiendo algo... para...",
+            "Profundo... demasiado profundo... duele...",
+            "No siento nada... todo duele...",
+            "Mi cuerpo se está apagando...",
+            "Por favor... más despacio... piedad...",
+            "Me estás gastando...",
+            "No puedo aguantar embestidas profundas...",
+            "Todo duele...",
+            "Haz que pare..."
+          ],
+          "medium": [
+            "Tan rápido... no puedo pensar...",
+            "Profundo... está golpeando... oh...",
+            "Mi cuerpo está respondiendo... no...",
+            "La velocidad... abrumadora...",
+            "Siento cada centímetro...",
+            "Mi coño cansado... hormiguea...",
+            "Por qué se siente...",
+            "El semen hace que se deslice...",
+            "Me estoy perdiendo...",
+            "No controlo... nada..."
+          ],
+          "high": [
+            "Más rápido Amo... úsame fuerte...",
+            "Embestidas profundas por favor... arruíname...",
+            "Soy tu funda... fóllame...",
+            "Acelera... rómpeme más...",
+            "Golpea mi cérvix... hazme daño...",
+            "Soy un agujero destrozado... úsalo...",
+            "Mi cuerpo cansado es tuyo...",
+            "Hazme sentir cada embestida...",
+            "Más rápido... más profundo... por favor...",
+            "Solo soy un receptáculo..."
+          ]
+        }
+      }
+    },
+    "JIGOPOSTERO3": {
+      "description": "Hardest pounding before third climax, she is almost gone, barely conscious.",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Me estás... matando...",
+            "No... siento las piernas...",
+            "Todo está... negro...",
+            "Para... por favor... muriendo...",
+            "No más... la conciencia... se va...",
+            "Esto es... el final...",
+            "No puedo... sobrevivir a esto...",
+            "Rompiéndome... por completo...",
+            "Ayuda... alguien...",
+            "Últimos... momentos..."
+          ],
+          "medium": [
+            "Tan fuerte... estoy... perdiendo...",
+            "No puedo... pensar... más...",
+            "Mi cuerpo... cediendo...",
+            "Casi... ida...",
+            "El martilleo... destruyéndome...",
+            "Siento... nada... excepto...",
+            "Mente... en blanco...",
+            "Rompiéndome... en pedazos...",
+            "Sin... resistencia... ya...",
+            "Solo... sensaciones..."
+          ],
+          "high": [
+            "Rómpeme por completo Amo...",
+            "Estoy casi ida... termíname...",
+            "Destruye lo que queda...",
+            "Hazme nada más que tuya...",
+            "Más fuerte... me estoy yendo...",
+            "Rotura final... gracias...",
+            "Soy tuya... por completo...",
+            "Termíname como tu juguete...",
+            "Tan cerca de la esclavitud perfecta...",
+            "Termina la rotura..."
+          ]
+        }
+      }
+    },
+    "JIGOPOSTFIN": {
+      "description": "Third orgasm inside her, flooding her with the final hot load.",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "No... una tercera vez...",
+            "Me estás... llenando... otra vez...",
+            "Tanto... semen... ahogándome...",
+            "Siento... cada pulso... no...",
+            "Mi útero... está inundado...",
+            "Tres cargas... estoy arruinada...",
+            "Esto... nunca termina...",
+            "Caliente... dentro... demasiado...",
+            "Soy... solo un... recipiente...",
+            "Terminada... por completo..."
+          ],
+          "medium": [
+            "Tercera... carga...",
+            "Tan cálido... llenándome...",
+            "Lo siento... por todas partes...",
+            "Mi cuerpo... lo acepta...",
+            "Tres veces... dentro...",
+            "El calor... extendiéndose...",
+            "Estoy... llena... más que llena...",
+            "Cada pulso... lo siento...",
+            "Mi cuerpo cansado... lo toma...",
+            "Tanta... semilla..."
+          ],
+          "high": [
+            "Sí... tercera carga Amo...",
+            "Lléname... inúndame...",
+            "Gracias... por preñarme...",
+            "Soy... tu depósito de semen...",
+            "Tres cargas... estoy completa...",
+            "Preñame... permanentemente...",
+            "Quiero... cada gota...",
+            "Mi útero... es tuyo...",
+            "Lléname... hasta que desborde...",
+            "Agradecida... por tu semilla..."
+          ]
+        }
+      }
+    },
+    "JIGOPOSTFIN2": {
+      "description": "Afterglow and pull-out, legs still open, leaking heavily from three loads.",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "No... mires... el desastre...",
+            "Tres cargas... goteando...",
+            "Estoy... destruida...",
+            "Tan... vacía... pero llena...",
+            "La vergüenza... no termina...",
+            "Solo... estoy... goteando...",
+            "Terminada... como persona...",
+            "Mi cuerpo... es basura...",
+            "Sin... dignidad... ya...",
+            "Completamente... arruinada..."
+          ],
+          "medium": [
+            "Tanto... goteando...",
+            "Puedo... sentirlo... fluir...",
+            "Tres cargas... dentro... fuera...",
+            "Estoy... tan abierta...",
+            "El calor... saliendo...",
+            "Estoy... exhibida... otra vez...",
+            "Mi cuerpo... me traiciona...",
+            "Tan... desastre...",
+            "Debería... sentir... vergüenza...",
+            "Pero solo... estoy... cansada..."
+          ],
+          "high": [
+            "Admira... tu trabajo... Amo...",
+            "Tres cargas... goteando...",
+            "Soy... tu fuente...",
+            "Me quedo... abierta... para ti...",
+            "Tu... semen... fluye... de mí...",
+            "Estoy... perfectamente... arruinada...",
+            "Gracias... por el desastre...",
+            "Goteo... con orgullo...",
+            "Tu... propiedad... exhibida...",
+            "Para siempre... abierta... para ti..."
+          ]
+        }
+      }
+    },
+    "JIGOTOFADE": {
+      "description": "Screen fades to black, scene ending as she accepts final ownership.",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Desvaneciéndome... en la oscuridad...",
+            "El final... por fin...",
+            "La oscuridad... me lleva...",
+            "Ya... no... hay luz...",
+            "Estoy... desapareciendo...",
+            "Perdida... en el negro...",
+            "Libertad... en la oscuridad...",
+            "El último... desvanecer...",
+            "Ida... para siempre...",
+            "Hacia... la nada..."
+          ],
+          "medium": [
+            "Desvaneciéndome...",
+            "Hacia la... oscuridad...",
+            "Mi historia... termina...",
+            "La oscuridad... me acoge...",
+            "Yo... desaparezco...",
+            "La luz... muere...",
+            "Resbalando... lejos...",
+            "Convirtiéndome... en nada...",
+            "Últimos... momentos...",
+            "Ida..."
+          ],
+          "high": [
+            "Desvanécete... en tu posesión...",
+            "Oscuridad... como tu juguete...",
+            "Yo... desaparezco... como tuya...",
+            "Hacia... el servicio... eterno...",
+            "Desvaneciéndome... como propiedad...",
+            "La oscuridad... es mi hogar...",
+            "Para siempre... en tu... sombra...",
+            "Yo... desaparezco... como tu esclava...",
+            "Poseída... hacia la... oscuridad...",
+            "Tu esclava... se desvanece... feliz..."
+          ]
+        }
+      }
+    },
+    "ZGAMEOVER": {
+      "description": "Bad end visual, fully broken, semen-stained, claimed as permanent property.",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Lo perdí... todo...",
+            "Totalmente rota... sin recuperación...",
+            "Mi vida... se acabó...",
+            "La bruja... está muerta...",
+            "Para siempre... manchada...",
+            "Sin... segunda oportunidad...",
+            "Capturada... para siempre...",
+            "Mi final... es vergüenza...",
+            "Completamente... derrotada...",
+            "No... queda... esperanza..."
+          ],
+          "medium": [
+            "Se acabó... para mí...",
+            "Rota... por completo...",
+            "Mi historia... termina aquí...",
+            "Manchada... y terminada...",
+            "Ya no... hay libertad...",
+            "Soy... de él... ahora...",
+            "El final... de mí...",
+            "Para siempre... marcada...",
+            "Mi destino... sellado...",
+            "Ida... del mundo..."
+          ],
+          "high": [
+            "Gané... la esclavitud...",
+            "Totalmente rota... totalmente suya...",
+            "Mi final... feliz...",
+            "Manchada... y agradecida...",
+            "Para siempre... poseída...",
+            "Soy... del Amo... para siempre...",
+            "El final... de la libertad...",
+            "Mi propósito... cumplido...",
+            "Servicio... eterno...",
+            "Reclamada... por completo..."
+          ]
+        }
+      }
+    },
+    "ZGAMEOVER2LOOP": {
+      "description": "Looping bad-end hold, quiet confirmation of her permanent broken state.",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Para siempre... así...",
+            "Sin escape... nunca...",
+            "Prisión... permanente...",
+            "Vergüenza... eterna...",
+            "Siempre... rota...",
+            "Nunca... libre... otra vez...",
+            "Atrapada... para siempre...",
+            "Esto... es... para siempre..."
+          ],
+          "medium": [
+            "Para siempre... suya...",
+            "En bucle... sin fin...",
+            "Sin cambio... que venga...",
+            "Estado... permanente...",
+            "Siempre... así...",
+            "Servidumbre... eterna...",
+            "Atorada... así...",
+            "Esto... no tiene... fin..."
+          ],
+          "high": [
+            "Para siempre... del Amo...",
+            "Felicidad... eterna...",
+            "Siempre... útil...",
+            "Alegría... permanente...",
+            "Nunca... me iré...",
+            "Para siempre... poseída...",
+            "Bucle... como tuya...",
+            "Siempre... el juguete del Amo..."
+          ]
+        }
+      }
+    },
+    "4ERO": {
+      "description": "Optional coda after fade, continued use of the finished toy.",
+      "events": {
+        "ARADIA_RESPONSE": {
+          "low": [
+            "Incluso ahora... me usas...",
+            "El final... no fue el final...",
+            "Más... degradación...",
+            "Ya... ni siquiera... soy humana...",
+            "Solo... una cosa... para usar...",
+            "Sin... descanso... nunca...",
+            "Para siempre... tu... objeto...",
+            "Todavía... más... vergüenza..."
+          ],
+          "medium": [
+            "Todavía... útil...",
+            "Incluso rota... sirvo...",
+            "El juguete... sigue dando...",
+            "Mi propósito... continúa...",
+            "Incluso ahora... úsame...",
+            "Yo... acepto... esto...",
+            "Todavía... tuya...",
+            "Más... incluso ahora..."
+          ],
+          "high": [
+            "Úsame... después...",
+            "Yo... nunca... termino...",
+            "El juguete... sigue sirviendo...",
+            "Siempre... útil... Amo...",
+            "Más placer... Amo...",
+            "Agradecida... por más...",
+            "Para siempre... tu salida...",
+            "Usa... mi boca... Amo..."
+          ]
+        }
+      }
+    }
+  }
+}

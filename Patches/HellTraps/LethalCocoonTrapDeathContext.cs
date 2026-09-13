@@ -94,6 +94,7 @@ internal static class LethalCocoonTrapDeathContext
     internal static void DisableEroSuppression()
     {
         IsEroSuppressionActive = false;
+        LethalMagicTrapEroSuppression.OnEroSuppressionDisabled();
     }
 
     /// <summary>Release trap ERO suppression if the player escaped without finishing custom death.</summary>

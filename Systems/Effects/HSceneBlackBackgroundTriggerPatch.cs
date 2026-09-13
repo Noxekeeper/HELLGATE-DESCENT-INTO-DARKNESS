@@ -184,6 +184,13 @@ internal static class HSceneBlackBackgroundTriggerPatch
                 return;
             }
 
+            // Illusive / Rodenia SlaveBigAxe: never apply HellGate FIN black-bg (vanilla fade owns the lose path).
+            if (enemyType.IndexOf("slavebigaxe", StringComparison.OrdinalIgnoreCase) >= 0 &&
+                NoREroMod.Patches.Enemy.SlaveBigAxeIllusiveEventGate.ShouldSkipHellGateLogic())
+            {
+                return;
+            }
+
             // Plugin.Log.LogInfo($"[HSceneTrigger] ProcessOnEvent started - class: '{enemyType}', event: '{eventName}', anim: '{currentAnim}'");
 
             // Log game object hierarchy for debugging

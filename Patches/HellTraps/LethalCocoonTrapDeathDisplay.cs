@@ -34,7 +34,7 @@ internal static class LethalCocoonTrapDeathDisplay
 
     internal static void TryApply(playercon player)
     {
-        if (!Plugin.enableLethalCocoonTrap.Value || player == null)
+        if (!Plugin.IsLethalCocoonTrapActive || player == null)
             return;
 
         Sprite[] frames = LethalCocoonTrapAssetLoader.GetDeathFrames();
@@ -117,7 +117,7 @@ internal sealed class LethalCocoonTrapDeathApplyHost : MonoBehaviour
     {
         yield return null;
 
-        if (_player == null || !Plugin.enableLethalCocoonTrap.Value)
+        if (_player == null || !Plugin.IsLethalCocoonTrapActive)
             yield break;
 
         if (LethalCocoonTrapDeathContext.IsCustomDeathActive)

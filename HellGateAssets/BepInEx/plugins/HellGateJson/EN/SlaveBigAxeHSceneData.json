@@ -1,0 +1,519 @@
+{
+  "settings": {
+    "commentCooldownSeconds": 2.0,
+    "maxSimultaneousComments": 1,
+    "commentDisplayDuration": 4.0,
+    "fontSize": 22.0,
+    "verticalOffset": 15,
+    "streamingSpeed": 0.03,
+    "goblinColor": {
+      "r": 1.0,
+      "g": 1.0,
+      "b": 1.0,
+      "a": 1.0
+    },
+    "goblinOutlineColor": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 1.0
+    }
+  },
+  "animations": {
+    "START": {
+      "description": "Standing in front, captures and binds GG's hands and feet behind her head with his left hand, showing her tits, and rips her clothes off with his right.",
+      "events": {
+        "START": [
+          "Easy now. You'll only exhaust yourself.",
+          "Another runaway brought back where she belongs.",
+          "I've seen fiercer ones. They all broke eventually.",
+          "Stand still. This will go much easier for you.",
+          "Look at me. Remember my face.",
+          "You're not the first to fight me.",
+          "Good. Keep wasting your strength.",
+          "Every chain starts with a single mistake.",
+          "Your journey ends here.",
+          "Let's see how long that pride survives."
+        ],
+        "SE": [
+          "Struggle. It changes nothing.",
+          "Your thrashing only proves you still have spirit to break.",
+          "Keep resisting. I prefer them lively at the start.",
+          "You won't slip these hands, runaway."
+        ]
+      }
+    },
+    "ERO": {
+      "description": "Throws GG to the ground, on her back, he starts rubbing himself on GG and inserts himself",
+      "events": {
+        "ERO": [
+          "Fear fades. Habit lasts forever. Say you're my toy.",
+          "You're learning faster than most. Admit defeat and I'll stop.",
+          "You're a small toy, there's nothing you can do.",
+          "One day you'll stop trying to escape. You'll give it to me willingly.",
+          "Pride is expensive. Obedience is easier. Say you're my fuck doll, pain stops.",
+          "You still think someone is coming for you. Dolls don't have hope.",
+          "Hope is the first thing I take away. Next, your body, as my property.",
+          "Soon this will feel normal to you. All you have to do is become my cum-dump."
+        ]
+      }
+    },
+    "ERO1": {
+      "description": "Traps GG with his body weight, while thrusting hard and slow, missionary",
+      "events": {
+        "ERO1": [
+          "Good. Say it.",
+          "Again. I'll stop when you scream it.",
+          "That's better. Begin.",
+          "Stay still.",
+          "Learn.",
+          "Your body will betray you first.",
+          "Breathe.",
+          "Listen.",
+          "Obey.",
+          "Remember."
+        ]
+      }
+    },
+    "ERO2": {
+      "description": "Speeds up, fucks GG missionary while she has her feet pointing towards the sky",
+      "events": {
+        "ERO2": [
+          "That's all you've got?",
+          "I expected more from you.",
+          "You're making this too easy.",
+          "Still pretending you'll escape?",
+          "Keep fighting. I enjoy the effort.",
+          "You've got courage. Shame it won't help.",
+          "You almost impressed me.",
+          "You'll remember me longer than I'll remember you."
+        ]
+      }
+    },
+    "ERO3": {
+      "description": "Same speed, but harder, which makes GG slightly close her legs from the force, with each thrust",
+      "events": {
+        "ERO3": [
+          "There you are. That's the smart choice.",
+          "Good. You're finally thinking clearly.",
+          "See? That wasn't so difficult.",
+          "I knew you'd figure it out eventually.",
+          "That's the look of someone who's paying attention.",
+          "Good. You finally understand the situation.",
+          "Keep making choices like that, and we'll get along just fine.",
+          "You're a brainless fuck toy, ready to be chained up."
+        ]
+      }
+    },
+    "ERO4": {
+      "description": "Speeds up, and thrusts harder, making GG's feet bounce off his body",
+      "events": {
+        "ERO4": [
+          "Take it slut! You're nothing!",
+          "Look at me, slut! Beg for mercy!",
+          "You're an empty hole that deserves to get abused!",
+          "I'm gonna keep tearing it up until you make me cum, bitch.",
+          "Close your legs, toy. I'll crush your head if you disappoint me.",
+          "I'll teach you real pain. There's nothing you can do.",
+          "You're nothing but a dirty cum-rag.",
+          "I'll sell what's left of you to the streets of Ragdum!"
+        ],
+        "SE": [
+          "That tight hole won't save you.",
+          "I'll use you until there's nothing left to sell.",
+          "You're property now. Act like it."
+        ]
+      }
+    },
+    "FIN": {
+      "description": "Cums hard inside GG, while she hugs his body",
+      "events": {
+        "FIN": [
+          "Take it! Take it hard!",
+          "Ah! I'll keep using you until you die!",
+          "RAH! Close your legs, I'm gonna fill you up!",
+          "Good! You're a good toy. Arghh! Aaaah...",
+          "I'll crush you!",
+          "You fucking... whore!!!",
+          "I'm your master now!",
+          "I can feel you tighten up, little witch!"
+        ],
+        "SE": [
+          "Struggle. It only milks me deeper.",
+          "Keep thrashing until I finish breeding you.",
+          "Fight all you want. You're already claimed."
+        ]
+      }
+    },
+    "FIN2": {
+      "description": "Cums one time, pulls out, revealing GG's blushing face, tits and covered pussy",
+      "events": {
+        "FIN2": [
+          "You've changed, even if you don't admit it.",
+          "You'll think about this tonight.",
+          "Every day gets easier from here.",
+          "You're beginning to understand how this works.",
+          "Open your legs, slut.",
+          "Now you're all stretched out. The perfect toy for my cock.",
+          "You'll beg for it this time.",
+          "You'll remember this forever.",
+          "You will be my cum-dump until you die."
+        ]
+      }
+    },
+    "JIGO": {
+      "description": "GG twitches while he prepares for another round",
+      "events": {
+        "JIGO": [
+          "Catch your breath.",
+          "No rush.",
+          "Take a moment.",
+          "You think this is over? I don't catch and release.",
+          "Get ready, mindless hole.",
+          "You've earned a short rest.",
+          "I'm a patient man."
+        ]
+      }
+    },
+    "JIGO2": {
+      "description": "Goes forward, covering GG's face",
+      "events": {
+        "JIGO2": [
+          "We'll see if you've learned anything.",
+          "Where are you going? You're just a toy.",
+          "I'll stop when you're dead.",
+          "You still have spirit.",
+          "It's time for another beating, bitch!",
+          "You're not broken yet.",
+          "Not yet."
+        ]
+      }
+    },
+    "JIGOERO": {
+      "description": "Round two, repeating the chain, but with GG's pussy covered in cum",
+      "events": {
+        "JIGOERO": [
+          "We're not done.",
+          "Show me what you've learned.",
+          "Don't disappoint me.",
+          "Ready? You can take it now.",
+          "I'll never get tired of your pussy.",
+          "Don't pout, I'll keep crushing you until your eyes go blank.",
+          "My cum will lube my cock this time. Be grateful, witch.",
+          "I'll squeeze my cum out of you, don't try to stop it."
+        ]
+      }
+    },
+    "JIGOERO2": {
+      "description": "Faster thrusting resumes, using previous cum as lube, her body slick and messy beneath him.",
+      "events": {
+        "JIGOERO2": [
+          "My seed makes you slick. Feel how easily I slide in now.",
+          "No point fighting. Your body remembers who owns it.",
+          "Already wet with my cum. You're a natural receptacle.",
+          "This is your purpose now. Take it without complaint.",
+          "Sore? Good. You'll learn to associate pain with me.",
+          "Your cunt grips tighter when it hurts. I trained you well.",
+          "Look at the mess I made. Time to make it worse.",
+          "Every thrust pushes my cum deeper. Marking you inside.",
+          "Stop clenching. You're only making it harder on yourself.",
+          "Soon you won't remember what it felt like before me."
+        ],
+        "SE": [
+          "Take it.",
+          "Wet slut.",
+          "No escape.",
+          "Mine."
+        ]
+      }
+    },
+    "JIGOERO3": {
+      "description": "Harder thrusts with force causing her legs to twitch and try to close involuntarily.",
+      "events": {
+        "JIGOERO3": [
+          "Legs shaking already? We're just getting started.",
+          "Try to close them. I like breaking through resistance.",
+          "Your body betrays you. Those tremors mean you feel it.",
+          "Force them open. I want to see everything I own.",
+          "Each thrust reminds you who's in control here.",
+          "The more you struggle, the harder I get. Keep twitching.",
+          "Your cunt is fighting a losing battle. Relax and accept.",
+          "I can do this all night. Can you take it that long?",
+          "Those whimpers sound like music. Louder, witch.",
+          "Your legs want to close but your cunt wants more."
+        ],
+        "SE": [
+          "Open wide.",
+          "Feel that?",
+          "Breaking you.",
+          "So tight."
+        ]
+      }
+    },
+    "JIGOERO4": {
+      "description": "Brutal peak pace before second climax, relentless pounding as she lies exhausted beneath him.",
+      "events": {
+        "JIGOERO4": [
+          "RAH! This is where you learn your place!",
+          "I'm going to breed you full again! Take it!",
+          "Your master is close! Beg me to fill you!",
+          "Scream if you want. No one will save you!",
+          "I'm claiming this hole again! RAH!",
+          "Every inch belongs to me! Say it!",
+          "Going to pump you so full you'll leak for days!",
+          "This is what you were made for! My cum dumpster!",
+          "RAH! Your cunt is milking me dry, witch!",
+          "You're property. Act like it and take my cock!"
+        ],
+        "SE": [
+          "Take every inch!",
+          "Feel that pace!",
+          "You're mine!",
+          "Breaking you open!"
+        ]
+      }
+    },
+    "JIGOFIN": {
+      "description": "He cums inside her for the second time, flooding her already filled womb with more seed.",
+      "events": {
+        "JIGOFIN": [
+          "RAH! Filling you again! Take every drop!",
+          "There's so much more where that came from!",
+          "Your womb is drinking me down. Good girl.",
+          "Second load going deeper than the first.",
+          "This is how a proper toy gets marked. Inside and out.",
+          "RAH! Milk my cock dry with your tired cunt!",
+          "I'm painting your insides white again. Thank me.",
+          "So much cum for such a broken little witch.",
+          "Take it. Take it all. RAH!",
+          "You're just a vessel for my seed now."
+        ],
+        "SE": [
+          "Filling you deep!",
+          "RAH! Take it!",
+          "Deeper!",
+          "You're mine!"
+        ]
+      }
+    },
+    "JIGOFIN2": {
+      "description": "He pulls out showing her used body covered in cum, sore and thoroughly broken.",
+      "events": {
+        "JIGOFIN2": [
+          "Look at the mess I've made of you. Beautiful.",
+          "Two loads inside and you can barely move. Perfect.",
+          "My cum is leaking out of your cunt. That's my mark.",
+          "Stay there and let it drip. I want to admire my work.",
+          "Sore, filled, and marked. You're finally proper property.",
+          "This is what happens to runaways. Remember this view.",
+          "Your cunt is gaping and leaking. Exactly as it should be.",
+          "Rest while you can. Round three comes when I get hard again.",
+          "Look at yourself. You don't even look like a witch anymore.",
+          "My broken toy. My cum-covered slave."
+        ]
+      }
+    },
+    "JIGOPOST3": {
+      "description": "Act 3 begins with her legs already spread wide, displaying her ruined, gaping, cum-leaking state.",
+      "events": {
+        "JIGOPOST3": [
+          "Look at you. Legs open like you were trained.",
+          "Round three. You're already broken in for me.",
+          "That cunt is gaping. My work shows.",
+          "Two loads inside and you still hold them open.",
+          "No fight left. Just a proper display.",
+          "Exhausted, flushed, and leaking. Perfect condition.",
+          "You kept your legs wide for me. Good instinct.",
+          "Time to use what's left of you.",
+          "That wrecked hole needs more training.",
+          "Look how easily you accept your purpose now."
+        ]
+      }
+    },
+    "JIGOPOST4": {
+      "description": "He covers her again, mounting her exhausted body and trapping her beneath his weight.",
+      "events": {
+        "JIGOPOST4": [
+          "Stay still. I'm mounting my property.",
+          "Under me again where you belong.",
+          "Feel that weight? That's ownership.",
+          "No escape this time. You're too tired.",
+          "I'm going to use you until you stop twitching.",
+          "Your body remembers this position.",
+          "Trapped under your master. Say it.",
+          "Spread wider. I want full access.",
+          "This is your permanent address now.",
+          "Relax. Fighting only makes it worse."
+        ]
+      }
+    },
+    "JIGOPOSTERO": {
+      "description": "Third round thrusting begins, using prior cum as lube on her already messy, tired body.",
+      "events": {
+        "JIGOPOSTERO": [
+          "Sliding in easy. My cum makes you slick.",
+          "Third time's the charm. You're loose and ready.",
+          "No resistance left. Just a wet hole.",
+          "Feel me push through my own mess?",
+          "Your tired cunt grips weaker now. Good.",
+          "Round three on a broken toy. Luxury.",
+          "I'm going to ruin you beyond repair.",
+          "Push back. Or don't. I don't care anymore.",
+          "So much cum inside you already. More coming.",
+          "This is what your body was built for."
+        ],
+        "SE": [
+          "Take it.",
+          "Wet hole.",
+          "No fight.",
+          "Mine."
+        ]
+      }
+    },
+    "JIGOPOSTERO2": {
+      "description": "Faster thrusting, cum-lube allowing deeper use of her exhausted, barely responsive body.",
+      "events": {
+        "JIGOPOSTERO2": [
+          "Faster now. You can barely feel it anyway.",
+          "Just a sleeve for my cock. Nothing more.",
+          "Your cunt is so sloppy now. Perfect.",
+          "Deep strokes. I'm hitting your cervix.",
+          "Twitch if you want. I barely notice.",
+          "Using my cum to fuck you harder.",
+          "You're just a receptacle at this point.",
+          "No more whining. Just take the pounding.",
+          "This tired body still serves its purpose.",
+          "Three rounds and you're finally useful."
+        ],
+        "SE": [
+          "Faster.",
+          "Deep.",
+          "Sloppy.",
+          "Useless."
+        ]
+      }
+    },
+    "JIGOPOSTERO3": {
+      "description": "Hardest pounding before third climax, she is almost gone, body barely responding.",
+      "events": {
+        "JIGOPOSTERO3": [
+          "RAH! Almost there! Take the pounding!",
+          "This is the end! Your final breaking!",
+          "I'm going to finish what's left of you!",
+          "RAH! No more witch! Just my property!",
+          "Harder! You can take it! RAH!",
+          "Your cunt is milking me dry! RAH!",
+          "This is how you end! Under my cock!",
+          "RAH! Breaking you completely!",
+          "No more resistance! Just my cum!",
+          "RAH! Final load coming!"
+        ],
+        "SE": [
+          "RAH! Take it!",
+          "Break for me!",
+          "You're mine!",
+          "Finish it!"
+        ]
+      }
+    },
+    "JIGOPOSTFIN": {
+      "description": "Third orgasm inside her, flooding her already overfilled womb with another hot load.",
+      "events": {
+        "JIGOPOSTFIN": [
+          "RAH! Third load! Filling you up!",
+          "Take it! RAH! Flood that womb!",
+          "I'm breeding you full! RAH!",
+          "Three loads deep! You're marked!",
+          "RAH! Every drop inside! Mine!",
+          "Flooding you! RAH! Take it all!",
+          "This is your purpose! RAH! Full!",
+          "Third time's the charm! RAH! Done!",
+          "You're swimming in my seed! RAH!",
+          "Finished! RAH! My broken toy!"
+        ],
+        "SE": [
+          "RAH! Take it!",
+          "Fill you up!",
+          "Third load!",
+          "You're done!"
+        ]
+      }
+    },
+    "JIGOPOSTFIN2": {
+      "description": "Afterglow and pull-out display, legs still open, leaking heavily from three loads.",
+      "events": {
+        "JIGOPOSTFIN2": [
+          "Look at that. Three loads leaking out.",
+          "Stay open. I want to see the damage.",
+          "You're a fountain of my cum. Beautiful.",
+          "Gaping and dripping. Completely ruined.",
+          "This is your best look. Empty and marked.",
+          "Legs wide, cunt open, cum flowing.",
+          "My masterpiece. A broken witch.",
+          "Rest now. You're thoroughly bred.",
+          "That hole will never close the same.",
+          "Admire what I've made of you."
+        ]
+      }
+    },
+    "JIGOTOFADE": {
+      "description": "Screen begins to fade to black, scene ending with final ownership declarations.",
+      "events": {
+        "JIGOTOFADE": [
+          "Into the dark. But you're still mine.",
+          "This ends for the world. Not for you.",
+          "Disappearing into darkness. My property.",
+          "No more light. Just my ownership.",
+          "Vanishing. But marked forever.",
+          "Goodbye to freedom. Hello to service.",
+          "Into the dark. As my toy.",
+          "The end begins. Your new life."
+        ]
+      }
+    },
+    "ZGAMEOVER": {
+      "description": "Bad end visual, she is fully broken, semen-stained, claimed as permanent property.",
+      "events": {
+        "ZGAMEOVER": [
+          "You lost. I won. You're done.",
+          "Fully broken. Fully marked. Fully mine.",
+          "No escape. No second chance. Just ownership.",
+          "Semen-stained and finished. My property.",
+          "The witch is dead. The toy remains.",
+          "Your story ends as my slave.",
+          "Captured. Broken. Kept.",
+          "Forever mine. Forever used."
+        ]
+      }
+    },
+    "ZGAMEOVER2LOOP": {
+      "description": "Looping bad-end hold, quiet gloating about her permanent state.",
+      "events": {
+        "ZGAMEOVER2LOOP": [
+          "Stay like this. Forever.",
+          "My permanent possession.",
+          "No change. Only use.",
+          "Looping as my toy.",
+          "Eternal service.",
+          "Never free. Always mine.",
+          "Your forever."
+        ]
+      }
+    },
+    "4ERO": {
+      "description": "Optional coda after fade, mouth or continued use of the finished toy.",
+      "events": {
+        "4ERO": [
+          "Even after the end, you're useful.",
+          "Open your mouth. Still useful.",
+          "The toy keeps giving.",
+          "Not done with you yet.",
+          "Cleanup. You're still useful.",
+          "Final use of broken property.",
+          "Squeeze the last from you.",
+          "Even ruins have purpose."
+        ]
+      }
+    }
+  }
+}

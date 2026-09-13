@@ -25,7 +25,7 @@ class SpawnPointAnalyzer {
     private static System.Collections.Generic.List<string> recordedPoints = new();
 
     private static GameObject modeIndicatorCanvas = null;
-    private static Image modeIndicatorImage = null;
+    private static Text modeIndicatorTitle = null;
     
     [HarmonyPatch(typeof(Spawnenemy), "Update")]
     [HarmonyPrefix]
@@ -80,10 +80,11 @@ class SpawnPointAnalyzer {
         {
             UnityEngine.Object.Destroy(modeIndicatorCanvas);
             modeIndicatorCanvas = null;
-            modeIndicatorImage = null;
+            modeIndicatorTitle = null;
         }
 
         recordingMode = false;
+        SpawnAuthoringOverlayHost.SetActive(false);
     }
 
     private static int globalGoblinOrder = 0;
@@ -104,11 +105,11 @@ class SpawnPointAnalyzer {
 
     /// <summary>
     /// F11 spawn coordinate recorder (invoked from PlayerConUpdateDispatcher).
-    /// F11 — toggle recording (green screen overlay when on).
+    /// F11 — toggle recording (top "Spawn System Editor V2.0" banner when on).
     /// LMB while recording — append mouse cursor world position to spawnpoint.log and clipboard.
     /// RMB while recording — altar-style hot reload (clear enemies, fun_SpawnRE, re-read HellGate JSON).
     /// Ctrl+Z — undo last recorded line.
-    /// F12 — show recording statistics.
+    /// F12 — show recording statistics (Shift+F12 while F11 authoring; plain F12 = screenshot).
     /// </summary>
     internal static void Process()
     {
@@ -121,17 +122,32 @@ class SpawnPointAnalyzer {
             ShowRecordingNotification($"Spawn Recording: {status}\nPoints: {recordedPoints.Count}");
 
             UpdateModeIndicator();
+            SpawnAuthoringOverlayHost.SetActive(recordingMode);
+            if (recordingMode)
+            {
+                SpawnAuthoringEnemyCatalog.Invalidate();
+                SpawnAuthoringTrapCatalog.Invalidate();
+                SpawnAuthoringHostageCatalog.Invalidate();
+            }
         }
 
-        if (recordingMode && Input.GetMouseButtonDown(0))
+        // When authoring UI is on, world LMB is recorded from OnGUI (avoids click-through the panel).
+        bool authoringUi = SpawnAuthoringConfig.UiEnable == null || SpawnAuthoringConfig.UiEnable.Value;
+        if (recordingMode && Input.GetMouseButtonDown(0) && !authoringUi)
         {
             RecordCurrentPosition();
         }
 
-        if (recordingMode && Input.GetMouseButtonDown(1))
+        if (recordingMode && Input.GetMouseButtonDown(1) && !SpawnAuthoringOverlayHost.IsPointerOverUi)
         {
+            string commitStatus;
+            bool committed = SpawnAuthoringOverlayHost.TryCommitLivePositionBeforeReload(out commitStatus);
             NoREroMod.Systems.Spawn.SpawnRespawnAfterAltarPatch.TriggerSpawnEditHotReload();
-            ShowRecordingNotification("Spawn hot-reload (altar-style)\nEnemies cleared, respawned, HellGate re-read from disk");
+            if (committed && !string.IsNullOrEmpty(commitStatus))
+                ShowRecordingNotification(commitStatus + "\n+ hot-reload");
+            else
+                ShowRecordingNotification("Spawn hot-reload (altar-style)\nEnemies cleared, respawned, HellGate re-read from disk");
+            SpawnAuthoringUiSuppressor.RefreshIfActive();
         }
 
         if (recordingMode && Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.Z))
@@ -141,8 +157,19 @@ class SpawnPointAnalyzer {
 
         if (Input.GetKeyDown(KeyCode.F12))
         {
-            ShowRecordingStatistics();
+            // While F11 authoring is on, plain F12 = screenshot (overlay). Shift+F12 = stats.
+            bool shift = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
+            if (!recordingMode || shift)
+                ShowRecordingStatistics();
         }
+    }
+
+    /// <summary>Called from authoring OnGUI when LMB is outside the panel.</summary>
+    internal static void TryRecordWorldClickFromAuthoringUi()
+    {
+        if (!recordingMode)
+            return;
+        RecordCurrentPosition();
     }
 
     /// <summary>Appends the mouse cursor world position to spawnpoint.log and copies coords to the clipboard.</summary>
@@ -169,6 +196,10 @@ class SpawnPointAnalyzer {
             recordedPoints.Add(logEntry);
 
             CopyCoordinatesToClipboard(coords);
+            string packHint = SpawnAuthoringPackWriter.GetActivePackFileName();
+            if (string.IsNullOrEmpty(packHint))
+                packHint = location;
+            SpawnAuthoringState.SetLastClick(position.x, position.y, packHint);
 
             Plugin.Log.LogInfo($"[SPAWN RECORDER] Point #{recordedPoints.Count} recorded: ({coords}) in {location} [clipboard]");
 
@@ -396,7 +427,23 @@ class SpawnPointAnalyzer {
             .Trim();
     }
 
-    /// <summary>Shows or hides the full-screen green recording overlay.</summary>
+    /// <summary>F11 banner on/off (e.g. hide during screenshot).</summary>
+    internal static void SetModeBannerVisible(bool visible)
+    {
+        try
+        {
+            if (modeIndicatorCanvas == null && visible && recordingMode)
+                CreateModeIndicator();
+            if (modeIndicatorCanvas != null)
+                modeIndicatorCanvas.SetActive(visible && recordingMode);
+        }
+        catch (System.Exception ex)
+        {
+            Plugin.Log.LogWarning($"[SPAWN RECORDER] Banner toggle failed: {ex.Message}");
+        }
+    }
+
+    /// <summary>Shows or hides the top Spawn System Editor V2.0 banner.</summary>
     private static void UpdateModeIndicator()
     {
         try
@@ -404,22 +451,18 @@ class SpawnPointAnalyzer {
             if (recordingMode)
             {
                 if (modeIndicatorCanvas == null)
-                {
                     CreateModeIndicator();
-                }
 
                 if (modeIndicatorCanvas != null)
                 {
                     modeIndicatorCanvas.SetActive(true);
-                    modeIndicatorImage.color = new Color(0f, 1f, 0f, 0.1f);
+                    if (modeIndicatorTitle != null)
+                        modeIndicatorTitle.text = NoREroMod.Systems.Spawn.SpawnAuthoringLoc.T("banner.title");
                 }
             }
-            else
+            else if (modeIndicatorCanvas != null)
             {
-                if (modeIndicatorCanvas != null)
-                {
-                    modeIndicatorCanvas.SetActive(false);
-                }
+                modeIndicatorCanvas.SetActive(false);
             }
         }
         catch (System.Exception ex)
@@ -428,31 +471,78 @@ class SpawnPointAnalyzer {
         }
     }
 
-    /// <summary>Creates a screen-space overlay used while recording mode is active.</summary>
+    /// <summary>
+    /// Top-of-screen title banner (HellGate orange). Replaces the old full-screen green tint.
+    /// </summary>
     private static void CreateModeIndicator()
     {
         try
         {
+            if (modeIndicatorCanvas != null)
+            {
+                UnityEngine.Object.Destroy(modeIndicatorCanvas);
+                modeIndicatorCanvas = null;
+                modeIndicatorTitle = null;
+            }
+
+            // HellGate brand orange (same as splash loading / tips accent).
+            Color brandOrange = new Color(1f, 0.55f, 0.1f, 1f);
+
             modeIndicatorCanvas = new GameObject("SpawnRecorderIndicator");
             var canvas = modeIndicatorCanvas.AddComponent<Canvas>();
             canvas.renderMode = RenderMode.ScreenSpaceOverlay;
             canvas.sortingOrder = 9999;
+            modeIndicatorCanvas.AddComponent<CanvasScaler>();
 
-            var imageObj = new GameObject("IndicatorImage");
-            imageObj.transform.SetParent(modeIndicatorCanvas.transform);
+            // Centered title chip — not full-width, so it never cuts the right coords panel.
+            const float titleBarWidth = 340f;
+            const float titleBarHeight = 36f;
 
-            modeIndicatorImage = imageObj.AddComponent<Image>();
-            modeIndicatorImage.color = new Color(0f, 1f, 0f, 0.1f);
+            var barObj = new GameObject("TitleBar");
+            barObj.transform.SetParent(modeIndicatorCanvas.transform, false);
+            var barImage = barObj.AddComponent<Image>();
+            barImage.color = new Color(0.08f, 0.06f, 0.05f, 0.78f);
+            var barRect = barObj.GetComponent<RectTransform>();
+            barRect.anchorMin = new Vector2(0.5f, 1f);
+            barRect.anchorMax = new Vector2(0.5f, 1f);
+            barRect.pivot = new Vector2(0.5f, 1f);
+            barRect.sizeDelta = new Vector2(titleBarWidth, titleBarHeight);
+            barRect.anchoredPosition = new Vector2(0f, -8f);
 
-            var rectTransform = imageObj.GetComponent<RectTransform>();
-            rectTransform.anchorMin = Vector2.zero;
-            rectTransform.anchorMax = Vector2.one;
-            rectTransform.offsetMin = Vector2.zero;
-            rectTransform.offsetMax = Vector2.zero;
+            // Orange underline only under the title chip (not screen-wide).
+            var accentObj = new GameObject("AccentLine");
+            accentObj.transform.SetParent(barObj.transform, false);
+            var accentImage = accentObj.AddComponent<Image>();
+            accentImage.color = brandOrange;
+            var accentRect = accentObj.GetComponent<RectTransform>();
+            accentRect.anchorMin = new Vector2(0.08f, 0f);
+            accentRect.anchorMax = new Vector2(0.92f, 0f);
+            accentRect.pivot = new Vector2(0.5f, 0f);
+            accentRect.sizeDelta = new Vector2(0f, 2f);
+            accentRect.anchoredPosition = Vector2.zero;
 
-            var outline = imageObj.AddComponent<UnityEngine.UI.Outline>();
-            outline.effectColor = Color.green;
-            outline.effectDistance = new Vector2(3, 3);
+            var textObj = new GameObject("Title");
+            textObj.transform.SetParent(barObj.transform, false);
+            modeIndicatorTitle = textObj.AddComponent<Text>();
+            modeIndicatorTitle.text = NoREroMod.Systems.Spawn.SpawnAuthoringLoc.T("banner.title");
+            modeIndicatorTitle.alignment = TextAnchor.MiddleCenter;
+            modeIndicatorTitle.fontSize = 18;
+            modeIndicatorTitle.fontStyle = FontStyle.Bold;
+            modeIndicatorTitle.color = brandOrange;
+            modeIndicatorTitle.raycastTarget = false;
+            Font font = Resources.GetBuiltinResource<Font>("Arial.ttf");
+            if (font != null)
+                modeIndicatorTitle.font = font;
+
+            var textRect = textObj.GetComponent<RectTransform>();
+            textRect.anchorMin = Vector2.zero;
+            textRect.anchorMax = Vector2.one;
+            textRect.offsetMin = Vector2.zero;
+            textRect.offsetMax = Vector2.zero;
+
+            var outline = textObj.AddComponent<Outline>();
+            outline.effectColor = new Color(0f, 0f, 0f, 0.85f);
+            outline.effectDistance = new Vector2(1f, -1f);
 
             UnityEngine.Object.DontDestroyOnLoad(modeIndicatorCanvas);
             modeIndicatorCanvas.SetActive(false);

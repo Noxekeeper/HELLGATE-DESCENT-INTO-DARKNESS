@@ -97,6 +97,11 @@ REINFORCEMENT:
   etrap_vagrant         → Vagrant
   etrap_bigonibrother   → BigoniBrother
 
+  etrap_angelstatue
+    Враг: AngelStatue ×1, зона 7, фракция demons
+    Пример:
+      EVENTTRAP,etrap_angelstatue,1759.36,-401.41
+
   Пример (любой враг из списка):
       EVENTTRAP,etrap_goblin,<X>,<Y>
       EVENTTRAP,etrap_prisonofficer,<X>,<Y>

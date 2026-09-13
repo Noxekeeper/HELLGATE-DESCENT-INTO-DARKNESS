@@ -66,15 +66,67 @@ internal static class SpawnRotationUtility
         return wrapped;
     }
 
+    internal static bool IsWallMountAngle(float rotationZ)
+    {
+        float n = NormalizeAngle(rotationZ);
+        float to90 = Mathf.Abs(Mathf.DeltaAngle(n, 90f));
+        float to270 = Mathf.Abs(Mathf.DeltaAngle(n, 270f));
+        return to90 <= 45f || to270 <= 45f;
+    }
+
     internal static void ApplyRotation(GameObject root, float rotationZ)
+    {
+        ApplyAuthoringRotation(root, rotationZ);
+    }
+
+    /// <summary>
+    /// Set Z rotation on the root without moving XY.
+    /// F11 pause uses timeScale 0, so Rigidbody2D.MoveRotation is skipped —
+    /// it would not apply and later fight the transform.
+    /// </summary>
+    internal static void ApplyAuthoringRotation(GameObject root, float rotationZ)
     {
         if (root == null)
             return;
 
         float angle = NormalizeAngle(rotationZ);
-        if (Mathf.Abs(angle) < 0.001f)
+        root.transform.rotation = Quaternion.Euler(0f, 0f, angle);
+
+        Rigidbody2D body = root.GetComponent<Rigidbody2D>();
+        if (body == null)
             return;
 
-        root.transform.rotation = Quaternion.Euler(0f, 0f, angle);
+        body.angularVelocity = 0f;
+        body.velocity = Vector2.zero;
+        body.rotation = angle;
+    }
+
+    /// <summary>
+    /// Keep pack Z rotation after Trapdata/Start resets euler (same idea as SpawnFixedFacing).
+    /// </summary>
+    internal static void LockAuthoringRotation(GameObject root, float rotationZ)
+    {
+        if (root == null)
+            return;
+
+        float angle = NormalizeAngle(rotationZ);
+        ApplyAuthoringRotation(root, angle);
+
+        SpawnFixedRotation hold = root.GetComponent<SpawnFixedRotation>();
+        if (hold == null)
+            hold = root.AddComponent<SpawnFixedRotation>();
+        hold.FixedZ = angle;
+    }
+
+    internal static float ReadRotationZ(GameObject root)
+    {
+        if (root == null)
+            return 0f;
+
+        Rigidbody2D body = root.GetComponent<Rigidbody2D>();
+        if (body != null)
+            return NormalizeAngle(body.rotation);
+
+        return NormalizeAngle(root.transform.eulerAngles.z);
     }
 }

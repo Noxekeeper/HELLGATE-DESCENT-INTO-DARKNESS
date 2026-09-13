@@ -36,6 +36,9 @@ internal static class SpawnTemplateDiskCache
     private static bool restoreComplete;
     private static bool splashPreloadStarted;
     private static bool splashPreloadComplete;
+    private static int splashPreloadTotalScenes;
+    private static int splashPreloadCompletedScenes;
+    private static string splashPreloadCurrentScene = string.Empty;
     private static readonly HashSet<string> hydratedScenes =
         new HashSet<string>(StringComparer.OrdinalIgnoreCase);
 
@@ -44,6 +47,10 @@ internal static class SpawnTemplateDiskCache
     /// <summary>True when splash background preload was never started or has finished.</summary>
     internal static bool IsSplashPreloadFinished =>
         !splashPreloadStarted || splashPreloadComplete;
+
+    internal static int SplashPreloadTotalScenes => splashPreloadTotalScenes;
+    internal static int SplashPreloadCompletedScenes => splashPreloadCompletedScenes;
+    internal static string SplashPreloadCurrentScene => splashPreloadCurrentScene ?? string.Empty;
 
     internal static bool HasDiskEntry(string key)
     {
@@ -64,7 +71,7 @@ internal static class SpawnTemplateDiskCache
             "SpawnTemplates",
             "PreloadDiskCacheDuringSplash",
             true,
-            "While the HELLGATE disclaimer/splash is visible, preload spawn template scenes in the background so gameplay entry does not hitch.");
+            "While the HELLGATE disclaimer/splash Loading gate is visible, hydrate spawn template scenes so Start unlocks after cache is ready.");
 
         plugin.Config.Bind(
             "SpawnTemplates",
@@ -130,8 +137,20 @@ internal static class SpawnTemplateDiskCache
             SpawnZ = spawnZ
         };
 
-        if (entries.TryGetValue(normalizedKey, out Entry existing) && EntriesEqual(existing, entry))
-            return;
+        if (entries.TryGetValue(normalizedKey, out Entry existing))
+        {
+            if (EntriesEqual(existing, entry))
+                return;
+
+            // Resources scans record scene="" → __resources__. Never wipe a known map scene
+            // (e.g. Prison for trap_mokubaenemy) with that placeholder or hydrate skips the real load.
+            if (string.Equals(entry.Scene, ResourcesSceneToken, StringComparison.OrdinalIgnoreCase) &&
+                !string.IsNullOrEmpty(existing.Scene) &&
+                !string.Equals(existing.Scene, ResourcesSceneToken, StringComparison.OrdinalIgnoreCase))
+            {
+                return;
+            }
+        }
 
         entries[normalizedKey] = entry;
         SaveToDisk();
@@ -160,12 +179,6 @@ internal static class SpawnTemplateDiskCache
     {
         if (plugin == null || splashPreloadStarted)
             return;
-        if (enabledConfig != null && !enabledConfig.Value)
-            return;
-        if (splashPreloadConfig != null && !splashPreloadConfig.Value)
-            return;
-        if (entries.Count == 0)
-            return;
 
         splashPreloadStarted = true;
         plugin.StartCoroutine(SplashPreloadCoroutine());
@@ -174,7 +187,32 @@ internal static class SpawnTemplateDiskCache
     private static IEnumerator SplashPreloadCoroutine()
     {
         yield return null;
+
+        splashPreloadCurrentScene = "whitelist";
+        try
+        {
+            SpawnTemplateWhitelist.ReloadAndCache(Plugin.Instance);
+        }
+        catch (Exception ex)
+        {
+            Plugin.Log?.LogWarning($"[SPAWN DISK CACHE] Whitelist splash cache failed: {ex.Message}");
+        }
         yield return null;
+
+        bool hydrateScenes =
+            (enabledConfig == null || enabledConfig.Value) &&
+            (splashPreloadConfig == null || splashPreloadConfig.Value) &&
+            entries.Count > 0;
+
+        if (!hydrateScenes)
+        {
+            splashPreloadTotalScenes = 0;
+            splashPreloadCompletedScenes = 0;
+            splashPreloadCurrentScene = string.Empty;
+            splashPreloadComplete = true;
+            Plugin.Log?.LogInfo("[SPAWN DISK CACHE] Splash scene hydrate skipped (disabled or empty cache). Whitelist done.");
+            yield break;
+        }
 
         var scenes = new List<string>();
         var sceneSet = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
@@ -185,9 +223,17 @@ internal static class SpawnTemplateDiskCache
                 string.Equals(entry.Scene, ResourcesSceneToken, StringComparison.OrdinalIgnoreCase))
                 continue;
 
+            // RanchEro2 / *Ero* hydrate wakes TyoukyoushiERO → MasterAudio moans on title BGM.
+            if (IsEroHydrateScene(entry.Scene))
+                continue;
+
             if (sceneSet.Add(entry.Scene))
                 scenes.Add(entry.Scene);
         }
+
+        splashPreloadTotalScenes = scenes.Count;
+        splashPreloadCompletedScenes = 0;
+        splashPreloadCurrentScene = string.Empty;
 
         Plugin.Log?.LogInfo(
             $"[SPAWN DISK CACHE] Splash preload: {scenes.Count} scene(s), {entries.Count} disk key(s) while disclaimer is visible.");
@@ -216,11 +262,16 @@ internal static class SpawnTemplateDiskCache
             for (int i = 0; i < scenes.Count; i++)
             {
                 string sceneName = scenes[i];
+                splashPreloadCurrentScene = sceneName;
                 if (hydratedScenes.Contains(sceneName))
+                {
+                    splashPreloadCompletedScenes++;
                     continue;
+                }
 
                 yield return LoadSceneCacheAndMaybeUnload(sceneName, string.Empty);
                 hydratedScenes.Add(sceneName);
+                splashPreloadCompletedScenes++;
             }
 
             SpawnTemplateCatalog.RefreshAliasesAndDump();
@@ -228,6 +279,7 @@ internal static class SpawnTemplateDiskCache
         finally
         {
             SpawnCacheWeatherGuard.EndHydrateBatch();
+            splashPreloadCurrentScene = string.Empty;
         }
 
         splashPreloadComplete = true;
@@ -292,19 +344,52 @@ internal static class SpawnTemplateDiskCache
         if (keys.Count == 0)
             yield break;
 
+        // Resources-marked keys can be restored without a map load.
+        foreach (string key in keys)
+        {
+            if (!entries.TryGetValue(key, out Entry entry))
+                continue;
+            if (!string.Equals(entry.Scene, ResourcesSceneToken, StringComparison.OrdinalIgnoreCase))
+                continue;
+            if (!SpawnTemplateCatalog.HasTemplate(key))
+                SpawnTemplateCatalog.TryCacheFromResources(key);
+        }
+
+        // Only load scenes for keys that are still missing after Resources.
         var scenes = new List<string>();
         var sceneSet = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
         foreach (string key in keys)
         {
+            if (SpawnTemplateCatalog.HasTemplate(key))
+                continue;
+
             if (entries.TryGetValue(key, out Entry entry))
             {
-                if (string.IsNullOrEmpty(entry.Scene) ||
-                    string.Equals(entry.Scene, ResourcesSceneToken, StringComparison.OrdinalIgnoreCase))
+                if (!string.IsNullOrEmpty(entry.Scene) &&
+                    !string.Equals(entry.Scene, ResourcesSceneToken, StringComparison.OrdinalIgnoreCase))
+                {
+                    if (sceneSet.Add(entry.Scene))
+                        scenes.Add(entry.Scene);
                     continue;
+                }
 
-                if (sceneSet.Add(entry.Scene))
-                    scenes.Add(entry.Scene);
+                // Disk said __resources__ but Resources miss — use whitelist key@Scene.
+                var whitelistScenes = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+                SpawnTemplateWhitelist.CollectScenesForKey(key, whitelistScenes);
+                foreach (string whitelistScene in whitelistScenes)
+                {
+                    if (sceneSet.Add(whitelistScene))
+                        scenes.Add(whitelistScene);
+                }
                 continue;
+            }
+
+            var missingKeyScenes = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+            SpawnTemplateWhitelist.CollectScenesForKey(key, missingKeyScenes);
+            foreach (string whitelistScene in missingKeyScenes)
+            {
+                if (sceneSet.Add(whitelistScene))
+                    scenes.Add(whitelistScene);
             }
 
             string[] decorScenes = SpawnDecorCatalog.GetScenesForKey(key);
@@ -319,22 +404,7 @@ internal static class SpawnTemplateDiskCache
         }
 
         if (scenes.Count == 0)
-            yield break;
-
-        if (splashPreloadComplete)
         {
-            foreach (string key in keys)
-            {
-                if (!entries.TryGetValue(key, out Entry entry))
-                    continue;
-
-                if (!string.Equals(entry.Scene, ResourcesSceneToken, StringComparison.OrdinalIgnoreCase))
-                    continue;
-
-                if (!SpawnTemplateCatalog.HasTemplate(key))
-                    SpawnTemplateCatalog.TryCacheFromResources(key);
-            }
-
             SpawnTemplateCatalog.RefreshAliasesAndDump();
             yield break;
         }
@@ -417,11 +487,12 @@ internal static class SpawnTemplateDiskCache
         Scene scene = SceneManager.GetSceneByName(sceneName);
         if (!scene.IsValid() || !scene.isLoaded)
         {
+            Plugin.Log?.LogInfo($"[SPAWN DISK CACHE] On-demand load: {sceneName}");
+            AsyncOperation? op = null;
             try
             {
-                Plugin.Log?.LogInfo($"[SPAWN DISK CACHE] On-demand load: {sceneName}");
-                SceneManager.LoadScene(sceneName, LoadSceneMode.Additive);
-                loadedHere = true;
+                // Async + activation — sync LoadScene can deadlock if other loads sit at 0.9.
+                op = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
             }
             catch (Exception ex)
             {
@@ -429,13 +500,23 @@ internal static class SpawnTemplateDiskCache
                 yield break;
             }
 
-            for (int wait = 0; wait < 120; wait++)
+            if (op == null)
+                yield break;
+
+            op.allowSceneActivation = true;
+            float started = Time.realtimeSinceStartup;
+            while (!op.isDone)
             {
-                scene = SceneManager.GetSceneByName(sceneName);
-                if (scene.IsValid() && scene.isLoaded)
-                    break;
+                if (Time.realtimeSinceStartup - started > 60f)
+                {
+                    Plugin.Log?.LogWarning($"[SPAWN DISK CACHE] Timed out loading \"{sceneName}\" — skipping.");
+                    yield break;
+                }
                 yield return null;
             }
+
+            loadedHere = true;
+            scene = SceneManager.GetSceneByName(sceneName);
         }
 
         if (!scene.IsValid() || !scene.isLoaded)
@@ -656,6 +737,19 @@ internal static class SpawnTemplateDiskCache
         {
             Plugin.Log?.LogWarning($"[SPAWN DISK CACHE] Whitelist seed failed: {ex.Message}");
         }
+    }
+
+    /// <summary>H-content scenes fire TyoukyoushiERO / MasterAudio moans if hydrated during splash.</summary>
+    private static bool IsEroHydrateScene(string sceneName)
+    {
+        if (string.IsNullOrEmpty(sceneName))
+            return false;
+
+        string s = sceneName.Trim();
+        return s.IndexOf("Ero", StringComparison.OrdinalIgnoreCase) >= 0
+               || s.IndexOf("ERO", StringComparison.OrdinalIgnoreCase) >= 0
+               || s.IndexOf("Hscene", StringComparison.OrdinalIgnoreCase) >= 0
+               || s.IndexOf("HScene", StringComparison.OrdinalIgnoreCase) >= 0;
     }
 
     /// <summary>Wait only for Gametitle / boot — not for Common (gameplay uses fragReScene).</summary>

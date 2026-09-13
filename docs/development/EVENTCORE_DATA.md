@@ -40,11 +40,19 @@ instead of breaking the event.
 ## Manifest — `eventcore_manifest.json`
 
 ```json
-{ "eventFiles": ["eventcore_broker_gate.json"] }
+{
+  "eventFiles": [
+    "eventcore_broker_gate.json",
+    "eventcore_fsp_bandits_sex_paid.json"
+  ]
+}
 ```
 
 Each listed file is loaded as an event definition. Files not listed are
-ignored.
+ignored. The F11 EventCore catalog lists these ids
+(`GetAuthoringEventIds`). Adding a definition to the manifest is enough
+for Place; a C# bound enemy key is only needed when the prefab must not
+be `TouzokuNormal`.
 
 ## Event definition — `eventcore_<event>.json`
 
@@ -80,6 +88,22 @@ Ambush pack shape:
 
 Offsets are relative to the active EventCore host. `enemyType` is a spawn
 registry key (`EnemyPrefabRegistry`).
+
+## Spawn pack attachment
+
+Modal hosts are **not** JSON. They are pipes on an enemy spawn line,
+parsed by `SpawnConfigExecutor.ParseEnemySpec`. Full F11 / pack rules:
+[SPAWN.md](../modules/SPAWN.md) and [EVENT_CORE.md](../modules/EVENT_CORE.md).
+
+| Pipe | Contract |
+|------|----------|
+| `\|ec_event=<id>` | event id from the manifest (`\|ec=` alias) |
+| `\|ec_pool=a,b` | uniform pick per spawn; overrides `ec_event` |
+| `\|ec_chance=<0–1>` | attach probability (`\|ec_p=` alias). Omit or `1` = always attach |
+
+Empty `|faction=` on an EventCore spawn becomes `eventcore_encounter`.
+F11 EventCore Place writes `TouzokuNormal|faction=eventcore_encounter|ec_event=<id>,1`
+and omits `|ec_chance=` when Event p= is 1.
 
 ## Step file — one `EventCoreStepDefinition` per file
 
@@ -151,13 +175,15 @@ Anchor lines in `HellGateSpawn_*.txt` accept two forms (`#` starts a
 comment; the spawn file must be listed in `HellGateSpawnSceneHints`):
 
 ```
-EVENTTRAP,<packFolder>,<x>,<y>
-EVENTTRAP,<anchorId>,<packFolder>,<x>,<y>
+EVENTTRAP,<packFolder>,<x>,<y>[,count=1-2][,dist=6;8][,sides=both][,faction=bandits][,max=3][,r=8][,delay=1]
+EVENTTRAP,<anchorId>,<packFolder>,<x>,<y>[,same extras]
 ```
 
 The 4-part form uses the pack folder as the anchor id, so it allows only one
 anchor per pack per scene; use the 5-part form (unique `anchorId`) to place
-the same pack several times.
+the same pack several times. Optional tokens after XY overlay that pack's
+`config.json` for this anchor only (`count`, `dist`, `sides`, `faction`,
+`max`, `r`/`zone`, `delay`). Empty / omitted tokens keep the pack defaults.
 
 Each pack lives in `_shared/<folder>/config.json` (`EventTrapConfigFile`) —
 language-independent tuning:
@@ -195,7 +221,7 @@ same suspicion-thought fields as EventTrap.
 - UTF-8; a leading BOM is tolerated by the loaders.
 - Add new events by creating the definition + step files and listing the
   definition in `eventcore_manifest.json`; no C# change is needed unless a
-  new `handlerId` is required.
+  new `handlerId` or a non-Touzoku F11 bound prefab is required.
 - Provide step files and phrase files for every language folder you ship;
   fallback keeps events working but mixes languages.
 - After editing content, reload the scene and check the BepInEx log for

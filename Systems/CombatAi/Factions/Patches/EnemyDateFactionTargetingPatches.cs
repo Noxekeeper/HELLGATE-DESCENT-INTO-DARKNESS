@@ -20,7 +20,23 @@ internal static class EnemyDateFactionDistancePatch
             if (!EnemyFactionsConfig.Enable)
                 return;
 
+            // Illusive / Rodenia SlaveBigAxe: leave Distance_fun fully vanilla.
+            if ((__instance is SlaveBigAxe || __instance is OtherSlavebigAxe) &&
+                NoREroMod.Patches.Enemy.SlaveBigAxeIllusiveEventGate.ShouldSkipHellGateLogic())
+                return;
+
             bool playerIsDowned = __instance.com_player != null && __instance.com_player.erodown != 0;
+            bool playerInHScene = __instance.com_player != null && __instance.com_player.eroflag;
+
+            // WallHip / trap H-scenes keep erodown!=0 while eroflag is set. The downed branch
+            // below must not pull faction AI toward the player during that window.
+            if (EnemyFactionsConfig.FreezeFactionAiDuringHScene && playerInHScene)
+            {
+                if (!EnemyFactionRuntime.IsBossEnemy(__instance.gameObject))
+                    EnemyFactionRuntime.EnterPassiveWaitState(__instance);
+                return;
+            }
+
             if (playerIsDowned)
             {
                 if (!EnemyFactionRuntime.IsBossEnemy(__instance.gameObject))
@@ -33,12 +49,6 @@ internal static class EnemyDateFactionDistancePatch
 
             if (!EnemyFactionRuntime.IsBossEnemy(__instance.gameObject))
                 EnemyFactionRuntime.ApplyRelationMoveSpeed(__instance);
-            if (EnemyFactionsConfig.FreezeFactionAiDuringHScene &&
-                __instance.com_player != null && __instance.com_player.eroflag)
-            {
-                EnemyFactionRuntime.EnterPassiveWaitState(__instance);
-                return;
-            }
 
             bool hostileToPlayer = EnemyFactionRuntime.IsHostileToPlayer(__instance.gameObject);
             if (EnemyFactionRuntime.ShouldRespectEventCorePassiveShell(__instance))

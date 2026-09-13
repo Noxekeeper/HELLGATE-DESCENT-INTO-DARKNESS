@@ -24,7 +24,7 @@ internal static class PlayerDeathSoulRestartMenuPatch
 
 internal static class PlayerDeathSoulRise
 {
-    internal const float RiseHeight = 3.5f;
+    internal const float RiseHeight = 4.5f;
     private const float RiseDuration = 0.35f;
 
     internal static IEnumerator RiseAfterDeath()

@@ -1044,6 +1044,11 @@ internal static class MindBrokenBadEndSystem
             ApplicationHasFocus = hasFocus;
         }
 
+        private void OnApplicationPause(bool pauseStatus)
+        {
+            MindBrokenRealtimeGate.ApplicationPaused = pauseStatus;
+        }
+
         /// <summary>Re-apply pause and MasterAudio stop. When window has no focus (Alt+Tab) skip heavy work to avoid NRE spam.</summary>
         public IEnumerator KeepGamePausedWhileBadEnd()
         {
@@ -1253,7 +1258,9 @@ internal static class MindBrokenBadEndSystem
         {
             while (MindBrokenSystem.IsCountdownActive)
             {
-                MindBrokenSystem.UpdateCountdown(Time.unscaledDeltaTime);
+                float dt = MindBrokenRealtimeGate.GetClampedUnscaledDelta();
+                if (dt > 0f)
+                    MindBrokenSystem.UpdateCountdown(dt);
                 yield return null;
             }
         }

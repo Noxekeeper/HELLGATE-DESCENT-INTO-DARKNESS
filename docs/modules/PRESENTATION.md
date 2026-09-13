@@ -37,7 +37,8 @@ Code: `Systems/Camera/`, `Systems/HSceneEffects/`
 
 - `HSceneBlackBackgroundSystem` + trigger patch — black backdrop on FIN
   detection, with BigoniBrother/Mutude special cases
-  (`[HSceneBlackBackground]`).
+  (`[HSceneBlackBackground]`). MindBroken tick while active uses
+  `MindBrokenRealtimeGate` (see `MIND_BROKEN.md`).
 - `Systems/BadEndPlayer/` — manifest-driven bad-end playback
   (`[BadEndPlayer]`), audio from the external `BadEndPlayer/` tree.
 - `Patches/Effects/PregnancyClipTrigger` — pregnancy clip FX.
@@ -56,7 +57,34 @@ Code: `Systems/UI/`
   using `CanvasGroup.alpha` rather than `SetActive` (so bootstraps and
   coroutines survive).
 - `LoadingScreenSystem` (custom art, sponsor labels, locale filters),
-  `SplashScreenUILabels`, `HellGateTitleMenuBackdrop`.
+  `SplashScreenUILabels`, `HellGateTitleMenuBackdrop`,
+  `HellGateSplashOptionsMenu`.
+- **Splash Options** — red **Options** label above Start opens a compact panel
+  (Start hidden): Gore Content checkbox, Simple QTE checkbox, Easy / Medium /
+  Hard preset buttons (copies `NoREroMod.cfg` + `NoREroMod_HellGate.cfg` from
+  `BepInEx/config/{EASY|MEDIUM|HARD}/`; restart required for balance), bottom
+  row Done / Language / Exit. Language opens a centered 2-column submenu (Cancel
+  back; pick other locale → save `HellGateLanguage` + Quit). Selection
+  sidecar: `HellGateDifficulty.selection`. Guide:
+  `BepInEx/config/DIFFICULTY_PRESETS_GUIDE.txt`. Full reference:
+  [SPLASH_OPTIONS_AND_DIFFICULTY.md](SPLASH_OPTIONS_AND_DIFFICULTY.md).
+- **Gore Content** — `General.EnableGoreContent` (default on), toggled from
+  Options. Gates DeadArmor death PNG clips, CustomDeath lethal traps, and
+  EnemyFatality combat fatalities; armored grab-throw stays on
+  `[DeadArmor] ArmoredGrabThrowEnable`. See
+  [DEAD_ARMOR.md](DEAD_ARMOR.md) / [HELL_TRAPS.md](HELL_TRAPS.md) /
+  [ENEMY_FATALITY.md](ENEMY_FATALITY.md).
+- **Simple QTE** — `QTEFreeStruggle.Enable` (default off), splash Options;
+  live Free Struggle mode (no restart). Struggle hints use a compact 36px
+  d-pad cross; default QTE keeps the 56px row. See
+  [QTE_STRUGGLE_AND_GAMEPLAY.md](QTE_STRUGGLE_AND_GAMEPLAY.md).
+- Splash **CREDITS** — two-column IMGUI list in `LoadingScreenSystem`
+  (`BuildCreditsList`); names/roles only (no credit logos).
+- **Boot tips + tutorial guide** — early-boot loading tips and illustrated
+  video guide before splash Start unlock. Locale
+  `{LANG}/BootLoadingTips.json`; media under
+  `sources/HellGate_sources/Tutorial Guide source/`. Full reference:
+  [BOOT_TIPS_AND_GUIDE.md](BOOT_TIPS_AND_GUIDE.md).
 - Portrait: `PortraitModSystem` + `PortraitAssetLoader` +
   `PortraitStateResolver` replace the vanilla `UIface` Spine portrait with
   PNG cycles. State priority: Sex → Rage/NakedRage → Brainwash →

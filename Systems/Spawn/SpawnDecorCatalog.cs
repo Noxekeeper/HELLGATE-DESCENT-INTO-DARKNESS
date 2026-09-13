@@ -41,6 +41,28 @@ internal static class SpawnDecorCatalog
 
     internal static bool HasEntries => entriesByNormalizedKey.Count > 0;
 
+    private static readonly string[] HiddenDecorPickerKeys =
+    {
+        "scapegoat_slave",
+        "villageslave",
+        "npcslave",
+        "inchurchslave",
+        "inchchurchslave"
+    };
+
+    private static bool IsHiddenDecorPickerKey(string key)
+    {
+        if (string.IsNullOrEmpty(key))
+            return false;
+        for (int i = 0; i < HiddenDecorPickerKeys.Length; i++)
+        {
+            if (SpawnTemplateCatalog.TemplateKeysMatch(key, HiddenDecorPickerKeys[i]))
+                return true;
+        }
+
+        return false;
+    }
+
     internal static void EnsureLoaded()
     {
         if (Time.realtimeSinceStartup - lastLoadTime < ReloadInterval)
@@ -52,8 +74,21 @@ internal static class SpawnDecorCatalog
     internal static bool IsKnownDecorKey(string key)
     {
         EnsureLoaded();
+        if (string.IsNullOrEmpty(key))
+            return false;
+
         string normalized = SpawnTemplateCatalog.NormalizeTemplateKey(key);
-        return !string.IsNullOrEmpty(normalized) && entriesByNormalizedKey.ContainsKey(normalized);
+        if (!string.IsNullOrEmpty(normalized) && entriesByNormalizedKey.ContainsKey(normalized))
+            return true;
+
+        foreach (KeyValuePair<string, DecorEntry> pair in entriesByNormalizedKey)
+        {
+            if (SpawnTemplateCatalog.TemplateKeysMatch(key, pair.Key) ||
+                (pair.Value != null && SpawnTemplateCatalog.TemplateKeysMatch(key, pair.Value.Key)))
+                return true;
+        }
+
+        return false;
     }
 
     internal static bool IsBlocked(string objectOrKeyName)
@@ -89,6 +124,47 @@ internal static class SpawnDecorCatalog
     {
         EnsureLoaded();
         return entriesByNormalizedKey.Values;
+    }
+
+    /// <summary>F11 Decorations picker keys (catalog + cached templates already marked as decor).</summary>
+    internal static string[] GetAuthoringKeys()
+    {
+        EnsureLoaded();
+        var list = new List<string>();
+        var seen = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+        foreach (DecorEntry entry in entriesByNormalizedKey.Values)
+        {
+            if (entry == null || string.IsNullOrEmpty(entry.Key))
+                continue;
+            if (IsBlocked(entry.Key))
+                continue;
+            if (string.Equals(entry.Key, "breakobjct", StringComparison.OrdinalIgnoreCase))
+                continue;
+            if (IsHiddenDecorPickerKey(entry.Key))
+                continue;
+            if (SpawnAuthoringHostageCatalog.IsHostageLineKey(entry.Key) ||
+                SpawnAuthoringHostageCatalog.IsHostageLineKey(entry.NormalizedKey))
+                continue;
+            if (SpawnAuthoringHostageCatalog.IsOtherSceneKey(entry.Key) ||
+                SpawnAuthoringHostageCatalog.IsOtherSceneKey(entry.NormalizedKey))
+                continue;
+
+            string key = entry.Key;
+            if (key.IndexOf(' ') >= 0 || key.IndexOf('(') >= 0)
+            {
+                if (string.IsNullOrEmpty(entry.NormalizedKey))
+                    continue;
+                key = entry.NormalizedKey;
+            }
+
+            string compact = key.Replace("_", string.Empty).Replace(" ", string.Empty);
+            if (!seen.Add(compact))
+                continue;
+            list.Add(key);
+        }
+
+        list.Sort(StringComparer.OrdinalIgnoreCase);
+        return list.ToArray();
     }
 
     internal static string[] GetScenesForKey(string key)
@@ -192,6 +268,8 @@ internal static class SpawnDecorCatalog
 
         string key = parts[0].Trim();
         if (string.IsNullOrEmpty(key))
+            return;
+        if (key.IndexOf(' ') >= 0 || key.IndexOf('(') >= 0)
             return;
 
         DecorEntry entry = new DecorEntry

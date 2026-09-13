@@ -139,6 +139,7 @@ internal static class LethalMagicTrapDeathContext
     internal static void DisableEroSuppression()
     {
         IsEroSuppressionActive = false;
+        LethalMagicTrapEroSuppression.OnEroSuppressionDisabled();
     }
 
     /// <summary>Clears armed state when no live bullets remain and no hit is in progress.</summary>

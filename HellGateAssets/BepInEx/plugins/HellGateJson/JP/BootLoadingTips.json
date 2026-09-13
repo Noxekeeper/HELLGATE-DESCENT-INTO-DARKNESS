@@ -1,0 +1,114 @@
+{
+  "intervalSeconds": 10,
+  "ui": {
+    "cachingMessage": "HellGateコンテンツをキャッシュ中 — お待ちください…",
+    "doneButton": "完了",
+    "tutorialTitle": "チュートリアル"
+  },
+  "tips": [
+    {
+      "phase": "loading",
+      "id": "manifesto",
+      "text": "HellGateでは各モジュールを好みに合わせて調整できます。\n\n詳しくは<b>HELLGATE_README</b>フォルダの<b>Manifesto</b>ガイドをご覧ください。"
+    },
+    {
+      "phase": "loading",
+      "id": "menu_note",
+      "text": "<b>メモ</b>\n\nメニューを閉じるには<b>[Space]</b>（ジャンプ）を押してください。\n<b>[Space]</b>は<b>キャンセル</b>ボタンも兼ねています。\n\n決定するには<b>[E]</b>を押してください。"
+    },
+    {
+      "phase": "loading",
+      "id": "rage_meter",
+      "text": "<b>レイジ</b>\n\nレイジゲージは以下で溜まります：\n• ダメージを与える\n• ブロックまたはパリィ\n• 敵を倒す\n\nレイジは闘争中に徐々に減少します。\nレイジが<b>50%</b>以上の場合、MindBrokenゲージが上昇します。"
+    },
+    {
+      "phase": "loading",
+      "id": "mindbroken",
+      "text": "<b>MindBroken</b>\n\n精神崩壊度は闘争の難しさに直接影響します。\n高いほど、拘束中にスタミナを連打するのが難しくなります。\n\nMindBrokenは以下で上昇します：\n• H闘争（常時）\n• 特定アニメーション（加速上昇）\n• レイジが<b>50%</b>以上のとき常時上昇\n• 闘争中の上下QTE矢印のミス"
+    },
+    {
+      "phase": "loading",
+      "id": "rage_tiers",
+      "text": "<b>レイジモード [G]</b> — 3段階\n\n<b>段階1</b>（約5秒）— 最大9ヒットの強力コンボ。\n\n<b>段階2</b>（約10秒）— 同じコンボに加え、即時拘束脱出。約5秒間待機すると精神が崩壊し始めます。\n\n<b>段階3</b>（約15秒）— 悪魔の翼と同じ効果。\n\nレイジ発動中はノックダウンや拘束を受けません。\n発動前に拘束されるとレイジゲージが非常に早く減ります。"
+    },
+    {
+      "phase": "loading",
+      "id": "controls",
+      "holdUntilDone": true,
+      "text": "<b>基本操作</b>\n\n<b>[LMB]</b> — 攻撃（3ヒットコンボ）\n<b>[RMB]</b> — ブロック（空中可）。EASYでは長押しで拘束も完全ブロック\n<b>[RMB]+[W]</b> — パリィ\n<b>[E]</b> パリィ後 — ヴェンジェンスストライク（レイジ15消費、最大100）\n<b>[F]</b> — 回避（無敵フレーム）。EASYではスタミナ20消費\n<b>[T]</b> — バレットタイム\n<b>[G]</b> — レイジモード（3段階）\n<b>[V]</b> — 戦闘カメラ（3モード）\n<b>[H]</b> — 派閥関係\n\n<b>[E]</b>長押し3秒 — 横になる / 降伏\n<b>[E]</b>長押し6秒 — ゲームオーバー\n<b>[ESC]+[Enter]</b> — 即死\n<b>[F1]</b> — チートメニュー（自己責任）\n<b>[F11]</b> + RMB — 敵・罠・イベントのホットリスポーン\n<b>[Space]</b> — 戻る / 閉じる"
+    },
+
+    {
+      "phase": "guide",
+      "id": "parry",
+      "text": "<b>パリィ：</b>\n\nブロックを維持し、攻撃の直前に<b>[W]</b>を押すと敵をスタンさせます。\n\n近くで<b>[E]</b>を押すとヴェンジェンスストライク — 時間が遅くなり大ダメージ。<b>レイジ15</b>消費。\n\n矢と斧は弾き返し、魔法は吸収します。タイミングを外すと攻撃や拘束が通ります。",
+      "video": "Tutorial Guide source/Parry.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "rage",
+      "text": "<b>レイジモード：</b>\n\n<b>[G]</b>を押すと疲労なしの9ヒット剣コンボが発動します。\n\nレイジ中はノックダウンや拘束を受けず、与ダメージが増加します。\n\n戦い続けてください — 待機が長いと精神が崩壊し始めます。",
+      "video": "Tutorial Guide source/Rage.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "timeslomo",
+      "text": "<b>バレットタイム：</b>\n\n<b>[T]</b>でレイジを消費し時間を遅くします。\n\n毎秒レイジを消費し、精神にもダメージを受けます。",
+      "video": "Tutorial Guide source/TimeSloMo.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "healthpotion",
+      "text": "<b>回復薬：</b>\n\n回復薬を使うと拘束から即座に脱出できます。",
+      "video": "Tutorial Guide source/HealthPotion.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "ambushthoughts",
+      "text": "<b>魔女の感知：</b>\n\n罠の近くでは、アラディアの魔女の感知が待ち伏せを警告します。\n\n致命的な罠も感知できます。",
+      "video": "Tutorial Guide source/AmbushThoughts.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "block",
+      "text": "<b>ブロック：</b>\n\n<b>[RMB]</b>を長押しすると被ダメージを軽減し、ノックダウンと拘束を防ぎます。\n\n空中でも有効です。",
+      "video": "Tutorial Guide source/Block.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "rageescape",
+      "text": "<b>レイジ脱出：</b>\n\nレイジ段階<b>2</b>か<b>3</b>のとき、拘束中に<b>[G]</b>を押すと脱出できます。\n\nゲージに注意 — 拘束中はレイジが消耗し、足りなくなる場合があります。",
+      "video": "Tutorial Guide source/RageEscape.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "qte",
+      "text": "<b>Struggle Out：</b>\n\nスタミナを溜めて脱出します。\n\n1) Struggle Outの表示が出たら — <b>[LMB]</b>を連打。<b>[E]</b>の連打も可能です。\n\n2) 左右矢印<b>[←]</b> <b>[→]</b>が表示されたら — <b>[A]</b> / <b>[D]</b>を連打。押すたびにスタミナが溜まります。\n\n表示と矢印が消えている間は何も押さないでください — スタミナが減ります。",
+      "video": "Tutorial Guide source/QTE.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "qte2",
+      "text": "<b>リスキー脱出：</b>\n\n<color=#E8C84A>黄色</color>と<color=#E05050>赤色</color>の上下矢印<b>[↑]</b> <b>[↓]</b>が現れると、互いに色が入れ替わります。\n\nインジケーターが表示されている間に<color=#E8C84A>黄色</color>の矢印を数回押してください。\nヒットするとスタミナが多く溜まり、連続成功でボーナスが付きます。\n\n<color=#E05050>赤色</color>を押す — または矢印が表示されていないときに押す — とスタミナが全て失われます。",
+      "video": "Tutorial Guide source/QTE2.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "dash",
+      "text": "<b>回避とMercy：</b>\n\n<b>[F]</b>で回避するとダメージを避け、Mercyが発動します。\n\nMercy中に敵の近くで攻撃せずにいると、派閥好感度が<b>+5%</b>上がります。\n\n好感度<b>+68%</b>以上で友好中立となり、その派閥は自発的に攻撃しなくなります。\n\n派閥関係を確認するには<b>[H]</b>を押してください。",
+      "video": "Tutorial Guide source/Dash.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "combatcamera",
+      "text": "<b>戦闘カメラ：</b>\n\n<b>[V]</b>を押すと3モードを切替：デフォルト → 遠め → さらに遠め。",
+      "video": "Tutorial Guide source/CombatCamera.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "hcameracontrol",
+      "text": "<b>Hシーンのカメラ：</b>\n\nHellGateでは、Hシーン中にカメラを操作できます。\n\n矢印キー <b>[↑]</b> <b>[↓]</b> <b>[←]</b> <b>[→]</b> — なめらかな移動。\n<b>[Space]</b> — ズーム切替（複数段階）。\n\nゲームはアニメの中心を常に正しく合わせるとは限らないので、必要なら手動で調整してください。",
+      "video": "Tutorial Guide source/H-CameraControl.mp4"
+    }
+  ]
+}

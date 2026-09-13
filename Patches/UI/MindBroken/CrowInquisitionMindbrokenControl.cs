@@ -73,25 +73,25 @@ internal class CrowInquisitionMindbrokenTracker : MonoBehaviour
     {
         if (host == null || spine == null || spine.AnimationState == null) return;
 
+        float dt = MindBrokenRealtimeGate.GetClampedDeltaTime();
+        if (dt <= 0f) return;
+
         string anim = spine.AnimationName ?? string.Empty;
         if (string.IsNullOrEmpty(anim)) return;
 
-        // Check if we're in time-stop orgasm animations
         bool isIKIAnimation = anim == "IKI";
         bool isIKI2Animation = anim == "IKI2";
 
-        // Add MindBroken during IKI (+6% per second)
         if (isIKIAnimation)
         {
             float mbPerSecondIKI = Plugin.crowInquisitionMindBrokenPerSecondIKI?.Value ?? 6f;
-            MindBrokenSystem.AddPercent((mbPerSecondIKI / 100f) * Time.deltaTime, "crow-inquisition-iki");
+            MindBrokenSystem.AddPercent((mbPerSecondIKI / 100f) * dt, "crow-inquisition-iki");
         }
 
-        // Add MindBroken during IKI2 (+3% per second)
         if (isIKI2Animation)
         {
             float mbPerSecondIKI2 = Plugin.crowInquisitionMindBrokenPerSecondIKI2?.Value ?? 3f;
-            MindBrokenSystem.AddPercent((mbPerSecondIKI2 / 100f) * Time.deltaTime, "crow-inquisition-iki2");
+            MindBrokenSystem.AddPercent((mbPerSecondIKI2 / 100f) * dt, "crow-inquisition-iki2");
         }
     }
 }

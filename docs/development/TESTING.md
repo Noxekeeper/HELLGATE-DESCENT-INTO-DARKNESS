@@ -16,13 +16,20 @@ locks, invisible player, stuck timescale, lost saves) built without warnings.
 | `Systems/Dialogue/` | H-scene pass (bubble cleanup) + dialogue checks |
 | `Patches/Player/` guards | H-scene pass + guarded-flow checks, including while pregnant |
 | Handoff / `*Pass*` patches | H-scene pass with handoff chains |
-| `Systems/Spawn/`, spawn packs | Scene transition pass |
+| `Systems/Spawn/`, spawn packs, F11 authoring | Scene transition pass + Spawn authoring spot check |
+| `Systems/EventCore/` | Spawn/EventCore content + EventCore F11 catalog + modal (with F11 off) |
 | Save/load hooks, slot stores | Persistence pass |
 | `Systems/Pregnancy/` | Pregnancy checks + persistence pass |
 | `Systems/CombatAi/`, factions | Faction checks |
 | `Systems/Economy/`, `Systems/Rewards/` | Economy checks + persistence pass |
 | `NoREroModScaffoldConfigPush`, reflection into NoREroMod | Smoke + startup probe log |
-| cfg bindings in `SetUpConfigs()` | Smoke + regenerate `CONFIGURATION.md` |
+| `Patches/HellTraps/` | HellTraps death clips followed by vengeance shock and respawn |
+| `Systems/DeadArmor/` | SlaveBigAxe armor-break clip + armored grab-throw (hold then knockback; no H snap while NikuArmor) |
+| `Systems/Costumes/` | Costume-change menu: with `[Costumes] Enable`, gunner + Vendetta slots visible/selectable without Trade; with Enable off, locked saves still show `??????` |
+| `Systems/EnemyFatality/` | Shared combat-fatality profiles (White Inquisitor first): PNG + gates + AI freeze until Death_flag |
+| `HellGateBootTips` / early-boot in `LoadingScreenSystem` | Fresh boot: loading tips rotate; `controls` fully visible above caching line; guide clips + Done → splash; one non-EN locale |
+| `HellGateSplashOptionsMenu` / `HellGateDifficultyPresetModule` | Options open/close (label clear of adult warning); Gore toggle; Easy/Medium/Hard copies both cfg files + restart notice; Language submenu (2 cols, Cancel, pick → Quit); Done restores Start; Exit quits |
+| cfg bindings in `SetUpConfigs()` / module `*Config.Initialize()` | Smoke + regenerate `CONFIGURATION.md` |
 
 ## Smoke pass (every build)
 
@@ -56,6 +63,29 @@ Prioritize the historically fragile scenarios first:
 - handoff/gangbang chains (Inquisition variants, Kakasi, Bigoni, Dorei):
   verify each phase transition and final release;
 - HellTraps death clips followed by vengeance shock and respawn.
+  With an enemy standing next to WebSpike (`lethal_cocoontrap`): during the
+  PNG clip the enemy must not attack or grab; AI restores after Take
+  Vengeance. Same freeze expectation for magic / lightning lethal clips.
+  See [HELL_TRAPS.md](../modules/HELL_TRAPS.md).
+- DeadArmor: break SlaveBigAxe / OtherSlavebigAxe NikuArmor (physical and
+  magic) and confirm the PNG clip + sound; while armored on SlaveBigAxe,
+  trigger grab-via-attack and confirm hold → knockback (no H snap), then
+  after armor break confirm normal grab/H returns.
+- Illusive / Rodenia (`EvuChurch`): win path unchanged; lose → H → fade →
+  `EvuChurchSP` loads (log `[Illusive Lose]`). No Church marker / MeatArmor on
+  the scripted pair during the event. See
+  [ILLUSIVE_RODENIA_EVENT.md](../modules/ILLUSIVE_RODENIA_EVENT.md).
+- EnemyFatality: White Inquisitor grounded hit → **Lost_head** (`lost_head`)
+  PNG + scarlet blink + FatalityDeathIcon + SFX; guard / airborne skip; after
+  Take Vengeance confirm player visible (no red tint) and AI restored.
+  During the fatality clip: no enemy grab and no lethal trap death stacking
+  (e.g. WebSpike). After last frame + `TauntDelaySeconds`: taunt appears
+  above defeat text (muted profiles stay silent). FatalityDeathIcon sits on
+  the QTE WASD row screen point (−70px). Same Lost_head roster includes
+  Goblin / GobBigAlter / GobRider. CrawlingCreatures uses `StillAlive`
+  clip (flip by facing, +1.5 Y, killer hidden) and
+  `phrases_CrawlingCreatures.json` (not shared bisect lines). See
+  [ENEMY_FATALITY.md](../modules/ENEMY_FATALITY.md).
 
 Escape must flow through the existing cleanup patches
 (`HSceneEscapeStateCleanup`, `TimeScaleResetOnEscapePatch`,
@@ -110,7 +140,21 @@ touched:
 - **Rage** — gain, tier activation, Tier-3 readiness, slow-mo enters *and
   exits*, HUD meter matches state after reload.
 - **MindBroken** — accumulation, recovery path, visual effects toggle off
-  cleanly, bad-end path triggers at threshold when enabled.
+  cleanly, bad-end path triggers at threshold when enabled. At 100%,
+  minimize / Alt+Tab must not dump the pause into the countdown (no instant
+  Bad End on restore; see `MindBrokenRealtimeGate`).
+- **Gore Content** — Options → checkbox off: no DeadArmor death clips, no
+  lethal CustomDeath traps, no EnemyFatality combat fatalities; armored
+  grab-throw still works if enabled.
+- **Difficulty presets** — Options → Easy/Medium/Hard: both active cfg files
+  match the preset folder; `HellGateDifficulty.selection` updated; values
+  apply only after full restart (not mid-session). Language / Gore prefs
+  survive the copy. EASY HP/QTE numbers match
+  `DIFFICULTY_PRESETS_GUIDE.txt`.
+- **Language (Options)** — submenu Cancel returns; picking another language
+  writes `HellGateLanguage` and quits; relaunch shows new locale on splash.
+- **Potion escape** — with `allowPotionEasyEscape` (enabled in all presets),
+  HP potion / Q breaks struggle as documented.
 - **Factions** — inter-faction combat still targets correctly, player
   provocation (including by magic) shifts reputation, Mercy/deescalation
   triggers on dodge in combat only.
@@ -121,6 +165,32 @@ touched:
 - **Spawn/EventCore content** — after editing packs or JSON, reload the
   affected scene and check the log for parse warnings; malformed lines must
   be skipped with a warning, never crash the load.
+- **Spawn System Editor V2.0 (F11)** — with `AuthoringUiEnable` on: toggle
+  F11; banner reads **Spawn System Editor V2.0**; set Point; Place an
+  enemy and a trap (`trapnormal` must write
+  `X,Y,trapnormal,1[,rot90][,sort±]`, not `TRAP,Trap_hari,…`); Place a
+  Decorations crate (`DECOR,…`); Hostage & OtherScenes (`HOSTAGE,…` or
+  `DECOR,Look_Dorei` / `gob_look`); Hostage Random (`RANDOM_HOSTAGE`);
+  Gold (`GOLD,…`); EventTrap **M** (`EVENTTRAP,folder,X,Y` — RMB reload);
+  EventCore **C** (not Enemies Options): Place writes
+  `TouzokuNormal|faction=eventcore_encounter|ec_event=<id>,1` with **no**
+  `|ec_chance=` at p=1; F11 preview always has the host; RMB reload still
+  has the host; walking next to the NPC **must not** open the modal while
+  F11 is on; after F11 off, approach ~3.5 starts the event. Favorites ★
+  from any catalog (kind `eventcore` for EventCore). Lethal tab only the
+  three lethal keys. F1 Help (one command per line); Home camera; WASD /
+  MMB move the camera; Alt nearby-pick; gold piles pick on the sprite,
+  not the circle halo; Ivy / trap triggers stay clickable. LMB select a
+  neighbor without stealing the other object; Edit rotation +30 / sort;
+  EventCore Edit keeps `|ec_event=`; Save; Delete; Ctrl+C/X/V/D; RMB
+  reload and confirm links still resolve (pasted EventCore lines keep the
+  host). Trap list must not show decor / lethal aliases / `help`. Lethal
+  **placement** tab is placement-only; lethal death / Gore checks belong
+  to the HellTraps pass. Screenshots (F12) write under
+  `HellGateScreenshots/`. See [SPAWN.md](../modules/SPAWN.md) and
+  [EVENT_CORE.md](../modules/EVENT_CORE.md).
+- **HellTraps** — death clips, combat freeze, vengeance shock: see the
+  HellTraps row in the H-scene pass and [HELL_TRAPS.md](../modules/HELL_TRAPS.md).
 
 ## Config regression
 

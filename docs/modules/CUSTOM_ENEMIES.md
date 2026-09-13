@@ -30,6 +30,7 @@ registered as spawn keys:
 | `MafiaBossCustom` | mafia_muscle | stats, grab patch, ERO patches, pass logic; intentionally **not** a faction boss |
 | `BossTouzokuCustom` | Touzoku boss | field-spawn variant: runtime, stats/HP scale, intro/combat/safety/ERO patch sets, activator |
 | `WolfModCustom` | MummyDog | Spine skeleton + texture replacement (`[WolfMod]`) |
+| `DemonGorotukiModCustom` | Gorotuki | Spine skeleton + texture replacement (`[DemonGorotuki]`), spawn key `Demon_gorotuki` |
 | `HellishTouzokuModCustom` | Touzoku | skeleton/texture replacement + H-scene escape patch (`[HellishTouzoku]`) |
 | `DoreiModCustom` | Dorei | skeleton/texture replacement + spectator idle patch (`[DoreiMod]`) |
 | `ButcherModCustom` | Slaughterer | Rick-style fatality only (`[ButcherMod]`) |

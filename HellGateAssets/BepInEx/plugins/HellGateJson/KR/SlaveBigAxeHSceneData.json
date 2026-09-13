@@ -1,0 +1,519 @@
+{
+  "settings": {
+    "commentCooldownSeconds": 2.0,
+    "maxSimultaneousComments": 1,
+    "commentDisplayDuration": 4.0,
+    "fontSize": 22.0,
+    "verticalOffset": 15,
+    "streamingSpeed": 0.03,
+    "goblinColor": {
+      "r": 1.0,
+      "g": 1.0,
+      "b": 1.0,
+      "a": 1.0
+    },
+    "goblinOutlineColor": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 1.0
+    }
+  },
+  "animations": {
+    "START": {
+      "description": "Standing in front, captures and binds GG's hands and feet behind her head with his left hand, showing her tits, and rips her clothes off with his right.",
+      "events": {
+        "START": [
+          "가만히 해. 힘만 뺄 뿐이다.",
+          "또 도망친 년. 제자리로 돌려보냈다.",
+          "더 사나운 년들도 결국 다 부러졌다.",
+          "움직이지 마. 그게 너한테 더 편하다.",
+          "날 봐. 이 얼굴을 기억해.",
+          "나한테 덤빈 건 네가 처음이 아니다.",
+          "그래. 힘이나 더 낭비해.",
+          "모든 사슬은 한 번의 실수에서 시작된다.",
+          "네 여정은 여기서 끝이다.",
+          "그 자존심이 얼마나 가나 보자."
+        ],
+        "SE": [
+          "발버둥쳐 봐. 달라질 건 없다.",
+          "몸부림은 아직 꺾을 정신이 남았다는 증거다.",
+          "계속 저항해. 처음엔 발버둥치는 게 좋다.",
+          "이 손에서 빠져나갈 생각 마라, 도망친 년."
+        ]
+      }
+    },
+    "ERO": {
+      "description": "Throws GG to the ground, on her back, he starts rubbing himself on GG and inserts himself",
+      "events": {
+        "ERO": [
+          "두려움은 지나간다. 습관은 평생 간다. 내 장난감이라고 말해.",
+          "남들보다 빨리 배운다. 패배를 인정하면 멈춰 주마.",
+          "너는 작은 장난감이다. 네가 할 수 있는 건 없다.",
+          "언젠간 도망치길 포기하고, 스스로 내밀게 된다.",
+          "자존심은 비싸다. 복종이 싸다. 내 좆인형이라고 말해. 그러면 아픔이 멈춘다.",
+          "누가 구해 줄 줄 아냐? 인형에겐 희망이 없다.",
+          "희망을 먼저 빼앗는다. 그다음엔 네 몸, 내 소유물이다.",
+          "곧 이게 일상처럼 느껴질 거다. 내 정액 받이가 되기만 하면 된다."
+        ]
+      }
+    },
+    "ERO1": {
+      "description": "Traps GG with his body weight, while thrusting hard and slow, missionary",
+      "events": {
+        "ERO1": [
+          "좋아. 말해.",
+          "다시. 비명을 지를 때까지 안 멈춘다.",
+          "그게 낫다. 시작해.",
+          "가만히 있어.",
+          "배워.",
+          "네 몸이 먼저 배신한다.",
+          "숨 쉬어.",
+          "들어.",
+          "복종해.",
+          "기억해."
+        ]
+      }
+    },
+    "ERO2": {
+      "description": "Speeds up, fucks GG missionary while she has her feet pointing towards the sky",
+      "events": {
+        "ERO2": [
+          "고작 그게 전부냐?",
+          "더 기대를 했는데.",
+          "너무 쉽게 해주는군.",
+          "아직도 도망칠 척이냐?",
+          "계속 버텨 봐. 그 발악이 즐겁다.",
+          "배짱은 있군. 소용없다는 게 아쉽지.",
+          "거의 감탄할 뻔했다.",
+          "너는 나를 더 오래 기억할 거다. 나는 너를 금방 잊겠지만."
+        ]
+      }
+    },
+    "ERO3": {
+      "description": "Same speed, but harder, which makes GG slightly close her legs from the force, with each thrust",
+      "events": {
+        "ERO3": [
+          "그래, 그게 똑똑한 선택이다.",
+          "좋아. 드디어 머리가 돌아가는군.",
+          "보이냐? 그렇게 어렵지 않았지.",
+          "언젠간 알아챌 줄 알았다.",
+          "이제야 제대로 듣는 눈이다.",
+          "좋아. 드디어 상황을 이해했군.",
+          "그렇게만 하면 잘 지낼 수 있다.",
+          "머리 없는 좆구멍이다. 사슬 찰 준비나 해."
+        ]
+      }
+    },
+    "ERO4": {
+      "description": "Speeds up, and thrusts harder, making GG's feet bounce off his body",
+      "events": {
+        "ERO4": [
+          "받아라, 걸레! 너는 아무것도 아니다!",
+          "날 봐, 걸레년! 자비를 빌어!",
+          "너는 학대당할 가치밖에 없는 빈 구멍이다!",
+          "내가 쌀 때까지 계속 찢어 주마, 년아.",
+          "다리 모아, 장난감. 실망시키면 머리를 으깨 버린다.",
+          "진짜 고통을 가르쳐 주마. 네가 할 수 있는 건 없다.",
+          "너는 더러운 정액 걸레일 뿐이다.",
+          "남은 건 라그둠 거리에 팔아넘긴다!"
+        ],
+        "SE": [
+          "그 조인 구멍으로는 못 산다.",
+          "팔 게 안 남을 때까지 쓴다.",
+          "이제 소유물이다. 그렇게 굴어."
+        ]
+      }
+    },
+    "FIN": {
+      "description": "Cums hard inside GG, while she hugs his body",
+      "events": {
+        "FIN": [
+          "받아! 세게 받아!",
+          "아! 죽을 때까지 쓰겠다!",
+          "크윽! 다리 모아, 지금 채워 준다!",
+          "좋아! 착한 장난감이군. 으윽! 아아아...",
+          "으깨 버리겠다!",
+          "이 씨발... 창녀!!!",
+          "이제부터 내가 네 주인이다!",
+          "조이는 게 느껴진다, 꼬마 마녀!"
+        ],
+        "SE": [
+          "발버둥쳐. 더 깊숙이 짜낼 뿐이다.",
+          "내가 다 박아 넣을 때까지 몸부림쳐라.",
+          "맘껏 저항해. 이미 내 거다."
+        ]
+      }
+    },
+    "FIN2": {
+      "description": "Cums one time, pulls out, revealing GG's blushing face, tits and covered pussy",
+      "events": {
+        "FIN2": [
+          "변하지 않았다고? 네 몸은 이미 안다.",
+          "오늘 밤에도 생각나게 해 주마.",
+          "앞으로 하루하루가 더 쉬워진다.",
+          "이제 어떻게 돌아가는지 알기 시작했군.",
+          "다리 벌려, 걸레.",
+          "이제 제대로 벌어졌다. 내 자지에 딱 맞는 장난감이다.",
+          "이번엔 네가 직접 빌게 된다.",
+          "평생 기억하게 해 주마.",
+          "죽을 때까지 내 정액 받이다."
+        ]
+      }
+    },
+    "JIGO": {
+      "description": "GG twitches while he prepares for another round",
+      "events": {
+        "JIGO": [
+          "숨 고르도록.",
+          "서두를 거 없다.",
+          "잠깐 쉬어.",
+          "끝났다고 생각하냐? 나는 잡고 놔주지 않는다.",
+          "준비해, 머리 없는 구멍아.",
+          "짧은 휴식은 허락한다.",
+          "나는 인내심이 있다."
+        ]
+      }
+    },
+    "JIGO2": {
+      "description": "Goes forward, covering GG's face",
+      "events": {
+        "JIGO2": [
+          "뭘 배웠는지 보자.",
+          "어디로 가? 너는 장난감이다.",
+          "네가 죽을 때까지 안 멈춘다.",
+          "아직 정신이 남았군.",
+          "또 두들겨 줄 시간이다, 년아!",
+          "아직 안 부러졌다.",
+          "아직이다."
+        ]
+      }
+    },
+    "JIGOERO": {
+      "description": "Round two, repeating the chain, but with GG's pussy covered in cum",
+      "events": {
+        "JIGOERO": [
+          "아직 안 끝났다.",
+          "뭘 배웠는지 보여.",
+          "실망시키지 마라.",
+          "준비됐냐? 이제 버틸 수 있다.",
+          "네 보지, 질릴 날이 없다.",
+          "찡그리지 마. 눈깔이 하얘질 때까지 짓누른다.",
+          "이번엔 내 정액이 자지 윤활이다. 감사해라, 마녀.",
+          "네 안에서 내 정액을 짜내 주마. 막지 마라."
+        ]
+      }
+    },
+    "JIGOERO2": {
+      "description": "Faster thrusting resumes, using previous cum as lube, her body slick and messy beneath him.",
+      "events": {
+        "JIGOERO2": [
+          "내 씨가 널 미끄럽게 했다. 얼마나 잘 들어가는지 느껴라.",
+          "저항해 봐야 소용없다. 네 몸은 주인을 기억한다.",
+          "이미 내 정액으로 젖었다. 타고난 받이다.",
+          "이제 그게 네 존재 이유다. 불평 없이 받아.",
+          "아프냐? 좋다. 아픔을 나와 연결시키게 된다.",
+          "아플수록 보지가 더 조인다. 잘 길들였다.",
+          "내가 만든 난장판 봐라. 이제 더 지저분하게 해 주마.",
+          "찌를 때마다 정액이 더 깊숙이 들어간다. 안을 표시하는 거다.",
+          "조이지 마. 너만 더 힘들어진다.",
+          "곧 나 이전의 감각은 기억도 못 한다."
+        ],
+        "SE": [
+          "받아.",
+          "젖은 걸레.",
+          "도망 없다.",
+          "내 거다."
+        ]
+      }
+    },
+    "JIGOERO3": {
+      "description": "Harder thrusts with force causing her legs to twitch and try to close involuntarily.",
+      "events": {
+        "JIGOERO3": [
+          "벌써 다리가 떨리냐? 이제 시작이다.",
+          "모아 봐. 저항을 뚫는 맛이 좋다.",
+          "네 몸이 배신한다. 그 떨림이 느낀다는 뜻이다.",
+          "억지로라도 벌려. 내 소유물을 다 보고 싶다.",
+          "찌를 때마다 누가 주인인지 알려 준다.",
+          "발버둥칠수록 더 단단해진다. 계속 떨려라.",
+          "네 보지는 지는 싸움이다. 풀고 받아들여.",
+          "밤새 할 수 있다. 넌 그만큼 버티냐?",
+          "그 흐느낌이 음악이다. 더 크게, 마녀.",
+          "다리는 모으고 싶고, 보지는 더 원한다."
+        ],
+        "SE": [
+          "활짝 벌려.",
+          "느껴지냐?",
+          "부러뜨리는 중이다.",
+          "존나 조이네."
+        ]
+      }
+    },
+    "JIGOERO4": {
+      "description": "Brutal peak pace before second climax, relentless pounding as she lies exhausted beneath him.",
+      "events": {
+        "JIGOERO4": [
+          "크윽! 여기서 네 자리를 배운다!",
+          "또 씨 가득 박아 넣는다! 받아!",
+          "주인이 거의 다 왔다! 채워 달라고 빌어!",
+          "맘껏 비명 질러. 아무도 안 구해 준다!",
+          "이 구멍을 또 차지한다! 크윽!",
+          "한 치도 내 거다! 말해!",
+          "며칠이고 흘러나올 만큼 퍼부어 주마!",
+          "네가 태어난 이유다! 내 정액 쓰레기통!",
+          "크윽! 네 보지가 날 짜내고 있다, 마녀!",
+          "소유물이다. 그렇게 굴고 내 자지를 받아!"
+        ],
+        "SE": [
+          "끝까지 받아!",
+          "이 속도 느껴!",
+          "내 거다!",
+          "벌려 버리는 중이다!"
+        ]
+      }
+    },
+    "JIGOFIN": {
+      "description": "He cums inside her for the second time, flooding her already filled womb with more seed.",
+      "events": {
+        "JIGOFIN": [
+          "크윽! 또 채운다! 한 방울도 남김없이!",
+          "이런 게 아직도 잔뜩 있다!",
+          "자궁이 나를 마시고 있다. 착한 년.",
+          "두 번째가 첫 번째보다 더 깊다.",
+          "제대로 된 장난감은 이렇게 표시한다. 안팎으로.",
+          "크윽! 지친 보지로 내 자지를 다 짜내!",
+          "안을 또 하얗게 칠한다. 감사해라.",
+          "부러진 꼬마 마녀한테 정액이 넘친다.",
+          "받아. 전부. 크윽!",
+          "이제 넌 내 씨의 그릇일 뿐이다."
+        ],
+        "SE": [
+          "깊이 채운다!",
+          "크윽! 받아!",
+          "더 깊게!",
+          "내 거다!"
+        ]
+      }
+    },
+    "JIGOFIN2": {
+      "description": "He pulls out showing her used body covered in cum, sore and thoroughly broken.",
+      "events": {
+        "JIGOFIN2": [
+          "내가 만든 꼴 봐라. 아름답군.",
+          "두 발 넣고도 거의 못 움직인다. 완벽하다.",
+          "정액이 보지에서 흘러나온다. 그게 내 표시다.",
+          "그대로 누워 흘려. 작품을 감상하고 싶다.",
+          "아프고, 가득하고, 표시됐다. 이제야 제대로 된 소유물이다.",
+          "도망친 년의 말로다. 이 광경을 기억해.",
+          "보지가 벌어져 흘러나온다. 그래야 맞다.",
+          "쉴 수 있을 때 쉬어. 세 번째는 다시 설 때다.",
+          "네 꼴을 봐라. 마녀 같지도 않다.",
+          "내 부러진 장난감. 정액 범벅 노예."
+        ]
+      }
+    },
+    "JIGOPOST3": {
+      "description": "Act 3 begins with her legs already spread wide, displaying her ruined, gaping, cum-leaking state.",
+      "events": {
+        "JIGOPOST3": [
+          "봐라. 훈련받은 것처럼 다리가 벌어져 있다.",
+          "세 번째다. 이미 나한테 길들여졌다.",
+          "보지가 벌어져 있다. 내 작품이 보인다.",
+          "두 발이나 넣고도 여전히 벌리고 있군.",
+          "저항은 없다. 제대로 된 전시뿐이다.",
+          "탈진하고, 달아오르고, 흘러나온다. 완벽한 상태다.",
+          "날 위해 다리를 벌린 채 있었다. 좋은 본능이다.",
+          "남은 거나 쓸 시간이다.",
+          "그 망가진 구멍은 더 훈련이 필요하다.",
+          "이제 네 존재 이유를 얼마나 쉽게 받아들이는지 봐라."
+        ]
+      }
+    },
+    "JIGOPOST4": {
+      "description": "He covers her again, mounting her exhausted body and trapping her beneath his weight.",
+      "events": {
+        "JIGOPOST4": [
+          "움직이지 마. 내 소유물에 올라탄다.",
+          "또 내 아래다. 네가 있을 자리.",
+          "이 무게 느껴지냐? 그게 소유다.",
+          "이번엔 못 도망친다. 너무 지쳤다.",
+          "네가 떨기를 멈출 때까지 쓴다.",
+          "네 몸이 이 자세를 기억한다.",
+          "주인 밑에 깔렸다. 말해.",
+          "더 벌려. 전부 쓰고 싶다.",
+          "이제 여기가 네 영구 주소다.",
+          "풀어. 저항하면 더 아프다."
+        ]
+      }
+    },
+    "JIGOPOSTERO": {
+      "description": "Third round thrusting begins, using prior cum as lube on her already messy, tired body.",
+      "events": {
+        "JIGOPOSTERO": [
+          "쉽게 들어간다. 내 정액이 미끄럽게 했다.",
+          "세 번째가 제대로다. 헐겁고 준비됐다.",
+          "저항은 없다. 젖은 구멍뿐이다.",
+          "내 난장판을 뚫고 들어가는 게 느껴지냐?",
+          "지친 보지가 약하게 조인다. 좋다.",
+          "부러진 장난감으로 세 번째. 사치군.",
+          "고칠 수 없을 만큼 망가뜨려 주마.",
+          "밀어붙이든 말든. 이제 관심 없다.",
+          "이미 정액이 잔뜩이다. 더 들어간다.",
+          "네 몸은 이걸 위해 만들어졌다."
+        ],
+        "SE": [
+          "받아.",
+          "젖은 구멍.",
+          "저항 없다.",
+          "내 거다."
+        ]
+      }
+    },
+    "JIGOPOSTERO2": {
+      "description": "Faster thrusting, cum-lube allowing deeper use of her exhausted, barely responsive body.",
+      "events": {
+        "JIGOPOSTERO2": [
+          "더 빠르게. 어차피 거의 못 느낀다.",
+          "내 자지 싸개일 뿐이다. 그 이상도 이하도 아니다.",
+          "보지가 완전히 헐렁하다. 완벽하다.",
+          "깊게 찌른다. 자궁 입구를 친다.",
+          "떨든 말든. 거의 안 보인다.",
+          "내 정액으로 더 세게 박는다.",
+          "이쯤 되면 너는 받이일 뿐이다.",
+          "징징거리지 마. 두들김이나 받아.",
+          "지친 몸도 용도는 남았다.",
+          "세 번 하니 드디어 쓸모가 있군."
+        ],
+        "SE": [
+          "더 빠르게.",
+          "깊게.",
+          "헐렁하다.",
+          "쓸모없다."
+        ]
+      }
+    },
+    "JIGOPOSTERO3": {
+      "description": "Hardest pounding before third climax, she is almost gone, body barely responding.",
+      "events": {
+        "JIGOPOSTERO3": [
+          "크윽! 거의 다 왔다! 두들김을 받아!",
+          "끝이다! 네 마지막 붕괴다!",
+          "남은 거나 끝내 버리겠다!",
+          "크윽! 이제 마녀는 없다! 내 소유물뿐이다!",
+          "더 세게! 버틸 수 있다! 크윽!",
+          "네 보지가 날 짜내고 있다! 크윽!",
+          "이렇게 끝나는 거다! 내 자지 밑에서!",
+          "크윽! 완전히 부러뜨린다!",
+          "저항은 끝! 내 정액뿐이다!",
+          "크윽! 마지막 한 발!"
+        ],
+        "SE": [
+          "크윽! 받아!",
+          "나를 위해 부러져!",
+          "내 거다!",
+          "끝내!"
+        ]
+      }
+    },
+    "JIGOPOSTFIN": {
+      "description": "Third orgasm inside her, flooding her already overfilled womb with another hot load.",
+      "events": {
+        "JIGOPOSTFIN": [
+          "크윽! 세 번째! 채운다!",
+          "받아! 크윽! 자궁을 물에 잠겨!",
+          "씨 가득 박는다! 크윽!",
+          "세 발 깊이! 표시됐다!",
+          "크윽! 한 방울도 안쪽! 내 거다!",
+          "쏟아붓는다! 크윽! 전부 받아!",
+          "그게 네 존재 이유다! 크윽! 가득!",
+          "세 번째가 제대로다! 크윽! 끝!",
+          "내 씨 속에서 헤엄친다! 크윽!",
+          "끝났다! 크윽! 내 부러진 장난감!"
+        ],
+        "SE": [
+          "크윽! 받아!",
+          "채운다!",
+          "세 번째!",
+          "끝났다!"
+        ]
+      }
+    },
+    "JIGOPOSTFIN2": {
+      "description": "Afterglow and pull-out display, legs still open, leaking heavily from three loads.",
+      "events": {
+        "JIGOPOSTFIN2": [
+          "봐라. 세 발이 흘러나온다.",
+          "벌린 채로. 망가진 꼴을 보고 싶다.",
+          "내 정액 분수다. 아름답군.",
+          "벌어져 떨어지고 있다. 완전히 망가졌다.",
+          "제일 예쁜 꼴이다. 텅 비고 표시된.",
+          "다리 벌리고, 보지 열고, 정액이 흐른다.",
+          "내 걸작. 부러진 마녀.",
+          "이제 쉬어. 제대로 씨를 심었다.",
+          "그 구멍은 예전처럼 안 닫힌다.",
+          "내가 만든 너를 감상해라."
+        ]
+      }
+    },
+    "JIGOTOFADE": {
+      "description": "Screen begins to fade to black, scene ending with final ownership declarations.",
+      "events": {
+        "JIGOTOFADE": [
+          "어둠 속으로. 그래도 넌 내 거다.",
+          "세상엔 끝이다. 너에겐 아니다.",
+          "어둠에 사라진다. 내 소유물.",
+          "빛은 없다. 내 소유뿐.",
+          "사라진다. 하지만 영원히 표시됐다.",
+          "자유여 안녕. 봉사여 어서 와.",
+          "어둠 속으로. 내 장난감으로.",
+          "끝이 시작된다. 네 새 삶."
+        ]
+      }
+    },
+    "ZGAMEOVER": {
+      "description": "Bad end visual, she is fully broken, semen-stained, claimed as permanent property.",
+      "events": {
+        "ZGAMEOVER": [
+          "네가 졌다. 내가 이겼다. 끝이다.",
+          "완전히 부러지고, 표시되고, 내 거다.",
+          "도망도, 두 번째 기회도 없다. 소유뿐.",
+          "정액 범벅으로 끝났다. 내 소유물.",
+          "마녀는 죽었다. 장난감만 남았다.",
+          "네 이야기는 내 노예로 끝난다.",
+          "붙잡히고, 부러지고, 보관된다.",
+          "영원히 내 것. 영원히 쓰인다."
+        ]
+      }
+    },
+    "ZGAMEOVER2LOOP": {
+      "description": "Looping bad-end hold, quiet gloating about her permanent state.",
+      "events": {
+        "ZGAMEOVER2LOOP": [
+          "계속 이렇게. 영원히.",
+          "내 영구 소유물.",
+          "변화는 없다. 사용만 있다.",
+          "내 장난감으로 반복된다.",
+          "영원한 봉사.",
+          "자유는 없다. 항상 내 것.",
+          "네 영원."
+        ]
+      }
+    },
+    "4ERO": {
+      "description": "Optional coda after fade, mouth or continued use of the finished toy.",
+      "events": {
+        "4ERO": [
+          "끝이 지나도 쓸모는 있다.",
+          "입 벌려. 아직 쓸모 있다.",
+          "장난감은 계속 바친다.",
+          "아직 너로 안 끝냈다.",
+          "청소다. 아직 쓸모 있다.",
+          "부러진 소유물의 마지막 사용.",
+          "남은 거나 짜내 주마.",
+          "폐허에도 용도는 있다."
+        ]
+      }
+    }
+  }
+}

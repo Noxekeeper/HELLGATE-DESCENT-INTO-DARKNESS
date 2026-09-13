@@ -25,9 +25,7 @@ internal static class LethalTrapVengeanceMindBrokenShock
 
     internal static bool IsFeatureEnabled()
     {
-        bool magic = Plugin.enableLethalMagicTrap?.Value ?? false;
-        bool cocoon = Plugin.enableLethalCocoonTrap?.Value ?? false;
-        return magic || cocoon;
+        return Plugin.IsLethalMagicTrapActive || Plugin.IsLethalCocoonTrapActive;
     }
 
     internal static void TryStartAfterVengeance()

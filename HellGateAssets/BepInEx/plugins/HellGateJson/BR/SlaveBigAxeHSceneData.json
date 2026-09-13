@@ -1,0 +1,519 @@
+{
+  "settings": {
+    "commentCooldownSeconds": 2.0,
+    "maxSimultaneousComments": 1,
+    "commentDisplayDuration": 4.0,
+    "fontSize": 22.0,
+    "verticalOffset": 15,
+    "streamingSpeed": 0.03,
+    "goblinColor": {
+      "r": 1.0,
+      "g": 1.0,
+      "b": 1.0,
+      "a": 1.0
+    },
+    "goblinOutlineColor": {
+      "r": 0.0,
+      "g": 0.0,
+      "b": 0.0,
+      "a": 1.0
+    }
+  },
+  "animations": {
+    "START": {
+      "description": "Standing in front, captures and binds GG's hands and feet behind her head with his left hand, showing her tits, and rips her clothes off with his right.",
+      "events": {
+        "START": [
+          "Calma. Você só vai se esgotar.",
+          "Mais uma fugitiva. De volta ao lugar que pertence.",
+          "Já vi piores. Todas quebraram no fim.",
+          "Fica quieta. Vai ser bem mais fácil para você.",
+          "Olha para mim. Decora minha cara.",
+          "Você não é a primeira a lutar contra mim.",
+          "Bom. Continua gastando suas forças.",
+          "Toda corrente começa com um único erro.",
+          "Sua jornada acaba aqui.",
+          "Vamos ver quanto tempo esse orgulho dura."
+        ],
+        "SE": [
+          "Se debate. Não muda nada.",
+          "Esses trancos só provam que você ainda tem espírito para eu quebrar.",
+          "Continua resistindo. No começo eu gosto delas animadas.",
+          "Você não escapa dessas mãos, fugitiva."
+        ]
+      }
+    },
+    "ERO": {
+      "description": "Throws GG to the ground, on her back, he starts rubbing himself on GG and inserts himself",
+      "events": {
+        "ERO": [
+          "O medo passa. O hábito fica para sempre. Diz que você é meu brinquedo.",
+          "Você aprende mais rápido do que a maioria. Admite a derrota e eu paro.",
+          "Você é um brinquedinho, não tem nada que possa fazer.",
+          "Um dia você vai parar de tentar fugir. Vai me dar de bom grado.",
+          "Orgulho é caro. Obediência é mais fácil. Diz que é minha boneca de foder, a dor para.",
+          "Você ainda acha que alguém vem te buscar. Bonecas não têm esperança.",
+          "A esperança é a primeira coisa que eu tiro. Depois seu corpo, como minha propriedade.",
+          "Logo isso vai parecer normal para você. Só precisa virar meu depósito de porra."
+        ]
+      }
+    },
+    "ERO1": {
+      "description": "Traps GG with his body weight, while thrusting hard and slow, missionary",
+      "events": {
+        "ERO1": [
+          "Bom. Diz isso.",
+          "De novo. Eu paro quando você gritar.",
+          "Assim melhor. Começa.",
+          "Fica quieta.",
+          "Aprende.",
+          "Seu corpo te trai primeiro.",
+          "Respira.",
+          "Escuta.",
+          "Obedece.",
+          "Lembra."
+        ]
+      }
+    },
+    "ERO2": {
+      "description": "Speeds up, fucks GG missionary while she has her feet pointing towards the sky",
+      "events": {
+        "ERO2": [
+          "É só isso que você tem?",
+          "Eu esperava mais de você.",
+          "Você está facilitando demais.",
+          "Ainda finge que vai escapar?",
+          "Continua lutando. Eu gosto do esforço.",
+          "Você tem coragem. Pena que não adianta nada.",
+          "Quase me impressionou.",
+          "Você vai se lembrar de mim mais tempo do que eu de você."
+        ]
+      }
+    },
+    "ERO3": {
+      "description": "Same speed, but harder, which makes GG slightly close her legs from the force, with each thrust",
+      "events": {
+        "ERO3": [
+          "Aí está. Essa é a escolha inteligente.",
+          "Bom. Finalmente pensando com clareza.",
+          "Viu? Não era tão difícil.",
+          "Eu sabia que uma hora você ia entender.",
+          "Esse é o olhar de quem está prestando atenção.",
+          "Bom. Finalmente entendeu a situação.",
+          "Continua escolhendo assim e a gente se dá bem.",
+          "Você é um brinquedo de foder sem miolo, prontinha para ser acorrentada."
+        ]
+      }
+    },
+    "ERO4": {
+      "description": "Speeds up, and thrusts harder, making GG's feet bounce off his body",
+      "events": {
+        "ERO4": [
+          "Toma, puta! Você não é nada!",
+          "Olha para mim, puta! Implora piedade!",
+          "Você é um buraco vazio que merece ser abusado!",
+          "Vou continuar te rasgando até você me fazer gozar, cadela.",
+          "Fecha as pernas, brinquedo. Se me decepcionar, esmago sua cabeça.",
+          "Vou te ensinar dor de verdade. Não tem nada que você possa fazer.",
+          "Você não passa de um trapo sujo de porra.",
+          "Vou vender o que sobrar de você para as ruas de Ragdum!"
+        ],
+        "SE": [
+          "Esse buraquinho apertado não te salva.",
+          "Vou te usar até não sobrar nada para vender.",
+          "Você é propriedade agora. Age como tal."
+        ]
+      }
+    },
+    "FIN": {
+      "description": "Cums hard inside GG, while she hugs his body",
+      "events": {
+        "FIN": [
+          "Toma! Toma com força!",
+          "Ah! Vou te usar até você morrer!",
+          "RAH! Fecha as pernas, vou te encher!",
+          "Bom! Você é um bom brinquedo. Arghh! Aaaah...",
+          "Vou te esmagar!",
+          "Sua puta... maldita!!!",
+          "Agora eu sou seu mestre!",
+          "Sinto você me apertando, bruxinha!"
+        ],
+        "SE": [
+          "Se debate. Só me ordenha mais fundo.",
+          "Continua se torcendo até eu terminar de te prenhar.",
+          "Luta o quanto quiser. Você já está marcada como minha."
+        ]
+      }
+    },
+    "FIN2": {
+      "description": "Cums one time, pulls out, revealing GG's blushing face, tits and covered pussy",
+      "events": {
+        "FIN2": [
+          "Você mudou, mesmo que não admita.",
+          "Você vai pensar nisso hoje à noite.",
+          "A partir daqui cada dia fica mais fácil.",
+          "Você está começando a entender como isso funciona.",
+          "Abre as pernas, puta.",
+          "Agora você está toda alargada. O brinquedo perfeito para o meu pau.",
+          "Dessa vez você vai implorar por isso.",
+          "Você vai se lembrar disso para sempre.",
+          "Você vai ser meu depósito de porra até morrer."
+        ]
+      }
+    },
+    "JIGO": {
+      "description": "GG twitches while he prepares for another round",
+      "events": {
+        "JIGO": [
+          "Recupera o fôlego.",
+          "Sem pressa.",
+          "Aproveita um instante.",
+          "Acha que acabou? Eu não pego para soltar.",
+          "Se prepara, buraco sem miolo.",
+          "Você ganhou um descanso curto.",
+          "Eu sou um homem paciente."
+        ]
+      }
+    },
+    "JIGO2": {
+      "description": "Goes forward, covering GG's face",
+      "events": {
+        "JIGO2": [
+          "Vamos ver se você aprendeu alguma coisa.",
+          "Para onde você vai? Você é só um brinquedo.",
+          "Eu só paro quando você estiver morta.",
+          "Você ainda tem espírito.",
+          "Hora de outra surra, cadela!",
+          "Você ainda não está quebrada.",
+          "Ainda não."
+        ]
+      }
+    },
+    "JIGOERO": {
+      "description": "Round two, repeating the chain, but with GG's pussy covered in cum",
+      "events": {
+        "JIGOERO": [
+          "Ainda não terminamos.",
+          "Me mostra o que você aprendeu.",
+          "Não me decepciona.",
+          "Pronta? Agora você aguenta.",
+          "Nunca vou me cansar da sua buceta.",
+          "Não faz beicinho. Vou continuar te esmagando até seus olhos ficarem vazios.",
+          "Dessa vez minha porra lubrifica meu pau. Agradece, bruxa.",
+          "Vou espremer minha porra para fora de você. Nem tenta impedir."
+        ]
+      }
+    },
+    "JIGOERO2": {
+      "description": "Faster thrusting resumes, using previous cum as lube, her body slick and messy beneath him.",
+      "events": {
+        "JIGOERO2": [
+          "Meu sêmen te deixa escorregadia. Sente como eu entro fácil agora.",
+          "Não adianta lutar. Seu corpo lembra quem é o dono.",
+          "Já molhada da minha porra. Você é um receptáculo natural.",
+          "Esse é seu propósito agora. Aceita sem reclamar.",
+          "Está doendo? Bom. Você vai aprender a associar dor a mim.",
+          "Sua buceta aperta mais quando dói. Eu te treinei bem.",
+          "Olha a bagunça que eu fiz. Hora de piorar.",
+          "Cada estocada empurra minha porra mais fundo. Te marcando por dentro.",
+          "Para de contrair. Você só está se prejudicando.",
+          "Logo você nem lembra como era antes de mim."
+        ],
+        "SE": [
+          "Toma.",
+          "Puta molhada.",
+          "Sem saída.",
+          "Minha."
+        ]
+      }
+    },
+    "JIGOERO3": {
+      "description": "Harder thrusts with force causing her legs to twitch and try to close involuntarily.",
+      "events": {
+        "JIGOERO3": [
+          "As pernas já tremendo? A gente está só começando.",
+          "Tenta fechar. Eu gosto de quebrar resistência.",
+          "Seu corpo te trai. Esses tremores dizem que você sente.",
+          "Força a abrir. Quero ver tudo que é meu.",
+          "Cada estocada te lembra quem manda aqui.",
+          "Quanto mais você luta, mais duro eu fico. Continua tremendo.",
+          "Sua buceta está travando uma batalha perdida. Relaxa e aceita.",
+          "Posso fazer isso a noite toda. Você aguenta esse tempo todo?",
+          "Esses gemidos são música. Mais alto, bruxa.",
+          "Suas pernas querem fechar, mas sua buceta quer mais."
+        ],
+        "SE": [
+          "Abre bem.",
+          "Sente?",
+          "Te quebrando.",
+          "Tão apertada."
+        ]
+      }
+    },
+    "JIGOERO4": {
+      "description": "Brutal peak pace before second climax, relentless pounding as she lies exhausted beneath him.",
+      "events": {
+        "JIGOERO4": [
+          "RAH! É aqui que você aprende seu lugar!",
+          "Vou te prenhar cheia de novo! Toma!",
+          "Seu mestre está perto! Implora para eu te encher!",
+          "Grita se quiser. Ninguém vai te salvar!",
+          "Estou reivindicando esse buraco de novo! RAH!",
+          "Cada centímetro é meu! Diz isso!",
+          "Vou te bombear tão cheia que você vai vazar por dias!",
+          "Você foi feita para isso! Meu depósito de porra!",
+          "RAH! Sua buceta está me ordenhando seco, bruxa!",
+          "Você é propriedade. Age como tal e toma meu pau!"
+        ],
+        "SE": [
+          "Toma tudo!",
+          "Sente esse ritmo!",
+          "Você é minha!",
+          "Te rasgando!"
+        ]
+      }
+    },
+    "JIGOFIN": {
+      "description": "He cums inside her for the second time, flooding her already filled womb with more seed.",
+      "events": {
+        "JIGOFIN": [
+          "RAH! Te enchendo de novo! Toma cada gota!",
+          "Tem muito mais de onde isso veio!",
+          "Seu útero está bebendo tudo. Boa menina.",
+          "Segunda carga indo mais fundo que a primeira.",
+          "É assim que um brinquedo de verdade é marcado. Por dentro e por fora.",
+          "RAH! Ordenha meu pau seco com essa buceta cansada!",
+          "Estou pintando seu interior de branco de novo. Me agradece.",
+          "Tanta porra para uma bruxinha tão quebrada.",
+          "Toma. Toma tudo. RAH!",
+          "Você é só um vaso para o meu sêmen agora."
+        ],
+        "SE": [
+          "Te enchendo fundo!",
+          "RAH! Toma!",
+          "Mais fundo!",
+          "Você é minha!"
+        ]
+      }
+    },
+    "JIGOFIN2": {
+      "description": "He pulls out showing her used body covered in cum, sore and thoroughly broken.",
+      "events": {
+        "JIGOFIN2": [
+          "Olha a bagunça que eu fiz de você. Linda.",
+          "Duas cargas dentro e você mal se mexe. Perfeito.",
+          "Minha porra escorrendo da sua buceta. Essa é minha marca.",
+          "Fica aí e deixa pingar. Quero admirar meu trabalho.",
+          "Dolorida, cheia e marcada. Finalmente propriedade de verdade.",
+          "É isso que acontece com as fugitivas. Lembra dessa imagem.",
+          "Sua buceta está aberta e escorrendo. Exatamente como devia estar.",
+          "Descansa enquanto pode. A terceira rodada vem quando eu ficar duro de novo.",
+          "Olha para você. Nem parece mais uma bruxa.",
+          "Meu brinquedo quebrado. Minha escrava coberta de porra."
+        ]
+      }
+    },
+    "JIGOPOST3": {
+      "description": "Act 3 begins with her legs already spread wide, displaying her ruined, gaping, cum-leaking state.",
+      "events": {
+        "JIGOPOST3": [
+          "Olha para você. Pernas abertas como se tivesse sido treinada.",
+          "Terceira rodada. Você já está amansada para mim.",
+          "Essa buceta está aberta. Meu trabalho está aparecendo.",
+          "Duas cargas dentro e você ainda segura elas abertas.",
+          "Sem luta. Só uma exibição digna.",
+          "Exausta, corada e escorrendo. Condição perfeita.",
+          "Manteve as pernas abertas para mim. Bom instinto.",
+          "Hora de usar o que sobrou de você.",
+          "Esse buraco arrebentado precisa de mais treino.",
+          "Olha como você aceita seu propósito com facilidade agora."
+        ]
+      }
+    },
+    "JIGOPOST4": {
+      "description": "He covers her again, mounting her exhausted body and trapping her beneath his weight.",
+      "events": {
+        "JIGOPOST4": [
+          "Fica quieta. Estou montando minha propriedade.",
+          "Debaixo de mim de novo, onde você pertence.",
+          "Sente esse peso? Isso é posse.",
+          "Sem saída dessa vez. Você está cansada demais.",
+          "Vou te usar até você parar de estremecer.",
+          "Seu corpo lembra dessa posição.",
+          "Presa embaixo do seu mestre. Diz isso.",
+          "Abre mais. Quero acesso total.",
+          "Esse é seu endereço permanente agora.",
+          "Relaxa. Lutar só piora."
+        ]
+      }
+    },
+    "JIGOPOSTERO": {
+      "description": "Third round thrusting begins, using prior cum as lube on her already messy, tired body.",
+      "events": {
+        "JIGOPOSTERO": [
+          "Entrando fácil. Minha porra te deixa escorregadia.",
+          "Na terceira é que vai. Você está frouxa e pronta.",
+          "Sem resistência. Só um buraco molhado.",
+          "Sente eu atravessando minha própria bagunça?",
+          "Sua buceta cansada aperta menos agora. Bom.",
+          "Terceira rodada num brinquedo quebrado. Luxo.",
+          "Vou te arruinar sem conserto.",
+          "Empurra de volta. Ou não. Já não estou nem aí.",
+          "Já tem tanta porra dentro de você. Vem mais.",
+          "É para isso que seu corpo foi feito."
+        ],
+        "SE": [
+          "Toma.",
+          "Buraco molhado.",
+          "Sem luta.",
+          "Minha."
+        ]
+      }
+    },
+    "JIGOPOSTERO2": {
+      "description": "Faster thrusting, cum-lube allowing deeper use of her exhausted, barely responsive body.",
+      "events": {
+        "JIGOPOSTERO2": [
+          "Mais rápido agora. De qualquer jeito você mal sente.",
+          "Só uma luva para o meu pau. Nada mais.",
+          "Sua buceta está tão desfeita agora. Perfeita.",
+          "Estocadas profundas. Batendo no seu colo do útero.",
+          "Estremece se quiser. Eu quase nem noto.",
+          "Usando minha porra para te foder mais forte.",
+          "Nesse ponto você é só um receptáculo.",
+          "Chega de choramingar. Só aguenta a surra.",
+          "Esse corpo cansado ainda serve para o propósito dele.",
+          "Três rodadas e finalmente você é útil."
+        ],
+        "SE": [
+          "Mais rápido.",
+          "Fundo.",
+          "Desfeita.",
+          "Inútil."
+        ]
+      }
+    },
+    "JIGOPOSTERO3": {
+      "description": "Hardest pounding before third climax, she is almost gone, body barely responding.",
+      "events": {
+        "JIGOPOSTERO3": [
+          "RAH! Quase lá! Aguenta a surra!",
+          "Isso é o fim! Sua quebra final!",
+          "Vou acabar com o que sobrou de você!",
+          "RAH! Chega de bruxa! Só minha propriedade!",
+          "Mais forte! Você aguenta! RAH!",
+          "Sua buceta está me ordenhando seco! RAH!",
+          "É assim que você acaba! Embaixo do meu pau!",
+          "RAH! Te quebrando por completo!",
+          "Chega de resistência! Só minha porra!",
+          "RAH! Carga final chegando!"
+        ],
+        "SE": [
+          "RAH! Toma!",
+          "Quebra para mim!",
+          "Você é minha!",
+          "Acaba!"
+        ]
+      }
+    },
+    "JIGOPOSTFIN": {
+      "description": "Third orgasm inside her, flooding her already overfilled womb with another hot load.",
+      "events": {
+        "JIGOPOSTFIN": [
+          "RAH! Terceira carga! Te enchendo!",
+          "Toma! RAH! Inunda esse útero!",
+          "Estou te prenhando até o fundo! RAH!",
+          "Três cargas fundo! Você está marcada!",
+          "RAH! Cada gota lá dentro! Minha!",
+          "Te inundando! RAH! Toma tudo!",
+          "Esse é seu propósito! RAH! Cheia!",
+          "À terceira é de vez! RAH! Feito!",
+          "Você está nadando no meu sêmen! RAH!",
+          "Acabado! RAH! Meu brinquedo quebrado!"
+        ],
+        "SE": [
+          "RAH! Toma!",
+          "Te enchendo!",
+          "Terceira carga!",
+          "Você está feita!"
+        ]
+      }
+    },
+    "JIGOPOSTFIN2": {
+      "description": "Afterglow and pull-out display, legs still open, leaking heavily from three loads.",
+      "events": {
+        "JIGOPOSTFIN2": [
+          "Olha isso. Três cargas escorrendo.",
+          "Fica aberta. Quero ver o estrago.",
+          "Você é uma fonte da minha porra. Linda.",
+          "Aberta e pingando. Completamente arruinada.",
+          "Esse é seu melhor visual. Vazia e marcada.",
+          "Pernas abertas, buceta aberta, porra fluindo.",
+          "Minha obra-prima. Uma bruxa quebrada.",
+          "Descansa agora. Você está bem prenha.",
+          "Esse buraco nunca mais fecha do mesmo jeito.",
+          "Admira o que eu fiz de você."
+        ]
+      }
+    },
+    "JIGOTOFADE": {
+      "description": "Screen begins to fade to black, scene ending with final ownership declarations.",
+      "events": {
+        "JIGOTOFADE": [
+          "Para a escuridão. Mas você ainda é minha.",
+          "Isso acaba para o mundo. Não para você.",
+          "Sumindo na escuridão. Minha propriedade.",
+          "Sem mais luz. Só minha posse.",
+          "Sumindo. Mas marcada para sempre.",
+          "Adeus à liberdade. Olá ao serviço.",
+          "Para a escuridão. Como meu brinquedo.",
+          "O fim começa. Sua nova vida."
+        ]
+      }
+    },
+    "ZGAMEOVER": {
+      "description": "Bad end visual, she is fully broken, semen-stained, claimed as permanent property.",
+      "events": {
+        "ZGAMEOVER": [
+          "Você perdeu. Eu ganhei. Você acabou.",
+          "Totalmente quebrada. Totalmente marcada. Totalmente minha.",
+          "Sem saída. Sem segunda chance. Só posse.",
+          "Manchada de sêmen e acabada. Minha propriedade.",
+          "A bruxa morreu. O brinquedo continua.",
+          "Sua história acaba como minha escrava.",
+          "Capturada. Quebrada. Guardada.",
+          "Minha para sempre. Usada para sempre."
+        ]
+      }
+    },
+    "ZGAMEOVER2LOOP": {
+      "description": "Looping bad-end hold, quiet gloating about her permanent state.",
+      "events": {
+        "ZGAMEOVER2LOOP": [
+          "Fica assim. Para sempre.",
+          "Minha posse permanente.",
+          "Sem mudança. Só uso.",
+          "Em loop como meu brinquedo.",
+          "Serviço eterno.",
+          "Nunca livre. Sempre minha.",
+          "Seu para sempre."
+        ]
+      }
+    },
+    "4ERO": {
+      "description": "Optional coda after fade, mouth or continued use of the finished toy.",
+      "events": {
+        "4ERO": [
+          "Mesmo depois do fim, você é útil.",
+          "Abre a boca. Ainda é útil.",
+          "O brinquedo continua dando.",
+          "Ainda não terminei com você.",
+          "Limpeza. Ainda é útil.",
+          "Último uso de propriedade quebrada.",
+          "Espreme o que sobrou de você.",
+          "Até as ruínas têm propósito."
+        ]
+      }
+    }
+  }
+}

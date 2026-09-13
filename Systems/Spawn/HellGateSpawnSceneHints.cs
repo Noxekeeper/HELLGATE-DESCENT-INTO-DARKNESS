@@ -25,7 +25,7 @@ internal static class HellGateSpawnSceneHints
         d["HellGateSpawn_ScapegoatEntrance.txt"] = new[] { "ScapegoatEntrance", "scapegoat" };
         d["HellGateSpawn_ParishChurch.txt"] = new[] { "Parishchurch", "parish", "parish church" };
         d["HellGateSpawn_UndergroundChurch.txt"] = new[] { "UndergroundChurch", "underground" };
-        d["HellGateSpawn__inunderground church.txt"] = new[] { "InundergroundChurch", "Inunderground", "inunderground" };
+        d["HellGateSpawn_inunderground church.txt"] = new[] { "InundergroundChurch", "Inunderground", "inunderground" };
         d["HellGateSpawn_nightless city C.txt"] = new[] { "InsomniaTownC", "nightless", "ightless" };
         d["HellGateSpawn_nightless city ragdum b.txt"] = new[] { "InsomniaTown", "ragdum" };
         d["HellGateSpawn_hidden Forest area.txt"] = new[] { "ForestOfRequiem" };
@@ -49,7 +49,7 @@ internal static class HellGateSpawnSceneHints
         d["HellGateSpawn_ScapegoatEntrance.txt"] = "[HELLGATE SPAWN SE]";
         d["HellGateSpawn_ParishChurch.txt"] = "[HELLGATE SPAWN PC]";
         d["HellGateSpawn_UndergroundChurch.txt"] = "[HELLGATE SPAWN UC]";
-        d["HellGateSpawn__inunderground church.txt"] = "[HELLGATE SPAWN IUC]";
+        d["HellGateSpawn_inunderground church.txt"] = "[HELLGATE SPAWN IUC]";
         d["HellGateSpawn_nightless city C.txt"] = "[HELLGATE SPAWN ITC]";
         d["HellGateSpawn_nightless city ragdum b.txt"] = "[HELLGATE SPAWN IT]";
         d["HellGateSpawn_hidden Forest area.txt"] = "[HELLGATE SPAWN FR]";

@@ -1,0 +1,114 @@
+{
+  "intervalSeconds": 10,
+  "ui": {
+    "cachingMessage": "Mise en cache du contenu HellGate — veuillez patienter…",
+    "doneButton": "Terminé",
+    "tutorialTitle": "TUTORIEL"
+  },
+  "tips": [
+    {
+      "phase": "loading",
+      "id": "manifesto",
+      "text": "HellGate vous permet d'ajuster chaque module à votre goût.\n\nPour un guide complet, ouvrez le <b>Manifesto</b> dans le dossier <b>HELLGATE_README</b>."
+    },
+    {
+      "phase": "loading",
+      "id": "menu_note",
+      "text": "<b>NOTE</b>\n\nPour quitter un menu, appuyez sur <b>[Space]</b> (Saut).\n<b>[Space]</b> fait aussi office de bouton <b>Annuler</b>.\n\nPour confirmer une action, appuyez sur <b>[E]</b>."
+    },
+    {
+      "phase": "loading",
+      "id": "rage_meter",
+      "text": "<b>RAGE</b>\n\nLa jauge de Rage se remplit quand vous :\n• infligez des dégâts\n• bloquez ou parez\n• tuez des ennemis\n\nLa Rage diminue passivement pendant les luttes.\nSi la Rage dépasse <b>50%</b>, la jauge MindBroken augmentera."
+    },
+    {
+      "phase": "loading",
+      "id": "mindbroken",
+      "text": "<b>MindBroken</b>\n\nLa rupture mentale affecte directement la difficulté des luttes.\nPlus elle est élevée, plus il est difficile de marteler l'endurance en étant saisi.\n\nMindBroken augmente avec :\n• les luttes H (passif)\n• certaines animations (croissance accélérée)\n• la croissance passive quand la Rage dépasse <b>50%</b>\n• les flèches QTE haut/bas manquées pendant une lutte"
+    },
+    {
+      "phase": "loading",
+      "id": "rage_tiers",
+      "text": "<b>Mode Rage [G]</b> — trois paliers\n\n<b>Palier 1</b> (~5s) — un combo puissant jusqu'à 9 coups.\n\n<b>Palier 2</b> (~10s) — même combo plus une évasion de saisie instantanée. Restez immobile ~5s et votre esprit commence à se briser.\n\n<b>Palier 3</b> (~15s) — des ailes démoniaques et les mêmes avantages.\n\nTant que la Rage est active, vous ne pouvez être renversé ni saisi.\nSi vous êtes saisi avant l'activation, la jauge de Rage se vide très vite."
+    },
+    {
+      "phase": "loading",
+      "id": "controls",
+      "holdUntilDone": true,
+      "text": "<b>Contrôles de base</b>\n\n<b>[LMB]</b> — attaque (combo 3 coups)\n<b>[RMB]</b> — blocage (fonctionne en l'air). En EASY, le maintien bloque entièrement les saisies\n<b>[RMB]+[W]</b> — parade\n<b>[E]</b> après une parade — Vengeance Strike (15 Rage, max 100)\n<b>[F]</b> — esquive (frames d'invulnérabilité). En EASY coûte 20 d'endurance\n<b>[T]</b> — Bullet-Time\n<b>[G]</b> — Mode Rage (3 paliers)\n<b>[V]</b> — caméra de combat (3 modes)\n<b>[H]</b> — relations de faction\n\nMaintenir <b>[E]</b> 3s — se coucher / se rendre\nMaintenir <b>[E]</b> 6s — fin de partie\n<b>[ESC]+[Enter]</b> — mort instantanée\n<b>[F1]</b> — menu triche (à vos risques)\n<b>[F11]</b> + RMB — respawn rapide des ennemis, pièges et événements\n<b>[Space]</b> — retour / quitter"
+    },
+
+    {
+      "phase": "guide",
+      "id": "parry",
+      "text": "<b>Parade :</b>\n\nMaintenez le blocage et appuyez sur <b>[W]</b> juste avant l'impact pour étourdir l'ennemi.\n\nAppuyez sur <b>[E]</b> à proximité pour Vengeance Strike — ralentit le temps et inflige de lourds dégâts. Coûte <b>15 Rage</b>.\n\nLes flèches et haches sont renvoyées ; la magie est absorbée. Ratez le timing et l'attaque ou la saisie passe.",
+      "video": "Tutorial Guide source/Parry.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "rage",
+      "text": "<b>Mode Rage :</b>\n\nAppuyez sur <b>[G]</b> pour des combos à l'épée de 9 coups sans fatigue.\n\nTant que la Rage est active, vous ne pouvez être renversé ni saisi, et vous infligez plus de dégâts.\n\nContinuez à combattre — restez immobile trop longtemps et votre esprit commence à se briser.",
+      "video": "Tutorial Guide source/Rage.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "timeslomo",
+      "text": "<b>Bullet-Time :</b>\n\nDépensez de la Rage avec <b>[T]</b> pour ralentir le temps.\n\nChaque seconde draine la Rage — et ronge votre esprit.",
+      "video": "Tutorial Guide source/TimeSloMo.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "healthpotion",
+      "text": "<b>Potion de vie :</b>\n\nUtilisez une potion de vie pour vous libérer instantanément d'une saisie.",
+      "video": "Tutorial Guide source/HealthPotion.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "ambushthoughts",
+      "text": "<b>Sens de sorcière :</b>\n\nPrès des pièges, le sens magique d'Aradia peut prévenir d'une embuscade.\n\nElle détecte aussi les pièges mortels à proximité.",
+      "video": "Tutorial Guide source/AmbushThoughts.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "block",
+      "text": "<b>Blocage :</b>\n\nMaintenez <b>[RMB]</b> pour réduire les dégâts et empêcher les renversements et saisies.\n\nFonctionne aussi en l'air.",
+      "video": "Tutorial Guide source/Block.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "rageescape",
+      "text": "<b>Évasion par la Rage :</b>\n\nAvec la Rage au palier <b>2</b> ou <b>3</b>, appuyez sur <b>[G]</b> pendant une saisie pour vous libérer.\n\nSurveillez la jauge — la Rage se vide pendant une saisie, et il pourrait ne plus en rester assez.",
+      "video": "Tutorial Guide source/RageEscape.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "qte",
+      "text": "<b>Struggle Out :</b>\n\nRemplissez votre endurance pour vous libérer.\n\n1) Quand vous voyez Struggle Out — marteler <b>[LMB]</b>. Vous pouvez aussi marteler <b>[E]</b>.\n\n2) Quand les flèches gauche/droite <b>[←]</b> <b>[→]</b> apparaissent — marteler <b>[A]</b> / <b>[D]</b>. Chaque pression accumule de l'endurance.\n\nN'appuyez sur rien quand l'indicateur et les flèches ont disparu — vous perdriez de l'endurance.",
+      "video": "Tutorial Guide source/QTE.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "qte2",
+      "text": "<b>Évasion risquée :</b>\n\nQuand les flèches <color=#E8C84A>jaunes</color> et <color=#E05050>rouges</color> haut/bas <b>[↑]</b> <b>[↓]</b> apparaissent, elles échangent leurs couleurs.\n\nAppuyez plusieurs fois sur la flèche <color=#E8C84A>jaune</color> tant que l'indicateur est visible.\nLes touches correctes donnent plus d'endurance, et une série parfaite accorde un bonus.\n\nAppuyer sur <color=#E05050>rouge</color> — ou appuyer quand aucune flèche n'est affichée — vide votre endurance.",
+      "video": "Tutorial Guide source/QTE2.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "dash",
+      "text": "<b>Esquive et Mercy :</b>\n\nEsquivez avec <b>[F]</b> pour éviter les dégâts et déclencher Mercy.\n\nSi vous restez près de l'ennemi sans attaquer pendant Mercy, la réputation de faction monte de <b>+5%</b>.\n\nÀ <b>+68%</b> ou plus, c'est la neutralité amicale : cette faction n'attaque plus d'elle-même.\n\nPour voir vos relations de faction, appuyez sur <b>[H]</b>.",
+      "video": "Tutorial Guide source/Dash.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "combatcamera",
+      "text": "<b>Caméra de combat :</b>\n\nAppuyez sur <b>[V]</b> pour alterner trois modes : par défaut → plus loin → encore plus loin.",
+      "video": "Tutorial Guide source/CombatCamera.mp4"
+    },
+    {
+      "phase": "guide",
+      "id": "hcameracontrol",
+      "text": "<b>Caméra H :</b>\n\nDans HellGate, vous pouvez piloter la caméra pendant les scènes H.\n\nFlèches <b>[↑]</b> <b>[↓]</b> <b>[←]</b> <b>[→]</b> — déplacement fluide.\n<b>[Space]</b> — zoom (plusieurs niveaux).\n\nLe jeu ne centre pas toujours l'animation correctement — ajustez la vue à la main quand il le faut.",
+      "video": "Tutorial Guide source/H-CameraControl.mp4"
+    }
+  ]
+}

@@ -20,8 +20,22 @@ JSON-driven reaction tuning for vanilla enemies:
 - `EnemyFactionRuntime` assigns factions at `EnemyDate` bootstrap
   (`EnemyDateFactionBootstrapPatch`); spawn lines can override via
   `|faction=` (`SpawnFactionOverride`).
+- Identity aliases in `FactionIds`: `inquisition` ≡ `church`. Hybrid keys
+  such as `bandits_mafia` / `bandits_inquisition` resolve to loyal variants.
+- Default relations (see `Factions.json`): **bandits ↔ mafia** (and
+  `bandits_mafia`) are friendly.
 - Identity/visuals: `FactionIds`, `FactionStyle`, bone marker attachment,
   marker visibility, enemy tint (`EnemyDateFactionColorPatch`).
+- Hostage rescue: `|faction=` on spawn packs is inherited onto the freed
+  combatant (SlaveSideLook / Crow slave / ColCreateObj look-slave patches;
+  see `SPAWN.md`).
+- EventCore modal shells use **`eventcore_encounter`** (id 50; aliases
+  `eventcore` / `encounter`): no emblem, reputation HUD, or Mercy until the
+  encounter resolves. Empty `|faction=` on an `|ec_event=` spawn is filled
+  with this id. See [EVENT_CORE.md](EVENT_CORE.md).
+- Illusive / Rodenia church event `SlaveBigAxe` are forced **Neutral** (and
+  faction AI patches are skipped) so vanilla event combat is unchanged. See
+  [ILLUSIVE_RODENIA_EVENT.md](ILLUSIVE_RODENIA_EVENT.md).
 
 ## Inter-faction combat
 
@@ -33,7 +47,9 @@ JSON-driven reaction tuning for vanilla enemies:
 - **Combat commit**: once two enemies engage, the fight continues even if the
   player leaves (`EnemyDateFactionUpdateSustainPatch`).
 - Friendly fire within a faction is a config toggle.
-- Faction fighting freezes while the player is in an H-scene.
+- Faction fighting freezes while the player is in an H-scene (`eroflag`),
+  including trap H (WallHip): do not restore vanilla player approach during
+  knockdown while the H lock is active (avoids void-punching).
 
 ## Player reputation
 

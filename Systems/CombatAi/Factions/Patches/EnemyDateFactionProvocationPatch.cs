@@ -31,6 +31,9 @@ internal static class EnemyDateFactionPlayerProvocationPatch
         EnemyDate enemy = enemyRoot.GetComponent<EnemyDate>();
         if (enemy == null)
             return;
+        if ((enemy is SlaveBigAxe || enemy is OtherSlavebigAxe) &&
+            NoREroMod.Patches.Enemy.SlaveBigAxeIllusiveEventGate.ShouldSkipHellGateLogic())
+            return;
         if (WitchOffspringCombatRules.IsOffspring(enemy))
             return;
         playercon player = enemy.com_player;

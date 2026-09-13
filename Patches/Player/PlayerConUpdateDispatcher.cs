@@ -51,7 +51,7 @@ internal static class PlayerConUpdateDispatcher
         try { RageResetOnGrabDownPatch.Process(__instance); }
         catch (System.Exception ex) { Plugin.Log?.LogWarning($"[PlayerConUpdate] RageReset: {ex.Message}"); }
 
-        // 3. Combat camera presets (V key)
+        // 3. Combat camera presets (ToggleHotkey, default V)
         try { CombatCameraPresetSystem.Process(__instance); }
         catch (System.Exception ex) { Plugin.Log?.LogWarning($"[PlayerConUpdate] CombatCamera: {ex.Message}"); }
 
@@ -115,6 +115,10 @@ internal static class PlayerConUpdateDispatcher
         try { NoREroMod.SpawnPointAnalyzer.Process(); }
         catch (System.Exception ex) { Plugin.Log?.LogWarning($"[PlayerConUpdate] SpawnAnalyzer: {ex.Message}"); }
 
+        // 8.5 Enemy combat fatality: pin body + suppress EROWALK while session active
+        try { NoREroMod.Systems.EnemyFatality.EnemyFatalityEroSuppression.Process(__instance); }
+        catch (System.Exception ex) { Plugin.Log?.LogWarning($"[PlayerConUpdate] EnemyFatality: {ex.Message}"); }
+
         // 9. Safety recovery: if H-scene already ended but player renderers stayed disabled, restore visuals.
         try { RecoverPlayerRendererAfterHScene(__instance); }
         catch (System.Exception ex) { Plugin.Log?.LogWarning($"[PlayerConUpdate] RendererRecovery: {ex.Message}"); }
@@ -128,6 +132,7 @@ internal static class PlayerConUpdateDispatcher
     private static void RecoverPlayerRendererAfterHScene(playercon player)
     {
         if (player == null) return;
+        if (NoREroMod.Systems.EnemyFatality.EnemyFatalitySession.IsActive) return;
         if (player.eroflag || player.erodown != 0) return;
 
         GameObject playerObj = NoREroMod.Systems.Cache.UnifiedPlayerCacheManager.GetPlayerObject();

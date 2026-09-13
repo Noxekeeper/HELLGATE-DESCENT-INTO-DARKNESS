@@ -63,6 +63,7 @@ woodwana -> forest_long - TREE TRAP WITH FLIP-OPEN DOOR
 
 # buttons / guns
 trap_button -> Trap_button - TRAP BUTTON
+lightningTrap_button -> HellGate lethal lightning button (trap_button base; alias lightingTrap_button)
 trap_button_ironmaiden -> Trap_button - BUTTON UNDER IRON MAIDEN
 trapshot -> trapgun2 - FIRES BULLET ON BUTTON
 trapgun2 -> trapgun2 - FIRES BULLET (GO name on map)
@@ -136,10 +137,12 @@ rosewarm -> Rosewarm - ROSE ON A BOARD
 wallhip -> wallHIP - WALL VAGRANT H-TRAP
 
 # barrel / vase / box
-breakobjct -> taru_exp - EXPLOSIVE BARREL
-taru_brk -> taru_brk - BARREL +10 XP
-taru_exp -> taru_exp - EXPLOSIVE BARREL
+# WARNING: breakobjct is NOT "small barrel". Runtime cache binds it to taruRO_exp_Layer (HUGE).
+# Use taru_exp for SMALL explosive barrel; taruro_exp for HUGE.
+taru_exp -> taru_exp - SMALL EXPLOSIVE BARREL
 taruro_exp -> taruRO_exp - HUGE EXPLOSIVE BARREL
+# breakobjct -> taruRO_exp_Layer - DO NOT USE (class alias BreakObjct → huge Layer barrel)
+taru_brk -> taru_brk - BARREL +10 XP
 inpactbreakkobj -> tubo2 - VASE WITH TENTACLES
 tubo2 -> tubo2 - VASE WITH TENTACLES
 box_brk -> Box_brk - CRATE DECOR

@@ -358,6 +358,23 @@ internal class DialogueDisplay
             return "bone32";
         }
 
+        // SlaveBigAxeEro — Aradia: bone10 (START), bone9 (post-fade), bone62 (others)
+        if (enemyName == "SlaveBigAxeEro")
+        {
+            if (animUpper == "START")
+            {
+                return "bone10";
+            }
+
+            if (animUpper == "JIGOTOFADE" || animUpper == "ZGAMEOVER" ||
+                animUpper == "ZGAMEOVER2LOOP" || animUpper == "4ERO")
+            {
+                return "bone9";
+            }
+
+            return "bone62";
+        }
+
         // Default fallback
         return GetDefaultAradiaBone();
     }
@@ -1598,6 +1615,60 @@ internal class DialogueDisplay
             };
         }
 
+        // SlaveBigAxeEro — enemy bones: bone7 (START), bone4 (post-fade), bone42 (others)
+        if (typeName == "SlaveBigAxeEro")
+        {
+            string currentAnim = null;
+            try
+            {
+                MonoBehaviour mb = ResolveDialogueHost(enemyInstance);
+                if (mb != null)
+                {
+                    SkeletonAnimation spine = GetPrimarySkeletonForHost(mb);
+                    if (spine != null)
+                    {
+                        currentAnim = spine.AnimationName;
+                    }
+                }
+            }
+            catch
+            {
+            }
+
+            if (!string.IsNullOrEmpty(currentAnim) &&
+                currentAnim.Equals("START", System.StringComparison.OrdinalIgnoreCase))
+            {
+                return new BonePosition
+                {
+                    BoneName = "bone7",
+                    UseScreenCenter = false,
+                    WorldOffsetY = 0.25f
+                };
+            }
+
+            if (!string.IsNullOrEmpty(currentAnim))
+            {
+                string animUpper = currentAnim.ToUpperInvariant();
+                if (animUpper == "JIGOTOFADE" || animUpper == "ZGAMEOVER" ||
+                    animUpper == "ZGAMEOVER2LOOP" || animUpper == "4ERO")
+                {
+                    return new BonePosition
+                    {
+                        BoneName = "bone4",
+                        UseScreenCenter = false,
+                        WorldOffsetY = 0.15f
+                    };
+                }
+            }
+
+            return new BonePosition
+            {
+                BoneName = "bone42",
+                UseScreenCenter = false,
+                WorldOffsetY = 0.4f
+            };
+        }
+
         // Kakasi (EroAnimation for cross, kakashi_ero2 for ground)
         if (typeName == "EroAnimation" || typeName == "kakashi_ero2" || typeName.Contains("Kakasi") || typeName.Contains("Kakash"))
         {
@@ -2141,6 +2212,14 @@ internal class DialogueDisplay
     /// </summary>
     internal void ShowAradiaResponse(object playerInstance, string response, string boneName, DialogueStyle style, float duration)
     {
+        ShowAradiaResponse(playerInstance, response, boneName, style, duration, 0f);
+    }
+
+    /// <summary>
+    /// Display Aradia reply with optional Spine world Y lift (more reliable than UI px alone under CanvasScaler).
+    /// </summary>
+    internal void ShowAradiaResponse(object playerInstance, string response, string boneName, DialogueStyle style, float duration, float boneWorldOffsetY)
+    {
         if (string.IsNullOrEmpty(response))
         {
             return;
@@ -2248,20 +2327,18 @@ internal class DialogueDisplay
         BonePosition bonePos = new BonePosition
         {
             BoneName = boneName,
-            UseScreenCenter = false
+            UseScreenCenter = false,
+            WorldOffsetY = boneWorldOffsetY
         };
 
         Vector2 bonePosition = GetBoneScreenPosition(playerInstance, bonePos);
 
-        // Position: GG bone + downward offset (default 50px below bone)
+        // Position: GG bone + vertical offset (positive = above bone)
         float initialVerticalOffset = unifiedStyle.VerticalOffset;
         containerRect.anchoredPosition = bonePosition + new Vector2(0f, initialVerticalOffset);
 
         containerRect.localScale = Vector3.one;
         container.SetActive(true);
-
-        // Debug Aradia text visibility
-        // Plugin.Log.LogInfo($"[AradiaResponse] Showing text: '{response}' at position {containerRect.anchoredPosition}, container active: {container.activeSelf}");
 
         _coroutineRunner.StartCoroutine(AnimateAradiaFloatingText(container, playerInstance, bonePos, unifiedStyle, duration, initialVerticalOffset));
     }

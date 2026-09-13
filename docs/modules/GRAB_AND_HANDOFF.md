@@ -8,7 +8,11 @@ chained H-scene handoffs between enemies.
 Code: `Systems/GrabSystem/` · Config: `[GrabSystemNG]`
 
 - `GrabViaAttackPatch` — converts a successful enemy attack into a grab with
-  a computed probability.
+  a computed probability. Goblin / Biscod stay on vanilla knockdown→DOWN intro
+  (`ShouldUseVanillaGrabOnly`). Sisterknight / CrawlingSisterKnight keep
+  GrabViaAttack but get a tiny post-grab bridge (`state = DOWN` + re-enable
+  player rigidbody) so their vanilla `OnTriggerStay` H intro (`EROWALK` +
+  `DOWN`) can fire instead of looking like grab→release→walk-in.
 - `GrabChanceCalculator` — chance math from player/enemy state.
 - `DamageSourceClassifier` + `MeleeAttackerContextPatches` +
   `RangedDamageFlagPatches` — classify the damage source (melee vs ranged)
@@ -17,6 +21,16 @@ Code: `Systems/GrabSystem/` · Config: `[GrabSystemNG]`
   the Rage overlay canvas.
 - Slow-mo interaction: when `[HSceneEffects] StartZoom.Enable` is on, the
   grab's slow-motion defers to `HSceneStartZoomEffect`.
+- **DeadArmor hook**: while SlaveBigAxe still has girl armor (`NikuArmor`) and
+  `ArmoredGrabThrowEnable` is on, grab-via-attack is replaced by a short hold
+  + knockback throw instead of `EliteGrabPlayer` / H snap. See
+  [DEAD_ARMOR.md](DEAD_ARMOR.md). That path uses its own slow-mo settings
+  under `[DeadArmor]` and does not use StartZoom.
+- **Death-session blocks**: GrabViaAttack (and collision elite grab) early-out
+  while HellTraps `LethalMagicTrapEroSuppression.ShouldSuppress` or
+  `EnemyFatalitySession.IsActive` — corpse under a death PNG must not be
+  grabbed. See [HELL_TRAPS.md](HELL_TRAPS.md) and
+  [ENEMY_FATALITY.md](ENEMY_FATALITY.md).
 
 ## Enemy handoff
 

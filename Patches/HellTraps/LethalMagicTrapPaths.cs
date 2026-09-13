@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.IO;
+using NoREroMod.Systems.Spawn;
 using UnityEngine;
 
 namespace NoREroMod.Patches.HellTraps;
@@ -17,8 +18,8 @@ internal static class LethalMagicTrapPaths
         if (string.IsNullOrEmpty(key))
             return false;
 
-        string normalized = key.Replace("(Clone)", string.Empty).Trim().ToLowerInvariant();
-        return normalized == TemplateKey || normalized == LegacyTemplateKeyAlias;
+        return SpawnTemplateCatalog.TemplateKeysMatch(key, TemplateKey) ||
+               SpawnTemplateCatalog.TemplateKeysMatch(key, LegacyTemplateKeyAlias);
     }
     internal const string DefaultDeathClipRelative =
         "sources/HellGate_sources/CustomDeath/Exp_Death";

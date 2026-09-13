@@ -12,8 +12,10 @@ the custom-pack conventions.
    add a branch in `Systems/Spawn/SpawnConfigExecutor`.
 3. Reference the key from a spawn pack line in
    `HellGateJson/HellGateSpawnPoint/HellGateSpawn_<Zone>.txt` and verify the
-   spawn in game. Use `Patches/Spawn/SpawnPointAnalyzer` (F11 coordinates,
-   RMB pack hot-reload) for placement.
+   spawn in game. Use the F11 Spawn System Editor V2.0
+   (`Patches/Spawn/SpawnPointAnalyzer` + `Systems/Spawn/Authoring/`) for
+   Point / Place / Edit / RMB pack hot-reload — see
+   `../modules/SPAWN.md`.
 
 ## 2. Pass/handoff logic
 

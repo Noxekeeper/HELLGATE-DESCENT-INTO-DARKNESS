@@ -103,7 +103,19 @@ internal static class RickEnemyModSpineLoader
                 return fromEro;
         }
 
-        return BorrowFromSpine(template.GetComponent<SkeletonAnimation>());
+        Material direct = BorrowFromSpine(template.GetComponent<SkeletonAnimation>());
+        if (direct != null)
+            return direct;
+
+        SkeletonAnimation[] children = template.GetComponentsInChildren<SkeletonAnimation>(true);
+        for (int i = 0; i < children.Length; i++)
+        {
+            Material m = BorrowFromSpine(children[i]);
+            if (m != null)
+                return m;
+        }
+
+        return null;
     }
 
     private static Material BorrowFromSpine(SkeletonAnimation spine)

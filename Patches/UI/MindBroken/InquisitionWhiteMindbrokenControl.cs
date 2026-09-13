@@ -96,12 +96,14 @@ internal class InquisitionWhiteMindbrokenTracker : MonoBehaviour
             isInjectionActive = false;
         }
 
-        // Add MindBroken while injection is active (configurable rate)
         if (isInjectionAnimation)
         {
-            // SYRINGE INJECTION: Add configurable MindBroken per second
-            float mbPerSecond = Plugin.inquisitionWhiteMindBrokenPerSecond?.Value ?? 8f;
-            MindBrokenSystem.AddPercent((mbPerSecond / 100f) * Time.deltaTime, "inquisition-white-syringe-injection");
+            float dt = MindBrokenRealtimeGate.GetClampedDeltaTime();
+            if (dt > 0f)
+            {
+                float mbPerSecond = Plugin.inquisitionWhiteMindBrokenPerSecond?.Value ?? 8f;
+                MindBrokenSystem.AddPercent((mbPerSecond / 100f) * dt, "inquisition-white-syringe-injection");
+            }
         }
 
         // Handle wave effect during ERO_START3 (trigger once, if enabled)

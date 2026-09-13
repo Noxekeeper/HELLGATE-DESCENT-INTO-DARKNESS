@@ -33,7 +33,7 @@ internal static class LethalMagicTrapDeathDisplay
 
     internal static void TryApply(playercon player)
     {
-        if (!Plugin.enableLethalMagicTrap.Value || player == null)
+        if (!Plugin.IsLethalMagicTrapActive || player == null)
             return;
 
         Sprite[] frames = LethalMagicTrapAssetLoader.GetDeathFrames();
@@ -80,7 +80,8 @@ internal static class LethalMagicTrapDeathDisplay
         playercon player,
         Sprite[] frames,
         Vector3 trapAnchorWorld,
-        float? displayScaleOverride = null)
+        float? displayScaleOverride = null,
+        LethalDeathClipPlaybackProfile playbackProfile = null)
     {
         if (player == null || frames == null || frames.Length == 0)
             return false;
@@ -92,7 +93,7 @@ internal static class LethalMagicTrapDeathDisplay
         clipRoot.transform.SetParent(null, true);
 
         _activeRunner = clipRoot.AddComponent<LethalMagicTrapDeathClipRunner>();
-        _activeRunner.BeginFixedAtTrap(player, frames, trapAnchorWorld, displayScaleOverride);
+        _activeRunner.BeginFixedAtTrap(player, frames, trapAnchorWorld, displayScaleOverride, playbackProfile);
         LethalMagicTrapDeathContext.MarkCustomDeathActive();
 
         Plugin.Log?.LogInfo(
@@ -242,7 +243,7 @@ internal sealed class LethalMagicTrapDeathApplyHost : MonoBehaviour
     {
         yield return null;
 
-        if (_player == null || !Plugin.enableLethalMagicTrap.Value)
+        if (_player == null || !Plugin.IsLethalMagicTrapActive)
             yield break;
 
         if (LethalMagicTrapDeathContext.IsCustomDeathActive)
@@ -314,9 +315,10 @@ internal sealed class LethalMagicTrapDeathClipRunner : MonoBehaviour
         playercon player,
         Sprite[] frames,
         Vector3 trapAnchorWorld,
-        float? displayScaleOverride = null)
+        float? displayScaleOverride = null,
+        LethalDeathClipPlaybackProfile playbackProfile = null)
     {
-        BeginCore(player, frames, displayScaleOverride, trapAnchorWorld, null);
+        BeginCore(player, frames, displayScaleOverride, trapAnchorWorld, playbackProfile);
     }
 
     private void BeginCore(
@@ -344,9 +346,14 @@ internal sealed class LethalMagicTrapDeathClipRunner : MonoBehaviour
         _fallVelocity = Vector3.zero;
         _fixedAtTrapAnchor = fixedTrapAnchorWorld.HasValue;
 
+        // Exp_Death landing uses TrapFloorOffsetY. Cocoon/lightning profiles override via TrapContentOffsetY.
+        // Fixed-at-trap must also read the profile — otherwise ClipOffsetY never applies (stuck at -1.5).
         _targetOffsetY = LethalMagicTrapDeathTuning.TrapFloorOffsetY;
-        if (_splitBoneEmptyAndTrapContent && playbackProfile != null)
+        if (playbackProfile != null &&
+            (_splitBoneEmptyAndTrapContent || _fixedAtTrapAnchor))
+        {
             _targetOffsetY = playbackProfile.TrapContentOffsetY;
+        }
 
         _fallAcceleration = LethalMagicTrapDeathTuning.FallAcceleration;
         _fallMaxSpeed = LethalMagicTrapDeathTuning.FallMaxSpeed;
@@ -367,6 +374,7 @@ internal sealed class LethalMagicTrapDeathClipRunner : MonoBehaviour
         if (_fixedAtTrapAnchor)
         {
             _startWorld = fixedTrapAnchorWorld.Value;
+            _startWorld.y += _targetOffsetY;
             if (_player != null)
                 _startWorld.z = _player.transform.position.z;
 

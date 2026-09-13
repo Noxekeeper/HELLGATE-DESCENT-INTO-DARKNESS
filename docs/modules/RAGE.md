@@ -16,6 +16,9 @@ Code: `Systems/Rage/` · Config: `[RageMode]`, `[RageVisualEffects]`, `[SlowMoVi
 - `RageResetOnGrabDownPatch` — rage resets when the player is grabbed down.
 - `RageActiveImmunityPatch` — optional immunity to grab/knockdown during the
   active rage window.
+- MindBroken gain during active Rage / overdrive / high-rage passive uses
+  `MindBrokenRealtimeGate.GetClampedUnscaledDelta()` (focus + hitch clamp;
+  see `MIND_BROKEN.md`).
 
 ## Slow motion
 
