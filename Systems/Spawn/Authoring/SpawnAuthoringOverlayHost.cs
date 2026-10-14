@@ -26,6 +26,7 @@ internal sealed class SpawnAuthoringOverlayHost : MonoBehaviour
     private const float OptionsPanelHeight = 188f;
     private const float TrapOptionsPanelHeight = 200f;
     private const float TrapOptionsPanelHeightHostage = 248f;
+    private const float GimmickOptionsPanelHeight = 232f + (ExtraOptsRowHeight + 4f) * 2f;
     private const float GoldOptionsPanelHeight = 120f;
     private const float EventTrapOptionsPanelHeight = 228f;
     private const float EventCoreOptionsPanelHeight = 216f;
@@ -82,6 +83,16 @@ internal sealed class SpawnAuthoringOverlayHost : MonoBehaviour
     private int editSortOffset;
     private bool editIsTrap;
     private bool editIsGold;
+    private bool editIsGimmick;
+    private bool editGimmickOpen;
+    private bool editGimmickLever;
+    private string editGimmickRadiusStr = "10";
+    private string editGimmickId = string.Empty;
+    private string editGimmickGuardStr = "0";
+    private string editGimmickGuardHeightStr = "8";
+    private Gimmicks.HellGateGimmickGuardSide editGimmickGuardSide = Gimmicks.HellGateGimmickGuardSide.Both;
+    private bool editGimmickAuto;
+    private float editGimmickAutoRange = Gimmicks.HellGateGimmickGuard.DefaultAutoRange;
     private string editRotStr = "0";
     private string editSortStr = "0";
     private string editXStr = "0";
@@ -175,6 +186,8 @@ internal sealed class SpawnAuthoringOverlayHost : MonoBehaviour
         editYStr = y.ToString("F2", CultureInfo.InvariantCulture);
     }
 
+    internal static bool IsOpen => instance != null && instance.gameObject.activeSelf;
+
     internal static void SetActive(bool active)
     {
         EnsureExists();
@@ -218,8 +231,14 @@ internal sealed class SpawnAuthoringOverlayHost : MonoBehaviour
         }
     }
 
+    private void LateUpdate()
+    {
+        SpawnAuthoringPause.Maintain();
+    }
+
     private void Update()
     {
+        SpawnAuthoringPause.Maintain();
         if (!global::NoREroMod.SpawnPointAnalyzer.IsRecordingModeActive)
             return;
         if (SpawnAuthoringConfig.UiEnable != null && !SpawnAuthoringConfig.UiEnable.Value)
@@ -335,7 +354,7 @@ internal sealed class SpawnAuthoringOverlayHost : MonoBehaviour
 
     /// <summary>
     /// Hotkeys (mnemonic):
-    /// E Enemies · H Hostage · T Trap · R Lethal · G Gold · N Decor · M EventTrap · C EventCore
+    /// E Enemies · H Hostage · T Trap · R Lethal · G Gold · N Decor · M EventTrap · C EventCore · L Gimmicks
     /// F Flip · B Favorites · V View · U Use position · Home camera
     /// Space Place · Q close · Ctrl+C/X/V/D/Z/B/S
     /// </summary>
@@ -382,6 +401,8 @@ internal sealed class SpawnAuthoringOverlayHost : MonoBehaviour
             ToggleEventTrapPanel();
         else if (Input.GetKeyDown(KeyCode.C))
             ToggleEventCorePanel();
+        else if (Input.GetKeyDown(KeyCode.L))
+            ToggleGimmickPanel();
         else if (Input.GetKeyDown(KeyCode.U))
             TryUseCurrentPositionHotkey();
         else if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
@@ -453,6 +474,32 @@ internal sealed class SpawnAuthoringOverlayHost : MonoBehaviour
             CloseEditPanel();
             SpawnAuthoringFavorites.PanelOpen = false;
         }
+    }
+
+    private void ToggleGimmickPanel()
+    {
+        if (SpawnAuthoringState.ActiveCatalog == SpawnAuthoringState.CatalogKind.Gimmick)
+            SpawnAuthoringState.ActiveCatalog = SpawnAuthoringState.CatalogKind.None;
+        else
+        {
+            SpawnAuthoringState.ActiveCatalog = SpawnAuthoringState.CatalogKind.Gimmick;
+            SpawnAuthoringState.PendingRotationZ = 0f;
+            SpawnAuthoringState.SelectedRotationZ = 0f;
+            WarmGimmickListCache();
+            CloseEditPanel();
+            SpawnAuthoringFavorites.PanelOpen = false;
+            if (SpawnAuthoringGimmickCatalog.TryStartHydrate(OnGimmickHydrateDone))
+                statusLine = SpawnAuthoringLoc.T("status.gimmickLoading");
+        }
+    }
+
+    private void OnGimmickHydrateDone()
+    {
+        if (this == null)
+            return;
+        if (SpawnAuthoringState.GimmickPanelOpen)
+            WarmGimmickListCache();
+        statusLine = SpawnAuthoringLoc.T("status.gimmickLoaded");
     }
 
     private void ToggleHostagePanel()
@@ -567,12 +614,32 @@ internal sealed class SpawnAuthoringOverlayHost : MonoBehaviour
 
     private void WarmListCache()
     {
-        cachedKeys = SpawnAuthoringEnemyCatalog.GetEnemyKeys();
+        string[] custom = SpawnAuthoringEnemyCatalog.GetCustomEnemyKeys();
+        string[] vanilla = SpawnAuthoringEnemyCatalog.GetEnemyKeys();
+        int headers = custom.Length > 0 ? 2 : 0;
+        cachedKeys = new string[headers + custom.Length + vanilla.Length];
         cachedReady = new bool[cachedKeys.Length];
         cachedRowHeader = new bool[cachedKeys.Length];
         EnemyPrefabRegistry.Initialize();
-        for (int i = 0; i < cachedKeys.Length; i++)
-            cachedReady[i] = EnemyPrefabRegistry.TryGetPrefab(cachedKeys[i], out _);
+
+        int n = 0;
+        if (custom.Length > 0)
+        {
+            cachedRowHeader[n] = true;
+            cachedKeys[n++] = SpawnAuthoringLoc.T("enemies.customHeader");
+            for (int i = 0; i < custom.Length; i++)
+            {
+                cachedReady[n] = EnemyPrefabRegistry.TryGetPrefab(custom[i], out _);
+                cachedKeys[n++] = custom[i];
+            }
+            cachedRowHeader[n] = true;
+            cachedKeys[n++] = SpawnAuthoringLoc.T("enemies.vanillaHeader");
+        }
+        for (int i = 0; i < vanilla.Length; i++)
+        {
+            cachedReady[n] = EnemyPrefabRegistry.TryGetPrefab(vanilla[i], out _);
+            cachedKeys[n++] = vanilla[i];
+        }
         listCacheWarm = true;
     }
 
@@ -775,6 +842,8 @@ internal sealed class SpawnAuthoringOverlayHost : MonoBehaviour
             SyncEditSortStr();
         }
 
+        LoadEditGimmickFields(managed.AuthoringSourceLineRaw);
+
         Vector3 livePos = managed.transform.position;
         editXStr = livePos.x.ToString("F2", CultureInfo.InvariantCulture);
         editYStr = livePos.y.ToString("F2", CultureInfo.InvariantCulture);
@@ -825,6 +894,7 @@ internal sealed class SpawnAuthoringOverlayHost : MonoBehaviour
         PushEditPreviewToOutline();
         SpawnAuthoringOutline.DrawGui();
         SpawnAuthoringAnchorMarker.DrawGui();
+        SpawnAuthoringGimmickRadius.DrawGui();
         SpawnAuthoringRegion.DrawGui();
         SpawnAuthoringClickCue.DrawGui();
         TickPreviewGrabPlace();
@@ -843,7 +913,7 @@ internal sealed class SpawnAuthoringOverlayHost : MonoBehaviour
             : (SpawnAuthoringState.AnyCatalogOpen ? CoordsHeightExpanded : CoordsHeightExpandedSolo);
         if (!placementCollapsed && SpawnAuthoringRegion.HasRect)
             coordsH += 36f;
-        float catBlockH = 4f * (MenuBtnH + 6f) - 6f;
+        float catBlockH = 5f * (MenuBtnH + 6f) - 6f;
         float totalHeight = coordsH + 8f + catBlockH;
         if (SpawnAuthoringState.EnemiesPanelOpen)
             totalHeight += 8f + EnemiesListHeight + 6f + FactionPanelHeight + 6f + OptionsPanelHeight + 6f +
@@ -853,7 +923,9 @@ internal sealed class SpawnAuthoringOverlayHost : MonoBehaviour
             float trapOpts = SpawnAuthoringState.HostagePanelOpen
                 ? TrapOptionsPanelHeightHostage
                 : TrapOptionsPanelHeight;
-            if (!SpawnAuthoringState.CatalogAllowsRotation)
+            if (SpawnAuthoringState.GimmickPanelOpen)
+                trapOpts = GimmickOptionsPanelHeight;
+            else if (!SpawnAuthoringState.CatalogAllowsRotation)
                 trapOpts -= ExtraOptsRowHeight + 4f;
             totalHeight += 8f + EnemiesListHeight + 6f + trapOpts + 6f + FavAddRowHeight + 6f + ConfirmRowHeight;
             if (SpawnAuthoringState.HostagePanelOpen)
@@ -1139,6 +1211,14 @@ internal sealed class SpawnAuthoringOverlayHost : MonoBehaviour
                     ? SpawnAuthoringLoc.T("btn.eventCoreOpen")
                     : SpawnAuthoringLoc.T("btn.eventCore"), panelButtonStyle))
             ToggleEventCorePanel();
+        y += MenuBtnH + gap;
+
+        // Row 5: Gimmicks (gates / ladders / lever)
+        if (GUI.Button(new Rect(x, y, PanelWidth, MenuBtnH),
+                SpawnAuthoringState.GimmickPanelOpen
+                    ? SpawnAuthoringLoc.T("btn.gimmickOpen")
+                    : SpawnAuthoringLoc.T("btn.gimmick"), panelButtonStyle))
+            ToggleGimmickPanel();
         y += MenuBtnH;
 
         return y;
@@ -1342,6 +1422,8 @@ internal sealed class SpawnAuthoringOverlayHost : MonoBehaviour
             SpawnAuthoringPreviewSpawn.TryConfirmGoldSpawnAndSave(out status);
         else if (SpawnAuthoringState.ActiveCatalog == SpawnAuthoringState.CatalogKind.EventTrap)
             SpawnAuthoringPreviewSpawn.TryConfirmEventTrapAndSave(out status);
+        else if (SpawnAuthoringState.GimmickPanelOpen)
+            SpawnAuthoringPreviewSpawn.TryConfirmGimmickSpawnAndSave(out status);
         else if (SpawnAuthoringState.IsTemplateCatalog)
             SpawnAuthoringPreviewSpawn.TryConfirmTrapSpawnAndSave(out status);
         else
@@ -1368,6 +1450,16 @@ internal sealed class SpawnAuthoringOverlayHost : MonoBehaviour
         cachedRowHeader = new bool[cachedKeys.Length];
         for (int i = 0; i < cachedKeys.Length; i++)
             cachedReady[i] = SpawnAuthoringTrapCatalog.IsReady(cachedKeys[i]);
+        listCacheWarm = true;
+    }
+
+    private void WarmGimmickListCache()
+    {
+        cachedKeys = SpawnAuthoringGimmickCatalog.GetKeys();
+        cachedReady = new bool[cachedKeys.Length];
+        cachedRowHeader = new bool[cachedKeys.Length];
+        for (int i = 0; i < cachedKeys.Length; i++)
+            cachedReady[i] = SpawnAuthoringGimmickCatalog.IsReady(cachedKeys[i]);
         listCacheWarm = true;
     }
 
@@ -1422,6 +1514,8 @@ internal sealed class SpawnAuthoringOverlayHost : MonoBehaviour
                 WarmHostageListCache();
             else if (SpawnAuthoringState.DecorPanelOpen)
                 WarmDecorListCache();
+            else if (SpawnAuthoringState.GimmickPanelOpen)
+                WarmGimmickListCache();
             else
                 WarmTrapListCache(SpawnAuthoringState.LethalTrapPanelOpen);
         }
@@ -1430,9 +1524,11 @@ internal sealed class SpawnAuthoringOverlayHost : MonoBehaviour
             ? SpawnAuthoringLoc.T("hostage.title")
             : (SpawnAuthoringState.DecorPanelOpen
                 ? SpawnAuthoringLoc.T("decor.title")
-                : (SpawnAuthoringState.LethalTrapPanelOpen
-                    ? SpawnAuthoringLoc.T("lethal.title")
-                    : SpawnAuthoringLoc.T("traps.title")));
+                : (SpawnAuthoringState.GimmickPanelOpen
+                    ? SpawnAuthoringLoc.T("gimmick.title")
+                    : (SpawnAuthoringState.LethalTrapPanelOpen
+                        ? SpawnAuthoringLoc.T("lethal.title")
+                        : SpawnAuthoringLoc.T("traps.title"))));
 
         Rect listRect = new Rect(x, y, PanelWidth, EnemiesListHeight);
         DrawChromePanel(listRect, title);
@@ -1441,7 +1537,9 @@ internal sealed class SpawnAuthoringOverlayHost : MonoBehaviour
             ? "help.hostage"
             : (SpawnAuthoringState.DecorPanelOpen
                 ? "help.decor"
-                : (SpawnAuthoringState.LethalTrapPanelOpen ? "help.lethal" : "help.traps"));
+                : (SpawnAuthoringState.GimmickPanelOpen
+                    ? "help.gimmick"
+                    : (SpawnAuthoringState.LethalTrapPanelOpen ? "help.lethal" : "help.traps")));
         DrawPanelHeaderTools(
             listRect,
             helpKey,
@@ -1490,7 +1588,9 @@ internal sealed class SpawnAuthoringOverlayHost : MonoBehaviour
             bool confirmed = string.Equals(key, SpawnAuthoringState.SelectedEnemyKey, StringComparison.OrdinalIgnoreCase);
             bool ready = i < cachedReady.Length && cachedReady[i];
 
-            string label = key;
+            string label = SpawnAuthoringState.GimmickPanelOpen
+                ? SpawnAuthoringGimmickCatalog.GetDisplayName(key)
+                : key;
             if (pending)
                 label = "> " + label;
             if (confirmed)
@@ -1527,9 +1627,257 @@ internal sealed class SpawnAuthoringOverlayHost : MonoBehaviour
         return y + ConfirmRowHeight;
     }
 
+    private void LoadEditGimmickFields(string raw)
+    {
+        editIsGimmick = editIsTrap && IsGimmickSourceLine(raw);
+        if (!editIsGimmick)
+            return;
+
+        string[] parts = raw.Trim().Split(',');
+        editKey = parts[1].Trim();
+        Gimmicks.HellGateGimmickSpawnOptions options = HellGateSpawnLineFormat.ParseGimmickOptions(editKey, parts, 4);
+        editGimmickOpen = options.Open;
+        editGimmickLever = options.Lever;
+        editGimmickRadiusStr = options.Radius.ToString("0.##", CultureInfo.InvariantCulture);
+        editGimmickId = options.Id ?? string.Empty;
+        editGimmickGuardStr = options.GuardLength.ToString("0.##", CultureInfo.InvariantCulture);
+        editGimmickGuardHeightStr = options.GuardHeight.ToString("0.##", CultureInfo.InvariantCulture);
+        editGimmickGuardSide = options.GuardSide;
+        editGimmickAuto = options.AutoRange > 0f;
+        editGimmickAutoRange = editGimmickAuto ? options.AutoRange : Gimmicks.HellGateGimmickGuard.DefaultAutoRange;
+        editRotationZ = 0f;
+        SyncEditRotStr();
+    }
+
+    private float ResolveEditGimmickRadius()
+    {
+        if (!float.TryParse(editGimmickRadiusStr, NumberStyles.Float, CultureInfo.InvariantCulture, out float radius) ||
+            radius <= 0f)
+            radius = Gimmicks.HellGateGimmickLever.DefaultRadius;
+        return radius;
+    }
+
+    private void DrawEditGimmickRows()
+    {
+        bool leverOnly = SpawnAuthoringPackEdit.IsGimmickLeverKey(editKey);
+
+        bool open = DrawOptionToggle(
+            GUILayoutUtility.GetRect(PanelWidth - 40f, ExtraOptsRowHeight),
+            editGimmickOpen,
+            SpawnAuthoringLoc.T("gimmick.open"));
+        bool changed = open != editGimmickOpen;
+        editGimmickOpen = open;
+
+        GUILayout.BeginHorizontal();
+        GUI.enabled = !leverOnly;
+        bool lever = DrawOptionToggle(
+            GUILayoutUtility.GetRect(150f, ExtraOptsRowHeight, GUILayout.Width(150f)),
+            leverOnly || editGimmickLever,
+            SpawnAuthoringLoc.T("gimmick.lever"));
+        if (!leverOnly && lever != editGimmickLever)
+        {
+            editGimmickLever = lever;
+            changed = true;
+        }
+        GUI.enabled = leverOnly;
+        GUILayout.Label(SpawnAuthoringLoc.T("gimmick.radius"), panelLabelStyle, GUILayout.Width(60f));
+        editGimmickRadiusStr = GUILayout.TextField(editGimmickRadiusStr ?? "10", panelTextFieldStyle, GUILayout.Width(50f));
+        if (GUILayout.Button(SpawnAuthoringLoc.T("rot.apply"), panelButtonStyle, GUILayout.Width(44f)))
+            changed = true;
+        GUI.enabled = true;
+        GUILayout.EndHorizontal();
+
+        if (!leverOnly)
+        {
+            Rect row1 = GUILayoutUtility.GetRect(PanelWidth - 40f, ExtraOptsRowHeight);
+            GUILayout.Space(4f);
+            Rect row2 = GUILayoutUtility.GetRect(PanelWidth - 40f, ExtraOptsRowHeight);
+            if (DrawGuardRows(
+                    row1,
+                    row2,
+                    true,
+                    ref editGimmickGuardStr,
+                    ref editGimmickGuardHeightStr,
+                    ref editGimmickGuardSide,
+                    ref editGimmickAuto))
+                changed = true;
+        }
+
+        if (changed && editTarget != null)
+            SaveEdit();
+    }
+
+    private string BuildEditGimmickLine(float x, float y)
+    {
+        return SpawnAuthoringPackEdit.BuildGimmickLine(
+            x,
+            y,
+            editKey.Trim(),
+            editGimmickOpen,
+            editGimmickLever || SpawnAuthoringPackEdit.IsGimmickLeverKey(editKey),
+            ResolveEditGimmickRadius(),
+            editFlip,
+            editSortOffset,
+            editGimmickId,
+            SpawnAuthoringState.ParsePositiveOr(editGimmickGuardStr, 0f),
+            SpawnAuthoringState.ParsePositiveOr(editGimmickGuardHeightStr, Gimmicks.HellGateGimmickGuard.DefaultHeight),
+            editGimmickGuardSide,
+            editGimmickAuto ? editGimmickAutoRange : 0f);
+    }
+
+    private void ApplyEditGimmickLive(string line)
+    {
+        if (editTarget == null || string.IsNullOrEmpty(line))
+            return;
+        Gimmicks.HellGateGimmickSpawnOptions options =
+            HellGateSpawnLineFormat.ParseGimmickOptions(editKey.Trim(), line.Split(','), 4);
+        Gimmicks.HellGateGimmickRuntime.ApplyLiveEdit(editTarget.gameObject, options);
+    }
+
+    private static bool IsGimmickSourceLine(string raw)
+    {
+        if (string.IsNullOrEmpty(raw))
+            return false;
+        int comma = raw.IndexOf(',');
+        string cmd = comma > 0 ? raw.Substring(0, comma).Trim() : raw.Trim();
+        return HellGateSpawnLineFormat.IsGimmickShortcut(cmd);
+    }
+
+    /// <summary>
+    /// Sensor rows: guard length + height, then side (← ↔ →) and Auto. Returns true when the user committed a change.
+    /// </summary>
+    private bool DrawGuardRows(
+        Rect row1,
+        Rect row2,
+        bool showApply,
+        ref string guardStr,
+        ref string heightStr,
+        ref Gimmicks.HellGateGimmickGuardSide side,
+        ref bool auto)
+    {
+        bool changed = false;
+        GUI.Label(new Rect(row1.x, row1.y, 110f, row1.height), SpawnAuthoringLoc.T("gimmick.guard"), panelLabelStyle);
+        guardStr = GUI.TextField(new Rect(row1.x + 112f, row1.y, 56f, row1.height), guardStr ?? "0", panelTextFieldStyle);
+        GUI.Label(new Rect(row1.x + 176f, row1.y, 64f, row1.height), SpawnAuthoringLoc.T("gimmick.guardHeight"), panelLabelStyle);
+        heightStr = GUI.TextField(new Rect(row1.x + 242f, row1.y, 50f, row1.height), heightStr ?? "8", panelTextFieldStyle);
+        if (showApply &&
+            GUI.Button(new Rect(row1.x + 298f, row1.y, 44f, row1.height), SpawnAuthoringLoc.T("rot.apply"), panelButtonStyle))
+            changed = true;
+
+        GUI.Label(new Rect(row2.x, row2.y, 110f, row2.height), SpawnAuthoringLoc.T("gimmick.guardSide"), panelLabelStyle);
+        Gimmicks.HellGateGimmickGuardSide[] sides =
+        {
+            Gimmicks.HellGateGimmickGuardSide.Left,
+            Gimmicks.HellGateGimmickGuardSide.Both,
+            Gimmicks.HellGateGimmickGuardSide.Right
+        };
+        string[] labels = { "←", "↔", "→" };
+        for (int i = 0; i < sides.Length; i++)
+        {
+            Rect b = new Rect(row2.x + 112f + i * 48f, row2.y, 44f, row2.height);
+            Color prev = GUI.backgroundColor;
+            if (side == sides[i])
+                GUI.backgroundColor = new Color(0.95f, 0.85f, 0.35f, 1f);
+            if (GUI.Button(b, labels[i], panelButtonStyle) && side != sides[i])
+            {
+                side = sides[i];
+                changed = true;
+            }
+            GUI.backgroundColor = prev;
+        }
+
+        bool autoToggled = DrawOptionToggle(
+            new Rect(row2.x + 266f, row2.y, row2.width - 266f, row2.height),
+            auto,
+            SpawnAuthoringLoc.T("gimmick.auto"));
+        if (autoToggled != auto)
+        {
+            auto = autoToggled;
+            changed = true;
+        }
+
+        return changed;
+    }
+
+    private float DrawGimmickOptionsPanel(float x, float y)
+    {
+        EnsureRightPanelStyles();
+        float height = GimmickOptionsPanelHeight;
+        Rect box = new Rect(x, y, PanelWidth, height);
+        DrawChromePanel(box, SpawnAuthoringLoc.T("options.title"));
+        bool unusedCollapse = false;
+        DrawPanelHeaderTools(box, "help.gimmickOptions", collapse: false, ref unusedCollapse);
+
+        float ax = x + 12f;
+        float ay = y + 34f;
+        float rowW = PanelWidth - 24f;
+        bool leverOnly = SpawnAuthoringPackEdit.IsGimmickLeverKey(SpawnAuthoringState.PendingEnemyKey);
+
+        SpawnAuthoringState.PendingFlipX = DrawOptionToggle(
+            new Rect(ax, ay, rowW, ExtraOptsRowHeight),
+            SpawnAuthoringState.PendingFlipX,
+            SpawnAuthoringLoc.T("flip"));
+        ay += ExtraOptsRowHeight + 4f;
+
+        SpawnAuthoringState.PendingGimmickOpen = DrawOptionToggle(
+            new Rect(ax, ay, rowW, ExtraOptsRowHeight),
+            SpawnAuthoringState.PendingGimmickOpen,
+            SpawnAuthoringLoc.T("gimmick.open"));
+        ay += ExtraOptsRowHeight + 4f;
+
+        GUI.enabled = !leverOnly;
+        bool leverOn = leverOnly || SpawnAuthoringState.PendingGimmickLever;
+        bool leverToggled = DrawOptionToggle(
+            new Rect(ax, ay, 150f, ExtraOptsRowHeight),
+            leverOn,
+            SpawnAuthoringLoc.T("gimmick.lever"));
+        if (!leverOnly)
+            SpawnAuthoringState.PendingGimmickLever = leverToggled;
+        GUI.enabled = leverOnly;
+        GUI.Label(new Rect(ax + 160f, ay, 70f, ExtraOptsRowHeight), SpawnAuthoringLoc.T("gimmick.radius"), panelLabelStyle);
+        SpawnAuthoringState.PendingGimmickRadiusStr = GUI.TextField(
+            new Rect(ax + 232f, ay, 60f, ExtraOptsRowHeight),
+            SpawnAuthoringState.PendingGimmickRadiusStr ?? "10",
+            panelTextFieldStyle);
+        GUI.enabled = true;
+        ay += ExtraOptsRowHeight + 4f;
+
+        GUI.enabled = !leverOnly;
+        DrawGuardRows(
+            new Rect(ax, ay, rowW, ExtraOptsRowHeight),
+            new Rect(ax, ay + ExtraOptsRowHeight + 4f, rowW, ExtraOptsRowHeight),
+            false,
+            ref SpawnAuthoringState.PendingGimmickGuardStr,
+            ref SpawnAuthoringState.PendingGimmickGuardHeightStr,
+            ref SpawnAuthoringState.PendingGimmickGuardSide,
+            ref SpawnAuthoringState.PendingGimmickAuto);
+        GUI.enabled = true;
+        ay += (ExtraOptsRowHeight + 4f) * 2f;
+
+        string sortTok = SpawnAuthoringPackEdit.FormatSortToken(SpawnAuthoringState.PendingSortOffset)
+                         ?? "sort0";
+        GUI.Label(new Rect(ax, ay, 48f, ExtraOptsRowHeight), SpawnAuthoringLoc.T("sort"), panelLabelStyle);
+        if (GUI.Button(new Rect(ax + 50f, ay, 40f, ExtraOptsRowHeight), "-10", panelButtonStyle))
+            SpawnAuthoringState.PendingSortOffset -= 10;
+        string sortField = GUI.TextField(
+            new Rect(ax + 94f, ay, 64f, ExtraOptsRowHeight),
+            SpawnAuthoringState.PendingSortOffset.ToString(CultureInfo.InvariantCulture),
+            panelTextFieldStyle);
+        if (int.TryParse(sortField, NumberStyles.Integer, CultureInfo.InvariantCulture, out int pendingSort))
+            SpawnAuthoringState.PendingSortOffset = pendingSort;
+        if (GUI.Button(new Rect(ax + 162f, ay, 40f, ExtraOptsRowHeight), "+10", panelButtonStyle))
+            SpawnAuthoringState.PendingSortOffset += 10;
+        GUI.Label(new Rect(ax + 208f, ay, rowW - 208f, ExtraOptsRowHeight), sortTok, panelLabelStyle);
+
+        DrawPendingLineInOptions(box);
+        return y + height + 6f;
+    }
+
     private float DrawTrapOptionsPanel(float x, float y)
     {
         EnsureRightPanelStyles();
+        if (SpawnAuthoringState.GimmickPanelOpen)
+            return DrawGimmickOptionsPanel(x, y);
         bool hostage = SpawnAuthoringState.HostagePanelOpen;
         bool showRot = SpawnAuthoringState.CatalogAllowsRotation;
         float height = hostage ? TrapOptionsPanelHeightHostage : TrapOptionsPanelHeight;
@@ -1720,6 +2068,11 @@ internal sealed class SpawnAuthoringOverlayHost : MonoBehaviour
         for (int i = first; i < last; i++)
         {
             string key = cachedKeys[i];
+            if (i < cachedRowHeader.Length && cachedRowHeader[i])
+            {
+                GUI.Label(new Rect(0f, i * RowHeight, content.width, RowHeight - 2f), key, panelTitleStyle);
+                continue;
+            }
             bool unavailable = SpawnAuthoringEnemyCatalog.IsUnavailable(key);
             bool pending = !unavailable &&
                            string.Equals(key, SpawnAuthoringState.PendingEnemyKey, StringComparison.OrdinalIgnoreCase);
@@ -1897,6 +2250,8 @@ internal sealed class SpawnAuthoringOverlayHost : MonoBehaviour
             WarmHostageListCache();
         else if (SpawnAuthoringState.DecorPanelOpen)
             WarmDecorListCache();
+        else if (SpawnAuthoringState.GimmickPanelOpen)
+            WarmGimmickListCache();
         else if (SpawnAuthoringState.GoldPanelOpen)
             WarmGoldListCache();
         else if (SpawnAuthoringState.EventTrapPanelOpen)
@@ -2666,8 +3021,10 @@ internal sealed class SpawnAuthoringOverlayHost : MonoBehaviour
             h = EditPanelHeightHostage;
         else
             h = editIsTrap ? EditPanelHeightTrap : EditPanelHeight;
-        if (editIsTrap && !SpawnAuthoringState.KeyAllowsRotation(editKey))
+        if (editIsTrap && !editIsGimmick && !SpawnAuthoringState.KeyAllowsRotation(editKey))
             h -= ExtraOptsRowHeight * 2f + 8f;
+        if (editIsGimmick && !SpawnAuthoringPackEdit.IsGimmickLeverKey(editKey))
+            h += ExtraOptsRowHeight * 2f + 8f;
         if (editIsEventCore)
             h += ExtraOptsRowHeight * 2f + 12f;
         return h;
@@ -2787,7 +3144,9 @@ internal sealed class SpawnAuthoringOverlayHost : MonoBehaviour
         }
         else if (editIsTrap)
         {
-            if (SpawnAuthoringState.KeyAllowsRotation(editKey))
+            if (editIsGimmick)
+                DrawEditGimmickRows();
+            else if (SpawnAuthoringState.KeyAllowsRotation(editKey))
             {
                 GUILayout.Label(SpawnAuthoringLoc.T("rot"), panelLabelStyle);
                 GUILayout.BeginHorizontal();
@@ -2916,6 +3275,13 @@ internal sealed class SpawnAuthoringOverlayHost : MonoBehaviour
                 line = SpawnAuthoringPackEdit.BuildEventTrapLine(x, y, editKey.Trim());
             }
         }
+        else if (editIsGimmick)
+        {
+            if (int.TryParse(editSortStr, NumberStyles.Integer, CultureInfo.InvariantCulture, out int sortParsed))
+                editSortOffset = sortParsed;
+            editRotationZ = 0f;
+            line = BuildEditGimmickLine(x, y);
+        }
         else if (editIsTrap)
         {
             if (float.TryParse(editRotStr, NumberStyles.Float, CultureInfo.InvariantCulture, out float deg))
@@ -3017,7 +3383,9 @@ internal sealed class SpawnAuthoringOverlayHost : MonoBehaviour
         SpawnAuthoringState.SetLastClickSilent(x, y, SpawnAuthoringState.LastClickPackHint);
         if (!editIsTrap && !editIsGold && !editIsAnchor)
             ApplyEditEventCoreHostLive();
-        if (editIsTrap && !editIsAnchor && SpawnAuthoringState.KeyAllowsRotation(editKey))
+        if (editIsGimmick)
+            ApplyEditGimmickLive(line);
+        else if (editIsTrap && !editIsAnchor && SpawnAuthoringState.KeyAllowsRotation(editKey))
         {
             ApplyEditTrapRotationLive();
             SyncEditRotStr();
@@ -3204,19 +3572,26 @@ internal sealed class SpawnAuthoringOverlayHost : MonoBehaviour
             return TryDeleteRegion(out deleted, out status);
 
         SpawnManagedInstance target = editTarget;
+        GameObject locked = SpawnAuthoringWorldPick.Locked;
         if (target == null || !target.HasAuthoringLink)
         {
-            GameObject locked = SpawnAuthoringWorldPick.Locked;
             if (locked != null)
             {
-                target = locked.GetComponent<SpawnManagedInstance>()
-                    ?? locked.GetComponentInChildren<SpawnManagedInstance>(true);
+                GameObject root = SpawnAuthoringWorldPick.PromoteToManagedRoot(locked);
+                target = root.GetComponent<SpawnManagedInstance>()
+                    ?? root.GetComponentInChildren<SpawnManagedInstance>(true);
             }
         }
 
         if (target == null || !target.HasAuthoringLink)
         {
-            status = SpawnAuthoringLoc.T("status.selectPackSpawn");
+            if (locked != null && target == null)
+                status = SpawnAuthoringLoc.Tf("status.vanillaNoDelete", CleanPickName(locked.name));
+            else if (locked != null)
+                status = SpawnAuthoringLoc.Tf("status.unlinkedNoDelete", CleanPickName(locked.name));
+            else
+                status = SpawnAuthoringLoc.T("status.selectPackSpawn");
+            Plugin.Log?.LogInfo("[SPAWN AUTHORING] Delete skipped: " + status);
             return false;
         }
 
@@ -3235,6 +3610,8 @@ internal sealed class SpawnAuthoringOverlayHost : MonoBehaviour
         if (!SpawnAuthoringPackEdit.TryDeleteLinkedLine(target, out resolved, out removed, out err))
         {
             status = err ?? SpawnAuthoringLoc.T("status.deleteFailed");
+            Plugin.Log?.LogWarning(
+                "[SPAWN AUTHORING] Delete failed for '" + target.name + "' (" + target.AuthoringSourceLineRaw + "): " + status);
             return false;
         }
 
@@ -3248,6 +3625,14 @@ internal sealed class SpawnAuthoringOverlayHost : MonoBehaviour
         status = SpawnAuthoringLoc.Tf("status.deletedLine", resolved + 1,
                  string.IsNullOrEmpty(removed) ? "" : (": " + removed));
         return true;
+    }
+
+    private static string CleanPickName(string name)
+    {
+        if (string.IsNullOrEmpty(name))
+            return "?";
+        int clone = name.IndexOf("(Clone)", StringComparison.OrdinalIgnoreCase);
+        return clone >= 0 ? name.Substring(0, clone).Trim() : name;
     }
 
     private bool TryDeleteRegion(out int deleted, out string status)
@@ -3548,7 +3933,7 @@ internal sealed class SpawnAuthoringOverlayHost : MonoBehaviour
             !(host != null && host.editPanelOpen && host.editTarget == managed && isTrap && preferEditFields) &&
             !(isTrap && !SpawnAuthoringState.KeyAllowsRotation(key)))
         {
-            line = relocated;
+            line = isTrap ? SpawnAuthoringPackEdit.WithFlipAndRotation(relocated, flip, rot) : relocated;
         }
         else if (isGold)
         {
@@ -3571,6 +3956,10 @@ internal sealed class SpawnAuthoringOverlayHost : MonoBehaviour
             if (!SpawnAuthoringPackEdit.TryRelocateLine(managed.AuthoringSourceLineRaw, x, y, out line) ||
                 string.IsNullOrEmpty(line))
                 line = SpawnAuthoringPackEdit.BuildEventTrapLine(x, y, key.Trim());
+        }
+        else if (isTrap && IsGimmickSourceLine(managed.AuthoringSourceLineRaw))
+        {
+            SpawnAuthoringPackEdit.TryRebuildGimmickLine(managed.AuthoringSourceLineRaw, x, y, flip, sort, out line);
         }
         else if (isTrap)
         {

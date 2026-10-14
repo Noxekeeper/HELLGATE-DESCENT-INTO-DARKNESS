@@ -1,0 +1,24 @@
+﻿# HELLGATE Spawn — requiemboss (RequiemKnight arena past ForestOfRequiem)
+# Format: X,Y,EnemyType,Count  |  TRAP,Key,X,Y,Count  |  RANDOM,chance,X,Y,EnemyType,Count
+
+1720.11,-317.71,VagrantUndead|faction=undead,1
+1725.63,-317.53,VagrantUndead|faction=undead,1
+1729.71,-226.44,VagrantUndead|faction=undead,1
+DECOR,mob_death2,1718.03,-226.83,1
+GOLD,1718.60,-227.39,2-5,1
+DECOR,movebox_brk,1723.57,-227.09,1
+DECOR,movebox_brk,1723.54,-225.49,1
+DECOR,movebox_brk,1723.54,-223.73,1
+1735.49,-215.75,VagrantUndead|faction=undead,1
+1737.02,-215.52,VagrantUndead|faction=undead,1
+1739.53,-215.63,VagrantUndead|faction=undead,1
+1742.21,-214.91,PilgrimUndead|faction=undead,1
+1734.12,-215.49,VagrantUndead|faction=undead,1
+1743.78,-215.81,VagrantUndead|faction=undead,1
+GOLD,1741.39,-216.86,3-7,1
+GOLD,1742.61,-217.15,2-5,1
+GOLD,1744.12,-216.66,3-7,1
+GOLD,1740.31,-216.51,2-5,1
+GOLD,1738.26,-216.55,3-7,1
+GOLD,1744.86,-216.78,5-10,1
+GOLD,1735.54,-216.95,2-5,1

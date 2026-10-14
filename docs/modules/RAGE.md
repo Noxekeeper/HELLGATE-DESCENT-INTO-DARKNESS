@@ -13,6 +13,9 @@ Code: `Systems/Rage/` · Config: `[RageMode]`, `[RageVisualEffects]`, `[SlowMoVi
   shared `FactionBossDetection` — see `FACTIONS_AND_COMBAT_AI.md`).
 - `RageComboSystem` — kill/hit combo counting feeding rage gain.
 - Activation: `RageInputHandler` + `RageInputPatch` (manual trigger).
+  `RageSystem.IsPlayerDeadOrDying` blocks manual and QTE-escape activation
+  while a lethal-trap death clip runs, `playercon._Death` is set, or (manual
+  only) HP is at 0.
 - `RageResetOnGrabDownPatch` — rage resets when the player is grabbed down.
 - `RageActiveImmunityPatch` — optional immunity to grab/knockdown during the
   active rage window.

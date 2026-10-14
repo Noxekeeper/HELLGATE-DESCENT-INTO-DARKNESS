@@ -15,7 +15,7 @@ internal static class EventCoreLanguage
         {
             string raw = Plugin.hellGateLanguage?.Value;
             if (raw == null || raw.Trim().Length == 0)
-                return "Ru";
+                return "En";
 
             switch (raw.Trim().ToUpperInvariant())
             {
@@ -30,12 +30,12 @@ internal static class EventCoreLanguage
                 case "BR": return "Br";
                 case "ES": return "Es";
                 default:
-                    return "Ru";
+                    return "En";
             }
         }
         catch
         {
-            return "Ru";
+            return "En";
         }
     }
 
@@ -51,7 +51,7 @@ internal static class EventCoreLanguage
 
     private static readonly string[] StepFileLangFallbackOrder =
     {
-        "Ru", "En", "Jp", "Cn", "Kr", "Fr", "De", "Pt", "Br", "Es"
+        "En", "Ru", "Jp", "Cn", "Kr", "Fr", "De", "Pt", "Br", "Es"
     };
 
     /// <summary>

@@ -12,6 +12,7 @@ using NoREroMod.Patches.Enemy.WolfModCustom;
 using NoREroMod.Patches.Enemy.ButcherModCustom;
 using NoREroMod.Patches.Enemy.HellishTouzokuModCustom;
 using NoREroMod.Patches.Enemy.DemonGorotukiModCustom;
+using NoREroMod.Patches.Enemy.UndeadSkeletonsModCustom;
 using NoREroMod.Patches.Enemy.BossTouzokuCustom;
 using NoREroMod.Patches.Enemy.HeckGateEnemy;
 using NoREroMod.Systems.CombatAi.Factions;
@@ -310,7 +311,9 @@ internal static class SpawnConfigExecutor
                     continue;
 
                 string templateLog = logPrefix;
-                if (HellGateSpawnLineFormat.IsHostageShortcut(pt.Category))
+                if (pt.IsGimmick)
+                    templateLog = $"{logPrefix} [GIMMICK]";
+                else if (HellGateSpawnLineFormat.IsHostageShortcut(pt.Category))
                     templateLog = $"{logPrefix} [HOSTAGE]";
                 else if (HellGateSpawnLineFormat.IsDecorShortcut(pt.Category))
                     templateLog = $"{logPrefix} [DECOR]";
@@ -321,6 +324,8 @@ internal static class SpawnConfigExecutor
                         pt.FlipX, pt.RotationZ, pt.Depth, pt.FactionIdRaw, out GameObject firstSpawned))
                 {
                     totalSpawned += pt.Count;
+                    if (firstSpawned != null && pt.IsGimmick)
+                        Gimmicks.HellGateGimmickRuntime.ApplySpawnState(firstSpawned, pt.GimmickOptions, templateLog);
                     if (firstSpawned != null)
                         ApplyAuthoringLinkFromTemplate(firstSpawned, pt);
                 }
@@ -648,6 +653,9 @@ internal static class SpawnConfigExecutor
     {
         pt = default;
         var parts = line.Split(',');
+        if (parts.Length >= 4 && HellGateSpawnLineFormat.IsGimmickShortcut(parts[0].Trim()))
+            return TryParseGimmickSpawnPoint(parts, out pt);
+
         if (parts.Length < 5)
             return false;
 
@@ -732,6 +740,39 @@ internal static class SpawnConfigExecutor
         }
 
         return false;
+    }
+
+    /// <summary>GIMMICK line (format: <see cref="HellGateSpawnLineFormat.IsGimmickShortcut"/>); default state closed.</summary>
+    private static bool TryParseGimmickSpawnPoint(string[] parts, out TemplateSpawnPoint pt)
+    {
+        pt = default;
+        string key = parts[1].Trim();
+        if (string.IsNullOrEmpty(key))
+            return false;
+        if (!float.TryParse(parts[2].Trim(), out float x))
+            return false;
+        if (!float.TryParse(parts[3].Trim(), out float y))
+            return false;
+
+        Gimmicks.HellGateGimmickSpawnOptions options = HellGateSpawnLineFormat.ParseGimmickOptions(key, parts, 4);
+        HellGateSpawnLineFormat.ParseOptionalPlacementFields(
+            parts, 4, out bool flipX, out float rotationZ, out SpawnDepthSettings depth);
+
+        pt = new TemplateSpawnPoint
+        {
+            Category = "GIMMICK",
+            Key = Gimmicks.HellGateGimmickRuntime.ResolveTemplateKey(key, out _),
+            X = x,
+            Y = y,
+            Count = 1,
+            Chance = 1f,
+            FlipX = flipX,
+            RotationZ = rotationZ,
+            Depth = depth,
+            IsGimmick = true,
+            GimmickOptions = options
+        };
+        return true;
     }
 
     /// <summary>
@@ -1196,6 +1237,10 @@ internal static class SpawnConfigExecutor
             {
                 spawned.name = DemonGorotukiSkeletonLoader.SpawnKey;
                 DemonGorotukiSkeletonLoader.ApplySkeletons(spawned);
+            }
+            else if (UndeadSkeletonsLoader.TryGetVariant(enemyType, out UndeadSkeletonVariant undeadVariant))
+            {
+                UndeadSkeletonsLoader.ApplySkeleton(spawned, undeadVariant);
             }
 
             if (flipX)
@@ -1684,6 +1729,8 @@ internal static class SpawnConfigExecutor
         public float RotationZ;
         public SpawnDepthSettings Depth;
         public string FactionIdRaw;
+        public bool IsGimmick;
+        public Gimmicks.HellGateGimmickSpawnOptions GimmickOptions;
         public string AuthoringPackPath;
         public int AuthoringLineIndex;
         public string AuthoringSourceLineRaw;

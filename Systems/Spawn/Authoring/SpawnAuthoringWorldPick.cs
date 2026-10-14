@@ -122,6 +122,7 @@ internal static class SpawnAuthoringWorldPick
     /// <summary>Select a known instance (e.g. after Ctrl+V paste) without a mouse pick.</summary>
     internal static void ForceLock(GameObject go)
     {
+        go = PromoteToManagedRoot(go);
         locked = go;
         hovered = go;
         if (go != null)
@@ -222,6 +223,22 @@ internal static class SpawnAuthoringWorldPick
         float score;
         if (!TryScorePick(go, mouse, out score))
             return;
+
+        // Enemy-tagged children (WoodWana trap, enemy body parts) score tight, but the selection must be
+        // the HellGate spawn root that carries the pack link — otherwise delete / move / edit find nothing.
+        GameObject entry = PromoteToManagedRoot(go);
+        if (entry != go)
+        {
+            int existing = Candidates.IndexOf(entry);
+            if (existing >= 0)
+            {
+                if (score >= CandidateDistSq[existing])
+                    return;
+                Candidates.RemoveAt(existing);
+                CandidateDistSq.RemoveAt(existing);
+            }
+            go = entry;
+        }
 
         int insert = Candidates.Count;
         for (int c = 0; c < CandidateDistSq.Count; c++)
@@ -375,6 +392,27 @@ internal static class SpawnAuthoringWorldPick
             return true;
 
         return false;
+    }
+
+    /// <summary>Nearest ancestor spawn root with a pack link (else any HellGate spawn root); vanilla objects unchanged.</summary>
+    internal static GameObject PromoteToManagedRoot(GameObject go)
+    {
+        if (go == null || go.GetComponent<SpawnManagedInstance>() != null)
+            return go;
+
+        GameObject fallback = null;
+        for (Transform t = go.transform.parent; t != null; t = t.parent)
+        {
+            SpawnManagedInstance managed = t.GetComponent<SpawnManagedInstance>();
+            if (managed == null)
+                continue;
+            if (managed.HasAuthoringLink)
+                return t.gameObject;
+            if (fallback == null)
+                fallback = t.gameObject;
+        }
+
+        return fallback ?? go;
     }
 
     private static bool TightBoundsContains(Bounds b, Vector2 mouse, float tightness, float pad)

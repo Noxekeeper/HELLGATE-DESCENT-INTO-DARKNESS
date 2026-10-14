@@ -23,6 +23,7 @@ internal static class DoreiSpectatorIdlePatch
 
     private static readonly Dictionary<SinnerslaveCrossbow, GameObject> _fappingOverlays = new Dictionary<SinnerslaveCrossbow, GameObject>();
     private static readonly Dictionary<SinnerslaveCrossbow, float> _fappingEligibleSince = new Dictionary<SinnerslaveCrossbow, float>();
+    private static readonly Dictionary<SinnerslaveCrossbow, float> _facingBeforeSwap = new Dictionary<SinnerslaveCrossbow, float>();
 
     private const float MoveThreshold = 0.15f;
     private const float FappingActivationDelay = 5f;
@@ -35,7 +36,13 @@ internal static class DoreiSpectatorIdlePatch
     private static FieldInfo _eroflagField;
     private static FieldInfo _stateField;
 
+    private const int IDLE = 0;
+    private const int WALK = 2;
+    private const int RUN = 3;
+    private const int BLANK = 15;
     private const int EROWALK = 16;
+    private const float SpectatorRangeX = 15f;
+    private const float SpectatorRangeY = 3f;
 
     static DoreiSpectatorIdlePatch()
     {
@@ -78,26 +85,49 @@ internal static class DoreiSpectatorIdlePatch
             var rb = __instance.GetComponent<Rigidbody2D>();
             bool isMoving = rb != null && Mathf.Abs(rb.velocity.x) > MoveThreshold;
 
-            bool shouldUseFapping = playerInHScene && !thisDoreiInHScene && stateVal == EROWALK && !isMoving && !_escapeCooldown;
+            bool shouldUseFapping = playerInHScene && !thisDoreiInHScene && !isMoving && !_escapeCooldown &&
+                                    __instance.Hp > 0f && IsSpectatorEligible(__instance, comPlayer, stateVal);
 
             if (shouldUseFapping)
             {
                 if (!_fappingEligibleSince.ContainsKey(__instance))
+                {
                     _fappingEligibleSince[__instance] = Time.time;
+                    _facingBeforeSwap[__instance] = WorldFacing(__instance.transform);
+                }
                 if (Time.time - _fappingEligibleSince[__instance] < FappingActivationDelay)
                     return;
 
                 if (!_fappingOverlays.ContainsKey(__instance))
                     CreateOverlay(__instance, mySpine);
+                KeepOverlayFacing(__instance);
             }
             else
             {
                 _fappingEligibleSince.Remove(__instance);
+                _facingBeforeSwap.Remove(__instance);
                 if (_fappingOverlays.ContainsKey(__instance))
                     RemoveOverlay(__instance);
             }
         }
         catch (Exception) { }
+    }
+
+    /// <summary>
+    /// Vanilla EROWALK only starts while the player is down, and faction passive-wait fakes the
+    /// player distance during the H-scene, so Dorei that arrive later never reach it. Idle-like
+    /// states within real range count as spectators too; attack / damage / guard never do.
+    /// </summary>
+    private static bool IsSpectatorEligible(SinnerslaveCrossbow instance, playercon player, int stateVal)
+    {
+        if (stateVal == EROWALK)
+            return true;
+        if (stateVal != IDLE && stateVal != WALK && stateVal != RUN && stateVal != BLANK)
+            return false;
+
+        Vector3 self = instance.transform.position;
+        Vector3 target = player.transform.position;
+        return Mathf.Abs(target.x - self.x) < SpectatorRangeX && Mathf.Abs(target.y - self.y) < SpectatorRangeY;
     }
 
     private static void CreateOverlay(SinnerslaveCrossbow instance, SkeletonAnimation origSpine)
@@ -137,6 +167,31 @@ internal static class DoreiSpectatorIdlePatch
             origRenderer.enabled = false;
 
         _fappingOverlays[instance] = overlayGO;
+
+        float captured = _facingBeforeSwap.TryGetValue(instance, out var f) ? f : WorldFacing(instance.transform);
+        Plugin.Log?.LogInfo($"[DoreiSpectator] overlay on {instance.name}: facingAtEligible={captured:+0;-0} facingNow={WorldFacing(instance.transform):+0;-0} spineOnRoot={origSpine.transform == instance.transform}");
+    }
+
+    private static float WorldFacing(Transform t) => t.lossyScale.x < 0f ? -1f : 1f;
+
+    /// <summary>
+    /// Pins the overlay to the facing the Dorei had when it became a spectator; vanilla keeps
+    /// rewriting the root scale from faked passive-wait player positions while the overlay is up.
+    /// </summary>
+    private static void KeepOverlayFacing(SinnerslaveCrossbow instance)
+    {
+        if (!_fappingOverlays.TryGetValue(instance, out var overlay) || overlay == null) return;
+        if (!_facingBeforeSwap.TryGetValue(instance, out var wanted)) return;
+
+        Transform parent = overlay.transform.parent;
+        float parentSign = parent != null ? WorldFacing(parent) : 1f;
+        Vector3 s = overlay.transform.localScale;
+        float x = wanted * parentSign;
+        if (s.x != x)
+        {
+            s.x = x;
+            overlay.transform.localScale = s;
+        }
     }
 
     private static void RemoveOverlay(SinnerslaveCrossbow instance)
@@ -157,6 +212,7 @@ internal static class DoreiSpectatorIdlePatch
         }
 
         _fappingEligibleSince.Remove(instance);
+        _facingBeforeSwap.Remove(instance);
     }
 
     private static void RemoveAllOverlays()
@@ -165,6 +221,7 @@ internal static class DoreiSpectatorIdlePatch
         foreach (var key in keys)
             RemoveOverlay(key);
         _fappingEligibleSince.Clear();
+        _facingBeforeSwap.Clear();
     }
 
     [HarmonyPatch("OnDestroy")]
@@ -173,6 +230,7 @@ internal static class DoreiSpectatorIdlePatch
     {
         _fappingOverlays.Remove(__instance);
         _fappingEligibleSince.Remove(__instance);
+        _facingBeforeSwap.Remove(__instance);
     }
 
     [HarmonyPatch(typeof(StruggleSystem), "startGrabInvul")]

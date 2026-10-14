@@ -71,9 +71,10 @@ namespace NoREroMod.Patches.Enemy
         }
 
         [HarmonyPrefix]
-        private static bool Prefix(ref bool __result)
+        private static bool Prefix(ref bool __result, EnemyDate __0)
         {
-            if (Plugin.disableOriginalEliteGrab?.Value ?? true)
+            if ((Plugin.disableOriginalEliteGrab?.Value ?? true)
+                || NoREroMod.Patches.Enemy.UndeadSkeletonsModCustom.UndeadSkeletonsRuntime.IsUndeadSkeleton(__0))
             {
                 __result = false;
                 return false;

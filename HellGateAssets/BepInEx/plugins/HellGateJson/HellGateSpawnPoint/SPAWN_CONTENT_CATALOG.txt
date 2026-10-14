@@ -36,6 +36,9 @@
   OBJECT,<Key>,<x>,<y>,<Count>
   SPAWN,Trap|<Object>,<Key>,<x>,<y>,<Count>
 
+Механизмы сцены (ворота / складные лестницы) — см. раздел 8b:
+  GIMMICK,<Key>,<x>,<y>[,open|closed][,id=<name>][,lever][,radius=N][,guard=N]
+
 
 ## 2. Карты — какой файл спавна
 
@@ -68,7 +71,7 @@ F11 + ЛКМ — записать точку; F11 + ПКМ — hot-reload акт
 AngelStatue          BigMerman            Bigoni               BigoniBrother
 BlackOoze            biscord              Cocoonman            Coolmaiden
 CrawlingCreatures    CrawlingDead         CrawlingSisterKnight CrowInquisition
-Dorei                DifferentBigMerman   GobBigAlter          Goblin
+Dorei                GobBigAlter          Goblin
 GobRider             Gorotuki             HighInquisitionFemale Inquisition
 InquisitionRED       InquisitionWhite     IronmaidenDamage     Kakasi
 Kinoko               Librarian            Mafia                MafiaBossCustom
@@ -82,6 +85,7 @@ VagrantGuard         VagrantThrow         WaveSpike            WaveSpikeGuard
 Wolf                 WoodWana             (и др. из EnemyPrefabRegistry.cs)
 
 HellGate-кастом: biscord, MafiaBossCustom, BigoniBrother, HellishTouzokuBoss, HellishTouzokuAxe, HellishTouzokuSword, Wolf, Demon_gorotuki.
+Скелеты-нежить (только бой, без H-сцены; HP/скорость в cfg [UndeadSkeletons.<Key>]): BigMermanUndead, BigoniUndead, PilgrimUndead, VagrantUndead.
 
 
 ## 4. Фракции (pipe |faction=)
@@ -169,6 +173,54 @@ Runtime (после preload):  AVAILABLE_SPAWN_TEMPLATES_RUNTIME.txt  ← клю
 Пример:
   TRAP,BlackOozeTrapTypeB,100.0,-120.0,1
   OBJECT,woodwana,-100.0,-120.0,1
+
+
+## 8b. GIMMICK — ворота и складные лестницы (со стартовым состоянием)
+
+Формат (Count нет — одна штука на строку):
+  GIMMICK,<Key>,<x>,<y>[,state][,id=<name>][,lever][,guard=N][,guardh=N][,guardside=left|right][,flip|rot|near/far|sort±]
+
+state:  open | opened | down | lowered | active | on    → открыто / лестница опущена
+        closed | close | up | raised | inactive | off   → закрыто / поднята (по умолчанию)
+id=:    имя для будущих триггеров (remote / kill / event / key). Сейчас только сохраняется.
+lever:  встроенный рычаг сборки становится рабочим и управляет ТОЛЬКО своей лестницей.
+
+Зона охраны (рычаги на такой объект не действуют):
+guard=N:     длина зоны по X от точки спавна (0 = выключено). Открыто, пока в зоне нет
+             живых враждебных врагов; закрывается, пока хоть один враг внутри.
+guardh=N:    полная высота зоны, делится поровну вверх и вниз от точки спавна (по умолчанию 8).
+guardside=:  left | right — зона только в одну сторону; без токена — в обе.
+
+Авто (рычаги на такой объект тоже не действуют):
+auto / auto=N: открыто, только пока игрок ближе N по X от точки спавна (по умолчанию 2;
+             по вертикали — половина guardh). Игрок отошёл — закрывается.
+             Вместе с guard: враги в зоне держат механизм закрытым, даже если игрок рядом.
+
+Отдельный рычаг (всегда рабочий; X,Y = позиция рычага):
+  GIMMICK,lever,<x>,<y>[,radius=N][,open]
+radius=N: радиус (по умолчанию 10), считается до края видимого объекта. Управляет только
+        HellGate-воротами и лестницами без своего рычага (gate_fence*, ladder2) и без
+        зоны охраны. Ванильные объекты карты не затрагиваются.
+
+Ключи (секция [CACHED_GIMMICK] в AVAILABLE_SPAWN_TEMPLATES_RUNTIME.txt):
+  gate_fence                       — железные ворота (Spine: CLOSE / IDLE / OPEN / OPENIDLE)
+  gate_fence_pilgrimageentrance    — железные ворота, вариант 2 (PilgrimageEntrance)
+  ladder_nomal                     — деревянная лестница вверх + рычаг (Spine: NON / START / IDLE)
+  ladder_nomal_pilgrimageentrance  — каменная лестница вниз + рычаг (PilgrimageEntrance)
+  ladder2                          — лестница с мхом, без рычага (InsomniaTownC)
+  lever                            — отдельный рычаг
+  dooropen / ladder_on / gimmickladder_on — синонимы по имени ванильного скрипта (в F11 скрыты)
+Исходные сцены прописаны в SPAWN_TEMPLATE_WHITELIST.txt (подгружаются по требованию).
+
+Состояние НЕ пишется в сейв игры: ванильный скрипт (DoorOpen / ladder_on) у копии
+удаляется, его флаги _GimmickArraystage не трогаются. Без токена lever рычаг только
+показывает состояние (опущен, если open).
+
+Пример:
+  GIMMICK,gate_fence,100.0,-120.0,closed,id=gate_a
+  GIMMICK,ladder_nomal,120.0,-118.0,down,lever
+  GIMMICK,lever,95.0,-120.0,radius=10
+  GIMMICK,gate_fence,140.0,-120.0,open,guard=12,guardside=right
 
 
 ## 9. Быстрые тестовые строки (копировать в HellGateSpawn_FirstMap.txt)

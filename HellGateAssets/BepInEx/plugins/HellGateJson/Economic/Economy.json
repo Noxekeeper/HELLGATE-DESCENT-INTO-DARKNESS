@@ -49,8 +49,8 @@
     "DropFolder": "EconomicHG/Audio/NormalDrop",
     "PickupFolder": "EconomicHG/Audio/PickUpGold",
     "RandomizePickup": false,
-    "DropVolume": 0.85,
-    "PickupVolume": 1.0
+    "DropVolume": 0.1,
+    "PickupVolume": 0.10
   },
 
   "OnPlayerDeath": "DropPercent",

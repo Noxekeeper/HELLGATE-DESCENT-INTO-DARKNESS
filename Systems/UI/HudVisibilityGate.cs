@@ -21,6 +21,7 @@ namespace NoREroMod.Systems.UI;
 /// Consumers:
 ///  - <c>RageUISystem</c> (Rage label + GrabChance sub-label on the same canvas).
 ///  - <c>MindBrokenUIPatch</c> (with a small override for black-background H-scenes).
+///  - <c>FearUISystem</c> (Fear bar).
 ///  - <c>FactionReputationHud</c> (combined with the manual H toggle).
 ///  - <c>GoldHud</c> uses <see cref="IsNpcDiaryReaderOpen"/> only (gold stays visible in the
 ///    status/inventory menu, but hides while an NPC diary reader is open).
@@ -30,15 +31,12 @@ internal static class HudVisibilityGate
     private static UImng _cachedUImng;
     private static FieldInfo _menuCanvasField;
     private static FieldInfo _operationField;
-    private static bool _diaryReaderOpenCached;
-    private static float _lastDiaryLookupTime = -999f;
     // Scene.handle isn't available in this Unity version — buildIndex + name is
     // plenty to detect a scene change.
     private static int _lastSceneBuildIndex = int.MinValue;
     private static string _lastSceneName;
     private static float _lastLookupTime = -999f;
-    // Cheap enough — a few frames of staleness are acceptable and FindObjectOfType is costly.
-    private const float LookupIntervalSeconds = 0.2f;
+    private const float UImngRescanSeconds = 1f;
 
     /// <summary>
     /// True when the vanilla gameplay HUD is alive and rendering.
@@ -103,18 +101,6 @@ internal static class HudVisibilityGate
     }
 
     /// <summary>
-    /// Invalidate the cached reference — callers (scene loaders, tests) can force a refresh.
-    /// </summary>
-    public static void Invalidate()
-    {
-        _cachedUImng = null;
-        _lastSceneBuildIndex = int.MinValue;
-        _lastSceneName = null;
-        _lastLookupTime = -999f;
-        _lastDiaryLookupTime = -999f;
-    }
-
-    /// <summary>
     /// True while the player is paging through a vanilla NPC diary
     /// (<see cref="UIDialyClass"/> world pickup or <see cref="UIListDialyClass"/> at the base).
     /// </summary>
@@ -122,19 +108,20 @@ internal static class HudVisibilityGate
     {
         try
         {
-            Scene active = SceneManager.GetActiveScene();
-            if (string.Equals(active.name, "Gametitle", StringComparison.OrdinalIgnoreCase))
-                return false;
+            for (int i = DiaryReaders.Count - 1; i >= 0; i--)
+            {
+                MonoBehaviour reader = DiaryReaders[i];
+                if (reader == null)
+                {
+                    DiaryReaders.RemoveAt(i);
+                    continue;
+                }
 
-            float now = Time.unscaledTime;
-            if (now - _lastDiaryLookupTime < LookupIntervalSeconds)
-                return _diaryReaderOpenCached;
+                if (reader.isActiveAndEnabled)
+                    return true;
+            }
 
-            _lastDiaryLookupTime = now;
-            _diaryReaderOpenCached =
-                UnityEngine.Object.FindObjectOfType<UIDialyClass>() != null ||
-                UnityEngine.Object.FindObjectOfType<UIListDialyClass>() != null;
-            return _diaryReaderOpenCached;
+            return false;
         }
         catch
         {
@@ -142,32 +129,45 @@ internal static class HudVisibilityGate
         }
     }
 
+    // Filled from Start postfixes so the per-frame checks never scan the scene.
+    private static readonly System.Collections.Generic.List<MonoBehaviour> DiaryReaders =
+        new System.Collections.Generic.List<MonoBehaviour>();
+
+    internal static void RegisterDiaryReader(MonoBehaviour reader)
+    {
+        if (reader != null && !DiaryReaders.Contains(reader))
+            DiaryReaders.Add(reader);
+    }
+
+    internal static void RegisterUImng(UImng ui)
+    {
+        if (ui != null)
+            _cachedUImng = ui;
+    }
+
     private static UImng GetCachedUImng(Scene activeScene)
     {
-        // New scene → drop the cached reference from the previous scene's hierarchy.
         if (activeScene.buildIndex != _lastSceneBuildIndex ||
             !string.Equals(activeScene.name, _lastSceneName, StringComparison.Ordinal))
         {
-            _cachedUImng = null;
             _lastSceneBuildIndex = activeScene.buildIndex;
             _lastSceneName = activeScene.name;
-            _lastDiaryLookupTime = -999f;
-            _diaryReaderOpenCached = false;
-        }
-
-        // Cached object got destroyed (happens between scene loads) — clear it.
-        if (_cachedUImng == null)
-        {
             _lastLookupTime = -999f;
         }
 
-        float now = Time.unscaledTime;
-        if (_cachedUImng != null && (now - _lastLookupTime) < LookupIntervalSeconds)
+        // A live, active UImng (registered from its Start) needs no scene scan at all.
+        if (_cachedUImng != null && _cachedUImng.isActiveAndEnabled)
             return _cachedUImng;
 
-        // Refresh at most ~5x/sec; FindObjectOfType is expensive if called every frame.
-        _cachedUImng = UnityEngine.Object.FindObjectOfType<UImng>();
+        // Missing or hidden: rescan at most once per second; FindObjectOfType walks the whole scene.
+        float now = Time.unscaledTime;
+        if (now - _lastLookupTime < UImngRescanSeconds)
+            return _cachedUImng;
+
         _lastLookupTime = now;
+        UImng found = UnityEngine.Object.FindObjectOfType<UImng>();
+        if (found != null)
+            _cachedUImng = found;
         return _cachedUImng;
     }
 
@@ -205,4 +205,23 @@ internal static class HudVisibilityGate
 
         return false;
     }
+}
+
+[HarmonyPatch]
+internal static class HudVisibilityGateRegistryPatch
+{
+    [HarmonyPostfix]
+    [HarmonyPatch(typeof(UIDialyClass), "Start")]
+    private static void DiaryStart_Postfix(UIDialyClass __instance) =>
+        HudVisibilityGate.RegisterDiaryReader(__instance);
+
+    [HarmonyPostfix]
+    [HarmonyPatch(typeof(UIListDialyClass), "Start")]
+    private static void DiaryListStart_Postfix(UIListDialyClass __instance) =>
+        HudVisibilityGate.RegisterDiaryReader(__instance);
+
+    [HarmonyPostfix]
+    [HarmonyPatch(typeof(UImng), "Start")]
+    private static void UImngStart_Postfix(UImng __instance) =>
+        HudVisibilityGate.RegisterUImng(__instance);
 }

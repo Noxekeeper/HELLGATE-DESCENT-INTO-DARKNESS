@@ -13,6 +13,13 @@ internal static class SpawnSpikeKeys
         "trap_hari",
     };
 
+    /// <summary>Prison spiked wooden posts (Break[n]/wood_spike: three posts + TrapNormal).</summary>
+    internal static readonly string[] WoodSpikeKeys =
+    {
+        "woodspike",
+        "wood_spike",
+    };
+
     /// <summary>Light impact spike prefab (ImpactDamage on LightImpactNormal).</summary>
     internal static readonly string[] LightImpactKeys =
     {
@@ -48,6 +55,17 @@ internal static class SpawnSpikeKeys
         return ContainsKey(TrapHariKeys, SpawnTemplateCatalog.NormalizeTemplateKey(key));
     }
 
+    internal static bool IsWoodSpikeKey(string key)
+    {
+        if (string.IsNullOrEmpty(key))
+            return false;
+
+        return ContainsKey(WoodSpikeKeys, SpawnTemplateCatalog.NormalizeTemplateKey(key));
+    }
+
+    /// <summary>Static TrapNormal spikes that share floor/ceiling placement defaults.</summary>
+    internal static bool IsStaticSpikeKey(string key) => IsTrapHariKey(key) || IsWoodSpikeKey(key);
+
     internal static bool IsSpikeLikeKey(string key)
     {
         if (string.IsNullOrEmpty(key))
@@ -55,6 +73,7 @@ internal static class SpawnSpikeKeys
 
         string normalized = SpawnTemplateCatalog.NormalizeTemplateKey(key);
         return ContainsKey(TrapHariKeys, normalized) ||
+               ContainsKey(WoodSpikeKeys, normalized) ||
                ContainsKey(LightImpactKeys, normalized) ||
                ContainsKey(ImpactBoxKeys, normalized) ||
                ContainsKey(WaveSpikeKeys, normalized) ||

@@ -156,7 +156,13 @@ See also [FACTIONS_AND_COMBAT_AI.md](FACTIONS_AND_COMBAT_AI.md).
   `SpawnTrapAnchorLookup` (placement only; drivers are EventCore).
 - Placement utilities: `SpawnFlipUtility`, `SpawnRotationUtility`,
   `SpawnDepthUtility`.
-- `SpawnManagedInstance` — HellGate ownership + F11 pack-line link.
+- `SpawnManagedInstance` — HellGate ownership + F11 pack-line link; registers
+  with `SpawnSpineCuller` while enabled.
+- `SpawnSpineCuller` (`[Performance] CullOffscreenSpine`, default on) — every
+  0.2 s pauses the `SkeletonAnimation` components of HellGate spawns more than
+  one screen outside the camera (viewport distance > 2 half-screens, wake
+  below 1.5). AI, physics and colliders keep running; only components it
+  disabled are re-enabled.
 - `SpawnCacheWeatherGuard` — protects cached prefabs across weather changes.
 - `SpawnParentInitializeGate` — defers execution until the spawn parent is
   initialized.
@@ -228,7 +234,10 @@ can override pack `config.json` per anchor (`count`, `dist`, `sides`,
 `faction`, `max`, zone `r`, `delay`); empty fields keep the pack defaults.
 
 Place writes the pack line (`SpawnAuthoringPackEdit.BuildTrapLine` /
-`BuildEnemyLine`) and preview-spawns with an authoring link. F11 preview
+`BuildEnemyLine`) and preview-spawns with an authoring link. An EventTrap
+folder key (`etrap_*` from the EventTrap catalog) passed to `BuildEnemyLine`
+is always written as an `EVENTTRAP` line (faction kept as `,faction=`), never
+as an enemy XY line — those never spawn. F11 preview
 always attaches `EventCoreHost` when an event id is selected; `|ec_chance=`
 is applied on the next pack load / RMB reload.
 

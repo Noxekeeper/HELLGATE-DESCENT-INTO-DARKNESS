@@ -108,6 +108,8 @@ internal class MutudeMindbrokenTracker : MonoBehaviour
                 // Value is expressed in percent-per-second (e.g., 1 = +1% per second).
                 float perSecondPercent = Plugin.mutudeMindBrokenPerSecondPercent?.Value ?? 1f;
                 MindBrokenSystem.AddPercent((perSecondPercent / 100f) * dt, "mutude-ero");
+                NoREroMod.Systems.Fear.FearSystem.ApplyHPhaseFearMbRate(
+                    perSecondPercent, dt, "mutude-ero-fear");
                 break;
             }
         }

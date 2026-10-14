@@ -100,6 +100,17 @@ internal static class HSceneBlackBackgroundTriggerPatch
     }
 
     /// <summary>
+    /// Hostage / background rape loops run independently of the player and may pass through FIN
+    /// while the heroine is in an unrelated H-scene.
+    /// </summary>
+    private static bool IsAmbientHostageScene(Component component)
+    {
+        if (component == null) return false;
+        return component.GetComponentInParent<SpawnSlave>() != null
+            || component.GetComponentInParent<SlaveDialogOnly>() != null;
+    }
+
+    /// <summary>
     /// Get current animation via reflection (universal method).
     /// </summary>
     private static string GetCurrentAnimation(object instance, Spine.AnimationState state)
@@ -180,6 +191,11 @@ internal static class HSceneBlackBackgroundTriggerPatch
 
             // Safety guard: do not run black background logic for any tentacle-type H-scene.
             if (IsTentacleEnemyType(enemyType))
+            {
+                return;
+            }
+
+            if (IsAmbientHostageScene(__instance as Component))
             {
                 return;
             }
@@ -437,6 +453,7 @@ internal static class HSceneBlackBackgroundTriggerPatch
                     {
                         Plugin.Log?.LogWarning($"[HScene Black Background Trigger] CumDisplay error (Kakasi): {ex.Message}");
                     }
+                    try { NoREroMod.Systems.Fear.FearSystem.NotifyFinClimax("fin_kakasi"); } catch { }
                     return;
                 }
 
@@ -543,7 +560,9 @@ internal static class HSceneBlackBackgroundTriggerPatch
     /// </summary>
     static System.Collections.Generic.IEnumerable<MethodBase> TargetMethods()
     {
-        // List of class names for patching (use strings to avoid compilation errors)
+        // List of class names for patching (use strings to avoid compilation errors).
+        // Ambient hostage loops (Mob_rockinghorseERO, MesgakiEroSpine) must stay out: they cycle FIN on their own
+        // and would fire the black screen during any unrelated H-scene.
         string[] typeNames = new string[]
         {
             "kakashi_ero2",
@@ -596,7 +615,6 @@ internal static class HSceneBlackBackgroundTriggerPatch
             "KinokoERO",
             "LakeEroAradia",
             "LakeEroMng",
-            "MesgakiEroSpine",
             "SisterKnightEro",
             "SisterMobero",
             "SisterMobEroNoDialog",
@@ -628,7 +646,6 @@ internal static class HSceneBlackBackgroundTriggerPatch
             "GobRiderEROStart",
             "PunishmentEROTentacleIronmaiden",
             "PunishmentEROTentacleIronmaidenCandore",
-            "Mob_rockinghorseERO",
             "GobTrapEROMng",
             "CrawlingSisterKnightERO",
             "AngelStatue_ERO",
@@ -683,6 +700,11 @@ internal static class HSceneBlackBackgroundTriggerPatch
     {
         try
         {
+            if (Plugin.enableEnemyPass != null && !Plugin.enableEnemyPass.Value)
+            {
+                return;
+            }
+
             string eventName = e?.Data?.Name ?? e?.ToString() ?? string.Empty;
 
             // Get spine and se_count via reflection

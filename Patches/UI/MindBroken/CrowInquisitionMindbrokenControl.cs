@@ -86,12 +86,16 @@ internal class CrowInquisitionMindbrokenTracker : MonoBehaviour
         {
             float mbPerSecondIKI = Plugin.crowInquisitionMindBrokenPerSecondIKI?.Value ?? 6f;
             MindBrokenSystem.AddPercent((mbPerSecondIKI / 100f) * dt, "crow-inquisition-iki");
+            NoREroMod.Systems.Fear.FearSystem.ApplyHPhaseFearMbRate(
+                mbPerSecondIKI, dt, "crow-inquisition-iki-fear");
         }
 
         if (isIKI2Animation)
         {
             float mbPerSecondIKI2 = Plugin.crowInquisitionMindBrokenPerSecondIKI2?.Value ?? 3f;
             MindBrokenSystem.AddPercent((mbPerSecondIKI2 / 100f) * dt, "crow-inquisition-iki2");
+            NoREroMod.Systems.Fear.FearSystem.ApplyHPhaseFearMbRate(
+                mbPerSecondIKI2, dt, "crow-inquisition-iki2-fear");
         }
     }
 }

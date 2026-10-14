@@ -4,12 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using NoREroMod;
 using NoREroMod.Patches.UI.MindBroken;
+using NoREroMod.Systems.Fear;
 
 namespace NoREroMod.Patches.HellTraps;
 
 /// <summary>
-/// After Take Vengeance from lethal trap death: rise 2s, MindShock, peak flash, hold 3s,
-/// HeartBeat loop from rise start, decay to 15% in 3s, white flash only.
+/// After Take Vengeance from lethal trap or fatality death: rise 2s, MindShock, peak flash,
+/// hold 3s, HeartBeat loop from rise start, decay to 15% in 3s, white flash only.
+/// Fear trauma (peak → floor) starts in parallel when pending is consumed.
 /// </summary>
 internal static class LethalTrapVengeanceMindBrokenShock
 {
@@ -33,15 +35,12 @@ internal static class LethalTrapVengeanceMindBrokenShock
         if (_sequenceRunning)
             return;
 
-        if (!IsFeatureEnabled())
-        {
-            if (LethalTrapVengeanceShockSession.HasPending)
-                LethalTrapVengeanceShockSession.ClearPending();
-            return;
-        }
-
+        // Pending latch (trap or fatality) is the only gate — do not clear when traps are off.
         if (!LethalTrapVengeanceShockSession.TryConsumePending())
             return;
+
+        // Fear module: rise to peak fear, then settle to LethalRespawnFloor (default −30).
+        FearSystem.TryStartVengeanceTraumaSequence();
 
         if (!MindBrokenSystem.Enabled)
             return;
@@ -66,6 +65,7 @@ internal static class LethalTrapVengeanceMindBrokenShock
         StopGlow();
         HideOverlay();
         MindBrokenSystem.EndScriptedSequence(LethalTrapVengeanceShockTuning.FloorPercent);
+        FearSystem.StopVengeanceTraumaIfRunning();
     }
 
     private static IEnumerator ShockSequenceCoroutine()

@@ -39,6 +39,30 @@ internal static class SpawnTemplateWhitelist
         SpawnTemplateCatalog.CacheWhitelistedKeysFromResources(entries);
     }
 
+    /// <summary>
+    /// Only <c>key@sceneName</c> entries — each missing key costs a FindObjectsOfTypeAll scan, so the
+    /// full list on every boot/title scene load added tens of seconds.
+    /// </summary>
+    internal static void CacheForScene(string sceneName)
+    {
+        if (enabledConfig != null && !enabledConfig.Value)
+            return;
+        if (string.IsNullOrEmpty(sceneName))
+            return;
+        if (entries.Count == 0)
+            LoadFile();
+
+        var matching = new List<Entry>();
+        for (int i = 0; i < entries.Count; i++)
+        {
+            if (string.Equals(entries[i].SceneName, sceneName, StringComparison.OrdinalIgnoreCase))
+                matching.Add(entries[i]);
+        }
+
+        if (matching.Count > 0)
+            SpawnTemplateCatalog.CacheWhitelistedKeysFromResources(matching);
+    }
+
     private static void LoadFile()
     {
         entries.Clear();

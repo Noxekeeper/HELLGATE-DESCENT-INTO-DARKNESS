@@ -44,6 +44,7 @@ internal static class HellGateDifficultyPresetModule
     {
         "HellGateLanguage",
         "EnableGoreContent",
+        "HideCursorInGameplay",
         "ShowSplashScreenOnStartup",
         "FontFamilyWestern",
         "FontFamilyAsian",
@@ -390,6 +391,9 @@ internal static class HellGateDifficultyPresetModule
         if (Plugin.enableGoreContent != null)
             values["EnableGoreContent"] = Plugin.enableGoreContent.Value ? "true" : "false";
 
+        if (Plugin.hideCursorInGameplay != null)
+            values["HideCursorInGameplay"] = Plugin.hideCursorInGameplay.Value ? "true" : "false";
+
         if (Plugin.showSplashScreenOnStartup != null)
             values["ShowSplashScreenOnStartup"] = Plugin.showSplashScreenOnStartup.Value ? "true" : "false";
 
@@ -661,7 +665,8 @@ internal static class HellGateDifficultyPresetModule
 
     private static string UpsertKeyLine(string sectionBody, string key, string value)
     {
-        string pattern = @"(?m)^(" + Regex.Escape(key) + @"\s*=\s*).*$";
+        // [ \t]* not \s*: an empty value ("Key = ") must not swallow the newline and overwrite the next line.
+        string pattern = @"(?m)^(" + Regex.Escape(key) + @"[ \t]*=[ \t]*)[^\r\n]*";
         if (Regex.IsMatch(sectionBody, pattern))
             return Regex.Replace(sectionBody, pattern, m => m.Groups[1].Value + value);
 

@@ -277,6 +277,104 @@ internal static class SpawnAuthoringPreviewSpawn
         return true;
     }
 
+    internal static bool TryConfirmGimmickSpawnAndSave(out string status)
+    {
+        status = null;
+        string key = SpawnAuthoringState.SelectedEnemyKey;
+        if (string.IsNullOrEmpty(key))
+        {
+            status = SpawnAuthoringLoc.T("status.noConfirmedTrap");
+            return false;
+        }
+
+        if (!SpawnAuthoringState.HasLastClick)
+        {
+            status = SpawnAuthoringLoc.T("status.needPoint");
+            return false;
+        }
+
+        bool flipX = SpawnAuthoringState.SelectedFlipX;
+        int sortOffset = SpawnAuthoringState.SelectedSortOffset;
+        string line = SpawnAuthoringState.BuildPendingGimmickLine(
+            SpawnAuthoringState.LastClickX, SpawnAuthoringState.LastClickY, key, flipX);
+
+        if (!SpawnAuthoringPackWriter.TryAppendRawLine(line, out string packPath, out int lineIndex, out string writeErr))
+        {
+            status = writeErr ?? SpawnAuthoringLoc.T("status.packWriteFailed");
+            return false;
+        }
+
+        SpawnAuthoringUndo.RecordAppend(
+            packPath,
+            lineIndex,
+            line,
+            key,
+            SpawnAuthoringState.LastClickX,
+            SpawnAuthoringState.LastClickY,
+            string.Empty,
+            1f,
+            flipX,
+            false);
+
+        string fileName = System.IO.Path.GetFileName(packPath);
+        SpawnAuthoringState.LastClickPackHint = fileName;
+
+        const string logPrefix = "[SPAWN AUTHORING] [GIMMICK]";
+        Vector2 pos = new Vector2(SpawnAuthoringState.LastClickX, SpawnAuthoringState.LastClickY);
+        string sceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+        string templateKey = Gimmicks.HellGateGimmickRuntime.ResolveTemplateKey(key, out _);
+        bool spawnedOk = SpawnTemplateCatalog.TrySpawn(
+            "GIMMICK",
+            templateKey,
+            pos,
+            1,
+            logPrefix,
+            sceneName,
+            flipX,
+            0f,
+            SpawnAuthoringPackEdit.ToDepthSettings(sortOffset),
+            null,
+            out GameObject spawned);
+
+        if (spawnedOk && spawned != null)
+        {
+            Gimmicks.HellGateGimmickSpawnOptions options =
+                HellGateSpawnLineFormat.ParseGimmickOptions(key, line.Split(','), 4);
+            Gimmicks.HellGateGimmickRuntime.ApplySpawnState(spawned, options, logPrefix);
+        }
+
+        if (spawned != null)
+        {
+            SpawnConfigExecutor.ApplyAuthoringLink(
+                spawned,
+                packPath,
+                lineIndex,
+                line,
+                pos.x,
+                pos.y,
+                key,
+                null,
+                1f,
+                1,
+                flipX,
+                false,
+                0f,
+                sortOffset,
+                true);
+        }
+
+        if (!spawnedOk || spawned == null)
+        {
+            status = SpawnAuthoringLoc.Tf("status.savedTemplateNotReady", fileName);
+            Plugin.Log?.LogWarning(logPrefix + " Pack saved (" + line + ") but preview spawn failed.");
+            return true;
+        }
+
+        status = SpawnAuthoringLoc.Tf("status.savedSpawnedTrap", " [" + line + "]", fileName);
+        Plugin.Log?.LogInfo(logPrefix + " Saved+spawned: " + line + " → " + fileName);
+        return true;
+    }
+
     internal static bool TryConfirmGoldSpawnAndSave(out string status)
     {
         status = null;

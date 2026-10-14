@@ -16,7 +16,8 @@ Notes:
 - Values are read once at startup unless the owning module documents
   hot-reload behavior.
 
-Sections: **69** · Settings: **517**
+Sections: **105** · Settings: **1019** (live cfg, 1.2.7; per-profile
+`EnemyFatality.*` / `UndeadSkeletons.*` sections are summarized, not listed key by key)
 
 ## Section index
 
@@ -32,6 +33,7 @@ Sections: **69** · Settings: **517**
 - [`[CrowInquisitionMindBroken]`](#crowinquisitionmindbroken) — 2 settings
 - [`[CumDisplay]`](#cumdisplay) — 8 settings
 - [`[DeadArmor]`](#deadarmor) — 22 settings
+- [`[Diagnostics]`](#diagnostics) — 2 settings (dev)
 - [`[DialogueEventProcessor]`](#dialogueeventprocessor) — 1 settings
 - [`[DialogueFonts]`](#dialoguefonts) — 16 settings
 - [`[DoreiMod]`](#doreimod) — 2 settings
@@ -42,13 +44,13 @@ Sections: **69** · Settings: **517**
 - [`[EnemyPass]`](#enemypass) — 7 settings
 - [`[Ero]`](#ero) — 28 settings
 - [`[EventCore]`](#eventcore) — 10 settings
+- [`[FearSystem]`](#fearsystem) — 40 settings
 - [`[FieldOfView]`](#fieldofview) — 3 settings
 - [`[Fonts]`](#fonts) — 4 settings
-- [`[General]`](#general) — 3 settings
+- [`[General]`](#general) — 4 settings
 - [`[GoblinHardcore]`](#goblinhardcore) — 1 settings
 - [`[GrabSystemNG]`](#grabsystemng) — 14 settings
 - [`[GrabThreats]`](#grabthreats) — 2 settings
-- [`[HandoffSystem]`](#handoffsystem) — 3 settings
 - [`[Hardcore]`](#hardcore) — 1 settings
 - [`[HellishTouzoku]`](#hellishtouzoku) — 2 settings
 - [`[HellTraps]`](#helltraps) — 10 settings
@@ -60,6 +62,7 @@ Sections: **69** · Settings: **517**
 - [`[MindBrokenRecovery]`](#mindbrokenrecovery) — 5 settings
 - [`[MindBrokenVisualEffects]`](#mindbrokenvisualeffects) — 26 settings
 - [`[MutudeMindBroken]`](#mutudemindbroken) — 1 settings
+- [`[Performance]`](#performance) — 1 settings
 - [`[PilgrimMindBroken]`](#pilgrimmindbroken) — 1 settings
 - [`[PlayerVisualFixes]`](#playervisualfixes) — 2 settings
 - [`[PleasureStatus]`](#pleasurestatus) — 18 settings
@@ -86,7 +89,9 @@ Sections: **69** · Settings: **517**
 - [`[SpawnTemplates]`](#spawntemplates) — 10 settings
 - [`[StruggleDifficulty]`](#struggledifficulty) — 2 settings
 - [`[TakeVengeance]`](#takevengeance) — 9 settings
+- [`[TitleMusic]`](#titlemusic) — 1 settings
 - [`[TouzokuAggression]`](#touzokuaggression) — 2 settings
+- [`[UndeadSkeletons]` / `[UndeadSkeletons.<Key>]`](#undeadskeletons) — 1 + 4 per variant
 - [`[VengeanceStrike]`](#vengeancestrike) — 29 settings
 - [`[VisualIndicators]`](#visualindicators) — 5 settings
 - [`[WeaponAnimations]`](#weaponanimations) — 2 settings
@@ -264,7 +269,7 @@ it is not in the shared bisect pool.
 | `ClipPath` | String | (empty) | Force one PNG/SFX folder relative to game root. Empty = pool pick among enabled clips using `[EnemyFatality.Clip.*]`. |
 | `BoneName` | String | `body` | Aradia Spine bone used as the clip spawn point (world position sampled once; clip does not follow the bone). |
 | `ClipOffsetY` | Single | `0` | World Y offset added to the bone spawn (positive = higher). Default `1.5` for `[EnemyFatality.CrawlingCreatures]` / StillAlive; `0` for other profiles. |
-| `FallDistance` | Single | `0` | How far the clip drops downward in world units. `0` = stay at spawn (bone) position. |
+| `FallDistance` | Single | `0.7` / `0` | How far the clip drops downward in world units. Default `0.7` when no spawn offset; `0` when `ClipOffsetY` / `ClipOffsetAlongFacing` is already set (StillAlive / HeavyCritical). `0` = stay at spawn. |
 | `FallSpeedMultiplier` | Single | `4.5` | Clip fall speed vs animation length. `1` = falls over the whole clip; `4.5` = reaches bottom in ~1/4.5 of the clip. |
 | `FrameSeconds` | Single | `0.0625` | Seconds per PNG frame (scaled time). Default 0.0625 = 16 FPS. Last frame holds until Take Vengeance / respawn. |
 | `SortingOrder` | Int32 | `80` | Fallback draw order if the player has no MeshRenderer. Normally uses player mesh order + 20. |
@@ -295,6 +300,16 @@ from `EnemyFatalityBoundProfile.Bind`):
 `[EnemyFatality.Snailshell]`, `[EnemyFatality.Pilgrim]`,
 `[EnemyFatality.Sisterknight]`, `[EnemyFatality.SkeltonOoze]`
 (HeavyCritical = magic projectile only; Tyoukyoushi excluded).
+
+## Diagnostics
+
+Dev tooling; **both must stay `false` in shipped configs**. Details:
+[DIAGNOSTICS.md](DIAGNOSTICS.md#performance-log--diagnostics-cfg).
+
+| Key | Type | Default | Description |
+|-----|------|---------|-------------|
+| `PerfLog` | Boolean | `false` | Dev: every 5 s log average / worst frame time, hitches, GC collections and enemy / Spine / HellGate spawn counts. |
+| `PerfProfileMethods` | Boolean | `false` | Dev: with PerfLog, time every Harmony-patched method and Spine updates and log the top costs every 5 s. Adds overhead; keep off for normal play. |
 
 ## DialogueEventProcessor
 
@@ -390,6 +405,24 @@ from `EnemyFatalityBoundProfile.Bind`):
 | `EventTrapEncountersEnable` | Boolean | `true` | EventTrap: non-modal coordinate-zone suspicion + knockdown ambush. Requires event_trap_registry.json (preferred) or legacy ambient_spike_registry.json under HellGateJson/EventCore/. System options: EventCore/_shared/<eventFolder>/config.json when present (otherwise per-language EventCore/<Lang>/<eventFolder>/config.json). Phrases: EventCore/<Lang>/<eventFolder>/phrases.json with fallback order En, Ru, Jp, Cn, Kr, Fr, De, Pt, Br, Es. |
 | `ReinforcementEncountersEnable` | Boolean | `true` | Reinforcement: knockdown-triggered extra spawns when the player is within triggerRadiusFromAnchor of a REINFORCEMENT,folder,x,y anchor. Optional suspicion lines (phrasesFromEventFolder). Requires HellGateJson/EventCore/reinforcement_registry.json and EventCore/_shared/<folder>/config.json. |
 
+## FearSystem
+
+Fear / Morale axis (−100 panic … +100 confidence). Main switches below; the
+remaining tuning keys (aura falloff, per-action Morale deltas, panic /
+confidence bands, respawn values, combat-effect strengths) carry their
+descriptions in the cfg. Module reference: [FEAR.md](../modules/FEAR.md).
+Per-enemy values: `HellGateJson/Fear/FearEnemies.json`.
+
+| Key | Type | Default | Description |
+|-----|------|---------|-------------|
+| `Enable` | Boolean | `true` | Master kill-switch for Fear/Morale. When false: no aura tick, no combat deltas, no bar, no save writes. |
+| `ShowBar` | Boolean | `true` | Show bipolar Fear/Confidence bar (bottom-center). |
+| `EnableCombatEffects` | Boolean | `true` | Soft combat modifiers in panic/confidence bands (dash cost, idle SP regen, Struggle/QTE SP mult). |
+| `LethalRespawnFloor` | Single | `-30` | After lethal-trap / fatality Take Vengeance trauma: Morale rises to −100, then settles to this floor. |
+| `NormalRespawnMorale` | Single | `-10` | After ordinary death Take Vengeance: Morale is set to this value. |
+| `HeartbeatEnable` | Boolean | `true` | Play HeartBeat.wav from sources/HellGate_sources/Fear (fallback CustomDeath) while afraid. |
+| `HeartbeatVolume` | Single | `0.85` | Fear HeartBeat volume (0 = mute, 1 = full). |
+
 ## FieldOfView
 
 | Key | Type | Default | Description |
@@ -413,6 +446,7 @@ from `EnemyFatalityBoundProfile.Bind`):
 |-----|------|---------|-------------|
 | `ShowSplashScreenOnStartup` | Boolean | `true` | Show HELLGATE splash screen on game startup. Set to false to skip splash screen. |
 | `EnableGoreContent` | Boolean | `true` | Enable HellGate gore presentation: DeadArmor death PNG clips, CustomDeath lethal traps, and EnemyFatality combat fatalities (e.g. White Inquisitor). Toggled from splash **Options** (HellGate Gore Content). Armored grab-throw is separate (`[DeadArmor] ArmoredGrabThrowEnable`). |
+| `HideCursorInGameplay` | Boolean | `true` | Hide the mouse cursor during combat and H-scenes. Stays visible on the title screen, in the pause menu, shops / altar (incl. teleport list) / chests, dialogs, the defeat menu and the F11 editor. Splash **Options** toggle (live; preserved across presets). |
 | `HellGateLanguage` | String | (empty) | Selected language for HELLGATE mod. Available: RU, EN, JP, CN, KR, FR, DE, PT, BR, ES. Set on first-boot flag picker or from splash **Options → Language** (saves + quits; relaunch required). |
 
 ## GoblinHardcore
@@ -446,14 +480,6 @@ from `EnemyFatalityBoundProfile.Bind`):
 |-----|------|---------|-------------|
 | `Enable` | Boolean | `true` | Master switch: enable grab threat system (text phrases and/or sounds when enemies are about to grab). When false, disables both text and threat sounds from this system. |
 | `EnableThreatText` | Boolean | `true` | Show threat text phrases above enemies. Can be toggled separately from threat sounds (e.g. text only, sound only, or both) |
-
-## HandoffSystem
-
-| Key | Type | Default | Description |
-|-----|------|---------|-------------|
-| `EnableEnemyHandoff` | Boolean | `true` | Enables enemy handoff system - enemies will pass around the player after completing animation cycles |
-| `HandoffCooldownTime` | Single | `2` | Time in seconds between handoffs to prevent spam |
-| `EnableHandoffVisualEffects` | Boolean | `true` | Shows visual effects during handoffs |
 
 ## Hardcore
 
@@ -600,6 +626,12 @@ see [HELL_TRAPS.md](../modules/HELL_TRAPS.md)). No separate cfg toggle.
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | `MindBrokenPerSecondPercent` | Single | `1` | MindBroken growth while Mutude DRINK/ERO3/ERO4/ERO5 animations are active (1 = +1% per second) |
+
+## Performance
+
+| Key | Type | Default | Description |
+|-----|------|---------|-------------|
+| `CullOffscreenSpine` | Boolean | `true` | Pause Spine animation of HellGate-spawned enemies, hostages and decor far outside the camera (big FPS gain on dense packs). AI and physics keep running. Live toggle. See [SPAWN.md](../modules/SPAWN.md). |
 
 ## PilgrimMindBroken
 
@@ -975,12 +1007,37 @@ Requires `[QTE] EnableQTESystem`. Full behavior:
 | `LethalTrapShockMindShockVolume` | Single | `1` | Volume for MindShock.wav during lethal-trap vengeance shock (0 = mute, 1 = full). |
 | `LethalTrapShockHeartBeatVolume` | Single | `1` | Volume for HeartBeat.wav (vengeance shock loop + lethal trap proximity thoughts; 0 = mute, 1 = full). |
 
+## TitleMusic
+
+| Key | Type | Default | Description |
+|-----|------|---------|-------------|
+| `Enable` | Boolean | `true` | Replace the main menu theme with random .wav/.ogg tracks from sources/HellGate_sources/Audio/Main (vanilla theme if the folder is empty). |
+
 ## TouzokuAggression
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | `SpeedMultiplier` | Single | `1.5` | Touzoku speed multiplier (1.0-3.0). Affects movement and attack speed. 1.5 = +50% speed. |
 | `AttackRangeMultiplier` | Single | `1.4` | Touzoku attack range multiplier (1.0-2.5). Affects attack distance. 1.4 = +40% range. |
+
+## UndeadSkeletons
+
+| Key | Type | Default | Description |
+|-----|------|---------|-------------|
+| `AssetsPath` | String | (empty) | Path to UndeadSkeletons Spine folder (relative to game root). Empty = sources/HellGate_sources/Enemies/UndeadSkeletons. One subfolder per spawn key with `<Key>.json/.atlas/.png`. |
+
+Per variant — `[UndeadSkeletons.BigMermanUndead]`, `[UndeadSkeletons.BigoniUndead]`,
+`[UndeadSkeletons.PilgrimUndead]`, `[UndeadSkeletons.VagrantUndead]`
+(values relative to the vanilla base enemy):
+
+| Key | Type | Default | Description |
+|-----|------|---------|-------------|
+| `HpMultiplier` | Single | `0.25` | HP relative to the vanilla base enemy (after game difficulty). Ignored when `MaxHp` > 0. |
+| `MaxHp` | Single | `0` | Fixed max HP; overrides `HpMultiplier`. 0 = use `HpMultiplier`. |
+| `MoveSpeedMultiplier` | Single | `1` | Walk/run and attack-lunge speed (`EnemyDate.enmMovespeed`). Applied on spawn. |
+| `AnimSpeedMultiplier` | Single | `1` | Spine playback speed (attack wind-up and all combat animations). Applied every frame. |
+
+Module: [CUSTOM_ENEMIES.md](../modules/CUSTOM_ENEMIES.md).
 
 ## VengeanceStrike
 

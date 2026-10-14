@@ -26,6 +26,8 @@ internal static class HellGateSplashOptionsMenu
     private static bool _goreSyncing;
     private static Toggle _simpleQteToggle;
     private static bool _simpleQteSyncing;
+    private static Toggle _hideCursorToggle;
+    private static bool _hideCursorSyncing;
     private static Image _easyBtnBg;
     private static Image _mediumBtnBg;
     private static Image _hardBtnBg;
@@ -55,6 +57,8 @@ internal static class HellGateSplashOptionsMenu
         _goreSyncing = false;
         _simpleQteToggle = null;
         _simpleQteSyncing = false;
+        _hideCursorToggle = null;
+        _hideCursorSyncing = false;
         _easyBtnBg = null;
         _mediumBtnBg = null;
         _hardBtnBg = null;
@@ -183,6 +187,8 @@ internal static class HellGateSplashOptionsMenu
         y = PlaceGoreRow(_panelRoot, font, white, y);
         y -= 4f;
         y = PlaceSimpleQteRow(_panelRoot, font, white, y);
+        y -= 4f;
+        y = PlaceHideCursorRow(_panelRoot, font, white, y);
         y -= 8f;
         y = PlaceDifficultyBlock(_panelRoot, font, white, y);
         y -= 6f;
@@ -419,11 +425,61 @@ internal static class HellGateSplashOptionsMenu
 
     private static float PlaceSimpleQteRow(GameObject panel, Font font, Sprite white, float topY)
     {
+        topY = PlaceCheckboxRow(
+            panel, font, white, topY,
+            "SimpleQte",
+            SplashScreenUILabels.GetSimpleQteLabel(_languageCode),
+            Plugin.qteFreeStruggleEnable != null && Plugin.qteFreeStruggleEnable.Value,
+            out _simpleQteToggle);
+
+        _simpleQteToggle.onValueChanged.AddListener(isOn =>
+        {
+            if (_simpleQteSyncing)
+                return;
+
+            if (Plugin.qteFreeStruggleEnable != null)
+                Plugin.qteFreeStruggleEnable.Value = isOn;
+        });
+
+        return topY;
+    }
+
+    private static float PlaceHideCursorRow(GameObject panel, Font font, Sprite white, float topY)
+    {
+        topY = PlaceCheckboxRow(
+            panel, font, white, topY,
+            "HideCursor",
+            SplashScreenUILabels.GetHideCursorLabel(_languageCode),
+            Plugin.IsHideCursorInGameplayEnabled,
+            out _hideCursorToggle);
+
+        _hideCursorToggle.onValueChanged.AddListener(isOn =>
+        {
+            if (_hideCursorSyncing)
+                return;
+
+            if (Plugin.hideCursorInGameplay != null)
+                Plugin.hideCursorInGameplay.Value = isOn;
+        });
+
+        return topY;
+    }
+
+    private static float PlaceCheckboxRow(
+        GameObject panel,
+        Font font,
+        Sprite white,
+        float topY,
+        string name,
+        string labelText,
+        bool isOn,
+        out Toggle toggle)
+    {
         const float checkSize = 28f;
         const float rowH = 34f;
         const float gap = 10f;
 
-        GameObject row = new GameObject("SimpleQteRow");
+        GameObject row = new GameObject(name + "Row");
         row.transform.SetParent(panel.transform, false);
         RectTransform rowRt = row.AddComponent<RectTransform>();
         rowRt.anchorMin = new Vector2(0.5f, 1f);
@@ -434,8 +490,8 @@ internal static class HellGateSplashOptionsMenu
 
         GameObject toggleObj = new GameObject("Toggle");
         toggleObj.transform.SetParent(row.transform, false);
-        _simpleQteToggle = toggleObj.AddComponent<Toggle>();
-        _simpleQteToggle.isOn = Plugin.qteFreeStruggleEnable != null && Plugin.qteFreeStruggleEnable.Value;
+        toggle = toggleObj.AddComponent<Toggle>();
+        toggle.isOn = isOn;
         RectTransform toggleRt = toggleObj.GetComponent<RectTransform>();
         toggleRt.anchorMin = new Vector2(0f, 0.5f);
         toggleRt.anchorMax = new Vector2(0f, 0.5f);
@@ -460,13 +516,13 @@ internal static class HellGateSplashOptionsMenu
         checkRt.offsetMin = Vector2.zero;
         checkRt.offsetMax = Vector2.zero;
 
-        _simpleQteToggle.targetGraphic = bg;
-        _simpleQteToggle.graphic = check;
+        toggle.targetGraphic = bg;
+        toggle.graphic = check;
 
-        GameObject labelObj = new GameObject("SimpleQteLabel_XUAIGNORE");
+        GameObject labelObj = new GameObject(name + "Label_XUAIGNORE");
         labelObj.transform.SetParent(row.transform, false);
         Text label = labelObj.AddComponent<Text>();
-        label.text = SplashScreenUILabels.GetSimpleQteLabel(_languageCode);
+        label.text = labelText;
         label.font = font;
         label.fontSize = 20;
         label.fontStyle = FontStyle.Bold;
@@ -486,15 +542,6 @@ internal static class HellGateSplashOptionsMenu
         float startX = (560f - contentW) * 0.5f;
         toggleRt.anchoredPosition = new Vector2(startX, 0f);
         labelRt.anchoredPosition = new Vector2(startX + checkSize + gap, 0f);
-
-        _simpleQteToggle.onValueChanged.AddListener(isOn =>
-        {
-            if (_simpleQteSyncing)
-                return;
-
-            if (Plugin.qteFreeStruggleEnable != null)
-                Plugin.qteFreeStruggleEnable.Value = isOn;
-        });
 
         return topY - rowH;
     }

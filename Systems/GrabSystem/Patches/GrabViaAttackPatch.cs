@@ -4,6 +4,7 @@ using System.Reflection;
 using HarmonyLib;
 using NoREroMod;
 using NoREroMod.Patches.Enemy.BossTouzokuCustom;
+using NoREroMod.Systems.Fear;
 using NoREroMod.Systems.GrabSystem;
 using NoREroMod.Systems.Pregnancy.Patches;
 using NoREroMod.Systems.Rage;
@@ -42,7 +43,13 @@ internal static class GrabViaAttackPatch
     /// <summary>Enemies that must keep their vanilla grab-intro pipeline.</summary>
     private static bool ShouldUseVanillaGrabOnly(EnemyDate attacker)
     {
-        return IsBiscodAttacker(attacker) || IsGoblinAttacker(attacker);
+        return IsBiscodAttacker(attacker) || IsGoblinAttacker(attacker) || IsNoGrabAttacker(attacker);
+    }
+
+    /// <summary>Combat-only enemies (undead skeletons): plain hit, their vanilla H entry is suppressed too.</summary>
+    private static bool IsNoGrabAttacker(EnemyDate attacker)
+    {
+        return NoREroMod.Patches.Enemy.UndeadSkeletonsModCustom.UndeadSkeletonsRuntime.IsUndeadSkeleton(attacker);
     }
 
     private static void EnsureEliteGrabPlayerCached()
@@ -126,6 +133,9 @@ internal static class GrabViaAttackPatch
         if (WitchOffspringCombatRules.ShouldBlockOffspringVsPlayer(attacker))
             return false;
 
+        if (IsNoGrabAttacker(attacker))
+            return false;
+
         playercon player = attacker.com_player ?? UnityEngine.Object.FindObjectOfType<playercon>();
         if (player == null || player.eroflag || player.erodown != 0)
             return false;
@@ -152,6 +162,7 @@ internal static class GrabViaAttackPatch
         }
 
         InvokeEliteGrabPlayer(attacker, playerStatus);
+        FearSystem.NotifyGrabLand();
         if (attacker is BossTouzoku customBoss)
             BossTouzokuCustomRuntime.OnGrabViaAttackHit(customBoss);
         NoREroMod.Systems.Economy.CombatGoldLossRuntime.TryProcessPlayerHit(player, wasDodged: false);
@@ -303,6 +314,7 @@ internal static class GrabViaAttackPatch
             }
 
             InvokeEliteGrabPlayer(attacker, ___playerstatus);
+            FearSystem.NotifyGrabLand();
             if (attacker is BossTouzoku customBoss)
                 BossTouzokuCustomRuntime.OnGrabViaAttackHit(customBoss);
             NoREroMod.Systems.Economy.CombatGoldLossRuntime.TryProcessPlayerHit(__instance, wasDodged: false);
@@ -398,6 +410,7 @@ internal static class GrabViaAttackPatch
             }
 
             InvokeEliteGrabPlayer(attacker, ___playerstatus);
+            FearSystem.NotifyGrabLand();
             if (attacker is BossTouzoku customBoss)
                 BossTouzokuCustomRuntime.OnGrabViaAttackHit(customBoss);
             NoREroMod.Systems.Economy.CombatGoldLossRuntime.TryProcessPlayerHit(__instance, wasDodged: false);

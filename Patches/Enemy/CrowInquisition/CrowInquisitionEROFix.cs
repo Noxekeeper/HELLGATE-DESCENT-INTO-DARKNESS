@@ -143,17 +143,20 @@ internal class CrowInquisitionEROFix
     }
 
     /// <summary>
-    /// Reset time when H-scene starts
+    /// Reset time during this crow's H-scene. Vanilla calls <c>eroanime</c> from every <c>Update</c>,
+    /// so the reset must be gated by <c>eroflag</c>; otherwise any living crow overrides every
+    /// timeScale effect (Slow-Mo, F11 authoring pause).
     /// </summary>
     [HarmonyPatch(typeof(CrowInquisition), "eroanime")]
     [HarmonyPrefix]
-    static void EnsureNormalTime()
+    static void EnsureNormalTime(bool ___eroflag)
     {
-        // Only reset time if TimeSlowMo is not active
-        if (!NoREroMod.Systems.Rage.TimeSlowMoSystem.IsActive)
-        {
-            Time.timeScale = 1f;
-        }
+        if (!___eroflag)
+            return;
+        if (NoREroMod.Systems.Rage.TimeSlowMoSystem.IsActive || NoREroMod.Systems.Spawn.SpawnAuthoringPause.IsFrozen)
+            return;
+
+        Time.timeScale = 1f;
     }
 }
 

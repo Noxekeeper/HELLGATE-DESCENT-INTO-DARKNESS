@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using NoREroMod.Patches.Player;
 using NoREroMod.Patches.UI.MindBroken;
+using NoREroMod.Systems.Fear;
 using NoREroMod.Systems.Gameplay.QTE;
 using DarkTonic.MasterAudio;
 
@@ -2559,7 +2560,8 @@ public static class QTESystem {
         float mbPercent = MindBrokenSystem.Enabled ? Mathf.Clamp01(MindBrokenSystem.Percent) : 0f;
         // At 0% MB: full bonus (5-15%); at 100% MB: half bonus (2.5-7.5%).
         float spGain = Mathf.Lerp(randomBonus, randomBonus * 0.5f, mbPercent);
-        
+        spGain = QTESPCalculator.ApplyMoraleStruggleMult(spGain);
+
         // Apply SP gain to player
         float currentSP = currentPlayerStatus.Sp;
         float maxSP = currentPlayerStatus.AllMaxSP();
@@ -2594,6 +2596,8 @@ public static class QTESystem {
         
         // STAGE 12: Success sound for yellow button.
         PlayRandomSound(YellowButtonSuccessSoundIds, SOUND_VOLUME);
+
+        FearSystem.NotifyStruggleQteSuccess();
     }
     
     /// <summary>

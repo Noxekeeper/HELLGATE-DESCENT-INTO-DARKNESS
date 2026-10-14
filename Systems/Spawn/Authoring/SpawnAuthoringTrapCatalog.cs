@@ -39,6 +39,7 @@ internal static class SpawnAuthoringTrapCatalog
         "blackoozetraptypeb",
         "trapnormal",
         "spiketrap",
+        "woodspike",
         "impactdamage",
         "impactdamagebox",
         "ironmaidendamage",
@@ -179,6 +180,8 @@ internal static class SpawnAuthoringTrapCatalog
         if (SpawnAuthoringHostageCatalog.IsPickerKey(key) || SpawnAuthoringHostageCatalog.IsPickerKey(rawKey))
             return;
         if (SpawnDecorCatalog.IsKnownDecorKey(key) || SpawnDecorCatalog.IsKnownDecorKey(rawKey))
+            return;
+        if (SpawnAuthoringGimmickCatalog.IsPickerKey(key) || SpawnTemplateCatalog.IsGimmickTemplateKey(key))
             return;
 
         bool lethal = IsLethalPickerKey(key) || IsLethalPickerKey(rawKey);

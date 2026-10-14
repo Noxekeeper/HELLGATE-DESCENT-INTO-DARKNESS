@@ -276,6 +276,8 @@ internal static class SpawnAuthoringFavorites
                 return "[ET]";
             case SpawnAuthoringState.CatalogKind.EventCore:
                 return "[EC]";
+            case SpawnAuthoringState.CatalogKind.Gimmick:
+                return "[GM]";
             default:
                 return string.Empty;
         }
@@ -299,6 +301,8 @@ internal static class SpawnAuthoringFavorites
                 return "eventtrap";
             case SpawnAuthoringState.CatalogKind.EventCore:
                 return "eventcore";
+            case SpawnAuthoringState.CatalogKind.Gimmick:
+                return "gimmick";
             default:
                 return "enemy";
         }
@@ -316,7 +320,8 @@ internal static class SpawnAuthoringFavorites
                string.Equals(raw, "hostage", StringComparison.OrdinalIgnoreCase) ||
                string.Equals(raw, "gold", StringComparison.OrdinalIgnoreCase) ||
                string.Equals(raw, "eventtrap", StringComparison.OrdinalIgnoreCase) ||
-               string.Equals(raw, "eventcore", StringComparison.OrdinalIgnoreCase);
+               string.Equals(raw, "eventcore", StringComparison.OrdinalIgnoreCase) ||
+               string.Equals(raw, "gimmick", StringComparison.OrdinalIgnoreCase);
     }
 
     private static SpawnAuthoringState.CatalogKind ParseKind(string raw)
@@ -338,6 +343,8 @@ internal static class SpawnAuthoringFavorites
             return SpawnAuthoringState.CatalogKind.EventTrap;
         if (string.Equals(raw, "eventcore", StringComparison.OrdinalIgnoreCase))
             return SpawnAuthoringState.CatalogKind.EventCore;
+        if (string.Equals(raw, "gimmick", StringComparison.OrdinalIgnoreCase))
+            return SpawnAuthoringState.CatalogKind.Gimmick;
         return SpawnAuthoringState.CatalogKind.Enemies;
     }
 

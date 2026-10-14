@@ -193,7 +193,7 @@ internal static class SpawnDepthUtility
     /// </summary>
     internal static void ApplyTrapHariFloorDefaults(string key, float rotationZ, ref float spawnWorldZ, ref SpawnDepthSettings depth)
     {
-        if (!SpawnSpikeKeys.IsTrapHariKey(key))
+        if (!SpawnSpikeKeys.IsStaticSpikeKey(key))
             return;
 
         if (TryGetPlayerWorldZ(out float playerZ))

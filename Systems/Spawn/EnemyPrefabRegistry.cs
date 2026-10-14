@@ -78,7 +78,6 @@ internal static class EnemyPrefabRegistry
         { "NormalSnailshell", new[] { "NormalSnailshell" } },
         { "Snailshell", new[] { "Snailshell" } },
         { "BigMerman", new[] { "BigMerman" } },
-        { "DifferentBigMerman", new[] { "DifferentBigMerman" } },
         { "BlackOoze", new[] { "BlackOoze_Monster" } },
         { "SkeltonOoze", new[] { "skelton_ooze" } },
         { "Sisiruirui", new[] { "sisiruirui" } },
@@ -95,7 +94,12 @@ internal static class EnemyPrefabRegistry
         { "TrapNormal", new[] { "TrapNormal" } },
         { "IronmaidenDamage", new[] { "Ironmaiden_damage" } },
         { "Slaimu", new[] { "sraimu" } },
-        { "biscord", new[] { "sraimu", "suraimu" } }
+        { "biscord", new[] { "sraimu", "suraimu" } },
+        // Undead skeletons: vanilla combat prefab, battle skeleton swapped from disk, no H-scene (UndeadSkeletonsLoader)
+        { "BigMermanUndead", new[] { "BigMerman" } },
+        { "BigoniUndead", new[] { "Bigoni_spine" } },
+        { "PilgrimUndead", new[] { "Pilgrim" } },
+        { "VagrantUndead", new[] { "Vagrant_spine" } }
     };
 
     /// <summary>

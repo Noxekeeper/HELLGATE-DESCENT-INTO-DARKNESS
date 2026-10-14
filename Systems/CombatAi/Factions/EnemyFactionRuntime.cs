@@ -30,6 +30,7 @@ internal static class EnemyFactionRuntime
     private static readonly Dictionary<int, float> _lastAppliedSpeedMultiplierByEnemyId = new Dictionary<int, float>();
     private static readonly Dictionary<string, float> _nextHitAtByPair = new Dictionary<string, float>();
     private static readonly Dictionary<int, bool> _isBossByInstanceId = new Dictionary<int, bool>();
+    private static readonly Dictionary<int, int> _bossCheckedFrameById = new Dictionary<int, int>();
     private static readonly Dictionary<int, bool> _prevAttackWindowState = new Dictionary<int, bool>();
     private static readonly Dictionary<int, float> _attackPulseUntil = new Dictionary<int, float>();
     private static readonly Dictionary<long, int> _relationByPair = new Dictionary<long, int>();
@@ -157,13 +158,20 @@ internal static class EnemyFactionRuntime
             return false;
 
         int id = enemyObject.GetInstanceID();
+        int frame = Time.frameCount;
+        if (_bossCheckedFrameById.TryGetValue(id, out int checkedFrame) && checkedFrame == frame &&
+            _isBossByInstanceId.TryGetValue(id, out bool cachedBoss))
+            return cachedBoss;
+
         EnemyDate enemy = enemyObject.GetComponent<EnemyDate>();
         if (enemy == null)
             return false;
 
-        // Re-resolve: vanilla sets BOSSflag after start_fun where we first register.
+        // Re-resolve once per frame: vanilla sets BOSSflag after start_fun where we first register,
+        // while Distance_fun / Update patches ask several times per enemy per frame.
         bool isBoss = FactionBossDetection.IsBossEnemy(enemy);
         _isBossByInstanceId[id] = isBoss;
+        _bossCheckedFrameById[id] = frame;
         return isBoss;
     }
 
@@ -265,6 +273,7 @@ internal static class EnemyFactionRuntime
         int id = enemyObject.GetInstanceID();
         _enemyFactionByInstanceId.Remove(id);
         _isBossByInstanceId.Remove(id);
+        _bossCheckedFrameById.Remove(id);
         _enemyByInstanceId.Remove(id);
         _hostileToPlayerUntil.Remove(id);
         _sessionHostileToPlayer.Remove(id);
@@ -282,6 +291,7 @@ internal static class EnemyFactionRuntime
     {
         _enemyFactionByInstanceId.Clear();
         _isBossByInstanceId.Clear();
+        _bossCheckedFrameById.Clear();
         _enemyByInstanceId.Clear();
         _hostileToPlayerUntil.Clear();
         _sessionHostileToPlayer.Clear();
@@ -417,7 +427,13 @@ internal static class EnemyFactionRuntime
     {
         if (self == null || self.gameObject == null || self.Hp <= 0f)
             return;
-        if (!EnemyFactionsConfig.Enable || IsBossEnemy(self.gameObject))
+        if (!EnemyFactionsConfig.Enable)
+            return;
+        // Only committed brawlers and the H-scene freeze do anything below; skip the rest cheaply.
+        if (!IsFactionCombatCommitted(self.gameObject) &&
+            !(EnemyFactionsConfig.FreezeFactionAiDuringHScene && self.com_player != null && self.com_player.eroflag))
+            return;
+        if (IsBossEnemy(self.gameObject))
             return;
         if (ShouldRespectEventCorePassiveShell(self))
             return;
@@ -430,14 +446,9 @@ internal static class EnemyFactionRuntime
             return;
         }
 
-        if (IsFactionCombatCommitted(self.gameObject))
-        {
-            TryRedirectToNearestHostileTarget(self);
-            return;
-        }
-
-        // Do not start new inter-faction fights from Update sustain — only Distance_fun TryEngage
+        // Committed by the gate above. New inter-faction fights start only from Distance_fun TryEngage
         // after the player enters the activation bubble (or pulse retaliation marks committed).
+        TryRedirectToNearestHostileTarget(self);
     }
 
     private static void ApplyFactionTargetApproachFields(EnemyDate self, EnemyDate target)

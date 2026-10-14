@@ -149,6 +149,13 @@ internal static class HSceneBlackBackgroundSystem
         }
         
         _isActive = true;
+
+        try
+        {
+            NoREroMod.Systems.Fear.FearSystem.NotifyFinClimax(
+                string.IsNullOrEmpty(animationName) ? "fin_climax" : ("fin_" + animationName));
+        }
+        catch { }
         
         try
         {

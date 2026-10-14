@@ -22,6 +22,7 @@ witchslaveViolin - 3x dorei+slave
 witchslaveslime
 EnemyMobCrowSlaveBack
 EnemyMobCrowSlaveStandup
+MesgakiEroSpine - Prison background scene (jailer + girl), decorative, no rescue
 mobslumslave
 mobcrawlingslave
 mobspiderslave
@@ -98,6 +99,10 @@ trapnormal -> Trap_hari - SPIKES
 trap_hari -> Trap_hari - SPIKES
 # trap -> trapnormal (alias; bare key trap often fails to spawn)
 
+# Prison spiked wooden posts — three posts + TrapNormal damage (cached from Prison)
+woodspike -> wood_spike - SPIKED POSTS (rot180 = hanging from the ceiling)
+# wood_spike -> woodspike (alias)
+
 # LightImpactNormal — lighter spikes (ImpactDamage, Resources)
 impactdamage -> LightImpactNormal - SPIKES (light impact)
 lightimpactnormal -> LightImpactNormal - SPIKES (same prefab)
@@ -115,6 +120,7 @@ spear -> spear - SPEAR SPAWNER (alias)
 
 # Rotation examples:
 # TRAP,trap_hari,-120.0,-130.0,1,rot90
+# TRAP,woodspike,-122.0,-126.0,1,rot180
 # TRAP,impactdamage,-125.0,-130.0,1,rot180
 # TRAP,lightimpactnormal,-130.0,-130.0,1,rot270
 # TRAP,wavespike,-135.0,-130.0,1,flip,rot90

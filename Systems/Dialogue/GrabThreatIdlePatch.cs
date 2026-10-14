@@ -48,6 +48,7 @@ internal static class GrabThreatIdlePatch
     {
         if (animName != "IDLE" && animName != "IDLE2") return;
         if (enemy == null || enemy.Hp <= 0) return;
+        if (NoREroMod.Patches.Enemy.UndeadSkeletonsModCustom.UndeadSkeletonsRuntime.IsUndeadSkeleton(enemy)) return;
         GrabThreatDialogues.TryShowThreatOnIdle(enemy);
     }
 }

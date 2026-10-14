@@ -7,7 +7,7 @@ for *Night of Revenge*.
 |---|---|
 | Assembly | `NoR_HellGate.dll` |
 | GUID | `NoREroMod_HellGate` |
-| Version | `1.2.6` (`Core/PluginInfo.cs`) |
+| Version | `1.2.7` (`Core/PluginInfo.cs`) |
 | Companion | `NoREroMod.dll` (HellGate fork) — required, loaded side by side |
 | License | GPL-3.0 (`LICENSE`) |
 
@@ -215,7 +215,11 @@ Cross-cutting infrastructure:
 - `Patches/Performance/` — vanilla hot-path rewrites onto the caches.
 - `Systems/Compatibility/` — NoREroMod config push.
 - `Systems/Diagnostics/` — opt-in, JSON-gated investigation kits (Tentacle,
-  TrapBody, Kinoko); compiled in all builds, disabled by JSON by default.
+  TrapBody, Kinoko, AudioLeak); compiled in all builds, disabled by JSON by
+  default. Plus the cfg-gated `[Diagnostics] PerfLog` / `PerfProfileMethods`
+  frame-time log and method profiler (default off).
+- `Systems/Spawn/SpawnSpineCuller` — `[Performance] CullOffscreenSpine`:
+  pauses Spine on HellGate spawns far outside the camera.
   See [`docs/development/DIAGNOSTICS.md`](docs/development/DIAGNOSTICS.md).
 - `Api/` — immutable read-only snapshots and isolated events for external
   plugins. Contract: [`docs/development/API.md`](docs/development/API.md).

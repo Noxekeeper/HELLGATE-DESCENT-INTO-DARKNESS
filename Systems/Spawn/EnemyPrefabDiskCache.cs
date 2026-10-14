@@ -69,14 +69,30 @@ internal static class EnemyPrefabDiskCache
             }
 
             string[] lines = File.ReadAllLines(path);
+            bool repaired = false;
             for (int i = 0; i < lines.Length; i++)
             {
                 Entry entry = ParseLine(lines[i]);
                 if (entry == null || string.IsNullOrEmpty(entry.Key))
                     continue;
 
+                if (!IsLoadableScene(entry.Scene))
+                {
+                    if (!string.Equals(entry.Key, "Sisterknight", StringComparison.OrdinalIgnoreCase))
+                    {
+                        repaired = true;
+                        continue;
+                    }
+
+                    entry.Scene = "InundergroundChurch";
+                    repaired = true;
+                }
+
                 entries[entry.Key] = entry;
             }
+
+            if (repaired && entries.Count > 0)
+                SaveToDisk();
 
             if (entries.Count == 0)
                 SeedDefaults();
@@ -216,10 +232,15 @@ internal static class EnemyPrefabDiskCache
         if (string.IsNullOrEmpty(normalizedKey))
             return;
 
+        // NoRSceneLoader keeps harvested enemies in its own runtime scene — not loadable later.
+        string normalizedScene = NormalizeSceneName(sceneName);
+        if (!IsLoadableScene(normalizedScene))
+            return;
+
         Entry entry = new Entry
         {
             Key = normalizedKey,
-            Scene = NormalizeSceneName(sceneName),
+            Scene = normalizedScene,
             Component = source.GetComponent<EnemyDate>()?.GetType().Name ?? string.Empty,
             ObjectName = CleanName(source.name)
         };
@@ -301,6 +322,26 @@ internal static class EnemyPrefabDiskCache
         EnemyPrefabRegistry.RefreshFromLoadedScenes();
     }
 
+    /// <summary>
+    /// SpawnTemplateCatalog took bosses from this scene (CacheFromScene) on the title — the boss
+    /// preload skips it when every boss key pinned to the scene is registered.
+    /// </summary>
+    internal static void MarkSceneCapturedIfComplete(string sceneName)
+    {
+        if (string.IsNullOrEmpty(sceneName))
+            return;
+
+        var keys = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+        foreach (KeyValuePair<string, Entry> pair in entries)
+        {
+            if (string.Equals(NormalizeSceneName(pair.Value.Scene), sceneName, StringComparison.OrdinalIgnoreCase))
+                keys.Add(pair.Key);
+        }
+
+        if (keys.Count == 0 || EnemyKeysSatisfied(keys))
+            hydratedScenes.Add(sceneName);
+    }
+
     private static bool EnemyKeysSatisfied(HashSet<string> neededKeys)
     {
         foreach (string key in neededKeys)
@@ -321,9 +362,14 @@ internal static class EnemyPrefabDiskCache
         return true;
     }
 
+    private static bool IsLoadableScene(string sceneName)
+    {
+        return !string.IsNullOrEmpty(sceneName) && Application.CanStreamedLevelBeLoaded(sceneName);
+    }
+
     private static IEnumerator LoadSceneCaptureAndMaybeUnload(string sceneName, string gameplayScene)
     {
-        if (string.IsNullOrEmpty(sceneName))
+        if (!IsLoadableScene(sceneName))
             yield break;
 
         bool loadedHere = false;
@@ -334,27 +380,36 @@ internal static class EnemyPrefabDiskCache
             AsyncOperation? op = null;
             try
             {
+                SpawnCacheWeatherGuard.NoteHydrateSceneRequest(sceneName);
                 op = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
             }
             catch (Exception ex)
             {
+                SpawnCacheWeatherGuard.EndHydrateSceneRequest(sceneName);
                 Plugin.Log?.LogWarning($"[ENEMY DISK CACHE] Failed to load \"{sceneName}\": {ex.Message}");
                 yield break;
             }
 
-            if (op == null)
-                yield break;
-
-            op.allowSceneActivation = true;
-            float started = Time.realtimeSinceStartup;
-            while (!op.isDone)
+            try
             {
-                if (Time.realtimeSinceStartup - started > 60f)
-                {
-                    Plugin.Log?.LogWarning($"[ENEMY DISK CACHE] Timed out loading \"{sceneName}\" — skipping.");
+                if (op == null)
                     yield break;
+
+                op.allowSceneActivation = true;
+                float started = Time.realtimeSinceStartup;
+                while (!op.isDone)
+                {
+                    if (Time.realtimeSinceStartup - started > 60f)
+                    {
+                        Plugin.Log?.LogWarning($"[ENEMY DISK CACHE] Timed out loading \"{sceneName}\" — skipping.");
+                        yield break;
+                    }
+                    yield return null;
                 }
-                yield return null;
+            }
+            finally
+            {
+                SpawnCacheWeatherGuard.EndHydrateSceneRequest(sceneName);
             }
 
             loadedHere = true;
@@ -391,6 +446,10 @@ internal static class EnemyPrefabDiskCache
     {
         if (string.IsNullOrEmpty(sceneName))
             return true;
+
+        // No player level on the title screen — the level probe would match the scene just loaded.
+        if (SpawnCacheWeatherGuard.IsTitleActive())
+            return false;
 
         if (!string.IsNullOrEmpty(gameplayScene)
             && string.Equals(sceneName, gameplayScene, StringComparison.OrdinalIgnoreCase))

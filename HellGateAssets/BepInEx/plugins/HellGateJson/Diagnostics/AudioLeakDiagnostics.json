@@ -1,0 +1,7 @@
+{
+  "Enable": false,
+  "PollIntervalSec": 0.5,
+  "RepeatSummarySec": 5,
+  "CallerDepth": 3,
+  "MaxLogsPerSession": 5000
+}

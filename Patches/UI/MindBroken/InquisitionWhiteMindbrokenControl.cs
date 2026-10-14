@@ -103,6 +103,8 @@ internal class InquisitionWhiteMindbrokenTracker : MonoBehaviour
             {
                 float mbPerSecond = Plugin.inquisitionWhiteMindBrokenPerSecond?.Value ?? 8f;
                 MindBrokenSystem.AddPercent((mbPerSecond / 100f) * dt, "inquisition-white-syringe-injection");
+                NoREroMod.Systems.Fear.FearSystem.ApplyHPhaseFearMbRate(
+                    mbPerSecond, dt, "inquisition-white-syringe-fear");
             }
         }
 

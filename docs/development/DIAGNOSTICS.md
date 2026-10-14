@@ -24,7 +24,8 @@ per-frame logging in a shipped path.
 ## Diagnostic kits
 
 `Systems/Diagnostics/` contains three purpose-built monitors for the
-historically hardest H-scene soft locks. They are **always compiled and
+historically hardest H-scene soft locks, plus the AudioLeak kit and the
+cfg-gated performance log (both below). The JSON kits are **always compiled and
 initialized, but disabled by default**: each is gated by its own JSON file
 under `BepInEx/plugins/HellGateJson/Diagnostics/` and is a per-frame no-op
 while `Enable` is `false`.
@@ -100,6 +101,46 @@ than `StuckWarnSec` for its next event.
 | `LogAllEvents` | `true` | log every Spine event |
 | `LogInterestingOnly` | `false` | restrict to START/ERO/SE events |
 | `MaxLogsPerSession` | `3000` | hard log cap |
+
+### AudioLeak kit — `AudioLeakDiagnostics.json`
+
+Target: sounds that keep playing or loop after their source is gone (e.g.
+sword-clash / barrel SFX leaking into cutscenes). Tag: `[AudioLeakDiag]`;
+writes **only** to `BepInEx/LogOutput/HellGate_AudioLeakDiag.log` so
+MasterAudio spam does not flood the main log.
+
+Logs every MasterAudio play with its caller, AudioSource start/stop, scene
+loads, TrapNormal hits and active `DontDestroyOnLoad` roots. Unlike the other
+kits, `Enable` is **read at boot**: when off, its Harmony patches are not
+installed at all (each play would otherwise capture a stack trace).
+
+| Setting | Default | Meaning |
+|---------|---------|---------|
+| `Enable` | `false` | master switch (restart to apply) |
+| `PollIntervalSec` | `0.5` | AudioSource poll interval |
+| `RepeatSummarySec` | `5` | summary interval for repeating sounds |
+| `CallerDepth` | `3` | stack frames recorded per play (1–8) |
+| `MaxLogsPerSession` | `5000` | hard log cap |
+
+## Performance log — `[Diagnostics]` cfg
+
+Dev frame-time tooling in `PerfDiagnostics` / `PerfMethodProfiler`, gated by
+cfg (not JSON), both default `false`:
+
+- `PerfLog` — every 5 s one `[PERF]` line: zone, FPS, average / worst frame,
+  hitches > 33 / 50 ms, GC collections, Mono heap, enemy / Spine / visible
+  Spine / HellGate spawn counts, `spineCulled` (`SpawnSpineCuller`),
+  rotation / facing locks and `timeScale`. The report itself scans the scene,
+  so it costs a small hitch every 5 s.
+- `PerfProfileMethods` — with `PerfLog`, after the first report IL-instruments
+  every Harmony-patched method (all plugins), every patch method attached to
+  them, and `SkeletonAnimation.Update` / `SkeletonRenderer.LateUpdate`, then
+  prints the top 15 by ms/frame and calls/frame after each `[PERF]` line.
+  Patched originals are timed without their patches (patches get their own
+  rows). Harmony id `HellGate.PerfProbe`; turning the key off unpatches it.
+  Adds overhead — use only for a profiling run.
+
+**Both must be `false` in shipped configs.**
 
 ## Workflow
 

@@ -142,7 +142,8 @@ internal static class SpawnFlipUtility
         s = new Vector3(fixedDir * absX, absY, absZ);
         enemyDate.scale = s;
         enemyDate.DIR = fixedDir;
-        root.transform.localScale = s;
+        if (root.transform.localScale != s)
+            root.transform.localScale = s;
     }
 
     /// <summary>Force face-left on Spine (negative localScale.x) or SpriteRenderer.flipX — never both.</summary>
@@ -259,7 +260,8 @@ internal static class SpawnFlipUtility
         float absY = Mathf.Abs(s.y) > 0.001f ? Mathf.Abs(s.y) : 1f;
         float absZ = Mathf.Abs(s.z) > 0.001f ? Mathf.Abs(s.z) : 1f;
         s = new Vector3(fixedDir * absX, absY, absZ);
-        root.transform.localScale = s;
+        if (root.transform.localScale != s)
+            root.transform.localScale = s;
         trapdata.scale = s;
         trapdata.DIR = fixedDir;
     }

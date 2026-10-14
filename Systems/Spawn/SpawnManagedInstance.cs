@@ -47,6 +47,16 @@ internal sealed class SpawnManagedInstance : MonoBehaviour
         AuthoringMovedInEditor = true;
     }
 
+    private void OnEnable()
+    {
+        SpawnSpineCuller.Register(this);
+    }
+
+    private void OnDisable()
+    {
+        SpawnSpineCuller.Unregister(this);
+    }
+
     internal void ApplyAuthoringLink(
         string packPath,
         int lineIndex,

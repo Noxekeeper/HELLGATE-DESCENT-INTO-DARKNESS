@@ -1,4 +1,39 @@
-# HELLGATE Spawn Configuration for Hidden Forest Area (ForestOfRequiem)
+﻿# HELLGATE Spawn Configuration for Hidden Forest Area (ForestOfRequiem)
 # Format: X,Y,EnemyType,Count | TRAP,... (шипы) | EVENTTRAP,event_folder,x,y (только якорь EventTrap — без шипов)
 #
 # Event anchors (short format — see EVENT_TRAP_SPAWN_CHEATSHEET.txt)
+
+
+
+RANDOM,0.99,1038.91,-291.60,undead,1
+RANDOM,0.4,1065.08,-289.72,undead,1
+RANDOM,0.4,1078.64,-286.83,undead,1
+RANDOM,0.4,1085.69,-288.97,mummydog,1
+RANDOM,0.4,1114.53,-289.03,undead,1
+RANDOM,0.4,1119.43,-286.32,undead,1
+RANDOM,0.4,1136.93,-286.69,mummydog,1
+RANDOM,0.4,1148.31,-284.62,undead,1
+RANDOM,0.4,1156.18,-284.58,undead,1
+RANDOM,0.4,1174.17,-284.87,undead,1
+RANDOM,0.4,1188.05,-284.83,undead,1
+RANDOM,0.4,1201.25,-284.76,undead,1
+RANDOM,0.4,1217.47,-286.80,mummydog,1
+RANDOM,0.4,1227.34,-288.43,undead,1
+RANDOM,0.4,1268.62,-283.88,undead,1
+RANDOM,0.4,1281.42,-282.36,undead,1
+RANDOM,0.4,1297.84,-278.12,mummydog,1
+RANDOM,0.4,1308.93,-277.91,undead,1
+RANDOM,0.4,1320.92,-278.60,undead,1
+
+1321.43,-295.76,Pilgrim,1
+1220.16,-298.82,Pilgrim,1
+1298.48,-277.77,Librarian|faction=undead,1
+1305.97,-278.74,Librarian|faction=undead,1
+1292.27,-278.56,Librarian|faction=undead,1
+TRAP,woodwana,1034.84,-283.21,1
+DECOR,mob_death1,1040.68,-292.70,1,flip,sort-260
+RANDOM,0.4,1043.31,-292.84,undead,1
+GIMMICK,ladder_nomal,1032.55,-294.07,closed,lever,flip
+GOLD,1037.31,-280.49,1-3,1
+GOLD,1036.83,-280.75,2-5,1
+GOLD,1036.96,-280.43,1-3,1

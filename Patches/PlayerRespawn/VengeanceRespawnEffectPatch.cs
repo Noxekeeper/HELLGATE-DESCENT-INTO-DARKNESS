@@ -5,6 +5,7 @@ using NoREroMod;
 using NoREroMod.Patches.HellTraps;
 using NoREroMod.Patches.Player;
 using NoREroMod.Patches.UI.MindBroken;
+using NoREroMod.Systems.Fear;
 using NoREroMod.Systems.Pregnancy;
 using NoREroMod.Systems.Rage;
 
@@ -60,7 +61,11 @@ internal static class VengeanceRespawnEffectPatch
                 }
             }
 
+            // Trap/fatality pending → MB shock + Fear trauma. Ordinary death → Morale snap to −10.
+            bool traumaPending = LethalTrapVengeanceShockSession.HasPending;
             LethalTrapVengeanceMindBrokenShock.TryStartAfterVengeance();
+            if (!traumaPending)
+                FearSystem.ResetOnNormalVengeanceRespawn();
 
             if (RageSystem.Enabled)
             {

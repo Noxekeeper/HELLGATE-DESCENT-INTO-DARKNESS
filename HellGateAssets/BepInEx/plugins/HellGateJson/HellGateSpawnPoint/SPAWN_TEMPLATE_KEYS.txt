@@ -21,6 +21,7 @@ witchslaveViolin
 witchslaveslime
 EnemyMobCrowSlaveBack
 EnemyMobCrowSlaveStandup
+MesgakiEroSpine
 slave
 stand
 

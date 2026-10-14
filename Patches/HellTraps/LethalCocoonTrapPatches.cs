@@ -61,26 +61,43 @@ internal static class LethalCocoonTrapPatches
         }
     }
 
-    /// <summary>Skip vanilla warning icon on lethal cocoon (tiny red "?" above trap).</summary>
+    /// <summary>
+    /// Lethal cocoon: vanilla trigger without the warning icon (tiny red "?" above trap).
+    /// The icon is nulled on lethal traps, and vanilla Instantiate(null) would throw on every trigger.
+    /// </summary>
     [HarmonyPatch(typeof(Cocoontrap), "OnTriggerEnter2D")]
     internal static class CocoontrapTriggerLethalPatch
     {
         [HarmonyPrefix]
         [HarmonyPriority(Priority.First)]
-        private static void Prefix(Cocoontrap __instance)
+        private static bool Prefix(Cocoontrap __instance, Collider2D col)
         {
             if (!Plugin.IsLethalCocoonTrapActive || __instance == null)
-                return;
+                return true;
 
             if (!LethalCocoonTrapRuntime.IsLethalTrap(__instance))
-                return;
+                return true;
 
-            if (CocoonWarningIconField != null)
-                CocoonWarningIconField.SetValue(__instance, null);
+            if (FlagField == null || PlayerField == null || ActtimeField == null)
+            {
+                if (WarningIconField != null)
+                    WarningIconField.SetValue(__instance, null);
+                return true;
+            }
+
+            if (col == null || col.gameObject.tag != "playerDAMAGEcol" || (bool)FlagField.GetValue(__instance))
+                return false;
+
+            PlayerField.SetValue(__instance, col.gameObject.transform.root.GetComponent<playercon>());
+            __instance.Invoke("Action", (float)ActtimeField.GetValue(__instance));
+            FlagField.SetValue(__instance, true);
+            return false;
         }
 
-        private static readonly System.Reflection.FieldInfo CocoonWarningIconField =
-            AccessTools.Field(typeof(Cocoontrap), "warningIcon");
+        private static readonly FieldInfo WarningIconField = AccessTools.Field(typeof(Cocoontrap), "warningIcon");
+        private static readonly FieldInfo FlagField = AccessTools.Field(typeof(Cocoontrap), "flag");
+        private static readonly FieldInfo PlayerField = AccessTools.Field(typeof(Cocoontrap), "com_player");
+        private static readonly FieldInfo ActtimeField = AccessTools.Field(typeof(Cocoontrap), "Acttime");
     }
 
     [HarmonyPatch(typeof(Cocoontrap), "OndamageSend")]

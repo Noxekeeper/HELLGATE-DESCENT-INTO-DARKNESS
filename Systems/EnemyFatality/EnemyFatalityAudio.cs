@@ -214,7 +214,8 @@ internal static class EnemyFatalityAudio
     {
         if (clip == null)
         {
-            Plugin.Log?.LogWarning("[" + profile.Id + "] Missing audio: " + label);
+            // Every cue is optional per clip folder (HeavyCritical has no Hit/death, Final is often omitted).
+            EnemyFatalityConfig.LogDebug("[" + profile.Id + "] No audio: " + label);
             return;
         }
 

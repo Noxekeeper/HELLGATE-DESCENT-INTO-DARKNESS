@@ -41,6 +41,16 @@ internal static class SpawnAuthoringPause
         }
     }
 
+    /// <summary>
+    /// Re-applies the freeze every frame: vanilla enemy scripts and patches may reset
+    /// <see cref="Time.timeScale"/> while the editor is open.
+    /// </summary>
+    internal static void Maintain()
+    {
+        if (armed && Time.timeScale != 0f)
+            Time.timeScale = 0f;
+    }
+
     internal static void End()
     {
         if (!armed)

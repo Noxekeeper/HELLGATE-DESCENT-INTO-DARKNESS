@@ -7,6 +7,7 @@ using BepInEx;
 using BepInEx.Configuration;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using NoREroMod.Systems.Spawn.Gimmicks;
 using Object = UnityEngine.Object;
 
 namespace NoREroMod.Systems.Spawn;
@@ -245,6 +246,9 @@ internal static class SpawnTemplateCatalog
         if (TemplateKeysMatch(trimmed, "spiketrap") || TemplateKeysMatch(trimmed, "spike trap"))
             return "spiketrap";
 
+        if (SpawnSpikeKeys.IsWoodSpikeKey(trimmed))
+            return SpawnSpikeKeys.WoodSpikeKeys[0];
+
         int count = trapKeyAliasNames.Length;
         if (trapKeyAliasCanonical.Length == count)
         {
@@ -379,6 +383,17 @@ internal static class SpawnTemplateCatalog
 
         int before = trapTemplates.Count;
         CacheFromScene(scene);
+        // Boot / title loads (NoRSceneLoader harvest unloads within a frame, preload side-loads):
+        // whitelist keys of this scene only; the full pass runs once at the end of the splash preload.
+        // In gameplay on-demand hydrate keeps its retry.
+        if (SpawnCacheWeatherGuard.IsTitleActive())
+        {
+            SpawnTemplateWhitelist.CacheForScene(scene.name);
+            RegisterTrapKeyAliases();
+            SpawnTemplateDiskCache.MarkSceneCapturedIfComplete(scene.name);
+            EnemyPrefabDiskCache.MarkSceneCapturedIfComplete(scene.name);
+            return;
+        }
         SpawnTemplateWhitelist.ReloadAndCache(Plugin.Instance);
         RegisterTrapKeyAliases();
         if (trapTemplates.Count > before)
@@ -431,9 +446,11 @@ internal static class SpawnTemplateCatalog
             int before = trapTemplates.Count;
             CacheTrapTemplates(scene);
             CacheTrapLikeTemplates(scene);
+            CacheWoodSpikeTemplates(scene);
             CacheGunTrapAssemblies(scene);
             CacheHostageTemplates(scene);
             CacheDecorTemplates(scene);
+            CacheGimmickTemplates(scene);
             EnemyPrefabRegistry.CacheBossesFromScene(scene);
             RegisterTrapKeyAliases();
             TryRegisterLethalMagicTrapTemplate();
@@ -518,6 +535,8 @@ internal static class SpawnTemplateCatalog
                 }
             }
 
+            CacheDialogOnlyHostageTemplates(scene);
+
             for (int t = 0; t < hostageOrphanComponentNames.Length; t++)
             {
                 Type componentType = ResolveGameComponentType(hostageOrphanComponentNames[t]);
@@ -541,6 +560,27 @@ internal static class SpawnTemplateCatalog
         catch (Exception ex)
         {
             Plugin.Log?.LogWarning($"[SPAWN CATALOG] Hostage cache failed for {scene.name}: {ex.Message}");
+        }
+    }
+
+    /// <summary>
+    /// Prison mesugakislave: a looping background scene (MesgakiEroSpine + SlaveDialogOnly) with no
+    /// SpawnSlave and no rescue. Cache the DistanceOnOff root so it still hides off-screen like vanilla.
+    /// </summary>
+    private static void CacheDialogOnlyHostageTemplates(Scene scene)
+    {
+        MesgakiEroSpine[] scenes = GetSceneComponents<MesgakiEroSpine>(scene);
+        for (int i = 0; i < scenes.Length; i++)
+        {
+            MesgakiEroSpine mob = scenes[i];
+            if (mob == null || IsCatalogTemplate(mob.gameObject) || mob.GetComponentInParent<SpawnSlave>() != null)
+                continue;
+
+            DistanceOnOff culler = mob.GetComponentInParent<DistanceOnOff>();
+            GameObject root = culler != null ? culler.gameObject : mob.gameObject;
+            CacheSceneTemplate(trapTemplates, nameof(MesgakiEroSpine), root, "Hostage");
+            CacheSceneTemplate(trapTemplates, root.name, root, "Hostage");
+            return;
         }
     }
 
@@ -599,6 +639,59 @@ internal static class SpawnTemplateCatalog
             CacheDecorInHierarchy(node.GetChild(i), sceneKeys);
     }
 
+    /// <summary>
+    /// Gates (gate_fence) and folding ladders with their lever. Keys: skeleton name (gate_fence, ladder_nomal),
+    /// skeleton_scene variant (gate_fence_undergroundchurch) and vanilla script name (dooropen, ladder_on).
+    /// </summary>
+    private static void CacheGimmickTemplates(Scene scene)
+    {
+        if (!HellGateGimmickRuntime.IsSourceScene(scene.name))
+            return;
+
+        try
+        {
+            for (int t = 0; t < HellGateGimmickRuntime.VanillaComponentTypes.Length; t++)
+            {
+                Type componentType = HellGateGimmickRuntime.VanillaComponentTypes[t];
+                Component[] components = GetSceneComponents(scene, componentType);
+                for (int i = 0; i < components.Length; i++)
+                {
+                    Component component = components[i];
+                    if (component == null || component.gameObject == null || IsCatalogTemplate(component.gameObject))
+                        continue;
+
+                    if (!HellGateGimmickRuntime.TryResolveTemplateSource(
+                            component, out GameObject source, out HellGateGimmickKind kind, out string skeletonKey))
+                        continue;
+
+                    CacheGimmickTemplate(skeletonKey, source, kind, skeletonKey);
+                    CacheGimmickTemplate(skeletonKey + "_" + scene.name, source, kind, skeletonKey);
+                    CacheGimmickTemplate(componentType.Name, source, kind, skeletonKey);
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            Plugin.Log?.LogWarning($"[SPAWN CATALOG] Gimmick cache failed for {scene.name}: {ex.Message}");
+        }
+    }
+
+    private static void CacheGimmickTemplate(string key, GameObject source, HellGateGimmickKind kind, string skeletonKey)
+    {
+        if (string.IsNullOrEmpty(key) || source == null)
+            return;
+
+        CacheSceneTemplate(trapTemplates, key, source, "Gimmick");
+        if (TryResolveTemplate(trapTemplates, key, out GameObject template) && template != null)
+            HellGateGimmickRuntime.RegisterTemplate(template, kind, skeletonKey);
+    }
+
+    internal static bool IsGimmickTemplateKey(string key)
+    {
+        return TryResolveTemplate(trapTemplates, key, out GameObject template) &&
+               HellGateGimmickRuntime.IsGimmickTemplate(template);
+    }
+
     private static Type ResolveGameComponentType(string typeName)
     {
         if (string.IsNullOrEmpty(typeName))
@@ -633,6 +726,28 @@ internal static class SpawnTemplateCatalog
                 if (!string.IsNullOrEmpty(alias))
                     CacheSceneTemplate(trapTemplates, alias, templateSource, "Trap");
             }
+        }
+    }
+
+    /// <summary>
+    /// Prison Break[n]/wood_spike: three spiked posts with a TrapNormal child. The posts carry no
+    /// trap component themselves, so the generic scan only sees the bare "Trap (n)" collider.
+    /// </summary>
+    private static void CacheWoodSpikeTemplates(Scene scene)
+    {
+        TrapNormal[] traps = GetSceneComponents<TrapNormal>(scene);
+        for (int i = 0; i < traps.Length; i++)
+        {
+            TrapNormal trap = traps[i];
+            if (trap == null || IsCatalogTemplate(trap.gameObject))
+                continue;
+
+            Transform posts = trap.transform.parent;
+            if (posts == null || !posts.name.StartsWith("wood_spike", StringComparison.OrdinalIgnoreCase))
+                continue;
+
+            CacheSceneTemplate(trapTemplates, SpawnSpikeKeys.WoodSpikeKeys[0], posts.gameObject, "Trap");
+            return;
         }
     }
 
@@ -713,8 +828,10 @@ internal static class SpawnTemplateCatalog
                 if (spawned.GetComponent<SpawnManagedInstance>() == null)
                     spawned.AddComponent<SpawnManagedInstance>();
                 SpawnConfigExecutor.MoveSpawnedToGameplayScene(spawned);
+                HellGateGimmickRuntime.PrepareSpawned(template, spawned);
                 spawned.SetActive(true);
                 RewireTrapButtons(spawned);
+                DisableMosaicOverlays(spawned);
 
                 if (!string.IsNullOrEmpty(factionIdRaw))
                 {
@@ -860,6 +977,8 @@ internal static class SpawnTemplateCatalog
         string normalized = NormalizeKey(key);
         if (string.IsNullOrEmpty(normalized) || source == null)
             return;
+        if (SpawnTemplateDiskCache.IsPinnedToOtherScene(normalized, cachingSceneName))
+            return;
 
         if (map.TryGetValue(normalized, out GameObject existing) && existing != null)
         {
@@ -985,6 +1104,8 @@ internal static class SpawnTemplateCatalog
             case "slave":
             case "slaves":
             case "rescue":
+            case "gimmick":
+            case "gimmicks":
                 return trapTemplates;
             default:
                 return null;
@@ -1006,23 +1127,24 @@ internal static class SpawnTemplateCatalog
             {
                 writer.WriteLine("# HellGate cached spawn keys (auto-generated, overwritten on play)");
                 writer.WriteLine("# Static full lists: SPAWN_TEMPLATE_KEYS.txt");
-                writer.WriteLine("# Formats: TRAP,Key,... | OBJECT,Key,... | DECOR,Key,... | HOSTAGE,Key,...");
+                writer.WriteLine("# Formats: TRAP,Key,... | OBJECT,Key,... | DECOR,Key,... | HOSTAGE,Key,... | GIMMICK,Key,X,Y,open|closed[,id=name][,lever][,radius=N][,guard=N][,guardh=N][,guardside=left|right]");
                 writer.WriteLine("# Decor catalog: DECOR_CATALOG.txt");
                 writer.WriteLine("# flip tokens: flip | mirror | -1 | left  (do not use hostage keys stand/back as flip tokens)");
                 writer.WriteLine("# rotation: rot90 | rot180 | rot270 | 90 | 180 | 270 | upside (Z-axis, for spikes/traps)");
                 writer.WriteLine("# Cached count: " + trapTemplates.Count);
                 writer.WriteLine();
                 WriteCatalogSection(writer, "CACHED_HOSTAGE", trapTemplates, IsHostageTemplateKey);
+                WriteCatalogSection(writer, "CACHED_GIMMICK", trapTemplates, IsGimmickTemplateKey);
                 WriteCatalogSection(
                     writer,
                     "CACHED_DECOR",
                     trapTemplates,
-                    key => SpawnDecorCatalog.IsKnownDecorKey(key) && !IsHostageTemplateKey(key));
+                    key => SpawnDecorCatalog.IsKnownDecorKey(key) && !IsHostageTemplateKey(key) && !IsGimmickTemplateKey(key));
                 WriteCatalogSection(
                     writer,
                     "CACHED_TRAP",
                     trapTemplates,
-                    key => !IsHostageTemplateKey(key) && !SpawnDecorCatalog.IsKnownDecorKey(key));
+                    key => !IsHostageTemplateKey(key) && !SpawnDecorCatalog.IsKnownDecorKey(key) && !IsGimmickTemplateKey(key));
             }
         }
         catch (Exception ex)
@@ -1046,6 +1168,8 @@ internal static class SpawnTemplateCatalog
         "evslavebigaxearadia",
         "evslavebigaxemob",
         "evbunnyero",
+        "mesgakierospine",
+        "mesugakislave",
         "slave",
         "stand"
     };
@@ -1076,6 +1200,8 @@ internal static class SpawnTemplateCatalog
     {
         if (IsHostageTemplateKey(key))
             return "HOSTAGE";
+        if (IsGimmickTemplateKey(key))
+            return "GIMMICK";
         if (SpawnDecorCatalog.IsKnownDecorKey(key))
             return "Object";
         return "Trap";
@@ -1099,8 +1225,34 @@ internal static class SpawnTemplateCatalog
                 continue;
             if (SpawnDecorCatalog.IsKnownDecorKey(kv.Key))
                 continue;
+            if (HellGateGimmickRuntime.IsGimmickTemplate(kv.Value))
+                continue;
             into.Add(kv.Key);
         }
+    }
+
+    /// <summary>F11 authoring: cached gate / ladder templates as key → template instance id.</summary>
+    internal static void CollectAuthoringGimmickKeys(Dictionary<string, int> into)
+    {
+        if (into == null)
+            return;
+        if (!initialized && Plugin.Instance != null)
+            Initialize(Plugin.Instance);
+
+        foreach (var kv in trapTemplates)
+        {
+            if (string.IsNullOrEmpty(kv.Key) || kv.Value == null)
+                continue;
+            if (HellGateGimmickRuntime.IsGimmickTemplate(kv.Value))
+                into[kv.Key] = kv.Value.GetInstanceID();
+        }
+    }
+
+    internal static int GetTemplateInstanceId(string key)
+    {
+        return TryResolveTemplate(trapTemplates, key, out GameObject template) && template != null
+            ? template.GetInstanceID()
+            : 0;
     }
 
     /// <summary>F11 authoring: cached HOSTAGE / OtherScenes templates.</summary>
@@ -1369,6 +1521,33 @@ internal static class SpawnTemplateCatalog
             return false;
 
         return root.GetComponentsInChildren<Transform>(true).Length <= 32;
+    }
+
+    /// <summary>
+    /// Vanilla censor quads (e.g. <c>MosaicField</c> on Look_Dorei, bone-followed) render as a transparent
+    /// hole on HellGate clones. Same policy as the Rosewarm / Gorotuki mosaic patches: turn them off.
+    /// </summary>
+    private static void DisableMosaicOverlays(GameObject root)
+    {
+        Renderer[] renderers = root.GetComponentsInChildren<Renderer>(true);
+        for (int i = 0; i < renderers.Length; i++)
+        {
+            Renderer renderer = renderers[i];
+            if (renderer == null || renderer.transform == root.transform)
+                continue;
+            if (!IsMosaicName(renderer.gameObject.name) &&
+                (renderer.sharedMaterial == null || !IsMosaicName(renderer.sharedMaterial.name)))
+                continue;
+
+            renderer.gameObject.SetActive(false);
+        }
+    }
+
+    private static bool IsMosaicName(string name)
+    {
+        return !string.IsNullOrEmpty(name) &&
+               (name.StartsWith("Mosaic", StringComparison.OrdinalIgnoreCase) ||
+                name.StartsWith("Pixelation", StringComparison.OrdinalIgnoreCase));
     }
 
     private static void RewireTrapButtons(GameObject root)

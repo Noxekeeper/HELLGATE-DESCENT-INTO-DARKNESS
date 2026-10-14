@@ -195,6 +195,24 @@ internal static class RageSystem
         _lastKillTime = Time.unscaledTime;
     }
 
+    /// <summary>Dead player or a lethal-trap death clip in progress: Rage must not fire.</summary>
+    internal static bool IsPlayerDeadOrDying(bool zeroHpCounts = true)
+    {
+        if (NoREroMod.Patches.HellTraps.LethalCocoonTrapDeathContext.IsCustomDeathActive ||
+            NoREroMod.Patches.HellTraps.LethalMagicTrapDeathContext.IsCustomDeathActive ||
+            NoREroMod.Patches.HellTraps.LethalLightningTrapDeathContext.IsCustomDeathActive)
+            return true;
+
+        var player = UnifiedPlayerCacheManager.GetPlayer();
+        if (player != null && player._Death)
+            return true;
+
+        if (!zeroHpCounts)
+            return false;
+        PlayerStatus status = UnifiedPlayerCacheManager.GetPlayerStatus();
+        return status != null && status.Hp <= 0f;
+    }
+
     /// <summary>
     /// True when manual G must not activate Rage: H-scene / active QTE own G for Tier2+ escape.
     /// Prevents Update-order races where Toggle spends Rage before QTE can force the exit.
@@ -225,6 +243,8 @@ internal static class RageSystem
             // H / QTE: G is handled by QTESystem.TryActivateRageDuringQTE (activate + escape).
             if (ShouldDeferManualActivationToQte())
                 return false;
+            if (IsPlayerDeadOrDying())
+                return false;
 
             var playerconInstance = UnifiedPlayerCacheManager.GetPlayer();
             if (playerconInstance != null && playerconInstance.erodown != 0)
@@ -249,6 +269,8 @@ internal static class RageSystem
     {
         _ = qteCostPercent; // Legacy parameter kept for compatibility with old call sites/config.
         if (!Enabled || _isActive)
+            return false;
+        if (IsPlayerDeadOrDying(zeroHpCounts: false))
             return false;
         // QTE escape requires at least Tier2 threshold in H-scene.
         if (_ragePercent < TIER2_THRESHOLD)

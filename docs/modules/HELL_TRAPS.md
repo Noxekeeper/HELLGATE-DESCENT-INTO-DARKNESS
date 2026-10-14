@@ -18,7 +18,10 @@ tuning, death display:
 - **LethalCocoonTrap** (WebSpike) — contact-based; adds scene markers and
   `HellGateLethalCocoonTrapTracker`. Spawn key: `lethal_cocoontrap`
   (alias `lethalcocoontrap`). Death PNG: `WebSpike_Death` (same shared
-  playback runner as magic; cocoon tuning / trap-floor offset).
+  playback runner as magic; cocoon tuning / trap-floor offset). No vanilla
+  red "?" warning icon: `CocoontrapTriggerLethalPatch` runs the vanilla
+  trigger (player, `Acttime` delay, flag) itself and skips the original, so
+  the nulled `warningIcon` is never instantiated.
 - **LethalLightningTrap** — `trap_button` trigger; warning `TargetIcon_4` at
   trap coords → delay → `Lightningstrike` VFX always fires at the trap;
   lethal ATK + death clip only if the player is still inside the button

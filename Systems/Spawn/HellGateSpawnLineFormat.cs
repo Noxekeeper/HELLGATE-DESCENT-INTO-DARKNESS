@@ -57,6 +57,125 @@ internal static class HellGateSpawnLineFormat
                string.Equals(command, "RESCUE", StringComparison.OrdinalIgnoreCase);
     }
 
+    /// <summary>
+    /// <c>GIMMICK,Key,X,Y[,state][,id=name][,lever][,radius=N][,guard=N][,guardh=N][,guardside=left|right][,auto[=N]][,flip|rot|depth…]</c>
+    /// — gates, folding ladders and the standalone lever.
+    /// No count field: one gimmick per line.
+    /// </summary>
+    internal static bool IsGimmickShortcut(string command)
+    {
+        return string.Equals(command, "GIMMICK", StringComparison.OrdinalIgnoreCase) ||
+               string.Equals(command, "GIMMICKS", StringComparison.OrdinalIgnoreCase);
+    }
+
+    /// <summary>Gate: open/closed. Ladder: down/up (same meaning as open/closed).</summary>
+    internal static bool TryParseGimmickStateToken(string token, out bool open)
+    {
+        open = false;
+        if (string.IsNullOrEmpty(token))
+            return false;
+
+        switch (token.Trim().ToLowerInvariant())
+        {
+            case "open":
+            case "opened":
+            case "down":
+            case "lowered":
+            case "active":
+            case "on":
+                open = true;
+                return true;
+            case "closed":
+            case "close":
+            case "up":
+            case "raised":
+            case "inactive":
+            case "off":
+                open = false;
+                return true;
+            default:
+                return false;
+        }
+    }
+
+    /// <summary>
+    /// Optional GIMMICK tokens from <paramref name="firstOptional"/>: state, <c>id=</c>, <c>lever</c>, <c>radius=N</c>,
+    /// <c>guard=N</c>, <c>guardh=N</c>, <c>guardside=left|right</c>, <c>auto[=N]</c>.
+    /// Line key <c>lever</c> means a standalone lever (always interactive).
+    /// </summary>
+    internal static Gimmicks.HellGateGimmickSpawnOptions ParseGimmickOptions(string lineKey, string[] parts, int firstOptional)
+    {
+        var options = new Gimmicks.HellGateGimmickSpawnOptions();
+        Gimmicks.HellGateGimmickRuntime.ResolveTemplateKey(lineKey, out options.LeverOnly);
+        options.Lever = options.LeverOnly;
+        if (parts == null)
+            return options;
+
+        for (int i = firstOptional; i < parts.Length; i++)
+        {
+            string token = parts[i] != null ? parts[i].Trim() : string.Empty;
+            if (TryParseGimmickStateToken(token, out bool open))
+                options.Open = open;
+            else if (TryParseGimmickIdToken(token, out string id))
+                options.Id = id;
+            else if (string.Equals(token, "lever", StringComparison.OrdinalIgnoreCase))
+                options.Lever = true;
+            else if (token.StartsWith("radius=", StringComparison.OrdinalIgnoreCase) &&
+                     float.TryParse(token.Substring(7).Trim(), NumberStyles.Float, CultureInfo.InvariantCulture, out float radius) &&
+                     radius > 0f)
+                options.Radius = radius;
+            else if (TryParsePositiveToken(token, "guard=", out float guard))
+                options.GuardLength = guard;
+            else if (TryParsePositiveToken(token, "guardh=", out float guardHeight))
+                options.GuardHeight = guardHeight;
+            else if (token.StartsWith("guardside=", StringComparison.OrdinalIgnoreCase))
+                options.GuardSide = ParseGuardSide(token.Substring(10));
+            else if (string.Equals(token, "auto", StringComparison.OrdinalIgnoreCase))
+                options.AutoRange = Gimmicks.HellGateGimmickGuard.DefaultAutoRange;
+            else if (TryParsePositiveToken(token, "auto=", out float autoRange))
+                options.AutoRange = autoRange;
+        }
+
+        return options;
+    }
+
+    internal static Gimmicks.HellGateGimmickGuardSide ParseGuardSide(string value)
+    {
+        switch ((value ?? string.Empty).Trim().ToLowerInvariant())
+        {
+            case "left":
+            case "l":
+                return Gimmicks.HellGateGimmickGuardSide.Left;
+            case "right":
+            case "r":
+                return Gimmicks.HellGateGimmickGuardSide.Right;
+            default:
+                return Gimmicks.HellGateGimmickGuardSide.Both;
+        }
+    }
+
+    private static bool TryParsePositiveToken(string token, string prefix, out float value)
+    {
+        value = 0f;
+        return token.StartsWith(prefix, StringComparison.OrdinalIgnoreCase) &&
+               float.TryParse(token.Substring(prefix.Length).Trim(), NumberStyles.Float, CultureInfo.InvariantCulture, out value) &&
+               value > 0f;
+    }
+
+    internal static bool TryParseGimmickIdToken(string token, out string id)
+    {
+        id = string.Empty;
+        if (string.IsNullOrEmpty(token))
+            return false;
+
+        string trimmed = token.Trim();
+        if (!trimmed.StartsWith("id=", StringComparison.OrdinalIgnoreCase))
+            return false;
+
+        id = trimmed.Substring(3).Trim();
+        return id.Length > 0;
+    }
+
     /// <summary>Optional 6th+ fields on TRAP/HOSTAGE lines: flip, mirror, -1, left / rot90, rot180, rot270.</summary>
     internal static bool TryParseFlipField(string token, out bool flipX)
     {

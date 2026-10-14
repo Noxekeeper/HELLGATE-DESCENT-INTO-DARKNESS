@@ -30,6 +30,7 @@ HellGate splash (after boot tips / guide)
          Options panel     Start hidden; panel hangs under Options label
            Gore checkbox   General.EnableGoreContent (live; no restart)
            Simple QTE      QTEFreeStruggle.Enable (live; no restart)
+           Hide cursor     General.HideCursorInGameplay (live; no restart)
            EASY MEDIUM HARD  copies both cfg presets; restart required
            Done | Language | Exit
              │
@@ -49,8 +50,8 @@ These presets only swap HellGate + NoREroMod balance config files.
 On Easy / Medium / Hard click:
 
 1. Snapshot player prefs from the active HellGate cfg + live session
-   (`HellGateLanguage`, `EnableGoreContent`, `ShowSplashScreenOnStartup`,
-   font family keys, and `[QTEFreeStruggle] Enable`).
+   (`HellGateLanguage`, `EnableGoreContent`, `HideCursorInGameplay`,
+   `ShowSplashScreenOnStartup`, font family keys, and `[QTEFreeStruggle] Enable`).
 2. `File.Copy` from `BepInEx/config/{EASY|MEDIUM|HARD}/`:
    - `NoREroMod.cfg` → `BepInEx/config/NoREroMod.cfg`
    - `NoREroMod_HellGate.cfg` → `BepInEx/config/NoREroMod_HellGate.cfg`
@@ -131,6 +132,16 @@ live `ConfigEntry`; no restart. Still requires `[QTE] EnableQTESystem`.
 | Button layout | Compact **36px** d-pad cross (W/A/S/D, inner pivots); default QTE stays 56px row — [QTE_STRUGGLE_AND_GAMEPLAY.md](QTE_STRUGGLE_AND_GAMEPLAY.md) |
 
 See [QTE_STRUGGLE_AND_GAMEPLAY.md](QTE_STRUGGLE_AND_GAMEPLAY.md).
+
+## Hide cursor
+
+Splash checkbox for `[General] HideCursorInGameplay` (default on). Applies
+immediately; preserved across Easy/Medium/Hard like the other prefs.
+`GameplayCursorHider` hides the OS cursor in the `Common` scene during combat
+and H-scenes and keeps it visible when time is frozen (pause), on death / the
+defeat menu, in the F11 editor, while the altar / teleport menu
+(`Savepoint_menu`, registered from its `Start`) is open, and while an
+interactable uGUI button is selected (shops, chests, dialogs).
 
 ## Layout contract
 

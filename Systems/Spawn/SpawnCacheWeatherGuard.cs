@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using DigitalRuby.RainMaker;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -17,14 +17,165 @@ internal static class SpawnCacheWeatherGuard
     private static float savedRainFade;
     private static float savedRainIntensity;
 
+    private static bool titlePreloadGuardsInstalled;
+
+    private const float SideLoadGraceSeconds = 3f;
+    private static int titleBatchDepth;
+    private static float sideLoadWatchUntil = -1f;
+    private static readonly System.Collections.Generic.HashSet<string> requestedHydrateScenes =
+        new System.Collections.Generic.HashSet<string>(StringComparer.OrdinalIgnoreCase);
+
+    internal static bool IsTitleActive() =>
+        string.Equals(SceneManager.GetActiveScene().name, "Gametitle", StringComparison.OrdinalIgnoreCase);
+
+    /// <summary>Every level loads it if missing — keep one copy for the whole title preload.</summary>
+    private const string SharedSideScene = "GameoverAnime";
+    private static Scene keptSharedSideScene;
+
+    /// <summary>Cache loaders call this around LoadSceneAsync so the scene is not treated as a side-load.</summary>
+    internal static void NoteHydrateSceneRequest(string sceneName)
+    {
+        if (!string.IsNullOrEmpty(sceneName))
+            requestedHydrateScenes.Add(sceneName);
+    }
+
+    internal static void EndHydrateSceneRequest(string sceneName)
+    {
+        if (!string.IsNullOrEmpty(sceneName))
+            requestedHydrateScenes.Remove(sceneName);
+    }
+
+    /// <summary>
+    /// Title preload only: hydrated levels load their own extras (village_main → village → miniGrave,
+    /// GameoverAnime per level). Nobody unloads those, so they linger until the game starts.
+    /// </summary>
+    private static void OnAnySceneLoadedUnloadSideLoad(Scene scene, LoadSceneMode mode)
+    {
+        try
+        {
+            if (mode != LoadSceneMode.Additive || !IsTitleActive())
+                return;
+            if (titleBatchDepth <= 0 && Time.realtimeSinceStartup > sideLoadWatchUntil)
+                return;
+            if (!scene.IsValid() || requestedHydrateScenes.Contains(scene.name))
+                return;
+            if (string.Equals(scene.name, "Gametitle", StringComparison.OrdinalIgnoreCase)
+                || string.Equals(scene.name, "Loadmenu", StringComparison.OrdinalIgnoreCase))
+                return;
+
+            if (string.Equals(scene.name, SharedSideScene, StringComparison.OrdinalIgnoreCase)
+                && titleBatchDepth > 0
+                && !(keptSharedSideScene.IsValid() && keptSharedSideScene.isLoaded))
+            {
+                keptSharedSideScene = scene;
+                return;
+            }
+
+            SceneManager.UnloadSceneAsync(scene);
+            Plugin.Log?.LogInfo("[SPAWN CACHE] Unloaded side-loaded scene " + scene.name + " (title preload)");
+        }
+        catch (Exception ex)
+        {
+            Plugin.Log?.LogWarning("[SPAWN CACHE] Side-load unload failed for " + scene.name + ": " + ex.Message);
+        }
+    }
+
+    private static void UnloadKeptSharedSideScene()
+    {
+        try
+        {
+            if (keptSharedSideScene.IsValid() && keptSharedSideScene.isLoaded && IsTitleActive())
+            {
+                SceneManager.UnloadSceneAsync(keptSharedSideScene);
+                Plugin.Log?.LogInfo("[SPAWN CACHE] Unloaded side-loaded scene " + SharedSideScene + " (title preload end)");
+            }
+        }
+        catch (Exception ex)
+        {
+            Plugin.Log?.LogWarning("[SPAWN CACHE] Side-load unload failed for " + SharedSideScene + ": " + ex.Message);
+        }
+
+        keptSharedSideScene = default;
+    }
+
+    /// <summary>
+    /// Sub-scenes pulled in by a hydrated level (village → miniGrave) never pass through
+    /// <see cref="OnAdditiveSceneLoaded"/>. The stage jingle AudioSource sits on an object named
+    /// "SceneStartMng" and starts after sceneLoaded, so the source is disabled, not just stopped.
+    /// </summary>
+    internal static void InstallTitlePreloadGuards()
+    {
+        if (titlePreloadGuardsInstalled)
+            return;
+        titlePreloadGuardsInstalled = true;
+        SceneManager.sceneLoaded += OnAnySceneLoadedSilenceTitleJingle;
+        SceneManager.sceneLoaded += OnAnySceneLoadedUnloadSideLoad;
+    }
+
+    private static void OnAnySceneLoadedSilenceTitleJingle(Scene scene, LoadSceneMode mode)
+    {
+        try
+        {
+            if (!string.Equals(SceneManager.GetActiveScene().name, "Gametitle", StringComparison.OrdinalIgnoreCase))
+                return;
+            if (!scene.IsValid() || !scene.isLoaded)
+                return;
+
+            int silenced = 0;
+            GameObject[] roots = scene.GetRootGameObjects();
+            for (int r = 0; r < roots.Length; r++)
+            {
+                if (roots[r] == null)
+                    continue;
+                AudioSource[] sources = roots[r].GetComponentsInChildren<AudioSource>(true);
+                for (int i = 0; i < sources.Length; i++)
+                {
+                    AudioSource src = sources[i];
+                    if (src == null || !IsSceneStartJingleSource(src))
+                        continue;
+                    src.playOnAwake = false;
+                    src.Stop();
+                    src.enabled = false;
+                    silenced++;
+                }
+            }
+
+            if (silenced > 0)
+                Plugin.Log?.LogInfo("[SPAWN CACHE] Title jingle silenced in " + scene.name + " (" + silenced + ")");
+        }
+        catch (Exception ex)
+        {
+            Plugin.Log?.LogWarning("[SPAWN CACHE] Title jingle silencer failed: " + ex.Message);
+        }
+    }
+
+    private static bool IsSceneStartJingleSource(AudioSource src)
+    {
+        for (Transform t = src.transform; t != null; t = t.parent)
+        {
+            if (t.name.StartsWith("SceneStartMng", StringComparison.Ordinal)
+                || t.GetComponent<SceneStartMng>() != null)
+                return true;
+        }
+
+        return src.clip != null && src.clip.name == "snd_Stage_Title";
+    }
+
     internal static void BeginHydrateBatch()
     {
+        if (IsTitleActive())
+            titleBatchDepth++;
         SnapshotMainCameraRain();
         SilenceEroAudioBuses();
     }
 
     internal static void EndHydrateBatch()
     {
+        if (titleBatchDepth > 0 && --titleBatchDepth == 0)
+        {
+            sideLoadWatchUntil = Time.realtimeSinceStartup + SideLoadGraceSeconds;
+            UnloadKeptSharedSideScene();
+        }
         RestoreMainCameraRain();
         CleanupLeakedRainEffects();
         SilenceEroAudioBuses();

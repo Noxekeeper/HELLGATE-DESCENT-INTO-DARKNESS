@@ -29,6 +29,7 @@ internal static class HellGateSpawnSceneHints
         d["HellGateSpawn_nightless city C.txt"] = new[] { "InsomniaTownC", "nightless", "ightless" };
         d["HellGateSpawn_nightless city ragdum b.txt"] = new[] { "InsomniaTown", "ragdum" };
         d["HellGateSpawn_hidden Forest area.txt"] = new[] { "ForestOfRequiem" };
+        d["HellGateSpawn_RequiemBoss.txt"] = new[] { "requiemboss" };
         d["HellGateSpawn_UndergroundLaboratory.txt"] = new[] { "UndergroundLaboratory", "laboratory" };
         d["HellGateSpawn_PilgrimageEntrance.txt"] = new[] { "PilgrimageEntrance", "pilgrimage" };
         d["HellGateSpawn_WhiteCathedral.txt"] = new[] { "WhiteCathedral", "white", "cathedral" };
@@ -53,6 +54,7 @@ internal static class HellGateSpawnSceneHints
         d["HellGateSpawn_nightless city C.txt"] = "[HELLGATE SPAWN ITC]";
         d["HellGateSpawn_nightless city ragdum b.txt"] = "[HELLGATE SPAWN IT]";
         d["HellGateSpawn_hidden Forest area.txt"] = "[HELLGATE SPAWN FR]";
+        d["HellGateSpawn_RequiemBoss.txt"] = "[HELLGATE SPAWN RB]";
         d["HellGateSpawn_UndergroundLaboratory.txt"] = "[HELLGATE SPAWN UL]";
         d["HellGateSpawn_PilgrimageEntrance.txt"] = "[HELLGATE SPAWN PE]";
         d["HellGateSpawn_WhiteCathedral.txt"] = "[HELLGATE SPAWN WC]";
@@ -78,7 +80,9 @@ internal static class HellGateSpawnSceneHints
         configPath = string.Empty;
         logPrefix = "[HELLGATE SPAWN]";
 
-        if (string.IsNullOrEmpty(zoneName))
+        if (string.IsNullOrEmpty(zoneName)
+            || HellGateLocationSpawnRefresh.IsNonGameplayScene(zoneName)
+            || HellGateLocationSpawnRefresh.IsNonGameplaySceneLoaded())
             return false;
 
         string bestFile = null;

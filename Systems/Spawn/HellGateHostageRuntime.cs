@@ -34,7 +34,7 @@ internal static class HellGateHostageRuntime
                 ClearRescuedFlag(stage, slaveNumber);
                 EnsureSlaveChildActive(anchor);
             }
-            else
+            else if (root.GetComponentInChildren<SlaveDialogOnly>(true) == null)
             {
                 Plugin.Log?.LogWarning($"[HOSTAGE] No SpawnSlave on {root.name} — cannot reset rescue slot.");
             }

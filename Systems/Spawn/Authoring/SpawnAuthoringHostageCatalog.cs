@@ -24,7 +24,8 @@ internal static class SpawnAuthoringHostageCatalog
         "witchslaveViolin",
         "witchslaveslime",
         "EnemyMobCrowSlaveBack",
-        "EnemyMobCrowSlaveStandup"
+        "EnemyMobCrowSlaveStandup",
+        "MesgakiEroSpine"
     };
 
     /// <summary>Spine look / scene animations (not combat, not Trap).</summary>

@@ -4,6 +4,7 @@ using NoREroMod.Patches.Enemy.BossTouzokuCustom;
 using NoREroMod.Patches.Enemy.ButcherModCustom;
 using NoREroMod.Patches.Enemy.DemonGorotukiModCustom;
 using NoREroMod.Patches.Enemy.HellishTouzokuModCustom;
+using NoREroMod.Patches.Enemy.UndeadSkeletonsModCustom;
 using NoREroMod.Patches.Enemy.WolfModCustom;
 using Spine.Unity;
 using UnityEngine;
@@ -69,6 +70,8 @@ internal static class SpawnAuthoringEnemyPreview
                           ? Mathf.RoundToInt(SpawnAuthoringState.PendingRotationZ).ToString(CultureInfo.InvariantCulture)
                           : "0") +
                       (SpawnAuthoringState.PendingFlipX ? ":f" : "");
+            if (SpawnAuthoringState.GimmickPanelOpen)
+                cacheId += SpawnAuthoringState.PendingGimmickOpen ? ":open" : ":closed";
         }
         else
         {
@@ -130,14 +133,21 @@ internal static class SpawnAuthoringEnemyPreview
             return;
 
         GameObject prefab = null;
+        bool gimmickLeverOnly = false;
+        string templateKey = trapMode
+            ? Gimmicks.HellGateGimmickRuntime.ResolveTemplateKey(key, out gimmickLeverOnly)
+            : key;
+        bool gimmick = false;
         if (trapMode)
         {
-            if (!SpawnTemplateCatalog.TryGetTrapTemplate(key, out prefab) || prefab == null)
+            if (!SpawnTemplateCatalog.TryGetTrapTemplate(templateKey, out prefab) || prefab == null)
             {
                 cachedFailed = true;
                 failReason = SpawnAuthoringLoc.T("preview.missing");
                 return;
             }
+
+            gimmick = Gimmicks.HellGateGimmickRuntime.IsGimmickTemplate(prefab);
         }
         else
         {
@@ -156,6 +166,8 @@ internal static class SpawnAuthoringEnemyPreview
             EnsurePipeline();
             clone = Object.Instantiate(prefab);
             clone.name = "HG_AuthoringPreview_" + key;
+            if (gimmick)
+                Gimmicks.HellGateGimmickRuntime.PrepareSpawned(prefab, clone);
             clone.SetActive(true);
             clone.transform.position = new Vector3(PreviewX, PreviewY, 0f);
             clone.transform.rotation = Quaternion.identity;
@@ -181,6 +193,9 @@ internal static class SpawnAuthoringEnemyPreview
             ReenableVisuals(clone);
             if (!trapMode)
                 ForceSpinePose(clone);
+            if (gimmick)
+                Gimmicks.HellGateGimmickRuntime.PosePreview(
+                    clone, gimmickLeverOnly, SpawnAuthoringState.PendingGimmickOpen);
 
             FitCamera(clone);
 
@@ -262,6 +277,10 @@ internal static class SpawnAuthoringEnemyPreview
             else if (string.Equals(key, "HellishTouzokuSword", StringComparison.OrdinalIgnoreCase))
             {
                 HellishTouzokuSkeletonLoader.ApplySkeletons(spawned, HellishTouzokuVariant.Sword);
+            }
+            else if (UndeadSkeletonsLoader.TryGetVariant(key, out UndeadSkeletonVariant undeadVariant))
+            {
+                UndeadSkeletonsLoader.ApplyVisual(spawned, undeadVariant);
             }
         }
         catch (Exception ex)

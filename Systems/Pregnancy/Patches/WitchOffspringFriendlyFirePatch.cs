@@ -113,9 +113,9 @@ internal static class WitchOffspringFriendlyFirePatch
     {
         [HarmonyPrefix]
         [HarmonyPriority(BlockPriority)]
-        private static bool Prefix(playerDamage __instance, Collider2D col)
+        private static bool Prefix(playerDamage __instance, Collider2D attack)
         {
-            if (col == null || !col.CompareTag("playerDAMAGEcol"))
+            if (attack == null || !attack.CompareTag("playerDAMAGEcol"))
                 return true;
 
             if (!ShouldBlockOffspringMeleeHit(__instance))

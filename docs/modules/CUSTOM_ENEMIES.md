@@ -31,6 +31,7 @@ registered as spawn keys:
 | `BossTouzokuCustom` | Touzoku boss | field-spawn variant: runtime, stats/HP scale, intro/combat/safety/ERO patch sets, activator |
 | `WolfModCustom` | MummyDog | Spine skeleton + texture replacement (`[WolfMod]`) |
 | `DemonGorotukiModCustom` | Gorotuki | Spine skeleton + texture replacement (`[DemonGorotuki]`), spawn key `Demon_gorotuki` |
+| `UndeadSkeletonsModCustom` | BigMerman / Bigoni / Pilgrim / Vagrant | skeleton reskin from `Enemies/UndeadSkeletons/<Key>/`; no H-scenes (approach a downed player, never grab); per-variant HP / move / anim speed (`[UndeadSkeletons.<Key>]`); spawn keys `BigMermanUndead`, `BigoniUndead`, `PilgrimUndead`, `VagrantUndead` |
 | `HellishTouzokuModCustom` | Touzoku | skeleton/texture replacement + H-scene escape patch (`[HellishTouzoku]`) |
 | `DoreiModCustom` | Dorei | skeleton/texture replacement + spectator idle patch (`[DoreiMod]`) |
 | `ButcherModCustom` | Slaughterer | Rick-style fatality only (`[ButcherMod]`) |

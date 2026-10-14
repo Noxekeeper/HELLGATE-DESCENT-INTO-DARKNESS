@@ -115,6 +115,8 @@ internal static partial class SpawnAuthoringLoc
 
             ["btn.enemies"] = "Enemies [E]",
             ["btn.enemiesOpen"] = "Enemies ▲ [E]",
+            ["enemies.customHeader"] = "— Custom / Mod enemies —",
+            ["enemies.vanillaHeader"] = "— Vanilla enemies —",
             ["btn.hostage"] = "Hostage [H]",
             ["btn.hostageOpen"] = "Hostage ▲ [H]",
             ["hostage.title"] = "Hostage & OtherScenes",
@@ -155,6 +157,26 @@ internal static partial class SpawnAuthoringLoc
             ["decor.title"] = "Decorations",
             ["spine.title"] = "— Spine animations —",
             ["help.decor"] = "Boxes, barrels, static corpses, scene props. Spine look scenes are under Hostage & OtherScenes. (?) = template not cached yet.",
+            ["btn.gimmick"] = "Gimmicks [L]",
+            ["btn.gimmickOpen"] = "Gimmicks ▲ [L]",
+            ["gimmick.title"] = "Gates & ladders",
+            ["help.gimmick"] = "Iron gates, folding ladders and a standalone lever. Writes GIMMICK,key,X,Y,state. (?) = template not cached yet — it loads from the source map automatically when this tab opens.",
+            ["help.gimmickOptions"] = "Open = gate open / ladder lowered at spawn. Lever = built-in lever reacts to the player and drives only its own ladder. The standalone Lever key drives gates / ladders without a lever of their own whose visible edge is within Radius world units (circle in F11; vanilla ignored). Guard zone > 0 = enemy-driven gimmick: open while no living enemy is in the zone, closed while any is; levers are ignored. The zone starts at the spawn point (F11 cross): Guard zone units along X to the side ← ↔ →, Height split evenly up and down (red box = enemies inside, green = clear). Auto = opens when the player is within 2 units of the spawn point along X and closes when they walk away; with a guard zone, enemies inside keep it closed even with the player next to it (cyan lines in F11).",
+            ["gimmick.guard"] = "Guard zone",
+            ["gimmick.guardHeight"] = "Height",
+            ["gimmick.guardSide"] = "Guard side",
+            ["gimmick.auto"] = "Auto",
+            ["gimmick.name.ladder_nomal"] = "Wooden ladder up + lever",
+            ["gimmick.name.ladder_nomal_pilgrimageentrance"] = "Stone ladder down + lever",
+            ["gimmick.name.gate_fence"] = "Iron gate",
+            ["gimmick.name.gate_fence_pilgrimageentrance"] = "Iron gate (variant 2)",
+            ["gimmick.name.ladder2"] = "Mossy ladder (no lever)",
+            ["gimmick.name.lever"] = "Lever (gates / ladders in radius)",
+            ["gimmick.open"] = "Open / lowered",
+            ["gimmick.lever"] = "Lever",
+            ["gimmick.radius"] = "Radius",
+            ["status.gimmickLoading"] = "Loading gimmick templates from source maps…",
+            ["status.gimmickLoaded"] = "Gimmick templates loaded.",
             ["btn.favorites"] = "Favorites ★ [B]",
             ["btn.favoritesOpen"] = "Favorites ▲ [B]",
             ["btn.delete"] = "Delete [Del]",
@@ -268,6 +290,8 @@ internal static partial class SpawnAuthoringLoc
             ["status.badXy"] = "Bad X/Y (use 12.34 format).",
             ["status.goldRequired"] = "Gold amount required.",
             ["status.deleteFailed"] = "Delete failed.",
+            ["status.vanillaNoDelete"] = "'{0}' is a vanilla map object, not from a HellGate pack — cannot delete.",
+            ["status.unlinkedNoDelete"] = "'{0}' was spawned by HellGate but has no pack line link (extra copy of a count>1 line or runtime spawn) — cannot delete.",
             ["status.cutFailed"] = "Cut failed.",
             ["status.copyFailed"] = "Copy failed.",
             ["status.pasteFailed"] = "Paste failed.",
@@ -369,6 +393,8 @@ internal static partial class SpawnAuthoringLoc
 
         d["btn.enemies"] = "Враги [E]";
         d["btn.enemiesOpen"] = "Враги ▲ [E]";
+        d["enemies.customHeader"] = "— Кастомные / мод-враги —";
+        d["enemies.vanillaHeader"] = "— Оригинальные враги —";
         d["btn.hostage"] = "Пленники [H]";
         d["btn.hostageOpen"] = "Пленники ▲ [H]";
         d["hostage.title"] = "Пленники и OtherScenes";
@@ -409,6 +435,26 @@ internal static partial class SpawnAuthoringLoc
         d["decor.title"] = "Декорации";
         d["spine.title"] = "— Spine-анимации —";
         d["help.decor"] = "Ящики, бочки, статичные трупы, пропы. Spine-сцены — в Пленники и OtherScenes. (?) = шаблон ещё не в кэше.";
+        d["btn.gimmick"] = "Гиммики [L]";
+        d["btn.gimmickOpen"] = "Гиммики ▲ [L]";
+        d["gimmick.title"] = "Ворота и лестницы";
+        d["help.gimmick"] = "Железные ворота, складные лестницы и отдельный рычаг. Пишет GIMMICK,key,X,Y,state. (?) = шаблон ещё не в кэше — подгружается с родной карты автоматически при открытии вкладки.";
+        d["help.gimmickOptions"] = "Открыто = ворота открыты / лестница опущена при спавне. Рычаг = встроенный рычаг реагирует на игрока и управляет только своей лестницей. Отдельный Рычаг управляет воротами/лестницами без своего рычага, чей видимый край попадает в Радиус (мировые единицы, круг в F11; ваниль игнорируется). Зона охраны > 0 = гиммик управляется врагами: открыт, пока в зоне нет живых врагов, и закрыт, пока там есть хоть один; рычаги игнорируются. Зона строится от точки спавна (крестик F11): Зона охраны единиц по X в сторону ← ↔ →, Высота поровну вверх и вниз (красная рамка = враги внутри, зелёная = чисто). Авто = открывается, когда игрок ближе 2 единиц к точке спавна по X, и закрывается, когда он отходит; с зоной охраны враги внутри держат механизм закрытым, даже если игрок рядом (голубые линии в F11).";
+        d["gimmick.guard"] = "Зона охраны";
+        d["gimmick.guardHeight"] = "Высота";
+        d["gimmick.guardSide"] = "Сторона";
+        d["gimmick.auto"] = "Авто";
+        d["gimmick.name.ladder_nomal"] = "Деревянная лестница вверх + рычаг";
+        d["gimmick.name.ladder_nomal_pilgrimageentrance"] = "Каменная лестница вниз + рычаг";
+        d["gimmick.name.gate_fence"] = "Железные ворота";
+        d["gimmick.name.gate_fence_pilgrimageentrance"] = "Железные ворота (вариант 2)";
+        d["gimmick.name.ladder2"] = "Лестница с мхом (без рычага)";
+        d["gimmick.name.lever"] = "Рычаг (ворота / лестницы в радиусе)";
+        d["gimmick.open"] = "Открыто / опущена";
+        d["gimmick.lever"] = "Рычаг";
+        d["gimmick.radius"] = "Радиус";
+        d["status.gimmickLoading"] = "Загрузка шаблонов гиммиков с родных карт…";
+        d["status.gimmickLoaded"] = "Шаблоны гиммиков загружены.";
         d["btn.favorites"] = "Избранное ★ [B]";
         d["btn.favoritesOpen"] = "Избранное ▲ [B]";
         d["btn.delete"] = "Удалить [Del]";
@@ -522,6 +568,8 @@ internal static partial class SpawnAuthoringLoc
         d["status.badXy"] = "Неверные X/Y (формат 12.34).";
         d["status.goldRequired"] = "Нужна сумма золота.";
         d["status.deleteFailed"] = "Удаление не удалось.";
+        d["status.vanillaNoDelete"] = "'{0}' — ванильный объект карты, не из пака HellGate — удалить нельзя.";
+        d["status.unlinkedNoDelete"] = "'{0}' заспавнен HellGate, но без привязки к строке пака (лишняя копия строки с count>1 или спавн во время игры) — удалить нельзя.";
         d["status.cutFailed"] = "Вырезать не удалось.";
         d["status.copyFailed"] = "Копирование не удалось.";
         d["status.pasteFailed"] = "Вставка не удалась.";

@@ -10,6 +10,168 @@ Versions 1.2.2–1.2.3 were internal iterations folded into 1.2.4.
 
 -
 
+## 1.2.7 — 2026-10
+
+### Added
+
+- **Hide cursor in combat and H-scenes** (`[General] HideCursorInGameplay`,
+  default `true`): splash Options toggle (live, no restart; preserved across
+  Easy/Medium/Hard). Cursor stays visible on the title screen, in the pause
+  menu, shops / altar (including the teleport list) / chests, dialogs, the defeat menu (Vengeance /
+  Nightmare) and the F11 Spawn Editor
+  (`Systems/UI/GameplayCursorHider.cs`).
+- **Custom title music** (`[TitleMusic] Enable`, default `true`): main menu
+  theme replaced by a random `.wav` / `.ogg` from
+  `sources/HellGate_sources/Audio/Main`, looped (no immediate repeat on the next
+  title visit). Tracks ship as `.ogg`; empty folder → vanilla theme.
+  Hooked at the start of `Awake` so it wins over the Gametitle BGM during cache
+  preload (`Systems/Audio/TitleMusicSystem.cs`).
+- **Demon Gorotuki** (`DemonGorotukiModCustom`, spawn key `Demon_gorotuki`):
+  new Spine skeleton + texture on a Gorotuki clone, loaded from
+  `sources/HellGate_sources/Gorutoki/Gorutoki/` (battle) and `Gorutoki ERO/`.
+  Spine 3.7/3.8 exports are converted to the 3.4 runtime on load
+  (`SpineJsonLegacyConverter`); fixed 0.008 scale (vanilla Gorotuki), no
+  auto-scaling. Battle set matches vanilla animation / event names (STEP2 restored).
+  Doc: [`docs/modules/CUSTOM_ENEMIES.md`](docs/modules/CUSTOM_ENEMIES.md).
+- **Undead skeletons** (spawn keys `BigMermanUndead`, `BigoniUndead`,
+  `PilgrimUndead`, `VagrantUndead`): vanilla combat prefab with a disk-loaded
+  skeleton reskin from `sources/HellGate_sources/Enemies/UndeadSkeletons/<Key>/`.
+  No H-scenes (they approach a downed player but never grab). Per-variant
+  `[UndeadSkeletons.<Key>]`: HP ×0.25 of the vanilla base enemy, vanilla move
+  and animation speed (`Patches/Enemy/UndeadSkeletonsModCustom/`).
+- **Fear / Morale** (`[FearSystem] Enable`, default `true`): one axis
+  −100 (panic) … +100 (confidence) with a bipolar bar at the bottom of the HUD.
+  Enemy auras, heavy hits, projectiles, grabs, H-scenes and H-phase beats push
+  toward fear; blocks, counters, parries, dodges, hits, kills, Rage and
+  successful struggles push toward confidence. Panic raises dash SP cost,
+  confidence boosts idle SP regen, Morale scales struggle / QTE SP per click
+  (−100 → ×0.75, +100 → ×1.25). HeartBeat cues on fear steps, loop at max fear.
+  Take Vengeance after a lethal trap or fatality: fear spikes to −100, then
+  settles to −30; ordinary death → −10; altar rest → 0. Per-enemy values in
+  `HellGateJson/Fear/FearEnemies.json` (hot-reloaded every 2 s), saved per slot.
+  Doc: [`docs/modules/FEAR.md`](docs/modules/FEAR.md).
+- **Gates, ladders and levers** in spawn packs (`GIMMICK,Key,X,Y,open|closed`
+  + `lever`, `radius=N`, `guard=N`, `auto`): iron gates (`gate_fence`, two
+  variants), folding ladders (wooden up / stone down with built-in lever,
+  mossy without lever) and a standalone lever that drives gates / ladders in
+  its radius. `auto` gates stay shut while enemies remain in their guard zone.
+  Templates load from their source maps (`Systems/Spawn/Gimmicks/`).
+- **F11 Spawn Editor:** Gimmicks panel `[L]` (gate / ladder / lever, open
+  state, radius, guard zone height and side, auto); Enemies `[E]` list has a
+  separate "Custom / Mod enemies" section on top (undead skeletons, Demon
+  Gorotuki, Hellish Touzoku, Wolf, Butcher, BossTouzokuCustom, BigoniBrother,
+  MafiaBossCustom, biscord). Clear status when trying to delete a vanilla map
+  object or an unlinked extra copy.
+- **New spawn content:** `woodspike` (Dungeon spiked wooden posts, `rot180` =
+  hanging from the ceiling), `MesgakiEroSpine` decor (Dungeon background
+  jailer scene, no rescue), new pack `HellGateSpawn_RequiemBoss.txt` for the
+  `requiemboss` arena (RequiemKnight, past the hidden Forest area).
+- **AudioLeak diagnostics** (dev, `HellGateJson/Diagnostics/AudioLeakDiagnostics.json`,
+  default off; read at boot — off means no patches): logs MasterAudio plays with caller, AudioSource start/stop,
+  scene loads, TrapNormal hits and active DontDestroyOnLoad roots to
+  `LogOutput/HellGate_AudioLeakDiag.log`.
+- **Performance log** (dev, `[Diagnostics] PerfLog` / `PerfProfileMethods`,
+  default off): every 5 s a `[PERF]` line with FPS, worst frame, hitches, GC,
+  heap and enemy / Spine / culled counts; optionally the top Harmony-patched
+  methods and Spine updates by ms per frame
+  (`Systems/Diagnostics/PerfDiagnostics.cs`, `PerfMethodProfiler.cs`).
+
+### Fixed
+
+- Rage could be activated after Aradia was already killed (lethal trap death
+  clip, death flag or zero HP).
+- Dungeon Dorei ambush (`etrap_dorei`) never spawned: the pack line was saved
+  as an enemy XY line. Fixed in the pack, and the F11 editor now always writes
+  EventTrap folders (`etrap_*`) as `EVENTTRAP` lines.
+- Lethal cocoon trap threw an error on every trigger (the hidden warning icon
+  was still instantiated); Aradia's floating thoughts and other dialogue popups
+  threw errors when a newer line replaced them mid-animation.
+- Endless sword-clash / exploding barrels in sepia story cutscenes (up to
+  Ragdum) and Nightmare replays: the zone spawn pack ran inside cutscene
+  scenes — `WitchVillage` keeps the zone id `village_main`, and substring pack
+  hints matched `WitchVillage` / `CathedralEV` / `FirstONE` / `VillageOne`, so
+  enemies landed on spawned spikes and looped hit SFX. Story EV, Nightmare
+  (`*ONE`), Gallery / PunishmentRoom / Credit scenes are now
+  excluded by name and while loaded (`HellGateLocationSpawnRefresh`,
+  `HellGateSpawnSceneHints.TryResolvePackForZone`).
+- Title menu: stage-title jingle (`SceneStartMng`, e.g. from `miniGrave`)
+  no longer plays over the menu music during spawn-cache preload (its
+  AudioSource is disabled in every scene loaded while on the title).
+- Title preload leaves no scenes behind: the first hydrated scene
+  (`UndergroundLaboratory`) was kept because the "current level" probe matched
+  the scene just loaded; side-loads pulled in by hydrated levels (`village`,
+  `miniGrave`) are unloaded right away, one `GameoverAnime` is kept for the
+  preload and unloaded at its end.
+- Faster startup: the spawn catalog hooks `sceneLoaded` before the
+  NoRSceneLoader Forest harvest and takes templates (incl. scene-pinned
+  whitelist hostages) from those scenes; the splash preload reloads a scene
+  only if some of its disk-cache keys are still missing (objects created in
+  `Start`), waits two frames for them, and no longer scans the whole whitelist
+  on every scene load (preload ~33 s → ~8 s).
+- Boss disk cache no longer records the NoRSceneLoader runtime scene for
+  `Sisterknight` (it tried to load a non-existent scene on every boot); broken
+  entries are repaired on load.
+- F11 Spawn Editor: rotation / flip of a placed trap (e.g. `trapnormal`) was
+  lost on hot-reload — moving the trap rewrote the old pack line with new X,Y
+  only. The saved line now carries the live `flip` / `rot` tokens.
+- F11 Spawn Editor: clicking a child part of a spawn (e.g. the WoodWana trap,
+  enemy body parts) now selects the spawn itself, so move / edit / delete work;
+  the editor pause is re-applied every frame (enemy scripts could unfreeze it).
+- Any living Crow Inquisition reset `Time.timeScale` to 1 every frame — it broke
+  Slow-Mo and the F11 pause anywhere on the map; now only during its own H-scene.
+- Dorei spectators: Dorei that arrive after the H-scene started now join as
+  spectators too, and the spectator overlay keeps its facing (no flipping).
+- Hostages / traps spawned by HellGate (e.g. `Look_Dorei`, `MobRosewarm`) showed
+  a censor square that appeared when the player came close: vanilla
+  `Mosaic*` / `Pixelation*` quads render as a hole on clones and are now
+  switched off on every spawned template (same policy as the existing
+  Rosewarm / Gorotuki mosaic patches).
+- FIN black background no longer fires during an unrelated H-scene because of
+  background hostage loops (`MesgakiEroSpine`, `Mob_rockinghorseERO`).
+- Harmony parameter-name bugs that silently disabled patches at boot:
+  `WitchOffspringFriendlyFirePatch` (`col` → vanilla `attack`),
+  `HellGateForceElitePatch` and `EnemyConstantVisibilityPatch` (now bound by
+  index).
+- Difficulty presets: writing an empty cfg value (`Key = `) could swallow the
+  line break and overwrite the next setting.
+- Log spam: missing optional fatality sounds and spine-field lookups no longer
+  print warnings.
+
+### Changed
+
+- **First location** (`FirstMap`) significantly reworked: automatic gates now
+  guard the way to the boss and stay shut while enemies remain in front of them.
+- **Dungeon** reworked for HellGate: spawn layout edited and fully redone
+  (`HellGateSpawn_Prison.txt`, scene `Prison`).
+- Take Vengeance after a combat fatality or a vanilla H-fatality now plays the
+  same Mind Broken shock sequence as lethal traps (plus Fear trauma).
+- Fatality clips without a spawn offset drop 0.7 toward the ground by default
+  (`FallDistance`).
+- Default / fallback language is English: EventCore defaults to EN, fatality
+  taunts fall back EN → RU (was RU → EN).
+- `DifferentBigMerman` removed from the enemy spawn list.
+- Removed the unused `[HandoffSystem]` cfg section (`EnableEnemyHandoff`,
+  `HandoffCooldownTime`, `EnableHandoffVisualEffects`): no code read these
+  values. Enemy handoff is controlled by `[EnemyPass] EnableEnemyPassMechanic`.
+- Difficulty presets (EASY / MEDIUM / HARD) now list the 1.2.7 settings
+  (`[FearSystem]`, `[UndeadSkeletons.*]`, `[TitleMusic]`, `[Performance]`,
+  `[Diagnostics]`, `HideCursorInGameplay`, G/T/V hotkeys) with default values;
+  existing preset balance unchanged.
+- White Inquisitor's JIGO handoff now respects `[EnemyPass]
+  EnableEnemyPassMechanic` like the other enemies (BigoniBrother and
+  MafiaBossCustom keep their scripted handoff).
+- **Performance on dense HellGate maps**: Spine animation of HellGate-spawned
+  enemies, hostages and decor far outside the camera is paused
+  (`[Performance] CullOffscreenSpine`, default `true`); AI and physics keep
+  running. Fewer per-frame scans for enemies and player renderer recovery; a
+  disabled black-ooze trap diagnostic no longer scans the scene every frame;
+  faction AI checks bosses once per enemy per frame (less garbage, fewer GC
+  hitches); the HUD visibility check and the cursor hider no longer search the
+  scene for the vanilla HUD, diary windows and altar menu several times a
+  second.
+- Splash supporters list: **♡Miko♡**.
+- Splash / plugin display version `1.2.6` → `1.2.7`.
+
 ## 1.2.6 — 2026-09
 
 Public F95-style notes (player-facing) match the bullets below; this file keeps

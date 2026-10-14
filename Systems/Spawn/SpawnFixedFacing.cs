@@ -223,7 +223,9 @@ internal sealed class SpawnFixedFacing : MonoBehaviour
             float sign = origScale.x < 0f ? -1f : 1f;
             if (needMirror)
                 sign = -sign;
-            target.localScale = new Vector3(sign * mag, origScale.y, origScale.z);
+            Vector3 wanted = new Vector3(sign * mag, origScale.y, origScale.z);
+            if (target.localScale != wanted)
+                target.localScale = wanted;
 
             SkeletonAnimation spine = target.GetComponent<SkeletonAnimation>();
             if (spine != null && spine.skeleton != null)
@@ -255,6 +257,9 @@ internal sealed class SpawnFixedRotation : MonoBehaviour
 {
     public float FixedZ;
 
+    private Rigidbody2D body;
+    private bool bodyResolved;
+
     private void OnEnable()
     {
         Apply();
@@ -262,7 +267,30 @@ internal sealed class SpawnFixedRotation : MonoBehaviour
 
     private void LateUpdate()
     {
+        // Rewriting an unchanged transform still re-syncs its 2D colliders every frame.
+        if (IsHeld())
+            return;
         Apply();
+    }
+
+    private bool IsHeld()
+    {
+        if (!bodyResolved)
+        {
+            body = GetComponent<Rigidbody2D>();
+            bodyResolved = true;
+        }
+
+        float target = SpawnRotationUtility.NormalizeAngle(FixedZ);
+        if (Mathf.Abs(Mathf.DeltaAngle(transform.eulerAngles.z, target)) > 0.01f)
+            return false;
+        if (Mathf.Abs(transform.eulerAngles.x) > 0.01f || Mathf.Abs(transform.eulerAngles.y) > 0.01f)
+            return false;
+        if (body == null)
+            return true;
+        return Mathf.Abs(Mathf.DeltaAngle(body.rotation, target)) <= 0.01f
+               && body.velocity.sqrMagnitude < 0.000001f
+               && Mathf.Abs(body.angularVelocity) < 0.001f;
     }
 
     private void Apply()

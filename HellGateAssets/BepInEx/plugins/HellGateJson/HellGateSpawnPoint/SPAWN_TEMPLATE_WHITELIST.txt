@@ -18,6 +18,7 @@ witchslaveViolin
 witchslaveslime
 EnemyMobCrowSlaveBack
 EnemyMobCrowSlaveStandup
+MesgakiEroSpine@Prison
 mobslumslave@InsomniaTownC
 mobcrawlingslave
 mobspiderslave
@@ -84,6 +85,7 @@ BlackOozeTypeB
 trapnormal
 trap_hari
 Trap_hari
+woodspike@Prison
 impactdamage
 lightimpactnormal
 LightImpactNormal
@@ -158,6 +160,16 @@ VillageSlave@village_main
 NpcSlave@Ranch
 InchurchSlave@InundergroundChurch
 InchchurchSlave@InundergroundChurch
+
+# --- GIMMICK (ворота / складные лестницы) — GIMMICK,Key,X,Y,open|closed ---
+gate_fence@UndergroundChurch
+dooropen@UndergroundChurch
+gate_fence_undergroundchurch@UndergroundChurch
+gate_fence_pilgrimageentrance@PilgrimageEntrance
+ladder_nomal@UndergroundLaboratory
+ladder_nomal_undergroundlaboratory@UndergroundLaboratory
+ladder_nomal_pilgrimageentrance@PilgrimageEntrance
+ladder2@InsomniaTownC
 
 
 

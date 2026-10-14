@@ -66,16 +66,18 @@ internal static class HellGateForceElitePatch
         return managed != null && managed.ForceElite;
     }
 
+    // Original is a static NoREroMod patch whose params are literally named __instance/___mySpine/___JPname;
+    // HarmonyX would resolve ___ names as fields, so bind by index.
     private static bool SpawnSuperEnemyAndHideHP_Prefix(
-        EnemyDate __instance,
-        SkeletonAnimation ___mySpine,
-        ref string ___JPname)
+        EnemyDate __0,
+        SkeletonAnimation __1,
+        ref string __2)
     {
-        if (!HasForceElite(__instance))
+        if (!HasForceElite(__0))
             return true;
 
-        ApplyForcedElite(__instance, ___mySpine, ref ___JPname);
-        ApplyHiddenHpBars(__instance);
+        ApplyForcedElite(__0, __1, ref __2);
+        ApplyHiddenHpBars(__0);
         return false;
     }
 

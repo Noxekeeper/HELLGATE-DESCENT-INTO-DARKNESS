@@ -18,7 +18,8 @@ internal static class SpawnAuthoringState
         Hostage = 5,
         Gold = 6,
         EventTrap = 7,
-        EventCore = 8
+        EventCore = 8,
+        Gimmick = 9
     }
 
     private static CatalogKind activeCatalog;
@@ -57,10 +58,12 @@ internal static class SpawnAuthoringState
     internal static bool GoldPanelOpen => ActiveCatalog == CatalogKind.Gold;
     internal static bool EventTrapPanelOpen => ActiveCatalog == CatalogKind.EventTrap;
     internal static bool EventCorePanelOpen => ActiveCatalog == CatalogKind.EventCore;
+    internal static bool GimmickPanelOpen => ActiveCatalog == CatalogKind.Gimmick;
     internal static bool IsTrapCatalog =>
         ActiveCatalog == CatalogKind.Trap || ActiveCatalog == CatalogKind.LethalTrap;
     internal static bool IsTemplateCatalog =>
-        IsTrapCatalog || ActiveCatalog == CatalogKind.Decor || ActiveCatalog == CatalogKind.Hostage;
+        IsTrapCatalog || ActiveCatalog == CatalogKind.Decor || ActiveCatalog == CatalogKind.Hostage ||
+        ActiveCatalog == CatalogKind.Gimmick;
     internal static bool IsSpecialCatalog =>
         ActiveCatalog == CatalogKind.Gold ||
         ActiveCatalog == CatalogKind.EventTrap ||
@@ -69,11 +72,14 @@ internal static class SpawnAuthoringState
 
     /// <summary>F11 Place rotation is for Trap / Decor only — not Lethal or Hostage &amp; OtherScenes.</summary>
     internal static bool CatalogAllowsRotation =>
-        ActiveCatalog != CatalogKind.LethalTrap && ActiveCatalog != CatalogKind.Hostage;
+        ActiveCatalog != CatalogKind.LethalTrap && ActiveCatalog != CatalogKind.Hostage &&
+        ActiveCatalog != CatalogKind.Gimmick;
 
     internal static bool KeyAllowsRotation(string key)
     {
         if (SpawnAuthoringTrapCatalog.IsLethalPickerKey(key))
+            return false;
+        if (SpawnAuthoringGimmickCatalog.IsPickerKey(key))
             return false;
         if (SpawnAuthoringHostageCatalog.IsPickerKey(key) ||
             SpawnAuthoringHostageCatalog.IsHostageLineKey(key) ||
@@ -120,6 +126,18 @@ internal static class SpawnAuthoringState
     internal static string PendingEventTrapMaxStr = string.Empty;
     internal static string PendingEventTrapRadiusStr = string.Empty;
     internal static string PendingEventTrapDelayStr = string.Empty;
+
+    /// <summary>GIMMICK Place: spawn open (gate) / lowered (ladder).</summary>
+    internal static bool PendingGimmickOpen;
+    /// <summary>GIMMICK Place: built-in lever reacts to the player (<c>lever</c> token).</summary>
+    internal static bool PendingGimmickLever = true;
+    internal static string PendingGimmickRadiusStr = "10";
+    /// <summary>GIMMICK Place: guard zone length along X (0 = off), height and side.</summary>
+    internal static string PendingGimmickGuardStr = "0";
+    internal static string PendingGimmickGuardHeightStr = "8";
+    internal static Gimmicks.HellGateGimmickGuardSide PendingGimmickGuardSide = Gimmicks.HellGateGimmickGuardSide.Both;
+    /// <summary>GIMMICK Place: open only while the player is near (<c>auto</c> token).</summary>
+    internal static bool PendingGimmickAuto;
 
     /// <summary>Confirmed via the Confirm button — used for Append.</summary>
     internal static string SelectedEnemyKey = string.Empty;
@@ -439,6 +457,9 @@ internal static class SpawnAuthoringState
                 ResolvePendingEventCoreChance());
         }
 
+        if (ActiveCatalog == CatalogKind.Gimmick)
+            return BuildPendingGimmickLine(LastClickX, LastClickY, PendingEnemyKey, PendingFlipX);
+
         if (IsTemplateCatalog)
         {
             string templateFaction = null;
@@ -482,8 +503,58 @@ internal static class SpawnAuthoringState
             ResolvePendingEventCoreChance());
     }
 
+    internal static float ResolvePendingGimmickRadius()
+    {
+        if (!float.TryParse(PendingGimmickRadiusStr, NumberStyles.Float, CultureInfo.InvariantCulture, out float radius) ||
+            radius <= 0f)
+            radius = Gimmicks.HellGateGimmickLever.DefaultRadius;
+        return radius;
+    }
+
+    /// <summary>Non-positive or unparsable → <paramref name="fallback"/>.</summary>
+    internal static float ParsePositiveOr(string text, float fallback)
+    {
+        if (!float.TryParse(text, NumberStyles.Float, CultureInfo.InvariantCulture, out float value) || value <= 0f)
+            return fallback;
+        return value;
+    }
+
+    internal static string BuildPendingGimmickLine(float x, float y, string key, bool flipX)
+    {
+        bool leverOnly = SpawnAuthoringPackEdit.IsGimmickLeverKey(key);
+        return SpawnAuthoringPackEdit.BuildGimmickLine(
+            x,
+            y,
+            key,
+            PendingGimmickOpen,
+            leverOnly || PendingGimmickLever,
+            ResolvePendingGimmickRadius(),
+            flipX,
+            PendingSortOffset,
+            null,
+            ParsePositiveOr(PendingGimmickGuardStr, 0f),
+            ParsePositiveOr(PendingGimmickGuardHeightStr, Gimmicks.HellGateGimmickGuard.DefaultHeight),
+            PendingGimmickGuardSide,
+            PendingGimmickAuto ? Gimmicks.HellGateGimmickGuard.DefaultAutoRange : 0f);
+    }
+
     internal static string FormatPendingFlagsShort()
     {
+        if (ActiveCatalog == CatalogKind.Gimmick)
+        {
+            string state = PendingGimmickOpen ? "open" : "closed";
+            bool leverOnly = SpawnAuthoringPackEdit.IsGimmickLeverKey(PendingEnemyKey);
+            string leverNote = leverOnly
+                ? " · r=" + ResolvePendingGimmickRadius().ToString("0.##", CultureInfo.InvariantCulture)
+                : (PendingGimmickLever ? " · lever" : " · no lever");
+            float guard = ParsePositiveOr(PendingGimmickGuardStr, 0f);
+            string guardNote = !leverOnly && guard > 0f
+                ? " · guard " + guard.ToString("0.##", CultureInfo.InvariantCulture)
+                : string.Empty;
+            string autoNote = !leverOnly && PendingGimmickAuto ? " · auto" : string.Empty;
+            return "gimmick · " + state + leverNote + guardNote + autoNote + " · " + (PendingFlipX ? "flip" : "no-flip");
+        }
+
         if (ActiveCatalog == CatalogKind.Gold)
         {
             string goldRnd = PendingRandom

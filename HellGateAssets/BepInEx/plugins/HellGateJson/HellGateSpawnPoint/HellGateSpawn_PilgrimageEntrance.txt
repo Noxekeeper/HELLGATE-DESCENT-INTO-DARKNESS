@@ -1,4 +1,24 @@
-# Pilgrimage Entrance spawn | X,Y,EnemyType,Count
+﻿# Pilgrimage Entrance spawn | X,Y,EnemyType,Count
 # POOL[TouzokuNormal,TouzokuAxe,Dorei] = random from 3 types
 # InquisitionWhite, Librarian, CrowInquisition, Inquisition
 
+1678.30,-216.98,TouzokuNormal|faction=bandits_inquisition,1
+1673.90,-217.27,TouzokuNormal|faction=bandits_inquisition,1
+1680.01,-217.79,TouzokuAxe|faction=bandits_inquisition,1
+1631.05,-216.62,Sisterknight|faction=church,1
+1675.39,-216.39,Mutude|faction=demons,1
+1673.38,-217.01,Mutude|faction=demons,1
+1634.48,-217.53,Wolf|faction=church,1
+GIMMICK,gate_fence_pilgrimageentrance,1636.15,-224.42,closed,lever,guard=10,guardside=right
+1614.67,-231.99,trapnormal,1,rot180
+GOLD,1609.23,-238.50,2-5,1
+GOLD,1608.51,-238.62,2-5,1
+GOLD,1609.97,-238.85,3-7,1
+GOLD,1609.28,-239.30,5-10,1
+GOLD,1607.02,-239.05,3-7,1
+GOLD,1606.44,-238.28,2-5,1
+TRAP,MobSlumSlave|faction=bandits_inquisition,1611.73,-238.94,1
+EVENTTRAP,etrap_vagrant,1606.49,-237.40,count=1,faction=bandits_inquisition,r=5
+1605.72,-235.26,trapnormal,1,rot210
+TRAP,trapmachine,1609.60,-237.21,1
+GOLD,1607.01,-235.67,3-7,1

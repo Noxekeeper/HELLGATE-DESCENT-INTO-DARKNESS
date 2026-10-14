@@ -980,6 +980,9 @@ internal class DialogueDisplay
         
         while (elapsed < totalDuration)
         {
+            if (text == null || rect == null)
+                yield break;
+
             elapsed += Time.deltaTime;
             
             // Scale animation (quick appear)
@@ -1058,6 +1061,9 @@ internal class DialogueDisplay
         
         while (elapsed < duration)
         {
+            if (text == null || rect == null)
+                yield break;
+
             elapsed += Time.deltaTime;
             
             // Appear phase (fast)
@@ -1123,6 +1129,10 @@ internal class DialogueDisplay
 
         while (elapsed < duration)
         {
+            // The container is destroyed from outside when a newer line replaces it.
+            if (rect == null || text == null)
+                yield break;
+
             elapsed += Time.deltaTime;
 
             float scaleT = Mathf.Clamp01(elapsed / scaleDuration);
@@ -1197,6 +1207,9 @@ internal class DialogueDisplay
         
         while (elapsed < duration)
         {
+            if (text == null || containerRect == null)
+                yield break;
+
             elapsed += Time.deltaTime;
             
             if (elapsed < quickFlyDuration)
@@ -1885,6 +1898,9 @@ internal class DialogueDisplay
         
         while (elapsed < duration)
         {
+            if (text == null || containerRect == null)
+                yield break;
+
             elapsed += Time.deltaTime;
             
             // Update position every frame, if need to follow the bone (for zoom support)

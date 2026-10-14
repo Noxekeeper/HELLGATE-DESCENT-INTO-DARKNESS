@@ -5,15 +5,31 @@
 
 #Trap
 467.06,-184.66,wallhip,1
-472.76,-185.66,mobslumslave,1
+472.76,-185.66,mobslumslave|faction=mafia,1
 
-#Other group neutral
-466.06,-184.00,MafiaBosscustom|faction=bandits,1
-468.10,-184.66,Vagrant,1
-470.06,-184.66,Vagrant,1
-470.06,-184.66,Vagrant,1
-474.76,-184.66,Vagrant,1
-476.25,-184.66,Vagrant,1
-475.25,-184.66,Vagrant,1
+#Other group mafia
+466.06,-184.00,MafiaBosscustom|faction=mafia,1
+468.10,-184.66,Vagrant|faction=mafia,1
+470.06,-184.66,Vagrant|faction=mafia,1
+474.76,-184.66,Vagrant|faction=mafia,1
+475.25,-184.66,Vagrant|faction=mafia,1
 
 
+
+621.84,-275.00,lightningTrap_button,1
+
+random,0.7,493.80,-183.27,TouzokuNormal|faction=bandits|ec_event=eventcore_fsp_bandits_sex_paid,1
+
+
+488.48,-175.00,mobslumslave|faction=mafia,1
+
+551.76,-188.42,MafiaBosscustom|faction=mafia,1
+548.22,-187.79,MafiaBosscustom|faction=mafia,1
+554.40,-189.31,mobslumslave|faction=mafia,1
+
+
+678.11,-287.88,mobslumslave|faction=mafia,1,far
+676.54,-288.42,mobslumslave|faction=mafia,1,left,far
+681.02,-287.96,Look_Dorei|faction=mafia,1,left
+674.10,-288.44,Look_Dorei|faction=mafia,1
+678.05,-287.39,wallhip,1

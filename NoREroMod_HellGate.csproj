@@ -108,8 +108,7 @@
     <Compile Include="Patches\Enemy\MummyDogPassPatch.cs" />
     <Compile Include="Patches\Enemy\PilgrimPassPatch.cs" />
     <Compile Include="Patches\Enemy\MummyManPassPatch.cs" />
-    <Compile Include="Patches\Enemy\MummyManHandoffHide.cs" />
-    <Compile Include="Patches\Enemy\UndeadPassPatch.cs" />
+    <Compile Include="Patches\Enemy\MummyManHandoffHide.cs" />    <Compile Include="Patches\Enemy\UndeadPassPatch.cs" />
     <Compile Include="Patches\Enemy\CrowInquisition\CrowInquisitionEROFix.cs" />
     <Compile Include="Patches\Enemy\CrowInquisition\CrowInquisitionPassLogic.cs" />
     
@@ -215,6 +214,13 @@
     <!-- Demon_gorotuki: Spine swap on Gorotuki -->
     <Compile Include="Patches\Enemy\DemonGorotukiModCustom\DemonGorotukiTextureLoader.cs" />
     <Compile Include="Patches\Enemy\DemonGorotukiModCustom\DemonGorotukiSkeletonLoader.cs" />
+    <!-- Undead skeletons: battle-only Spine swap on BigMerman / Bigoni / Pilgrim / Vagrant, no H-scene -->
+    <Compile Include="Patches\Enemy\SpineJsonLegacyConverter.cs" />
+    <Compile Include="Patches\Enemy\UndeadSkeletonsModCustom\UndeadSkeletonsConfig.cs" />
+    <Compile Include="Patches\Enemy\UndeadSkeletonsModCustom\UndeadSkeletonsTextureLoader.cs" />
+    <Compile Include="Patches\Enemy\UndeadSkeletonsModCustom\UndeadSkeletonsLoader.cs" />
+    <Compile Include="Patches\Enemy\UndeadSkeletonsModCustom\UndeadSkeletonsRuntime.cs" />
+    <Compile Include="Patches\Enemy\UndeadSkeletonsModCustom\UndeadSkeletonsEnemyPatches.cs" />
     <!-- Dorei Mod: fapping idle во время ожидания в H-сцене -->
     <Compile Include="Patches\Enemy\DoreiModCustom\DoreiTextureLoader.cs" />
     <Compile Include="Patches\Enemy\DoreiModCustom\DoreiSkeletonLoader.cs" />
@@ -396,6 +402,9 @@
     <Compile Include="Systems\Diagnostics\Tentacle\TentacleDiagnosticsLifecyclePatches.cs" />
     <Compile Include="Systems\Diagnostics\TrapBody\TrapPlayerBodyDiagnostics.cs" />
     <Compile Include="Systems\Diagnostics\TrapBody\TrapPlayerBodyDiagnosticsConfig.cs" />
+    <Compile Include="Systems\Diagnostics\AudioLeak\AudioLeakDiagnostics.cs" />
+    <Compile Include="Systems\Audio\TitleMusicSystem.cs" />
+    <Compile Include="Systems\Diagnostics\AudioLeak\AudioLeakDiagnosticsConfig.cs" />
     <Compile Include="Systems\Diagnostics\TrapBody\TrapPlayerBodyDiagLog.cs" />
     <Compile Include="Systems\Diagnostics\TrapBody\TrapPlayerBodyMonitor.cs" />
     <Compile Include="Systems\Diagnostics\TrapBody\TrapPlayerBodyLifecyclePatches.cs" />
@@ -626,6 +635,7 @@
     <Compile Include="Systems\UI\ForestLoaderDeferral.cs" />
     <Compile Include="Systems\UI\SplashScreenUILabels.cs" />
     <Compile Include="Systems\UI\HellGateSplashOptionsMenu.cs" />
+    <Compile Include="Systems\UI\GameplayCursorHider.cs" />
     <Compile Include="Systems\UI\HellGateTitleMenuBackdrop.cs" />
     <Compile Include="Systems\UI\Portrait\PortraitAssetLoader.cs" />
     <Compile Include="Systems\UI\Portrait\PortraitModSystem.cs" />
@@ -639,11 +649,31 @@
     <Compile Include="Systems\Rage\Patches\RageResetOnGrabDownPatch.cs" />
     <Compile Include="Systems\Rage\Patches\RageHitTrackerPatch.cs" />
     <Compile Include="Systems\Rage\Patches\RageActiveImmunityPatch.cs" />
+
+    <!-- Systems/Fear (Morale axis) -->
+    <Compile Include="Systems\Fear\FearConfig.cs" />
+    <Compile Include="Systems\Fear\FearCatalog.cs" />
+    <Compile Include="Systems\Fear\FearHPhases.cs" />
+    <Compile Include="Systems\Fear\FearHPhaseHooks.cs" />
+    <Compile Include="Systems\Fear\FearHeartbeatAudio.cs" />
+    <Compile Include="Systems\Fear\FearHeartbeatCues.cs" />
+    <Compile Include="Systems\Fear\HighInquisitionFemaleFearControl.cs" />
+    <Compile Include="Systems\Fear\FearSystem.cs" />
+    <Compile Include="Systems\Fear\FearAuraTicker.cs" />
+    <Compile Include="Systems\Fear\FearUISystem.cs" />
+    <Compile Include="Systems\Fear\FearSlotStore.cs" />
+    <Compile Include="Systems\Fear\Patches\FearCombatHooks.cs" />
+    <Compile Include="Systems\Fear\Patches\FearVanillaHFatalityHooks.cs" />
+    <Compile Include="Systems\Fear\Patches\FearAltarRestHook.cs" />
     
     
 
     <!-- Systems/Cache - Performance optimization -->
     <Compile Include="Systems\Cache\UnifiedPlayerCacheManager.cs" />
+    <Compile Include="Systems\Cache\LiveEnemyCache.cs" />
+    <Compile Include="Systems\Spawn\SpawnSpineCuller.cs" />
+    <Compile Include="Systems\Diagnostics\PerfMethodProfiler.cs" />
+    <Compile Include="Systems\Diagnostics\PerfDiagnostics.cs" />
     <Compile Include="Systems\Cache\UnifiedCameraCacheManager.cs" />
     <Compile Include="Systems\Cache\UnifiedGameControllerCacheManager.cs" />
     
@@ -659,6 +689,8 @@
     <Compile Include="Systems\Spawn\Authoring\SpawnAuthoringState.cs" />
     <Compile Include="Systems\Spawn\Authoring\SpawnAuthoringEnemyCatalog.cs" />
     <Compile Include="Systems\Spawn\Authoring\SpawnAuthoringTrapCatalog.cs" />
+    <Compile Include="Systems\Spawn\Authoring\SpawnAuthoringGimmickCatalog.cs" />
+    <Compile Include="Systems\Spawn\Authoring\SpawnAuthoringGimmickRadius.cs" />
     <Compile Include="Systems\Spawn\Authoring\SpawnAuthoringHostageCatalog.cs" />
     <Compile Include="Systems\Spawn\Authoring\SpawnAuthoringGoldCatalog.cs" />
     <Compile Include="Systems\Spawn\Authoring\SpawnAuthoringEventTrapCatalog.cs" />
@@ -691,6 +723,10 @@
     <Compile Include="Systems\Spawn\HellGateBossSpawnBootstrap.cs" />
     <Compile Include="Systems\Spawn\SpawnDecorCatalog.cs" />
     <Compile Include="Systems\Spawn\SpawnTemplateCatalog.cs" />
+    <Compile Include="Systems\Spawn\Gimmicks\HellGateGimmickController.cs" />
+    <Compile Include="Systems\Spawn\Gimmicks\HellGateGimmickLever.cs" />
+    <Compile Include="Systems\Spawn\Gimmicks\HellGateGimmickGuard.cs" />
+    <Compile Include="Systems\Spawn\Gimmicks\HellGateGimmickRuntime.cs" />
     <Compile Include="Systems\Spawn\SpawnSpikeKeys.cs" />
     <Compile Include="Systems\Spawn\SpawnRotationUtility.cs" />
     <Compile Include="Systems\Spawn\SpawnDepthUtility.cs" />

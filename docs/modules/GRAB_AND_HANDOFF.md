@@ -34,7 +34,7 @@ Code: `Systems/GrabSystem/` · Config: `[GrabSystemNG]`
 
 ## Enemy handoff
 
-Code: `Systems/Handoff/` · Config: `[HandoffSystem]`, `[EnemyPass]`
+Code: `Systems/Handoff/` · Config: `[EnemyPass]`
 
 After an H-scene, a nearby compatible enemy can take over ("pass") instead of
 the scene ending.

@@ -93,6 +93,7 @@ internal static class SpawnTemplateDiskCache
                 return;
 
             string[] lines = File.ReadAllLines(path);
+            int purged = 0;
             for (int i = 0; i < lines.Length; i++)
             {
                 string line = lines[i].Trim();
@@ -103,10 +104,21 @@ internal static class SpawnTemplateDiskCache
                 if (entry == null || string.IsNullOrEmpty(entry.Key))
                     continue;
 
+                if (IsForeignGimmickEntry(entry))
+                {
+                    purged++;
+                    continue;
+                }
+
                 entries[entry.Key] = entry;
             }
 
             Plugin.Log?.LogInfo($"[SPAWN DISK CACHE] Loaded {entries.Count} key(s) from {FileName}.");
+            if (purged > 0)
+            {
+                Plugin.Log?.LogInfo($"[SPAWN DISK CACHE] Purged {purged} gimmick key(s) recorded from non-source maps.");
+                SaveToDisk();
+            }
             if (entries.Count == 0)
                 SeedFromWhitelistHints();
         }
@@ -137,6 +149,9 @@ internal static class SpawnTemplateDiskCache
             SpawnZ = spawnZ
         };
 
+        if (IsForeignGimmickEntry(entry))
+            return;
+
         if (entries.TryGetValue(normalizedKey, out Entry existing))
         {
             if (EntriesEqual(existing, entry))
@@ -150,10 +165,39 @@ internal static class SpawnTemplateDiskCache
             {
                 return;
             }
+
+            if (!string.IsNullOrEmpty(existing.Scene) &&
+                !string.Equals(existing.Scene, ResourcesSceneToken, StringComparison.OrdinalIgnoreCase) &&
+                !string.Equals(entry.Scene, ResourcesSceneToken, StringComparison.OrdinalIgnoreCase) &&
+                !string.Equals(existing.Scene, entry.Scene, StringComparison.OrdinalIgnoreCase))
+            {
+                return;
+            }
         }
 
         entries[normalizedKey] = entry;
         SaveToDisk();
+    }
+
+    /// <summary>
+    /// SpawnTemplateCatalog cached this scene on sceneLoaded (any loader, incl. NoRSceneLoader at boot).
+    /// Objects created in Start are absent then, so the scene counts as hydrated only when every
+    /// disk key pinned to it is already in the catalog; otherwise the splash preload loads it.
+    /// </summary>
+    internal static bool MarkSceneCapturedIfComplete(string sceneName)
+    {
+        if (string.IsNullOrEmpty(sceneName))
+            return false;
+
+        foreach (KeyValuePair<string, Entry> pair in entries)
+        {
+            if (string.Equals(pair.Value.Scene, sceneName, StringComparison.OrdinalIgnoreCase)
+                && !SpawnTemplateCatalog.HasTemplate(pair.Key))
+                return false;
+        }
+
+        hydratedScenes.Add(sceneName);
+        return true;
     }
 
     internal static void ScheduleRestore(Plugin plugin)
@@ -274,6 +318,7 @@ internal static class SpawnTemplateDiskCache
                 splashPreloadCompletedScenes++;
             }
 
+            SpawnTemplateWhitelist.ReloadAndCache(Plugin.Instance);
             SpawnTemplateCatalog.RefreshAliasesAndDump();
         }
         finally
@@ -341,7 +386,15 @@ internal static class SpawnTemplateDiskCache
 
         var keys = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
         SpawnConfigExecutor.CollectTemplateKeysFromConfig(configPath, keys);
-        if (keys.Count == 0)
+        yield return HydrateKeys(keys, Path.GetFileName(configPath));
+    }
+
+    /// <summary>Loads source scenes (disk cache / whitelist hints) for template keys not cached yet.</summary>
+    internal static IEnumerator HydrateKeys(HashSet<string> keys, string label)
+    {
+        if (enabledConfig != null && !enabledConfig.Value)
+            yield break;
+        if (keys == null || keys.Count == 0)
             yield break;
 
         // Resources-marked keys can be restored without a map load.
@@ -443,7 +496,7 @@ internal static class SpawnTemplateDiskCache
             gameplayScene = SceneManager.GetActiveScene().name;
 
         Plugin.Log?.LogInfo(
-            $"[SPAWN DISK CACHE] Hydrate {keys.Count} key(s) via {scenes.Count} scene(s) for {Path.GetFileName(configPath)}.");
+            $"[SPAWN DISK CACHE] Hydrate {keys.Count} key(s) via {scenes.Count} scene(s) for {label}.");
 
         SpawnCacheWeatherGuard.BeginHydrateBatch();
         try
@@ -491,28 +544,37 @@ internal static class SpawnTemplateDiskCache
             AsyncOperation? op = null;
             try
             {
+                SpawnCacheWeatherGuard.NoteHydrateSceneRequest(sceneName);
                 // Async + activation — sync LoadScene can deadlock if other loads sit at 0.9.
                 op = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
             }
             catch (Exception ex)
             {
+                SpawnCacheWeatherGuard.EndHydrateSceneRequest(sceneName);
                 Plugin.Log?.LogWarning($"[SPAWN DISK CACHE] Failed to load \"{sceneName}\": {ex.Message}");
                 yield break;
             }
 
-            if (op == null)
-                yield break;
-
-            op.allowSceneActivation = true;
-            float started = Time.realtimeSinceStartup;
-            while (!op.isDone)
+            try
             {
-                if (Time.realtimeSinceStartup - started > 60f)
-                {
-                    Plugin.Log?.LogWarning($"[SPAWN DISK CACHE] Timed out loading \"{sceneName}\" — skipping.");
+                if (op == null)
                     yield break;
+
+                op.allowSceneActivation = true;
+                float started = Time.realtimeSinceStartup;
+                while (!op.isDone)
+                {
+                    if (Time.realtimeSinceStartup - started > 60f)
+                    {
+                        Plugin.Log?.LogWarning($"[SPAWN DISK CACHE] Timed out loading \"{sceneName}\" — skipping.");
+                        yield break;
+                    }
+                    yield return null;
                 }
-                yield return null;
+            }
+            finally
+            {
+                SpawnCacheWeatherGuard.EndHydrateSceneRequest(sceneName);
             }
 
             loadedHere = true;
@@ -523,7 +585,23 @@ internal static class SpawnTemplateDiskCache
             yield break;
 
         SpawnCacheWeatherGuard.OnAdditiveSceneLoaded(scene);
+
+        bool titleLoad = loadedHere && SpawnCacheWeatherGuard.IsTitleActive();
+        if (titleLoad)
+        {
+            // Hostages, barrel layers and damage boxes are created in Start.
+            yield return null;
+            yield return null;
+            if (!scene.IsValid() || !scene.isLoaded)
+                yield break;
+        }
+
         SpawnTemplateCatalog.CacheFromSceneForDiskRestore(scene);
+        if (titleLoad)
+        {
+            SpawnTemplateWhitelist.CacheForScene(sceneName);
+            EnemyPrefabDiskCache.MarkSceneCapturedIfComplete(sceneName);
+        }
 
         if (loadedHere && !ShouldKeepHydrateSceneLoaded(sceneName, gameplayScene))
         {
@@ -546,6 +624,10 @@ internal static class SpawnTemplateDiskCache
         if (string.IsNullOrEmpty(sceneName))
             return true;
 
+        // No player level on the title screen — the level probe would match the scene just loaded.
+        if (SpawnCacheWeatherGuard.IsTitleActive())
+            return false;
+
         if (!string.IsNullOrEmpty(gameplayScene)
             && string.Equals(sceneName, gameplayScene, StringComparison.OrdinalIgnoreCase))
             return true;
@@ -561,6 +643,33 @@ internal static class SpawnTemplateDiskCache
             return true;
 
         return false;
+    }
+
+    /// <summary>
+    /// A key recorded from one map must never be re-sourced from another loaded map: the same vanilla
+    /// component (e.g. WoodWana) can sit under a huge scene chunk elsewhere and first-come caching
+    /// would silently swap the template for every pack. Delete the cache line to re-pin a key.
+    /// </summary>
+    internal static bool IsPinnedToOtherScene(string normalizedKey, string sceneName)
+    {
+        if (enabledConfig != null && !enabledConfig.Value)
+            return false;
+        if (string.IsNullOrEmpty(normalizedKey) || string.IsNullOrEmpty(sceneName))
+            return false;
+        if (!entries.TryGetValue(normalizedKey, out Entry existing) || existing == null)
+            return false;
+        if (string.IsNullOrEmpty(existing.Scene) ||
+            string.Equals(existing.Scene, ResourcesSceneToken, StringComparison.OrdinalIgnoreCase))
+            return false;
+
+        return !string.Equals(existing.Scene, sceneName.Trim(), StringComparison.OrdinalIgnoreCase);
+    }
+
+    private static bool IsForeignGimmickEntry(Entry entry)
+    {
+        return entry != null &&
+               string.Equals(entry.Prefix, "Gimmick", StringComparison.OrdinalIgnoreCase) &&
+               !Gimmicks.HellGateGimmickRuntime.IsSourceScene(entry.Scene);
     }
 
     private static Entry ParseLine(string line)
@@ -681,6 +790,10 @@ internal static class SpawnTemplateDiskCache
             if (source.GetComponentInChildren<SpawnSlave>(true) != null)
                 return "SpawnSlave";
         }
+
+        string gimmickComponent = Gimmicks.HellGateGimmickRuntime.DetectVanillaComponentName(source);
+        if (!string.IsNullOrEmpty(gimmickComponent))
+            return gimmickComponent;
 
         Trapdata trapdata = source.GetComponentInChildren<Trapdata>(true);
         if (trapdata != null)

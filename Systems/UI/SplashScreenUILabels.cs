@@ -47,6 +47,20 @@ internal static class SplashScreenUILabels
         { "ES", "QTE simple" },
     };
 
+    private static readonly Dictionary<string, string> HideCursorLabelByLanguage = new Dictionary<string, string>
+    {
+        { "EN", "Hide cursor in combat and H-scenes" },
+        { "RU", "Скрывать курсор в бою и H-сценах" },
+        { "JP", "戦闘とHシーンでカーソルを隠す" },
+        { "CN", "战斗和H场景中隐藏光标" },
+        { "KR", "전투 및 H씬에서 커서 숨기기" },
+        { "FR", "Masquer le curseur en combat et scènes H" },
+        { "DE", "Cursor im Kampf und in H-Szenen ausblenden" },
+        { "PT", "Ocultar cursor em combate e cenas H" },
+        { "BR", "Ocultar cursor em combate e cenas H" },
+        { "ES", "Ocultar cursor en combate y escenas H" },
+    };
+
     private static readonly Dictionary<string, string> DifficultyLabelByLanguage = new Dictionary<string, string>
     {
         { "EN", "Difficulty" },
@@ -189,6 +203,13 @@ internal static class SplashScreenUILabels
         if (SimpleQteLabelByLanguage.TryGetValue(languageCode, out string label))
             return label;
         return SimpleQteLabelByLanguage["EN"];
+    }
+
+    internal static string GetHideCursorLabel(string languageCode)
+    {
+        if (HideCursorLabelByLanguage.TryGetValue(languageCode, out string label))
+            return label;
+        return HideCursorLabelByLanguage["EN"];
     }
 
     internal static string GetDifficultyLabel(string languageCode)

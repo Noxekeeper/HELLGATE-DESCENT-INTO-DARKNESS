@@ -1,4 +1,5 @@
 using HarmonyLib;
+using NoREroMod.Systems.Fear;
 using NoREroMod.Systems.Rage;
 using UnityEngine;
 
@@ -38,7 +39,10 @@ internal static class VengeanceStrikeStabPresentationPatch
         {
             float cost = Mathf.Clamp(Plugin.vengeanceStrikeRageCostPercent?.Value ?? 15f, 0f, 100f);
             if (cost > 0f)
+            {
                 RageSystem.AddRage(-cost, "vengeance_strike");
+                FearSystem.NotifyVengeanceStrikeSpend();
+            }
         }
 
         VengeanceStrikeRuntime.TryBeginStabPresentation(__instance);

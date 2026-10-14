@@ -11,12 +11,12 @@ Modular BepInEx/Harmony overhaul framework for *Night of Revenge*.
 |----------|-------|
 | Plugin | NoREroMod HellGate |
 | Plugin GUID | `NoREroMod_HellGate` |
-| Current version | `1.2.6` |
+| Current version | `1.2.7` |
 | Output assembly | `NoR_HellGate.dll` |
 | Target framework | .NET Framework 3.5 |
 | Runtime | Unity / BepInEx |
 | Patching | Harmony |
-| Player release | [F95zone thread (v1.2.6)](https://f95zone.to/threads/night-of-revenge-hellgate-descent-into-darkness-v1-2-6-noxekeeper.302025/) |
+| Player release | [F95zone thread (v1.2.7)](https://f95zone.to/threads/night-of-revenge-hellgate-descent-into-darkness-v1-2-7-noxekeeper.302025/) |
 
 HellGate extends *Night of Revenge* by patching the game's managed types
 directly and by running independent gameplay services alongside them.
@@ -227,18 +227,20 @@ Current asset pack:
 
 | Field | Value |
 |-------|-------|
-| Pack | `HELLGATE_sources.7z` (contains `sources/HellGate_sources/`) |
-| Compatible with | HellGate 1.2.6 |
-| Download | [MEGA](https://mega.nz/file/X9Z1SYJC#qeu62JkDmU10ewKVnZeBT-u_zHp-JYeGELcVSfwfsSw) |
-| Size | 244,344,030 bytes (233 MB) |
-| SHA-256 | `B7BB3A2482C51FF7D85B643E723F2AA1A7D03B0994EFD251AF6A7CB4A4C8350A` |
+| Pack | `sources_1.2.7.7z` (contains `sources/HellGate_sources/` and `sources/BepInEx/`) |
+| Compatible with | HellGate 1.2.7 |
+| Download | [MEGA](https://mega.nz/file/C9xiEKiY#uu5hm9plvzNxuDJNFMP35hm3Jj5Wq4ZIbIk8a4UA2jU) |
+| Size | 302,376,532 bytes (288 MB) |
+| SHA-256 | `B1DA1421E1BCB1F33BEC1930D83628EA689667E02C4E53079BAF821480DE8C5F` |
 
 Verify the checksum after download
-(`Get-FileHash HELLGATE_sources.7z -Algorithm SHA256` in PowerShell) and
+(`Get-FileHash sources_1.2.7.7z -Algorithm SHA256` in PowerShell) and
 extract the archive so that `HellGate_sources/` ends up under
-`<NorGameRoot>/sources/`. The `BepInEx/` runtime tree (plugin DLLs and
-`HellGateJson/` data) is not part of this pack — it is tracked in this
-repository under `HellGateAssets/BepInEx/`.
+`<NorGameRoot>/sources/`. The pack also carries `sources/BepInEx/`: the 1.2.7
+runtime tree (dependency plugins, `HellGateJson/` data, Easy/Medium/Hard
+preset configs) without `NoR_HellGate.dll`, which is built from this
+repository. Its contents go to `<NorGameRoot>/BepInEx/`. Plugin DLLs and
+`HellGateJson/` data are also tracked here under `HellGateAssets/BepInEx/`.
 
 When publishing a new pack version, update this table (link, size, SHA-256,
 compatibility) in the same commit.

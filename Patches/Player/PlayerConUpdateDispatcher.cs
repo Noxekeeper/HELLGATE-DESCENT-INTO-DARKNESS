@@ -7,6 +7,7 @@ using NoREroMod.Systems.CombatAi.Factions.Patches;
 using NoREroMod.Patches.UI.MindBroken;
 using NoREroMod.Systems.UI.Portrait;
 using NoREroMod.Systems.Economy;
+using NoREroMod.Systems.Fear;
 using Spine.Unity;
 
 namespace NoREroMod.Patches.Player;
@@ -127,13 +128,23 @@ internal static class PlayerConUpdateDispatcher
         try { PortraitModSystem.Process(__instance, ___playerstatus, ___eroflag); }
         catch (System.Exception ex) { Plugin.Log?.LogWarning($"[PlayerConUpdate] PortraitMod: {ex.Message}"); }
 
+        // 11. Fear/Morale aura + soft decay + combat soft effects
+        try { FearAuraTicker.Process(__instance, ___eroflag, ___erodown); }
+        catch (System.Exception ex) { Plugin.Log?.LogWarning($"[PlayerConUpdate] Fear: {ex.Message}"); }
+
     }
+
+    private const float RendererRecoveryInterval = 0.5f;
+    private static float _nextRendererRecovery;
 
     private static void RecoverPlayerRendererAfterHScene(playercon player)
     {
         if (player == null) return;
         if (NoREroMod.Systems.EnemyFatality.EnemyFatalitySession.IsActive) return;
         if (player.eroflag || player.erodown != 0) return;
+        // Three GetComponentsInChildren allocations per call; a stuck renderer can wait half a second.
+        if (Time.unscaledTime < _nextRendererRecovery) return;
+        _nextRendererRecovery = Time.unscaledTime + RendererRecoveryInterval;
 
         GameObject playerObj = NoREroMod.Systems.Cache.UnifiedPlayerCacheManager.GetPlayerObject();
         if (playerObj == null) return;

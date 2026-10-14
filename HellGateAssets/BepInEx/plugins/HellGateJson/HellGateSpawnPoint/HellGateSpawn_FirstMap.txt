@@ -1,9 +1,10 @@
-# HellGate Spawn — FirstMap
+﻿# HellGate Spawn — FirstMap
 # Enemy: X,Y,EnemyType[,|faction=...],Count
 # RANDOM: RANDOM,chance,X,Y,EnemyType[,|faction=...],Count
 
+
 # Gold loot
--109.63,-126.29,gold=1-3,1
+-110.18,-126.03,gold=1-3,1
 -109.54,-125.92,gold=1-3,1
 -109.46,-125.52,gold=1-3,1
 
@@ -37,13 +38,12 @@
 
 
 # event anchors (short format: COMMAND,packFolder,x,y — see EVENT_TRAP_SPAWN_CHEATSHEET.txt)
-EVENTTRAP,etrap_touzoku_touzokuaxe,-111.86,-124.50
+EVENTTRAP,etrap_touzoku_touzokuaxe,-112.95,-124.47
 EVENTTRAP,etrap_touzoku_touzokuaxe,-85.92,-112.05
 REINFORCEMENT,boss_reinf_touzoku,1.57,-123.50
 
 # enemies
 
--125.73,-119.60,SlaveBigAxe|faction=church,1
 RANDOM,0.5,-116.92,-135.44,TouzokuNormal|faction=bandits,1
 RANDOM,0.5,-107.10,-137.00,TouzokuAxe|faction=bandits,1
 RANDOM,0.5,-95.16,-128.28,TouzokuAxe|faction=bandits,1
@@ -64,15 +64,13 @@ RANDOM,0.5,-32.07,-128.78,TouzokuNormal|faction=bandits,1
 RANDOM,0.5,-30.38,-138.74,TouzokuAxe|faction=bandits,1
 RANDOM,0.5,-30.06,-122.67,TouzokuNormal|faction=bandits,1
 RANDOM,0.5,-28.11,-129.26,TouzokuNormal|faction=bandits,1
-RANDOM,0.5,-22.82,-122.67,TouzokuNormal|faction=bandits,1
 -22.19,-122.68,Wolf|faction=bandits,1
 -20.22,-144.04,Wolf|faction=bandits,1
 RANDOM,0.5,-19.80,-138.74,TouzokuNormal|faction=bandits,1
 RANDOM,0.5,-19.06,-129.30,TouzokuNormal|faction=bandits,1
-RANDOM,0.5,-17.13,-122.67,TouzokuNormal|faction=bandits,1
 
 # scene traps
-TRAP,wana_start,-111.45,-128.44,1
+TRAP,wana_start,-111.85,-128.32,1
 TRAP,woodwana,-85.35,-115.99,1
 TRAP,woodwana,1.53,-120.50,1
 
@@ -93,25 +91,16 @@ TRAP,woodwana,1.53,-120.50,1
 -62.25,-127.08,taru_exp,1
 -61.49,-127.08,taru_exp,1
 -48.38,-136.00,rosewarm,1
--35.50,-129.47,trap,1
+-35.20,-132.01,trap,1,rot120
 -33.55,-138.74,rosewarm,1,left
--32.46,-122.64,movebox_brk,1
--32.46,-121.64,movebox_brk,1
--32.46,-122.64,movebox_brk,1
--32.46,-123.64,movebox_brk,1
--31.07,-122.65,movebox_brk,1
--31.07,-121.65,movebox_brk,1
 -28.34,-144.40,trapmachine,1
 -28.34,-145.25,ivytrap,1
 -23.00,-134.00,trap,1,left,rot180
 -20.18,-128.80,trapspider,1,sort+50
--16.50,-135.00,trapspider,1,sort+50,left
--16.30,-122.68,movebox_brk,1
--16.30,-121.68,movebox_brk,1
--16.30,-120.68,movebox_brk,1
--15.30,-122.68,movebox_brk,1
--15.30,-121.68,movebox_brk,1
--15.30,-120.68,movebox_brk,1
--14.30,-122.68,movebox_brk,1
--14.30,-121.68,movebox_brk,1
--14.30,-120.68,movebox_brk,1
+-16.45,-134.96,trapspider,1,sort+50,left
+
+GIMMICK,ladderon,-108.15,-138.48,closed,lever,radius=4,sort+100
+GIMMICK,ladder_nomal,-87.42,-123.31,closed,lever
+GIMMICK,gate_fence_pilgrimageentrance,-16.27,-120.32,closed,lever,guard=20,guardside=left,sort-210
+-18.07,-122.50,TouzokuNormal,1
+-19.46,-122.48,TouzokuNormal,1

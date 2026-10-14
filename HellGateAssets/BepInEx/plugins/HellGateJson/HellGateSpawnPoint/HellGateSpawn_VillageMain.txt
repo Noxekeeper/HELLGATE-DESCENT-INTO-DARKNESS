@@ -1,4 +1,4 @@
-# HELLGATE Spawn Configuration for VillageMain
+﻿# HELLGATE Spawn Configuration for VillageMain
 
 
 # Enemies kakasi on tree
@@ -6,15 +6,15 @@
 6.59,-47.77,gold=1-2,1
 7.41,-45.00,gold=1-2,1
 
-random,0.5,8.08,-10.60,Kakasi,1
-random,0.5,9.71,-15.42,Kakasi,1
+random,0.5,8.08,-10.82,Kakasi,1
+random,0.5,9.71,-15.63,Kakasi,1
 10.76,-11.66,gold=1-3,1
 11.26,-16.73,gold=1-3,1
 14.09,-15.44,gold=1-3,1
-random,0.5,23.97,-5.00,Kakasi,1
+random,0.5,23.97,-4.45,Kakasi,1
 31.82,-40.40,gold=1-2,1
-37.93,-20.70,gold=1-3,1
-45.69,-19.46,taruro_exp,1
+37.97,-20.76,gold=1-3,1
+45.88,-19.70,taruro_exp,1
 55.17,-12.75,gold=1-2,1
 59.46,-41.76,gold=1-2,1
 63.34,-15.83,gold=1-2,1
@@ -24,7 +24,7 @@ random,0.5,23.97,-5.00,Kakasi,1
 67.35,-34.65,gold=1-2,1
 68.54,-34.37,gold=1-2,1
 68.98,-16.74,gold=1-2,1
-Eventtrap,etrap_goblin,69.66,-23.15
+Eventtrap,etrap_goblin,69.61,-23.25
 70.99,-16.82,gold=1-2,1
 72.26,-23.57,gold=1-2,1
 72.72,-20.37,gold=1-2,1
@@ -50,42 +50,40 @@ Eventtrap,etrap_goblin,69.66,-23.15
 53.06,-19.48,MobRosewarm,1
 75.25,-24.07,MobMutude,1
 96.18,-31.24,MobRosewarm,1
-154.58,-17.66,MobRosewarm,1
-random,0.8,172.00,-29.51,witchslaveSlime,1
-175.00,-31.00,Mobrosewarm,1
-random,0.8,177.00,-31.00,goblin,1
-177.00,-26.00,trap,1,rot180
-178.00,-23.00,trap,1,rot260
+HOSTAGE,MobRosewarm,153.88,-17.88,1
+HOSTAGE,witchslaveSlime,172.76,-29.37,1
+HOSTAGE,Mobrosewarm,174.98,-30.91,1
+RANDOM,0.8,177.69,-46.52,goblin,1
 
 # Enemies goblins
 random,0.5,55.06,-19.48,goblin,1,
-random,0.5,56.08,-11.61,goblin,1
-random,0.5,65.65,-14.16,goblin,1
-random,0.5,71.99,-18.88,goblin,1
+random,0.5,56.08,-12.24,goblin,1
+random,0.5,65.65,-14.78,goblin,1
+random,0.5,71.99,-19.50,goblin,1
 
 126.70,-29.02,Rosewarm,1,left
 131.70,-29.02,MobRosewarm,1
-random,0.5,134.26,-29.02,goblin,1
-random,0.5,136.37,-29.02,goblin,1
+random,0.5,134.26,-29.64,goblin,1
+random,0.5,136.37,-29.64,goblin,1
 
 
 # Enemies goblins on tree
-random,0.5,94.28,-21.11,goblin,1
+random,0.5,94.28,-21.74,goblin,1
 98.07,-32.25,
-random,0.5,100.23,-23.72,goblin,1
-random,0.5,100.89,-13.43,goblin,1
+random,0.5,100.23,-24.34,goblin,1
+random,0.5,100.89,-14.05,goblin,1
 # event core trap goblin anchor
 Eventtrap,etrap_kakasi,111.12,-19.38
-157.49,-44.01,BigoniBrother,1
-157.54,-18.00,Mobmutude,1,left
+157.49,-42.80,BigoniBrother,1
+HOSTAGE,Mobmutude,160.55,-17.93,1
 
-159.54,-17.60,Rosewarm,1,sort-100
-random,0.8,162.14,-17.66,kakasi,1
+TRAP,Rosewarm,159.13,-17.61,1,sort-100
+random,0.8,156.30,-17.76,kakasi,1
 163.40,-47.50,Rosewarm,1,left
 
 
 
-Eventtrap,etrap_goblin,177.27,-42.62
+Eventtrap,etrap_goblin,160.84,-47.90
 Eventtrap,etrap_goblin,238.38,-27.99
 
 
@@ -99,8 +97,6 @@ EVENTTRAP,etrap_kakasi,36.60,-10.05
 36.70,-10.95,gold=1-2,1
 36.77,-10.47,gold=1-2,1
 36.86,-10.15,gold=1-2,1
-121.01,-19.07,Ivy_monster,1
-121.85,-21.00,trap,1,rot180
 
 
 # Gold coin on tree
@@ -123,50 +119,48 @@ EVENTTRAP,etrap_kakasi,36.60,-10.05
 
 
 # Decoration
-21.90,-45.85,taruro_exp,1
-31.00,-5.00,movebox_brk,1
-31.00,-4.00,movebox_brk,1
+21.90,-46.27,taruro_exp,1
+31.00,-5.50,movebox_brk,1
+31.00,-4.37,movebox_brk,1
 34.86,-13.08,wana_start,1,sort-10
-34.99,-17.08,movebox_brk,1
-37.00,-15.48,movebox_brk,1
-37.00,-16.48,movebox_brk,1
-39.00,-17.48,movebox_brk,1
+34.99,-18.34,movebox_brk,1
+37.00,-19.61,movebox_brk,1
+37.00,-20.74,movebox_brk,1
+39.00,-19.61,movebox_brk,1
 
-39.00,-18.48,movebox_brk,1
-103.99,-15.00,movebox_brk,1
-103.99,-14.20,movebox_brk,1
-118.75,-27.28,movebox_brk,1
-118.79,-25.86,movebox_brk,1
-118.87,-29.90,movebox_brk,1
+39.00,-20.74,movebox_brk,1
+103.99,-14.69,movebox_brk,1
+103.99,-13.56,movebox_brk,1
+118.71,-28.02,movebox_brk,1
+118.69,-26.88,movebox_brk,1
+118.85,-30.28,movebox_brk,1
 
-118.92,-28.69,movebox_brk,1
-119.89,-25.94,movebox_brk,1
-119.98,-27.11,movebox_brk,1
-120.05,-28.61,movebox_brk,1
-120.51,-29.90,movebox_brk,1
-149.00,-17.00,movebox_brk,1
-149.00,-16.00,movebox_brk,1
-150.00,-17.00,movebox_brk,1
+118.84,-29.15,movebox_brk,1
+120.00,-26.88,movebox_brk,1
+120.01,-28.02,movebox_brk,1
+120.15,-29.15,movebox_brk,1
+120.51,-30.28,movebox_brk,1
+148.71,-18.92,movebox_brk,1
+148.71,-17.79,movebox_brk,1
+150.00,-18.92,movebox_brk,1
 
 
-150.00,-16.00,movebox_brk,1
-151.00,-17.00,movebox_brk,1
-151.00,-16.00,movebox_brk,1
+150.00,-17.79,movebox_brk,1
+149.54,-15.29,movebox_brk,1
+149.48,-16.42,movebox_brk,1
 
 # traps
-6.00,-40.06,trap,1,rot240
+4.82,-40.34,trapnormal,1,rot240
 13.00,-44.97,Ivy_monster,1
 41.42,-36.43,trap,1,rot180
 46.82,-39.43,trapspider,1
-158.00,-13.00,trap,1,rot80
-160.27,-39.72,trap,1,rot180
-167.52,-24.66,trap,1,rot180
-176.80,-40.54,trap,1,rot180
+159.14,-13.45,trapnormal,1,rot120
+159.57,-38.62,trapnormal,1,rot180
 
 
 
-180.06,-42.20,Rosewarm,1,sort-100
-187.41,-41.98,trap,1,rot180
+182.11,-37.29,Rosewarm,1,sort-100
+186.01,-41.48,trapnormal,1,rot180
 189.28,-44.73,trapspider,1
 
 
@@ -178,17 +172,14 @@ EVENTTRAP,etrap_kakasi,36.60,-10.05
 173.62,-19.00,gold=1-2,1
 176.62,-19.00,gold=1-2,1
 176.62,-14.00,trap,1,rot180
-180.86,-30.64,Ivy_monster,1
 181.62,-14.00,trap,1,rot180
 
 
 
 
 181.99,-18.61,Ivy_monster,1
-183.99,-26.00,Ivy_monster,1
 186.86,-21.64,Ivy_monster,1
 187.62,-14.00,trap,1,rot180
-190.86,-18.64,Ivy_monster,1
 
 
 
@@ -205,14 +196,14 @@ EVENTTRAP,etrap_kakasi,36.60,-10.05
 225.49,10.76,Ivy_trap,1
 225.49,10.76,Ivy_monster,1
 225.49,10.00,gold=1-10,1
-random,0.8,228.01,-3.74,goblin,1
+random,0.8,228.01,-4.10,goblin,1
 228.35,-12.51,blackoozetrap,1
 228.35,-12.51,gold=1-3,1
 228.35,-12.51,Ivy_trap,1
 random,0.5,231.01,-3.74,MobMutude,1
 
 
-random,0.5,233.01,-3.74,kakasi,1
+random,0.5,233.01,-3.96,kakasi,1
 235.19,-29.39,gold=1-2,1
 235.61,-29.59,gold=1-2,1
 
@@ -231,71 +222,66 @@ random,0.5,233.01,-3.74,kakasi,1
 250.44,-1.48,gold=1-2,1
 
 
-254.26,-25.62,Mobrosewarm,1,left
-random,0.8,254.96,0.99,goblin,1
+HOSTAGE,Mobrosewarm,255.16,-25.60,1
+random,0.8,254.95,0.37,goblin,1
 
 
 
 261.24,-22.79,trap,1,rot180
-random,0.8,263.26,-25.62,kakasi,1
+random,0.8,263.26,-25.83,kakasi,1
 263.77,2.23,MobMutude,1
 
 
-264.50,-25.62,Ivy_trap,1
-264.50,-25.9,Ivy_monster,1
+265.25,-26.51,Ivy_trap,1
+265.45,-24.94,Ivy_monster,1
 264.80,-27.00,gold=1-2,1
 
 
 # Decoration
-196.04,-25.15,movebox_brk,1
-196.04,-26.15,movebox_brk,1
-196.04,-27.15,movebox_brk,1
 
-198.59,-25.15,taruro_exp,1
-201.72,-27.00,movebox_brk,1
-201.72,-26.00,movebox_brk,1
-201.72,-25.00,movebox_brk,1
-201.72,-24.00,movebox_brk,1
-202.72,-27.00,movebox_brk,1
-202.72,-26.00,movebox_brk,1
-202.72,-25.00,movebox_brk,1
-202.72,-24.00,movebox_brk,1
-243.07,-30.60,wana_start,1,sort-200,rot15
+201.56,-26.41,movebox_brk,1
+201.56,-25.29,movebox_brk,1
+201.58,-24.16,movebox_brk,1
+202.86,-26.41,movebox_brk,1
+202.88,-25.29,movebox_brk,1
+202.87,-24.16,movebox_brk,1
+202.87,-23.03,movebox_brk,1
+243.05,-30.41,wana_start,1,sort-200,rot15
 244.15,-27.15,gold=1-2,1
 244.23,-27.00,gold=1-2,1
 
-291.00,-18.00,movebox_brk,1
-291.00,-19.00,movebox_brk,1
-291.00,-10.00,movebox_brk,1
-291.00,-19.00,movebox_brk,1
-292.00,-11.00,movebox_brk,1
-292.00,-14.00,movebox_brk,1
-293.00,-11.00,movebox_brk,1
-293.00,-14.00,movebox_brk,1
-297.00,-15.00,movebox_brk,1
-297.00,-12.00,movebox_brk,1
+291.00,-13.60,movebox_brk,1
+291.00,-14.46,movebox_brk,1
+290.70,-11.67,movebox_brk,1
+291.00,-15.33,movebox_brk,1
+292.30,-13.97,movebox_brk,1
+292.42,-11.04,movebox_brk,1
+292.34,-15.38,movebox_brk,1
+292.65,-8.23,movebox_brk,1
+292.49,-9.60,movebox_brk,1
+292.31,-12.49,movebox_brk,1
 
 # biscord spawm
-297.00,-12.00,biscord,1
+296.18,-12.38,biscord,1
 
 # Secret section 2
-172.92,-3.81,BigoniBrother,1
+172.92,-3.70,BigoniBrother,1
 random,0.8,173.25,1.00,witchslaveslime,1
-174.92,-4.81,Wolf,1
+176.03,-4.90,Wolf|faction=demons,1
 177.25,4.19,gold=1-30,1
 177.25,5.19,Ivy_trap,1
-177.25,5.19,Ivy_monster,1
-random,0.8,183.37,-3.81,goblin,1
+177.16,6.10,Ivy_monster,1
+random,0.8,183.37,-4.43,goblin,1
 185.37,-3.81,Rosewarm,1,left
 187.38,-3.81,Mobrosewarm,1
-random,0.8,189.38,-3.81,goblin,1
+random,0.8,189.38,-4.43,goblin,1
 
-196.70,-2.81,movebox_brk,1
-196.70,1.81,movebox_brk,1
-196.70,2.81,movebox_brk,1
-197.70,-2.81,movebox_brk,1
-197.70,1.81,movebox_brk,1
-197.70,3.81,movebox_brk,1
+196.55,-5.07,movebox_brk,1
+196.55,-3.94,movebox_brk,1
+196.65,-2.81,movebox_brk,1
+197.85,-5.07,movebox_brk,1
+197.85,-3.94,movebox_brk,1
+196.21,-1.67,movebox_brk,1
 
 #Boss zone
 
@@ -303,22 +289,61 @@ random,0.8,189.38,-3.81,goblin,1
 # Transition corridor -> scapegoatEntrance (abadoned vilage area / village_main)
 157.79,51.60,gold=5-30,1
 
-158.92,53.01,movebox_brk,1
-159.08,55.37,movebox_brk,1
-159.09,54.28,movebox_brk,1
-159.12,56.75,movebox_brk,1
-159.13,57.68,movebox_brk,1
-159.17,52.06,movebox_brk,1
-159.98,54.29,movebox_brk,1
-160.06,55.43,movebox_brk,1
-160.09,56.56,movebox_brk,1
-160.12,57.70,movebox_brk,1
-160.13,52.07,movebox_brk,1
-160.37,52.98,movebox_brk,1
-160.88,57.72,movebox_brk,1
-160.95,56.56,movebox_brk,1
-161.14,52.00,movebox_brk,1
-161.23,54.28,movebox_brk,1
-161.31,55.46,movebox_brk,1
-161.35,53.12,movebox_brk,1
-random,0.7,176.08,52.70,TouzokuNormal|ec_event=eventcore_broker_gate,1
+158.87,52.86,movebox_brk,1
+158.86,55.13,movebox_brk,1
+158.81,53.99,movebox_brk,1
+158.75,56.26,movebox_brk,1
+158.75,57.39,movebox_brk,1
+158.87,51.73,movebox_brk,1
+160.10,54.00,movebox_brk,1
+160.15,55.13,movebox_brk,1
+160.05,56.26,movebox_brk,1
+160.05,57.40,movebox_brk,1
+160.16,51.73,movebox_brk,1
+160.19,52.86,movebox_brk,1
+161.34,57.40,movebox_brk,1
+161.35,56.26,movebox_brk,1
+161.48,51.73,movebox_brk,1
+161.39,54.00,movebox_brk,1
+161.44,55.13,movebox_brk,1
+161.51,52.86,movebox_brk,1
+176.94,-38.71,trapnormal,1,rot270
+
+
+179.17,-33.25,wavespike,1
+181.80,-37.83,wavespike,1
+DECOR,movebox_brk,196.50,-18.45,1
+198.77,-19.64,taruro_exp,1
+196.58,-21.86,movebox_brk,1
+196.54,-20.72,movebox_brk,1
+196.53,-19.59,movebox_brk,1
+187.17,-36.55,3-7|faction=eventcore_encounter,1
+187.17,-36.55,3-7|faction=eventcore_encounter,1
+187.17,-36.55,3-7|faction=eventcore_encounter,1
+194.82,-38.00,100|faction=eventcore_encounter,1
+194.82,-38.00,100|faction=eventcore_encounter,1
+192.47,-37.42,100|faction=eventcore_encounter,1
+192.47,-37.42,100|faction=eventcore_encounter,1
+182.52,-19.84,wavespikeguard,1
+HOSTAGE,EvbunnyERO,181.47,-20.05,1
+HOSTAGE,EvSlaveBigAxeAradia,183.51,-19.83,1
+181.98,-20.64,3-7|faction=eventcore_encounter,1
+186.62,-21.60,100|faction=eventcore_encounter,1
+185.87,-20.52,100|faction=eventcore_encounter,1
+185.84,-21.61,100|faction=eventcore_encounter,1
+183.84,-22.00,100|faction=eventcore_encounter,1
+183.50,-21.82,100|faction=eventcore_encounter,1
+183.81,-21.82,100|faction=eventcore_encounter,1
+DECOR,mob_death1,186.22,-36.72,1
+184.63,-34.62,wavespike,1
+184.94,-34.48,wavespike,1
+182.46,-28.04,Ivy_monster,1
+178.98,-31.01,Ivy_monster,1
+174.73,-26.29,trapnormal,1,rot180
+TRAP,Ivy_monster,190.80,-16.82,1
+GIMMICK,gate_fence_pilgrimageentrance,191.10,-33.44,closed,lever,sort-310
+GIMMICK,lever,195.22,-38.73,closed,radius=5,sort-100
+GIMMICK,lever,188.93,-37.35,closed,radius=3
+177.28,-36.78,trapnormal,1,rot270
+177.23,-25.47,trapnormal,1,rot210
+179.00,53.37,TouzokuNormal|faction=eventcore_encounter|ec_event=eventcore_broker_gate,1

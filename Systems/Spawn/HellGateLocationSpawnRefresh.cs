@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using NoREroMod.Systems.EventCore.EventTrap;
 using NoREroMod.Systems.EventCore.Reinforcement;
 using NoREroMod.Systems.Pregnancy.Patches;
@@ -119,19 +120,52 @@ internal static class HellGateLocationSpawnRefresh
         if (sceneName.Equals("Common", StringComparison.OrdinalIgnoreCase))
             return true;
 
-        if (sceneName.Equals("EvInsomniaB1", StringComparison.OrdinalIgnoreCase))
-            return true;
-        if (sceneName.Equals("EVInsomniaBar", StringComparison.OrdinalIgnoreCase))
-            return true;
-        if (sceneName.Equals("EVInsomniaBarSP", StringComparison.OrdinalIgnoreCase))
-            return true;
-        if (sceneName.Equals("GoInsomnia", StringComparison.OrdinalIgnoreCase))
-            return true;
         if (NoREroMod.Patches.Player.VanillaCutsceneSceneGuard.IsAltarExitInProgress())
             return true;
 
+        return IsNonGameplayScene(sceneName) || IsNonGameplaySceneLoaded();
+    }
+
+    internal static bool IsNonGameplayScene(string sceneName) =>
+        !string.IsNullOrEmpty(sceneName) && NonGameplayScenes.Contains(sceneName);
+
+    /// <summary>
+    /// Cutscenes keep Idea_Nowscene at the previous level (WitchVillage still reports village_main),
+    /// so the zone name alone cannot tell that a story/Nightmare scene is on screen.
+    /// </summary>
+    internal static bool IsNonGameplaySceneLoaded()
+    {
+        try
+        {
+            for (int i = 0; i < SceneManager.sceneCount; i++)
+            {
+                Scene scene = SceneManager.GetSceneAt(i);
+                if (scene.isLoaded && NonGameplayScenes.Contains(scene.name))
+                    return true;
+            }
+        }
+        catch
+        {
+        }
+
         return false;
     }
+
+    /// <summary>
+    /// Story cutscenes and Nightmare/gallery replays. Pack hints match by substring
+    /// (WitchVillage ⊃ "village", CathedralEV ⊃ "cathedral", FirstONE ⊃ "first"), so these must be excluded by name.
+    /// </summary>
+    private static readonly HashSet<string> NonGameplayScenes = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+    {
+        "WitchVillage",
+        "MemoryEV", "CathedralEV", "FristCGEV", "LeaveEV", "NewGameStartEV", "NightmareEV",
+        "EvCastleDung", "LastAreaEv", "RanchEv",
+        "EVuChurch", "EVuChurchAfter", "EVuChurchSP",
+        "EvInsomniaB1", "EVInsomniaBar", "EVInsomniaBarSP", "GoInsomnia",
+        "Gallery", "PunishmentRoom", "Credit",
+        "FirstONE", "InchurchONE", "InsomniaONE", "LakeONE", "LastONE", "PilgrimageONE", "PrisonONE",
+        "RanchONE", "RequiemONE", "ScapeONE", "TownUONE", "UnderLabONE", "ValleyONE", "VillageOne", "WhiteONE",
+    };
 
     /// <summary>
     /// Immediate wipe on zone change (door prefix). Full pack runs after load completes.

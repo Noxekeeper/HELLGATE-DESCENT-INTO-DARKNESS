@@ -41,6 +41,12 @@ internal static class SpawnAuthoringPackEdit
         string eventCoreEventId = null,
         float eventCoreChance = 1f)
     {
+        if (IsEventTrapFolderKey(enemyKey))
+        {
+            string extras = string.IsNullOrEmpty(factionIdRaw) ? null : ",faction=" + factionIdRaw.Trim();
+            return BuildEventTrapLine(x, y, enemyKey, extras);
+        }
+
         if (count < 1)
             count = 1;
 
@@ -93,6 +99,7 @@ internal static class SpawnAuthoringPackEdit
                HellGateSpawnLineFormat.IsObjectShortcut(cmd) ||
                HellGateSpawnLineFormat.IsDecorShortcut(cmd) ||
                HellGateSpawnLineFormat.IsHostageShortcut(cmd) ||
+               HellGateSpawnLineFormat.IsGimmickShortcut(cmd) ||
                string.Equals(cmd, "RANDOM_HOSTAGE", StringComparison.OrdinalIgnoreCase) ||
                string.Equals(cmd, "SPAWN", StringComparison.OrdinalIgnoreCase) ||
                string.Equals(cmd, "TEMPLATE", StringComparison.OrdinalIgnoreCase);
@@ -115,6 +122,7 @@ internal static class SpawnAuthoringPackEdit
                HellGateSpawnLineFormat.IsObjectShortcut(cmd) ||
                HellGateSpawnLineFormat.IsDecorShortcut(cmd) ||
                HellGateSpawnLineFormat.IsHostageShortcut(cmd) ||
+               HellGateSpawnLineFormat.IsGimmickShortcut(cmd) ||
                string.Equals(cmd, "RANDOM_HOSTAGE", StringComparison.OrdinalIgnoreCase);
     }
 
@@ -232,6 +240,7 @@ internal static class SpawnAuthoringPackEdit
             HellGateSpawnLineFormat.IsObjectShortcut(k) ||
             HellGateSpawnLineFormat.IsDecorShortcut(k) ||
             HellGateSpawnLineFormat.IsHostageShortcut(k) ||
+            HellGateSpawnLineFormat.IsGimmickShortcut(k) ||
             string.Equals(k, "SPAWN", StringComparison.OrdinalIgnoreCase) ||
             string.Equals(k, "TEMPLATE", StringComparison.OrdinalIgnoreCase))
             return false;
@@ -476,6 +485,111 @@ internal static class SpawnAuthoringPackEdit
         if (!string.IsNullOrEmpty(extrasSuffix))
             line = line + extrasSuffix;
         return line;
+    }
+
+    /// <summary>EventTrap pack folders (etrap_*) only spawn through EVENTTRAP lines, never as enemy XY.</summary>
+    internal static bool IsEventTrapFolderKey(string key)
+    {
+        string k = key?.Trim();
+        if (string.IsNullOrEmpty(k) || !k.StartsWith("etrap_", StringComparison.OrdinalIgnoreCase))
+            return false;
+
+        string[] folders = SpawnAuthoringEventTrapCatalog.GetKeys();
+        for (int i = 0; i < folders.Length; i++)
+        {
+            if (string.Equals(folders[i], k, StringComparison.OrdinalIgnoreCase))
+                return true;
+        }
+
+        return false;
+    }
+
+    internal static bool IsGimmickLeverKey(string key)
+    {
+        return string.Equals(key?.Trim(), Gimmicks.HellGateGimmickRuntime.LeverOnlyKey, StringComparison.OrdinalIgnoreCase);
+    }
+
+    /// <summary>
+    /// <c>GIMMICK,key,X,Y,open|closed[,id=][,lever][,radius=N][,guard=N][,guardside=left|right][,auto[=N]][,guardh=N][,flip][,sort±N]</c>.
+    /// <c>radius=</c> only matters for the standalone lever; <c>guard*</c> and <c>auto</c> never apply to it.
+    /// </summary>
+    internal static string BuildGimmickLine(
+        float x,
+        float y,
+        string key,
+        bool open,
+        bool lever,
+        float radius,
+        bool flipX,
+        int sortOffset = 0,
+        string id = null,
+        float guardLength = 0f,
+        float guardHeight = Gimmicks.HellGateGimmickGuard.DefaultHeight,
+        Gimmicks.HellGateGimmickGuardSide guardSide = Gimmicks.HellGateGimmickGuardSide.Both,
+        float autoRange = 0f)
+    {
+        string fx = x.ToString("F2", CultureInfo.InvariantCulture);
+        string fy = y.ToString("F2", CultureInfo.InvariantCulture);
+        string k = key != null ? key.Trim() : string.Empty;
+        string line = "GIMMICK," + k + "," + fx + "," + fy + "," + (open ? "open" : "closed");
+        if (!string.IsNullOrEmpty(id))
+            line = line + ",id=" + id.Trim();
+        bool leverOnly = IsGimmickLeverKey(k);
+        if (lever && !leverOnly)
+            line = line + ",lever";
+        if (leverOnly)
+        {
+            bool defaultRadius = Mathf.Abs(radius - Gimmicks.HellGateGimmickLever.DefaultRadius) < 0.001f;
+            if (!defaultRadius)
+                line = line + ",radius=" + radius.ToString("0.##", CultureInfo.InvariantCulture);
+        }
+        else
+        {
+            if (guardLength > 0f)
+            {
+                line = line + ",guard=" + guardLength.ToString("0.##", CultureInfo.InvariantCulture);
+                if (guardSide == Gimmicks.HellGateGimmickGuardSide.Left)
+                    line = line + ",guardside=left";
+                else if (guardSide == Gimmicks.HellGateGimmickGuardSide.Right)
+                    line = line + ",guardside=right";
+            }
+
+            if (autoRange > 0f)
+            {
+                bool defaultAuto = Mathf.Abs(autoRange - Gimmicks.HellGateGimmickGuard.DefaultAutoRange) < 0.001f;
+                line = line + (defaultAuto
+                    ? ",auto"
+                    : ",auto=" + autoRange.ToString("0.##", CultureInfo.InvariantCulture));
+            }
+
+            if ((guardLength > 0f || autoRange > 0f) &&
+                guardHeight > 0f && Mathf.Abs(guardHeight - Gimmicks.HellGateGimmickGuard.DefaultHeight) > 0.001f)
+                line = line + ",guardh=" + guardHeight.ToString("0.##", CultureInfo.InvariantCulture);
+        }
+        if (flipX)
+            line = line + ",flip";
+        string sort = FormatSortToken(sortOffset);
+        if (!string.IsNullOrEmpty(sort))
+            line = line + "," + sort;
+        return line;
+    }
+
+    /// <summary>Rebuild a GIMMICK line at new XY / flip / sort, keeping key, state, lever, radius, guard zone, auto and id.</summary>
+    internal static bool TryRebuildGimmickLine(string sourceLine, float x, float y, bool flipX, int sortOffset, out string line)
+    {
+        line = null;
+        if (string.IsNullOrEmpty(sourceLine))
+            return false;
+        string[] parts = sourceLine.Trim().Split(',');
+        if (parts.Length < 4 || !HellGateSpawnLineFormat.IsGimmickShortcut(parts[0].Trim()))
+            return false;
+
+        string key = parts[1].Trim();
+        Gimmicks.HellGateGimmickSpawnOptions options = HellGateSpawnLineFormat.ParseGimmickOptions(key, parts, 4);
+        line = BuildGimmickLine(
+            x, y, key, options.Open, options.Lever, options.Radius, flipX, sortOffset, options.Id,
+            options.GuardLength, options.GuardHeight, options.GuardSide, options.AutoRange);
+        return true;
     }
 
     internal static string BuildTrapLine(
@@ -1030,7 +1144,8 @@ internal static class SpawnAuthoringPackEdit
         if (HellGateSpawnLineFormat.IsTrapShortcut(cmd) ||
             HellGateSpawnLineFormat.IsObjectShortcut(cmd) ||
             HellGateSpawnLineFormat.IsDecorShortcut(cmd) ||
-            HellGateSpawnLineFormat.IsHostageShortcut(cmd))
+            HellGateSpawnLineFormat.IsHostageShortcut(cmd) ||
+            HellGateSpawnLineFormat.IsGimmickShortcut(cmd))
         {
             if (parts.Length < 4)
                 return false;
@@ -1126,7 +1241,8 @@ internal static class SpawnAuthoringPackEdit
         else if (HellGateSpawnLineFormat.IsTrapShortcut(cmd) ||
                  HellGateSpawnLineFormat.IsObjectShortcut(cmd) ||
                  HellGateSpawnLineFormat.IsDecorShortcut(cmd) ||
-                 HellGateSpawnLineFormat.IsHostageShortcut(cmd))
+                 HellGateSpawnLineFormat.IsHostageShortcut(cmd) ||
+                 HellGateSpawnLineFormat.IsGimmickShortcut(cmd))
             xIdx = 2;
         else if (string.Equals(cmd, "SPAWN", StringComparison.OrdinalIgnoreCase) ||
                  string.Equals(cmd, "TEMPLATE", StringComparison.OrdinalIgnoreCase) ||
@@ -1149,6 +1265,53 @@ internal static class SpawnAuthoringPackEdit
         return true;
     }
 
+    /// <summary>
+    /// Rewrite flip / rot tokens of a pack line to the live values; other optional tokens
+    /// (sort±, near/far, cfg) stay as they were.
+    /// </summary>
+    internal static string WithFlipAndRotation(string line, bool flipX, float rotationZ)
+    {
+        if (IsBlank(line))
+            return line;
+
+        string[] parts = line.Trim().Split(',');
+        int firstOptional = GetFirstOptionalIndex(parts[0].Trim());
+        if (firstOptional > parts.Length)
+            return line;
+
+        var result = new List<string>(parts.Length + 2);
+        for (int i = 0; i < parts.Length; i++)
+        {
+            string token = parts[i].Trim();
+            if (i >= firstOptional &&
+                (SpawnFlipUtility.TryParseFlipToken(token, out _) ||
+                 SpawnRotationUtility.TryParseRotationToken(token, out _)))
+                continue;
+            result.Add(parts[i]);
+        }
+
+        if (flipX)
+            result.Add("flip");
+        string rot = FormatRotationToken(rotationZ);
+        if (!string.IsNullOrEmpty(rot))
+            result.Add(rot);
+        return string.Join(",", result.ToArray());
+    }
+
+    private static int GetFirstOptionalIndex(string cmd)
+    {
+        if (HellGateSpawnLineFormat.IsTrapShortcut(cmd) ||
+            HellGateSpawnLineFormat.IsObjectShortcut(cmd) ||
+            HellGateSpawnLineFormat.IsDecorShortcut(cmd) ||
+            HellGateSpawnLineFormat.IsHostageShortcut(cmd))
+            return 5;
+        if (string.Equals(cmd, "SPAWN", StringComparison.OrdinalIgnoreCase) ||
+            string.Equals(cmd, "TEMPLATE", StringComparison.OrdinalIgnoreCase) ||
+            string.Equals(cmd, "RANDOM_HOSTAGE", StringComparison.OrdinalIgnoreCase))
+            return 6;
+        return 4;
+    }
+
     /// <summary>Read flip / rot / sort± (or near/far → ±10) from a template or enemy pack line.</summary>
     internal static void TryExtractPlacementExtras(
         string line,
@@ -1166,19 +1329,7 @@ internal static class SpawnAuthoringPackEdit
         if (parts.Length < 2)
             return;
 
-        string cmd = parts[0].Trim();
-        int firstOptional;
-        if (HellGateSpawnLineFormat.IsTrapShortcut(cmd) ||
-            HellGateSpawnLineFormat.IsObjectShortcut(cmd) ||
-            HellGateSpawnLineFormat.IsDecorShortcut(cmd) ||
-            HellGateSpawnLineFormat.IsHostageShortcut(cmd))
-            firstOptional = 5;
-        else if (string.Equals(cmd, "SPAWN", StringComparison.OrdinalIgnoreCase) ||
-                 string.Equals(cmd, "TEMPLATE", StringComparison.OrdinalIgnoreCase) ||
-                 string.Equals(cmd, "RANDOM_HOSTAGE", StringComparison.OrdinalIgnoreCase))
-            firstOptional = 6;
-        else
-            firstOptional = 4;
+        int firstOptional = GetFirstOptionalIndex(parts[0].Trim());
 
         HellGateSpawnLineFormat.ParseOptionalPlacementFields(
             parts, firstOptional, out flipX, out rotationZ, out SpawnDepthSettings depth);

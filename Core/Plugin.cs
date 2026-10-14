@@ -242,6 +242,12 @@ public class Plugin : BaseUnityPlugin {
     public static bool IsGoreContentEnabled =>
         enableGoreContent == null || enableGoreContent.Value;
 
+    /// <summary>Splash checkbox: hide the mouse cursor during combat and H-scenes (menus keep it).</summary>
+    public static ConfigEntry<bool> hideCursorInGameplay;
+
+    public static bool IsHideCursorInGameplayEnabled =>
+        hideCursorInGameplay == null || hideCursorInGameplay.Value;
+
     public static bool IsLethalMagicTrapActive =>
         IsGoreContentEnabled && (enableLethalMagicTrap?.Value ?? false);
 
@@ -251,11 +257,6 @@ public class Plugin : BaseUnityPlugin {
     public static bool IsLethalLightningTrapActive =>
         IsGoreContentEnabled && (enableLethalLightningTrap?.Value ?? false);
 
-    // New handoff system configs
-    public static ConfigEntry<bool> enableEnemyHandoff;
-    public static ConfigEntry<float> handoffCooldownTime;
-    public static ConfigEntry<bool> enableHandoffVisualEffects;
-    
     // Enemy Pass Mechanic (Cloud Solution)
     public static ConfigEntry<bool> enableEnemyPass;
     public static ConfigEntry<int> cyclesBeforePass;
@@ -474,6 +475,7 @@ public class Plugin : BaseUnityPlugin {
     public static ConfigEntry<string> hellGateLanguage;
     public static ConfigEntry<bool> enableAttackSounds;
     public static ConfigEntry<float> attackSoundsVolume;
+    public static ConfigEntry<bool> enableCustomTitleMusic;
     public static ConfigEntry<bool> enableThreatSounds;
     public static ConfigEntry<bool> enableGrabThreats;
     public static ConfigEntry<bool> enableGrabThreatsText;
@@ -603,6 +605,16 @@ public class Plugin : BaseUnityPlugin {
         try { NoREroMod.Systems.UI.ForestLoaderDeferral.Install(); }
         catch (Exception ex) { Log?.LogWarning($"[BOOT] Forest deferral install failed: {ex.Message}"); }
 
+        // Gametitle BGM starts on its own during splash cache preload — hook before the rest of boot.
+        enableCustomTitleMusic = Config.Bind(
+            "TitleMusic",
+            "Enable",
+            true,
+            "Replace the main menu theme with random .wav/.ogg tracks from sources/HellGate_sources/Audio/Main (vanilla theme if the folder is empty)"
+        );
+        NoREroMod.Systems.Audio.TitleMusicSystem.Initialize();
+        NoREroMod.Systems.Spawn.SpawnCacheWeatherGuard.InstallTitlePreloadGuards();
+
         // Black hold only — no tips/cache until language is known (first-run picker gates the rest).
         try
         {
@@ -627,6 +639,8 @@ public class Plugin : BaseUnityPlugin {
         catch (Exception ex) { Log?.LogWarning($"[BOOT] Language config bind failed: {ex.Message}"); }
         try { BindGoreContentConfig(); }
         catch (Exception ex) { Log?.LogWarning($"[BOOT] Gore config bind failed: {ex.Message}"); }
+        try { BindHideCursorConfig(); }
+        catch (Exception ex) { Log?.LogWarning($"[BOOT] Cursor config bind failed: {ex.Message}"); }
 
         yield return NoREroMod.Systems.UI.HellGateSplashScreen.CoEarlyLanguageSelectionIfNeeded();
 
@@ -681,6 +695,19 @@ public class Plugin : BaseUnityPlugin {
         NoREroMod.Systems.UI.HellGateSplashScreen.SetEarlyBootStatus("Loading Forest content...", 0.05f);
         yield return null;
 
+        // Catalog hooks sceneLoaded before the Forest harvest, so templates are taken from
+        // NoRSceneLoader's scenes and the splash preload does not load them a second time.
+        float t0 = Time.realtimeSinceStartup;
+        try
+        {
+            NoREroMod.Systems.Spawn.SpawnTemplateCatalog.Initialize(this);
+        }
+        catch (Exception ex)
+        {
+            Log?.LogWarning($"[SPAWN CATALOG] Initialization failed: {ex.Message}");
+        }
+        Log?.LogInfo($"[BOOT TIMING] SpawnTemplateCatalog.Initialize: {(Time.realtimeSinceStartup - t0) * 1000f:F0}ms");
+
         // Status line before sync forestlvl so ticker is visible going into the freeze.
         NoREroMod.Systems.UI.HellGateSplashScreen.PushEarlyBootItem("forestlvl");
         yield return null;
@@ -732,19 +759,6 @@ public class Plugin : BaseUnityPlugin {
             $"[BOOT TIMING] Forest/NoRSceneLoader wait: {(Time.realtimeSinceStartup - forestT0) * 1000f:F0}ms " +
             $"({NoREroMod.Systems.UI.ForestLoaderBootProgress.CompletedScenes}/{NoREroMod.Systems.UI.ForestLoaderBootProgress.TotalScenes})");
 
-        float t0 = Time.realtimeSinceStartup;
-        NoREroMod.Systems.UI.HellGateSplashScreen.SetEarlyBootStatus("Loading spawn catalog...", 0.38f);
-        yield return null;
-        try
-        {
-            NoREroMod.Systems.Spawn.SpawnTemplateCatalog.Initialize(this);
-        }
-        catch (Exception ex)
-        {
-            Log?.LogWarning($"[SPAWN CATALOG] Initialization failed: {ex.Message}");
-        }
-        Log?.LogInfo($"[BOOT TIMING] SpawnTemplateCatalog.Initialize: {(Time.realtimeSinceStartup - t0) * 1000f:F0}ms");
-
         t0 = Time.realtimeSinceStartup;
         NoREroMod.Systems.UI.HellGateSplashScreen.SetEarlyBootProgressOnly(0.45f);
         yield return SetUpPatchesCoroutine();
@@ -789,6 +803,14 @@ public class Plugin : BaseUnityPlugin {
     {
         yield return null;
         yield return null;
+        try
+        {
+            NoREroMod.Systems.Spawn.SpawnTemplateCatalog.Initialize(this);
+        }
+        catch (Exception ex)
+        {
+            Log?.LogWarning($"[SPAWN CATALOG] Initialization failed: {ex.Message}");
+        }
         NoREroMod.Systems.UI.ForestLoaderDeferral.RunDeferredLoads(null);
         float forestWait = Time.realtimeSinceStartup;
         while (!NoREroMod.Systems.UI.ForestLoaderBootProgress.IsFinished
@@ -809,14 +831,6 @@ public class Plugin : BaseUnityPlugin {
             yield return null;
         }
 
-        try
-        {
-            NoREroMod.Systems.Spawn.SpawnTemplateCatalog.Initialize(this);
-        }
-        catch (Exception ex)
-        {
-            Log?.LogWarning($"[SPAWN CATALOG] Initialization failed: {ex.Message}");
-        }
         yield return SetUpPatchesCoroutine();
         RunPostPatchBootstrap();
         RunBootAssetPreloadImmediate();
@@ -918,6 +932,12 @@ public class Plugin : BaseUnityPlugin {
         } catch { }
 
         try {
+            if (NoREroMod.Systems.Fear.FearConfig.IsEnabled) {
+                NoREroMod.Systems.Fear.FearUISystem.InitializeFromPlugin();
+            }
+        } catch { }
+
+        try {
             NoREroMod.Systems.Rage.RageHandsGlowSystem.Initialize();
         } catch { }
         try {
@@ -953,6 +973,24 @@ public class Plugin : BaseUnityPlugin {
             NoREroMod.Systems.Diagnostics.Kinoko.KinokoMushroomEroDiagnostics.Initialize();
         } catch (Exception ex) {
             Log?.LogWarning($"[KinokoEroDiag] init failed: {ex.Message}");
+        }
+
+        try {
+            NoREroMod.Systems.Diagnostics.AudioLeak.AudioLeakDiagnostics.Initialize(harmony);
+        } catch (Exception ex) {
+            Log?.LogWarning($"[AudioLeakDiag] init failed: {ex.Message}");
+        }
+
+        try {
+            NoREroMod.Systems.Spawn.SpawnSpineCuller.Initialize(Config);
+        } catch (Exception ex) {
+            Log?.LogWarning($"[SPINE CULL] init failed: {ex.Message}");
+        }
+
+        try {
+            NoREroMod.Systems.Diagnostics.PerfDiagnostics.Initialize(Config);
+        } catch (Exception ex) {
+            Log?.LogWarning($"[PERF] init failed: {ex.Message}");
         }
 
         try {
@@ -1353,6 +1391,10 @@ public class Plugin : BaseUnityPlugin {
         yield return null;
         BootPatch(typeof(NoREroMod.Patches.Enemy.DemonGorotukiModCustom.DemonGorotukiSkeletonDataAssetPatch));
         yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.UndeadSkeletonsModCustom.UndeadSkeletonsSkeletonDataAssetPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.UndeadSkeletonsModCustom.UndeadSkeletonsEnemyPatches));
+        yield return null;
         BootPatch(typeof(NoREroMod.Patches.Enemy.DoreiModCustom.DoreiSkeletonDataAssetPatch));
         yield return null;
         BootPatch(typeof(NoREroMod.Patches.Enemy.DoreiModCustom.DoreiSpectatorIdlePatch));
@@ -1446,6 +1488,11 @@ public class Plugin : BaseUnityPlugin {
         BootPatch(typeof(NoREroMod.Patches.UI.MindBroken.CrowInquisitionMindbrokenControl));
         yield return null;
         BootPatch(typeof(NoREroMod.Patches.UI.MindBroken.PilgrimMindbrokenControl));
+        BootPatch(typeof(NoREroMod.Systems.Fear.HighInquisitionFemaleFearControl));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Systems.Fear.FearHPhaseCueHooks));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Systems.Fear.FearHPhaseTrackerHooks));
         yield return null;
         // H_scenesAllEnemiesCorruption is invoked from PlayerConUpdateDispatcher
         BootPatch(typeof(NoREroMod.Patches.UI.MindBroken.EnemyKillRecoveryPatch));
@@ -1466,6 +1513,18 @@ public class Plugin : BaseUnityPlugin {
         BootPatch(typeof(NoREroMod.Systems.Rage.Patches.RageHitTrackerPatch));
         yield return null;
         BootPatch(typeof(NoREroMod.Systems.Rage.Patches.RageActiveImmunityPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Systems.Fear.Patches.FearCombatHooks));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Systems.Fear.Patches.FearVanillaHFatalityHooks));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Systems.Fear.Patches.FearAltarRestHook));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Systems.Fear.FearUISystem));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Systems.Fear.FearSaveHookPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Systems.Fear.FearLoadHookPatch));
         yield return null;
         BootPatch(typeof(NoREroMod.Systems.Gameplay.WeaponAnimations.WitchFineGreatswordPatch));
         yield return null;
@@ -1559,6 +1618,10 @@ public class Plugin : BaseUnityPlugin {
         yield return null; // Enemy Factions: reload reputation JSON on load
         BootPatch(typeof(NoREroMod.Systems.EventCore.Core.EventCorePlayerAttackInputBlockPatch));
         yield return null; // EventCore: suppress left-click attack input during modal freeze
+        BootPatch(typeof(NoREroMod.Systems.UI.HudVisibilityGateRegistryPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Systems.UI.GameplayCursorHiderAltarMenuPatch));
+        yield return null;
         BootPatch(typeof(NoREroMod.Patches.Player.VanillaStoryEventCombatStatePrefixPatch));
         yield return null;
         BootPatch(typeof(NoREroMod.Patches.Player.VanillaStoryEventCombatInputBlockPatch));
@@ -1746,7 +1809,8 @@ public class Plugin : BaseUnityPlugin {
         NoREroMod.Systems.Gameplay.VengeanceStrikeContent.Initialize(this);
         
         NoREroMod.Systems.Rage.RageSystem.Initialize();
-        try {
+        NoREroMod.Systems.Fear.FearSystem.Initialize();
+        NoREroMod.Systems.Fear.FearHeartbeatCues.Initialize(this);        try {
             var patchType = typeof(NoREroMod.Systems.Rage.Patches.RageInputPatch);
             var criticalPostfix = AccessTools.Method(patchType, "Critical_Postfix");
             var magicDamagePrefix = AccessTools.Method(patchType, "MagicDamage_Prefix");
@@ -1823,6 +1887,9 @@ public class Plugin : BaseUnityPlugin {
         if (enableRageMode?.Value ?? false) {
             NoREroMod.Systems.Rage.RageUISystem.InitializeFromPlugin();
             NoREroMod.Systems.Rage.RageInputHandler.EnsureCreated();
+        }
+        if (NoREroMod.Systems.Fear.FearConfig.IsEnabled) {
+            NoREroMod.Systems.Fear.FearUISystem.InitializeFromPlugin();
         }
     }
 
@@ -1973,10 +2040,26 @@ private void PatchType(Type type)
         );
     }
 
+    private void BindHideCursorConfig()
+    {
+        if (hideCursorInGameplay == null)
+        {
+            hideCursorInGameplay = Config.Bind(
+                "General",
+                "HideCursorInGameplay",
+                true,
+                "Hide the mouse cursor during combat and H-scenes. It stays visible in the pause menu, shops, dialogs and the title screen. Also toggled on the splash screen."
+            );
+        }
+
+        NoREroMod.Systems.UI.GameplayCursorHider.EnsureExists();
+    }
+
     private void SetUpConfigs() {
         // Ensure language entry exists (may already be bound before first-run picker).
         BindHellGateLanguageConfig();
         BindGoreContentConfig();
+        BindHideCursorConfig();
 
         // Enemy/boss HP-speed-poise scaling lives in NoREroMod.dll → edit BepInEx/config/NoREroMod.cfg ([Enemies], [Elites], [Bosses]).
 
@@ -2608,26 +2691,6 @@ private void PatchType(Type type)
             "Activating a shrine will restore virginity"
         );
 
-        // New handoff system configs
-        enableEnemyHandoff = Config.Bind(
-            "HandoffSystem",
-            "EnableEnemyHandoff",
-            true,
-            "Enables enemy handoff system - enemies will pass around the player after completing animation cycles"
-        );
-        handoffCooldownTime = Config.Bind(
-            "HandoffSystem",
-            "HandoffCooldownTime",
-            2f,
-            "Time in seconds between handoffs to prevent spam"
-        );
-        enableHandoffVisualEffects = Config.Bind(
-            "HandoffSystem",
-            "EnableHandoffVisualEffects",
-            true,
-            "Shows visual effects during handoffs"
-        );
-
         // Visual indicators configs
         disableStruggleCameraShake = Config.Bind(
             "VisualIndicators",
@@ -2866,6 +2929,8 @@ private void PatchType(Type type)
             "",
             "Path to Demon_gorotuki Spine folder (relative to game root). Empty = sources/HellGate_sources/Gorutoki. Expects Gorutoki/Demon_gorotuki.* and Gorutoki ERO/Demon_gorotuki_ERO.*"
         );
+
+        NoREroMod.Patches.Enemy.UndeadSkeletonsModCustom.UndeadSkeletonsConfig.Bind(Config);
 
         doreiFappingAssetsPath = Config.Bind(
             "DoreiMod",
@@ -3474,6 +3539,8 @@ private void PatchType(Type type)
             true,
             "Enable Rage Mode system (counter-mechanic to MindBroken)"
         );
+
+        NoREroMod.Systems.Fear.FearConfig.Bind(Config);
 
         rageActiveImmuneGrabAndKnockdown = Config.Bind(
             "RageMode",
@@ -4301,6 +4368,7 @@ private void PatchType(Type type)
         // Already bound before language picker — do not Config.Bind again (duplicate [General] lines).
         BindHellGateLanguageConfig();
         BindGoreContentConfig();
+        BindHideCursorConfig();
 
         enableBadEndPlayer = Config.Bind(
             "BadEndPlayer",

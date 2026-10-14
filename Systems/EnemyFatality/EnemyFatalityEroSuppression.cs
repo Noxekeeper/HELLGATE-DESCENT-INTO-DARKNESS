@@ -307,9 +307,7 @@ internal static class EnemyFatalityEroSuppression
         FieldInfo look = AccessTools.Field(enemyType, "Look")
             ?? AccessTools.Field(typeof(EnemyDate), "Look");
 
-        FieldInfo spine = AccessTools.Field(enemyType, "myspine")
-            ?? AccessTools.Field(enemyType, "spineanime")
-            ?? AccessTools.Field(enemyType, "mySpine");
+        FieldInfo spine = FindFieldQuiet(enemyType, "myspine", "mySpine", "spineanime");
 
         var access = new EnemyStateAccess
         {
@@ -321,6 +319,23 @@ internal static class EnemyFatalityEroSuppression
 
         EnemyStateCache[enemyType] = access;
         return access;
+    }
+
+    // AccessTools.Field logs a HarmonyX warning on every miss; enemies name the spine field differently.
+    private static FieldInfo FindFieldQuiet(Type type, params string[] names)
+    {
+        const BindingFlags flags = BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.DeclaredOnly;
+        for (Type t = type; t != null && t != typeof(object); t = t.BaseType)
+        {
+            for (int i = 0; i < names.Length; i++)
+            {
+                FieldInfo field = t.GetField(names[i], flags);
+                if (field != null)
+                    return field;
+            }
+        }
+
+        return null;
     }
 
     private static object ParseState(Type stateEnum, string name)

@@ -39,6 +39,10 @@ Conventions and the standard checklist for new feature modules.
   `GameObject.FindGameObjectWithTag` / repeated `GetComponent`.
 - Custom HUD elements register with `HudVisibilityGate` and toggle via
   `CanvasGroup.alpha`, and pull fonts from `HellGateFontProvider`.
+- No `FindObjectOfType` / `FindObjectsOfType` in per-frame paths: they walk the
+  whole scene. Track the instance from its `Start` / `OnEnable` instead (see
+  `HudVisibilityGateRegistryPatch`, `GameplayCursorHiderAltarMenuPatch`), and
+  return early from disabled diagnostics before any scan.
 - Boss classification goes through the shared `FactionBossDetection`.
 - Anything that changes `Time.timeScale` or player control must restore it
   through the existing escape/cleanup paths (see `COMPATIBILITY.md`).

@@ -1,5 +1,6 @@
 using System.Reflection;
 using HarmonyLib;
+using NoREroMod.Patches.HellTraps;
 using NoREroMod.Systems.Spawn;
 using Spine;
 using Spine.Unity;
@@ -87,6 +88,9 @@ internal static class EnemyFatalityPlayback
             EnemyFatalityVanillaDeathMute.BeginHeavyCritical();
 
         ForceVanillaDeath(player, playVanillaDeath1: !muteVanillaDeath1);
+
+        // Same Take Vengeance shock latch as lethal traps (MB FX + Fear trauma).
+        LethalTrapVengeanceShockSession.MarkFatalityDeath();
 
         EnemyFatalitySession.EnsureSceneHook();
         EnemyFatalitySession.Begin(clipRel);

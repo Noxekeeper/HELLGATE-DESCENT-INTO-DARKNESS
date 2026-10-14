@@ -55,12 +55,18 @@ Code: `Systems/UI/`
   `[DialogueFonts]`. Never assign fonts directly.
 - `HudVisibilityGate` — custom HUDs must follow vanilla canvas visibility,
   using `CanvasGroup.alpha` rather than `SetActive` (so bootstraps and
-  coroutines survive).
+  coroutines survive). The vanilla `UImng` and the NPC diary readers
+  (`UIDialyClass` / `UIListDialyClass`) register from their `Start`
+  (`HudVisibilityGateRegistryPatch`), so the per-frame check never scans the
+  scene; `UImng` is re-searched at most once per second only if missing or
+  inactive.
+- `GameplayCursorHider` — `[General] HideCursorInGameplay`; see
+  [SPLASH_OPTIONS_AND_DIFFICULTY.md](SPLASH_OPTIONS_AND_DIFFICULTY.md).
 - `LoadingScreenSystem` (custom art, sponsor labels, locale filters),
   `SplashScreenUILabels`, `HellGateTitleMenuBackdrop`,
   `HellGateSplashOptionsMenu`.
 - **Splash Options** — red **Options** label above Start opens a compact panel
-  (Start hidden): Gore Content checkbox, Simple QTE checkbox, Easy / Medium /
+  (Start hidden): Gore Content checkbox, Simple QTE checkbox, Hide cursor checkbox, Easy / Medium /
   Hard preset buttons (copies `NoREroMod.cfg` + `NoREroMod_HellGate.cfg` from
   `BepInEx/config/{EASY|MEDIUM|HARD}/`; restart required for balance), bottom
   row Done / Language / Exit. Language opens a centered 2-column submenu (Cancel

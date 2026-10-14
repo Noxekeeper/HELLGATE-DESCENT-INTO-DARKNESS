@@ -43,7 +43,33 @@ internal static class SpawnAuthoringEnemyCatalog
         "Sheepheaddemon"
     };
 
+    /// <summary>
+    /// HellGate-made enemies (reskins / custom bosses). Listed in their own section at the top of the
+    /// Enemies [E] picker, separate from vanilla keys. New custom spawn keys go here.
+    /// </summary>
+    private static readonly string[] CustomEnemyKeys =
+    {
+        "BigMermanUndead",
+        "BigoniUndead",
+        "PilgrimUndead",
+        "VagrantUndead",
+        "Demon_gorotuki",
+        "HellishTouzokuBoss",
+        "HellishTouzokuAxe",
+        "HellishTouzokuSword",
+        "Wolf",
+        "Butcher",
+        "BossTouzokuCustom",
+        "BigoniBrother",
+        "MafiaBossCustom",
+        "biscord"
+    };
+
+    private static readonly HashSet<string> customSet =
+        new HashSet<string>(CustomEnemyKeys, StringComparer.OrdinalIgnoreCase);
+
     private static string[] cachedList = new string[0];
+    private static string[] cachedCustomList = new string[0];
     private static float nextRebuildUnscaledTime;
     private static HashSet<string> fileExclude =
         new HashSet<string>(StringComparer.OrdinalIgnoreCase);
@@ -57,6 +83,12 @@ internal static class SpawnAuthoringEnemyCatalog
         return unavailableSet.Contains(key);
     }
 
+    internal static bool IsCustomEnemy(string key)
+    {
+        return !string.IsNullOrEmpty(key) && customSet.Contains(key);
+    }
+
+    /// <summary>Vanilla picker list (custom enemies excluded).</summary>
     internal static string[] GetEnemyKeys()
     {
         if (cachedList.Length == 0 || Time.unscaledTime >= nextRebuildUnscaledTime)
@@ -64,9 +96,18 @@ internal static class SpawnAuthoringEnemyCatalog
         return cachedList;
     }
 
+    /// <summary>Custom enemies picker list, in <see cref="CustomEnemyKeys"/> order.</summary>
+    internal static string[] GetCustomEnemyKeys()
+    {
+        if (cachedList.Length == 0 || Time.unscaledTime >= nextRebuildUnscaledTime)
+            Rebuild();
+        return cachedCustomList;
+    }
+
     internal static void Invalidate()
     {
         cachedList = new string[0];
+        cachedCustomList = new string[0];
         nextRebuildUnscaledTime = 0f;
     }
 
@@ -94,11 +135,22 @@ internal static class SpawnAuthoringEnemyCatalog
 
         ApplyExcludes(set);
 
+        var custom = new List<string>(CustomEnemyKeys.Length);
+        for (int i = 0; i < CustomEnemyKeys.Length; i++)
+        {
+            if (set.Contains(CustomEnemyKeys[i]))
+                custom.Add(CustomEnemyKeys[i]);
+        }
+
         var list = new List<string>(set.Count);
         foreach (string key in set)
-            list.Add(key);
+        {
+            if (!customSet.Contains(key))
+                list.Add(key);
+        }
         list.Sort(StringComparer.OrdinalIgnoreCase);
         cachedList = list.ToArray();
+        cachedCustomList = custom.ToArray();
     }
 
     private static void ApplyExcludes(HashSet<string> set)

@@ -114,7 +114,7 @@ internal static class HellGateSplashScreen
     /// <summary>Working title-menu order from FOR_CHEK_OLD_VERSION (below vanilla Overlay UI).</summary>
     private const int TITLE_MENU_CANVAS_SORT_ORDER = -50;
     private const int SplashLoadingLabelFontSize = 22;
-    private const string SplashDisplayVersion = "1.2.6";
+    private const string SplashDisplayVersion = "1.2.7";
     /// <summary>ASCII separator for credit lines (built-in Arial cannot render UTF-8 mojibake em dashes).</summary>
     private const string CreditLineSep = " - ";
 
@@ -1893,7 +1893,8 @@ internal static class HellGateSplashScreen
         supportersNamesText.text =
             $"<color=#{ColorToHex(patronNameRedGold)}><b><size=22>Calvia</size></b></color>\n" +
             $"<color=#{ColorToHex(patronNameRedGold)}><b><size=22>vadaszzsomik</size></b></color>\n" +
-            $"<color=#{ColorToHex(patronNameRedGold)}><b><size=22>KiRoSin43</size></b></color>";
+            $"<color=#{ColorToHex(patronNameRedGold)}><b><size=22>KiRoSin43</size></b></color>\n" +
+            $"<color=#{ColorToHex(patronNameRedGold)}><b><size=22>♡Miko♡</size></b></color>";
         supportersNamesText.fontSize = 14;
         supportersNamesText.alignment = TextAnchor.UpperCenter;
         supportersNamesText.color = whiteColor;

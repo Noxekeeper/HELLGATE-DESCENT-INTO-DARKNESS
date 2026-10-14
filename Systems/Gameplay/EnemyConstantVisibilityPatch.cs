@@ -30,13 +30,14 @@ internal static class EnemyConstantVisibilityPatch
 
     private static bool Prepare() => HellGateTypeResolver.Resolve("NoREroMod.EnemyDatePatch") != null;
 
+    // Targets are static NoREroMod methods with a parameter literally named ___mySpine; bind by index.
     [HarmonyPostfix]
-    private static void EnsureVisibleWhenFoVOff(EnemyDate __instance, SkeletonAnimation ___mySpine)
+    private static void EnsureVisibleWhenFoVOff(SkeletonAnimation __1)
     {
         if (Plugin.enableFoV?.Value ?? false)
             return;
 
-        RestoreFullAlpha(___mySpine);
+        RestoreFullAlpha(__1);
     }
 
     internal static void RestoreFullAlpha(SkeletonAnimation spine)

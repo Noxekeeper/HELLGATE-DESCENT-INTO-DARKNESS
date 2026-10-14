@@ -262,7 +262,7 @@ internal static class EnemyFatalityTaunts
     /// <summary>
     /// Clip override <c>phrases_&lt;clipFolder&gt;.json</c> when present;
     /// else profile <c>phrases_&lt;Id&gt;.json</c>; else shared <c>phrases.json</c>.
-    /// Clip/profile files fall back active lang → RU → EN.
+    /// Clip/profile files fall back active lang → EN → RU.
     /// </summary>
     private static string[] ResolvePhrasePool(IEnemyFatalityProfile profile)
     {
@@ -358,10 +358,10 @@ internal static class EnemyFatalityTaunts
     private static string[] LoadDedicatedPhrases(string lang, string fileName)
     {
         string[] loaded = LoadPhrasesFile(lang, fileName);
-        if (loaded.Length == 0 && !string.Equals(lang, "RU", StringComparison.OrdinalIgnoreCase))
-            loaded = LoadPhrasesFile("RU", fileName);
         if (loaded.Length == 0 && !string.Equals(lang, "EN", StringComparison.OrdinalIgnoreCase))
             loaded = LoadPhrasesFile("EN", fileName);
+        if (loaded.Length == 0 && !string.Equals(lang, "RU", StringComparison.OrdinalIgnoreCase))
+            loaded = LoadPhrasesFile("RU", fileName);
         return loaded;
     }
 

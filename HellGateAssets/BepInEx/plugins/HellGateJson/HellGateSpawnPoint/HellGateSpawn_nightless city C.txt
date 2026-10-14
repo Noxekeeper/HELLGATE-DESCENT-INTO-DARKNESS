@@ -4,3 +4,33 @@
 # Vagrant spawn chance: reduced by 50%
 # Format: X,Y,EnemyType,Count or POOL[Type1,Type2,...]
 
+
+761.60,-287.20,MobSlumSlave,1
+746.11,-285.39,mob_sister,1
+755.26,-287.15,MafiaBossCustom,1
+758.12,-284.03,VagrantThrow,1
+745.63,-278.30,VagrantGuard,1
+739.05,-264.92,VagrantThrow,1
+736.31,-264.30,VagrantThrow,1
+758.26,-269.33,MobSlumSlave,1
+805.07,-268.21,MobSlumSlave,1
+816.50,-266.34,MafiaBossCustom,1
+821.77,-266.69,MafiaBossCustom,1
+848.74,-257.56,TouzokuNormal|ec_event=eventcore_broker_gate,1
+844.76,-285.86,MobMachineSlave,1
+847.76,-286.30,trapmachine,1,left
+831.94,-297.93,TouzokuNormal,1
+810.09,-302.32,TouzokuAxe,1
+786.24,-309.39,TouzokuNormal|ec_event=eventcore_broker_gate,1
+751.43,-313.03,mob_death1,1
+752.61,-313.31,MobSlumSlave,1
+750.49,-313.01,MafiaBossCustom,1
+741.20,-304.20,TouzokuNormal,1
+743.26,-303.95,TouzokuNormal,1
+745.77,-304.13,BossTouzokuCustom,1
+757.56,-298.23,wallhip,1
+777.75,-291.93,TouzokuNormal,1
+779.31,-291.95,TouzokuAxe,1
+784.84,-292.14,TouzokuNormal,1
+836.30,-287.45,MobSlumSlave,1
+843.94,-282.06,trapnormal,1,rot180

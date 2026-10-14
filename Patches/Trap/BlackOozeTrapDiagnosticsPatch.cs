@@ -65,6 +65,8 @@ internal static class BlackOozeTrapDiagnosticsPatch
     [HarmonyPostfix]
     private static void PlayerUpdate_Postfix(playercon __instance)
     {
+        if (!Enabled)
+            return;
         if (__instance == null || __instance.eroflag)
             return;
 
@@ -77,9 +79,6 @@ internal static class BlackOozeTrapDiagnosticsPatch
         if (now - _lastProximityLogTime < 0.5f)
             return;
         _lastProximityLogTime = now;
-
-        if (!Enabled)
-            return;
 
         Plugin.Log?.LogInfo(
             $"[OozeTrapDiag] Player.NearTrap: near={trapName}, trapPos={FormatVec(trapPos)}, sqrDist={sqrDistance:0.00}; " +

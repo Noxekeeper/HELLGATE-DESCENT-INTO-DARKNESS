@@ -200,8 +200,16 @@ internal sealed class EnemyFatalityBoundProfile : IEnemyFatalityProfile
         profile.ClipOffsetAlongFacingEntry = cfg.Bind(section, "ClipOffsetAlongFacing", defaultClipOffsetAlongFacing,
             "World X offset along Aradia facing (+ = forward in look direction, − = backward). Mirrored when facing left. HeavyCritical uses −1.5.");
 
-        profile.FallDistanceEntry = cfg.Bind(section, "FallDistance", 0f,
-            "How far the clip drops downward in world units. 0 = stay at spawn (bone) position.");
+        // Profiles with a spawn offset (Y or facing) keep FallDistance 0; others drop 0.7 toward ground.
+        float defaultFallDistance =
+            Math.Abs(defaultClipOffsetY) > 0.0001f
+            || Math.Abs(defaultClipOffsetAlongFacing) > 0.0001f
+                ? 0f
+                : 0.7f;
+
+        profile.FallDistanceEntry = cfg.Bind(section, "FallDistance", defaultFallDistance,
+            "How far the clip drops downward in world units during playback. Default 0.7 when no ClipOffset*; 0 when a spawn offset is already set (StillAlive / HeavyCritical). 0 = stay at spawn.");
+
 
         profile.FallSpeedMultiplierEntry = cfg.Bind(section, "FallSpeedMultiplier", 4.5f,
             "Clip fall speed vs animation length. 1 = falls over the whole clip; 4.5 = reaches bottom in ~1/4.5 of the clip.");

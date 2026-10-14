@@ -402,6 +402,20 @@ internal static class SpawnAuthoringClipboard
                 amount = 100;
             spawned = GoldDropAwarder.TrySpawnPlacedPickup(new Vector2(x, y), amount);
         }
+        else if (HellGateSpawnLineFormat.IsGimmickShortcut(cmd))
+        {
+            SpawnDepthSettings depth = SpawnAuthoringPackEdit.ToDepthSettings(sort);
+            string sceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+            string templateKey = Gimmicks.HellGateGimmickRuntime.ResolveTemplateKey(key, out _);
+            if (SpawnTemplateCatalog.TrySpawn(
+                    "GIMMICK", templateKey, new Vector2(x, y), 1, "[SPAWN AUTHORING] [GIMMICK]", sceneName,
+                    flip, rot, depth, null, out spawned) && spawned != null)
+            {
+                Gimmicks.HellGateGimmickSpawnOptions options =
+                    HellGateSpawnLineFormat.ParseGimmickOptions(key, line.Trim().Split(','), 4);
+                Gimmicks.HellGateGimmickRuntime.ApplySpawnState(spawned, options, "[SPAWN AUTHORING] [GIMMICK]");
+            }
+        }
         else if (HellGateSpawnLineFormat.IsTrapShortcut(cmd) ||
                  HellGateSpawnLineFormat.IsDecorShortcut(cmd) ||
                  HellGateSpawnLineFormat.IsHostageShortcut(cmd) ||

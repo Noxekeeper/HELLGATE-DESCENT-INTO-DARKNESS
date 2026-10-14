@@ -20,6 +20,8 @@ internal static class DemonGorotukiSkeletonLoader
     internal const string SpawnKey = "Demon_gorotuki";
     private const string BattleBaseName = "Demon_gorotuki";
     private const string EroBaseName = "Demon_gorotuki_ERO";
+    // Vanilla gorotuki / s_gorotuki_ero2 SkeletonDataAsset scale — on-screen size follows the Spine art.
+    private const float SkeletonScale = 0.008f;
     private const string BattleFolderName = "Gorutoki";
     private const string EroFolderName = "Gorutoki ERO";
 
@@ -234,7 +236,7 @@ internal static class DemonGorotukiSkeletonLoader
 
         try
         {
-            string jsonText = File.ReadAllText(jsonPath);
+            string jsonText = SpineJsonLegacyConverter.ConvertIfNeeded(File.ReadAllText(jsonPath), name);
             string atlasText = File.ReadAllText(atlasPath);
             string imagesDir = Path.GetDirectoryName(pngPath);
 
@@ -243,7 +245,7 @@ internal static class DemonGorotukiSkeletonLoader
             var atlas = new Atlas(new StringReader(atlasText), imagesDir, textureLoader);
             atlas.FlipV();
 
-            var skeletonJson = new SkeletonJson(atlas) { Scale = 0.01f };
+            var skeletonJson = new SkeletonJson(atlas) { Scale = SkeletonScale };
             SkeletonData skeletonData = skeletonJson.ReadSkeletonData(new StringReader(jsonText));
             if (skeletonData == null)
             {
@@ -251,9 +253,12 @@ internal static class DemonGorotukiSkeletonLoader
                 return null;
             }
 
+            if (name == BattleBaseName)
+                EnsureAnimationAlias(skeletonData, "STEP2", "STEP");
+
             var asset = ScriptableObject.CreateInstance<SkeletonDataAsset>();
             asset.name = name + "_skeleton";
-            asset.scale = 0.01f;
+            asset.scale = SkeletonScale;
             CustomAssets[asset] = new DemonGorotukiAssetData(skeletonData);
             UnityEngine.Object.DontDestroyOnLoad(asset);
             return asset;
@@ -263,6 +268,26 @@ internal static class DemonGorotukiSkeletonLoader
             Plugin.Log?.LogError("[DemonGorotukiSkeletonLoader] Error loading " + name + ": " + ex.Message);
             return null;
         }
+    }
+
+    /// <summary>
+    /// Vanilla Gorotuki AI plays every state animation by name (e.g. STEP2); a missing one makes
+    /// Spine throw from SetAnimation, so reuse the closest existing clip.
+    /// </summary>
+    private static void EnsureAnimationAlias(SkeletonData skeletonData, string required, string fallback)
+    {
+        if (skeletonData.FindAnimation(required) != null)
+            return;
+
+        Spine.Animation source = skeletonData.FindAnimation(fallback);
+        if (source == null)
+        {
+            Plugin.Log?.LogWarning($"[DemonGorotukiSkeletonLoader] Animation '{required}' missing and no '{fallback}' to alias.");
+            return;
+        }
+
+        skeletonData.Animations.Add(new Spine.Animation(required, source.Timelines, source.Duration));
+        Plugin.Log?.LogInfo($"[DemonGorotukiSkeletonLoader] Animation '{required}' missing — aliased to '{fallback}'.");
     }
 
     private static Material CreateMaterialTemplate(GameObject template)
