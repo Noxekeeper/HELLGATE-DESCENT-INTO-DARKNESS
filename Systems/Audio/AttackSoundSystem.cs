@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using NoREroMod.Patches.Enemy.UndeadSkeletonsModCustom;
 using UnityEngine;
 
 namespace NoREroMod.Systems.Audio;
@@ -10,12 +11,16 @@ internal static class AttackSoundSystem
 {
     private static AudioSource _audioSource;
     private static AudioSource _threatAudioSource;
+    private static AudioSource _deathAudioSource;
     private static int _currentThreatEnemyId;
     private static AttackSoundCoroutineRunner _runner;
     private static bool _initialized;
     private static float _lastPlayTime;
+    private static float _lastGlobalDeathSoundTime = -999f;
     private static readonly Dictionary<int, float> _lastPlayTimeByAttacker = new Dictionary<int, float>();
-    private static readonly Dictionary<int, float> _deathSoundPlayedForEnemy = new Dictionary<int, float>();
+    /// <summary>Lifetime latch: each enemy instance plays death voice at most once.</summary>
+    private static readonly HashSet<int> _deathSoundLatchedEnemyIds = new HashSet<int>();
+    private const float DeathSoundGlobalGapSeconds = 0.35f;
 
     private static float _lastGlobalThreatSoundTime = -999f;
     private static readonly Dictionary<int, float> _lastThreatTimeByEnemy = new Dictionary<int, float>();
@@ -57,9 +62,10 @@ internal static class AttackSoundSystem
     {
         _lastPlayTimeByAttacker.Clear();
         _lastThreatTimeByEnemy.Clear();
-        _deathSoundPlayedForEnemy.Clear();
+        _deathSoundLatchedEnemyIds.Clear();
         _threatSoundQueue.Clear();
         _lastPlayTime = 0f;
+        _lastGlobalDeathSoundTime = -999f;
         AttackSoundRegistry.Clear();
         _initialized = false;
     }
@@ -180,6 +186,12 @@ internal static class AttackSoundSystem
         _threatAudioSource.playOnAwake = false;
         _threatAudioSource.loop = false;
         _threatAudioSource.spatialBlend = 0f;
+
+        // Dedicated channel: Stop+Play so death voices never PlayOneShot-stack into a folder loop.
+        _deathAudioSource = go.AddComponent<AudioSource>();
+        _deathAudioSource.playOnAwake = false;
+        _deathAudioSource.loop = false;
+        _deathAudioSource.spatialBlend = 0f;
 
         _runner = go.AddComponent<AttackSoundCoroutineRunner>();
         _runner.SetOwner(owner);
@@ -315,6 +327,13 @@ internal static class AttackSoundSystem
         string threatFolder = Path.Combine(root, GetThreatsSubfolderName());
         yield return LoadCategoryCoroutine(threatFolder, AttackSoundCategory.Threat, SearchOption.AllDirectories);
         yield return LoadCategoryCoroutine(Path.Combine(root, "Death"), AttackSoundCategory.Death);
+
+        string undeadRoot = Path.Combine(Path.Combine(basePath, "AttackSounds"), "Undead");
+        string undeadBoneDeath = Path.Combine(Path.Combine(undeadRoot, "Death"), "BoneDeath");
+        yield return LoadCategoryCoroutine(undeadBoneDeath, AttackSoundCategory.UndeadDeath);
+        // Fallback pool if BoneDeath is empty / only unsupported formats: Undead/*.wav|mp3
+        if (AttackSoundRegistry.GetClipCount(AttackSoundCategory.UndeadDeath) == 0)
+            yield return LoadCategoryCoroutine(undeadRoot, AttackSoundCategory.UndeadDeath);
     }
 
     private static void LoadDeathPrefabList()
@@ -366,17 +385,23 @@ internal static class AttackSoundSystem
 
     /// <summary>
     /// Play death sound when enemy dies (setanimation("DEATH")). Called from DeathSoundPatch.
+    /// Humans: AttackSounds/Human/Death. Undead skeletons: AttackSounds/Undead/Death/BoneDeath.
+    /// Once per enemy lifetime; dedicated AudioSource so voices never stack into a folder loop.
     /// </summary>
     internal static void TryPlayDeathSound(EnemyDate enemy)
     {
         if (!(_initialized && Plugin.enableAttackSounds != null && Plugin.enableAttackSounds.Value)) return;
         if (Plugin.enableDeathSounds != null && !Plugin.enableDeathSounds.Value) return;
-        if (_audioSource == null || enemy == null) return;
-        if (!AttackSoundRegistry.IsDeathEnabledPrefab(enemy)) return;
+        if (_deathAudioSource == null || enemy == null) return;
+
+        string typeName = enemy.GetType() != null ? enemy.GetType().Name : string.Empty;
+        string goName = enemy.gameObject != null ? enemy.gameObject.name : string.Empty;
+        bool undead = IsUndeadDeathSource(enemy, goName, typeName);
+        if (!undead && !AttackSoundRegistry.IsDeathEnabledPrefab(enemy)) return;
 
         int enemyId = enemy.GetInstanceID();
-        float now = Time.unscaledTime;
-        if (_deathSoundPlayedForEnemy.TryGetValue(enemyId, out float lastPlay) && (now - lastPlay) < 2f)
+        // Lifetime latch — DEATH anim re-fires every frame / after 2s would otherwise re-roll the folder.
+        if (!_deathSoundLatchedEnemyIds.Add(enemyId))
             return;
 
         if (_threatAudioSource != null && _threatAudioSource.isPlaying && _currentThreatEnemyId == enemyId)
@@ -385,15 +410,43 @@ internal static class AttackSoundSystem
             _currentThreatEnemyId = 0;
         }
 
-        AudioClip clip = AttackSoundRegistry.GetRandomClip(AttackSoundCategory.Death);
-        if (clip == null) return;
+        AttackSoundCategory category = undead ? AttackSoundCategory.UndeadDeath : AttackSoundCategory.Death;
+        AudioClip clip = AttackSoundRegistry.GetRandomClip(category);
+        if (clip == null)
+            return;
+
+        float now = Time.unscaledTime;
+        if (now - _lastGlobalDeathSoundTime < DeathSoundGlobalGapSeconds)
+            return;
 
         float volume = Plugin.deathSoundsVolume != null ? Mathf.Clamp01(Plugin.deathSoundsVolume.Value * 2f) : 1f;
-        _audioSource.PlayOneShot(clip, volume);
-        _deathSoundPlayedForEnemy[enemyId] = now;
+        _deathAudioSource.Stop();
+        _deathAudioSource.clip = clip;
+        _deathAudioSource.volume = volume;
+        _deathAudioSource.loop = false;
+        _deathAudioSource.Play();
+        _lastGlobalDeathSoundTime = now;
     }
 
-    private static IEnumerator LoadCategoryCoroutine(string folderPath, AttackSoundCategory category, SearchOption wavSearchOption = SearchOption.TopDirectoryOnly)
+    /// <summary>
+    /// Undead skeleton marker, or name/type that must never use Human/Death voices.
+    /// </summary>
+    private static bool IsUndeadDeathSource(EnemyDate enemy, string goName, string typeName)
+    {
+        if (UndeadSkeletonsRuntime.IsUndeadSkeleton(enemy))
+            return true;
+        if (!string.IsNullOrEmpty(goName) &&
+            goName.IndexOf("Undead", StringComparison.OrdinalIgnoreCase) >= 0)
+            return true;
+        if (!string.IsNullOrEmpty(typeName) &&
+            (typeName.Equals("Undead", StringComparison.OrdinalIgnoreCase) ||
+             typeName.Equals("Sisiruirui", StringComparison.OrdinalIgnoreCase) ||
+             typeName.Equals("SkeltonOoze", StringComparison.OrdinalIgnoreCase)))
+            return true;
+        return false;
+    }
+
+    private static IEnumerator LoadCategoryCoroutine(string folderPath, AttackSoundCategory category, SearchOption searchOption = SearchOption.TopDirectoryOnly)
     {
         if (!Directory.Exists(folderPath))
         {
@@ -401,12 +454,21 @@ internal static class AttackSoundSystem
             yield break;
         }
 
-        string[] wavFiles = Directory.GetFiles(folderPath, "*.wav", wavSearchOption);
+        List<string> files = new List<string>();
+        CollectAudioFiles(folderPath, "*.wav", searchOption, files);
+        CollectAudioFiles(folderPath, "*.mp3", searchOption, files);
+
         int loadedCount = 0;
-        for (int i = 0; i < wavFiles.Length; i++)
+        for (int i = 0; i < files.Count; i++)
         {
-            string filePath = wavFiles[i];
+            string filePath = files[i];
             if (string.IsNullOrEmpty(filePath)) continue;
+
+            string ext = Path.GetExtension(filePath);
+            bool isMp3 = ext != null && ext.Equals(".mp3", StringComparison.OrdinalIgnoreCase);
+            bool isWav = ext != null && ext.Equals(".wav", StringComparison.OrdinalIgnoreCase);
+            if (!isMp3 && !isWav)
+                continue;
 
             string normalized = filePath.Replace("\\", "/");
             if (!normalized.StartsWith("file:///", StringComparison.OrdinalIgnoreCase))
@@ -419,14 +481,23 @@ internal static class AttackSoundSystem
 
             if (!string.IsNullOrEmpty(www.error))
             {
-                Plugin.Log?.LogWarning("[AttackSoundSystem] Failed to load wav: " + filePath + " (" + www.error + ")");
+                Plugin.Log?.LogWarning("[AttackSoundSystem] Failed to load audio: " + filePath + " (" + www.error + ")");
                 continue;
             }
 
-            AudioClip clip = www.GetAudioClip(false, false, AudioType.WAV);
+            AudioClip clip = null;
+            if (isWav)
+                clip = www.GetAudioClip(false, false, AudioType.WAV);
+            else
+            {
+                // Some Unity builds reject MPEG; try UNKNOWN then MPEG.
+                clip = www.GetAudioClip(false, false, AudioType.UNKNOWN);
+                if (clip == null)
+                    clip = www.GetAudioClip(false, false, AudioType.MPEG);
+            }
             if (clip == null)
             {
-                Plugin.Log?.LogWarning("[AttackSoundSystem] Loaded clip is null: " + filePath);
+                // Unity often returns null for .mp3 — skip quietly; empty-category note below covers it.
                 continue;
             }
 
@@ -437,11 +508,30 @@ internal static class AttackSoundSystem
 
         if (loadedCount == 0)
         {
-            Plugin.Log?.LogWarning("[AttackSoundSystem] No .wav clips loaded for category " + category + " in " + folderPath);
+            // Expected for folders with only unloadable .mp3 (e.g. Undead/BoneDeath) until wavs exist.
+            Plugin.Log?.LogInfo("[AttackSoundSystem] No playable clips for " + category + " (" + folderPath + ")");
         }
         else
         {
             Plugin.Log?.LogInfo("[AttackSoundSystem] Loaded " + loadedCount + " clips for " + category);
+        }
+    }
+
+    private static void CollectAudioFiles(string folderPath, string pattern, SearchOption searchOption, List<string> into)
+    {
+        try
+        {
+            string[] found = Directory.GetFiles(folderPath, pattern, searchOption);
+            if (found == null) return;
+            for (int i = 0; i < found.Length; i++)
+            {
+                if (!string.IsNullOrEmpty(found[i]))
+                    into.Add(found[i]);
+            }
+        }
+        catch (Exception ex)
+        {
+            Plugin.Log?.LogWarning("[AttackSoundSystem] Scan failed (" + pattern + ") in " + folderPath + ": " + ex.Message);
         }
     }
 

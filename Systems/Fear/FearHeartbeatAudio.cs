@@ -26,6 +26,11 @@ internal static class FearHeartbeatAudio
     private static AudioSource _loopSource;
     private static bool _loopPlaying;
 
+    // Max-fear (−100) intermittent pulse: play 3–6s, pause 5–10s, repeat.
+    private static bool _maxFearMode;
+    private static float _maxFearPhaseEnd = -1f;
+    private static float _maxFearResumeAt = -1f;
+
     internal static void Initialize(MonoBehaviour host)
     {
         if (host == null || _loadStarted)
@@ -56,10 +61,42 @@ internal static class FearHeartbeatAudio
         _oneShotSource.Play();
     }
 
-    internal static void StartLoop()
+    /// <summary>Enable max-fear intermittent heartbeat (3–6s on, 5–10s off).</summary>
+    internal static void StartMaxFearPulse()
     {
-        if (_clip == null || _loopPlaying)
+        if (_clip == null)
             return;
+        if (_maxFearMode && (_loopPlaying || _maxFearResumeAt > Time.unscaledTime))
+            return;
+
+        _maxFearMode = true;
+        BeginMaxFearPlayBurst(Time.unscaledTime);
+    }
+
+    /// <summary>Advance intermittent max-fear pulse. Call from FearHeartbeatCues.Tick.</summary>
+    internal static void TickMaxFearPulse()
+    {
+        if (!_maxFearMode || _clip == null)
+            return;
+
+        float now = Time.unscaledTime;
+        if (_loopPlaying)
+        {
+            if (now >= _maxFearPhaseEnd)
+            {
+                StopLoopInternal();
+                _loopPlaying = false;
+                _maxFearResumeAt = now + UnityEngine.Random.Range(5f, 10f);
+            }
+            return;
+        }
+
+        if (now >= _maxFearResumeAt)
+            BeginMaxFearPlayBurst(now);
+    }
+
+    private static void BeginMaxFearPlayBurst(float now)
+    {
         float vol = Mathf.Clamp01(FearConfig.HeartbeatVolume?.Value ?? 0.85f);
         if (vol <= 0.0001f)
             return;
@@ -82,10 +119,21 @@ internal static class FearHeartbeatAudio
         _loopSource.bypassReverbZones = true;
         _loopSource.Play();
         _loopPlaying = true;
+        _maxFearPhaseEnd = now + UnityEngine.Random.Range(3f, 6f);
+        _maxFearResumeAt = -1f;
+    }
+
+    [System.Obsolete("Use StartMaxFearPulse for −100 fear.")]
+    internal static void StartLoop()
+    {
+        StartMaxFearPulse();
     }
 
     internal static void StopLoop()
     {
+        _maxFearMode = false;
+        _maxFearPhaseEnd = -1f;
+        _maxFearResumeAt = -1f;
         if (!_loopPlaying)
             return;
         StopLoopInternal();
@@ -100,6 +148,7 @@ internal static class FearHeartbeatAudio
     }
 
     internal static bool IsLoopPlaying => _loopPlaying;
+    internal static bool IsMaxFearPulseActive => _maxFearMode;
 
     internal static bool IsOneShotPlaying
     {

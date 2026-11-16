@@ -114,7 +114,7 @@ internal static class HellGateSplashScreen
     /// <summary>Working title-menu order from FOR_CHEK_OLD_VERSION (below vanilla Overlay UI).</summary>
     private const int TITLE_MENU_CANVAS_SORT_ORDER = -50;
     private const int SplashLoadingLabelFontSize = 22;
-    private const string SplashDisplayVersion = "1.2.7";
+    private const string SplashDisplayVersion = "1.2.8";
     /// <summary>ASCII separator for credit lines (built-in Arial cannot render UTF-8 mojibake em dashes).</summary>
     private const string CreditLineSep = " - ";
 
@@ -1006,6 +1006,16 @@ internal static class HellGateSplashScreen
             },
             new SplashCreditEntry
             {
+                Name = "Smkuzuy",
+                Roles = new[] { "HellGate Animator" }
+            },
+            new SplashCreditEntry
+            {
+                Name = "AnderHorlo",
+                Roles = new[] { "HellGate Artist" }
+            },
+            new SplashCreditEntry
+            {
                 Name = "Bandit",
                 Roles = new[] { "Frame-by-Frame Animator" }
             },
@@ -1016,7 +1026,7 @@ internal static class HellGateSplashScreen
             },
             new SplashCreditEntry
             {
-                Name = "Caliblri",
+                Name = "Calibri",
                 Roles = new[] { "Writer" }
             },
             new SplashCreditEntry
@@ -1478,7 +1488,28 @@ internal static class HellGateSplashScreen
             
             index++;
         }
-        
+
+        // Pre-language screen: English-only tip for the known first-boot click race.
+        // Same center-anchored space as title (+150) / flags (+50) — sit clearly below the row.
+        GameObject hintObj = new GameObject("LanguageFirstBootHint_XUAIGNORE");
+        hintObj.transform.SetParent(container.transform, false);
+        RectTransform hintRect = hintObj.AddComponent<RectTransform>();
+        hintRect.anchorMin = new Vector2(0.5f, 0.5f);
+        hintRect.anchorMax = new Vector2(0.5f, 0.5f);
+        hintRect.pivot = new Vector2(0.5f, 0.5f);
+        hintRect.anchoredPosition = new Vector2(0f, -160f);
+        hintRect.sizeDelta = new Vector2(1000f, 56f);
+
+        Text hintText = hintObj.AddComponent<Text>();
+        hintText.text = "If nothing can be selected on first launch, press Alt+F4 and start the game again.";
+        hintText.fontSize = 18;
+        hintText.alignment = TextAnchor.MiddleCenter;
+        hintText.fontStyle = FontStyle.Normal;
+        hintText.color = new Color(0.65f, 0.65f, 0.65f, 0.9f);
+        hintText.font = HellGateFontProvider.GetUiFont();
+        hintText.raycastTarget = false;
+        hintText.horizontalOverflow = HorizontalWrapMode.Wrap;
+        hintText.verticalOverflow = VerticalWrapMode.Overflow;
     }
     
     /// <summary>

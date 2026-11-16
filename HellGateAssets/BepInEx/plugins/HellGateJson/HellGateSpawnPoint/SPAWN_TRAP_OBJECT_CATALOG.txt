@@ -96,6 +96,7 @@ blackoozetypeb -> BlackOozeTypeB - BLACK SLIME TYPE 2
 
 # Trap_hari — static floor/wall/ceiling spikes (TrapNormal)
 trapnormal -> Trap_hari - SPIKES
+# spiketrap / "Spike Trap" — same TrapNormal prefab as trapnormal (F11 hides alias)
 trap_hari -> Trap_hari - SPIKES
 # trap -> trapnormal (alias; bare key trap often fails to spawn)
 

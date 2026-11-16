@@ -154,9 +154,8 @@ internal static class HellGateGimmickRuntime
         }
         else
         {
+            // Gates often cache spine-only (lever sits elsewhere) — expected, not worth Info spam.
             source = parts.Main.gameObject;
-            Plugin.Log?.LogInfo(
-                $"[GIMMICK] {vanilla.GetType().Name} on '{vanilla.gameObject.name}' has no compact lever+spine root; caching spine '{source.name}' only (no lever).");
         }
 
         return true;
@@ -226,10 +225,7 @@ internal static class HellGateGimmickRuntime
             lever.Configure(options.Lever, options.Radius);
             lever.SetInitialPulled(options.Open);
         }
-        else if (options.Lever)
-        {
-            Plugin.Log?.LogWarning($"{logPrefix} '{spawned.name}' has no lever in its cached assembly — 'lever' ignored.");
-        }
+        // Gate packs often request lever=true while the cached spine has none — expected, stay silent.
 
         ApplyGuard(controller, options);
     }

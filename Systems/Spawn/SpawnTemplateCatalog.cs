@@ -243,8 +243,9 @@ internal static class SpawnTemplateCatalog
         if (SpawnSpikeKeys.IsTrapHariKey(trimmed) || TemplateKeysMatch(trimmed, "traphari"))
             return "trapnormal";
 
+        // Forest1 GO "Spike Trap" is TrapNormal — same spikes as trapnormal / Trap_hari.
         if (TemplateKeysMatch(trimmed, "spiketrap") || TemplateKeysMatch(trimmed, "spike trap"))
-            return "spiketrap";
+            return "trapnormal";
 
         if (SpawnSpikeKeys.IsWoodSpikeKey(trimmed))
             return SpawnSpikeKeys.WoodSpikeKeys[0];

@@ -5,6 +5,7 @@ using NoREroMod.Patches.Enemy.ButcherModCustom;
 using NoREroMod.Patches.Enemy.DemonGorotukiModCustom;
 using NoREroMod.Patches.Enemy.HellishTouzokuModCustom;
 using NoREroMod.Patches.Enemy.UndeadSkeletonsModCustom;
+using NoREroMod.Patches.Enemy.DemonTentacleModCustom;
 using NoREroMod.Patches.Enemy.WolfModCustom;
 using Spine.Unity;
 using UnityEngine;
@@ -281,6 +282,10 @@ internal static class SpawnAuthoringEnemyPreview
             else if (UndeadSkeletonsLoader.TryGetVariant(key, out UndeadSkeletonVariant undeadVariant))
             {
                 UndeadSkeletonsLoader.ApplyVisual(spawned, undeadVariant);
+            }
+            else if (string.Equals(key, DemonTentacleLoader.SpawnKey, StringComparison.OrdinalIgnoreCase))
+            {
+                DemonTentacleLoader.ApplyVisual(spawned);
             }
         }
         catch (Exception ex)

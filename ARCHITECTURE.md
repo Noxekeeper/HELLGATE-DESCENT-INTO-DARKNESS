@@ -7,7 +7,7 @@ for *Night of Revenge*.
 |---|---|
 | Assembly | `NoR_HellGate.dll` |
 | GUID | `NoREroMod_HellGate` |
-| Version | `1.2.7` (`Core/PluginInfo.cs`) |
+| Version | `1.2.8` (`Core/PluginInfo.cs`) |
 | Companion | `NoREroMod.dll` (HellGate fork) — required, loaded side by side |
 | License | GPL-3.0 (`LICENSE`) |
 
@@ -192,6 +192,7 @@ Detailed references live in [`docs/modules/`](docs/modules/).
 | Economy + rewards | `Systems/Economy/`, `Systems/Rewards/` | [ECONOMY_AND_REWARDS.md](docs/modules/ECONOMY_AND_REWARDS.md) |
 | QTE, struggle, weapon mechanics | `Systems/Gameplay/` | [QTE_STRUGGLE_AND_GAMEPLAY.md](docs/modules/QTE_STRUGGLE_AND_GAMEPLAY.md) |
 | Rage | `Systems/Rage/` | [RAGE.md](docs/modules/RAGE.md) |
+| Fear / Morale | `Systems/Fear/` | [FEAR.md](docs/modules/FEAR.md) |
 | Grab + handoff | `Systems/GrabSystem/`, `Systems/Handoff/` | [GRAB_AND_HANDOFF.md](docs/modules/GRAB_AND_HANDOFF.md) |
 | MindBroken | `Patches/UI/MindBroken/` (`MindBrokenRealtimeGate`) | [MIND_BROKEN.md](docs/modules/MIND_BROKEN.md) |
 | HellTraps | `Patches/HellTraps/` | [HELL_TRAPS.md](docs/modules/HELL_TRAPS.md) — death clip + combat AI freeze |
@@ -264,7 +265,35 @@ only. Roots, formats, and save files:
 The full hazard list and the NoREroMod boundary:
 [`docs/development/COMPATIBILITY.md`](docs/development/COMPATIBILITY.md).
 
-## 10. Maintenance
+## 10. Planned composition (after 1.3.0)
+
+Feature logic already lives under `Systems/` and `Patches/` by subsystem.
+What remains concentrated on purpose through the 1.2.x line is the **plugin
+composition root**:
+
+- `Core/Plugin.cs` — `SetUpConfigs()` binds and `BootPatch` / subsystem
+  registration in `Awake()`;
+- a small set of large UI / authoring / per-enemy files that grew with the
+  feature they own (spawn editor overlay, splash/loading, QTE, etc.).
+
+This is **scheduled technical debt**, not an accidental monolith. Through
+1.2.x the priority is shipping and stabilizing gameplay modules. **After
+1.3.0**, composition work is planned:
+
+1. Move cfg `Bind` groups into owning module `*Config` types (pattern already
+   used by Fear, DeadArmor, DemonTentacle, …).
+2. Split `BootPatch` / init registration so `Plugin.Awake` only orchestrates
+   module `Initialize` hooks.
+3. Split oversized files only when they are next edited for behavior — no
+   big-bang rewrite of working systems.
+4. Keep a **single** `NoR_HellGate.dll` unless a hard load-order or API
+   boundary forces otherwise.
+
+Until that pass, prefer adding new work in the matching module folder; avoid
+growing `Plugin.cs` except for a thin Bind + BootPatch line that delegates
+outward. See also [`ADDING_FEATURES.md`](docs/development/ADDING_FEATURES.md).
+
+## 11. Maintenance
 
 Update this file when subsystem boundaries, `Awake()` order, the patching
 model, data roots, or persistence change. Update the matching document in

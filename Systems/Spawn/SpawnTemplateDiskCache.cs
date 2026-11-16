@@ -41,6 +41,9 @@ internal static class SpawnTemplateDiskCache
     private static string splashPreloadCurrentScene = string.Empty;
     private static readonly HashSet<string> hydratedScenes =
         new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+    /// <summary>Scenes we already LoadScene+CacheFromScene'd this session (even if keys stayed missing).</summary>
+    private static readonly HashSet<string> attemptedHydrateScenes =
+        new HashSet<string>(StringComparer.OrdinalIgnoreCase);
 
     internal static bool RestoreComplete => restoreComplete;
 
@@ -180,11 +183,9 @@ internal static class SpawnTemplateDiskCache
     }
 
     /// <summary>
-    /// SpawnTemplateCatalog cached this scene on sceneLoaded (any loader, incl. NoRSceneLoader at boot).
-    /// Objects created in Start are absent then, so the scene counts as hydrated only when every
-    /// disk key pinned to it is already in the catalog; otherwise the splash preload loads it.
+    /// True when every disk-cache key pinned to this scene is already in the runtime catalog.
     /// </summary>
-    internal static bool MarkSceneCapturedIfComplete(string sceneName)
+    private static bool SceneHasAllPinnedTemplates(string sceneName)
     {
         if (string.IsNullOrEmpty(sceneName))
             return false;
@@ -195,6 +196,19 @@ internal static class SpawnTemplateDiskCache
                 && !SpawnTemplateCatalog.HasTemplate(pair.Key))
                 return false;
         }
+
+        return true;
+    }
+
+    /// <summary>
+    /// SpawnTemplateCatalog cached this scene on sceneLoaded (any loader, incl. NoRSceneLoader at boot).
+    /// Objects created in Start are absent then, so the scene counts as hydrated only when every
+    /// disk key pinned to it is already in the catalog; otherwise the splash preload loads it.
+    /// </summary>
+    internal static bool MarkSceneCapturedIfComplete(string sceneName)
+    {
+        if (!SceneHasAllPinnedTemplates(sceneName))
+            return false;
 
         hydratedScenes.Add(sceneName);
         return true;
@@ -314,7 +328,20 @@ internal static class SpawnTemplateDiskCache
                 }
 
                 yield return LoadSceneCacheAndMaybeUnload(sceneName, string.Empty);
-                hydratedScenes.Add(sceneName);
+                // Never mark complete when pinned keys are still missing (e.g. Ivy_* on Forest1).
+                // Blind Add used to block pack hydrate forever → Template not found on other disks.
+                if (!MarkSceneCapturedIfComplete(sceneName))
+                {
+                    Plugin.Log?.LogWarning(
+                        $"[SPAWN DISK CACHE] \"{sceneName}\" preload incomplete — pinned keys still missing; pack hydrate may retry.");
+                    yield return LoadSceneCacheAndMaybeUnload(sceneName, string.Empty);
+                    if (!MarkSceneCapturedIfComplete(sceneName))
+                    {
+                        Plugin.Log?.LogWarning(
+                            $"[SPAWN DISK CACHE] \"{sceneName}\" still incomplete after retry — leaving unhydrated for on-demand.");
+                    }
+                }
+
                 splashPreloadCompletedScenes++;
             }
 
@@ -504,11 +531,19 @@ internal static class SpawnTemplateDiskCache
             for (int i = 0; i < scenes.Count; i++)
             {
                 string sceneName = scenes[i];
+                // Splash may have loaded the scene without capturing pinned keys — force a retry.
+                if (hydratedScenes.Contains(sceneName) && !SceneHasAllPinnedTemplates(sceneName))
+                    hydratedScenes.Remove(sceneName);
+
                 if (hydratedScenes.Contains(sceneName))
                     continue;
 
                 yield return LoadSceneCacheAndMaybeUnload(sceneName, gameplayScene);
-                hydratedScenes.Add(sceneName);
+                if (!MarkSceneCapturedIfComplete(sceneName))
+                {
+                    Plugin.Log?.LogWarning(
+                        $"[SPAWN DISK CACHE] Hydrate \"{sceneName}\" incomplete for {label} — pinned keys still missing.");
+                }
             }
 
             foreach (string key in keys)
@@ -590,12 +625,16 @@ internal static class SpawnTemplateDiskCache
         if (titleLoad)
         {
             // Hostages, barrel layers and damage boxes are created in Start.
-            yield return null;
-            yield return null;
-            if (!scene.IsValid() || !scene.isLoaded)
-                yield break;
+            // Extra frames: slow disks (E:) sometimes finish LoadScene before Ivy/SpawnSlave Start.
+            for (int w = 0; w < 5; w++)
+            {
+                yield return null;
+                if (!scene.IsValid() || !scene.isLoaded)
+                    yield break;
+            }
         }
 
+        attemptedHydrateScenes.Add(sceneName);
         SpawnTemplateCatalog.CacheFromSceneForDiskRestore(scene);
         if (titleLoad)
         {
@@ -649,6 +688,8 @@ internal static class SpawnTemplateDiskCache
     /// A key recorded from one map must never be re-sourced from another loaded map: the same vanilla
     /// component (e.g. WoodWana) can sit under a huge scene chunk elsewhere and first-come caching
     /// would silently swap the template for every pack. Delete the cache line to re-pin a key.
+    /// Exception: if the pinned scene was already loaded and the key is still missing, allow another
+    /// map to supply it (wrong pin / DeepForest-only Forest1 vs stock WhiteCathedralGarden).
     /// </summary>
     internal static bool IsPinnedToOtherScene(string normalizedKey, string sceneName)
     {
@@ -662,7 +703,14 @@ internal static class SpawnTemplateDiskCache
             string.Equals(existing.Scene, ResourcesSceneToken, StringComparison.OrdinalIgnoreCase))
             return false;
 
-        return !string.Equals(existing.Scene, sceneName.Trim(), StringComparison.OrdinalIgnoreCase);
+        if (string.Equals(existing.Scene, sceneName.Trim(), StringComparison.OrdinalIgnoreCase))
+            return false;
+
+        // Pinned scene already tried and still no template — do not block a real source map.
+        if (attemptedHydrateScenes.Contains(existing.Scene) && !SpawnTemplateCatalog.HasTemplate(normalizedKey))
+            return false;
+
+        return true;
     }
 
     private static bool IsForeignGimmickEntry(Entry entry)

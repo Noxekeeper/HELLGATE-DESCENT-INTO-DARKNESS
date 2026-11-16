@@ -1,14 +1,16 @@
-using System.Reflection;
 using HarmonyLib;
+using NoREroMod.Systems.GrabSystem;
 
 namespace NoREroMod.Patches.Player;
 
+/// <summary>
+/// Escape path: <see cref="StruggleSystem.startGrabInvul"/> arms HellGate
+/// <see cref="PostEscapeGrabImmunity"/> (default 3s unscaled) — same coverage style as Rage
+/// (GrabViaAttack + CanEliteGrabPlayer + power-knockdown suppress).
+/// </summary>
 [HarmonyPatch(typeof(StruggleSystem), nameof(StruggleSystem.startGrabInvul))]
 internal static class StruggleInvulnPatch
 {
-    private const float AdditionalInvulSeconds = 2f;
-    private static readonly FieldInfo EliteGrabInvulField = AccessTools.Field(typeof(StruggleSystem), "eliteGrabInvulTimer");
-
     /// <summary>
     /// On H-scene escape, reset global handoff state so the next enemy does not resume mid-animation.
     /// </summary>
@@ -21,22 +23,13 @@ internal static class StruggleInvulnPatch
         }
         catch
         {
-            // Ignore reset failures; invulnerability extension must still apply.
+            // Ignore reset failures; immunity arm must still apply.
         }
     }
 
     [HarmonyPostfix]
-    private static void ExtendInvulnerability()
+    private static void ArmPostEscapeGrabImmunity()
     {
-        if (EliteGrabInvulField == null)
-        {
-            return;
-        }
-
-        float current = (float)EliteGrabInvulField.GetValue(null);
-        float updated = current + AdditionalInvulSeconds;
-        EliteGrabInvulField.SetValue(null, updated);
-
+        PostEscapeGrabImmunity.ArmFromEscape();
     }
 }
-

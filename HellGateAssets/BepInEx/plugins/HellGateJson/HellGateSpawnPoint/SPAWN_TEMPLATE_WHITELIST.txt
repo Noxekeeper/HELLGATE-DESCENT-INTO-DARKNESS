@@ -1,13 +1,8 @@
-# HellGate — whitelist ключей для кэша шаблонов (SPAWN_TEMPLATE_WHITELIST.txt)
-# Постоянный кэш: SPAWN_TEMPLATE_DISK_CACHE.txt (сохраняется между запусками игры)
-# Формат: Key  или  Key@UnitySceneName  (@ — подсказка сцены для disk cache, НЕ для spawn txt)
-# Проверка: AVAILABLE_SPAWN_TEMPLATES_RUNTIME.txt
-# Конфиг: NoREroMod_HellGate.cfg → [SpawnTemplates] EnablePersistentCache=true
-#
-# WhitelistSceneLoad отключён — подгрузка сцен на главном меню ломала Gametitle.
-# После правок: перезапуск игры. Первый заход на карту восстанавливает кэш с диска.
+# HellGate spawn template whitelist
+# Format: Key  or  Key@UnitySceneName
+# Persistent cache: SPAWN_TEMPLATE_DISK_CACHE.txt
 
-# ========== HOSTAGE (пленники) ==========
+# ========== HOSTAGE ==========
 MobSlumSlave@InsomniaTownC
 MobCrawlingSlave
 MobSpiderSlave
@@ -31,7 +26,7 @@ slave
 stand
 back
 
-# ========== TRAP — пауки / дерево ==========
+# ========== TRAP вЂ” spiders / wood ==========
 trapspider
 trapthreadofspider
 TRAPThreadOfSpider
@@ -39,7 +34,7 @@ wana_start
 woodwana
 forest_long
 
-# ========== TRAP — кнопки / пушки / копья ==========
+# ========== TRAP вЂ” buttons / guns / spears ==========
 trap_button
 trap_button_ironmaiden
 lightningTrap_button
@@ -54,19 +49,21 @@ trap_gun
 spearthrowtrap
 spear
 
-# ========== TRAP — magic (часто только на сцене) ==========
+# ========== TRAP вЂ” magic ==========
 magictrap@UndergroundChurch
 magictrapcreateobject@UndergroundChurch
 firecharge@UndergroundChurch
 magic2@UndergroundChurch
 
-# ========== TRAP — контроллеры сцены ==========
+# ========== TRAP вЂ” scene controllers ==========
 picturetrap
 picture_trap
 Picture_trap
-ivytrap@WhiteCathedral
-ivy_trap@WhiteCathedral
-ivy_monster@WhiteCathedral
+Ivy_trap@WhiteCathedralGarden
+ivytrap@WhiteCathedralGarden
+ivy_trap@WhiteCathedralGarden
+Ivy_monster@WhiteCathedralGarden
+ivy_monster@WhiteCathedralGarden
 Ivy_monster
 cocoontrap@ForestOfRequiem
 cocoontrapnot@ForestOfRequiem
@@ -74,14 +71,14 @@ cocoontrapNot@ForestOfRequiem
 cocooncreat@ForestOfRequiem
 CocoonmanStart
 
-# ========== TRAP — slime ==========
+# ========== TRAP вЂ” slime ==========
 blackoozetrap
 blackoozetraptypeb
 blackoozetypeb
 BlackOozetrap
 BlackOozeTypeB
 
-# ========== TRAP — шипы (rot90/rot180/rot270) ==========
+# ========== TRAP вЂ” spikes ==========
 trapnormal
 trap_hari
 Trap_hari
@@ -92,15 +89,11 @@ LightImpactNormal
 impactdamagebox
 ImpactDamage
 ImpactDamageBOX
-wavespike
-WaveSpike
-wavespikeguard
-WaveSpikeGuard
 spearthrowtrap
 spear
 SpearThrowtrap
 
-# ========== TRAP — iron maiden ==========
+# ========== TRAP вЂ” iron maiden ==========
 ironmaidendamage
 ironmaiden_damage
 trap_ironmaiden
@@ -109,7 +102,7 @@ trap_tentacleironmaiden
 Trap_Ironmaiden
 Tent_Ironmaiden
 
-# ========== TRAP — машина / H ==========
+# ========== TRAP вЂ” machine / H ==========
 trapmachine
 trap_machine
 trap_mokubaenemy@Prison
@@ -124,7 +117,7 @@ Rosewarm
 wallhip
 wallHIP
 
-# ========== TRAP — бочки / ящики ==========
+# ========== TRAP вЂ” barrels / crates ==========
 breakobjct
 taru_brk
 taru_exp
@@ -137,16 +130,14 @@ movebox_brk
 MoveBox_brk
 Box_brk
 
-# ========== TRAP — impact (дубликаты в whitelist, см. шипы выше) ==========
-
-# ========== TRAP — прочее из кэша / алиасы ==========
+# ========== TRAP вЂ” misc / aliases ==========
 npcslaveenable
 npcslaveflag
 chaincowslavespine
 cowslavespine
 cow1
 
-# --- Scene decor (corpses / props) — see DECOR_CATALOG.txt ---
+# ========== DECOR ==========
 mob_death1@scapegoatEntrance
 mob_death2@InundergroundChurch
 mob_sister@InundergroundChurch
@@ -161,7 +152,7 @@ NpcSlave@Ranch
 InchurchSlave@InundergroundChurch
 InchchurchSlave@InundergroundChurch
 
-# --- GIMMICK (ворота / складные лестницы) — GIMMICK,Key,X,Y,open|closed ---
+# ========== GIMMICK ==========
 gate_fence@UndergroundChurch
 dooropen@UndergroundChurch
 gate_fence_undergroundchurch@UndergroundChurch
@@ -170,7 +161,3 @@ ladder_nomal@UndergroundLaboratory
 ladder_nomal_undergroundlaboratory@UndergroundLaboratory
 ladder_nomal_pilgrimageentrance@PilgrimageEntrance
 ladder2@InsomniaTownC
-
-
-
-

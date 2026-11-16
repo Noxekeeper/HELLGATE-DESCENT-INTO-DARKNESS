@@ -153,16 +153,11 @@ internal sealed class HellGateGimmickLever : MonoBehaviour
     {
         nextUseTime = Time.time + UseCooldown;
         if (owner != null && owner.IsGuardDriven)
-        {
-            Plugin.Log?.LogInfo($"[GIMMICK] Lever '{name}' ignored: its gimmick is driven by a guard zone.");
             return;
-        }
 
         pulled = !pulled;
         ApplyVisual(true);
-        int affected = HellGateGimmickController.SetStateInRadius(WorldAnchor, radius, pulled, owner);
-        string scope = owner != null ? "own gimmick" : $"gimmick(s) within {radius:0.#}";
-        Plugin.Log?.LogInfo($"[GIMMICK] Lever '{name}' → {(pulled ? "open" : "close")} {affected} {scope}.");
+        HellGateGimmickController.SetStateInRadius(WorldAnchor, radius, pulled, owner);
     }
 
     private void ApplyVisual(bool animate)

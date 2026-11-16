@@ -13,9 +13,11 @@ Save: `HellGateJson/PlayerState/PlayerFear_Slot0N.json`
 | `[FearSystem]` cfg | Kill-switch, UI, combat bursts, soft combat FX, respawn values, HeartBeat, fallbacks |
 | `FearEnemies.json` | `Default` + `enemies[]`: pressure stats and H-phase beats |
 
-Enemy stats: `fearPerSecond` (aura), `heavyHitFear`, `projectileFear`, `hSceneFearPerSecond`.
-Override field `0` = inherit from `Default`. Enemy key = C# type name (or object name without `(Clone)`).
-The file is re-read at most every 2 s, so values can be tuned while the game runs.
+Enemy stats: `fearPerSecond` (aura), `heavyHitFear`, `projectileFear`, `hSceneFearPerSecond`,
+`grabFear` (absolute |ΔMorale| on GrabViaAttack; size/threat graded, ×2 vs early draft —
+goblin ~10, human ~14–20, large ~22–24, bosses ~28–34). Override field `0` = inherit from
+`Default`. Enemy key = C# type name (or object name without `(Clone)`). The file is re-read at
+most every 2 s, so values can be tuned while the game runs.
 
 ### `hPhases` (H-phase beats)
 
@@ -52,16 +54,24 @@ Ticked from `PlayerConUpdateDispatcher` (`FearAuraTicker`) with the MindBroken r
   `hSceneFearPerSecond`, else JSON `Default`, else cfg `HSceneFearPerSecond`. Aura, soft decay and combat effects are skipped.
 - **Aura** (outside H): sum of the strongest nearby enemy auras (`AuraStrongestN`: 1 = strongest only,
   2+ = two strongest), linear falloff to 0 at `AuraFalloffMeters` (12). Rescan every 0.25 s.
+  Crowd multiplier (`CrowdFearEnable`): ×1 / ×1.3 / ×1.4 / ×1.55 / ×1.85 for 1 / 2 / 3 / 4 / 5+
+  threatening enemies in range (`CrowdFearMult2`…`CrowdFearMult5Plus`).
 - **Low SP:** at SP ≤ `LowSpAuraThreshold` (30%) aura and H pressure are ×`LowSpAuraMult` (2).
 - **Soft decay** toward 0 (`SoftDecayPerSecond`) when no aura and not in combat; paused during trauma.
 - **H-phase beats:** JSON `hPhases`, see above.
 - **White / Crow / Mutude:** mirror their MindBroken H stages (White `ERO_START2`, Crow `IKI`/`IKI2`,
   Mutude `DRINK`/`ERO3–5`) via `ApplyHPhaseFearMbRate` (MB %/s → −Morale/s).
-- **Combat (cfg):** block, counter within `CounterWindowSeconds` after block, block expiring without counter
-  (heavy / light), perfect parry, dash avoid, every landed weapon/magic hit, optional combo every 5 hits,
-  kill (normal / boss via `FactionBossDetection`), heavy hit / knockdown (attacker JSON `heavyHitFear`,
-  else cfg), projectile hit (attacker JSON `projectileFear`), struggle QTE success.
-- **Grab / H start:** `GrabLandMorale` on GrabViaAttack; `HSceneStartMorale` on H start (skipped within 0.5 s of GrabLand).
+- **Combat (cfg):** block (+Morale), counter within `CounterWindowSeconds` after block, block expiring without
+  counter (heavy / light), perfect parry, dash avoid, every landed weapon/magic hit, optional combo every 5
+  hits, kill (normal / boss via `FactionBossDetection`), light hit through (`HitTakenMorale`), heavy / power
+  hit (`HeavyHitMorale` / JSON `heavyHitFear`), knockdown / knockout (`KnockdownMorale`, stronger; stacks only
+  the extra over a just-applied heavy), projectile hit (JSON `projectileFear`), struggle QTE success.
+- **Boss pressure:** when `FactionBossDetection` marks the attacker/aura source as boss — aura ×`BossAuraMult`
+  (2.5), combat hits ×`BossCombatFearMult` (2.25); boss knockdown target is at least last heavy +
+  `BossKnockdownBonus` (8). Elite JSON rows (WolfBoss, Requiem, Minotaurosu, …) also use higher base
+  `fearPerSecond` / `heavyHitFear`.
+- **Grab / H start:** GrabViaAttack uses JSON `grabFear` (else `GrabLandMorale`), ×`BossCombatFearMult`
+  for bosses; `HSceneStartMorale` on H start (skipped within 0.5 s of GrabLand).
 - **FIN climax:** `FinClimaxMorale` on black-background `Activate` and the Kakasi FIN path (1.2 s dedupe).
 - **Rage:** activation (`RageActivationMorale`) and VengeanceStrike spend (`VengeanceStrikeMorale`) only.
 - **Lethal trap / fatality Take Vengeance:** trauma rises to −100, holds, settles to `LethalRespawnFloor` (−30);
@@ -76,7 +86,23 @@ Ticked from `PlayerConUpdateDispatcher` (`FearAuraTicker`) with the MindBroken r
 - Struggle / QTE / SimpleQTE SP per click: ×`1 + (Morale/10) * StruggleSpMultPerTenMorale` (−100 → ×0.75, +100 → ×1.25), in `QTESPCalculator`.
 - Combat effects above are gated by `EnableCombatEffects`.
 - HeartBeat (`sources/HellGate_sources/Fear/HeartBeat.wav`, fallback `CustomDeath/`): one-shot on each fear step
-  10/20/…/90% (−Morale), skipped while a one-shot is playing; loop while Morale ≤ −100; muted during trauma
-  (shock owns the heartbeat) and when the player is dead.
+  10/20/…/90% (−Morale), skipped while a one-shot is playing; at Morale ≤ −100 an intermittent pulse
+  (play 3–6 s, pause 5–10 s, repeat); muted during trauma (shock owns the heartbeat) and when the player is dead.
 - UI: bipolar bar (`FearUISystem`) bottom-center (Mercy mirror inset Y=32) + `BarOffsetX/Y`, `BarOpacity`.
   Visibility via `HudVisibilityGate` (hides on title / inventory like Rage). Own canvas — not under Rage.
+  Panic / confidence marker positions follow `PanicBandThreshold` / `ConfidenceBandThreshold`.
+
+## Difficulty presets
+
+EASY / MEDIUM / HARD ship the 1.2.8 Fear keys (`HitTakenMorale`, `KnockdownMorale`,
+`BossAuraMult` / `BossCombatFearMult` / `BossKnockdownBonus`, `CrowdFear*`) with
+**identical** defaults. Fear pressure is not the Easy→Hard lever; that remains
+MindBroken, grab chances, HP, and QTE. See
+[SPLASH_OPTIONS_AND_DIFFICULTY.md](SPLASH_OPTIONS_AND_DIFFICULTY.md) and
+`BepInEx/config/DIFFICULTY_PRESETS_GUIDE.txt`.
+
+## Persistence
+
+`FearSlotStore` writes `HellGateJson/PlayerState/PlayerFear_Slot0N.json` on the
+game save/load hooks. Load clears runtime caches (combo, dash-cost latch, kill
+dedupe, heartbeat) before restoring Morale.

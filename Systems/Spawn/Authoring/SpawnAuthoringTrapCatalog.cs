@@ -38,7 +38,6 @@ internal static class SpawnAuthoringTrapCatalog
         "blackoozetrap",
         "blackoozetraptypeb",
         "trapnormal",
-        "spiketrap",
         "woodspike",
         "impactdamage",
         "impactdamagebox",
@@ -59,6 +58,10 @@ internal static class SpawnAuthoringTrapCatalog
         "meatshieldhelp",
         "npcslaveenable",
         "npcslaveflag",
+        // spiketrap / spike trap = TrapNormal "Spike Trap" GO — same prefab as trapnormal
+        "spiketrap",
+        "spike trap",
+        // WaveSpike Spine — no usable authoring prefab / preview
         "wavespike",
         "wavespikeguard",
         "cocooncreat",

@@ -13,6 +13,7 @@ using NoREroMod.Patches.Enemy.ButcherModCustom;
 using NoREroMod.Patches.Enemy.HellishTouzokuModCustom;
 using NoREroMod.Patches.Enemy.DemonGorotukiModCustom;
 using NoREroMod.Patches.Enemy.UndeadSkeletonsModCustom;
+using NoREroMod.Patches.Enemy.DemonTentacleModCustom;
 using NoREroMod.Patches.Enemy.BossTouzokuCustom;
 using NoREroMod.Patches.Enemy.HeckGateEnemy;
 using NoREroMod.Systems.CombatAi.Factions;
@@ -1241,6 +1242,10 @@ internal static class SpawnConfigExecutor
             else if (UndeadSkeletonsLoader.TryGetVariant(enemyType, out UndeadSkeletonVariant undeadVariant))
             {
                 UndeadSkeletonsLoader.ApplySkeleton(spawned, undeadVariant);
+            }
+            else if (string.Equals(enemyType, DemonTentacleLoader.SpawnKey, StringComparison.OrdinalIgnoreCase))
+            {
+                DemonTentacleLoader.ApplySkeleton(spawned);
             }
 
             if (flipX)

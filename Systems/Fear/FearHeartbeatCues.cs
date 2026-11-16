@@ -7,8 +7,8 @@ namespace NoREroMod.Systems.Fear;
 /// - Fear intensity = −Morale while Morale &lt; 0 (0…100%).
 /// - One-shot per 10% step (10, 20, …, 90), one step at a time. A jump arms only the next
 ///   step (9→15 → 10%); further steps wait until the current one-shot finishes.
-/// - At 100% (Morale ≤ −100): Fear loop — except during vengeance trauma, when the
-///   lethal-trap shock HeartBeat owns the audio (avoids double heartbeat).
+/// - At 100% (Morale ≤ −100): intermittent pulse — play 3–6s, pause 5–10s, repeat
+///   (except during vengeance trauma, when the lethal-trap shock HeartBeat owns audio).
 /// </summary>
 internal static class FearHeartbeatCues
 {
@@ -45,6 +45,12 @@ internal static class FearHeartbeatCues
         }
 
         SyncFromMorale(FearSystem.Morale, playThresholds: true);
+        if (FearSystem.Morale <= FloorMorale + 0.001f &&
+            !FearSystem.IsVengeanceTraumaRunning &&
+            !IsPlayerDead(player, status))
+        {
+            FearHeartbeatAudio.TickMaxFearPulse();
+        }
     }
 
     private static void OnMoraleChanged(float oldMorale, float newMorale)
@@ -80,14 +86,9 @@ internal static class FearHeartbeatCues
             float fearAfter = morale < 0f ? -morale : 0f;
             _lastArmedStep = morale <= FloorMorale + 0.001f ? 100 : FearStep(fearAfter);
             if (morale <= FloorMorale + 0.001f)
-            {
-                if (!FearHeartbeatAudio.IsLoopPlaying)
-                    FearHeartbeatAudio.StartLoop();
-            }
-            else if (FearHeartbeatAudio.IsLoopPlaying)
-            {
+                FearHeartbeatAudio.StartMaxFearPulse();
+            else
                 FearHeartbeatAudio.StopLoop();
-            }
 
             return;
         }
@@ -95,12 +96,11 @@ internal static class FearHeartbeatCues
         if (morale <= FloorMorale + 0.001f)
         {
             _lastArmedStep = 100;
-            if (!FearHeartbeatAudio.IsLoopPlaying)
-                FearHeartbeatAudio.StartLoop();
+            FearHeartbeatAudio.StartMaxFearPulse();
             return;
         }
 
-        if (FearHeartbeatAudio.IsLoopPlaying)
+        if (FearHeartbeatAudio.IsLoopPlaying || FearHeartbeatAudio.IsMaxFearPulseActive)
             FearHeartbeatAudio.StopLoop();
 
         float fearPct = morale < 0f ? -morale : 0f;

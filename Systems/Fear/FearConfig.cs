@@ -16,6 +16,11 @@ internal static class FearConfig
     internal static ConfigEntry<float> PrideFallMult;
     internal static ConfigEntry<float> AuraFalloffMeters;
     internal static ConfigEntry<int> AuraStrongestN;
+    internal static ConfigEntry<bool> CrowdFearEnable;
+    internal static ConfigEntry<float> CrowdFearMult2;
+    internal static ConfigEntry<float> CrowdFearMult3;
+    internal static ConfigEntry<float> CrowdFearMult4;
+    internal static ConfigEntry<float> CrowdFearMult5Plus;
     internal static ConfigEntry<float> SoftDecayPerSecond;
     internal static ConfigEntry<float> HSceneFearPerSecond;
     internal static ConfigEntry<float> LowSpAuraThreshold;
@@ -35,7 +40,12 @@ internal static class FearConfig
     internal static ConfigEntry<float> RageActivationMorale;
     internal static ConfigEntry<float> VengeanceStrikeMorale;
     internal static ConfigEntry<float> StruggleQteMorale;
+    internal static ConfigEntry<float> HitTakenMorale;
     internal static ConfigEntry<float> HeavyHitMorale;
+    internal static ConfigEntry<float> KnockdownMorale;
+    internal static ConfigEntry<float> BossAuraMult;
+    internal static ConfigEntry<float> BossCombatFearMult;
+    internal static ConfigEntry<float> BossKnockdownBonus;
     internal static ConfigEntry<float> GrabLandMorale;
     internal static ConfigEntry<float> HSceneStartMorale;
     internal static ConfigEntry<float> FinClimaxMorale;
@@ -85,6 +95,16 @@ internal static class FearConfig
 
         AuraFalloffMeters = config.Bind("FearSystem", "AuraFalloffMeters", 12f, "Distance beyond which enemy aura is 0.");
         AuraStrongestN = config.Bind("FearSystem", "AuraStrongestN", 2, "1 = strongest nearby aura only, 2+ = sum of the two strongest.");
+        CrowdFearEnable = config.Bind(
+            "FearSystem",
+            "CrowdFearEnable",
+            true,
+            "Multiply aura pressure by crowd size (threatening enemies inside AuraFalloffMeters)."
+        );
+        CrowdFearMult2 = config.Bind("FearSystem", "CrowdFearMult2", 1.3f, "Aura pressure multiplier when 2 threatening enemies are nearby.");
+        CrowdFearMult3 = config.Bind("FearSystem", "CrowdFearMult3", 1.4f, "Aura pressure multiplier when 3 threatening enemies are nearby.");
+        CrowdFearMult4 = config.Bind("FearSystem", "CrowdFearMult4", 1.55f, "Aura pressure multiplier when 4 threatening enemies are nearby.");
+        CrowdFearMult5Plus = config.Bind("FearSystem", "CrowdFearMult5Plus", 1.85f, "Aura pressure multiplier when 5+ threatening enemies are nearby.");
         SoftDecayPerSecond = config.Bind("FearSystem", "SoftDecayPerSecond", 0.1f, "Morale soft-decay toward 0 when out of combat / no aura.");
         HSceneFearPerSecond = config.Bind(
             "FearSystem",
@@ -130,8 +150,48 @@ internal static class FearConfig
         RageActivationMorale = config.Bind("FearSystem", "RageActivationMorale", 3f, "ΔMorale when Rage mode turns on.");
         VengeanceStrikeMorale = config.Bind("FearSystem", "VengeanceStrikeMorale", 15f, "ΔMorale when VengeanceStrike spends Rage.");
         StruggleQteMorale = config.Bind("FearSystem", "StruggleQteMorale", 1f, "ΔMorale on successful struggle QTE yellow beat.");
-        HeavyHitMorale = config.Bind("FearSystem", "HeavyHitMorale", -6f, "ΔMorale on heavy hit / knockdown (already negative).");
-        GrabLandMorale = config.Bind("FearSystem", "GrabLandMorale", -8f, "ΔMorale when GrabViaAttack lands (already negative). H-scene start edge uses HSceneStartMorale.");
+        HitTakenMorale = config.Bind(
+            "FearSystem",
+            "HitTakenMorale",
+            -2f,
+            "ΔMorale when a light melee hit lands (damage gets through, not a block). Already negative. Distinguishes from BlockMorale."
+        );
+        HeavyHitMorale = config.Bind(
+            "FearSystem",
+            "HeavyHitMorale",
+            -6f,
+            "ΔMorale on heavy / power hit (kickback 3/4/5/6/10). Already negative. Per-enemy heavyHitFear in FearEnemies.json overrides magnitude."
+        );
+        KnockdownMorale = config.Bind(
+            "FearSystem",
+            "KnockdownMorale",
+            -10f,
+            "ΔMorale on knockdown / knockout (erodown rising). Already negative. Stronger than HeavyHit; if a heavy hit just applied, only the extra difference is added."
+        );
+        BossAuraMult = config.Bind(
+            "FearSystem",
+            "BossAuraMult",
+            2.5f,
+            "Multiply aura fearPerSecond when FactionBossDetection marks the enemy as boss/elite. 1 = off."
+        );
+        BossCombatFearMult = config.Bind(
+            "FearSystem",
+            "BossCombatFearMult",
+            2.25f,
+            "Multiply HitTaken / HeavyHit / Knockdown / Projectile fear when the attacker is a boss/elite. 1 = off."
+        );
+        BossKnockdownBonus = config.Bind(
+            "FearSystem",
+            "BossKnockdownBonus",
+            8f,
+            "Extra |ΔMorale| on boss knockdown beyond the just-applied heavy (ensures KO always hits harder than power). Absolute value."
+        );
+        GrabLandMorale = config.Bind(
+            "FearSystem",
+            "GrabLandMorale",
+            -8f,
+            "Fallback ΔMorale when GrabViaAttack lands (already negative). Per-enemy grabFear in FearEnemies.json overrides magnitude (size/threat graded). Bosses also ×BossCombatFearMult."
+        );
         HSceneStartMorale = config.Bind("FearSystem", "HSceneStartMorale", -4f, "ΔMorale on H-scene / trap-H start (eroflag rising edge). Deduped with GrabLand.");
         FinClimaxMorale = config.Bind("FearSystem", "FinClimaxMorale", -3.33f, "ΔMorale on FIN / climax beat (black-bg Activate / goblin 2ERO_iki SE). Already negative.");
         BlockHeavyNoCounterMorale = config.Bind("FearSystem", "BlockHeavyNoCounterMorale", -2.5f, "ΔMorale if heavy block expires without counter.");

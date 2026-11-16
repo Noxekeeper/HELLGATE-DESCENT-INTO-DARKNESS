@@ -16,16 +16,21 @@ Conventions and the standard checklist for new feature modules.
 - Add every new `.cs` file to `NoREroMod_HellGate.csproj`.
 - Register patch types explicitly in `SetUpPatches()` in `Core/Plugin.cs`,
   in dependency order, using the isolated registration helpers so one failing
-  target cannot abort unrelated modules.
+  target cannot abort unrelated modules. Keep the `Plugin.cs` line thin —
+  prefer `Module.Initialize` / `*Config.Bind` inside the feature folder when
+  the pattern already exists (Fear, DeadArmor, …). Full composition-root
+  split is planned **after 1.3.0**
+  ([ARCHITECTURE.md §10](../../ARCHITECTURE.md#10-planned-composition-after-130)).
 - If initialization order matters (config before patches, templates before
   spawn), follow the existing `Awake()` sequence documented in
   `../../ARCHITECTURE.md`.
 
 ## Configuration and data
 
-- Feature gates and player-tunable values: bind in `SetUpConfigs()` under a
-  clearly named cfg section. Every feature must be fully disableable, and
-  disabled means no patches with behavioral side effects.
+- Feature gates and player-tunable values: bind under a clearly named cfg
+  section (in `SetUpConfigs()` or the feature’s `*Config.Bind`, matching
+  nearby modules). Every feature must be fully disableable, and disabled
+  means no patches with behavioral side effects.
 - Content and balance data: JSON (or spawn text) under `HellGateJson/` —
   see `DATA_FORMATS.md` for roots, localization, and fallback policy.
 - Binary assets go to the external `sources/HellGate_sources/` tree, resolved

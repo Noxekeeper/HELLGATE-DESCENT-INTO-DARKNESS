@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using HarmonyLib;
 using NoREroMod.Patches.HellTraps;
+using NoREroMod.Systems.CombatAi.Factions;
 using NoREroMod.Systems.GrabSystem;
 using NoREroMod.Systems.Rage;
 using UnityEngine;
@@ -39,6 +40,8 @@ internal static class FearSystem
     // Kill dedupe
     private static readonly HashSet<int> _registeredKills = new HashSet<int>();
     private static float _lastHeavyHitTime = -999f;
+    private static float _lastHeavyAppliedMag;
+    private static float _lastKnockdownTime = -999f;
     private static int _lastErodown;
     private static bool _wasHSceneActive;
     private static float _lastHStartSpikeTime = -999f;
@@ -102,10 +105,8 @@ internal static class FearSystem
     internal static void ResetState()
     {
         float old = _morale;
+        ResetRuntimeState();
         _morale = 0f;
-        _comboHits = 0;
-        _blockWindowUntil = -1f;
-        _registeredKills.Clear();
         if (!Mathf.Approximately(old, _morale))
         {
             try { OnMoraleChanged?.Invoke(old, _morale); } catch { }
@@ -113,8 +114,45 @@ internal static class FearSystem
         }
     }
 
+    /// <summary>
+    /// Clears transient combat/H/dash caches without changing Morale.
+    /// Call before RestorePersistedMorale on load so windows/dedupe do not leak across sessions.
+    /// </summary>
+    internal static void ResetRuntimeState()
+    {
+        _comboHits = 0;
+        _lastComboHitTime = -999f;
+        _blockWindowUntil = -1f;
+        _blockWasHeavy = false;
+        _counterAwardedThisWindow = false;
+        _registeredKills.Clear();
+        _lastHeavyHitTime = -999f;
+        _lastHeavyAppliedMag = 0f;
+        _lastKnockdownTime = -999f;
+        _lastErodown = 0;
+        _wasHSceneActive = false;
+        _lastHStartSpikeTime = -999f;
+        _lastFinSpikeTime = -999f;
+        _cachedBaseStepsp = -1f;
+        _hasCachedStepsp = false;
+        if (_traumaRunning && _traumaCoroutine != null)
+        {
+            try
+            {
+                if (Plugin.Instance != null)
+                    Plugin.Instance.StopCoroutine(_traumaCoroutine);
+            }
+            catch { }
+        }
+        _traumaRunning = false;
+        _traumaCoroutine = null;
+        try { Patches.FearCombatHooks.ClearKillDedupe(); } catch { }
+        try { FearHeartbeatAudio.StopAll(); } catch { }
+    }
+
     internal static void RestorePersistedMorale(float value)
     {
+        ResetRuntimeState();
         float old = _morale;
         _morale = Mathf.Clamp(value, MoraleMin, MoraleMax);
         if (!Mathf.Approximately(old, _morale))
@@ -312,7 +350,27 @@ internal static class FearSystem
 
     internal static void NotifyGrabLand()
     {
-        ApplyDelta(FearConfig.GrabLandMorale?.Value ?? -8f, "grab_land");
+        NotifyGrabLand(GrabViaAttackContext.ResolveAttackerForFear());
+    }
+
+    /// <summary>
+    /// GrabViaAttack land. Per-enemy JSON <c>grabFear</c> (size/threat graded) overrides cfg magnitude;
+    /// bosses also get BossCombatFearMult.
+    /// </summary>
+    internal static void NotifyGrabLand(EnemyDate attacker)
+    {
+        if (!Enabled) return;
+        float mag = FearConfig.GrabLandMorale?.Value ?? -8f;
+        if (attacker != null)
+        {
+            float fromEnemy = FearCatalog.ResolveForEnemy(attacker).grabFear;
+            if (fromEnemy > 0f)
+                mag = -fromEnemy;
+        }
+        if (mag > 0f) mag = -mag;
+        mag *= ResolveBossCombatMult(attacker);
+        if (Mathf.Abs(mag) < 0.0001f) return;
+        ApplyDelta(mag, IsBossAttacker(attacker) ? "grab_land_boss" : "grab_land");
         _lastHStartSpikeTime = Time.unscaledTime;
     }
 
@@ -438,6 +496,18 @@ internal static class FearSystem
         ApplyDelta(penalty, _blockWasHeavy ? "block_heavy_no_counter" : "turtle_block_no_counter");
     }
 
+    /// <summary>Light melee damage that got through (not a block, not power).</summary>
+    internal static void NotifyHitTaken(EnemyDate attacker)
+    {
+        if (!Enabled) return;
+        float mag = FearConfig.HitTakenMorale?.Value ?? -2f;
+        if (mag > 0f) mag = -mag;
+        mag *= ResolveBossCombatMult(attacker);
+        if (Mathf.Abs(mag) < 0.0001f) return;
+        ApplyDelta(mag, IsBossAttacker(attacker) ? "hit_taken_boss" : "hit_taken");
+    }
+
+    /// <summary>Heavy / power hit (kickback). Per-enemy heavyHitFear overrides magnitude when set.</summary>
     internal static void NotifyHeavyHitOrKnockdown(EnemyDate attacker)
     {
         float now = Time.unscaledTime;
@@ -445,7 +515,7 @@ internal static class FearSystem
             return;
         _lastHeavyHitTime = now;
 
-        float mag = FearConfig.HeavyHitMorale?.Value ?? -5f;
+        float mag = FearConfig.HeavyHitMorale?.Value ?? -6f;
         if (attacker != null)
         {
             float fromEnemy = FearCatalog.ResolveForEnemy(attacker).heavyHitFear;
@@ -456,7 +526,44 @@ internal static class FearSystem
         {
             mag = -mag;
         }
-        ApplyDelta(mag, "heavy_hit");
+        mag *= ResolveBossCombatMult(attacker);
+        _lastHeavyAppliedMag = Mathf.Abs(mag);
+        ApplyDelta(mag, IsBossAttacker(attacker) ? "heavy_hit_boss" : "heavy_hit");
+    }
+
+    /// <summary>
+    /// Knockdown / knockout (erodown). Stronger than heavy; if a heavy hit just applied,
+    /// only the remaining difference is added so totals land near KnockdownMorale.
+    /// Boss KO always exceeds the just-applied heavy by BossKnockdownBonus.
+    /// </summary>
+    internal static void NotifyKnockdown(EnemyDate attacker)
+    {
+        if (!Enabled) return;
+        float now = Time.unscaledTime;
+        if (now - _lastKnockdownTime < 0.45f)
+            return;
+        _lastKnockdownTime = now;
+
+        float mag = FearConfig.KnockdownMorale?.Value ?? -10f;
+        if (mag > 0f) mag = -mag;
+        bool boss = IsBossAttacker(attacker);
+        float abs = Mathf.Abs(mag) * ResolveBossCombatMult(attacker);
+        if (boss)
+        {
+            float bonus = Mathf.Abs(FearConfig.BossKnockdownBonus?.Value ?? 8f);
+            abs = Mathf.Max(abs, _lastHeavyAppliedMag + bonus);
+        }
+        if (abs < 0.0001f) return;
+
+        if (now - _lastHeavyHitTime < 0.45f && _lastHeavyAppliedMag > 0f)
+        {
+            float extra = abs - _lastHeavyAppliedMag;
+            if (extra > 0.01f)
+                ApplyDelta(-extra, boss ? "knockdown_extra_boss" : "knockdown_extra");
+            return;
+        }
+
+        ApplyDelta(-abs, boss ? "knockdown_boss" : "knockdown");
     }
 
     /// <summary>Knockdown edge from dispatcher (avoids a second playercon.Update patch).</summary>
@@ -469,7 +576,7 @@ internal static class FearSystem
             return;
         }
         if (_lastErodown == 0 && erodown != 0)
-            NotifyHeavyHitOrKnockdown(GrabViaAttackContext.CurrentAttacker);
+            NotifyKnockdown(GrabViaAttackContext.ResolveAttackerForFear());
         _lastErodown = erodown;
     }
 
@@ -479,7 +586,21 @@ internal static class FearSystem
         if (attacker != null)
             mag = FearCatalog.ResolveForEnemy(attacker).projectileFear;
         if (mag <= 0f) mag = 1.5f;
-        ApplyDelta(-mag, "projectile_hit");
+        mag *= ResolveBossCombatMult(attacker);
+        ApplyDelta(-mag, IsBossAttacker(attacker) ? "projectile_hit_boss" : "projectile_hit");
+    }
+
+    private static bool IsBossAttacker(EnemyDate attacker)
+    {
+        return attacker != null && FactionBossDetection.IsBossEnemy(attacker);
+    }
+
+    /// <summary>1 for normals; BossCombatFearMult (≥1) for bosses.</summary>
+    private static float ResolveBossCombatMult(EnemyDate attacker)
+    {
+        if (!IsBossAttacker(attacker))
+            return 1f;
+        return Mathf.Max(1f, FearConfig.BossCombatFearMult?.Value ?? 2.25f);
     }
 
     internal static void NotifyEnemyKill(EnemyDate enemy, bool isBoss)

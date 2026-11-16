@@ -24,7 +24,8 @@ describe individual subsystems and development procedures in depth.
 | [ECONOMY_AND_REWARDS.md](modules/ECONOMY_AND_REWARDS.md) | Gold economy, drops, reward tables |
 | [QTE_STRUGGLE_AND_GAMEPLAY.md](modules/QTE_STRUGGLE_AND_GAMEPLAY.md) | QTE 3.0, struggle, weapon animations, VengeanceStrike |
 | [RAGE.md](modules/RAGE.md) | Rage tiers, combos, slow motion, persistence |
-| [GRAB_AND_HANDOFF.md](modules/GRAB_AND_HANDOFF.md) | Grab-via-attack, death-session grab blocks, handoff |
+| [FEAR.md](modules/FEAR.md) | Fear / Morale axis, combat layers, boss pressure, persistence |
+| [GRAB_AND_HANDOFF.md](modules/GRAB_AND_HANDOFF.md) | Grab-via-attack, post-escape immunity, death-session grab blocks, handoff |
 | [MIND_BROKEN.md](modules/MIND_BROKEN.md) | MindBroken state, recovery, Bad End countdown gate, presentation |
 | [HELL_TRAPS.md](modules/HELL_TRAPS.md) | Lethal traps, death clips, combat freeze during clip |
 | [DEAD_ARMOR.md](modules/DEAD_ARMOR.md) | SlaveBigAxe NikuArmor break clips + armored grab-throw |

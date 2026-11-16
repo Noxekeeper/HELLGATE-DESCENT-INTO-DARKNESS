@@ -12,5 +12,15 @@
   "DoreiPreferMeleeOverFleeChance": 0.9,
   "DoreiMeleeRangeThreshold": 2.0,
   "DoreiMeleeAttackRateMultiplier": 1.5,
-  "DoreiMeleeMaxVerticalDelta": 1.25
+  "DoreiMeleeMaxVerticalDelta": 1.25,
+  "DemonTentacleEnable": true,
+  "DemonTentacleAttackRateMultiplier": 1.3,
+  "DemonTentacleShotsPerAttack": 2,
+  "DemonTentacleBurstInterval": 0.3,
+  "DemonTentacleBlockWalls": true,
+  "DemonTentacleWallProbeRadius": 0.5,
+  "DemonTentacleEnrageHpFraction": 0.4,
+  "DemonTentacleEnrageAttackRateMultiplier": 1.5,
+  "DemonTentacleEnrageExtraShots": 1,
+  "DemonTentacleEnrageMoveSpeedMultiplier": 1.3
 }

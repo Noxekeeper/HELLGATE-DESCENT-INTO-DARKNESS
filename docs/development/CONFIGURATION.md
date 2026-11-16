@@ -16,8 +16,9 @@ Notes:
 - Values are read once at startup unless the owning module documents
   hot-reload behavior.
 
-Sections: **105** · Settings: **1019** (live cfg, 1.2.7; per-profile
-`EnemyFatality.*` / `UndeadSkeletons.*` sections are summarized, not listed key by key)
+Sections: **105+** · Settings: **1020+** (live cfg, 1.2.8; per-profile
+`EnemyFatality.*` / `UndeadSkeletons.*` sections are summarized, not listed key by key.
+New 1.2.8 Fear / Grab keys are listed under `[FearSystem]` / `[GrabSystemNG]`.)
 
 ## Section index
 
@@ -114,7 +115,7 @@ Sections: **105** · Settings: **1019** (live cfg, 1.2.7; per-profile
 | `ThreatSoundsVolume` | Single | `0.9` | Volume for threat sounds (0.0 - 1.0) |
 | `ThreatSoundsGlobalCooldown` | Single | `5` | Minimum seconds between ANY threat sounds. Should match threatDisplayDuration for text/sound sync. |
 | `ThreatSoundsPerEnemyCooldown` | Single | `10` | Seconds before the same enemy can play another threat sound. |
-| `EnableDeathSounds` | Boolean | `true` | Play death sounds from AttackSounds/Human/Death when human enemies die (DEATH animation) |
+| `EnableDeathSounds` | Boolean | `true` | Play death sounds when enemies die (`DEATH` anim). Humans use `AttackSounds/Human/Death`. Undead skeletons / undead-class gates use `AttackSounds/Undead/Death/BoneDeath` (`.wav`; empty or unloadable `.mp3` → silent, never human voices). One clip per enemy lifetime (no folder loop). |
 | `DeathSoundsVolume` | Single | `1` | Volume for death sounds (0.0 - 1.0) |
 | `AttackSoundsGlobalInterval` | Single | `0.12` | Minimum seconds between attack sounds globally (reduces spam when fighting many enemies). |
 | `AttackSoundsPerAttackerInterval` | Single | `0.2` | Minimum seconds before same attacker can play another attack sound. |
@@ -407,21 +408,32 @@ Dev tooling; **both must stay `false` in shipped configs**. Details:
 
 ## FearSystem
 
-Fear / Morale axis (−100 panic … +100 confidence). Main switches below; the
-remaining tuning keys (aura falloff, per-action Morale deltas, panic /
-confidence bands, respawn values, combat-effect strengths) carry their
-descriptions in the cfg. Module reference: [FEAR.md](../modules/FEAR.md).
-Per-enemy values: `HellGateJson/Fear/FearEnemies.json`.
+Fear / Morale axis (−100 panic … +100 confidence). Module reference:
+[FEAR.md](../modules/FEAR.md). Per-enemy values:
+`HellGateJson/Fear/FearEnemies.json` (hot-reload ~2 s). Difficulty presets
+list these keys with **shared** defaults (Fear is not scaled Easy→Hard;
+MindBroken / grabs / HP carry that curve).
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | `Enable` | Boolean | `true` | Master kill-switch for Fear/Morale. When false: no aura tick, no combat deltas, no bar, no save writes. |
 | `ShowBar` | Boolean | `true` | Show bipolar Fear/Confidence bar (bottom-center). |
 | `EnableCombatEffects` | Boolean | `true` | Soft combat modifiers in panic/confidence bands (dash cost, idle SP regen, Struggle/QTE SP mult). |
+| `CrowdFearEnable` | Boolean | `true` | Multiply aura pressure by count of threatening enemies inside `AuraFalloffMeters`. |
+| `CrowdFearMult2` … `CrowdFearMult5Plus` | Single | `1.3` / `1.4` / `1.55` / `1.85` | Aura multipliers for 2 / 3 / 4 / 5+ nearby threats. |
+| `HitTakenMorale` | Single | `-2` | ΔMorale when a light melee hit lands (damage through, not a block). Distinguishes from `BlockMorale`. |
+| `HeavyHitMorale` | Single | `-6` | ΔMorale on heavy / power hit. Per-enemy `heavyHitFear` in JSON overrides magnitude. |
+| `KnockdownMorale` | Single | `-10` | ΔMorale on knockdown / knockout. Stronger than heavy; if a heavy just applied, only the extra difference is added. |
+| `BossAuraMult` | Single | `2.5` | Multiply aura `fearPerSecond` when `FactionBossDetection` marks the source as boss/elite. `1` = off. |
+| `BossCombatFearMult` | Single | `2.25` | Multiply HitTaken / Heavy / Knockdown / Projectile fear from boss attackers. `1` = off. |
+| `BossKnockdownBonus` | Single | `8` | Extra \|ΔMorale\| on boss knockdown beyond the just-applied heavy (absolute). |
+| `GrabLandMorale` | Single | `-8` | Fallback ΔMorale on GrabViaAttack. Per-enemy JSON `grabFear` overrides magnitude; bosses also ×`BossCombatFearMult`. |
 | `LethalRespawnFloor` | Single | `-30` | After lethal-trap / fatality Take Vengeance trauma: Morale rises to −100, then settles to this floor. |
 | `NormalRespawnMorale` | Single | `-10` | After ordinary death Take Vengeance: Morale is set to this value. |
 | `HeartbeatEnable` | Boolean | `true` | Play HeartBeat.wav from sources/HellGate_sources/Fear (fallback CustomDeath) while afraid. |
 | `HeartbeatVolume` | Single | `0.85` | Fear HeartBeat volume (0 = mute, 1 = full). |
+
+Remaining aura / band / soft-decay / confidence keys keep their cfg descriptions.
 
 ## FieldOfView
 
@@ -470,6 +482,7 @@ Per-enemy values: `HellGateJson/Fear/FearEnemies.json`.
 | `GrabChanceMindBrokenBonusPer10Percent` | Single | `0.02` | Extra grab chance per 10% MindBroken in grab logic (0.02 = +2% per 10%). UI can use a different value. |
 | `GrabChanceRageReductionPerPercent` | Single | `0.005` | Grab chance reduction per 1% Rage (0.005 = 0.5% per 1% Rage). At 100% Rage grab chance is halved. |
 | `GrabChancePleasureBonusMax` | Single | `0.2` | Maximum additional grab chance from Pleasure gauge (BadstatusVal[0]). 0.20 = +20% at 100 pleasure, scaled linearly. |
+| `PostEscapeGrabInvulSeconds` | Single | `3` | Unscaled post-escape grab + knockdown-grab immunity (`PostEscapeGrabImmunity`). Armed on `StruggleSystem.startGrabInvul`. Same coverage as Rage grab immunity. UI shows 0% while active. `0` = off. |
 | `GrabViaAttackSlowmo` | Boolean | `true` | Slow down time when grab via attack triggers (runs immediately, HScene zoom has no slowmo) |
 | `GrabViaAttackSlowmoTimeScale` | Single | `0.3` | Time scale during grab (0.3 = 30% speed, 2 sec) |
 | `GrabViaAttackSlowmoDuration` | Single | `2` | Duration of grab slowmo in real seconds |
@@ -1036,6 +1049,16 @@ Per variant — `[UndeadSkeletons.BigMermanUndead]`, `[UndeadSkeletons.BigoniUnd
 | `MaxHp` | Single | `0` | Fixed max HP; overrides `HpMultiplier`. 0 = use `HpMultiplier`. |
 | `MoveSpeedMultiplier` | Single | `1` | Walk/run and attack-lunge speed (`EnemyDate.enmMovespeed`). Applied on spawn. |
 | `AnimSpeedMultiplier` | Single | `1` | Spine playback speed (attack wind-up and all combat animations). Applied every frame. |
+
+Module: [CUSTOM_ENEMIES.md](../modules/CUSTOM_ENEMIES.md).
+
+## DemonTentacle
+
+| Key | Type | Default | Description |
+|-----|------|---------|-------------|
+| `AssetsPath` | String | (empty) | Path to DemonTentacle Spine folder (relative to game root). Empty = sources/HellGate_sources/Enemies/Demon_tentacle. Expects `Demon_tentacle.json/.atlas/.png`. |
+| `MaxHp` | Single | `800` | Max HP on Normal/Hard, scaled by game difficulty like vanilla enemies (Easy ×0.6, Hardest ×1.1). Vanilla AngelStatue dies to any single hit; DemonTentacle takes regular weapon/magic damage. |
+| `ScaleMultiplier` | Single | `0.35` | Visual size of the skeleton relative to the vanilla AngelStatue import scale. Hitboxes stay vanilla size. Requires game restart. |
 
 Module: [CUSTOM_ENEMIES.md](../modules/CUSTOM_ENEMIES.md).
 

@@ -249,7 +249,9 @@ internal static class EnemyFactionsConfig
         public FactionMeleeReachEntry[] FactionMeleeReachOverrides = new FactionMeleeReachEntry[]
         {
             new FactionMeleeReachEntry { EnemyType = "Wolf", Reach = 3f },
-            new FactionMeleeReachEntry { EnemyType = "MummyDog", Reach = 3f }
+            new FactionMeleeReachEntry { EnemyType = "MummyDog", Reach = 3f },
+            new FactionMeleeReachEntry { EnemyType = "RequiemKnight", Reach = 9.5f },
+            new FactionMeleeReachEntry { EnemyType = "DemonRequiemKnight", Reach = 9.5f }
         };
         public FactionTargetRangeEntry[] FactionTargetRangeOverrides = new FactionTargetRangeEntry[]
         {
@@ -335,7 +337,13 @@ internal static class EnemyFactionsConfig
         };
         public string[] NeutralTypes = new string[] { "DPScheckWood" };
         /// <summary>Extra EnemyDate types (auto-detected via vanilla BOSSflag field when possible).</summary>
-        public string[] BossTypes = new string[0];
+        public string[] BossTypes = new string[]
+        {
+            "Bigoni", "BigoniBrother", "Minotaurosu", "Slaughterer", "WolfBoss",
+            "RequiemKnight", "DemonRequiemKnight",
+            "HighInquisition_famale", "HighInquisitionFemale",
+            "BigMerman", "SlaveBigAxe"
+        };
         /// <summary>Never treat as story boss (e.g. MafiaBossCustom).</summary>
         public string[] BossExcludeTypes = new string[]
         {

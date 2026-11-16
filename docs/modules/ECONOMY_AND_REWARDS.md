@@ -18,7 +18,9 @@ The economy is gated and tuned by JSON, not by cfg:
   never flushes to disk directly.
 - `GoldStaticMng` — static access point for the active wallet.
 - `GoldDropTable` + `GoldDropAwarder` + `EnemyDeathGoldDropPatch` — enemy
-  death rewards from `Economic/GoldDropTable.json`.
+  death rewards from `Economic/GoldDropTable.json`. Per-enemy overrides live
+  under `EnemyOverrides` (example: `VagrantUndead` — 50% chance, 2–5 gold,
+  same chance style as faction rules).
 - `GoldPickup` — world pickup objects (also spawnable via `gold=` spawn
   lines).
 - `DropMultiplierBus`, `EconomicFactionUtil` — modifier plumbing.

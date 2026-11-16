@@ -221,6 +221,13 @@
     <Compile Include="Patches\Enemy\UndeadSkeletonsModCustom\UndeadSkeletonsLoader.cs" />
     <Compile Include="Patches\Enemy\UndeadSkeletonsModCustom\UndeadSkeletonsRuntime.cs" />
     <Compile Include="Patches\Enemy\UndeadSkeletonsModCustom\UndeadSkeletonsEnemyPatches.cs" />
+    <!-- DemonTentacle: battle Spine swap on AngelStatue, config HP instead of one-hit death -->
+    <Compile Include="Patches\Enemy\DemonTentacleModCustom\DemonTentacleConfig.cs" />
+    <Compile Include="Patches\Enemy\DemonTentacleModCustom\DemonTentacleTextureLoader.cs" />
+    <Compile Include="Patches\Enemy\DemonTentacleModCustom\DemonTentacleLoader.cs" />
+    <Compile Include="Patches\Enemy\DemonTentacleModCustom\DemonTentacleRuntime.cs" />
+    <Compile Include="Patches\Enemy\DemonTentacleModCustom\DemonTentacleProjectile.cs" />
+    <Compile Include="Patches\Enemy\DemonTentacleModCustom\DemonTentacleEnemyPatches.cs" />
     <!-- Dorei Mod: fapping idle во время ожидания в H-сцене -->
     <Compile Include="Patches\Enemy\DoreiModCustom\DoreiTextureLoader.cs" />
     <Compile Include="Patches\Enemy\DoreiModCustom\DoreiSkeletonLoader.cs" />
@@ -293,9 +300,11 @@
     <Compile Include="Systems\GrabSystem\GrabViaAttackContext.cs" />
     <Compile Include="Systems\GrabSystem\DamageSourceClassifier.cs" />
     <Compile Include="Systems\GrabSystem\GrabChanceCalculator.cs" />
+    <Compile Include="Systems\GrabSystem\PostEscapeGrabImmunity.cs" />
     <Compile Include="Systems\GrabSystem\Patches\RangedDamageFlagPatches.cs" />
     <Compile Include="Systems\GrabSystem\Patches\MeleeAttackerContextPatches.cs" />
     <Compile Include="Systems\GrabSystem\Patches\GrabViaAttackPatch.cs" />
+    <Compile Include="Systems\GrabSystem\Patches\PostEscapeGrabImmunityPatch.cs" />
     
     <!-- Systems/Gameplay -->
     <Compile Include="Systems\Gameplay\QTESystem.cs" />
@@ -472,6 +481,7 @@
     <Compile Include="Systems\CombatAi\CombatAiConfig.cs" />
     <Compile Include="Systems\CombatAi\DoreiCombatAiConfig.cs" />
     <Compile Include="Systems\CombatAi\Patches\EnemyDateDistanceFunPatch.cs" />
+    <Compile Include="Systems\CombatAi\Patches\DemonTentacleCombatAiPatch.cs" />
     <Compile Include="Systems\CombatAi\Patches\EnemyDateOndamageSendPatch.cs" />
     <Compile Include="Systems\CombatAi\Patches\SinnerslaveCrossbowCombatAiPatch.cs" />
     <Compile Include="Systems\CombatAi\Factions\EnemyFactionsConfig.cs" />

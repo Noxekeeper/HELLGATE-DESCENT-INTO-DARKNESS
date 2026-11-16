@@ -3,27 +3,42 @@
     "fearPerSecond": 0.5,
     "heavyHitFear": 6,
     "projectileFear": 1.5,
-    "hSceneFearPerSecond": 0.4
+    "hSceneFearPerSecond": 0.4,
+    "grabFear": 16.0
   },
   "enemies": [
     {
       "enemyType": "TouzokuNormal",
       "fearPerSecond": 0.7,
       "heavyHitFear": 5,
+      "grabFear": 14.0,
       "hSceneFearPerSecond": 0.37,
       "hPhases": [
-        { "animation": "START", "spikeMorale": -10 },
-        { "animation": "START2", "spikeMorale": -10 },
-        { "animation": "START3", "spikeMorale": -10 }
+        {
+          "animation": "START",
+          "spikeMorale": -10
+        },
+        {
+          "animation": "START2",
+          "spikeMorale": -10
+        },
+        {
+          "animation": "START3",
+          "spikeMorale": -10
+        }
       ]
     },
     {
       "enemyType": "TouzokuAxe",
       "fearPerSecond": 0.85,
       "heavyHitFear": 6,
+      "grabFear": 20.0,
       "hSceneFearPerSecond": 0.4,
       "hPhases": [
-        { "animation": "START2", "spikeMorale": -30 }
+        {
+          "animation": "START2",
+          "spikeMorale": -30
+        }
       ]
     },
     {
@@ -31,9 +46,13 @@
       "fearPerSecond": 1.0,
       "heavyHitFear": 7,
       "projectileFear": 2,
+      "grabFear": 18.0,
       "hSceneFearPerSecond": 0.37,
       "hPhases": [
-        { "animation": "START2", "spikeMorale": -40 }
+        {
+          "animation": "START2",
+          "spikeMorale": -40
+        }
       ]
     },
     {
@@ -41,6 +60,7 @@
       "fearPerSecond": 1.2,
       "heavyHitFear": 8,
       "projectileFear": 2,
+      "grabFear": 20.0,
       "hSceneFearPerSecond": 0.43
     },
     {
@@ -48,10 +68,17 @@
       "fearPerSecond": 1.15,
       "heavyHitFear": 8,
       "projectileFear": 2.5,
+      "grabFear": 20.0,
       "hSceneFearPerSecond": 0.42,
       "hPhases": [
-        { "animation": "START2", "spikeMorale": -15 },
-        { "animation": "START4", "spikeMorale": -20 }
+        {
+          "animation": "START2",
+          "spikeMorale": -15
+        },
+        {
+          "animation": "START4",
+          "spikeMorale": -20
+        }
       ]
     },
     {
@@ -59,160 +86,430 @@
       "fearPerSecond": 1.1,
       "heavyHitFear": 7,
       "projectileFear": 2,
+      "grabFear": 18.0,
       "hSceneFearPerSecond": 0.4
     },
     {
       "enemyType": "goblin",
       "fearPerSecond": 0.55,
       "heavyHitFear": 4,
+      "grabFear": 10.0,
       "hSceneFearPerSecond": 0.3,
       "hPhases": [
-        { "animation": "2ERO_START", "spikeMorale": -30 }
+        {
+          "animation": "2ERO_START",
+          "spikeMorale": -30
+        }
       ]
     },
     {
       "enemyType": "Kakash",
       "fearPerSecond": 0.75,
       "heavyHitFear": 5,
+      "grabFear": 12.0,
       "hSceneFearPerSecond": 0.38,
       "hPhases": [
-        { "animation": "start2", "spikeMorale": -30 }
+        {
+          "animation": "start2",
+          "spikeMorale": -30
+        }
       ]
     },
     {
       "enemyType": "Mutude",
       "fearPerSecond": 1.0,
       "heavyHitFear": 7,
+      "grabFear": 18.0,
       "hSceneFearPerSecond": 0.38
     },
     {
       "enemyType": "Bigoni",
-      "fearPerSecond": 1.3,
-      "heavyHitFear": 9,
-      "hSceneFearPerSecond": 0.47
+      "fearPerSecond": 2.2,
+      "heavyHitFear": 13,
+      "grabFear": 32.0,
+      "hSceneFearPerSecond": 0.65
     },
     {
       "enemyType": "Slaughterer",
-      "fearPerSecond": 1.25,
-      "heavyHitFear": 9,
-      "hSceneFearPerSecond": 0.45,
+      "fearPerSecond": 2.1,
+      "heavyHitFear": 12,
+      "grabFear": 30.0,
+      "hSceneFearPerSecond": 0.65,
       "hPhases": [
-        { "animation": "FATALITY3", "spikeMorale": -30 },
-        { "animation": "FATALITY4", "spikeMorale": -100, "absolute": true }
+        {
+          "animation": "FATALITY3",
+          "spikeMorale": -30
+        },
+        {
+          "animation": "FATALITY4",
+          "spikeMorale": -100,
+          "absolute": true
+        }
       ]
     },
     {
       "enemyType": "Vagrant",
       "fearPerSecond": 0.5,
       "heavyHitFear": 4,
+      "grabFear": 12.0,
       "hSceneFearPerSecond": 0.28
     },
     {
       "enemyType": "PrisonOfficer",
       "fearPerSecond": 0.9,
       "heavyHitFear": 6,
+      "grabFear": 16.0,
       "hSceneFearPerSecond": 0.42
     },
     {
       "enemyType": "HighInquisition_famale",
-      "fearPerSecond": 1.15,
-      "heavyHitFear": 8,
+      "fearPerSecond": 2.0,
+      "heavyHitFear": 11,
+      "grabFear": 28.0,
       "hSceneFearPerSecond": 0.05,
       "hPhases": [
-        { "animation": "START1", "spikeMorale": -8 },
-        { "animation": "ERO", "spikeMorale": -9 },
-        { "animation": "ERO1", "spikeMorale": -9 },
-        { "animation": "ERO2", "spikeMorale": -11 },
-        { "animation": "ERO3", "spikeMorale": -12 },
-        { "animation": "ERO4", "spikeMorale": -13 },
-        { "animation": "ERO5", "spikeMorale": -13 },
-        { "animation": "ERO6", "spikeMorale": -12 },
-        { "animation": "ERO7", "spikeMorale": -13 }
+        {
+          "animation": "START1",
+          "spikeMorale": -8
+        },
+        {
+          "animation": "ERO",
+          "spikeMorale": -9
+        },
+        {
+          "animation": "ERO1",
+          "spikeMorale": -9
+        },
+        {
+          "animation": "ERO2",
+          "spikeMorale": -11
+        },
+        {
+          "animation": "ERO3",
+          "spikeMorale": -12
+        },
+        {
+          "animation": "ERO4",
+          "spikeMorale": -13
+        },
+        {
+          "animation": "ERO5",
+          "spikeMorale": -13
+        },
+        {
+          "animation": "ERO6",
+          "spikeMorale": -12
+        },
+        {
+          "animation": "ERO7",
+          "spikeMorale": -13
+        }
       ]
     },
     {
       "enemyType": "HighInquisitionFemale",
-      "fearPerSecond": 1.15,
-      "heavyHitFear": 8,
+      "fearPerSecond": 2.0,
+      "heavyHitFear": 11,
+      "grabFear": 28.0,
       "hSceneFearPerSecond": 0.05
     },
     {
       "enemyType": "BigMerman",
+      "fearPerSecond": 2.0,
+      "heavyHitFear": 12,
+      "grabFear": 30.0,
+      "hSceneFearPerSecond": 0.65,
       "hPhases": [
-        { "animation": "START2", "spikeMorale": -60 }
+        {
+          "animation": "START2",
+          "spikeMorale": -60
+        }
       ]
     },
     {
       "enemyType": "Sisiruirui",
+      "fearPerSecond": 1.0,
+      "heavyHitFear": 7,
+      "grabFear": 18.0,
+      "hSceneFearPerSecond": 0.42,
       "hPhases": [
-        { "animation": "START", "spikeMorale": -40 }
+        {
+          "animation": "START",
+          "spikeMorale": -40
+        }
       ]
     },
     {
       "enemyType": "Gorotuki",
+      "fearPerSecond": 0.95,
+      "heavyHitFear": 7,
+      "grabFear": 18.0,
+      "hSceneFearPerSecond": 0.4,
       "hPhases": [
-        { "animation": "START2", "spikeMorale": -40 }
+        {
+          "animation": "START2",
+          "spikeMorale": -40
+        }
       ]
     },
     {
       "enemyType": "Minotaurosu",
+      "fearPerSecond": 2.2,
+      "heavyHitFear": 13,
+      "grabFear": 32.0,
+      "hSceneFearPerSecond": 0.7,
       "hPhases": [
-        { "animation": "START2", "spikeMorale": -60 }
+        {
+          "animation": "START2",
+          "spikeMorale": -60
+        }
       ]
     },
     {
       "enemyType": "SlaveBigAxe",
+      "fearPerSecond": 1.85,
+      "heavyHitFear": 11,
+      "grabFear": 24.0,
+      "hSceneFearPerSecond": 0.55,
       "hPhases": [
-        { "animation": "START", "spikeMorale": -20 },
-        { "animation": "ERO", "spikeMorale": -20 }
+        {
+          "animation": "START",
+          "spikeMorale": -20
+        },
+        {
+          "animation": "ERO",
+          "spikeMorale": -20
+        }
       ]
     },
     {
       "enemyType": "SinnerslaveCrossbow",
+      "fearPerSecond": 0.8,
+      "heavyHitFear": 5,
+      "projectileFear": 2,
+      "grabFear": 14.0,
+      "hSceneFearPerSecond": 0.38,
       "hPhases": [
-        { "animation": "START2", "spikeMorale": -5 },
-        { "animation": "START3", "spikeMorale": -5 },
-        { "animation": "ERO", "moralePerSecond": -1.2 }
+        {
+          "animation": "START2",
+          "spikeMorale": -5
+        },
+        {
+          "animation": "START3",
+          "spikeMorale": -5
+        },
+        {
+          "animation": "ERO",
+          "moralePerSecond": -1.2
+        }
       ]
     },
     {
       "enemyType": "SkeltonOoze",
+      "fearPerSecond": 1.1,
+      "heavyHitFear": 8,
+      "grabFear": 20.0,
+      "hSceneFearPerSecond": 0.4,
       "hPhases": [
-        { "animation": "START2", "spikeMorale": -60 }
+        {
+          "animation": "START2",
+          "spikeMorale": -60
+        }
       ]
     },
     {
       "enemyType": "MummyMan",
+      "fearPerSecond": 1.0,
+      "heavyHitFear": 7,
+      "grabFear": 18.0,
+      "hSceneFearPerSecond": 0.4,
       "hPhases": [
-        { "animation": "START7", "spikeMorale": -20 },
-        { "animation": "START11", "spikeMorale": -30 }
+        {
+          "animation": "START7",
+          "spikeMorale": -20
+        },
+        {
+          "animation": "START11",
+          "spikeMorale": -30
+        }
       ]
     },
     {
       "enemyType": "Coolmaiden",
+      "fearPerSecond": 1.15,
+      "heavyHitFear": 8,
+      "grabFear": 22.0,
+      "hSceneFearPerSecond": 0.45,
       "hPhases": [
-        { "animation": "START2", "spikeMorale": -20 },
-        { "animation": "ERO", "spikeMorale": -40 },
-        { "animation": "ERO2", "spikeMorale": -100, "absolute": true }
+        {
+          "animation": "START2",
+          "spikeMorale": -20
+        },
+        {
+          "animation": "ERO",
+          "spikeMorale": -40
+        },
+        {
+          "animation": "ERO2",
+          "spikeMorale": -100,
+          "absolute": true
+        }
       ]
     },
     {
       "enemyType": "Undead",
+      "fearPerSecond": 0.95,
+      "heavyHitFear": 7,
+      "grabFear": 16.0,
+      "hSceneFearPerSecond": 0.35,
       "hPhases": [
-        { "animation": "START", "spikeMorale": -40 }
+        {
+          "animation": "START",
+          "spikeMorale": -40
+        }
       ]
     },
     {
       "enemyType": "MummyDog",
+      "fearPerSecond": 0.9,
+      "heavyHitFear": 7,
+      "grabFear": 16.0,
+      "hSceneFearPerSecond": 0.3,
       "hPhases": [
-        { "animation": "START", "spikeMorale": -60 }
+        {
+          "animation": "START",
+          "spikeMorale": -60
+        }
       ]
     },
     {
       "enemyType": "WolfBoss",
+      "fearPerSecond": 2.5,
+      "heavyHitFear": 14,
+      "grabFear": 32.0,
+      "hSceneFearPerSecond": 0.75,
       "hPhases": [
-        { "animation": "FATALITY", "spikeMorale": -100, "absolute": true }
+        {
+          "animation": "FATALITY",
+          "spikeMorale": -100,
+          "absolute": true
+        }
       ]
+    },
+    {
+      "enemyType": "DemonTentacle",
+      "fearPerSecond": 1.0,
+      "projectileFear": 2.5,
+      "grabFear": 18.0,
+      "hSceneFearPerSecond": 0.45
+    },
+    {
+      "enemyType": "RequiemKnight",
+      "fearPerSecond": 2.25,
+      "heavyHitFear": 12,
+      "projectileFear": 4.5,
+      "grabFear": 28.0,
+      "hSceneFearPerSecond": 0.7
+    },
+    {
+      "enemyType": "DemonRequiemKnight",
+      "fearPerSecond": 2.6,
+      "heavyHitFear": 14,
+      "projectileFear": 5.5,
+      "grabFear": 34.0,
+      "hSceneFearPerSecond": 0.8
+    },
+    {
+      "enemyType": "Pilgrim",
+      "fearPerSecond": 0.85,
+      "heavyHitFear": 6,
+      "grabFear": 16.0,
+      "hSceneFearPerSecond": 0.4
+    },
+    {
+      "enemyType": "Sisterknight",
+      "fearPerSecond": 1.1,
+      "heavyHitFear": 7,
+      "projectileFear": 2.2,
+      "grabFear": 18.0,
+      "hSceneFearPerSecond": 0.42
+    },
+    {
+      "enemyType": "VagrantUndead",
+      "fearPerSecond": 0.7,
+      "heavyHitFear": 5,
+      "grabFear": 10.0,
+      "hSceneFearPerSecond": 0.2
+    },
+    {
+      "enemyType": "PilgrimUndead",
+      "fearPerSecond": 0.85,
+      "heavyHitFear": 6,
+      "grabFear": 14.0,
+      "hSceneFearPerSecond": 0.2
+    },
+    {
+      "enemyType": "BigMermanUndead",
+      "fearPerSecond": 1.1,
+      "heavyHitFear": 8,
+      "grabFear": 22.0,
+      "hSceneFearPerSecond": 0.2
+    },
+    {
+      "enemyType": "BigoniUndead",
+      "fearPerSecond": 1.2,
+      "heavyHitFear": 9,
+      "grabFear": 24.0,
+      "hSceneFearPerSecond": 0.2
+    },
+    {
+      "enemyType": "Cocoonman",
+      "fearPerSecond": 0.9,
+      "heavyHitFear": 6,
+      "grabFear": 16.0,
+      "hSceneFearPerSecond": 0.4
+    },
+    {
+      "enemyType": "BlackOoze",
+      "fearPerSecond": 0.95,
+      "heavyHitFear": 7,
+      "grabFear": 16.0,
+      "hSceneFearPerSecond": 0.35
+    },
+    {
+      "enemyType": "BlackOoze_Monster",
+      "fearPerSecond": 1.0,
+      "heavyHitFear": 7,
+      "grabFear": 16.0,
+      "hSceneFearPerSecond": 0.35
+    },
+    {
+      "enemyType": "Kinoko",
+      "fearPerSecond": 0.65,
+      "heavyHitFear": 5,
+      "grabFear": 10.0,
+      "hSceneFearPerSecond": 0.3
+    },
+    {
+      "enemyType": "Snailshell",
+      "fearPerSecond": 0.8,
+      "heavyHitFear": 6,
+      "grabFear": 14.0,
+      "hSceneFearPerSecond": 0.35
+    },
+    {
+      "enemyType": "NormalSnailshell",
+      "fearPerSecond": 0.75,
+      "heavyHitFear": 5,
+      "grabFear": 12.0,
+      "hSceneFearPerSecond": 0.32
+    },
+    {
+      "enemyType": "Mimick",
+      "fearPerSecond": 0.9,
+      "heavyHitFear": 7,
+      "grabFear": 16.0,
+      "hSceneFearPerSecond": 0.4
     }
   ]
 }

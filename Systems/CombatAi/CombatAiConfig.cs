@@ -109,6 +109,20 @@ internal static class CombatAiConfig
         public float DoreiMeleeAttackRateMultiplier = 1.5f;
         public float DoreiMeleeMaxVerticalDelta = 1.25f;
 
+        // ---- DemonTentacle (AngelStatue reskin) ----
+        public bool DemonTentacleEnable = true;
+        /// <summary>Attack timer speed while the player is in range. 1 = vanilla (one shot every ~4.5-5.2 s).</summary>
+        public float DemonTentacleAttackRateMultiplier = 1.3f;
+        public int DemonTentacleShotsPerAttack = 2;
+        public float DemonTentacleBurstInterval = 0.3f;
+        public bool DemonTentacleBlockWalls = true;
+        public float DemonTentacleWallProbeRadius = 0.5f;
+        /// <summary>Enrage when HP drops to this fraction of max HP. 0 = never.</summary>
+        public float DemonTentacleEnrageHpFraction = 0.4f;
+        public float DemonTentacleEnrageAttackRateMultiplier = 1.5f;
+        public int DemonTentacleEnrageExtraShots = 1;
+        public float DemonTentacleEnrageMoveSpeedMultiplier = 1.3f;
+
         public static CombatAiSettings Default() => new CombatAiSettings();
     }
 }

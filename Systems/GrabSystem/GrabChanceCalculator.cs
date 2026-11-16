@@ -60,6 +60,13 @@ internal static class GrabChanceCalculator
             if (IsPlayerDefensivelyImmuneToGrab(player))
                 return 0f;
 
+            // Post-escape HellGate shield + vanilla Struggle invul (same gates as ShouldTriggerGrab).
+            if (PostEscapeGrabImmunity.IsActive || StruggleSystem.isGrabInvul())
+                return 0f;
+
+            if (RageSystem.IsGrabKnockdownImmuneWhileRageActive)
+                return 0f;
+
             float grabChance = Plugin.grabChanceMelee?.Value ?? 0.3f;
             if (grabChance <= 0f)
                 return 0f;
@@ -207,6 +214,9 @@ internal static class GrabChanceCalculator
         if (RageSystem.IsGrabKnockdownImmuneWhileRageActive)
             return false;
 
+        if (PostEscapeGrabImmunity.IsActive || StruggleSystem.isGrabInvul())
+            return false;
+
         if (player.eroflag || player.erodown != 0)
             return false;
 
@@ -218,9 +228,6 @@ internal static class GrabChanceCalculator
                 return false;
 
         if (DamageSourceClassifier.IsRanged)
-            return false;
-
-        if (StruggleSystem.isGrabInvul())
             return false;
 
         bool isGuarding = player.guard;

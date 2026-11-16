@@ -389,7 +389,8 @@ rotation and flip into the cache id.
 | `SPAWN_AUTHORING_ENEMY_EXCLUDE.txt` | enemies hidden from the authoring list |
 | `SPAWN_TEMPLATE_KEYS.txt` | static `[TRAP]` / `[DECOR]` / `[HOSTAGE]` reference |
 | `DECOR_CATALOG.txt` | Decorations keys + scene hints |
-| `SPAWN_TEMPLATE_WHITELIST.txt` | pre-cache hints |
+| `SPAWN_TEMPLATE_WHITELIST.txt` | pre-cache hints (which scenes to harvest for which keys) |
+| `SPAWN_TEMPLATE_DISK_CACHE.txt` | scene → template pin map; **must ship** with releases so ivy / gates / traps resolve on installs without every source map |
 | `AVAILABLE_SPAWN_TEMPLATES_RUNTIME.txt` | dump of every cached alias (not the F11 list) |
 
 ---

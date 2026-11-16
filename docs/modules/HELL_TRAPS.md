@@ -6,6 +6,15 @@ custom PNG death clip, followed by a vengeance shock sequence.
 Code: `Patches/HellTraps/` · Config: `[HellTraps]` · Assets: external
 `sources/HellGate_sources/CustomDeath/` death clips + audio
 
+## Related: vanilla Trapdata escape (not lethal families)
+
+Non-lethal vanilla traps (`BlackOozetrap`, `BlackOozeTrapTypeB`,
+`AngelStatue_Trap`, …) use `Patches/Trap/TrapdataHSceneEscapePatch.cs` for
+struggle / give-up cleanup. After escape they arm vanilla `startGrabInvul`
+and HellGate `PostEscapeGrabImmunity` (see [GRAB_AND_HANDOFF.md](GRAB_AND_HANDOFF.md)).
+Ooze / AngelStatue trigger prefixes honor **both** invul layers so re-enter
+while overlapping the collider stays blocked for the full post-escape window.
+
 ## Trap families
 
 Families share the same structure — runtime, registry/template

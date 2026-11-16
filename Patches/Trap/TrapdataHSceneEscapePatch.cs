@@ -443,7 +443,8 @@ internal static class AngelStatueTrapGrabInvulPatch
     [HarmonyPriority(Priority.First)]
     private static bool BlockWhileGrabInvul()
     {
-        return !StruggleSystem.isGrabInvul();
+        return !StruggleSystem.isGrabInvul()
+            && !NoREroMod.Systems.GrabSystem.PostEscapeGrabImmunity.IsActive;
     }
 }
 
@@ -454,7 +455,8 @@ internal static class BlackOozetrapGrabInvulPatch
     [HarmonyPriority(Priority.First)]
     private static bool BlockWhileGrabInvul()
     {
-        return !StruggleSystem.isGrabInvul();
+        return !StruggleSystem.isGrabInvul()
+            && !NoREroMod.Systems.GrabSystem.PostEscapeGrabImmunity.IsActive;
     }
 }
 
@@ -467,6 +469,7 @@ internal static class BlackOozeTrapTypeBGrabInvulPatch
     {
         // Only invul — trapflag rearm is owned by vanilla + BlackOozeTypeBRearmGate.
         // Duplicating a trapflag block here made failed rearms look like a permanent one-shot.
-        return !StruggleSystem.isGrabInvul();
+        return !StruggleSystem.isGrabInvul()
+            && !NoREroMod.Systems.GrabSystem.PostEscapeGrabImmunity.IsActive;
     }
 }

@@ -1,15 +1,18 @@
+using System.Collections.Generic;
 using HarmonyLib;
 using UnityEngine;
 
 namespace NoREroMod.Systems.Audio;
 
 /// <summary>
-/// Plays death sound when human enemies transition to DEATH animation.
-/// Patches setanimation() - when name == "DEATH", plays random clip from Death folder.
+/// Plays death sound on rising edge into DEATH animation (not every re-set of DEATH).
+/// Humans: AttackSounds/Human/Death. Undead skeletons: AttackSounds/Undead/Death/BoneDeath.
 /// </summary>
 [HarmonyPatch]
 internal static class DeathSoundPatch
 {
+    private static readonly Dictionary<int, string> _lastAnimByEnemy = new Dictionary<int, string>();
+
     [HarmonyPatch(typeof(TouzokuNormal), "setanimation")]
     [HarmonyPostfix]
     private static void TouzokuNormal_Death(EnemyDate __instance, string name) => OnDeathTransition(__instance, name);
@@ -54,10 +57,32 @@ internal static class DeathSoundPatch
     [HarmonyPostfix]
     private static void InquisitionRED_Death(EnemyDate __instance, string name) => OnDeathTransition(__instance, name);
 
+    // Undead skeleton base classes (reskins of non-human combat prefabs).
+    [HarmonyPatch(typeof(BigMerman), "setanimation")]
+    [HarmonyPostfix]
+    private static void BigMerman_Death(EnemyDate __instance, string name) => OnDeathTransition(__instance, name);
+
+    [HarmonyPatch(typeof(Bigoni), "setanimation")]
+    [HarmonyPostfix]
+    private static void Bigoni_Death(EnemyDate __instance, string name) => OnDeathTransition(__instance, name);
+
+    [HarmonyPatch(typeof(Pilgrim), "setanimation")]
+    [HarmonyPostfix]
+    private static void Pilgrim_Death(EnemyDate __instance, string name) => OnDeathTransition(__instance, name);
+
     private static void OnDeathTransition(EnemyDate enemy, string animName)
     {
+        if (enemy == null || string.IsNullOrEmpty(animName)) return;
+
+        int id = enemy.GetInstanceID();
+        string prev;
+        _lastAnimByEnemy.TryGetValue(id, out prev);
+        _lastAnimByEnemy[id] = animName;
+
+        // Only the first transition into DEATH — looping/re-applied DEATH must not re-trigger.
         if (animName != "DEATH") return;
-        if (enemy == null) return;
+        if (prev == "DEATH") return;
+
         AttackSoundSystem.TryPlayDeathSound(enemy);
     }
 }

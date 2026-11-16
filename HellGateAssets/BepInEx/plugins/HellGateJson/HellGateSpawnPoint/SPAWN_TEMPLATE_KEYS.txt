@@ -55,7 +55,6 @@ cocoontrapnot
 blackoozetrap
 blackoozetraptypeb
 trapnormal
-spiketrap
 impactdamage
 impactdamagebox
 ironmaidendamage

@@ -33,14 +33,22 @@ Release archive layout mirrors the runtime install:
 |--------------|--------|
 | `BepInEx/plugins/NoR_HellGate.dll` | Release build output |
 | `BepInEx/plugins/HellGateJson/**` | runtime data tree — **exclude** `BackUp/` and `Diagnostics/` files with `Enable: true` |
+| `BepInEx/config/EASY|MEDIUM|HARD/**` | difficulty presets (both `NoREroMod.cfg` + `NoREroMod_HellGate.cfg`) |
 | `sources/HellGate_sources/**` | binary runtime assets (audio, portraits, UI), when bundled |
 | Manifesto PDFs | regenerated maintainer docs (10 languages) |
 
 Notes:
 
-- The cfg is **not** shipped; BepInEx generates it on first launch (a
-  shipped cfg was a recurring source of "mod ignores settings" reports).
+- The **active** root cfg is **not** shipped; BepInEx generates it on first
+  launch (a shipped active cfg was a recurring source of "mod ignores
+  settings" reports). Preset **folders** are shipped.
+- Include `HellGateSpawnPoint/SPAWN_TEMPLATE_DISK_CACHE.txt` and
+  `SPAWN_TEMPLATE_WHITELIST.txt` — required for clean-install template
+  resolution (ivy, gates, traps).
 - Per-slot save JSONs (`*_Slot{NN}.json`) must not leak into the archive.
+- Ship unused WIP resource folders out of `HellGate_sources` (e.g. alternate
+  Spine exports not referenced by loaders). Keep runtime paths documented in
+  module docs.
 - Large binary asset packs are hosted externally (see "External binary
   assets" in the README); verify the link, pack version, and checksum still
   match.

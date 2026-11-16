@@ -13,7 +13,20 @@ Code: `Systems/GrabSystem/` · Config: `[GrabSystemNG]`
   GrabViaAttack but get a tiny post-grab bridge (`state = DOWN` + re-enable
   player rigidbody) so their vanilla `OnTriggerStay` H intro (`EROWALK` +
   `DOWN`) can fire instead of looking like grab→release→walk-in.
-- `GrabChanceCalculator` — chance math from player/enemy state.
+- `GrabChanceCalculator` — chance math from player/enemy state. Denies grab while
+  Rage immunity, `PostEscapeGrabImmunity`, or vanilla `isGrabInvul` is active
+  (UI shows 0%).
+- **Post-escape grab i-frames:** escape → `StruggleSystem.startGrabInvul` →
+  `PostEscapeGrabImmunity.ArmFromEscape()` for
+  `[GrabSystemNG] PostEscapeGrabInvulSeconds` (default **3**, unscaled). Same
+  coverage as Rage: GrabViaAttack, `CanEliteGrabPlayer`, power-knockdown→DOWN
+  suppress (`PostEscapeGrabImmunityPatch`). Armed from struggle / potion /
+  trap escapes that call `startGrabInvul`.
+- **Trapdata re-enter:** traps that ignore vanilla `isGrabInvul` alone
+  (`BlackOozetrap`, `BlackOozeTrapTypeB`, `AngelStatue_Trap`) have dedicated
+  prefixes that also honor `PostEscapeGrabImmunity.IsActive`, so ooze /
+  statue re-grab after escape stays gated for the full HellGate window
+  (`Patches/Trap/TrapdataHSceneEscapePatch.cs`).
 - `DamageSourceClassifier` + `MeleeAttackerContextPatches` +
   `RangedDamageFlagPatches` — classify the damage source (melee vs ranged)
   so ranged hits do not teleport-grab.

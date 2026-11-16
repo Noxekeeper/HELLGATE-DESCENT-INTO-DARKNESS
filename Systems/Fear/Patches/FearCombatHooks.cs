@@ -156,14 +156,27 @@ internal static class FearCombatHooks
             return;
         }
 
-        // Took a hit (not a fresh perfect block).
+        // Took a hit (not a fresh perfect block) — fear grows; block path returns above with +Morale.
+        EnemyDate attacker = GrabViaAttackContext.ResolveAttackerForFear();
         if (DamageSourceClassifier.IsRanged)
         {
-            FearSystem.NotifyProjectileHit(GrabViaAttackContext.CurrentAttacker);
+            FearSystem.NotifyProjectileHit(attacker);
+            GrabViaAttackContext.ClearRangedAttacker();
             return;
         }
 
         if (DamageSourceClassifier.IsPowerAttack(kickbackBefore) || DamageSourceClassifier.IsPowerAttack(kickbackAfter))
-            FearSystem.NotifyHeavyHitOrKnockdown(GrabViaAttackContext.CurrentAttacker);
+        {
+            FearSystem.NotifyHeavyHitOrKnockdown(attacker);
+            return;
+        }
+
+        FearSystem.NotifyHitTaken(attacker);
+    }
+
+    /// <summary>Called from FearSystem.ResetRuntimeState so kill dedupe does not leak across loads.</summary>
+    internal static void ClearKillDedupe()
+    {
+        _kills.Clear();
     }
 }

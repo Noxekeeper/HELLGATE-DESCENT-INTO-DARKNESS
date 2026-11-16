@@ -33,6 +33,7 @@
     { "EnemyType": "DemonRequiemKnight",     "Chance": 1.00, "MinAmount": 200, "MaxAmount": 350 },
     { "EnemyType": "OriginIbaranoMajyo",     "Chance": 1.00, "MinAmount": 300, "MaxAmount": 500 },
     { "EnemyType": "LastIbaranoMajyo",       "Chance": 1.00, "MinAmount": 350, "MaxAmount": 550 },
-    { "EnemyType": "Boss_Ranch",             "Chance": 1.00, "MinAmount": 220, "MaxAmount": 360 }
+    { "EnemyType": "Boss_Ranch",             "Chance": 1.00, "MinAmount": 220, "MaxAmount": 360 },
+    { "EnemyType": "VagrantUndead",          "Chance": 0.50, "MinAmount": 2,   "MaxAmount": 5   }
   ]
 }

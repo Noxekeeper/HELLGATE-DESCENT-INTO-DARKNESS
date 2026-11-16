@@ -67,6 +67,16 @@ internal static class UndeadSkeletonsRuntime
         return enemy != null && TryGetEntry(enemy.gameObject, out _);
     }
 
+    /// <summary>Spawn key for Fear/JSON rows (e.g. VagrantUndead) when this is an undead reskin.</summary>
+    internal static bool TryGetSpawnKey(Component enemy, out string spawnKey)
+    {
+        spawnKey = null;
+        if (enemy == null || !TryGetEntry(enemy.gameObject, out Entry entry))
+            return false;
+        spawnKey = UndeadSkeletonsLoader.GetSpawnKey(entry.Variant);
+        return !string.IsNullOrEmpty(spawnKey);
+    }
+
     private static bool TryGetEntry(GameObject go, out Entry entry)
     {
         entry = null;

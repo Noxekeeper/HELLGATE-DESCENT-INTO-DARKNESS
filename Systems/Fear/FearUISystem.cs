@@ -173,10 +173,8 @@ internal static class FearUISystem
         rightRt.sizeDelta = new Vector2(0f, BarHeight - 2f);
 
         _markNeg50 = CreateImage("FearMarkNeg50", _root, white, new Color(1f, 1f, 1f, 0.35f));
-        SetBarChild(_markNeg50.rectTransform, -HalfWidth * 0.5f, 0f, 2f, BarHeight + 2f);
-
         _markPos50 = CreateImage("FearMarkPos50", _root, white, new Color(1f, 1f, 1f, 0.35f));
-        SetBarChild(_markPos50.rectTransform, HalfWidth * 0.5f, 0f, 2f, BarHeight + 2f);
+        RefreshThresholdMarkers();
 
         _centerTick = CreateImage("FearBarTick", _root, white, new Color(1f, 1f, 1f, 0.95f));
         SetBarChild(_centerTick.rectTransform, 0f, -1f, 3f, BarHeight + 6f);
@@ -260,6 +258,24 @@ internal static class FearUISystem
         _root.anchoredPosition = new Vector2(x, y);
     }
 
+    /// <summary>
+    /// Place ± band markers from PanicBandThreshold / ConfidenceBandThreshold
+    /// (Morale −100…+100 maps to −HalfWidth…+HalfWidth).
+    /// </summary>
+    private static void RefreshThresholdMarkers()
+    {
+        float panic = FearConfig.PanicBandThreshold?.Value ?? -50f;
+        float conf = FearConfig.ConfidenceBandThreshold?.Value ?? 50f;
+        panic = Mathf.Clamp(panic, -100f, 0f);
+        conf = Mathf.Clamp(conf, 0f, 100f);
+        float panicX = (panic / 100f) * HalfWidth;
+        float confX = (conf / 100f) * HalfWidth;
+        if (_markNeg50 != null)
+            SetBarChild(_markNeg50.rectTransform, panicX, 0f, 2f, BarHeight + 2f);
+        if (_markPos50 != null)
+            SetBarChild(_markPos50.rectTransform, confX, 0f, 2f, BarHeight + 2f);
+    }
+
     private static void UpdateVisuals()
     {
         if (_leftFill == null || _rightFill == null) return;
@@ -273,6 +289,7 @@ internal static class FearUISystem
             _root.gameObject.SetActive(true);
 
         ForcePosition();
+        RefreshThresholdMarkers();
 
         bool shouldShow = ShouldShowBarForUI();
         float opacity = FearConfig.BarOpacity?.Value ?? 0.9f;

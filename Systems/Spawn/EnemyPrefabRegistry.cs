@@ -99,7 +99,9 @@ internal static class EnemyPrefabRegistry
         { "BigMermanUndead", new[] { "BigMerman" } },
         { "BigoniUndead", new[] { "Bigoni_spine" } },
         { "PilgrimUndead", new[] { "Pilgrim" } },
-        { "VagrantUndead", new[] { "Vagrant_spine" } }
+        { "VagrantUndead", new[] { "Vagrant_spine" } },
+        // DemonTentacle: AngelStatue prefab, battle skeleton swapped from disk, config HP (DemonTentacleLoader)
+        { "DemonTentacle", new[] { "angel_Statue" } }
     };
 
     /// <summary>

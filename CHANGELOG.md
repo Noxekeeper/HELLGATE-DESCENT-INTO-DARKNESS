@@ -8,7 +8,82 @@ Versions 1.2.2–1.2.3 were internal iterations folded into 1.2.4.
 
 ## Unreleased
 
--
+## 1.2.8 — 2026-11
+
+### Added
+
+- **Demon Tentacle** (`DemonTentacleModCustom`, spawn key `DemonTentacle`):
+  AngelStatue clone with a disk-loaded battle skeleton from
+  `sources/HellGate_sources/Enemies/Demon_tentacle/`. Vanilla flying / shooting AI;
+  takes regular weapon and magic damage instead of dying to any single hit.
+  `[DemonTentacle] MaxHp` (default 800 on Normal, scaled by game difficulty),
+  `ScaleMultiplier` (default 0.35 of the vanilla statue import scale). The projectile
+  spawns from bone `bone21` (also the charge-glow point), fallback `bone26`,
+  instead of the vanilla fixed offset. Default faction **demons** (spawn-line
+  `|faction=` still wins). Fear entry in `Fear/FearEnemies.json` (aura 1.0/s).
+  Combat AI (`DemonTentacleCombatAiPatch`, `CombatAi.json` `DemonTentacle*`):
+  faster attack timer, 2-shot bursts, Ground/EnemyGround wall blocking, enrage
+  below 40% HP (faster attacks and movement, +1 shot, red tint).
+  Projectiles (`DemonTentacleProjectile`) damage hostile-faction enemies on
+  contact and, during a committed faction brawl, home on the faction target
+  instead of the player (vanilla homing script disabled; player damage unchanged).
+- **Post-escape grab immunity** (`PostEscapeGrabImmunity`,
+  `[GrabSystemNG] PostEscapeGrabInvulSeconds`, default **3** unscaled): on
+  struggle / H escape (`StruggleSystem.startGrabInvul`) arms the same coverage
+  as Rage grab immunity — GrabViaAttack, collision `CanEliteGrabPlayer`, and
+  power-knockdown→DOWN grab are blocked; grab-chance UI shows **0%** while
+  active. Docs: [`docs/modules/GRAB_AND_HANDOFF.md`](docs/modules/GRAB_AND_HANDOFF.md).
+- **Fear combat layers** (`[FearSystem]` + `FearEnemies.json`): light hit through
+  armor (`HitTakenMorale`, default −2) vs heavy / power (`HeavyHitMorale` /
+  JSON `heavyHitFear`) vs knockdown / knockout (`KnockdownMorale`, stronger;
+  stacks only the extra over a just-applied heavy). Per-enemy `grabFear` by
+  size / threat (≈×2 vs early draft: goblin ~10 … bosses ~28–34). Boss
+  attackers: aura ×`BossAuraMult` (2.5), combat hits ×`BossCombatFearMult`
+  (2.25), KO at least last heavy + `BossKnockdownBonus` (8). Crowd aura
+  mults, intermittent HeartBeat at −100, expanded `FearEnemies.json` roster /
+  elite pressure. Doc: [`docs/modules/FEAR.md`](docs/modules/FEAR.md).
+- **Undead death SFX pack** path
+  `sources/HellGate_sources/AttackSounds/Undead/Death/BoneDeath` (`.wav`;
+  unloadable `.mp3` alone leaves the category empty — undead stay silent
+  rather than using human voices).
+- **VagrantUndead gold drop** (`HellGateJson/Economic/GoldDropTable.json`
+  `EnemyOverrides`): 50% chance, 2–5 gold (same chance style as faction rules).
+- Splash credits: **Smkuzuy** (HellGate Animator), **Calibri**.
+
+### Fixed
+
+- **Undead / human death voice mix-up**: skeleton reskins (`*Undead`,
+  `UndeadSkeletonsRuntime` marker) and undead base classes (`BigMerman` /
+  `Bigoni` / `Pilgrim`, plus `Sisiruirui` / `SkeltonOoze` name gates) no longer
+  roll `AttackSounds/Human/Death` (partial `Vagrant` name match was the culprit).
+- **Death SFX “folder loop”**: `DEATH` re-fired every frame / after the old
+  cooldown and stacked `PlayOneShot` voices. Now rising-edge + lifetime latch
+  per enemy, dedicated death `AudioSource` (`Stop`/`Play`), short global gap.
+- **Re-grab / double H right after potion or struggle escape**: missing
+  HellGate post-escape shield (vanilla invul alone was not enough for
+  GrabViaAttack / elite collision / knockdown grab); fixed via
+  `PostEscapeGrabImmunity`.
+- **RequiemKnight faction damage** (`FactionProjectilePatches`): `SlashDamage`
+  light pillars (AOE pulse + EnemyCol) and `NomalMoveMagic` shadow bolts now
+  apply hostile-faction damage. `BLADE` counts for melee pulse; `ATK_LIGHT*`
+  skips melee pulse to avoid double-hitting with pillars.
+- Fear projectile attribution / ranged coverage and HeartBeat intermittency at
+  max fear (play 3–6 s, pause 5–10 s).
+
+### Changed
+
+- Fear HUD markers follow config thresholds; Fear / Grab docs updated for the
+  new combat / boss / grabFear / post-escape rules.
+- Difficulty presets (EASY / MEDIUM / HARD) list the new 1.2.8 keys
+  (`HitTakenMorale`, `KnockdownMorale`, `BossAuraMult` / `BossCombatFearMult` /
+  `BossKnockdownBonus`, `CrowdFear*`, `PostEscapeGrabInvulSeconds`,
+  `[DemonTentacle]`) with shared defaults — Fear stays flat across difficulties
+  (same as 1.2.7); MindBroken / grab chances still carry the difficulty curve.
+- Log noise cut for shipping: `Factions.json` `ActivationDiag` default off
+  (FactionAct SEES/ENGAGE spam), Fear per-delta Info, Death SFX/skip Info,
+  Post-escape “armed” Info, repetitive GIMMICK open/close / spine-only / lever
+  ignored, AttackSound null-mp3 Warnings demoted.
+- Splash / plugin display version `1.2.7` → `1.2.8`.
 
 ## 1.2.7 — 2026-10
 

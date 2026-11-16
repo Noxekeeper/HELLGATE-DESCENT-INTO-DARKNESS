@@ -143,6 +143,9 @@ internal static class GrabViaAttackPatch
         if (RageSystem.IsGrabKnockdownImmuneWhileRageActive)
             return false;
 
+        if (PostEscapeGrabImmunity.IsActive || StruggleSystem.isGrabInvul())
+            return false;
+
         if (NoREroMod.Patches.HellTraps.LethalMagicTrapEroSuppression.ShouldSuppress)
             return false;
 
@@ -152,9 +155,6 @@ internal static class GrabViaAttackPatch
         if ((Plugin.enableVengeanceStrikeBlockGrabDuringStab?.Value ?? true) && player._stabnow)
             return false;
 
-        if (StruggleSystem.isGrabInvul())
-            return false;
-
         if (NoREroMod.Systems.DeadArmor.SlaveBigAxeArmoredThrow.TryThrowInsteadOfGrab(attacker, player))
         {
             NoREroMod.Systems.Economy.CombatGoldLossRuntime.TryProcessPlayerHit(player, wasDodged: false);
@@ -162,7 +162,7 @@ internal static class GrabViaAttackPatch
         }
 
         InvokeEliteGrabPlayer(attacker, playerStatus);
-        FearSystem.NotifyGrabLand();
+        FearSystem.NotifyGrabLand(attacker);
         if (attacker is BossTouzoku customBoss)
             BossTouzokuCustomRuntime.OnGrabViaAttackHit(customBoss);
         NoREroMod.Systems.Economy.CombatGoldLossRuntime.TryProcessPlayerHit(player, wasDodged: false);
@@ -285,6 +285,12 @@ internal static class GrabViaAttackPatch
                 return true;
             }
 
+            if (PostEscapeGrabImmunity.IsActive || StruggleSystem.isGrabInvul())
+            {
+                GrabViaAttackContext.Reset();
+                return true;
+            }
+
             if (NoREroMod.Patches.HellTraps.LethalMagicTrapEroSuppression.ShouldSuppress)
             {
                 GrabViaAttackContext.Reset();
@@ -314,7 +320,7 @@ internal static class GrabViaAttackPatch
             }
 
             InvokeEliteGrabPlayer(attacker, ___playerstatus);
-            FearSystem.NotifyGrabLand();
+            FearSystem.NotifyGrabLand(attacker);
             if (attacker is BossTouzoku customBoss)
                 BossTouzokuCustomRuntime.OnGrabViaAttackHit(customBoss);
             NoREroMod.Systems.Economy.CombatGoldLossRuntime.TryProcessPlayerHit(__instance, wasDodged: false);
@@ -381,6 +387,12 @@ internal static class GrabViaAttackPatch
                 return true;
             }
 
+            if (PostEscapeGrabImmunity.IsActive || StruggleSystem.isGrabInvul())
+            {
+                GrabViaAttackContext.Reset();
+                return true;
+            }
+
             if (NoREroMod.Patches.HellTraps.LethalMagicTrapEroSuppression.ShouldSuppress)
             {
                 GrabViaAttackContext.Reset();
@@ -410,7 +422,7 @@ internal static class GrabViaAttackPatch
             }
 
             InvokeEliteGrabPlayer(attacker, ___playerstatus);
-            FearSystem.NotifyGrabLand();
+            FearSystem.NotifyGrabLand(attacker);
             if (attacker is BossTouzoku customBoss)
                 BossTouzokuCustomRuntime.OnGrabViaAttackHit(customBoss);
             NoREroMod.Systems.Economy.CombatGoldLossRuntime.TryProcessPlayerHit(__instance, wasDodged: false);

@@ -12,11 +12,19 @@ JSON-driven reaction tuning for vanilla enemies:
   on-damage behavior driven by `CombatAi/*.json`;
 - `DoreiCombatAiConfig` — Dorei-specific profile;
 - `SinnerslaveCrossbowCombatAiPatch` — ranged special case.
+- `DemonTentacleCombatAiPatch` — DemonTentacle only (AngelStatue reskin;
+  plain AngelStatue untouched): attack-timer multiplier, projectile bursts,
+  wall blocking (vanilla flies through Ground), enrage at low HP. Settings
+  `DemonTentacle*` in `CombatAi.json`. DemonTentacle defaults to faction
+  `demons` via `SpawnFactionOverride` (AngelStatue type resolves to church).
 
 ## Faction runtime
 
 - `EnemyFactionsConfig` loads `CombatAi/Factions.json` and hot-reloads it
   (~2 s polling), so faction balance is editable without restart.
+- `ActivationDiag` (default **false**): when true, throttled `[FactionAct]`
+  BepInEx lines for SEES / ENGAGE / COMMIT. Leave off for shipping; filter
+  `FactionAct` when diagnosing activation bubbles.
 - `EnemyFactionRuntime` assigns factions at `EnemyDate` bootstrap
   (`EnemyDateFactionBootstrapPatch`); spawn lines can override via
   `|faction=` (`SpawnFactionOverride`).

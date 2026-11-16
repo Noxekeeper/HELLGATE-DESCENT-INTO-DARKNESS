@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using NoREroMod.Patches.Enemy.UndeadSkeletonsModCustom;
 using UnityEngine;
 
 namespace NoREroMod.Systems.Audio;
@@ -10,7 +11,8 @@ internal enum AttackSoundCategory
     Regular,
     Power,
     Threat,
-    Death
+    Death,
+    UndeadDeath
 }
 
 internal static class AttackSoundRegistry
@@ -101,6 +103,9 @@ internal static class AttackSoundRegistry
     internal static bool IsDeathEnabledPrefab(EnemyDate enemy)
     {
         if (enemy == null || enemy.gameObject == null) return false;
+        // Undead reskins keep the vanilla class (e.g. Vagrant) and match "Vagrant*" via IndexOf —
+        // they use AttackSounds/Undead/Death/BoneDeath instead of human Death.
+        if (UndeadSkeletonsRuntime.IsUndeadSkeleton(enemy)) return false;
         string goName = enemy.gameObject.name;
         if (string.IsNullOrEmpty(goName)) return false;
         string normalized = NormalizeName(goName);
@@ -124,6 +129,7 @@ internal static class AttackSoundRegistry
     internal static bool IsThreatEnabledPrefab(EnemyDate enemy)
     {
         if (enemy == null || enemy.gameObject == null) return false;
+        if (UndeadSkeletonsRuntime.IsUndeadSkeleton(enemy)) return false;
         string goName = enemy.gameObject.name;
         if (string.IsNullOrEmpty(goName)) return false;
 
@@ -255,6 +261,14 @@ internal static class AttackSoundRegistry
         return list.Count > 0;
     }
 
+    internal static int GetClipCount(AttackSoundCategory category)
+    {
+        List<AudioClip> list;
+        if (!_clipsByCategory.TryGetValue(category, out list) || list == null)
+            return 0;
+        return list.Count;
+    }
+
     internal static AudioClip GetRandomClip(AttackSoundCategory category)
     {
         List<AudioClip> list;
@@ -288,6 +302,7 @@ internal static class AttackSoundRegistry
     internal static bool IsHumanPrefab(EnemyDate attacker)
     {
         if (attacker == null || attacker.gameObject == null) return false;
+        if (UndeadSkeletonsRuntime.IsUndeadSkeleton(attacker)) return false;
         string goName = attacker.gameObject.name;
         if (string.IsNullOrEmpty(goName)) return false;
 

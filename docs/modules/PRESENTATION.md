@@ -102,5 +102,15 @@ Code: `Systems/UI/`
 Code: `Systems/Audio/` · Config: `[AttackSounds]`, `[GrabThreats]`
 
 `AttackSoundSystem` + `AttackSoundRegistry` play regular/power attack sounds,
-per-language threat lines, and death WAVs from the external `AttackSounds/`
+per-language threat lines, and death clips from the external `AttackSounds/`
 tree via `AttackSoundPatch` / `DeathSoundPatch`.
+
+**Death VO split (1.2.8):** human prefabs use `AttackSounds/Human/Death`.
+Undead skeleton reskins (`*Undead`, `UndeadSkeletonsRuntime` marker) and
+undead-class name gates (`BigMerman` / `Bigoni` / `Pilgrim`, plus
+`Sisiruirui` / `SkeltonOoze`) never roll human death packs (partial name
+matches such as `Vagrant` were the failure mode). They use
+`AttackSounds/Undead/Death/BoneDeath` (`.wav`). Empty folder or unloadable
+`.mp3` alone → silent undead, not human screams. Playback is one-shot per
+enemy lifetime (rising-edge + latch + dedicated `AudioSource`) so `DEATH`
+re-fires cannot stack a “folder loop.”

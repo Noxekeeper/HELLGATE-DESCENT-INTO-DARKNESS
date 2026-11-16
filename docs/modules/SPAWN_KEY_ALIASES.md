@@ -77,7 +77,8 @@ work in pack txt. Do not add them back to the Trap picker.
 ## Hidden from F11 (broken / nothing)
 
 `help`, `meatshieldhelp`, `npcslaveenable`, `npcslaveflag`,
-`wavespike`, `wavespikeguard` (do not work as placed traps),
+`spiketrap` / `spike trap` (alias of `trapnormal` — Forest1 TrapNormal GO),
+`wavespike`, `wavespikeguard` (no authoring prefab / preview),
 generic tokens `slave` / `stand`,
 and scene child names (`spine gameobject (tyoukyousi_spineero)`,
 `mob_death1 (1)`, `Arrow (1)`, …).

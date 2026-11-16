@@ -83,7 +83,6 @@ internal sealed class HellGateGimmickGuard : MonoBehaviour
 
     private void Scan()
     {
-        bool hadEnemies = HasEnemies;
         ScanEnemies();
         if (IsAuto)
             playerNear = IsPlayerNear(controller.IsOpen && firstScanDone);
@@ -105,12 +104,6 @@ internal sealed class HellGateGimmickGuard : MonoBehaviour
             controller.Open();
         else
             controller.Close();
-
-        if (HasEnemies != hadEnemies)
-        {
-            Plugin.Log?.LogInfo(
-                $"[GIMMICK] Guard '{controller.name}': {(HasEnemies ? inside.Count + " enemy(ies) in zone — closed" : "zone clear — " + (open ? "opened" : "waiting for player"))}.");
-        }
     }
 
     private void ScanEnemies()

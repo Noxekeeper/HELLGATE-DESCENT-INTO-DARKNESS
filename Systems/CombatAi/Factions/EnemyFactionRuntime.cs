@@ -1025,15 +1025,9 @@ internal static class EnemyFactionRuntime
                 return;
             if (ShouldSkipPulseForProjectileAttack(attacker))
                 return;
-            if (!HasActiveAttackHitbox(attacker))
-                return;
 
             int selfFaction = GetFaction(attacker.gameObject);
             if (FactionIds.IsPassiveNonCombat(selfFaction))
-                return;
-
-            Bounds? attackerHitbox = TryGetAttackerHitboxBounds(attacker);
-            if (!attackerHitbox.HasValue)
                 return;
 
             float verticalReach = ResolveFactionVerticalReach(attacker);
@@ -1041,6 +1035,19 @@ internal static class EnemyFactionRuntime
             horizontalReach = ApplyLungeMeleeReachCap(attacker, horizontalReach);
             Vector2 attackerPos = attacker.transform.position;
             float now = Time.time;
+
+            // RequiemKnight / some bosses keep weapon hitboxes inactive until Spine frames;
+            // fall back to a root proximity box so melee ATK/BLADE still connect.
+            bool useProximity = !HasActiveAttackHitbox(attacker);
+            Bounds? attackerHitbox = useProximity ? null : TryGetAttackerHitboxBounds(attacker);
+            if (!useProximity && !attackerHitbox.HasValue)
+                useProximity = true;
+            if (useProximity)
+            {
+                attackerHitbox = new Bounds(
+                    new Vector3(attackerPos.x, attackerPos.y, 0f),
+                    new Vector3(Mathf.Max(1f, horizontalReach * 2f), 4f, 1f));
+            }
 
             foreach (KeyValuePair<int, EnemyDate> kvp in _enemyByInstanceId)
             {
@@ -1064,13 +1071,20 @@ internal static class EnemyFactionRuntime
                         continue;
                 }
 
-                if (!TryGetDefenderHurtboxBounds(candidate, out Bounds defenderBounds))
-                    continue;
+                if (useProximity)
+                {
+                    // Proximity melee: no collider intersection required.
+                }
+                else
+                {
+                    if (!TryGetDefenderHurtboxBounds(candidate, out Bounds defenderBounds))
+                        continue;
 
-                Bounds meleeHitbox = ClampBoundsHorizontalFromRoot(
-                    attackerHitbox.Value, attackerPos.x, horizontalReach);
-                if (meleeHitbox.size.sqrMagnitude <= 0f || !meleeHitbox.Intersects(defenderBounds))
-                    continue;
+                    Bounds meleeHitbox = ClampBoundsHorizontalFromRoot(
+                        attackerHitbox.Value, attackerPos.x, horizontalReach);
+                    if (meleeHitbox.size.sqrMagnitude <= 0f || !meleeHitbox.Intersects(defenderBounds))
+                        continue;
+                }
 
                 int attackerId = attacker.gameObject.GetInstanceID();
                 int targetId = candidate.gameObject.GetInstanceID();
@@ -1081,7 +1095,7 @@ internal static class EnemyFactionRuntime
                     continue;
                 _nextHitAtByPair[pairKey] = now + Mathf.Max(0.1f, EnemyFactionsConfig.HitCooldownSeconds);
 
-                ApplyFactionDamage(attacker, candidate, "hitbox");
+                ApplyFactionDamage(attacker, candidate, useProximity ? "proximity" : "hitbox");
             }
         }
         catch (Exception ex)
@@ -1197,6 +1211,9 @@ internal static class EnemyFactionRuntime
                 return true;
             if (anim.StartsWith("STAB", StringComparison.OrdinalIgnoreCase))
                 return true;
+            // RequiemKnight melee blade swing (not ATK*-prefixed).
+            if (anim.StartsWith("BLADE", StringComparison.OrdinalIgnoreCase))
+                return true;
 
             return false;
         }
@@ -1231,6 +1248,12 @@ internal static class EnemyFactionRuntime
             anim.StartsWith("ATKUP", StringComparison.OrdinalIgnoreCase))
             return true;
 
+        // RequiemKnight: only pillar AOE states skip melee pulse.
+        // ATK_LIGHT / ATK_LIGHT2 are melee lunges (hitbox/proximity); ATK_LIGHT3 / ATK_GROUND spawn SlashDamage.
+        if (anim.Equals("ATK_LIGHT3", StringComparison.OrdinalIgnoreCase) ||
+            anim.Equals("ATK_GROUND", StringComparison.OrdinalIgnoreCase))
+            return true;
+
         string typeName = attacker.GetType().Name;
         if ((typeName == "SinnerslaveCrossbow" || typeName == "Dorei") &&
             anim.StartsWith("ATK", StringComparison.OrdinalIgnoreCase) &&
@@ -1252,15 +1275,18 @@ internal static class EnemyFactionRuntime
     }
 
     /// <summary>
-    /// Faction melee uses <see cref="EnemyFactionsConfig.BanditsVsDemonsRange"/> as the hard cap.
-    /// Vanilla Atkdistance is often a chase/leash radius (bosses can be ~9+) and must not widen melee.
+    /// Faction melee uses <see cref="EnemyFactionsConfig.BanditsVsDemonsRange"/> as the default cap.
+    /// Vanilla Atkdistance is often a chase/leash radius and must not widen melee for normal mobs.
+    /// Per-enemy <c>FactionMeleeReachOverrides</c> set the absolute reach (tighten Wolf/MummyDog,
+    /// or widen RequiemKnight BLADE which engages out to ~9 while Atkdistance is only 4).
     /// </summary>
     private static float ResolveFactionHorizontalReach(EnemyDate attacker)
     {
+        float typeReach = EnemyFactionsConfig.TryGetMeleeReachOverride(attacker);
+        if (typeReach > 0f)
+            return typeReach;
+
         float configured = Mathf.Max(0.5f, EnemyFactionsConfig.BanditsVsDemonsRange);
-        float typeCap = EnemyFactionsConfig.TryGetMeleeReachOverride(attacker);
-        if (typeCap > 0f)
-            configured = Mathf.Min(configured, typeCap);
         if (attacker != null && attacker.Atkdistance > 0f)
             return Mathf.Min(configured, attacker.Atkdistance + 0.25f);
 

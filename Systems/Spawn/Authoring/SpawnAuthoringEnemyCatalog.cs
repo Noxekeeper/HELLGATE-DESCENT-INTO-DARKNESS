@@ -53,6 +53,7 @@ internal static class SpawnAuthoringEnemyCatalog
         "BigoniUndead",
         "PilgrimUndead",
         "VagrantUndead",
+        "DemonTentacle",
         "Demon_gorotuki",
         "HellishTouzokuBoss",
         "HellishTouzokuAxe",

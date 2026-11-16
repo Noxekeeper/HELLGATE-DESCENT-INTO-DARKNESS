@@ -127,6 +127,7 @@ public class Plugin : BaseUnityPlugin {
     public static ConfigEntry<float> grabChanceMindBrokenBonusPer10Percent;
     public static ConfigEntry<float> grabChanceRageReductionPerPercent;
     public static ConfigEntry<float> grabChancePleasureBonusMax;
+    public static ConfigEntry<float> postEscapeGrabInvulSeconds;
     public static ConfigEntry<bool> grabViaAttackSlowmo;
     public static ConfigEntry<float> grabViaAttackSlowmoTimeScale;
     public static ConfigEntry<float> grabViaAttackSlowmoDuration;
@@ -1373,6 +1374,8 @@ public class Plugin : BaseUnityPlugin {
         NoREroMod.Systems.EnemyFatality.EnemyFatalityPatches.Apply(harmony);
         NoREroMod.Systems.Gameplay.VengeanceStrikeNoGrabDuringStabPatch.Apply(harmony);
         NoREroMod.Systems.Rage.Patches.RageActiveImmunityPatch.ApplyCollisionGrabBlock(harmony);
+        NoREroMod.Systems.GrabSystem.Patches.PostEscapeGrabImmunityPatch.ApplyCollisionGrabBlock(harmony);
+        BootPatch(typeof(NoREroMod.Systems.GrabSystem.Patches.PostEscapeGrabImmunityPatch));
         BootPatch(typeof(NoREroMod.Patches.Enemy.WolfModCustom.WolfSkeletonDataAssetPatch));
         yield return null;
         BootPatch(typeof(NoREroMod.Patches.Enemy.RickEnemyModShared.RickEnemyModSkeletonDataAssetPatch));
@@ -1394,6 +1397,10 @@ public class Plugin : BaseUnityPlugin {
         BootPatch(typeof(NoREroMod.Patches.Enemy.UndeadSkeletonsModCustom.UndeadSkeletonsSkeletonDataAssetPatch));
         yield return null;
         BootPatch(typeof(NoREroMod.Patches.Enemy.UndeadSkeletonsModCustom.UndeadSkeletonsEnemyPatches));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.DemonTentacleModCustom.DemonTentacleSkeletonDataAssetPatch));
+        yield return null;
+        BootPatch(typeof(NoREroMod.Patches.Enemy.DemonTentacleModCustom.DemonTentacleEnemyPatches));
         yield return null;
         BootPatch(typeof(NoREroMod.Patches.Enemy.DoreiModCustom.DoreiSkeletonDataAssetPatch));
         yield return null;
@@ -1569,6 +1576,7 @@ public class Plugin : BaseUnityPlugin {
         BootPatch(typeof(NoREroMod.Systems.CombatAi.Patches.EnemyDateDistanceFunPatch));
         yield return null; // Combat AI: react when player close (HellGateJson/CombatAi)
         BootPatch(typeof(NoREroMod.Systems.CombatAi.Patches.EnemyDateOndamageSendPatch));
+        BootPatch(typeof(NoREroMod.Systems.CombatAi.Patches.DemonTentacleCombatAiPatch));
         yield return null; // Combat AI: react to combo — boost dodge chance (HellGateJson/CombatAi)
         BootPatch(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.EnemyDateFactionBootstrapPatch));
         yield return null; // Enemy Factions: isolated bootstrap (HellGateJson/CombatAi/Factions.json)
@@ -1600,6 +1608,14 @@ public class Plugin : BaseUnityPlugin {
         yield return null; // Enemy Factions: tag LightMagic (Sister/CrawlingSister bolt) with attacker EnemyDate
         BootPatch(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.FactionLightMagicHitPatch));
         yield return null; // Enemy Factions: LightMagic damages hostile enemy hurtboxes
+        BootPatch(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.FactionSlashDamageOwnerPatch));
+        yield return null; // Enemy Factions: tag SlashDamage (RequiemKnight light pillars) with attacker EnemyDate
+        BootPatch(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.FactionSlashDamageHitPatch));
+        yield return null; // Enemy Factions: SlashDamage EnemyCol hit path
+        BootPatch(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.FactionNomalMoveMagicOwnerPatch));
+        yield return null; // Enemy Factions: tag NomalMoveMagic (DemonRequiemKnight) with attacker EnemyDate
+        BootPatch(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.FactionNomalMoveMagicHitPatch));
+        yield return null; // Enemy Factions: NomalMoveMagic damages hostile enemy hurtboxes
         BootPatch(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.EnemyDateFactionColorBootstrapPatch));
         yield return null; // Enemy Factions: apply faction marker visuals
         BootPatch(typeof(NoREroMod.Systems.CombatAi.Factions.Patches.EnemyDateFactionColorAnimePatch));
@@ -2403,6 +2419,12 @@ private void PatchType(Type type)
         grabChanceMindBrokenBonusPer10Percent = Config.Bind("GrabSystemNG", "GrabChanceMindBrokenBonusPer10Percent", 0.02f, "Extra grab chance per 10% MindBroken in grab logic (0.02 = +2% per 10%). UI can use a different value.");
         grabChanceRageReductionPerPercent = Config.Bind("GrabSystemNG", "GrabChanceRageReductionPerPercent", 0.005f, "Grab chance reduction per 1% Rage (0.005 = 0.5% per 1% Rage). At 100% Rage grab chance is halved.");
         grabChancePleasureBonusMax = Config.Bind("GrabSystemNG", "GrabChancePleasureBonusMax", 0.20f, "Maximum additional grab chance from Pleasure gauge (BadstatusVal[0]). 0.20 = +20% at 100 pleasure, scaled linearly.");
+        postEscapeGrabInvulSeconds = Config.Bind(
+            "GrabSystemNG",
+            "PostEscapeGrabInvulSeconds",
+            3f,
+            "Seconds of post-escape grab+knockdown immunity (HellGate PostEscapeGrabImmunity, unscaled). Same coverage as Rage grab immunity: GrabViaAttack, CanEliteGrabPlayer, power-knockdown→DOWN. Armed on StruggleSystem.startGrabInvul. 0 = off."
+        );
         grabViaAttackSlowmo = Config.Bind("GrabSystemNG", "GrabViaAttackSlowmo", true, "Slow down time when grab via attack triggers (runs immediately, HScene zoom has no slowmo)");
         grabViaAttackSlowmoTimeScale = Config.Bind("GrabSystemNG", "GrabViaAttackSlowmoTimeScale", 0.3f, "Time scale during grab (0.3 = 30% speed, 2 sec)");
         grabViaAttackSlowmoDuration = Config.Bind("GrabSystemNG", "GrabViaAttackSlowmoDuration", 2f, "Duration of grab slowmo in real seconds");
@@ -2931,6 +2953,7 @@ private void PatchType(Type type)
         );
 
         NoREroMod.Patches.Enemy.UndeadSkeletonsModCustom.UndeadSkeletonsConfig.Bind(Config);
+        NoREroMod.Patches.Enemy.DemonTentacleModCustom.DemonTentacleConfig.Bind(Config);
 
         doreiFappingAssetsPath = Config.Bind(
             "DoreiMod",

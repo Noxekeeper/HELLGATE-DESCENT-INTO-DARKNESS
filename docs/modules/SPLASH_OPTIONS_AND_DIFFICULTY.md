@@ -72,13 +72,21 @@ On Easy / Medium / Hard click:
 |--------|----------------|
 | `EASY` | Default on first install (no selection sidecar). Soft pressure, generous QTE / bloodline, potion escape |
 | `MEDIUM` | Mid HellGate pressure |
-| `HARD` | Tougher enemies, grabs through block, stronger MindBroken |
+| `HARD` | Tougher enemies, higher grab chances, stronger MindBroken |
 
 Key value comparison lives in `DIFFICULTY_PRESETS_GUIDE.txt` next to the
-folders (HP bands, dash SP, grab chances, MindBroken / pleasure / QTE).
+folders (HP bands, dash SP, grab chances, MindBroken / pleasure / QTE /
+Fear 1.2.8 keys / `PostEscapeGrabInvulSeconds` / `[DemonTentacle]`).
 
-Same on all three presets: `allowPotionEasyEscape = true` (HP potion / Q can
-break struggle). Code bind default is also `true` (EASY-aligned).
+Same on all three presets:
+
+- `allowPotionEasyEscape = true` (HP potion / Q can break struggle; code bind
+  default is also `true`, EASY-aligned).
+- Fear combat / boss / crowd keys — **shared defaults** (Fear is not the
+  Easy→Hard lever; see [FEAR.md](FEAR.md)).
+- `PostEscapeGrabInvulSeconds = 3` (post-escape grab shield; `0` = off).
+- `[DemonTentacle]` MaxHp / ScaleMultiplier defaults (vanilla game difficulty
+  still scales HP).
 
 **First run:** after language pick and before `SetUpConfigs`, if
 `HellGateDifficulty.selection` is missing, the active cfgs are copied from

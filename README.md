@@ -11,12 +11,12 @@ Modular BepInEx/Harmony overhaul framework for *Night of Revenge*.
 |----------|-------|
 | Plugin | NoREroMod HellGate |
 | Plugin GUID | `NoREroMod_HellGate` |
-| Current version | `1.2.7` |
+| Current version | `1.2.8` |
 | Output assembly | `NoR_HellGate.dll` |
 | Target framework | .NET Framework 3.5 |
 | Runtime | Unity / BepInEx |
 | Patching | Harmony |
-| Player release | [F95zone thread (v1.2.7)](https://f95zone.to/threads/night-of-revenge-hellgate-descent-into-darkness-v1-2-7-noxekeeper.302025/) |
+| Player release | [F95zone thread (v1.2.8)](https://f95zone.to/threads/night-of-revenge-hellgate-descent-into-darkness-v1-2-7-noxekeeper.302025/) |
 
 HellGate extends *Night of Revenge* by patching the game's managed types
 directly and by running independent gameplay services alongside them.
@@ -29,6 +29,12 @@ reconfigures the NoREroMod path.
 
 See [`ARCHITECTURE.md`](ARCHITECTURE.md) for the dependency boundaries, startup
 order, patching model, data flow, and complete subsystem map.
+
+**Composition note:** gameplay already sits in modular `Systems/` /
+`Patches/` folders. A large `Core/Plugin.cs` (cfg binds + patch registration)
+is an intentional composition root for the 1.2.x line; splitting that root
+(and a few oversized UI/authoring files) is **planned after 1.3.0** — see
+[ARCHITECTURE.md §10](ARCHITECTURE.md#10-planned-composition-after-130).
 
 ## Repository scope
 
@@ -223,27 +229,27 @@ This tree includes PNG, WAV, Spine, portrait, UI, trap, custom enemy, effect,
 and tutorial-guide MP4 assets (`Tutorial Guide source/`). It is distributed
 separately from the source repository.
 
-Current asset pack:
+Current asset pack (**sources only** — binary runtime assets under
+`HellGate_sources/`; not the BepInEx / `HellGateJson` tree):
 
 | Field | Value |
 |-------|-------|
-| Pack | `sources_1.2.7.7z` (contains `sources/HellGate_sources/` and `sources/BepInEx/`) |
-| Compatible with | HellGate 1.2.7 |
-| Download | [MEGA](https://mega.nz/file/C9xiEKiY#uu5hm9plvzNxuDJNFMP35hm3Jj5Wq4ZIbIk8a4UA2jU) |
-| Size | 302,376,532 bytes (288 MB) |
-| SHA-256 | `B1DA1421E1BCB1F33BEC1930D83628EA689667E02C4E53079BAF821480DE8C5F` |
+| Pack | `sources` folder archive (`HellGate_sources/` content) |
+| Compatible with | HellGate 1.2.8 |
+| Download | [MEGA](https://mega.nz/file/yoYmVa5R#JAGm7pId6ygqNddRzvklAtUErjOByIlUihRb5Q9W9YQ) |
+| Size | 281.22 MB (MEGA listing) |
+| SHA-256 | Compute after download: `Get-FileHash <file> -Algorithm SHA256` |
 
-Verify the checksum after download
-(`Get-FileHash sources_1.2.7.7z -Algorithm SHA256` in PowerShell) and
-extract the archive so that `HellGate_sources/` ends up under
-`<NorGameRoot>/sources/`. The pack also carries `sources/BepInEx/`: the 1.2.7
-runtime tree (dependency plugins, `HellGateJson/` data, Easy/Medium/Hard
-preset configs) without `NoR_HellGate.dll`, which is built from this
-repository. Its contents go to `<NorGameRoot>/BepInEx/`. Plugin DLLs and
-`HellGateJson/` data are also tracked here under `HellGateAssets/BepInEx/`.
+Extract so that `HellGate_sources/` ends up under `<NorGameRoot>/sources/`
+(i.e. `<NorGameRoot>/sources/HellGate_sources/...`).
 
-When publishing a new pack version, update this table (link, size, SHA-256,
-compatibility) in the same commit.
+`BepInEx/` (dependency plugins, `HellGateJson/` including spawn disk cache +
+whitelist, Easy/Medium/Hard presets) is **not** in this archive. Ship that
+tree with the game/plugin release, or from `HellGateAssets/BepInEx/` in this
+repository. `NoR_HellGate.dll` is always built from this repository.
+
+When publishing a new sources pack, update this table (link, size, SHA-256)
+in the same commit. Do not ship per-slot save JSONs in any release tree.
 
 Never add machine-specific absolute paths to asset loaders or committed data.
 

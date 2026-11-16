@@ -86,6 +86,7 @@ Wolf                 WoodWana             (и др. из EnemyPrefabRegistry.cs)
 
 HellGate-кастом: biscord, MafiaBossCustom, BigoniBrother, HellishTouzokuBoss, HellishTouzokuAxe, HellishTouzokuSword, Wolf, Demon_gorotuki.
 Скелеты-нежить (только бой, без H-сцены; HP/скорость в cfg [UndeadSkeletons.<Key>]): BigMermanUndead, BigoniUndead, PilgrimUndead, VagrantUndead.
+DemonTentacle — рескин AngelStatue (летает, стреляет), обычный урон вместо смерти с одного удара; HP в cfg [DemonTentacle] MaxHp.
 
 
 ## 4. Фракции (pipe |faction=)

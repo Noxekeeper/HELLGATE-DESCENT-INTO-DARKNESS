@@ -41,6 +41,16 @@ internal static class FearCatalog
             return defaults;
 
         EnsureCache();
+
+        // Undead skeleton reskins keep the vanilla C# type (Vagrant/Pilgrim/…) —
+        // prefer the spawn key row (VagrantUndead, …) when the marker is present.
+        if (NoREroMod.Patches.Enemy.UndeadSkeletonsModCustom.UndeadSkeletonsRuntime.TryGetSpawnKey(enemy, out string undeadKey) &&
+            !string.IsNullOrEmpty(undeadKey) &&
+            _byEnemy.TryGetValue(undeadKey, out FearEnemyStats byUndead))
+        {
+            return Merge(defaults, byUndead);
+        }
+
         string typeName = enemy.GetType().Name ?? string.Empty;
         if (!string.IsNullOrEmpty(typeName) && _byEnemy.TryGetValue(typeName, out FearEnemyStats byType))
             return Merge(defaults, byType);
@@ -176,7 +186,8 @@ internal static class FearCatalog
             fearPerSecond = over.fearPerSecond > 0f ? over.fearPerSecond : defaults.fearPerSecond,
             heavyHitFear = over.heavyHitFear > 0f ? over.heavyHitFear : defaults.heavyHitFear,
             projectileFear = over.projectileFear > 0f ? over.projectileFear : defaults.projectileFear,
-            hSceneFearPerSecond = over.hSceneFearPerSecond > 0f ? over.hSceneFearPerSecond : defaults.hSceneFearPerSecond
+            hSceneFearPerSecond = over.hSceneFearPerSecond > 0f ? over.hSceneFearPerSecond : defaults.hSceneFearPerSecond,
+            grabFear = over.grabFear > 0f ? over.grabFear : defaults.grabFear
         };
     }
 
@@ -204,6 +215,8 @@ internal static class FearCatalog
         public float heavyHitFear;
         public float projectileFear;
         public float hSceneFearPerSecond;
+        /// <summary>Absolute |ΔMorale| on grab land (size/threat graded). 0 = inherit Default / cfg.</summary>
+        public float grabFear;
         /// <summary>Optional H-phase Fear beats, applied by code hooks (see <see cref="FearHPhases"/>).</summary>
         public FearHPhaseBeat[] hPhases;
 
@@ -214,7 +227,8 @@ internal static class FearCatalog
                 fearPerSecond = fearPerSecond,
                 heavyHitFear = heavyHitFear,
                 projectileFear = projectileFear,
-                hSceneFearPerSecond = hSceneFearPerSecond
+                hSceneFearPerSecond = hSceneFearPerSecond,
+                grabFear = grabFear
             };
         }
     }
@@ -226,6 +240,8 @@ internal static class FearCatalog
         public float heavyHitFear = 5f;
         public float projectileFear = 1.5f;
         public float hSceneFearPerSecond = 0.4f;
+        /// <summary>Absolute grab-land fear; Default 8 matches GrabLandMorale.</summary>
+        public float grabFear = 8f;
 
         internal static FearEnemyStats CreateDefault()
         {
